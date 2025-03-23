@@ -1,0 +1,20 @@
+# Ignore files specific to IDEs and the operating system
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# JetBrains (PhpStorm)
+/.idea/
+/*.iml
+
+# VS Code
+/.vscode/
+
+# Docker
+/docker/nginx/ssl/*
+
+# Sensitive configuration files
+/.env
+/.env.local
+/.env.*.local

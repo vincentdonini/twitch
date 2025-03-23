@@ -1,0 +1,29 @@
+[
+  {
+    "email": "admin@woder.fr",
+    "password": "Admin123!!",
+    "firstName": "Vincent",
+    "lastName": "DONINI",
+    "roles": [
+      "ROLE_ADMIN"
+    ]
+  },
+  {
+    "email": "user1@woder.fr",
+    "password": "User123!!",
+    "firstName": "John",
+    "lastName": "DOE",
+    "roles": [
+      "ROLE_USER"
+    ]
+  },
+  {
+    "email": "user2@woder.fr",
+    "password": "User123!!",
+    "firstName": "Jane",
+    "lastName": "DO",
+    "roles": [
+      "ROLE_USER"
+    ]
+  }
+]

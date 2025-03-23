@@ -1,0 +1,28 @@
+[ req ]
+default_bits        = 2048
+default_keyfile     = privkey.pem
+distinguished_name  = req_distinguished_name
+req_extensions      = v3_req
+default_md          = sha256
+prompt              = no
+
+[ req_distinguished_name ]
+C  = FR
+ST = Bouches-du-Rhône
+L  = Marseille
+O  = Company
+OU = DevOps
+CN = localhost
+emailAddress = admin@company.com
+
+[ v3_req ]
+keyUsage         = keyEncipherment, digitalSignature
+extendedKeyUsage = serverAuth, clientAuth
+
+[ v3_ca ]
+subjectAltName   = @alt_names
+keyUsage         = critical, digitalSignature, keyCertSign, cRLSign
+extendedKeyUsage = serverAuth, clientAuth
+
+[ alt_names ]
+DNS.1 = localhost

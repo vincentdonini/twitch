@@ -1,0 +1,73 @@
+services:
+    nginx:
+        image: nginx:latest
+        volumes:
+            - ./docker/nginx/api.conf:/etc/nginx/conf.d/api.conf
+            - ./docker/nginx/front.conf:/etc/nginx/conf.d/front.conf
+            - ./docker/nginx/websocket.conf:/etc/nginx/conf.d/websocket.conf
+            - ./docker/nginx/ssl:/etc/nginx/ssl
+            - ./api/public:/app/public
+            - ./front/build:/react/build
+        ports:
+            - "80:80"
+            - "443:443"
+        networks:
+            - app-network
+        depends_on:
+            - api
+            - react
+    
+    api:
+        build:
+            context: ./docker/php
+        volumes:
+            - ./api:/app
+        networks:
+            - app-network
+        depends_on:
+            - db
+
+    db:
+        image: percona/percona-server:8.0
+        environment:
+            MYSQL_ROOT_PASSWORD: root_password
+            MYSQL_DATABASE: symfony_db
+            MYSQL_USER: symfony_user
+            MYSQL_PASSWORD: symfony_password
+        ports:
+            - "3306:3306"
+        volumes:
+            - percona-data:/var/lib/mysql
+        networks:
+            - app-network
+    
+    react:
+        build:
+            context: ./docker/node
+        volumes:
+            - ./front:/app
+        networks:
+            - app-network
+        command: ["sh", "-c", "yarn install && yarn dev --port 3000"]
+        depends_on:
+            - api
+    
+    websocket:
+        build:
+            context: ./docker/node
+        volumes:
+            - ./websocket:/app
+        networks:
+            - app-network
+        command: ["sh", "-c", "yarn install && yarn run start --host 0.0.0.0 --port 4000"]
+        depends_on:
+            - api
+            - react
+
+networks:
+    app-network:
+        name: app-network
+        driver: bridge
+
+volumes:
+    percona-data:
