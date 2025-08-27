@@ -1,0 +1,187 @@
+[
+  {
+    "slug": "lower-abdominals",
+    "area": "core",
+    "group": "abdominals"
+  },
+  {
+    "slug": "upper-abdominals",
+    "area": "core",
+    "group": "abdominals"
+  },
+  {
+    "slug": "obliques",
+    "area": "core",
+    "group": null
+  },
+  {
+    "slug": "long-head-triceps",
+    "area": "arms",
+    "group": "triceps"
+  },
+  {
+    "slug": "lateral-head-triceps",
+    "area": "arms",
+    "group": "triceps"
+  },
+  {
+    "slug": "medial-head-triceps",
+    "area": "arms",
+    "group": "triceps"
+  },
+  {
+    "slug": "long-head-biceps",
+    "area": "arms",
+    "group": "biceps"
+  },
+  {
+    "slug": "short-head-biceps",
+    "area": "arms",
+    "group": "biceps"
+  },
+  {
+    "slug": "wrist-extensors",
+    "area": "arms",
+    "group": "forearms"
+  },
+  {
+    "slug": "wrist-flexors",
+    "area": "arms",
+    "group": "forearms"
+  },
+  {
+    "slug": "hands",
+    "area": "arms",
+    "group": null
+  },
+  {
+    "slug": "lateral-deltoid",
+    "area": "shoulders",
+    "group": "deltoid"
+  },
+  {
+    "slug": "anterior-deltoid",
+    "area": "shoulders",
+    "group": "deltoid"
+  },
+  {
+    "slug": "posterior-deltoid",
+    "area": "shoulders",
+    "group": "deltoid"
+  },
+  {
+    "slug": "front-shoulders",
+    "area": "shoulders",
+    "group": null
+  },
+  {
+    "slug": "rear-shoulders",
+    "area": "shoulders",
+    "group": null
+  },
+  {
+    "slug": "lats",
+    "area": "back",
+    "group": null
+  },
+  {
+    "slug": "upper-traps",
+    "area": "back",
+    "group": "traps"
+  },
+  {
+    "slug": "lower-traps",
+    "area": "back",
+    "group": "traps"
+  },
+  {
+    "slug": "mid-back",
+    "area": "back",
+    "group": null
+  },
+  {
+    "slug": "lower-back",
+    "area": "back",
+    "group": null
+  },
+  {
+    "slug": "neck",
+    "area": "back",
+    "group": null
+  },
+  {
+    "slug": "upper-pectoralis",
+    "area": "chest",
+    "group": null
+  },
+  {
+    "slug": "mid-and-lower-chest",
+    "area": "chest",
+    "group": null
+  },
+  {
+    "slug": "gluteus-medius",
+    "area": "glutes",
+    "group": null
+  },
+  {
+    "slug": "gluteus-maximus",
+    "area": "glutes",
+    "group": null
+  },
+  {
+    "slug": "medial-hamstrings",
+    "area": "hamstrings",
+    "group": null
+  },
+  {
+    "slug": "lateral-hamstrings",
+    "area": "hamstrings",
+    "group": null
+  },
+  {
+    "slug": "inner-quadriceps",
+    "area": "quadriceps",
+    "group": null
+  },
+  {
+    "slug": "outer-quadriceps",
+    "area": "quadriceps",
+    "group": null
+  },
+  {
+    "slug": "rectus-femoris",
+    "area": "quadriceps",
+    "group": null
+  },
+  {
+    "slug": "gastrocnemius",
+    "area": "calves",
+    "group": null
+  },
+  {
+    "slug": "soleus",
+    "area": "calves",
+    "group": null
+  },
+  {
+    "slug": "inner-thigh",
+    "area": "adductors",
+    "group": null
+  },
+  {
+    "slug": "groin",
+    "area": "adductors",
+    "group": null
+  },
+  {
+    "slug": "tibialis",
+    "area": "lower-leg",
+    "group": null
+  },
+  {
+    "slug": "feet",
+    "area": "lower-leg",
+    "group": null
+  }
+]

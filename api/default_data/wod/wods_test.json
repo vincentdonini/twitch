@@ -1,0 +1,140 @@
+[
+  {
+    "title": "Amanda .45",
+    "description": {
+      "en": "13-11-9-7-5 Reps for Time: Muscle-Ups, Squat Snatches (135/95 lb). Time cap: 13 min (M), 15 min (W)",
+      "fr": "13-11-9-7-5 répétitions pour le temps : muscle-ups, squat snatches (61/43 kg). Time cap : 13 min (H), 15 min (F)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 780,
+            "description": {
+              "en": "13-11-9-7-5 Reps for Time: Muscle-Ups, Squat Snatches 135lb. Time cap: 13 min",
+              "fr": "13-11-9-7-5 répétitions pour le temps : muscle-ups, squat snatches 61kg. Time cap : 13 min (H)"
+            },
+            "exercises": [
+              {
+                "exercice": "muscle-up",
+                "reps": 13,
+                "weight": null
+              },
+              {
+                "exercice": "squat-snatch",
+                "reps": 13,
+                "weight": 135
+              },
+              {
+                "exercice": "muscle-up",
+                "reps": 11,
+                "weight": null
+              },
+              {
+                "exercice": "squat-snatch",
+                "reps": 11,
+                "weight": 135
+              },
+              {
+                "exercice": "muscle-up",
+                "reps": 9,
+                "weight": null
+              },
+              {
+                "exercice": "squat-snatch",
+                "reps": 9,
+                "weight": 135
+              },
+              {
+                "exercice": "muscle-up",
+                "reps": 7,
+                "weight": null
+              },
+              {
+                "exercice": "squat-snatch",
+                "reps": 7,
+                "weight": 135
+              },
+              {
+                "exercice": "muscle-up",
+                "reps": 5,
+                "weight": null
+              },
+              {
+                "exercice": "squat-snatch",
+                "reps": 5,
+                "weight": 135
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 900,
+            "description": {
+              "en": "13-11-9-7-5 Reps for Time: Muscle-Ups, Squat Snatches 95lb. Time cap: 15 min",
+              "fr": "13-11-9-7-5 répétitions pour le temps : muscle-ups, squat snatches 43 kg. Time cap : 15 min"
+            },
+            "exercises": [
+              {
+                "exercice": "muscle-up",
+                "reps": 13,
+                "weight": null
+              },
+              {
+                "exercice": "squat-snatch",
+                "reps": 13,
+                "weight": 95
+              },
+              {
+                "exercice": "muscle-up",
+                "reps": 11,
+                "weight": null
+              },
+              {
+                "exercice": "squat-snatch",
+                "reps": 11,
+                "weight": 95
+              },
+              {
+                "exercice": "muscle-up",
+                "reps": 9,
+                "weight": null
+              },
+              {
+                "exercice": "squat-snatch",
+                "reps": 9,
+                "weight": 95
+              },
+              {
+                "exercice": "muscle-up",
+                "reps": 7,
+                "weight": null
+              },
+              {
+                "exercice": "squat-snatch",
+                "reps": 7,
+                "weight": 95
+              },
+              {
+                "exercice": "muscle-up",
+                "reps": 5,
+                "weight": null
+              },
+              {
+                "exercice": "squat-snatch",
+                "reps": 5,
+                "weight": 95
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

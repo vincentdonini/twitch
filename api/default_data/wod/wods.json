@@ -1,0 +1,175 @@
+[
+  {
+    "title": "WOD 01",
+    "description": {
+      "fr": "Effort maximal en 20 minutes.",
+      "en": "Maximal effort in 20 minutes."
+    },
+    "type": "amrap",
+    "category": "class-daily",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Standard version",
+          "fr": "Version standard"
+        },
+        "duration": 1200,
+        "exercises": [
+          "deadlift",
+          "air-squat"
+        ]
+      },
+      {
+        "type": "Scaled",
+        "notes": {
+          "en": "Suitable for beginners",
+          "fr": "Adapté pour les débutants."
+        },
+        "duration": 1200,
+        "exercises": [
+          "deadlift",
+          "air-squat"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "WOD 02",
+    "description": {
+      "en": "One exercice each minute.",
+      "fr": "Un exercice toutes les minutes."
+    },
+    "type": "emom",
+    "category": "class-daily",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "10 burpees par minute",
+          "fr": "10 burpees par minute"
+        },
+        "duration": 600,
+        "exercises": [
+          "burpee"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "WOD 03",
+    "description": {
+      "en": "100 kettlebell swing",
+      "fr": "100 kettlebell swing"
+    },
+    "type": "for-time",
+    "category": "class-daily",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "100 kettlebell swing",
+          "fr": "100 kettlebell swing"
+        },
+        "duration": 1500,
+        "exercises": [
+          "kettlebell-swing"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Elizabeth",
+    "description": {
+      "en": "21-15-9 reps for time of: Cleans, Ring dips",
+      "fr": "21-15-9 répétitions de : Cleans, Ring dips"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Cleans (M: 135 lb / W: 95 lb) and ring dips",
+          "fr": "Cleans (M: 61kg / F: 43kg) et dips sur anneaux"
+        },
+        "duration": null,
+        "exercises": [
+          "clean",
+          "ring-dip"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Max Farmers Carry Distance",
+    "description": {
+      "en": "5 rounds on a 3-minute clock for max distance: 15/20-calorie row, 15 box jumps, then dumbbell farmers carry in the remaining time. Rest 2 minutes between rounds. Farmers carry in 25-foot segments.",
+      "fr": "5 rounds toutes les 3 minutes pour distance maximale : 15/20 calories rameur, 15 sauts sur box, puis farmers carry avec haltères dans le temps restant. Repos 2 minutes entre les rounds. Farmers carry par segments de 25 pieds."
+    },
+    "type": "emom",
+    "category": "class-daily",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Women: 35-lb dumbbells, 20-inch box; Men: 50-lb dumbbells, 24-inch box.",
+          "fr": "Femmes : haltères 16 kg, box 51 cm ; Hommes : haltères 23 kg, box 61 cm."
+        },
+        "duration": null,
+        "exercises": [
+          "row",
+          "box-jump",
+          "dumbbell-farmers-carry"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Snatch 2-2-2-2-2",
+    "description": {
+      "en": "5 sets of 2 snatch reps, increasing load if possible.",
+      "fr": "5 séries de 2 snatchs, en augmentant la charge si possible."
+    },
+    "type": "for-load",
+    "category": "class-daily",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Focus on technique and load. Rest as needed between sets.",
+          "fr": "Accent sur la technique et la charge. Repos selon besoin entre les séries."
+        },
+        "duration": null,
+        "exercises": [
+          "snatch"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Murph",
+    "description": {
+      "en": "For time: Run 1 mile, 100 pull-ups, 200 push-ups, 300 air squats, Run 1 mile. Partition the pull-ups, push-ups, and squats as needed. If you’ve got a 14/20-lb vest or body armor, wear it.",
+      "fr": "For time : Course de 1 mile, 100 tractions, 200 pompes, 300 squats, course de 1 mile. Répartir les tractions, pompes et squats comme souhaité. Si vous avez un gilet lesté de 6/9 kg, portez-le."
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "With 20-lb vest (men) or 14-lb vest (women), partition reps as needed.",
+          "fr": "Avec un gilet lesté de 9 kg (hommes) ou 6 kg (femmes), répartir les répétitions librement."
+        },
+        "duration": null,
+        "exercises": [
+          "run",
+          "pull-up",
+          "push-up",
+          "air-squat"
+        ]
+      }
+    ]
+  }
+]

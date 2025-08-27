@@ -1,0 +1,91 @@
+{
+  "user": {
+    "pseudo": "vaince_woder",
+    "channelUrl": "twitch.tv/vaince_woder"
+  },
+  "date": {
+    "from": "29 Mai",
+    "to": "4 Juin"
+  },
+  "config": {
+    "gap": 0,
+    "fonts": {
+      "title": "Outfit",
+      "base": "Outfit"
+    },
+    "background": {
+      "url": "background.jpg",
+      "isBlurred": true,
+      "blur": 5
+    },
+    "colors": {
+      "primary": "#E22227",
+      "secondary": "#6C0102",
+      "text": "#fff",
+      "subText": "#d4d4d4",
+      "block": {
+        "title": "#6C0102",
+        "text": "#fff",
+        "background": "#E22227"
+      }
+    },
+    "block": {
+      "isRounded": false,
+      "radius": 10,
+      "isBorder": true,
+      "borderWidth": 2
+    }
+  },
+  "socials": {
+    "instagram": "vaince_woder",
+    "twitter": "vaince_woder",
+    "youtube": "vaince_woder",
+    "discord": "vaince_woder"
+  },
+  "partnerships": {
+    "nordVpn": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Logo-NordVPN.png/1600px-Logo-NordVPN.png",
+    "rhinoshield": "https://i0.wp.com/deapline.com/wp-content/uploads/2021/04/15-1.png"
+  },
+  "data": {
+    "monday": [
+
+    ],
+    "tuesday": [
+      {
+        "background": "https://static.vitrine.ynov.com/var/site/storage/images/7/5/3/1/21357-1-fre-FR/da8d716ebcd3-developpeur-informatique-ynov.jpeg",
+        "category": "Développement de logiciels et de jeux",
+        "title": "Up from the bottom : Construire une App React avec Docker et une API",
+        "hours": "20:00 - 00:00"
+      }
+    ],
+    "wednesday": [
+      {
+        "background": "https://static.vitrine.ynov.com/var/site/storage/images/7/5/3/1/21357-1-fre-FR/da8d716ebcd3-developpeur-informatique-ynov.jpeg",
+        "category": "Développement de logiciels et de jeux",
+        "title": "Up from the bottom : Construire une App React avec Docker et une API",
+        "hours": "20:00 - 00:00"
+      }
+    ],
+    "thursday": [
+
+    ],
+    "friday": [
+      {
+        "background": "https://static.vitrine.ynov.com/var/site/storage/images/7/5/3/1/21357-1-fre-FR/da8d716ebcd3-developpeur-informatique-ynov.jpeg",
+        "category": "Développement de logiciels et de jeux",
+        "title": "Up from the bottom : On développe un planning éditable pour Twitch",
+        "hours": "18:00"
+      }
+    ],
+    "saturday": [
+    ],
+    "sunday": [
+      {
+        "background": "https://static.vitrine.ynov.com/var/site/storage/images/7/5/3/1/21357-1-fre-FR/da8d716ebcd3-developpeur-informatique-ynov.jpeg",
+        "category": "Développement de logiciels et de jeux",
+        "title": "Up from the bottom : On développe un planning éditable pour Twitch",
+        "hours": "18:00"
+      }
+    ]
+  }
+}

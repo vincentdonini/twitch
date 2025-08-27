@@ -1,0 +1,627 @@
+[
+  {
+    "slug": "air-squat",
+    "equipment": null,
+    "category": "lower-body"
+  },
+  {
+    "slug": "back-scale",
+    "equipment": null,
+    "category": "gymnastics"
+  },
+  {
+    "slug": "back-squat",
+    "equipment": "barbell",
+    "category": "lower-body"
+  },
+  {
+    "slug": "bar-over-burpee",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "barbell-front-rack-lunge",
+    "equipment": "barbell",
+    "category": "lower-body"
+  },
+  {
+    "slug": "bench-press",
+    "equipment": "barbell",
+    "category": "upper-body"
+  },
+  {
+    "slug": "box-jump",
+    "equipment": "box",
+    "category": "plyometrics"
+  },
+  {
+    "slug": "box-step-up",
+    "equipment": "box",
+    "category": "lower-body"
+  },
+  {
+    "slug": "burpee",
+    "equipment": null,
+    "category": "full-body"
+  },
+  {
+    "slug": "burpee-box-jump-over",
+    "equipment": "box",
+    "category": "plyometrics"
+  },
+  {
+    "slug": "butterfly-pull-up",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "chest-to-wall-handstand-push-up",
+    "equipment": null,
+    "category": "upper-body"
+  },
+  {
+    "slug": "clean",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "clean-and-jerk",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "clean-and-push-jerk",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "deadlift",
+    "equipment": "barbell",
+    "category": "strength"
+  },
+  {
+    "slug": "dip",
+    "equipment": "parallettes",
+    "category": "upper-body"
+  },
+  {
+    "slug": "double-under",
+    "equipment": "jump-rope",
+    "category": "cardio"
+  },
+  {
+    "slug": "dumbbell-clean",
+    "equipment": "dumbbells",
+    "category": "full-body"
+  },
+  {
+    "slug": "dumbbell-deadlift",
+    "equipment": "dumbbells",
+    "category": "strength"
+  },
+  {
+    "slug": "dumbbell-farmers-carry",
+    "equipment": "dumbbells",
+    "category": "full-body"
+  },
+  {
+    "slug": "dumbbell-front-rack-lunge",
+    "equipment": "dumbbells",
+    "category": "lower-body"
+  },
+  {
+    "slug": "dumbbell-front-squat",
+    "equipment": "dumbbells",
+    "category": "lower-body"
+  },
+  {
+    "slug": "dumbbell-hang-clean",
+    "equipment": "dumbbells",
+    "category": "full-body"
+  },
+  {
+    "slug": "dumbbell-hang-power-clean",
+    "equipment": "dumbbells",
+    "category": "full-body"
+  },
+  {
+    "slug": "dumbbell-overhead-squat",
+    "equipment": "dumbbells",
+    "category": "full-body"
+  },
+  {
+    "slug": "dumbbell-overhead-walking-lunge",
+    "equipment": "dumbbells",
+    "category": "full-body"
+  },
+  {
+    "slug": "dumbbell-power-clean",
+    "equipment": "dumbbells",
+    "category": "full-body"
+  },
+  {
+    "slug": "dumbbell-power-snatch",
+    "equipment": "dumbbells",
+    "category": "full-body"
+  },
+  {
+    "slug": "dumbbell-push-jerk",
+    "equipment": "dumbbells",
+    "category": "upper-body"
+  },
+  {
+    "slug": "dumbbell-push-press",
+    "equipment": "dumbbells",
+    "category": "upper-body"
+  },
+  {
+    "slug": "dumbbell-squat-snatch",
+    "equipment": "dumbbells",
+    "category": "full-body"
+  },
+  {
+    "slug": "dumbbell-thruster",
+    "equipment": "dumbbells",
+    "category": "full-body"
+  },
+  {
+    "slug": "dumbbell-turkish-get-up",
+    "equipment": "dumbbells",
+    "category": "full-body"
+  },
+  {
+    "slug": "forward-roll-from-support",
+    "equipment": null,
+    "category": "gymnastics"
+  },
+  {
+    "slug": "freestanding-handstand-push-up",
+    "equipment": null,
+    "category": "upper-body"
+  },
+  {
+    "slug": "front-scale",
+    "equipment": null,
+    "category": "gymnastics"
+  },
+  {
+    "slug": "front-squat",
+    "equipment": "barbell",
+    "category": "lower-body"
+  },
+  {
+    "slug": "ghd-back-extension",
+    "equipment": "ghd-machine",
+    "category": "lower-body"
+  },
+  {
+    "slug": "ghd-hip-and-back-extension",
+    "equipment": "ghd-machine",
+    "category": "lower-body"
+  },
+  {
+    "slug": "ghd-hip-back-and-hip-back-extension",
+    "equipment": "ghd-machine",
+    "category": "lower-body"
+  },
+  {
+    "slug": "ghd-hip-extension",
+    "equipment": "ghd-machine",
+    "category": "lower-body"
+  },
+  {
+    "slug": "ghd-sit-up",
+    "equipment": "ghd-machine",
+    "category": "core"
+  },
+  {
+    "slug": "glide-kip",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "good-morning",
+    "equipment": "barbell",
+    "category": "lower-body"
+  },
+  {
+    "slug": "handstand",
+    "equipment": null,
+    "category": "gymnastics"
+  },
+  {
+    "slug": "handstand-pirouette",
+    "equipment": null,
+    "category": "gymnastics"
+  },
+  {
+    "slug": "handstand-push-up",
+    "equipment": null,
+    "category": "upper-body"
+  },
+  {
+    "slug": "handstand-walk",
+    "equipment": null,
+    "category": "gymnastics"
+  },
+  {
+    "slug": "hang-clean",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "hang-clean-and-push-jerk",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "hanging-l-sit",
+    "equipment": "barbell",
+    "category": "core"
+  },
+  {
+    "slug": "hang-power-clean",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "hang-power-snatch",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "hang-snatch",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "inverted-burpee",
+    "equipment": null,
+    "category": "full-body"
+  },
+  {
+    "slug": "kettlebell-snatch",
+    "equipment": "kettlebells",
+    "category": "full-body"
+  },
+  {
+    "slug": "kettlebell-swing",
+    "equipment": "kettlebells",
+    "category": "full-body"
+  },
+  {
+    "slug": "kipping-bar-muscle-up",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "kipping-chest-to-bar-pull-up",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "kipping-deficit-handstand-push-up",
+    "equipment": null,
+    "category": "upper-body"
+  },
+  {
+    "slug": "kipping-handstand-push-up",
+    "equipment": null,
+    "category": "upper-body"
+  },
+  {
+    "slug": "kipping-muscle-up",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "kipping-pull-up",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "kipping-toes-to-bar",
+    "equipment": "pull-up-bar",
+    "category": "core"
+  },
+  {
+    "slug": "legless-rope-climb",
+    "equipment": "rope",
+    "category": "upper-body"
+  },
+  {
+    "slug": "l-pull-up",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "l-sit",
+    "equipment": null,
+    "category": "core"
+  },
+  {
+    "slug": "l-sit-on-rings",
+    "equipment": "gymnastic-rings",
+    "category": "core"
+  },
+  {
+    "slug": "l-sit-rope-climb",
+    "equipment": "rope",
+    "category": "upper-body"
+  },
+  {
+    "slug": "l-sit-to-shoulder-stand",
+    "equipment": null,
+    "category": "gymnastics"
+  },
+  {
+    "slug": "medicine-ball-clean",
+    "equipment": "medicine-ball-wall-ball",
+    "category": "full-body"
+  },
+  {
+    "slug": "modified-rope-climb",
+    "equipment": "rope",
+    "category": "upper-body"
+  },
+  {
+    "slug": "muscle-snatch",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "muscle-up",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "muscle-up-on-ring",
+    "equipment": "gymnastic-rings",
+    "category": "upper-body"
+  },
+  {
+    "slug": "overhead-squat",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "pistol-squat",
+    "equipment": null,
+    "category": "lower-body"
+  },
+  {
+    "slug": "power-clean",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "power-clean-and-split-jerk",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "power-snatch",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "pull-over",
+    "equipment": "barbell",
+    "category": "upper-body"
+  },
+  {
+    "slug": "pull-up",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "push-jerk",
+    "equipment": "barbell",
+    "category": "upper-body"
+  },
+  {
+    "slug": "push-press",
+    "equipment": "barbell",
+    "category": "upper-body"
+  },
+  {
+    "slug": "push-up",
+    "equipment": null,
+    "category": "upper-body"
+  },
+  {
+    "slug": "ring-dip",
+    "equipment": "gymnastic-rings",
+    "category": "upper-body"
+  },
+  {
+    "slug": "ring-push-up",
+    "equipment": "gymnastic-rings",
+    "category": "upper-body"
+  },
+  {
+    "slug": "ring-row",
+    "equipment": "gymnastic-rings",
+    "category": "upper-body"
+  },
+  {
+    "slug": "rope-climb-basket",
+    "equipment": "rope",
+    "category": "upper-body"
+  },
+  {
+    "slug": "rope-climb-wrapping",
+    "equipment": "rope",
+    "category": "upper-body"
+  },
+  {
+    "slug": "row",
+    "equipment": "rower",
+    "category": "cardio"
+  },
+  {
+    "slug": "run",
+    "equipment": null,
+    "category": "cardio"
+  },
+  {
+    "slug": "shoot-through",
+    "equipment": null,
+    "category": "core"
+  },
+  {
+    "slug": "shoulder-press",
+    "equipment": "barbell",
+    "category": "upper-body"
+  },
+  {
+    "slug": "single-leg-squat-pistol",
+    "equipment": null,
+    "category": "lower-body"
+  },
+  {
+    "slug": "single-under",
+    "equipment": "jump-rope",
+    "category": "cardio"
+  },
+  {
+    "slug": "sit-up",
+    "equipment": null,
+    "category": "core"
+  },
+  {
+    "slug": "skin-the-cat",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "slam-ball",
+    "equipment": "medicine-ball-wall-ball",
+    "category": "full-body"
+  },
+  {
+    "slug": "snatch",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "snatch-balance",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "sots-press",
+    "equipment": "barbell",
+    "category": "upper-body"
+  },
+  {
+    "slug": "split-clean",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "split-jerk",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "split-snatch",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "squat-snatch",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "straddle-press-to-handstand",
+    "equipment": null,
+    "category": "gymnastics"
+  },
+  {
+    "slug": "strict-bar-muscle-up",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "strict-chest-to-bar-pull-up",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "strict-handstand-push-up",
+    "equipment": null,
+    "category": "upper-body"
+  },
+  {
+    "slug": "strict-knees-to-elbows",
+    "equipment": "pull-up-bar",
+    "category": "core"
+  },
+  {
+    "slug": "strict-muscle-up",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "strict-pull-up",
+    "equipment": "pull-up-bar",
+    "category": "upper-body"
+  },
+  {
+    "slug": "strict-toes-to-bar",
+    "equipment": "pull-up-bar",
+    "category": "core"
+  },
+  {
+    "slug": "strict-toes-to-rings",
+    "equipment": "gymnastic-rings",
+    "category": "core"
+  },
+  {
+    "slug": "sumo-deadlift",
+    "equipment": "barbell",
+    "category": "lower-body"
+  },
+  {
+    "slug": "sumo-deadlift-high-pull",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "swing-to-backward-roll-to-support",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "thruster",
+    "equipment": "barbell",
+    "category": "full-body"
+  },
+  {
+    "slug": "walking-lunge",
+    "equipment": null,
+    "category": "lower-body"
+  },
+  {
+    "slug": "wall-ball",
+    "equipment": "medicine-ball-wall-ball",
+    "category": "conditioning"
+  },
+  {
+    "slug": "wall-walk",
+    "equipment": null,
+    "category": "gymnastics"
+  },
+  {
+    "slug": "windshield-wiper",
+    "equipment": "pull-up-bar",
+    "category": "core"
+  },
+  {
+    "slug": "zercher-squat",
+    "equipment": "barbell",
+    "category": "lower-body"
+  }
+]

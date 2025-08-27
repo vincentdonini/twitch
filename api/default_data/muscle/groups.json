@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "abdominals",
+    "area": "core"
+  },
+  {
+    "slug": "triceps",
+    "area": "arms"
+  },
+  {
+    "slug": "biceps",
+    "area": "arms"
+  },
+  {
+    "slug": "forearms",
+    "area": "arms"
+  },
+  {
+    "slug": "deltoid",
+    "area": "shoulders"
+  },
+  {
+    "slug": "traps",
+    "area": "back"
+  }
+]

@@ -16,12 +16,42 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
         mappings:
-            App:
-                type: attribute
+            DomainEquipment:
                 is_bundle: false
-                dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'App\Entity'
-                alias: App
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Equipment/Entity'
+                prefix: 'App\Domain\Equipment\Entity'
+                alias: DomainEquipment
+            DomainExercise:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Exercise/Entity'
+                prefix: 'App\Domain\Exercise\Entity'
+                alias: DomainExercise
+            DomainMovement:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Movement/Entity'
+                prefix: 'App\Domain\Movement\Entity'
+                alias: DomainMovement
+            DomainMuscle:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Muscle/Entity'
+                prefix: 'App\Domain\Muscle\Entity'
+                alias: DomainMuscle
+            DomainUser:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/User/Entity'
+                prefix: 'App\Domain\User\Entity'
+                alias: DomainUser
+            DomainWod:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Wod/Entity'
+                prefix: 'App\Domain\Wod\Entity'
+                alias: DomainWod
 
 when@test:
     doctrine:

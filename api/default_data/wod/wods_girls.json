@@ -1,0 +1,1011 @@
+[
+  {
+    "title": "Isabel",
+    "description": {
+      "en": "For Time: 30 Snatches (135/95 lb)",
+      "fr": "Pour le temps : 30 Snatchs (61/43 kg)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 135 lb, Women: 95 lb.",
+          "fr": "Hommes : 61 kg, Femmes : 43 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "snatch"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Elizabeth",
+    "description": {
+      "en": "21-15-9 Reps For Time: Cleans (135/95 lb), Ring Dips",
+      "fr": "21-15-9 répétitions pour le temps : Cleans (61/43 kg), Dips sur anneaux"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 135 lb, Women: 95 lb.",
+          "fr": "Hommes : 61 kg, Femmes : 43 kg."
+        },
+        "duration": null,
+        "exercises": ["clean", "ring-dip"]
+      }
+    ]
+  },
+  {
+    "title": "Cindy",
+    "description": {
+      "en": "AMRAP in 20 minutes: 5 Pull-Ups, 10 Push-Ups, 15 Air Squats",
+      "fr": "AMRAP en 20 minutes : 5 tractions, 10 pompes, 15 squats aériens"
+    },
+    "type": "amrap",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Standard bodyweight version.",
+          "fr": "Version standard au poids de corps."
+        },
+        "duration": 1200,
+        "exercises": [
+          "pull-up",
+          "push-up",
+          "air-squat"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Amanda",
+    "description": {
+      "en": "9-7-5 Reps For Time: Muscle-Ups, Squat Snatches (135/95 lb)",
+      "fr": "9-7-5 répétitions pour le temps : Muscle-Ups, Squat Snatches (61/43 kg)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 135 lb, Women: 95 lb.",
+          "fr": "Hommes : 61 kg, Femmes : 43 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "muscle-up",
+          "squat-snatch"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Annie",
+    "description": {
+      "en": "50-40-30-20-10 Reps For Time: Double-Unders, Sit-Ups",
+      "fr": "50-40-30-20-10 répétitions pour le temps : Double-Unders, Sit-Ups"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Double-unders and sit-ups in descending rep scheme.",
+          "fr": "Double-unders et sit-ups avec un nombre de répétitions décroissant."
+        },
+        "duration": null,
+        "exercises": [
+          "double-under",
+          "sit-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Ellen",
+    "description": {
+      "en": "3 Rounds for Time: 20 Burpees, 21 Alternating Dumbbell Power Snatches (50/35 lb), 12 Dumbbell Thrusters (2x50/35 lb)",
+      "fr": "3 rounds pour le temps : 20 burpees, 21 dumbbell power snatches alternés (23/16 kg), 12 dumbbell thrusters (2x23/16 kg)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 50 lb, Women: 35 lb.",
+          "fr": "Hommes : 23 kg, Femmes : 16 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "burpee",
+          "dumbbell-power-snatch",
+          "dumbbell-thruster"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Nate",
+    "description": {
+      "en": "AMRAP in 20 minutes: 2 Muscle-Ups, 4 Handstand Push-Ups, 8 Kettlebell Swings (70/53 lb)",
+      "fr": "AMRAP en 20 minutes : 2 muscle-ups, 4 handstand push-ups, 8 kettlebell swings (32/24 kg)"
+    },
+    "type": "amrap",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 70 lb, Women: 53 lb.",
+          "fr": "Hommes : 32 kg, Femmes : 24 kg."
+        },
+        "duration": 1200,
+        "exercises": [
+          "muscle-up",
+          "handstand-push-up",
+          "kettlebell-swing"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Helen",
+    "description": {
+      "en": "3 Rounds For Time: 400 meter Run, 21 Kettlebell Swings (1.5/1 pood), 12 Pull-Ups",
+      "fr": "3 rounds pour le temps : 400 m course, 21 kettlebell swings (24/16 kg), 12 tractions"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 1.5 pood, Women: 1 pood.",
+          "fr": "Hommes : 24 kg, Femmes : 16 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "run",
+          "kettlebell-swing",
+          "pull-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Nancy",
+    "description": {
+      "en": "5 Rounds For Time: 400 meter Run, 15 Overhead Squats (95/65 lb)",
+      "fr": "5 rounds pour le temps : 400 m course, 15 overhead squats (43/29 kg)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 95 lb, Women: 65 lb.",
+          "fr": "Hommes : 43 kg, Femmes : 29 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "run",
+          "overhead-squat"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Fran",
+    "description": {
+      "en": "21-15-9 Reps For Time: Thrusters (95/65 lb), Pull-Ups",
+      "fr": "21-15-9 répétitions pour le temps : Thrusters (43/29 kg), Tractions"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 95 lb, Women: 65 lb.",
+          "fr": "Hommes : 43 kg, Femmes : 29 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "thruster",
+          "pull-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Gwen",
+    "description": {
+      "en": "15-12-9 Reps for Load: Clean-and-Jerks (unbroken)",
+      "fr": "15-12-9 répétitions pour la charge : Clean-and-Jerks (enchaînés sans pause)"
+    },
+    "type": "for-load",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Perform each set unbroken. Rest as needed between sets.",
+          "fr": "Effectuer chaque série sans pause. Repos à volonté entre les séries."
+        },
+        "duration": null,
+        "exercises": [
+          "clean-and-jerk"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Angie",
+    "description": {
+      "en": "For Time: 100 Pull-Ups, 100 Push-Ups, 100 Sit-Ups, 100 Air Squats",
+      "fr": "Pour le temps : 100 tractions, 100 pompes, 100 sit-ups, 100 squats aériens"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Complete all reps of each movement before moving to the next.",
+          "fr": "Terminer tous les mouvements avant de passer au suivant."
+        },
+        "duration": null,
+        "exercises": [
+          "pull-up",
+          "push-up",
+          "sit-up",
+          "air-squat"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Karen",
+    "description": {
+      "en": "For Time: 150 Wall Balls (20/14 lb) (10/9 ft)",
+      "fr": "Pour le temps : 150 wall balls (9/6 kg) (3/2,7 m)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 20 lb to 10 ft, Women: 14 lb to 9 ft.",
+          "fr": "Hommes : 9 kg à 3 m, Femmes : 6 kg à 2,7 m."
+        },
+        "duration": null,
+        "exercises": [
+          "wall-ball"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Mary",
+    "description": {
+      "en": "AMRAP in 20 minutes: 5 Handstand Push-Ups, 10 Pistols, 15 Pull-Ups",
+      "fr": "AMRAP en 20 minutes : 5 handstand push-ups, 10 pistols, 15 tractions"
+    },
+    "type": "amrap",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Alternating pistols.",
+          "fr": "Pistols en alternance."
+        },
+        "duration": 1200,
+        "exercises": [
+          "handstand-push-up",
+          "pistol-squat",
+          "pull-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Diane",
+    "description": {
+      "en": "21-15-9 Reps for Time: Deadlifts (225/155 lb), Handstand Push-Ups",
+      "fr": "21-15-9 répétitions pour le temps : Deadlifts (102/70 kg), Handstand Push-Ups"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 225 lb, Women: 155 lb.",
+          "fr": "Hommes : 102 kg, Femmes : 70 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "deadlift",
+          "handstand-push-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Jackie",
+    "description": {
+      "en": "For Time: 1,000 meter Row, 50 Thrusters (45/35 lb), 30 Pull-Ups",
+      "fr": "Pour le temps : 1 000 m rameur, 50 thrusters (20/16 kg), 30 tractions"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 45 lb, Women: 35 lb.",
+          "fr": "Hommes : 20 kg, Femmes : 16 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "row",
+          "thruster",
+          "pull-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Grace",
+    "description": {
+      "en": "For Time: 30 Clean-and-Jerks (135/95 lb)",
+      "fr": "Pour le temps : 30 clean-and-jerks (61/43 kg)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 135 lb, Women: 95 lb.",
+          "fr": "Hommes : 61 kg, Femmes : 43 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "clean-and-jerk"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Lane",
+    "description": {
+      "en": "5 Rounds for Max Reps: Hang Power Snatches (3/4 Bodyweight), Handstand Push-Ups. Rest as needed between rounds.",
+      "fr": "5 tours pour un max de reps : hang power snatches (¾ du poids de corps), handstand push-ups. Repos selon besoin entre les rounds."
+    },
+    "type": "for-quality",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Use 75% of bodyweight for snatches. Score is total reps.",
+          "fr": "Utiliser 75% du poids de corps pour les snatches. Score = total des répétitions."
+        },
+        "duration": null,
+        "exercises": [
+          "hang-power-snatch",
+          "handstand-push-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Andi",
+    "description": {
+      "en": "For Time: 100 Hang Power Snatches, 100 Push Presses, 100 Sumo Deadlift High-Pulls, 100 Front Squats (all at 65/45 lb)",
+      "fr": "Pour le temps : 100 hang power snatches, 100 push press, 100 sumo deadlift high-pulls, 100 front squats (29/20 kg)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 65 lb, Women: 45 lb for all movements.",
+          "fr": "Hommes : 29 kg, Femmes : 20 kg pour tous les mouvements."
+        },
+        "duration": null,
+        "exercises": [
+          "hang-power-snatch",
+          "push-press",
+          "sumo-deadlift-high-pull",
+          "front-squat"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Lyla",
+    "description": {
+      "en": "For Time: 10-9-8-7-6-5-4-3-2-1 reps of Muscle-Ups and Clean-and-Jerks (Bodyweight)",
+      "fr": "Pour le temps : 10-9-8-7-6-5-4-3-2-1 répétitions de muscle-ups et clean-and-jerks (poids de corps)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Use bodyweight for clean-and-jerks.",
+          "fr": "Utiliser le poids de corps pour les clean-and-jerks."
+        },
+        "duration": null,
+        "exercises": [
+          "muscle-up",
+          "clean-and-jerk"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Barbara Ann",
+    "description": {
+      "en": "5 Rounds for Time: 20 Handstand Push-Ups, 30 Deadlifts (135/95 lb), 40 Sit-Ups, 50 Double-Unders. Rest 3 minutes between rounds.",
+      "fr": "5 tours pour le temps : 20 handstand push-ups, 30 deadlifts (61/43 kg), 40 sit-ups, 50 double-unders. Repos 3 minutes entre les tours."
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Rest 3 minutes after each round. Men: 135 lb, Women: 95 lb.",
+          "fr": "Repos 3 minutes après chaque tour. Hommes : 61 kg, Femmes : 43 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "handstand-push-up",
+          "deadlift",
+          "sit-up",
+          "double-under"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Ingrid",
+    "description": {
+      "en": "10 Rounds for Time: 3 Snatches (135/95 lb), 3 Bar Over Burpees",
+      "fr": "10 tours pour le temps : 3 snatches (61/43 kg), 3 burpees par-dessus la barre"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 135 lb, Women: 95 lb.",
+          "fr": "Hommes : 61 kg, Femmes : 43 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "snatch",
+          "bar-over-burpee"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Grettel",
+    "description": {
+      "en": "10 Rounds for Time: 3 Clean-and-Jerks (135/95 lb), 3 Bar-Over Burpees",
+      "fr": "10 tours pour le temps : 3 clean-and-jerks (61/43 kg), 3 burpees par-dessus la barre"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 135 lb, Women: 95 lb.",
+          "fr": "Hommes : 61 kg, Femmes : 43 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "clean-and-jerk",
+          "bar-over-burpee"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Double Helen",
+    "description": {
+      "en": "3 Rounds for Time: 800 meter Run, 42 Kettlebell Swings (1.5/1 pood), 24 Pull-Ups",
+      "fr": "3 tours pour le temps : 800 mètres de course, 42 kettlebell swings (1,5/1 pood), 24 tractions"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 1.5 pood, Women: 1 pood kettlebell.",
+          "fr": "Hommes : kettlebell 24 kg, Femmes : 16 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "run",
+          "kettlebell-swing",
+          "pull-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Amanda .45",
+    "description": {
+      "en": "13-11-9-7-5 Reps for Time: Muscle-Ups, Squat Snatches (135/95 lb). Time cap: 13 min (M), 15 min (W)",
+      "fr": "13-11-9-7-5 répétitions pour le temps : muscle-ups, squat snatches (61/43 kg). Time cap : 13 min (H), 15 min (F)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 135 lb, Women: 95 lb. Time cap: 13 min (M), 15 min (W)",
+          "fr": "Hommes : 61 kg, Femmes : 43 kg. Time cap : 13 min (H), 15 min (F)"
+        },
+        "duration": 780,
+        "exercises": [
+          "muscle-up",
+          "squat-snatch"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Time Priority Diane",
+    "description": {
+      "en": "Max reps in 4:30. 60 sec Deadlifts (225/155 lb), 60 sec HSPU, 45 sec DL, 45 sec HSPU, 30 sec DL, 30 sec HSPU",
+      "fr": "Répétitions max en 4 min 30. 60 sec deadlifts (102/70 kg), 60 sec HSPU, 45 sec deadlifts, 45 sec HSPU, 30 sec deadlifts, 30 sec HSPU"
+    },
+    "type": "amrap",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Score is total reps in 4:30. DL: 225/155 lb.",
+          "fr": "Score = total de reps en 4 min 30. Deadlift : 102/70 kg."
+        },
+        "duration": 270,
+        "exercises": [
+          "deadlift",
+          "handstand-push-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Mary XXX",
+    "description": {
+      "en": "AMRAP in 20 minutes: increasing sets of HSPU, Pistols, Pull-Ups (10/20/30, 15/30/45, ...)",
+      "fr": "AMRAP en 20 min : séries progressives de HSPU, pistols, tractions (10/20/30, 15/30/45, ...)"
+    },
+    "type": "amrap",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Increase reps by 5/10/15 each round. Continue for 20 min.",
+          "fr": "Augmenter les répétitions à chaque round de 5/10/15. Continuer pendant 20 minutes."
+        },
+        "duration": 1200,
+        "exercises": [
+          "handstand-push-up",
+          "pistol-squat",
+          "pull-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Double Grace",
+    "description": {
+      "en": "For Time: 60 Clean-and-Jerks (135/95 lb)",
+      "fr": "Pour le temps : 60 clean-and-jerks (61/43 kg)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 135 lb, Women: 95 lb.",
+          "fr": "Hommes : 61 kg, Femmes : 43 kg."
+        },
+        "duration": null,
+        "exercises": [
+          "clean-and-jerk"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Candy",
+    "description": {
+      "en": "5 Rounds for Time: 20 Pull-Ups, 40 Push-Ups, 60 Air Squats",
+      "fr": "5 tours pour le temps : 20 tractions, 40 pompes, 60 air squats"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Bodyweight workout",
+          "fr": "Exercice au poids du corps"
+        },
+        "duration": null,
+        "exercises": [
+          "pull-up",
+          "push-up",
+          "air-squat"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Hard Cindy",
+    "description": {
+      "en": "AMRAP in 20 minutes: 5 Weighted Pull-Ups (35/25 lb), 10 Push-Ups (feet on 30/24\" box), 15 Squats (with 45/35 lb plate)",
+      "fr": "AMRAP en 20 minutes : 5 tractions lestées (16/11 kg), 10 pompes (pieds sur box 76/61 cm), 15 squats (avec disque de 20/16 kg)"
+    },
+    "type": "amrap",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Men: 35 lb pull-up, 45 lb squat; Women: 25 lb pull-up, 35 lb squat.",
+          "fr": "Hommes : traction 16 kg, squat avec 20 kg ; Femmes : traction 11 kg, squat avec 16 kg."
+        },
+        "duration": 1200,
+        "exercises": [
+          "pull-up",
+          "push-up",
+          "air-squat"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Cindy XXX",
+    "description": {
+      "en": "AMRAP in 20 minutes with increasing reps: 10 Pull-Ups, 20 Push-Ups, 30 Squats, then 15/30/45, then 20/40/60, etc.",
+      "fr": "AMRAP en 20 minutes avec répétitions progressives : 10 tractions, 20 pompes, 30 squats, puis 15/30/45, 20/40/60, etc."
+    },
+    "type": "amrap",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Increase by 5/10/15 reps each round.",
+          "fr": "Augmenter de 5/10/15 répétitions à chaque round."
+        },
+        "duration": 1200,
+        "exercises": [
+          "pull-up",
+          "push-up",
+          "air-squat"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Maggie",
+    "description": {
+      "en": "5 Rounds for Time: 20 Handstand Push-Ups, 40 Pull-Ups, 60 Pistols (alternating legs)",
+      "fr": "5 tours pour le temps : 20 handstand push-ups, 40 tractions, 60 pistols (jambes alternées)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Strict movement standards for each exercise.",
+          "fr": "Exécution stricte de chaque mouvement."
+        },
+        "duration": null,
+        "exercises": [
+          "handstand-push-up",
+          "pull-up",
+          "pistol-squat"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Special Mary",
+    "description": {
+      "en": "For Time: 5 Strict HSPU, 10 Pistols, 15 Strict Pull-Ups, 10 Strict HSPU, 20 Pistols, 30 Strict Pull-Ups, 15 Strict HSPU, 30 Pistols, 45 Strict Pull-Ups, 10 Strict HSPU, 20 Pistols, 30 Strict Pull-Ups, 5 Strict HSPU, 10 Pistols, 15 Strict Pull-Ups",
+      "fr": "Pour le temps : 5 HSPU stricts, 10 pistols, 15 tractions strictes, 10 HSPU stricts, 20 pistols, 30 tractions strictes, 15 HSPU stricts, 30 pistols, 45 tractions strictes, 10 HSPU stricts, 20 pistols, 30 tractions strictes, 5 HSPU stricts, 10 pistols, 15 tractions strictes"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Strict form required for HSPU and pull-ups.",
+          "fr": "Forme stricte exigée pour les HSPU et les tractions."
+        },
+        "duration": null,
+        "exercises": [
+          "strict-handstand-push-up",
+          "pistol-squat",
+          "strict-pull-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Easy Mary",
+    "description": {
+      "en": "AMRAP in 20 minutes: 5 HSPU, 10 Pull-Ups, 25 Air Squats",
+      "fr": "AMRAP en 20 minutes : 5 HSPU, 10 tractions, 25 air squats"
+    },
+    "type": "amrap",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Scaled version of Mary.",
+          "fr": "Version simplifiée de Mary."
+        },
+        "duration": 1200,
+        "exercises": [
+          "handstand-push-up",
+          "pull-up",
+          "air-squat"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Upside-Down Angie",
+    "description": {
+      "en": "For Time: 100 Air Squats, 100 Sit-Ups, 100 Push-Ups, 100 Pull-Ups",
+      "fr": "Pour le temps : 100 air squats, 100 sit-ups, 100 pompes, 100 tractions"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Same volume as Angie, different order.",
+          "fr": "Même volume qu’Angie, ordre différent."
+        },
+        "duration": null,
+        "exercises": [
+          "air-squat",
+          "sit-up",
+          "push-up",
+          "pull-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Heavy Fran",
+    "description": {
+      "en": "15-12-9 Reps For Time: Thrusters (135/95 lb), Weighted Pull-Ups (45/30 lb)",
+      "fr": "15-12-9 répétitions pour le temps : thrusters (61/43 kg), tractions lestées (20/14 kg)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Heavier version of Fran.",
+          "fr": "Version plus lourde de Fran."
+        },
+        "duration": null,
+        "exercises": [
+          "thruster",
+          "pull-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Fractured Fran",
+    "description": {
+      "en": "5 Rounds for Time: 9 Thrusters (95/65 lb), 9 Pull-Ups",
+      "fr": "5 tours pour le temps : 9 thrusters (43/29 kg), 9 tractions"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Fran broken into 5 rounds.",
+          "fr": "Fran décomposée en 5 rounds."
+        },
+        "duration": null,
+        "exercises": [
+          "thruster",
+          "pull-up"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Roaming Diane",
+    "description": {
+      "en": "21-15-9 Reps for Time: Deadlifts (225/155 lb), Handstand Walk (in meters)",
+      "fr": "21-15-9 répétitions pour le temps : deadlifts (102/70 kg), marche en équilibre sur les mains (en mètres)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Deadlifts and handstand walks combined.",
+          "fr": "Combinaison de deadlifts et marche sur les mains."
+        },
+        "duration": null,
+        "exercises": [
+          "deadlift",
+          "handstand-walk"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Barbara",
+    "description": {
+      "en": "5 Rounds For Time: 20 Pull-Ups, 30 Push-Ups, 40 Sit-Ups, 50 Air Squats. Rest 3 minutes between rounds.",
+      "fr": "5 tours pour le temps : 20 tractions, 30 pompes, 40 sit-ups, 50 air squats. Repos de 3 minutes entre les tours."
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Bodyweight chipper with rest periods.",
+          "fr": "Chipper au poids du corps avec des périodes de repos."
+        },
+        "duration": null,
+        "exercises": [
+          "pull-up",
+          "push-up",
+          "sit-up",
+          "air-squat"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Nasty Girls",
+    "description": {
+      "en": "3 Rounds For Time: 50 Air Squats, 7 Muscle-Ups, 10 Hang Power Cleans (135/95 lb)",
+      "fr": "3 tours pour le temps : 50 air squats, 7 muscle-ups, 10 hang power cleans (61/43 kg)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Classic benchmark WOD.",
+          "fr": "WOD benchmark classique."
+        },
+        "duration": null,
+        "exercises": [
+          "air-squat",
+          "muscle-up",
+          "hang-power-clean"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Roaming Diane",
+    "description": {
+      "en": "21-15-9 Reps for Time: Deadlifts (225/155 lb), Handstand Walk (in meters)",
+      "fr": "21-15-9 répétitions pour le temps : deadlifts (102/70 kg), marche en équilibre sur les mains (en mètres)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Deadlifts and handstand walks combined.",
+          "fr": "Combinaison de deadlifts et marche sur les mains."
+        },
+        "duration": null,
+        "exercises": [
+          "deadlift",
+          "handstand-walk"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Barbara",
+    "description": {
+      "en": "5 Rounds For Time: 20 Pull-Ups, 30 Push-Ups, 40 Sit-Ups, 50 Air Squats. Rest 3 minutes between rounds.",
+      "fr": "5 tours pour le temps : 20 tractions, 30 pompes, 40 sit-ups, 50 air squats. Repos de 3 minutes entre les tours."
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Bodyweight chipper with rest periods.",
+          "fr": "Chipper au poids du corps avec des périodes de repos."
+        },
+        "duration": null,
+        "exercises": [
+          "pull-up",
+          "push-up",
+          "sit-up",
+          "air-squat"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Nasty Girls",
+    "description": {
+      "en": "3 Rounds For Time: 50 Air Squats, 7 Muscle-Ups, 10 Hang Power Cleans (135/95 lb)",
+      "fr": "3 tours pour le temps : 50 air squats, 7 muscle-ups, 10 hang power cleans (61/43 kg)"
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "versions": [
+      {
+        "type": "Rx",
+        "notes": {
+          "en": "Classic benchmark WOD.",
+          "fr": "WOD benchmark classique."
+        },
+        "duration": null,
+        "exercises": [
+          "air-squat",
+          "muscle-up",
+          "hang-power-clean"
+        ]
+      }
+    ]
+  }
+]
