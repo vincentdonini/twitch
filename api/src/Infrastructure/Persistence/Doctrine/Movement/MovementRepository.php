@@ -12,7 +12,7 @@ use Doctrine\Persistence\ManagerRegistry;
 class MovementRepository extends ServiceEntityRepository implements MovementRepositoryInterface
 {
     use FilterableTrait;
-    
+
     public function __construct(
         ManagerRegistry                         $registry,
         private readonly EntityManagerInterface $entityManager,
@@ -25,18 +25,9 @@ class MovementRepository extends ServiceEntityRepository implements MovementRepo
         return $this->find($id);
     }
 
-    public function findOneBySlug(string $slug): ?Movement
+    public function findOneByName(string $name): ?Movement
     {
-        return $this->find($slug);
-    }
-
-    public function findByFilters(
-        ?string $sortBy,
-        ?string $sortOrder,
-        int     $offset = 0,
-        int     $limit = 10,
-    ): array {
-        return [];
+        return $this->find($name);
     }
 
     public function save(Movement $movement): void

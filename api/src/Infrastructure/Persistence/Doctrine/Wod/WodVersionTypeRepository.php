@@ -4,7 +4,6 @@ namespace App\Infrastructure\Persistence\Doctrine\Wod;
 
 use App\Domain\Wod\Entity\WodVersionType;
 use App\Domain\Wod\Repository\WodVersionTypeRepositoryInterface;
-use App\Infrastructure\Persistence\Doctrine\Common\FilterableTrait;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;

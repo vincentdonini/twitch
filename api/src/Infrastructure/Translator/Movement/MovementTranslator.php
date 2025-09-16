@@ -2,8 +2,8 @@
 
 namespace App\Infrastructure\Translator\Movement;
 
-use App\Domain\Movement\Service\MovementTranslatorInterface;
 use App\Domain\Movement\Entity\Movement;
+use App\Domain\Movement\Service\MovementTranslatorInterface;
 use App\Shared\Utils\StringHelper;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
@@ -17,11 +17,11 @@ class MovementTranslator implements MovementTranslatorInterface
 
     public function getName(Movement $movement): string
     {
-        return $this->translator->trans('movement.' . StringHelper::kebabToSnake($movement->getSlug()) . '.name');
+        return $this->translator->trans(StringHelper::kebabToSnake($movement->getSlug()) . '.name', [], 'movement');
     }
 
     public function getDescription(Movement $movement): string
     {
-        return $this->translator->trans('movement.' . StringHelper::kebabToSnake($movement->getSlug()) . '.description');
+        return $this->translator->trans(StringHelper::kebabToSnake($movement->getSlug()) . '.description', [], 'movement');
     }
 }

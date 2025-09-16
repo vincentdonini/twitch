@@ -1,0 +1,39 @@
+api_platform:
+    title: Hello API Platform
+    version: 1.0.0
+    
+    path_segment_name_generator: api_platform.metadata.path_segment_name_generator.dash
+    
+    # 👉 IMPORTANT : API Platform doit savoir où chercher tes entités
+    mapping:
+        paths:
+            - '%kernel.project_dir%/src/Domain'
+            
+    eager_loading:
+        max_joins: 200
+
+    formats:
+        jsonld: [ 'application/ld+json' ]
+        jsonapi: [ 'application/vnd.api+json' ]
+        json: [ 'application/json' ]
+        
+    docs_formats:
+        jsonld: ['application/ld+json']
+        jsonopenapi: ['application/vnd.openapi+json']
+        html: ['text/html']
+        
+    defaults:
+        pagination_enabled: true
+        pagination_client_enabled: true
+        pagination_client_items_per_page: true
+        pagination_items_per_page: 20
+        pagination_maximum_items_per_page: 50
+        stateless: true
+        cache_headers:
+            vary: ['Content-Type', 'Authorization', 'Origin']
+        extra_properties:
+            standard_put: true
+            rfc_7807_compliant_errors: true
+            
+    keep_legacy_inflector: false
+    use_symfony_listeners: true

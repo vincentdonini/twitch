@@ -1,0 +1,123 @@
+abmat:
+  name: "AbMat"
+  description: "Coussin utilisé pour plus de confort et de flexibilité lors des sit-ups."
+air_bike:
+  name: "Air Bike (Assault Bike)"
+  description: "Vélo d'exercice à résistance aérobie et musculaire, idéal pour un entraînement complet."
+axle_bar:
+  name: "Axle Bar"
+  description: "Barre épaisse utilisée pour des exercices de force tels que les soulevés de terre."
+barbell:
+  name: "Barbell"
+  description: "Barre traditionnelle utilisée pour les exercices de force comme les squats et les deadlifts."
+bench:
+  name: "Bench"
+  description: "Banc pour effectuer des exercices comme le développé couché."
+bike:
+  name: "Bike (Bicycle)"
+  description: "Vélo classique pour l'entraînement cardiovasculaire."
+bike_erg:
+  name: "BikeErg / Stationary Bike"
+  description: "Vélo d'exercice stationnaire, idéal pour l'endurance et l'entraînement du bas du corps."
+box:
+  name: "Box"
+  description: "Plateforme utilisée pour des sauts explosifs ou des montées, parfaite pour le travail de la puissance."
+dead_ball_d_ball:
+  name: "Dead Ball (D-Ball)"
+  description: "Ballon de type medicine ball, utilisé pour des exercices de force et de puissance."
+dip_bars:
+  name: "Dip Bars"
+  description: "Barres parallèles utilisées pour les dips, un exercice ciblant les triceps et les épaules."
+dumbbells:
+  name: "Dumbbell(s)"
+  description: "Haltères utilisés pour des exercices de musculation en isolation ou combinés."
+ghd_machine:
+  name: "GHD Machine"
+  description: "Machine spécialisée pour les extensions du dos et les sit-ups."
+gymnastic_rings:
+  name: "Gymnastic Rings"
+  description: "Anneaux utilisés pour des exercices de gymnastique et de renforcement musculaire."
+jump_rope:
+  name: "Jump Rope"
+  description: "Corde à sauter utilisée pour améliorer la coordination, l'agilité et l'endurance cardiovasculaire."
+keg:
+  name: "Keg"
+  description: "Fût utilisé pour les levées et les soulevés de terre, idéal pour la force fonctionnelle."
+kettlebells:
+  name: "Kettlebell(s)"
+  description: "Poids en forme de cloche utilisés pour des exercices de puissance et de renforcement musculaire."
+log:
+  name: "Log"
+  description: "Bûche en bois utilisée pour des exercices de levées et de force."
+wall_ball:
+  name: "Medicine Ball (Wall Ball)"
+  description: "Ballon utilisé pour des lancers et des squats afin de travailler la force et l'endurance."
+monkey_bars:
+  name: "Monkey Bars"
+  description: "Barres horizontales utilisées pour des exercices de suspension et de coordination."
+paddleboard:
+  name: "Paddleboard"
+  description: "Planche utilisée pour les entraînements sur l'eau, développant la force du tronc et l'équilibre."
+parallettes:
+  name: "Parallettes"
+  description: "Petites barres parallèles utilisées pour des exercices de gymnastique et de renforcement des poignets."
+peg_board:
+  name: "Peg Board"
+  description: "Planche avec des trous où l'on grimpe en insérant des pinces pour un travail de force et de coordination."
+plates:
+  name: "Plate(s)"
+  description: "Poids utilisés pour les exercices avec barre, permettant d'ajuster l'intensité de l'entraînement."
+pool_open_water:
+  name: "Pool/Open Water"
+  description: "Environnement pour les entraînements de natation en piscine ou en eau libre."
+pull_up_bar:
+  name: "Pull-Up Bar"
+  description: "Barre utilisée pour les tractions et autres exercices de suspension."
+pvc_pipe:
+  name: "PVC Pipe"
+  description: "Tuyau en PVC utilisé pour les exercices de mobilité et les échauffements."
+ramp:
+  name: "Ramp"
+  description: "Rampe utilisée pour des exercices de montée et de descente, souvent pour le travail de force et d'agilité."
+rope:
+  name: "Rope"
+  description: "Corde utilisée pour l'escalade, les sauts ou d'autres exercices de renforcement musculaire."
+rower:
+  name: "Rower"
+  description: "Appareil de rameur utilisé pour un entraînement cardiovasculaire complet du corps."
+ruck:
+  name: "Ruck"
+  description: "Sac à dos lourd utilisé pour des marches ou des courses afin de développer la force et l'endurance."
+sandbag:
+  name: "Sandbag"
+  description: "Sac rempli de sable, utilisé pour des exercices de force et de stabilité."
+ski_erg:
+  name: "SkiErg"
+  description: "Machine de ski à fondation aérobie, idéale pour le renforcement du tronc et des bras."
+sled:
+  name: "Sled (Prowler)"
+  description: "Traîneau utilisé pour des exercices de poussée et de traction, souvent pour le travail de force."
+sledgehammer:
+  name: "Sledgehammer"
+  description: "Marteau utilisé pour des exercices de force fonctionnelle comme les frappes sur un pneu."
+stairs:
+  name: "Stairs"
+  description: "Escaliers utilisés pour des montées, entraînant la force des jambes et l'endurance."
+tire:
+  name: "Tire"
+  description: "Pneu utilisé pour des exercices de levée, de retournement et de frappe."
+treadmill:
+  name: "Treadmill"
+  description: "Tapis de course pour un entraînement cardiovasculaire en intérieur."
+wall_obstacle:
+  name: "Wall (Obstacle)"
+  description: "Mur d'escalade ou obstacle à franchir dans les parcours de type crossfit."
+weight_rack:
+  name: "Weight Rack"
+  description: "Étagère utilisée pour ranger les barres et les poids."
+weight_vest:
+  name: "Weight Vest"
+  description: "Gilet lesté porté pour ajouter de la résistance à divers exercices."
+yoke:
+  name: "Yoke"
+  description: "Cadre métallique utilisé en strongman, porté sur les épaules et chargé de poids. Il permet de développer la force brute, la stabilité et la puissance lors de déplacements lourds."

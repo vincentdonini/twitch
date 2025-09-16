@@ -17,11 +17,11 @@ class EquipmentTranslator implements EquipmentTranslatorInterface
 
     public function getName(Equipment $equipment): string
     {
-        return $this->translator->trans('equipment.' . StringHelper::kebabToSnake($equipment->getSlug()) . '.name');
+        return $this->translator->trans(StringHelper::kebabToSnake($equipment->getSlug()) . '.name', [], 'equipment');
     }
 
     public function getDescription(Equipment $equipment): string
     {
-        return $this->translator->trans('equipment.' . StringHelper::kebabToSnake($equipment->getSlug()) . '.description');
+        return $this->translator->trans(StringHelper::kebabToSnake($equipment->getSlug()) . '.description', [], 'equipment');
     }
 }

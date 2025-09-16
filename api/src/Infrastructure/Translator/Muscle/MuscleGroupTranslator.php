@@ -17,11 +17,11 @@ class MuscleGroupTranslator implements MuscleGroupTranslatorInterface
 
     public function getName(MuscleGroup $muscleGroup): string
     {
-        return $this->translator->trans('muscle.group.' . StringHelper::kebabToSnake($muscleGroup->getSlug()) . '.name');
+        return $this->translator->trans('group.' . StringHelper::kebabToSnake($muscleGroup->getSlug()) . '.name', [], 'muscle');
     }
 
     public function getDescription(MuscleGroup $muscleGroup): string
     {
-        return $this->translator->trans('muscle.group.' . StringHelper::kebabToSnake($muscleGroup->getSlug()) . '.description');
+        return $this->translator->trans('group.' . StringHelper::kebabToSnake($muscleGroup->getSlug()) . '.description', [], 'muscle');
     }
 }

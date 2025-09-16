@@ -2,6 +2,10 @@
 
 namespace App\Domain\Wod\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
+use App\Infrastructure\ApiPlatform\Wod\Provider\WodVersionProvider;
 use App\Infrastructure\Persistence\Doctrine\Wod\WodVersionRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -10,6 +14,30 @@ use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: WodVersionRepository::class)]
 #[ORM\Table(name: 'wod_versions')]
+#[ApiResource(
+    formats                      : ['json', 'jsonapi'],
+    paginationClientEnabled      : false,
+    paginationClientItemsPerPage : true,
+    paginationEnabled            : true,
+    paginationItemsPerPage       : 10,
+    paginationMaximumItemsPerPage: 50,
+)]
+#[GetCollection(
+    normalizationContext: [
+        'groups' => [
+            'wodVersion:list',
+        ],
+    ],
+    provider            : WodVersionProvider::class,
+)]
+#[Get(
+    normalizationContext: [
+        'groups' => [
+            'wodVersion:detail',
+        ],
+    ],
+    provider            : WodVersionProvider::class,
+)]
 class WodVersion
 {
     #[ORM\Id]
@@ -17,26 +45,29 @@ class WodVersion
     #[ORM\Column(type: 'integer')]
     #[Groups([
         'wod:list', 'wod:detail',
+        'wodVersion:list', 'wodVersion:detail',
     ])]
-    private ?int $id;
+    private ?int $id = null;
 
-    #[ORM\ManyToOne(targetEntity: Wod::class, inversedBy: 'versions')]
+    #[ORM\ManyToOne(targetEntity: Wod::class, fetch: 'EAGER', inversedBy: 'wodVersions')]
+    #[ORM\JoinColumn(nullable: false)]
+    #[Groups([
+        'wodVersion:list', 'wodVersion:detail',
+    ])]
+    private ?Wod $wod = null;
+
+    #[ORM\ManyToOne(targetEntity: WodVersionType::class, fetch: 'EAGER')]
     #[ORM\JoinColumn(nullable: false)]
     #[Groups([
         'wod:list', 'wod:detail',
+        'wodVersion:list', 'wodVersion:detail',
     ])]
-    private Wod $wod;
-
-    #[ORM\ManyToOne(targetEntity: WodVersionType::class, inversedBy: 'versions')]
-    #[ORM\JoinColumn(nullable: false)]
-    #[Groups([
-        'wod:list', 'wod:detail',
-    ])]
-    private WodVersionType $wodVersionType;
+    private ?WodVersionType $wodVersionType = null;
 
     #[ORM\OneToMany(targetEntity: WodVersionVariant::class, mappedBy: 'wodVersion', cascade: ['persist', 'remove'])]
     #[Groups([
         'wod:list', 'wod:detail',
+        'wodVersion:list', 'wodVersion:detail',
     ])]
     private Collection $wodVersionVariants;
 
@@ -50,23 +81,23 @@ class WodVersion
         return $this->id;
     }
 
-    public function getWod(): Wod
+    public function getWod(): ?Wod
     {
         return $this->wod;
     }
 
-    public function setWod(Wod $wod): self
+    public function setWod(?Wod $wod): self
     {
         $this->wod = $wod;
         return $this;
     }
 
-    public function getWodVersionType(): WodVersionType
+    public function getWodVersionType(): ?WodVersionType
     {
         return $this->wodVersionType;
     }
 
-    public function setWodVersionType(WodVersionType $wodVersionType): self
+    public function setWodVersionType(?WodVersionType $wodVersionType): self
     {
         $this->wodVersionType = $wodVersionType;
         return $this;
@@ -89,7 +120,7 @@ class WodVersion
         return $this;
     }
 
-    public function removeWodVersion(WodVersionVariant $wodVersionVariant): self
+    public function removeWodVersionVariant(WodVersionVariant $wodVersionVariant): self
     {
         if ($this->wodVersionVariants->removeElement($wodVersionVariant)) {
             if ($wodVersionVariant->getWodVersion() === $this) {
@@ -102,9 +133,8 @@ class WodVersion
     public function setWodVersionVariants(iterable $wodVersionVariants): void
     {
         $this->wodVersionVariants = new ArrayCollection();
-
-        foreach ($wodVersionVariants as $wodVersionVariant) {
-            $this->addWodVersionVariant($wodVersionVariant);
+        foreach ($wodVersionVariants as $variant) {
+            $this->addWodVersionVariant($variant);
         }
     }
 }

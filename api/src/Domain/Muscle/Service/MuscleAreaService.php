@@ -2,7 +2,6 @@
 
 namespace App\Domain\Muscle\Service;
 
-use App\Application\Muscle\DTO\MuscleAreaDTO;
 use App\Domain\Muscle\Entity\MuscleArea;
 
 class MuscleAreaService
@@ -10,16 +9,13 @@ class MuscleAreaService
     public function __construct(
         private readonly MuscleAreaTranslatorInterface  $muscleAreaTranslator,
     ) {
-
     }
 
-    public function transformToDTO(MuscleArea $muscleArea): MuscleAreaDTO
+    public function enrichEntity(MuscleArea $muscleArea): MuscleArea
     {
-        return new MuscleAreaDTO(
-            $muscleArea->getId(),
-            $muscleArea->getSlug(),
-            $this->muscleAreaTranslator->getName($muscleArea),
-            $this->muscleAreaTranslator->getDescription($muscleArea),
-        );
+        $muscleArea->setName($this->muscleAreaTranslator->getName($muscleArea));
+        $muscleArea->setDescription($this->muscleAreaTranslator->getDescription($muscleArea));
+
+        return $muscleArea;
     }
 }

@@ -27,6 +27,10 @@ class EquipmentFixtures extends Fixture
             throw new Exception("Invalid JSON format in file: " . $jsonFile);
         }
 
+        usort($data, function ($a, $b) {
+            return strcmp($a['slug'], $b['slug']);
+        });
+
         foreach ($data as $item) {
             $equipment = new Equipment();
             $equipment->setSlug($item['slug']);

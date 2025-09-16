@@ -1,0 +1,905 @@
+air_bike:
+  name: "Air Bike"
+  description: "Dynamic pedaling on an exercise bike, engaging cardio and abdominals."
+air_squat:
+  name: "Air Squat"
+  description: "Bodyweight squat, strengthening legs and glutes."
+arch_up_arch_hold_superman:
+  name: "Arch Up / Arch Hold / Superman"
+  description: "Back and lower back strengthening exercise, mimicking the Superman position."
+back_extension:
+  name: "Back Extension"
+  description: "Back extension on bench or floor, targeting lower back muscles."
+back_scale:
+  name: "Back Scale"
+  description: "Balance exercise on the back, engaging core strength and stability."
+back_squat:
+  name: "Back Squat"
+  description: "Squat with bar on shoulders, strengthening legs and core."
+back_tuck:
+  name: "Back Tuck"
+  description: "Tucked backward jump, improving explosiveness and coordination."
+backward_roll:
+  name: "Backward Roll"
+  description: "Backward roll, engaging back and core for balance."
+ball_slam:
+  name: "Ball Slam"
+  description: "Explosive throw of a weighted ball to the ground, working upper body power."
+bar_facing_burpee:
+  name: "Bar Facing Burpee"
+  description: "Burpee performed facing a bar, followed by a jump over it. A full-body movement combining endurance, explosiveness, and coordination."
+bar_over_burpee:
+  name: "Bar Over Burpee"
+  description: "Burpee followed by a jump over a bar, combining cardio and agility."
+barbell_front_rack_lunge:
+  name: "Barbell Front Rack Lunge"
+  description: "Lunge with bar in front rack, strengthening legs and core."
+bear_crawl:
+  name: "Bear Crawl"
+  description: "Movement on all fours, engaging shoulders, core, and coordination."
+bench_press:
+  name: "Bench Press"
+  description: "Barbell bench press, targeting chest, shoulders, and triceps."
+bent_over_row:
+  name: "Bent Over Row"
+  description: "Bent-over barbell row, strengthening back and biceps."
+bike:
+  name: "Bike"
+  description: "Pedaling on a bike, cardiovascular exercise."
+block_pull_deadlift:
+  name: "Block Pull Deadlift"
+  description: "Partial deadlift from blocks, emphasizing posterior chain."
+broad_jump:
+  name: "Broad Jump"
+  description: "Long jump, developing leg explosiveness."
+box_jump:
+  name: "Box Jump"
+  description: "Jump onto a box, strengthening legs and coordination."
+box_step_up:
+  name: "Box Step-Up"
+  description: "Step onto a box with one leg, engaging legs and balance."
+burpee:
+  name: "Burpee"
+  description: "Full-body exercise combining squat, push-up, and jump, cardio and strength."
+burpee_box_jump:
+  name: "Burpee Box Jump"
+  description: "Burpee followed by a box jump, mixing cardio and explosiveness."
+burpee_box_jump_over:
+  name: "Burpee Box Jump Over"
+  description: "Burpee followed by jumping over a box, improving agility and explosiveness."
+burpee_over_row:
+  name: "Burpee Over Row"
+  description: "Burpee combined with a row bar jump-over, enhancing coordination and cardio."
+butterfly_pull_up:
+  name: "Butterfly Pull-Up"
+  description: "Pull-up with circular leg motion, increasing speed and efficiency."
+candlestick:
+  name: "Candlestick"
+  description: "Lying position with feet up, strengthening abs and core."
+chest_to_bar_pull_up:
+  name: "Chest-to-Bar Pull-Up"
+  description: "Pull-up bringing chest to bar, engaging back and arms."
+chest_to_wall_handstand_push_up:
+  name: "Chest-to-Wall Handstand Push-Up"
+  description: "Handstand push-up against wall, head down, strengthening shoulders and triceps."
+chin_over_bar_pull_up:
+  name: "Chin Over Bar Pull-Up"
+  description: "Pull-up where the chin must clearly pass above the bar. A pulling exercise targeting mainly the back and biceps."
+clean:
+  name: "Clean"
+  description: "Olympic bar lift to shoulders, improving explosiveness and coordination."
+clean_and_jerk:
+  name: "Clean and Jerk"
+  description: "Clean followed by overhead jerk, total body strength and power."
+clean_and_push_jerk:
+  name: "Clean and Push Jerk"
+  description: "Clean then push jerk, working power and coordination."
+clean_and_push_press:
+  name: "Clean and Push Press"
+  description: "Clean then overhead press using leg drive."
+clean_and_split_jerk:
+  name: "Clean and Split Jerk"
+  description: "Clean then split jerk, improving coordination and strength."
+clean_grip_deadlift:
+  name: "Clean-Grip Deadlift"
+  description: "Deadlift with clean grip, strengthening posterior chain and grip."
+clean_grip_deadlift_high_pull:
+  name: "Clean-Grip Deadlift High Pull"
+  description: "Deadlift followed by high pull, developing back and explosiveness."
+clean_pull:
+  name: "Clean Pull"
+  description: "Pull bar to shoulders without catch, focusing on power and technique."
+crossover:
+  name: "Crossover"
+  description: "Leg crossing or jump movement, enhancing coordination and agility."
+curl:
+  name: "Curl"
+  description: "Arm flexion with weight, targeting primarily biceps."
+deadlift:
+  name: "Deadlift"
+  description: "Classic deadlift, strengthening back, glutes, and legs."
+deficit_deadlift:
+  name: "Deficit Deadlift"
+  description: "Deadlift with elevated feet, emphasizing range of motion and power."
+deficit_handstand_push_up:
+  name: "Deficit Handstand Push-Up"
+  description: "Handstand push-up with increased range, strengthening shoulders and triceps."
+devil_press:
+  name: "Devil Press"
+  description: "Burpee followed by dumbbell press overhead, cardio and power."
+dip:
+  name: "Dip"
+  description: "Arm flexion-extension on parallel bars, targeting triceps and shoulders."
+double_under:
+  name: "Double Under"
+  description: "Jump rope where rope passes twice under feet, cardio and coordination."
+dumbbell_clean:
+  name: "Dumbbell Clean"
+  description: "Explosive dumbbell lift to shoulders, improving coordination and power."
+dumbbell_clean_and_press:
+  name: "Dumbbell Clean and Press"
+  description: "Dumbbell clean followed by overhead press, strength and explosiveness."
+dumbbell_deadlift:
+  name: "Dumbbell Deadlift"
+  description: "Deadlift with dumbbells, targeting posterior chain and core."
+dumbbell_farmers_carry:
+  name: "Dumbbell Farmers Carry"
+  description: "Walk holding dumbbells in each hand, strengthening grip and core."
+dumbbell_front_rack_lunge:
+  name: "Dumbbell Front Rack Lunge"
+  description: "Lunge with dumbbells in front rack, engaging legs and core."
+dumbbell_front_squat:
+  name: "Dumbbell Front Squat"
+  description: "Squat with dumbbells in front of shoulders, strengthening quads and core."
+dumbbell_goblet_squat:
+  name: "Dumbbell Goblet Squat"
+  description: "Squat holding a dumbbell at chest, engaging legs and core."
+dumbbell_halo:
+  name: "Dumbbell Halo"
+  description: "Circular dumbbell movement around head, strengthening shoulders and core."
+dumbbell_high_pull:
+  name: "Dumbbell High Pull"
+  description: "Explosive dumbbell pull to chin, strengthening shoulders and traps."
+dumbbell_muscle_clean:
+  name: "Dumbbell Muscle Clean"
+  description: "Dumbbell clean without leg drive, improving explosiveness and coordination."
+dumbbell_muscle_snatch:
+  name: "Dumbbell Muscle Snatch"
+  description: "Dumbbell snatch without leg bend, building shoulder strength and coordination."
+dumbbell_overhead_squat:
+  name: "Dumbbell Overhead Squat"
+  description: "Squat with dumbbells overhead, challenging shoulder stability and core strength."
+dumbbell_overhead_walking_lunge:
+  name: "Dumbbell Overhead Walking Lunge"
+  description: "Walking lunge with dumbbells overhead, building overall stability and strength."
+dumbbell_power_clean:
+  name: "Dumbbell Power Clean"
+  description: "Dumbbell clean with higher catch, improving explosiveness and coordination."
+dumbbell_power_snatch:
+  name: "Dumbbell Power Snatch"
+  description: "Dumbbell snatch with high catch, developing power and technique."
+dumbbell_press:
+  name: "Dumbbell Press"
+  description: "Overhead press with dumbbells, targeting shoulders and triceps."
+dumbbell_push_jerk:
+  name: "Dumbbell Push Jerk"
+  description: "Explosive overhead press with leg drive, power and coordination."
+dumbbell_push_press:
+  name: "Dumbbell Push Press"
+  description: "Overhead press with slight leg drive, strengthening shoulders and triceps."
+dumbbell_row:
+  name: "Dumbbell Row"
+  description: "Dumbbell rowing, targeting back and biceps."
+dumbbell_snatch:
+  name: "Dumbbell Snatch"
+  description: "Dumbbell snatch from floor to overhead, power and coordination."
+dumbbell_snatch_to_overhead:
+  name: "Dumbbell Snatch to Overhead"
+  description: "Snatch with catch directly overhead, building strength and explosiveness."
+dumbbell_split_clean:
+  name: "Dumbbell Split Clean"
+  description: "Dumbbell clean with rear lunge, coordination and explosiveness."
+dumbbell_split_snatch:
+  name: "Dumbbell Split Snatch"
+  description: "Dumbbell snatch with rear lunge, strength and stability."
+dumbbell_squat_clean:
+  name: "Dumbbell Squat Clean"
+  description: "Clean with squat catch, improving leg power and mobility."
+dumbbell_squat_snatch:
+  name: "Dumbbell Squat Snatch"
+  description: "Snatch with full squat catch, enhancing coordination and explosiveness."
+dumbbell_thruster:
+  name: "Dumbbell Thruster"
+  description: "Squat followed by overhead press, full-body strength."
+dumbbell_tater:
+  name: "Dumbbell Tater"
+  description: "Dynamic dumbbell swing, emphasizing posterior chain and core."
+dumbbell_turkish_get_up:
+  name: "Dumbbell Turkish Get-Up"
+  description: "Move from floor to standing with dumbbell overhead, stability and coordination."
+dumbbell_russian_twist:
+  name: "Dumbbell Russian Twist"
+  description: "Seated trunk rotation with dumbbell, strengthening obliques."
+dumbbell_suitcase_carry:
+  name: "Dumbbell Suitcase Carry"
+  description: "Walk with dumbbell in one hand, stabilizing core and grip."
+dumbbell_swing:
+  name: "Dumbbell Swing"
+  description: "Dynamic swing of a dumbbell from between the legs to chest or overhead height, targeting glutes, hamstrings, and core."
+dumbbell_walking_lunge:
+  name: "Dumbbell Walking Lunge"
+  description: "Walking lunge with dumbbells, strengthening legs and balance."
+dumbbell_windmill:
+  name: "Dumbbell Windmill"
+  description: "Side bend with dumbbell overhead, core stability and lateral stretch."
+farmers_carry:
+  name: "Farmers Carry"
+  description: "Walk carrying heavy weights in each hand, building overall strength and grip."
+firemans_carry:
+  name: "Fireman’s Carry"
+  description: "Carry weight on shoulders, improving coordination and strength."
+floor_wiper:
+  name: "Floor Wiper"
+  description: "Leg movement side-to-side while lying, strengthening abs."
+flutter_kick_leg_raise:
+  name: "Flutter Kick / Leg Raise"
+  description: "Leg kicks while lying down, engaging abs and hip flexors."
+forward_roll:
+  name: "Forward Roll"
+  description: "Forward roll, mobilizing back, legs, and coordination."
+freestanding_handstand_push_up:
+  name: "Freestanding Handstand Push-Up"
+  description: "Handstand push-up without support, strengthening shoulders and triceps."
+front_scale:
+  name: "Front Scale"
+  description: "Balance on one leg, engaging legs and core."
+front_squat:
+  name: "Front Squat"
+  description: "Squat with bar in front of shoulders, engaging quads and core."
+ghd_sit_up:
+  name: "GHD Sit-Up"
+  description: "Full sit-up on GHD machine, strengthening core and hip flexors."
+glide_kip:
+  name: "Glide Kip"
+  description: "Swinging motion on bar to assist pull-up, improving coordination and explosiveness."
+good_morning:
+  name: "Good Morning"
+  description: "Hip hinge with bar on shoulders, strengthening lower back and hamstrings."
+goblet_squat:
+  name: "Goblet Squat"
+  description: "Squat holding weight at chest, strengthening legs and core."
+grasshopper:
+  name: "Grasshopper"
+  description: "Dynamic ab movement with leg rotation, engaging obliques and core."
+ground_to_overhead:
+  name: "Ground to Overhead"
+  description: "Lift weight from floor to overhead, full-body power."
+hack_squat:
+  name: "Hack Squat"
+  description: "Squat with bar behind legs, targeting quads and glutes."
+hammer_strike:
+  name: "Hammer Strike"
+  description: "Simulated hammer strikes, upper body power and explosiveness."
+handstand_hold:
+  name: "Handstand Hold"
+  description: "Hold handstand, strengthening shoulders, core, and balance."
+handstand_push_up:
+  name: "Handstand Push-Up"
+  description: "Handstand push-up, targeting shoulders and triceps."
+handstand_walk:
+  name: "Handstand Walk"
+  description: "Walk on hands, building balance, coordination, and core strength."
+hanging_l_sit:
+  name: "Hanging L-Sit"
+  description: "Hang from bar with legs extended, strengthening abs and core."
+hang_clean:
+  name: "Hang Clean"
+  description: "Clean from hanging position (bar above knees), enhancing explosiveness and technique."
+hang_muscle_clean:
+  name: "Hang Muscle Clean"
+  description: "Clean from hanging bar without leg drive, building strength and coordination."
+hang_power_clean:
+  name: "Hang Power Clean"
+  description: "Clean with high catch from hanging bar, improving power and technique."
+hang_split_clean:
+  name: "Hang Split Clean"
+  description: "Clean with rear lunge from hanging bar, coordination and power."
+hang_squat_clean:
+  name: "Hang Squat Clean"
+  description: "Clean with squat catch from hanging bar, enhancing power and leg mobility."
+hang_muscle_snatch:
+  name: "Hang Muscle Snatch"
+  description: "Snatch without leg bend from hanging bar, strengthening shoulders and coordination."
+hang_snatch:
+  name: "Hang Snatch"
+  description: "Snatch from hanging bar, developing power and technique."
+hang_power_snatch:
+  name: "Hang Power Snatch"
+  description: "Snatch with high catch from hanging bar, improving explosiveness and coordination."
+hang_squat_snatch:
+  name: "Hang Squat Snatch"
+  description: "Snatch with squat catch from hanging bar, building power and mobility."
+hang_hold:
+  name: "Hang Hold"
+  description: "Static hang from bar, strengthening grip and core."
+heel_clap:
+  name: "Heel Clap"
+  description: "Jump or extend legs to clap heels, improving explosiveness and coordination."
+hex_bar_deadlift:
+  name: "Hex Bar Deadlift"
+  description: "Deadlift with hex bar, strengthening posterior chain and grip."
+hex_bar_deadlift_high_pull:
+  name: "Hex Bar Deadlift High Pull"
+  description: "Deadlift with high pull using hex bar, targeting back and shoulders."
+hip_extension:
+  name: "Hip Extension"
+  description: "Hip extension on bench or floor, strengthening glutes and lower back."
+hollow_hold:
+  name: "Hollow Hold"
+  description: "Hold hollow body position, strengthening core."
+hollow_rock:
+  name: "Hollow Rock"
+  description: "Rock forward and backward in hollow position, engaging core and coordination."
+inchworm:
+  name: "Inchworm"
+  description: "Forward bend then walk hands forward, mobilizing core, shoulders, and hamstrings."
+inverted_burpee:
+  name: "Inverted Burpee"
+  description: "Burpee with flip or pull, developing explosiveness and coordination."
+inverted_hang:
+  name: "Inverted Hang"
+  description: "Upside-down hang from bar, strengthening back and shoulders."
+inverted_pike:
+  name: "Inverted Pike"
+  description: "Upside-down position with legs straight, engaging core and shoulders."
+inverted_tuck:
+  name: "Inverted Tuck"
+  description: "Upside-down position with legs tucked, strengthening core and coordination."
+jerk:
+  name: "Jerk"
+  description: "Explosive push of bar overhead, building power and coordination."
+jumping_jack:
+  name: "Jumping Jack"
+  description: "Full-body calisthenics exercise involving jumping to a position with legs spread and hands overhead, then returning to the starting position, improving cardiovascular fitness."
+jumping_pull_up:
+  name: "Jumping Pull-Up"
+  description: "Pull-up assisted by a jump at the bar, making it easier to get over the bar."
+jumping_chest_to_bar_pull_up:
+  name: "Jumping Chest to Bar Pull-Up"
+  description: "Pull-up assisted by a jump, where the chest must make contact with the bar. A pulling exercise to build back and arm strength with leg assistance."
+kettlebell_clean:
+  name: "Kettlebell Clean"
+  description: "Lift kettlebell to shoulders, developing explosiveness and coordination."
+kettlebell_clean_and_press:
+  name: "Kettlebell Clean and Press"
+  description: "Clean followed by press, full-body strength and power."
+kettlebell_deadlift:
+  name: "Kettlebell Deadlift"
+  description: "Deadlift with kettlebell, targeting posterior chain and core."
+kettlebell_farmers_carry:
+  name: "Kettlebell Farmers Carry"
+  description: "Walk carrying kettlebells, strengthening grip and core."
+kettlebell_front_rack_lunge:
+  name: "Kettlebell Front Rack Lunge"
+  description: "Lunge performed with one or two kettlebells held in the front rack position. Targets the legs, glutes, and core stability."
+kettlebell_front_squat:
+  name: "Kettlebell Front Squat"
+  description: "Squat performed holding a kettlebell in front of the chest, engaging quadriceps, glutes, and core for stability."
+kettlebell_goblet_squat:
+  name: "Kettlebell Goblet Squat"
+  description: "Squat holding kettlebell at chest, engaging legs and core."
+kettlebell_high_pull:
+  name: "Kettlebell High Pull"
+  description: "Explosive kettlebell pull to chin, targeting shoulders and traps."
+kettlebell_halo:
+  name: "Kettlebell Halo"
+  description: "Circular kettlebell movement around head, improving shoulder stability."
+kettlebell_lunge:
+  name: "Kettlebell Lunge"
+  description: "Lunge with kettlebell, strengthening legs and balance."
+kettlebell_muscle_clean:
+  name: "Kettlebell Muscle Clean"
+  description: "Movement where the kettlebell is lifted from the ground to the rack position in one fluid motion, without squatting or significant leg bend. Builds technique, upper body strength, and power."
+kettlebell_muscle_snatch:
+  name: "Kettlebell Muscle Snatch"
+  description: "Explosive movement where the kettlebell is lifted from the ground directly overhead in one motion, without squatting or significant leg bend. Develops power, coordination, and shoulder strength."
+kettlebell_overhead_squat:
+  name: "Kettlebell Overhead Squat"
+  description: "Squat with kettlebell overhead, improving core stability and strength."
+kettlebell_overhead_walking_lunge:
+  name: "Kettlebell Overhead Walking Lunge"
+  description: "Walking lunges performed with one or two kettlebells held overhead with arms extended. Targets the legs, glutes, shoulders, and core for stability."
+kettlebell_power_clean:
+  name: "Kettlebell Power Clean"
+  description: "Movement where the kettlebell is lifted from the ground to the rack position with a partial or no full squat. Builds power, coordination, and upper body strength."
+kettlebell_power_snatch:
+  name: "Kettlebell Power Snatch"
+  description: "Explosive movement where the kettlebell is lifted from the ground to overhead in one motion, caught in a partial squat or nearly straight legs. Develops power, explosiveness, and shoulders."
+kettlebell_press:
+  name: "Kettlebell Press"
+  description: "Overhead press with kettlebell, targeting shoulders and triceps."
+kettlebell_push_jerk:
+  name: "Kettlebell Push Jerk"
+  description: "Explosive overhead press with leg drive, building power and coordination."
+kettlebell_push_press:
+  name: "Kettlebell Push Press"
+  description: "Overhead press with slight leg drive, strengthening shoulders and triceps."
+kettlebell_russian_twist:
+  name: "Kettlebell Russian Twist"
+  description: "Seated trunk rotation with kettlebell, targeting obliques."
+kettlebell_row:
+  name: "Kettlebell Row"
+  description: "Rowing with kettlebell, targeting back and biceps."
+kettlebell_snatch:
+  name: "Kettlebell Snatch"
+  description: "Kettlebell snatch from floor to overhead, developing power and coordination."
+kettlebell_snatch_to_overhead:
+  name: "Kettlebell Snatch to Overhead"
+  description: "Snatch with catch directly overhead, building strength and explosiveness."
+kettlebell_squat_clean:
+  name: "Kettlebell Squat Clean"
+  description: "Movement where the kettlebell is lifted from the ground to the rack position, with a full squat before standing up. Builds power, coordination, and leg strength."
+kettlebell_split_clean:
+  name: "Kettlebell Split Clean"
+  description: "Clean performed with a split stance during the kettlebell catch in rack position. Builds power, balance, and coordination."
+kettlebell_split_snatch:
+  name: "Kettlebell Split Snatch"
+  description: "Snatch performed with a split stance during the kettlebell catch overhead. Full-body exercise for power, balance, and shoulder stability."
+kettlebell_squat_snatch:
+  name: "Kettlebell Squat Snatch"
+  description: "Explosive movement where the kettlebell is lifted from the ground to overhead in one motion, caught in a full squat before standing up. Develops strength, explosiveness, and mobility."
+kettlebell_suitcase_carry:
+  name: "Kettlebell Suitcase Carry"
+  description: "Walk with kettlebell in one hand, stabilizing core and grip."
+kettlebell_swing:
+  name: "Kettlebell Swing"
+  description: "Dynamic hip hinge movement swinging a kettlebell from between the legs to chest or overhead height, targeting glutes, hamstrings, and core."
+kettlebell_tater:
+  name: "Kettlebell Tater"
+  description: "Dynamic kettlebell swing, emphasizing posterior chain and core."
+kettlebell_thruster:
+  name: "Kettlebell Thruster"
+  description: "Combination of a full squat followed by an explosive overhead press of the kettlebells. Targets legs, shoulders, core, and endurance."
+kettlebell_turkish_get_up:
+  name: "Kettlebell Turkish Get-Up"
+  description: "Move from floor to standing with kettlebell overhead, improving stability and coordination."
+kettlebell_walking_lunge:
+  name: "Kettlebell Walking Lunge"
+  description: "Walking lunges performed with one or two kettlebells in rack position. Targets legs, glutes, and core for stability."
+kettlebell_windmill:
+  name: "Kettlebell Windmill"
+  description: "Side bend with kettlebell overhead, enhancing core stability and lateral flexibility."
+kipping_chest_to_bar_pull_up:
+  name: "Kipping Chest-to-Bar Pull-Up"
+  description: "Dynamic pull-up bringing chest to bar, improving speed and coordination."
+kipping_deficit_handstand_push_up:
+  name: "Kipping Deficit Handstand Push-Up"
+  description: "Head-down push-up with extra range and swing, building shoulder and triceps explosiveness."
+kipping_handstand_push_up:
+  name: "Kipping Handstand Push-Up"
+  description: "Handstand push-ups with swing, building strength and coordination."
+kipping_knees_to_elbows:
+  name: "Kipping Knees-to-Elbows"
+  description: "Dynamic pull bringing knees to elbows, engaging core and coordination."
+kipping_muscle_up:
+  name: "Kipping Muscle-Up"
+  description: "Explosive bar or ring transition, pull then dip, full-body strength and coordination."
+kipping_pull_up:
+  name: "Kipping Pull-Up"
+  description: "Pull-up with swing, improving speed and efficiency."
+kipping_toes_to_bar:
+  name: "Kipping Toes-to-Bar"
+  description: "Dynamic pull bringing feet to bar, engaging core and coordination."
+kipping_toes_to_rings:
+  name: "Kipping Toes-to-Rings"
+  description: "Dynamic ring pull bringing feet to rings, building strength and coordination."
+kipping_ring_muscle_up:
+  name: "Kipping Ring Muscle-Up"
+  description: "Explosive ring transition, pull then dip, full-body strength and coordination."
+knees_to_elbows:
+  name: "Knees to Elbows"
+  description: "Hanging movement where knees are raised toward the elbows, targeting the abdominal muscles and improving core strength."
+l_sit:
+  name: "L-Sit"
+  description: "L-sit hold on bar or floor, strengthening core and abs."
+l_sit_on_rings:
+  name: "L-Sit on Rings"
+  description: "L-sit hold on rings, improving trunk stability and strength."
+l_sit_rope_climb:
+  name: "L-Sit Rope Climb"
+  description: "Rope climb in L-sit position, engaging core and arm strength."
+l_sit_to_shoulder_stand:
+  name: "L-Sit to Shoulder Stand"
+  description: "Transition from L-sit to shoulder stand, engaging core and coordination."
+lateral_jump:
+  name: "Lateral Jump"
+  description: "Side jump, improving leg explosiveness and agility."
+lateral_raise:
+  name: "Lateral Raise"
+  description: "Lateral arm raise, targeting deltoids."
+legless_rope_climb:
+  name: "Legless Rope Climb"
+  description: "Rope climb without using legs, building arm strength and grip."
+lunge:
+  name: "Lunge"
+  description: "Classic forward lunge, strengthening legs and balance."
+l_pull_up:
+  name: "L-Pull-Up"
+  description: "Pull-up with legs in L position, engaging core and back."
+man_maker:
+  name: "Man Maker"
+  description: "Burpee with dumbbells followed by press and row, full-body exercise."
+medicine_ball_clean:
+  name: "Medicine Ball Clean"
+  description: "Lift medicine ball to shoulders, improving power and coordination."
+modified_rope_climb:
+  name: "Modified Rope Climb"
+  description: "Simplified or assisted rope climb, engaging arms and core."
+monkey_bar_traverse:
+  name: "Monkey Bar Traverse"
+  description: "Horizontal traverse on bars, building arm strength and coordination."
+mountain_climber:
+  name: "Mountain Climber"
+  description: "Ground cardio exercise with knees alternately to chest, engaging core and endurance."
+muscle_up:
+  name: "Muscle-Up"
+  description: "A compound movement transitioning from a pull-up to a dip on a bar or rings, engaging upper body and core muscles."
+muscle_clean:
+  name: "Muscle Clean"
+  description: "Clean without leg drive, strengthening shoulders and core coordination."
+muscle_snatch:
+  name: "Muscle Snatch"
+  description: "Snatch without leg bend, building explosive shoulder power and coordination."
+overhead_squat:
+  name: "Overhead Squat"
+  description: "Squat with bar or dumbbell overhead, developing stability and full-body strength."
+paddleboard:
+  name: "Paddleboard"
+  description: "Balance exercise on board or paddle, engaging core and coordination."
+parallette_pass_through:
+  name: "Parallette Pass-Through"
+  description: "Movement on parallettes where the body passes through the arms, enhancing shoulder mobility, core strength, and coordination."
+pause_deadlift:
+  name: "Pause Deadlift"
+  description: "Deadlift with pause mid-lift, improving strength and technique."
+pegboard_ascent:
+  name: "Pegboard Ascent"
+  description: "Vertical climb on pegboard, building arm strength and coordination."
+pistol:
+  name: "Pistol"
+  description: "Single-leg squat, improving balance and leg strength."
+plank_hold:
+  name: "Plank Hold"
+  description: "Core hold in plank, strengthening core, shoulders, and overall stability."
+power_clean:
+  name: "Power Clean"
+  description: "Clean with high catch, developing leg and core explosiveness."
+power_clean_and_jerk:
+  name: "Power Clean and Jerk"
+  description: "Power clean followed by jerk, building full-body coordination and strength."
+power_clean_and_push_jerk:
+  name: "Power Clean and Push Jerk"
+  description: "Power clean followed by push jerk, improving power and explosiveness."
+power_clean_and_push_press:
+  name: "Power Clean and Push Press"
+  description: "Power clean followed by push press, building strength and coordination."
+power_clean_and_split_jerk:
+  name: "Power Clean and Split Jerk"
+  description: "Power clean followed by split jerk, developing power and stability."
+power_jerk:
+  name: "Power Jerk"
+  description: "Explosive lift of a barbell overhead from the shoulders, involving legs, shoulders, and core, using a slight leg dip to drive the weight."
+power_snatch:
+  name: "Power Snatch"
+  description: "Snatch with high catch, building explosive strength and coordination."
+power_snatch_balance:
+  name: "Power Snatch Balance"
+  description: "Snatch with partial squat, enhancing stability and shoulder power."
+pull_over:
+  name: "Pull-Over"
+  description: "Arm movement with weight behind head, engaging chest and back."
+pull_up:
+  name: "Pull-Up"
+  description: "Classic pull-up on bar, strengthening back and arms."
+push_jerk:
+  name: "Push Jerk"
+  description: "Explosive press with leg drive, building power and coordination."
+push_press:
+  name: "Push Press"
+  description: "Vertical press with slight leg drive, strengthening shoulders and triceps."
+push_up:
+  name: "Push-Up"
+  description: "Bodyweight push-up, engaging chest, triceps, and core."
+rack_pull_deadlift:
+  name: "Rack Pull Deadlift"
+  description: "Partial deadlift from supports, strengthening the posterior chain."
+romanian_deadlift:
+  name: "Romanian Deadlift"
+  description: "Deadlift with nearly straight legs, targeting hamstrings and back."
+romanian_deadlift_high_pull:
+  name: "Romanian Deadlift High Pull"
+  description: "Romanian deadlift followed by a high pull, strengthening back and shoulders."
+rope_climb:
+  name: "Rope Climb"
+  description: "Climbing a rope, building arm strength, grip, and coordination."
+row:
+  name: "Row"
+  description: "Pulling movement targeting the back muscles, shoulders, and arms, performed with a barbell, dumbbells, or bodyweight."
+run:
+  name: "Run"
+  description: "Running, improving cardiovascular endurance and leg strength."
+russian_twist:
+  name: "Russian Twist"
+  description: "Seated trunk rotation, strengthening obliques and core."
+ring_dip:
+  name: "Ring Dip"
+  description: "Dip on rings, engaging triceps, shoulders, and core."
+ring_muscle_up:
+  name: "Ring Muscle-Up"
+  description: "Pull-up then dip on rings, full-body strength and coordination."
+ring_push_up:
+  name: "Ring Push-Up"
+  description: "Push-up on rings, challenging chest, triceps, and stability."
+ring_row:
+  name: "Ring Row"
+  description: "Row on rings, targeting back and biceps."
+sandbag_carry:
+  name: "Sandbag Carry"
+  description: "Carry a weighted bag, strengthening core, legs, and grip."
+shoulder_press:
+  name: "Shoulder Press"
+  description: "Vertical press, targeting shoulders and triceps."
+shoulder_to_overhead:
+  name: "Shoulder to Overhead"
+  description: "Lift from shoulders to overhead, improving power and coordination."
+shuttle_run:
+  name: "Shuttle Run"
+  description: "Back-and-forth sprint, enhancing cardio and agility."
+ski_skiing_on_ski_erg:
+  name: "Ski / Skiing on Ski Erg"
+  description: "Simulated skiing on ergometer, engaging cardio and upper body."
+skin_the_cat:
+  name: "Skin the Cat"
+  description: "Complete rotation under bar or rings, improving shoulder mobility and core."
+sled_pull:
+  name: "Sled Pull"
+  description: "Pulling a weighted sled, engaging legs, core, and arms."
+sled_push_prowler_push:
+  name: "Sled Push / Prowler Push"
+  description: "Pushing a sled, building leg strength and full-body power."
+snatch:
+  name: "Snatch"
+  description: "Complete Olympic snatch, developing power, coordination, and explosiveness."
+snatch_balance:
+  name: "Snatch Balance"
+  description: "Snatch with partial squat catch, improving stability and full-body strength."
+snatch_grip_deadlift:
+  name: "Snatch-Grip Deadlift"
+  description: "Deadlift with wide grip, strengthening back, legs, and grip."
+snatch_grip_deadlift_high_pull:
+  name: "Snatch-Grip Deadlift High Pull"
+  description: "Wide-grip deadlift followed by high pull, engaging back and shoulders."
+snatch_grip_overhead_squat:
+  name: "Snatch-Grip Overhead Squat"
+  description: "Squat with wide grip and bar overhead, developing stability and full-body strength."
+snatch_pull:
+  name: "Snatch Pull"
+  description: "High pull with bar, improving snatch power and technique."
+sit_up:
+  name: "Sit-Up"
+  description: "Classic sit-up, strengthening core and hip flexors."
+single_leg_deadlift:
+  name: "Single-Leg Deadlift"
+  description: "Deadlift on one leg, improving balance and posterior chain strength."
+single_under:
+  name: "Single Under"
+  description: "Single jump rope skip, improving cardio and coordination."
+sots_press:
+  name: "Sots Press"
+  description: "Overhead press from deep squat, improving shoulder mobility and strength."
+split_clean:
+  name: "Split Clean"
+  description: "Clean with rear foot split on catch, enhancing coordination and explosiveness."
+split_clean_and_jerk:
+  name: "Split Clean and Jerk"
+  description: "Split clean followed by jerk, developing power and stability."
+split_clean_and_push_jerk:
+  name: "Split Clean and Push Jerk"
+  description: "Split clean then push jerk, improving full-body coordination and strength."
+split_clean_and_push_press:
+  name: "Split Clean and Push Press"
+  description: "Explosive lift starting with a clean into a split stance, followed by a push press overhead, working legs, shoulders, and core stability."
+split_clean_and_split_jerk:
+  name: "Split Clean and Split Jerk"
+  description: "Split clean followed by split jerk, enhancing power and balance."
+split_snatch:
+  name: "Split Snatch"
+  description: "Snatch with rear foot split catch, improving coordination and power."
+split_jerk:
+  name: "Split Jerk"
+  description: "Overhead bar push in lunge position, building strength and balance."
+squat_clean:
+  name: "Squat Clean"
+  description: "Clean with full squat catch, improving leg power and mobility."
+squat_clean_and_jerk:
+  name: "Squat Clean and Jerk"
+  description: "Squat clean followed by jerk, improving coordination and full-body strength."
+squat_clean_and_push_jerk:
+  name: "Squat Clean and Push Jerk"
+  description: "Squat clean then push jerk, enhancing explosiveness and power."
+squat_clean_and_push_press:
+  name: "Squat Clean and Push Press"
+  description: "Squat clean followed by push press, improving strength and coordination."
+squat_clean_and_split_jerk:
+  name: "Squat Clean and Split Jerk"
+  description: "Squat clean followed by split jerk, building stability and power."
+squat_snatch:
+  name: "Squat Snatch"
+  description: "Snatch with full squat catch, improving coordination and explosiveness."
+squat_snatch_balance:
+  name: "Squat Snatch Balance"
+  description: "Snatch with partial squat catch, developing stability and strength."
+stiff_legged_deadlift:
+  name: "Stiff-Legged Deadlift"
+  description: "Deadlift with almost straight legs, focusing on hamstrings and back."
+straddle_press_to_handstand:
+  name: "Straddle Press to Handstand"
+  description: "Movement from a seated position to a handstand with legs straddled, building strength, balance, and body control."
+straight_bar_dip:
+  name: "Straight Bar Dip"
+  description: "Dip on a straight bar, targeting triceps and shoulders."
+strict_chest_to_bar_pull_up:
+  name: "Strict Chest-to-Bar Pull-Up"
+  description: "Chest-to-bar pull-up without swinging, strengthening back and arms."
+strict_deficit_handstand_push_up:
+  name: "Strict Deficit Handstand Push-Up"
+  description: "Handstand push-up with extra range, no swinging, targeting shoulders and triceps."
+strict_handstand_push_up:
+  name: "Strict Handstand Push-Up"
+  description: "Strict handstand push-up, strengthening shoulders and triceps."
+strict_knees_to_elbows:
+  name: "Strict Knees-to-Elbows"
+  description: "Knees to elbows in hanging position, engaging core and trunk strength."
+strict_muscle_up:
+  name: "Strict Muscle-Up"
+  description: "Strict pull-up then dip on bars or rings, improving full-body strength and coordination."
+strict_press:
+  name: "Strict Press"
+  description: "Vertical lift of a bar or dumbbells without momentum, strengthening shoulders and triceps."
+strict_pull_up:
+  name: "Strict Pull-Up"
+  description: "Pull-up without swinging, strengthening back and arms."
+strict_toes_to_bar:
+  name: "Strict Toes-to-Bar"
+  description: "Toes to bar without swinging, strengthening core and control."
+strict_toes_to_rings:
+  name: "Strict Toes-to-Rings"
+  description: "Toes to rings without swinging, improving strength and stability."
+strict_ring_muscle_up:
+  name: "Strict Ring Muscle-Up"
+  description: "Transition from pull-up to dip on rings without swing, engaging upper body and core."
+sumo_deadlift:
+  name: "Sumo Deadlift"
+  description: "Deadlift with a wide foot stance, targeting legs, glutes, and lower back."
+sumo_deadlift_high_pull:
+  name: "Sumo Deadlift High Pull"
+  description: "Sumo deadlift combined with a high pull, engaging lower body and traps."
+swim_swimming:
+  name: "Swimming"
+  description: "Movement simulating swimming, strengthening back, shoulders, and overall endurance."
+swing_to_backward_roll_to_support:
+  name: "Swing to Backward Roll to Support"
+  description: "Swing followed by a backward roll finishing in support position, improving coordination and body control."
+thruster:
+  name: "Thruster"
+  description: "Squat followed by a vertical press, developing full-body power."
+tip_touch:
+  name: "Tip Touch"
+  description: "Trunk bend to touch toes, strengthening abs and mobility."
+tire_flip:
+  name: "Tire Flip"
+  description: "Flipping a tire, building overall strength and explosiveness."
+toes_to_bar:
+  name: "Toes to Bar"
+  description: "Hanging on a bar and bringing feet to hands, engaging abs and grip strength."
+toes_to_rings:
+  name: "Toes to Rings"
+  description: "Movement on rings bringing feet to hands, strengthening core and shoulder stability."
+tuck_jump:
+  name: "Tuck Jump"
+  description: "Explosive jump where the knees are driven toward the chest, focusing on leg power and plyometric strength."
+tuck_up:
+  name: "Tuck-Up"
+  description: "Core exercise where the legs are pulled toward the torso in a tucked position, building abdominal strength and trunk explosiveness."
+tricep_dip:
+  name: "Tricep Dip"
+  description: "Dip on bars or bench, targeting triceps and shoulders."
+triple_under:
+  name: "Triple Under"
+  description: "Jump rope where the rope passes three times under the feet, enhancing cardio and coordination."
+trap_bar_deadlift:
+  name: "Trap Bar Deadlift"
+  description: "Deadlift with hex bar, strengthening legs and back."
+trap_bar_deadlift_high_pull:
+  name: "Trap Bar Deadlift High Pull"
+  description: "Hex bar deadlift followed by high pull, engaging back and shoulders."
+up_down:
+  name: "Up-Down"
+  description: "Exercise combining bending and extending, targeting core and cardio."
+v_up:
+  name: "V-Up"
+  description: "V-shaped sit-up, lifting legs and trunk simultaneously, strengthening core."
+wall_ball_shot:
+  name: "Wall Ball Shot"
+  description: "Medicine ball throw to wall after squat, working legs and core."
+wall_climb_wall_walk:
+  name: "Wall Climb / Wall Walk"
+  description: "Walk up the wall horizontally, strengthening shoulders and core."
+wall_sit:
+  name: "Wall Sit"
+  description: "Static squat against wall, strengthening quadriceps and endurance."
+weighted_run:
+  name: "Weighted Run"
+  description: "Run with added weight, improving leg strength and cardio."
+walking_lunge:
+  name: "Walking Lunge"
+  description: "Walking lunge, engaging legs, core, and balance."
+yoke_carry:
+  name: "Yoke Carry"
+  description: "Carry a load on shoulders, strengthening legs and core."
+zercher_squat:
+  name: "Zercher Squat"
+  description: "Squat holding the bar in the crook of the arms, targeting quadriceps, core, and arms."
+
+category:
+  warm_up:
+    name: "Warm-up"
+    description: "Light exercises to raise body temperature and prepare the joints for effort."
+  cardio:
+    name: "Cardio"
+    description: "Endurance exercises aimed at improving cardiovascular capacity."
+  conditioning:
+    name: "Conditioning"
+    description: "Metabolic training combining intensity and muscular endurance."
+  strength:
+    name: "Strength"
+    description: "Development of maximal strength with heavy loads."
+  weightlifting:
+    name: "Weightlifting"
+    description: "Olympic movements such as the snatch and clean & jerk."
+  powerlifting:
+    name: "Powerlifting"
+    description: "Pure strength exercises: squat, bench press, and deadlift."
+  gymnastics:
+    name: "Gymnastics"
+    description: "Bodyweight movements focusing on control, strength, and technique."
+  skill:
+    name: "Skill"
+    description: "Technical work on complex or precise movements like double unders or handstands."
+  plyometrics:
+    name: "Plyometrics"
+    description: "Explosive exercises based on jumps to develop power and speed."
+  mobility:
+    name: "Mobility"
+    description: "Exercises to improve joint range of motion and functional flexibility."
+  core:
+    name: "Core"
+    description: "Strengthening the abdominal belt and stability."
+  lower_body:
+    name: "Lower Body"
+    description: "Training targeting the legs, glutes, and calves."
+  upper_body:
+    name: "Upper Body"
+    description: "Exercises for the arms, shoulders, chest, and back."
+  full_body:
+    name: "Full Body"
+    description: "Compound movements that engage the entire body."
+  accessory:
+    name: "Accessory"
+    description: "Supplementary work targeting weaknesses or improving stability."
+  strongman:
+    name: "Strongman"
+    description: "Heavy functional exercises inspired by Strongman competitions."
+  cool_down_recovery:
+    name: "Cool-down / Recovery"
+    description: "Cool-down session to promote recovery and reduce muscle tension."

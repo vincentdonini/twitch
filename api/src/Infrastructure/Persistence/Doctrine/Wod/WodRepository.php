@@ -2,11 +2,7 @@
 
 namespace App\Infrastructure\Persistence\Doctrine\Wod;
 
-use App\Domain\Exercise\Entity\Exercise;
 use App\Domain\Wod\Entity\Wod;
-use App\Domain\Wod\Entity\WodVersion;
-use App\Domain\Wod\Entity\WodVersionVariant;
-use App\Domain\Wod\Entity\WodVersionVariantExercise;
 use App\Domain\Wod\Enum\Gender;
 use App\Domain\Wod\Repository\WodRepositoryInterface;
 use App\Infrastructure\Persistence\Doctrine\Common\FilterableTrait;
@@ -82,25 +78,25 @@ class WodRepository extends ServiceEntityRepository implements WodRepositoryInte
 
         $em = $qb->getEntityManager();
 
-        // ---------------- Exercises allowed ----------------
-//        if (!empty($filters['exerciseIdsAllowed'])) {
-//            $allowedIds = array_unique((array)$filters['exerciseIdsAllowed']);
+        // ---------------- Movements allowed ----------------
+//        if (!empty($filters['movementIdsAllowed'])) {
+//            $allowedIds = array_unique((array)$filters['movementIdsAllowed']);
 //
-//            $qb->innerJoin('wvv.wodVersionVariantExercises', 'wvveAllowed')
-//                ->innerJoin('wvveAllowed.exercise', 'eAllowed')
+//            $qb->innerJoin('wvv.wodVersionVariantMovements', 'wvveAllowed')
+//                ->innerJoin('wvveAllowed.movement', 'eAllowed')
 //                ->andWhere($qb->expr()->in('eAllowed.id', ':allowedIds'))
 //                ->setParameter('allowedIds', $allowedIds)
 //                ->groupBy("$alias.id")
 //                ->having($qb->expr()->eq('COUNT(DISTINCT eAllowed.id)', count($allowedIds)));
 //        }
 
-//        // ---------------- Exercises allowed (strict) ----------------
-//        if (!empty($filters['exerciseIdsAllowed'])) {
-//            $allowedIds = array_unique((array)$filters['exerciseIdsAllowed']);
+//        // ---------------- Movements allowed (strict) ----------------
+//        if (!empty($filters['movementIdsAllowed'])) {
+//            $allowedIds = array_unique((array)$filters['movementIdsAllowed']);
 //
 //            // DQL : récupérer les variantes contenant au moins un des IDs autorisés
-//            $qb->innerJoin('wvv.wodVersionVariantExercises', 'wvveAllowed')
-//                ->innerJoin('wvveAllowed.exercise', 'eAllowed')
+//            $qb->innerJoin('wvv.wodVersionVariantMovements', 'wvveAllowed')
+//                ->innerJoin('wvveAllowed.movement', 'eAllowed')
 //                ->andWhere($qb->expr()->in('eAllowed.id', ':allowedIds'))
 //                ->setParameter('allowedIds', $allowedIds)
 //                ->addSelect('w.id as wodId, wvv.id as variantId');
@@ -112,14 +108,14 @@ class WodRepository extends ServiceEntityRepository implements WodRepositoryInte
 //
 //            $validWodIds = [];
 //            foreach ($results as $row) {
-//                $exercises = $em->getRepository(WodVersionVariantExercise::class)
+//                $movements = $em->getRepository(WodVersionVariantMovement::class)
 //                    ->findBy(['wodVersionVariant' => $row['variantId']]);
-//                $exerciseIds = array_map(fn($e) => $e->getExercise()->getId(), $exercises);
-//                sort($exerciseIds);
+//                $movementIds = array_map(fn($e) => $e->getMovement()->getId(), $movements);
+//                sort($movementIds);
 //                $allowedSorted = $allowedIds;
 //                sort($allowedSorted);
 //
-//                if ($exerciseIds === $allowedSorted) {
+//                if ($movementIds === $allowedSorted) {
 //                    $validWodIds[] = $row['wodId'];
 //                }
 //            }
@@ -136,17 +132,17 @@ class WodRepository extends ServiceEntityRepository implements WodRepositoryInte
 //            }
 //        }
 //
-//        // ---------------- Exercises disallowed ----------------
-//        if (!empty($filters['exerciseIdsDisallowed'])) {
-//            $disallowedIds = array_unique((array)$filters['exerciseIdsDisallowed']);
+//        // ---------------- Movements disallowed ----------------
+//        if (!empty($filters['movementIdsDisallowed'])) {
+//            $disallowedIds = array_unique((array)$filters['movementIdsDisallowed']);
 //
 //            $subQb2 = $em->createQueryBuilder();
 //            $subQb2->select('1')
-//                ->from(WodVersionVariantExercise::class, 'wvveSub2')
+//                ->from(WodVersionVariantMovement::class, 'wvveSub2')
 //                ->innerJoin('wvveSub2.wodVersionVariant', 'wvvSub2')
 //                ->innerJoin('wvvSub2.wodVersion', 'wvSub2')
 //                ->innerJoin('wvSub2.wod', 'wSub2')
-//                ->innerJoin('wvveSub2.exercise', 'eSub2')
+//                ->innerJoin('wvveSub2.movement', 'eSub2')
 //                ->where('wSub2 = ' . $alias)
 //                ->andWhere($subQb2->expr()->in('eSub2.id', ':disallowedIds'));
 //

@@ -22,12 +22,6 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Domain/Equipment/Entity'
                 prefix: 'App\Domain\Equipment\Entity'
                 alias: DomainEquipment
-            DomainExercise:
-                is_bundle: false
-                type: attribute
-                dir: '%kernel.project_dir%/src/Domain/Exercise/Entity'
-                prefix: 'App\Domain\Exercise\Entity'
-                alias: DomainExercise
             DomainMovement:
                 is_bundle: false
                 type: attribute

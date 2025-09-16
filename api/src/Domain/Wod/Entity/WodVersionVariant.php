@@ -2,17 +2,46 @@
 
 namespace App\Domain\Wod\Entity;
 
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
 use App\Domain\Wod\Enum\Gender;
-use Symfony\Component\Validator\Constraints as Assert;
+use App\Infrastructure\ApiPlatform\Wod\Provider\WodVersionVariantProvider;
 use App\Infrastructure\Persistence\Doctrine\Wod\WodVersionVariantRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Metadata\ApiResource;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Serializer\Annotation\SerializedName;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: WodVersionVariantRepository::class)]
 #[ORM\Table(name: 'wod_version_variants')]
+#[ApiResource(
+    formats                      : ['json', 'jsonapi'],
+    paginationClientEnabled      : false,
+    paginationClientItemsPerPage : true,
+    paginationEnabled            : true,
+    paginationItemsPerPage       : 10,
+    paginationMaximumItemsPerPage: 50,
+)]
+#[GetCollection(
+    normalizationContext         : [
+        'groups' => [
+            'wodVersionVariant:list',
+        ],
+    ],
+    provider            : WodVersionVariantProvider::class,
+)]
+#[Get(
+    normalizationContext: [
+        'groups' => [
+            'wodVersionVariant:detail',
+        ],
+    ],
+    provider            : WodVersionVariantProvider::class,
+)]
 class WodVersionVariant
 {
     #[ORM\Id]
@@ -20,51 +49,60 @@ class WodVersionVariant
     #[ORM\Column(type: 'integer')]
     #[Groups([
         'wod:list', 'wod:detail',
+        'wodVersionVariant:list', 'wodVersionVariant:detail',
     ])]
-    private ?int $id;
+    private ?int $id = null;
 
-    #[ORM\ManyToOne(targetEntity: WodVersion::class, inversedBy: 'versionVariants')]
+    #[ORM\ManyToOne(targetEntity: WodVersion::class, fetch: 'EAGER', inversedBy: 'wodVersionVariants')]
     #[ORM\JoinColumn(nullable: false)]
     #[Groups([
-        'wod:list', 'wod:detail',
+        'wodVersionVariant:list', 'wodVersionVariant:detail'
     ])]
-    private WodVersion $wodVersion;
+    private ?WodVersion $wodVersion = null;
 
     #[ORM\Column(type: 'string', length: 10, enumType: Gender::class)]
+    #[Assert\Choice(callback: [Gender::class, 'cases'])]
     #[Groups([
         'wod:list', 'wod:detail',
+        'wodVersionVariant:list', 'wodVersionVariant:detail',
     ])]
-    #[Assert\Choice(callback: [Gender::class, 'cases'])]
-    private Gender $gender;
+    private ?Gender $gender = null;
 
     #[ORM\Column(type: 'integer', nullable: true)]
     #[Groups([
         'wod:list', 'wod:detail',
+        'wodVersionVariant:list', 'wodVersionVariant:detail',
     ])]
     private ?int $rounds = null;
 
     #[ORM\Column(type: 'integer', nullable: true)]
     #[Groups([
         'wod:list', 'wod:detail',
+        'wodVersionVariant:list', 'wodVersionVariant:detail',
     ])]
     private ?int $timeCap = null;
 
     #[ORM\Column(type: Types::JSON)]
+    private array $descriptions = [];
+
     #[Groups([
         'wod:list', 'wod:detail',
+        'wodVersionVariant:list', 'wodVersionVariant:detail',
     ])]
-    private array $description = [];
+    #[SerializedName('description')]
+    private string $description;
 
-    #[ORM\OneToMany(targetEntity: WodVersionVariantExercise::class, mappedBy: 'wodVersionVariant', cascade: ['persist', 'remove'])]
+    #[ORM\OneToMany(targetEntity: WodVersionVariantMovement::class, mappedBy: 'wodVersionVariant', cascade: ['persist', 'remove'])]
     #[ORM\OrderBy(['position' => 'ASC'])]
     #[Groups([
         'wod:list', 'wod:detail',
+        'wodVersionVariant:list', 'wodVersionVariant:detail',
     ])]
-    private Collection $wodVersionVariantExercises;
+    private Collection $wodVersionVariantMovements;
 
     public function __construct()
     {
-        $this->wodVersionVariantExercises = new ArrayCollection();
+        $this->wodVersionVariantMovements = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -72,23 +110,23 @@ class WodVersionVariant
         return $this->id;
     }
 
-    public function getWodVersion(): WodVersion
+    public function getWodVersion(): ?WodVersion
     {
         return $this->wodVersion;
     }
 
-    public function setWodVersion(WodVersion $wodVersion): self
+    public function setWodVersion(?WodVersion $wodVersion): self
     {
         $this->wodVersion = $wodVersion;
         return $this;
     }
 
-    public function getGender(): Gender
+    public function getGender(): ?Gender
     {
         return $this->gender;
     }
 
-    public function setGender(Gender $gender): self
+    public function setGender(?Gender $gender): self
     {
         $this->gender = $gender;
         return $this;
@@ -116,39 +154,50 @@ class WodVersionVariant
         return $this;
     }
 
-    public function getDescription(): array
+    public function getDescriptions(): array
+    {
+        return $this->descriptions;
+    }
+
+    public function setDescriptions(array $descriptions): self
+    {
+        $this->descriptions = $descriptions;
+        return $this;
+    }
+
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function setDescription(array $description): self
+    public function setDescription(string $description): self
     {
         $this->description = $description;
         return $this;
     }
 
     /**
-     * @return Collection<int, WodVersionVariantExercise>
+     * @return Collection<int, WodVersionVariantMovement>
      */
-    public function getWodVersionVariantExercises(): Collection
+    public function getWodVersionVariantMovements(): Collection
     {
-        return $this->wodVersionVariantExercises;
+        return $this->wodVersionVariantMovements;
     }
 
-    public function addWodVersionVariantExercise(WodVersionVariantExercise $wodVersionVariantExercise): self
+    public function addWodVersionVariantMovement(WodVersionVariantMovement $movement): self
     {
-        if (!$this->wodVersionVariantExercises->contains($wodVersionVariantExercise)) {
-            $this->wodVersionVariantExercises[] = $wodVersionVariantExercise;
-            $wodVersionVariantExercise->setWodVersionVariant($this);
+        if (!$this->wodVersionVariantMovements->contains($movement)) {
+            $this->wodVersionVariantMovements[] = $movement;
+            $movement->setWodVersionVariant($this);
         }
         return $this;
     }
 
-    public function removeWodVersionVariantExercise(WodVersionVariantExercise $wodVersionVariantExercise): self
+    public function removeWodVersionVariantMovement(WodVersionVariantMovement $movement): self
     {
-        if ($this->wodVersionVariantExercises->removeElement($wodVersionVariantExercise)) {
-            if ($wodVersionVariantExercise->getWodVersionVariant() === $this) {
-                $wodVersionVariantExercise->setWodVersionVariant(null);
+        if ($this->wodVersionVariantMovements->removeElement($movement)) {
+            if ($movement->getWodVersionVariant() === $this) {
+                $movement->setWodVersionVariant(null);
             }
         }
         return $this;

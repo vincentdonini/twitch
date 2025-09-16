@@ -4,9 +4,18 @@ framework:
 
     # Note that the session will be started ONLY if you read or write from it.
     session: true
-
-    #esi: true
-    #fragments: true
+    
+#    serializer:
+#        default_context:
+#            enable_max_depth: true
+    
+    default_locale: 'fr'
+    translator:
+        default_path: '%kernel.project_dir%/translations'
+        fallbacks: ['fr']
+    
+    # Optionnel : strictement les locales que tu veux gérer
+    enabled_locales: ['fr', 'en']
 
 when@test:
     framework:

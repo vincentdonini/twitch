@@ -19,6 +19,20 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Kernel.php'
             - '../src/**/Entity/'
-
+    
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    # Subscriber
+    App\UI\ApiPlatform\EventSubscriber\ApiPaginationSubscriber:
+        tags: ['kernel.event_subscriber']
+    
+    # Normalizer JSON:API décoré
+#    App\UI\ApiPlatform\Normalizer\JsonApiPaginationNormalizer:
+##        decorates: 'api_platform.serializer.normalizer.item' # ou normalizer que vous utilisez réellement
+#        arguments:
+##            $decorated: '@App\UI\ApiPlatform\Normalizer\JsonApiPaginationNormalizer.inner'
+#            $decorated: '@serializer.normalizer.object'
+#        tags:
+#            - { name: 'serializer.normalizer', priority: 20 }
+    

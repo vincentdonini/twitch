@@ -1,23 +1,9 @@
 [
-  {
-    "slug": "rx"
-  },
-  {
-    "slug": "scaled"
-  },
-  {
-    "slug": "foundations"
-  },
-  {
-    "slug": "adaptive"
-  },
-  {
-    "slug": "masters"
-  },
-  {
-    "slug": "teens"
-  },
-  {
-    "slug": "elite"
-  }
+  {"slug": "rx"},
+  {"slug": "scaled"},
+  {"slug": "foundations"},
+  {"slug": "adaptive"},
+  {"slug": "masters"},
+  {"slug": "teens"},
+  {"slug": "elite"}
 ]

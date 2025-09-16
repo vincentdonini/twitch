@@ -1,20 +1,8 @@
 [
-  {
-    "slug": "amrap"
-  },
-  {
-    "slug": "emom"
-  },
-  {
-    "slug": "for-load"
-  },
-  {
-    "slug": "for-quality"
-  },
-  {
-    "slug": "for-time"
-  },
-  {
-    "slug": "tabata"
-  }
+  {"slug": "amrap"},
+  {"slug": "emom"},
+  {"slug": "for-load"},
+  {"slug": "for-quality"},
+  {"slug": "for-time"},
+  {"slug": "tabata"}
 ]

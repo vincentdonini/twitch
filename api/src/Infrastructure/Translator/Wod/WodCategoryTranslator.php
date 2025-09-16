@@ -17,11 +17,11 @@ class WodCategoryTranslator implements WodCategoryTranslatorInterface
 
     public function getName(WodCategory $wodCategory): string
     {
-        return $this->translator->trans('wod.category.' . StringHelper::kebabToSnake($wodCategory->getSlug()) . '.name');
+        return $this->translator->trans('category.' . StringHelper::kebabToSnake($wodCategory->getSlug()) . '.name', [], 'wod');
     }
 
     public function getDescription(WodCategory $wodCategory): string
     {
-        return $this->translator->trans('wod.category.' . StringHelper::kebabToSnake($wodCategory->getSlug()) . '.description');
+        return $this->translator->trans('category.' . StringHelper::kebabToSnake($wodCategory->getSlug()) . '.description', [], 'wod');
     }
 }

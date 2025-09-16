@@ -2,24 +2,20 @@
 
 namespace App\Domain\Wod\Service;
 
-use App\Application\Wod\DTO\WodVersionDTO;
 use App\Domain\Wod\Entity\WodVersion;
-use Symfony\Component\HttpFoundation\RequestStack;
 
 final class WodVersionService
 {
     public function __construct(
-        private readonly RequestStack $requestStack,
+        private readonly WodTypeTranslatorInterface $wodTypeTranslator,
     ) {
-        $this->locale = $this->requestStack->getCurrentRequest()?->getLocale() ?? 'en';
     }
 
-    public function transformToDTO(WodVersion $wodVersion): WodVersionDTO
+    public function enrichEntity(WodVersion $wodVersion): WodVersion
     {
-        return new WodVersionDTO(
-            $wodVersion->getId(),
-            $wodVersion->getWod()->getId(),
-            $wodVersion->getWodVersionType()->getId(),
-        );
+//        $wodVersion->setName($this->wodVersionTranslator->getName($wodVersion));
+//        $wodVersion->setDescription($this->wodTypeTranslator->getDescription($wodVersion));
+
+        return $wodVersion;
     }
 }

@@ -2,7 +2,6 @@
 
 namespace App\Domain\Wod\Service;
 
-use App\Application\Wod\DTO\WodVersionTypeDTO;
 use App\Domain\Wod\Entity\WodVersionType;
 
 final class WodVersionTypeService
@@ -11,16 +10,13 @@ final class WodVersionTypeService
         private readonly WodVersionTypeTranslatorInterface $wodVersionTypeTranslator,
     )
     {
-
     }
 
-    public function transformToDTO(WodVersionType $wodVersionType): WodVersionTypeDTO
+    public function enrichEntity(WodVersionType $wodVersionType): WodVersionType
     {
-        return new WodVersionTypeDTO(
-            $wodVersionType->getId(),
-            $wodVersionType->getSlug(),
-            $this->wodVersionTypeTranslator->getName($wodVersionType),
-            $this->wodVersionTypeTranslator->getDescription($wodVersionType)
-        );
+        $wodVersionType->setName($this->wodVersionTypeTranslator->getName($wodVersionType));
+        $wodVersionType->setDescription($this->wodVersionTypeTranslator->getDescription($wodVersionType));
+
+        return $wodVersionType;
     }
 }

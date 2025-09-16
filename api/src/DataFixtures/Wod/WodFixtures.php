@@ -2,15 +2,15 @@
 
 namespace App\DataFixtures\Wod;
 
-use App\DataFixtures\Exercise\ExerciseFixtures;
-use App\Domain\Exercise\Entity\Exercise;
+use App\DataFixtures\Movement\MovementFixtures;
+use App\Domain\Movement\Entity\Movement;
 use App\Domain\Wod\Entity\Wod;
 use App\Domain\Wod\Entity\WodCategory;
 use App\Domain\Wod\Entity\WodType;
 use App\Domain\Wod\Entity\WodVersion;
 use App\Domain\Wod\Entity\WodVersionType;
 use App\Domain\Wod\Entity\WodVersionVariant;
-use App\Domain\Wod\Entity\WodVersionVariantExercise;
+use App\Domain\Wod\Entity\WodVersionVariantMovement;
 use App\Domain\Wod\Enum\Gender;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -22,7 +22,9 @@ class WodFixtures extends Fixture implements DependentFixtureInterface
     public function load(ObjectManager $manager): void
     {
         $jsonFiles = [
-            __DIR__ . '/../../../default_data/wod/wods_test.json',
+            __DIR__ . '/../../../default_data/wod/wods_girls.json',
+            __DIR__ . '/../../../default_data/wod/wods_heroes.json',
+            __DIR__ . '/../../../default_data/wod/wods_open.json',
         ];
 
         foreach ($jsonFiles as $jsonFile) {
@@ -40,7 +42,7 @@ class WodFixtures extends Fixture implements DependentFixtureInterface
             foreach ($data as $item) {
                 $wod = new Wod();
                 $wod->setTitle($item['title']);
-                $wod->setDescription($item['description']);
+                $wod->setDescriptions($item['descriptions']);
 
                 $type = $manager->getRepository(WodType::class)->findOneBy(['slug' => $item['type']]);
                 if (!$type) {
@@ -59,7 +61,7 @@ class WodFixtures extends Fixture implements DependentFixtureInterface
 
                     $wodVersionType = $manager->getRepository(WodVersionType::class)->findOneBy(['slug' => $wodVersionData['type']]);
                     if (!$wodVersionType) {
-                        throw new \Exception("WodVersionType non trouvé : " . $wodVersionData['type']);
+                        throw new Exception("WodVersionType non trouvé : " . $wodVersionData['type']);
                     }
 
                     $wodVersion->setWodVersionType($wodVersionType);
@@ -75,22 +77,22 @@ class WodFixtures extends Fixture implements DependentFixtureInterface
                         $variant->setGender($genderEnum);
                         $variant->setRounds($variantData['rounds'] ?? null);
                         $variant->setTimeCap($variantData['time_cap'] ?? null);
-                        $variant->setDescription($variantData['description']);
+                        $variant->setDescriptions($variantData['descriptions']);
 
-                        foreach ($variantData['exercises'] as $index => $exerciseData) {
-                            $exercise = $manager->getRepository(Exercise::class)->findOneBy(['slug' => $exerciseData['exercice']]);
-                            if (!$exercise) {
-                                throw new \Exception("Exercice non trouvé : " . $exerciseData['exercice']);
+                        foreach ($variantData['movements'] as $index => $movementData) {
+                            $movement = $manager->getRepository(Movement::class)->findOneBy(['slug' => $movementData['movement']]);
+                            if (!$movement) {
+                                throw new Exception("Movement non trouvé : " . $movementData['movement']);
                             }
 
-                            $variantExercise = new WodVersionVariantExercise();
-                            $variantExercise->setPosition((int) $index + 1);
-                            $variantExercise->setReps($exerciseData['reps'] ? (int) $exerciseData['reps'] : null);
-                            $variantExercise->setWeight($exerciseData['weight'] ? (int) $exerciseData['weight'] : null);
-                            $variantExercise->setExercise($exercise);
-                            $variantExercise->setWodVersionVariant($variant);
+                            $variantMovement = new WodVersionVariantMovement();
+                            $variantMovement->setPosition((int) $index + 1);
+                            $variantMovement->setReps($movementData['reps'] ? (int) $movementData['reps'] : null);
+                            $variantMovement->setWeight($movementData['weight'] ? (int) $movementData['weight'] : null);
+                            $variantMovement->setMovement($movement);
+                            $variantMovement->setWodVersionVariant($variant);
 
-                            $variant->addWodVersionVariantExercise($variantExercise);
+                            $variant->addWodVersionVariantMovement($variantMovement);
                         }
 
                         $variant->setWodVersion($wodVersion);
@@ -110,9 +112,9 @@ class WodFixtures extends Fixture implements DependentFixtureInterface
     public function getDependencies(): array
     {
         return [
+            MovementFixtures::class,
             WodTypeFixtures::class,
             WodVersionTypeFixtures::class,
-            ExerciseFixtures::class,
         ];
     }
 }

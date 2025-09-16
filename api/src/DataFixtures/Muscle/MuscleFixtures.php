@@ -30,6 +30,10 @@ class MuscleFixtures extends Fixture implements DependentFixtureInterface
             throw new Exception("Invalid JSON format in file: " . $jsonFile);
         }
 
+        usort($data, function ($a, $b) {
+            return strcmp($a['slug'], $b['slug']);
+        });
+
         foreach ($data as $item) {
             $muscle = new Muscle();
             $muscle->setSlug($item['slug']);

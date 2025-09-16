@@ -1,0 +1,1940 @@
+[
+  {
+    "title": "OPEN 11.1",
+    "descriptions": {
+      "en": "Complete as many rounds and reps as possible in 10 minutes of: 30 Double-unders, 15 Power Snatches.",
+      "fr": "Réalisez le plus de tours et répétitions possibles en 10 minutes : 30 double-unders, 15 power snatches."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "Complete as many rounds and reps as possible in 10 minutes: 30 Double-unders, 15 Power Snatches (75 lbs)",
+              "fr": "Réalisez le plus de tours et répétitions possibles en 10 minutes : 30 double-unders, 15 power snatches (35 kg)"
+            },
+            "movements": [
+              {"movement": "double-under", "reps": 30, "weight": null},
+              {"movement": "power-snatch", "reps": 15, "weight": 75}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "Complete as many rounds and reps as possible in 10 minutes: 30 Double-unders, 15 Power Snatches (55 lbs)",
+              "fr": "Réalisez le plus de tours et répétitions possibles en 10 minutes : 30 double-unders, 15 power snatches (25 kg)"
+            },
+            "movements": [
+              {"movement": "double-under", "reps": 30, "weight": null},
+              {"movement": "power-snatch", "reps": 15, "weight": 55}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "Complete as many rounds and reps as possible in 10 minutes: 30 Double-unders, 15 Power Snatches (65 lbs)",
+              "fr": "Réalisez le plus de tours et répétitions possibles en 10 minutes : 30 double-unders, 15 power snatches (30 kg)"
+            },
+            "movements": [
+              {"movement": "double-under", "reps": 30, "weight": null},
+              {"movement": "power-snatch", "reps": 15, "weight": 65}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "Complete as many rounds and reps as possible in 10 minutes: 30 Double-unders, 15 Power Snatches (45 lbs)",
+              "fr": "Réalisez le plus de tours et répétitions possibles en 10 minutes : 30 double-unders, 15 power snatches (20 kg)"
+            },
+            "movements": [
+              {"movement": "double-under", "reps": 30, "weight": null},
+              {"movement": "power-snatch", "reps": 15, "weight": 45}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 11.2",
+    "descriptions": {
+      "en": "AMRAP 15 minutes: 9 Deadlifts, 12 Push-ups, 15 Box jumps.",
+      "fr": "AMRAP 15 minutes : 9 Deadlifts, 12 pompes, 15 sauts sur box."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 900,
+            "descriptions": {
+              "en": "As many rounds as possible in 15 minutes of: 9 Deadlifts (155 lbs / 70 kg), 12 Push-ups, 15 Box jumps (24\")",
+              "fr": "Autant de tours que possible en 15 minutes de : 9 Deadlifts (70 kg / 155 lbs), 12 pompes, 15 sauts sur box (61 cm)"
+            },
+            "movements": [
+              {"movement": "deadlift", "reps": 9, "weight": {"en": "155 lbs", "fr": "70 kg"}},
+              {"movement": "push-up", "reps": 12, "weight": null},
+              {"movement": "box-jump", "reps": 15, "weight": "24\""}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 900,
+            "descriptions": {
+              "en": "As many rounds as possible in 15 minutes of: 9 Deadlifts (100 lbs / 45 kg), 12 Push-ups, 15 Box jumps (20\")",
+              "fr": "Autant de tours que possible en 15 minutes de : 9 Deadlifts (45 kg / 100 lbs), 12 pompes, 15 sauts sur box (51 cm)"
+            },
+            "movements": [
+              {"movement": "deadlift", "reps": 9, "weight": {"en": "100 lbs", "fr": "45 kg"}},
+              {"movement": "push-up", "reps": 12, "weight": null},
+              {"movement": "box-jump", "reps": 15, "weight": "20\""}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 900,
+            "descriptions": {
+              "en": "As many rounds as possible in 15 minutes of: 9 Deadlifts (145 lbs / 65 kg), 12 Push-ups, 15 Box jumps (20\")",
+              "fr": "Autant de tours que possible en 15 minutes de : 9 Deadlifts (65 kg / 145 lbs), 12 pompes, 15 sauts sur box (51 cm)"
+            },
+            "movements": [
+              {"movement": "deadlift", "reps": 9, "weight": {"en": "145 lbs", "fr": "65 kg"}},
+              {"movement": "push-up", "reps": 12, "weight": null},
+              {"movement": "box-jump", "reps": 15, "weight": "20\""}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 900,
+            "descriptions": {
+              "en": "As many rounds as possible in 15 minutes of: 9 Deadlifts (90 lbs / 40 kg), 12 Push-ups, 15 Box jumps (20\")",
+              "fr": "Autant de tours que possible en 15 minutes de : 9 Deadlifts (40 kg / 90 lbs), 12 pompes, 15 sauts sur box (51 cm)"
+            },
+            "movements": [
+              {"movement": "deadlift", "reps": 9, "weight": {"en": "90 lbs", "fr": "40 kg"}},
+              {"movement": "push-up", "reps": 12, "weight": null},
+              {"movement": "box-jump", "reps": 15, "weight": "20\""}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 11.3",
+    "descriptions": {
+      "en": "AMRAP 5 minutes: Perform as many rounds and reps as possible in 5 minutes of Squat Clean and Jerk.",
+      "fr": "AMRAP 5 minutes : Effectuer autant de tours et de répétitions que possible en 5 minutes de Squat Clean et Jerk."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 300,
+            "descriptions": {
+              "en": "AMRAP 5 minutes: Squat Clean and Jerk at 165 lb (75 kg).",
+              "fr": "AMRAP 5 minutes : Squat Clean et Jerk à 75 kg (165 lb)."
+            },
+            "movements": [
+              {"movement": "clean", "reps": 1, "weight": {"en": "165 lb", "fr": "75 kg"}},
+              {"movement": "jerk", "reps": 1, "weight": {"en": "165 lb", "fr": "75 kg"}}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 300,
+            "descriptions": {
+              "en": "AMRAP 5 minutes: Squat Clean and Jerk at 110 lb (50 kg).",
+              "fr": "AMRAP 5 minutes : Squat Clean et Jerk à 50 kg (110 lb)."
+            },
+            "movements": [
+              {"movement": "clean", "reps": 1, "weight": {"en": "110 lb", "fr": "50 kg"}},
+              {"movement": "jerk", "reps": 1, "weight": {"en": "110 lb", "fr": "50 kg"}}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 300,
+            "descriptions": {
+              "en": "AMRAP 5 minutes: Squat Clean and Jerk at 135 lb (62 kg).",
+              "fr": "AMRAP 5 minutes : Squat Clean et Jerk à 62 kg (135 lb)."
+            },
+            "movements": [
+              {"movement": "clean", "reps": 1, "weight": {"en": "135 lb", "fr": "62 kg"}},
+              {"movement": "jerk", "reps": 1, "weight": {"en": "135 lb", "fr": "62 kg"}}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 300,
+            "descriptions": {
+              "en": "AMRAP 5 minutes: Squat Clean and Jerk at 75 lb (35 kg).",
+              "fr": "AMRAP 5 minutes : Squat Clean et Jerk à 35 kg (75 lb)."
+            },
+            "movements": [
+              {"movement": "clean", "reps": 1, "weight": {"en": "75 lb", "fr": "35 kg"}},
+              {"movement": "jerk", "reps": 1, "weight": {"en": "75 lb", "fr": "35 kg"}}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 11.4",
+    "descriptions": {
+      "en": "AMRAP 10 minutes: 60 Bar-facing burpees, 30 Overhead squats, 10 Muscle-ups.",
+      "fr": "AMRAP 10 minutes : 60 burpees face à la barre, 30 overhead squats, 10 muscle-ups."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "AMRAP 10 minutes: 60 Bar-facing burpees, 30 Overhead squats (120 lbs / 55 kg), 10 Muscle-ups",
+              "fr": "AMRAP 10 minutes : 60 burpees face à la barre, 30 overhead squats (120 lbs / 55 kg), 10 muscle-ups"
+            },
+            "movements": [
+              {"movement": "bar-over-burpee", "reps": 60, "weight": null},
+              {"movement": "overhead-squat", "reps": 30, "weight": {"en": 120, "fr": 55}},
+              {"movement": "muscle-up", "reps": 10, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "AMRAP 10 minutes: 60 Bar-facing burpees, 30 Overhead squats (90 lbs / 40 kg), 10 Muscle-ups",
+              "fr": "AMRAP 10 minutes : 60 burpees face à la barre, 30 overhead squats (90 lbs / 40 kg), 10 muscle-ups"
+            },
+            "movements": [
+              {"movement": "bar-over-burpee", "reps": 60, "weight": null},
+              {"movement": "overhead-squat", "reps": 30, "weight": {"en": 90, "fr": 40}},
+              {"movement": "muscle-up", "reps": 10, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "AMRAP 10 minutes: 60 Bar-facing burpees, 30 Overhead squats (110 lbs / 50 kg), 10 Muscle-ups",
+              "fr": "AMRAP 10 minutes : 60 burpees face à la barre, 30 overhead squats (110 lbs / 50 kg), 10 muscle-ups"
+            },
+            "movements": [
+              {"movement": "bar-over-burpee", "reps": 60, "weight": null},
+              {"movement": "overhead-squat", "reps": 30, "weight": {"en": 110, "fr": 50}},
+              {"movement": "muscle-up", "reps": 10, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "AMRAP 10 minutes: 60 Bar-facing burpees, 30 Overhead squats (75 lbs / 35 kg), 10 Muscle-ups",
+              "fr": "AMRAP 10 minutes : 60 burpees face à la barre, 30 overhead squats (75 lbs / 35 kg), 10 muscle-ups"
+            },
+            "movements": [
+              {"movement": "bar-over-burpee", "reps": 60, "weight": null},
+              {"movement": "overhead-squat", "reps": 30, "weight": {"en": 75, "fr": 35}},
+              {"movement": "muscle-up", "reps": 10, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 11.5",
+    "descriptions": {
+      "en": "AMRAP 20: 5 Power Cleans, 10 Toes-to-Bar, 15 Wall Balls.",
+      "fr": "AMRAP 20 min : 5 power cleans, 10 toes-to-bar, 15 wall balls."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 1200,
+            "descriptions": {
+              "en": "AMRAP in 20 minutes: 5 Power Cleans (145lbs/65kg), 10 Toes-to-Bar, 15 Wall Balls (20lbs to 10' target).",
+              "fr": "AMRAP 20 min : 5 power cleans (65kg/145lbs), 10 toes-to-bar, 15 wall balls (9kg à 3m)."
+            },
+            "movements": [
+              {"movement": "power-clean", "reps": 5, "weight": {"en": "145lbs", "fr": "65kg"}},
+              {"movement": "toes-to-bar", "reps": 10, "weight": null},
+              {"movement": "wall-ball-shot", "reps": 15, "weight": {"en": "20lbs", "fr": "9kg"}}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 1200,
+            "descriptions": {
+              "en": "AMRAP in 20 minutes: 5 Power Cleans (100lbs/45kg), 10 Toes-to-Bar, 15 Wall Balls (14lbs to 9' target).",
+              "fr": "AMRAP 20 min : 5 power cleans (45kg/100lbs), 10 toes-to-bar, 15 wall balls (6kg à 2,75m)."
+            },
+            "movements": [
+              {"movement": "power-clean", "reps": 5, "weight": {"en": "100lbs", "fr": "45kg"}},
+              {"movement": "toes-to-bar", "reps": 10, "weight": null},
+              {"movement": "wall-ball-shot", "reps": 15, "weight": {"en": "14lbs", "fr": "6kg"}}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 1200,
+            "descriptions": {
+              "en": "AMRAP in 20 minutes: 5 Power Cleans (130lbs/60kg), 10 Toes-to-Bar, 15 Wall Balls (20lbs to 9' target).",
+              "fr": "AMRAP 20 min : 5 power cleans (60kg/130lbs), 10 toes-to-bar, 15 wall balls (9kg à 2,75m)."
+            },
+            "movements": [
+              {"movement": "power-clean", "reps": 5, "weight": {"en": "130lbs", "fr": "60kg"}},
+              {"movement": "toes-to-bar", "reps": 10, "weight": null},
+              {"movement": "wall-ball-shot", "reps": 15, "weight": {"en": "20lbs", "fr": "9kg"}}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 1200,
+            "descriptions": {
+              "en": "AMRAP in 20 minutes: 5 Power Cleans (75lbs/35kg), 10 Toes-to-Bar, 15 Wall Balls (10lbs to 9' target).",
+              "fr": "AMRAP 20 min : 5 power cleans (35kg/75lbs), 10 toes-to-bar, 15 wall balls (4,5kg à 2,75m)."
+            },
+            "movements": [
+              {"movement": "power-clean", "reps": 5, "weight": {"en": "75lbs", "fr": "35kg"}},
+              {"movement": "toes-to-bar", "reps": 10, "weight": null},
+              {"movement": "wall-ball-shot", "reps": 15, "weight": {"en": "10lbs", "fr": "4,5kg"}}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 11.6",
+    "descriptions": {
+      "en": "AMRAP 7 minutes: Thrusters and Pull-ups with ascending reps (3, 6, 9, 12, 15, 18, 21...). Continue increasing by 3 reps each round until time expires.",
+      "fr": "AMRAP 7 minutes : Thrusters et tractions avec un schéma ascendant (3, 6, 9, 12, 15, 18, 21...). Continuez en ajoutant 3 répétitions à chaque tour jusqu’à la fin du temps."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "AMRAP 7 minutes of: 100 lb Thrusters (3, 6, 9, ...), Chest-to-bar Pull-ups (3, 6, 9, ...)",
+              "fr": "AMRAP 7 minutes : Thrusters à 45 kg (3, 6, 9, ...), Tractions poitrine à la barre (3, 6, 9, ...)"
+            },
+            "movements": [
+              {"movement": "thruster", "reps": null, "weight": {"en": "100 lb", "fr": "45 kg"}},
+              {"movement": "chest-to-bar-pull-up", "reps": null, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "AMRAP 7 minutes of: 65 lb Thrusters (3, 6, 9, ...), Chest-to-bar Pull-ups (3, 6, 9, ...)",
+              "fr": "AMRAP 7 minutes : Thrusters à 30 kg (3, 6, 9, ...), Tractions poitrine à la barre (3, 6, 9, ...)"
+            },
+            "movements": [
+              {"movement": "thruster", "reps": null, "weight": {"en": "65 lb", "fr": "30 kg"}},
+              {"movement": "chest-to-bar-pull-up", "reps": null, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "AMRAP 7 minutes of: 90 lb Thrusters (3, 6, 9, ...), Chest-to-bar Pull-ups (3, 6, 9, ...)",
+              "fr": "AMRAP 7 minutes : Thrusters à 41 kg (3, 6, 9, ...), Tractions poitrine à la barre (3, 6, 9, ...)"
+            },
+            "movements": [
+              {"movement": "thruster", "reps": null, "weight": {"en": "90 lb", "fr": "41 kg"}},
+              {"movement": "chest-to-bar-pull-up", "reps": null, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "AMRAP 7 minutes of: 55 lb Thrusters (3, 6, 9, ...), Chin-over-bar Pull-ups (3, 6, 9, ...)",
+              "fr": "AMRAP 7 minutes : Thrusters à 25 kg (3, 6, 9, ...), Tractions menton au-dessus de la barre (3, 6, 9, ...)"
+            },
+            "movements": [
+              {"movement": "thruster", "reps": null, "weight": {"en": "55 lb", "fr": "25 kg"}},
+              {"movement": "pull-up", "reps": null, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 12.1",
+    "descriptions": {
+      "en": "Complete as many reps as possible in 7 minutes of: Burpees. This workout begins from a standing position. The athlete will move from flat on the ground to touching an object with both hands that is 6 inches above their max reach. Score is total reps completed.",
+      "fr": "Compléter un maximum de répétitions en 7 minutes de : Burpees. L'entraînement commence en position debout. L'athlète doit passer de la position allongée au sol à un saut en touchant avec les deux mains un objet situé à 15 cm au-dessus de sa portée maximale. Le score est le nombre total de répétitions effectuées."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "AMRAP 7 minutes: Burpees. From standing to flat on the ground, then jump to touch an object 6 inches above max reach.",
+              "fr": "AMRAP 7 minutes : Burpees. De la position debout au sol, puis saut pour toucher un objet 15 cm au-dessus de la portée maximale."
+            },
+            "movements": [
+              {
+                "movement": "burpee",
+                "reps": null,
+                "weight": null
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "AMRAP 7 minutes: Burpees. From standing to flat on the ground, then jump to touch an object 6 inches above max reach.",
+              "fr": "AMRAP 7 minutes : Burpees. De la position debout au sol, puis saut pour toucher un objet 15 cm au-dessus de la portée maximale."
+            },
+            "movements": [
+              {
+                "movement": "burpee",
+                "reps": null,
+                "weight": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 12.2",
+    "descriptions": {
+      "en": "AMRAP 10 minutes: Complete as many reps as possible through a snatch ladder. MEN: 75 lbs x30, 135 lbs x30, 165 lbs x30, 210 lbs AMRAP. WOMEN: 45 lbs x30, 75 lbs x30, 100 lbs x30, 120 lbs AMRAP. Masters 55+: lighter ladder applies.",
+      "fr": "AMRAP 10 minutes : Effectuer un maximum de répétitions avec une montée en charge au snatch. HOMMES : 34 kg x30, 61 kg x30, 75 kg x30, 95 kg AMRAP. FEMMES : 20 kg x30, 34 kg x30, 45 kg x30, 54 kg AMRAP. Masters 55+ : charges allégées."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "AMRAP 10 minutes: 30 Snatches at 75 lbs, 30 Snatches at 135 lbs, 30 Snatches at 165 lbs, then as many Snatches as possible at 210 lbs.",
+              "fr": "AMRAP 10 minutes : 30 Snatchs à 34 kg, 30 Snatchs à 61 kg, 30 Snatchs à 75 kg, puis autant de Snatchs que possible à 95 kg."
+            },
+            "movements": [
+              {"movement": "snatch", "reps": 30, "weight": {"en": 75, "fr": 34}},
+              {"movement": "snatch", "reps": 30, "weight": {"en": 135, "fr": 61}},
+              {"movement": "snatch", "reps": 30, "weight": {"en": 165, "fr": 75}},
+              {"movement": "snatch", "reps": null, "weight": {"en": 210, "fr": 95}}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "AMRAP 10 minutes: 30 Snatches at 45 lbs, 30 Snatches at 75 lbs, 30 Snatches at 100 lbs, then as many Snatches as possible at 120 lbs.",
+              "fr": "AMRAP 10 minutes : 30 Snatchs à 20 kg, 30 Snatchs à 34 kg, 30 Snatchs à 45 kg, puis autant de Snatchs que possible à 54 kg."
+            },
+            "movements": [
+              {"movement": "snatch", "reps": 30, "weight": {"en": 45, "fr": 20}},
+              {"movement": "snatch", "reps": 30, "weight": {"en": 75, "fr": 34}},
+              {"movement": "snatch", "reps": 30, "weight": {"en": 100, "fr": 45}},
+              {"movement": "snatch", "reps": null, "weight": {"en": 120, "fr": 54}}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "AMRAP 10 minutes: 30 Snatches at 45 lbs, 30 Snatches at 75 lbs, 30 Snatches at 100 lbs, then as many Snatches as possible at 120 lbs.",
+              "fr": "AMRAP 10 minutes : 30 Snatchs à 20 kg, 30 Snatchs à 34 kg, 30 Snatchs à 45 kg, puis autant de Snatchs que possible à 54 kg."
+            },
+            "movements": [
+              {"movement": "snatch", "reps": 30, "weight": {"en": 45, "fr": 20}},
+              {"movement": "snatch", "reps": 30, "weight": {"en": 75, "fr": 34}},
+              {"movement": "snatch", "reps": 30, "weight": {"en": 100, "fr": 45}},
+              {"movement": "snatch", "reps": null, "weight": {"en": 120, "fr": 54}}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "AMRAP 10 minutes: 30 Snatches at 35 lbs, 30 Snatches at 55 lbs, 30 Snatches at 75 lbs, then as many Snatches as possible at 90 lbs.",
+              "fr": "AMRAP 10 minutes : 30 Snatchs à 16 kg, 30 Snatchs à 25 kg, 30 Snatchs à 34 kg, puis autant de Snatchs que possible à 41 kg."
+            },
+            "movements": [
+              {"movement": "snatch", "reps": 30, "weight": {"en": 35, "fr": 16}},
+              {"movement": "snatch", "reps": 30, "weight": {"en": 55, "fr": 25}},
+              {"movement": "snatch", "reps": 30, "weight": {"en": 75, "fr": 34}},
+              {"movement": "snatch", "reps": null, "weight": {"en": 90, "fr": 41}}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 12.3",
+    "descriptions": {
+      "en": "AMRAP 18 minutes: Complete as many rounds and reps as possible of Box Jumps, Push Press, and Toes-to-bar.",
+      "fr": "AMRAP 18 minutes : Effectuer autant de tours et répétitions que possible de Box Jumps, Push Press et Toes-to-bar."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 1080,
+            "descriptions": {
+              "en": "AMRAP 18 minutes: 15 Box jumps 24\", 12 Push press at 115 lbs, 9 Toes-to-bar.",
+              "fr": "AMRAP 18 minutes : 15 Box jumps 61 cm, 12 Push press à 52 kg, 9 Toes-to-bar."
+            },
+            "movements": [
+              {"movement": "box-jump", "reps": 15, "weight": null, "height": {"en": 24, "fr": 61}},
+              {"movement": "push-press", "reps": 12, "weight": {"en": 115, "fr": 52}},
+              {"movement": "toes-to-bar", "reps": 9, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 1080,
+            "descriptions": {
+              "en": "AMRAP 18 minutes: 15 Box jumps 20\", 12 Push press at 75 lbs, 9 Toes-to-bar.",
+              "fr": "AMRAP 18 minutes : 15 Box jumps 51 cm, 12 Push press à 34 kg, 9 Toes-to-bar."
+            },
+            "movements": [
+              {"movement": "box-jump", "reps": 15, "weight": null, "height": {"en": 20, "fr": 51}},
+              {"movement": "push-press", "reps": 12, "weight": {"en": 75, "fr": 34}},
+              {"movement": "toes-to-bar", "reps": 9, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 1080,
+            "descriptions": {
+              "en": "AMRAP 18 minutes: 15 Box jumps or step-ups 20\", 12 Push press at 95 lbs, 9 Toes-to-bar.",
+              "fr": "AMRAP 18 minutes : 15 Box jumps ou step-ups 51 cm, 12 Push press à 43 kg, 9 Toes-to-bar."
+            },
+            "movements": [
+              {"movement": "box-jump", "reps": 15, "weight": null, "height": {"en": 20, "fr": 51}},
+              {"movement": "push-press", "reps": 12, "weight": {"en": 95, "fr": 43}},
+              {"movement": "toes-to-bar", "reps": 9, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 1080,
+            "descriptions": {
+              "en": "AMRAP 18 minutes: 15 Box jumps or step-ups 20\", 12 Push press at 55 lbs, 9 Toes-to-bar.",
+              "fr": "AMRAP 18 minutes : 15 Box jumps ou step-ups 51 cm, 12 Push press à 25 kg, 9 Toes-to-bar."
+            },
+            "movements": [
+              {"movement": "box-jump", "reps": 15, "weight": null, "height": {"en": 20, "fr": 51}},
+              {"movement": "push-press", "reps": 12, "weight": {"en": 55, "fr": 25}},
+              {"movement": "toes-to-bar", "reps": 9, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 12.4",
+    "descriptions": {
+      "en": "AMRAP 12 minutes: Wall Balls, Double-unders, and Muscle-ups.",
+      "fr": "AMRAP 12 minutes : Wall Balls, Double-unders et Muscle-ups."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 720,
+            "descriptions": {
+              "en": "AMRAP 12 minutes: 150 Wall balls (20 lbs to 10'), 90 Double-unders, 30 Muscle-ups.",
+              "fr": "AMRAP 12 minutes : 150 Wall Balls (9 kg à 3,05 m), 90 Double-unders, 30 Muscle-ups."
+            },
+            "movements": [
+              {"movement": "wall-ball-shot", "reps": 150, "weight": {"en": 20, "fr": 9}, "height": {"en": 10, "fr": 3.05}},
+              {"movement": "double-under", "reps": 90, "weight": null},
+              {"movement": "muscle-up", "reps": 30, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 720,
+            "descriptions": {
+              "en": "AMRAP 12 minutes: 150 Wall balls (14 lbs to 9'), 90 Double-unders, 30 Muscle-ups.",
+              "fr": "AMRAP 12 minutes : 150 Wall Balls (6 kg à 2,74 m), 90 Double-unders, 30 Muscle-ups."
+            },
+            "movements": [
+              {"movement": "wall-ball-shot", "reps": 150, "weight": {"en": 14, "fr": 6}, "height": {"en": 9, "fr": 2.74}},
+              {"movement": "double-under", "reps": 90, "weight": null},
+              {"movement": "muscle-up", "reps": 30, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 720,
+            "descriptions": {
+              "en": "AMRAP 12 minutes: 150 Wall balls (20 lbs to 9'), 90 Double-unders, 30 Muscle-ups.",
+              "fr": "AMRAP 12 minutes : 150 Wall Balls (9 kg à 2,74 m), 90 Double-unders, 30 Muscle-ups."
+            },
+            "movements": [
+              {"movement": "wall-ball-shot", "reps": 150, "weight": {"en": 20, "fr": 9}, "height": {"en": 9, "fr": 2.74}},
+              {"movement": "double-under", "reps": 90, "weight": null},
+              {"movement": "muscle-up", "reps": 30, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 720,
+            "descriptions": {
+              "en": "AMRAP 12 minutes: 150 Wall balls (10 lbs to 9'), 90 Double-unders, 30 Muscle-ups.",
+              "fr": "AMRAP 12 minutes : 150 Wall Balls (4,5 kg à 2,74 m), 90 Double-unders, 30 Muscle-ups."
+            },
+            "movements": [
+              {"movement": "wall-ball-shot", "reps": 150, "weight": {"en": 10, "fr": 4.5}, "height": {"en": 9, "fr": 2.74}},
+              {"movement": "double-under", "reps": 90, "weight": null},
+              {"movement": "muscle-up", "reps": 30, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 12.5",
+    "descriptions": {
+      "en": "AMRAP 7 minutes: Complete as many rounds as possible following a Thruster and Chest-to-bar pull-up rep scheme.",
+      "fr": "AMRAP 7 minutes : Effectuer autant de répétitions que possible suivant le schéma Thruster et Chest-to-bar Pull-ups."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "AMRAP 7 minutes: Thruster 100 lbs x3, 3 Chest-to-bar pull-ups, then 6,9,12… increasing by 3 each round.",
+              "fr": "AMRAP 7 minutes : Thruster 45 kg x3, 3 Chest-to-bar Pull-ups, puis 6,9,12… en augmentant de 3 chaque tour."
+            },
+            "movements": [
+              {"movement": "thruster", "reps": 3, "weight": {"en": 100, "fr": 45}},
+              {"movement": "chest-to-bar-pull-up", "reps": 3, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "AMRAP 7 minutes: Thruster 65 lbs x3, 3 Chest-to-bar pull-ups, then 6,9,12… increasing by 3 each round.",
+              "fr": "AMRAP 7 minutes : Thruster 30 kg x3, 3 Chest-to-bar Pull-ups, puis 6,9,12… en augmentant de 3 chaque tour."
+            },
+            "movements": [
+              {"movement": "thruster", "reps": 3, "weight": {"en": 65, "fr": 30}},
+              {"movement": "chest-to-bar-pull-up", "reps": 3, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "AMRAP 7 minutes: Thruster 90 lbs x3, 3 Chest-to-bar pull-ups, then 6,9,12… increasing by 3 each round.",
+              "fr": "AMRAP 7 minutes : Thruster 41 kg x3, 3 Chest-to-bar Pull-ups, puis 6,9,12… en augmentant de 3 chaque tour."
+            },
+            "movements": [
+              {"movement": "thruster", "reps": 3, "weight": {"en": 90, "fr": 41}},
+              {"movement": "chest-to-bar-pull-up", "reps": 3, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "AMRAP 7 minutes: Thruster 55 lbs x3, 3 Chin-over-bar pull-ups, then 6,9,12… increasing by 3 each round.",
+              "fr": "AMRAP 7 minutes : Thruster 25 kg x3, 3 Chin-over-bar Pull-ups, puis 6,9,12… en augmentant de 3 chaque tour."
+            },
+            "movements": [
+              {"movement": "thruster", "reps": 3, "weight": {"en": 55, "fr": 25}},
+              {"movement": "chin-over-bar-pull-up", "reps": 3, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 13.1",
+    "descriptions": {
+      "en": "Complete as many reps as possible in 17 minutes of the following sequence:",
+      "fr": "Compléter autant de répétitions que possible en 17 minutes de la séquence suivante :"
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 1020,
+            "descriptions": {
+              "en": "40 Burpees, 75 lb Snatch x30, 30 Burpees, 135 lb Snatch x30, 20 Burpees, 165 lb Snatch x30, 10 Burpees, 210 lb Snatch as many reps as possible",
+              "fr": "40 Burpees, 34 kg Snatch x30, 30 Burpees, 61 kg Snatch x30, 20 Burpees, 75 kg Snatch x30, 10 Burpees, 95 kg Snatch autant de répétitions que possible"
+            },
+            "movements": [
+              {"movement": "burpee", "reps": 40, "weight": null},
+              {"movement": "snatch", "reps": 30, "weight": 75},
+              {"movement": "burpee", "reps": 30, "weight": null},
+              {"movement": "snatch", "reps": 30, "weight": 135},
+              {"movement": "burpee", "reps": 20, "weight": null},
+              {"movement": "snatch", "reps": 30, "weight": 165},
+              {"movement": "burpee", "reps": 10, "weight": null},
+              {"movement": "snatch", "reps": null, "weight": 210}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 1020,
+            "descriptions": {
+              "en": "40 Burpees, 45 lb Snatch x30, 30 Burpees, 75 lb Snatch x30, 20 Burpees, 100 lb Snatch x30, 10 Burpees, 120 lb Snatch as many reps as possible",
+              "fr": "40 Burpees, 20 kg Snatch x30, 30 Burpees, 34 kg Snatch x30, 20 Burpees, 45 kg Snatch x30, 10 Burpees, 55 kg Snatch autant de répétitions que possible"
+            },
+            "movements": [
+              {"movement": "burpee", "reps": 40, "weight": null},
+              {"movement": "snatch", "reps": 30, "weight": 45},
+              {"movement": "burpee", "reps": 30, "weight": null},
+              {"movement": "snatch", "reps": 30, "weight": 75},
+              {"movement": "burpee", "reps": 20, "weight": null},
+              {"movement": "snatch", "reps": 30, "weight": 100},
+              {"movement": "burpee", "reps": 10, "weight": null},
+              {"movement": "snatch", "reps": null, "weight": 120}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 1020,
+            "descriptions": {
+              "en": "40 Burpees, 45 lb Snatch x30, 30 Burpees, 75 lb Snatch x30, 20 Burpees, 100 lb Snatch x30, 10 Burpees, 120 lb Snatch as many reps as possible",
+              "fr": "40 Burpees, 20 kg Snatch x30, 30 Burpees, 34 kg Snatch x30, 20 Burpees, 45 kg Snatch x30, 10 Burpees, 55 kg Snatch autant de répétitions que possible"
+            },
+            "movements": [
+              {"movement": "burpee", "reps": 40, "weight": null},
+              {"movement": "snatch", "reps": 30, "weight": 45},
+              {"movement": "burpee", "reps": 30, "weight": null},
+              {"movement": "snatch", "reps": 30, "weight": 75},
+              {"movement": "burpee", "reps": 20, "weight": null},
+              {"movement": "snatch", "reps": 30, "weight": 100},
+              {"movement": "burpee", "reps": 10, "weight": null},
+              {"movement": "snatch", "reps": null, "weight": 120}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 1020,
+            "descriptions": {
+              "en": "40 Burpees, 35 lb Snatch x30, 30 Burpees, 55 lb Snatch x30, 20 Burpees, 75 lb Snatch x30, 10 Burpees, 90 lb Snatch as many reps as possible",
+              "fr": "40 Burpees, 16 kg Snatch x30, 30 Burpees, 25 kg Snatch x30, 20 Burpees, 34 kg Snatch x30, 10 Burpees, 41 kg Snatch autant de répétitions que possible"
+            },
+            "movements": [
+              {"movement": "burpee", "reps": 40, "weight": null},
+              {"movement": "snatch", "reps": 30, "weight": 35},
+              {"movement": "burpee", "reps": 30, "weight": null},
+              {"movement": "snatch", "reps": 30, "weight": 55},
+              {"movement": "burpee", "reps": 20, "weight": null},
+              {"movement": "snatch", "reps": 30, "weight": 75},
+              {"movement": "burpee", "reps": 10, "weight": null},
+              {"movement": "snatch", "reps": null, "weight": 90}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 13.2",
+    "descriptions": {
+      "en": "Complete as many rounds and reps as possible in 10 minutes of the following sequence:",
+      "fr": "Compléter autant de tours et répétitions que possible en 10 minutes de la séquence suivante :"
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "5 Shoulder to overhead at 115 lb, 10 Deadlifts at 115 lb, 15 Box jumps (24\")",
+              "fr": "5 Épaulé-jeté à 52 kg, 10 Soulevés de terre à 52 kg, 15 Sauts sur boîte (61 cm)"
+            },
+            "movements": [
+              {"movement": "shoulder-to-overhead", "reps": 5, "weight": 115},
+              {"movement": "deadlift", "reps": 10, "weight": 115},
+              {"movement": "box-jump", "reps": 15, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "5 Shoulder to overhead at 75 lb, 10 Deadlifts at 75 lb, 15 Box jumps (20\")",
+              "fr": "5 Épaulé-jeté à 34 kg, 10 Soulevés de terre à 34 kg, 15 Sauts sur boîte (51 cm)"
+            },
+            "movements": [
+              {"movement": "shoulder-to-overhead", "reps": 5, "weight": 75},
+              {"movement": "deadlift", "reps": 10, "weight": 75},
+              {"movement": "box-jump", "reps": 15, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "5 Shoulder to overhead at 95 lb, 10 Deadlifts at 95 lb, 15 Box jumps (20\")",
+              "fr": "5 Épaulé-jeté à 43 kg, 10 Soulevés de terre à 43 kg, 15 Sauts sur boîte (51 cm)"
+            },
+            "movements": [
+              {"movement": "shoulder-to-overhead", "reps": 5, "weight": 95},
+              {"movement": "deadlift", "reps": 10, "weight": 95},
+              {"movement": "box-jump", "reps": 15, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "5 Shoulder to overhead at 55 lb, 10 Deadlifts at 55 lb, 15 Box jumps (20\")",
+              "fr": "5 Épaulé-jeté à 25 kg, 10 Soulevés de terre à 25 kg, 15 Sauts sur boîte (51 cm)"
+            },
+            "movements": [
+              {"movement": "shoulder-to-overhead", "reps": 5, "weight": 55},
+              {"movement": "deadlift", "reps": 10, "weight": 55},
+              {"movement": "box-jump", "reps": 15, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 13.3",
+    "descriptions": {
+      "en": "Complete as many rounds and reps as possible in 12 minutes of the following sequence:",
+      "fr": "Compléter autant de tours et répétitions que possible en 12 minutes de la séquence suivante :"
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 720,
+            "descriptions": {
+              "en": "150 Wall balls (20 lb to 10' target), 90 Double-unders, 30 Muscle-ups",
+              "fr": "150 Wall balls (9 kg à cible 3,05 m), 90 Double-unders, 30 Muscle-ups"
+            },
+            "movements": [
+              {"movement": "wall-ball-shot", "reps": 150, "weight": 20},
+              {"movement": "double-under", "reps": 90, "weight": null},
+              {"movement": "muscle-up", "reps": 30, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 720,
+            "descriptions": {
+              "en": "150 Wall balls (14 lb to 9' target), 90 Double-unders, 30 Muscle-ups",
+              "fr": "150 Wall balls (6 kg à cible 2,74 m), 90 Double-unders, 30 Muscle-ups"
+            },
+            "movements": [
+              {"movement": "wall-ball-shot", "reps": 150, "weight": 14},
+              {"movement": "double-under", "reps": 90, "weight": null},
+              {"movement": "muscle-up", "reps": 30, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 720,
+            "descriptions": {
+              "en": "150 Wall balls (20 lb to 9' target), 90 Double-unders, 30 Muscle-ups",
+              "fr": "150 Wall balls (9 kg à cible 2,74 m), 90 Double-unders, 30 Muscle-ups"
+            },
+            "movements": [
+              {"movement": "wall-ball-shot", "reps": 150, "weight": 20},
+              {"movement": "double-under", "reps": 90, "weight": null},
+              {"movement": "muscle-up", "reps": 30, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 720,
+            "descriptions": {
+              "en": "150 Wall balls (10 lb to 9' target), 90 Double-unders, 30 Muscle-ups",
+              "fr": "150 Wall balls (4,5 kg à cible 2,74 m), 90 Double-unders, 30 Muscle-ups"
+            },
+            "movements": [
+              {"movement": "wall-ball-shot", "reps": 150, "weight": 10},
+              {"movement": "double-under", "reps": 90, "weight": null},
+              {"movement": "muscle-up", "reps": 30, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 13.4",
+    "descriptions": {
+      "en": "Complete as many reps as possible in 7 minutes following the rep scheme below:",
+      "fr": "Compléter autant de répétitions que possible en 7 minutes selon le schéma de répétitions suivant :"
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "Clean and jerk 135 lb x3, 3 Toes-to-bar; 135 lb x6, 6 Toes-to-bar; 135 lb x9, 9 Toes-to-bar; ...",
+              "fr": "Clean and jerk 61 kg x3, 3 Toes-to-bar; 61 kg x6, 6 Toes-to-bar; 61 kg x9, 9 Toes-to-bar; ..."
+            },
+            "movements": [
+              {"movement": "clean-and-jerk", "reps": 3, "weight": 135},
+              {"movement": "toes-to-bar", "reps": 3, "weight": null},
+              {"movement": "clean-and-jerk", "reps": 6, "weight": 135},
+              {"movement": "toes-to-bar", "reps": 6, "weight": null},
+              {"movement": "clean-and-jerk", "reps": 9, "weight": 135},
+              {"movement": "toes-to-bar", "reps": 9, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "Clean and jerk 95 lb x3, 3 Toes-to-bar; 95 lb x6, 6 Toes-to-bar; 95 lb x9, 9 Toes-to-bar; ...",
+              "fr": "Clean and jerk 43 kg x3, 3 Toes-to-bar; 43 kg x6, 6 Toes-to-bar; 43 kg x9, 9 Toes-to-bar; ..."
+            },
+            "movements": [
+              {"movement": "clean-and-jerk", "reps": 3, "weight": 95},
+              {"movement": "toes-to-bar", "reps": 3, "weight": null},
+              {"movement": "clean-and-jerk", "reps": 6, "weight": 95},
+              {"movement": "toes-to-bar", "reps": 6, "weight": null},
+              {"movement": "clean-and-jerk", "reps": 9, "weight": 95},
+              {"movement": "toes-to-bar", "reps": 9, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "Clean and jerk 115 lb x3, 3 Toes-to-bar; 115 lb x6, 6 Toes-to-bar; 115 lb x9, 9 Toes-to-bar; ...",
+              "fr": "Clean and jerk 52 kg x3, 3 Toes-to-bar; 52 kg x6, 6 Toes-to-bar; 52 kg x9, 9 Toes-to-bar; ..."
+            },
+            "movements": [
+              {"movement": "clean-and-jerk", "reps": 3, "weight": 115},
+              {"movement": "toes-to-bar", "reps": 3, "weight": null},
+              {"movement": "clean-and-jerk", "reps": 6, "weight": 115},
+              {"movement": "toes-to-bar", "reps": 6, "weight": null},
+              {"movement": "clean-and-jerk", "reps": 9, "weight": 115},
+              {"movement": "toes-to-bar", "reps": 9, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 420,
+            "descriptions": {
+              "en": "Clean and jerk 65 lb x3, 3 Toes-to-bar; 65 lb x6, 6 Toes-to-bar; 65 lb x9, 9 Toes-to-bar; ...",
+              "fr": "Clean and jerk 30 kg x3, 3 Toes-to-bar; 30 kg x6, 6 Toes-to-bar; 30 kg x9, 9 Toes-to-bar; ..."
+            },
+            "movements": [
+              {"movement": "clean-and-jerk", "reps": 3, "weight": 65},
+              {"movement": "toes-to-bar", "reps": 3, "weight": null},
+              {"movement": "clean-and-jerk", "reps": 6, "weight": 65},
+              {"movement": "toes-to-bar", "reps": 6, "weight": null},
+              {"movement": "clean-and-jerk", "reps": 9, "weight": 65},
+              {"movement": "toes-to-bar", "reps": 9, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 13.5",
+    "descriptions": {
+      "en": "Complete as many rounds and reps as possible, starting with 4 minutes, extending time if thresholds are met:",
+      "fr": "Compléter autant de tours et répétitions que possible, en commençant par 4 minutes et en prolongeant le temps si les seuils sont atteints :"
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 240,
+            "descriptions": {
+              "en": "15 reps Thruster at 100 lb, 15 Chest-to-bar Pull-ups. If 90 reps completed under 4 minutes, extend to 8 min; 180 reps under 8 min, extend to 12 min; 270 reps under 12 min, extend to 16 min, etc.",
+              "fr": "15 répétitions Thruster à 45 kg, 15 Chest-to-bar Pull-ups. Si 90 répétitions complétées en moins de 4 min, prolonger à 8 min ; 180 répétitions en moins de 8 min, prolonger à 12 min ; 270 répétitions en moins de 12 min, prolonger à 16 min, etc."
+            },
+            "movements": [
+              {"movement": "thruster", "reps": 15, "weight": 100},
+              {"movement": "chest-to-bar-pull-up", "reps": 15, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 240,
+            "descriptions": {
+              "en": "15 reps Thruster at 65 lb, 15 Chest-to-bar Pull-ups. Same extension rules as above.",
+              "fr": "15 répétitions Thruster à 30 kg, 15 Chest-to-bar Pull-ups. Même règles de prolongation que ci-dessus."
+            },
+            "movements": [
+              {"movement": "thruster", "reps": 15, "weight": 65},
+              {"movement": "chest-to-bar-pull-up", "reps": 15, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 240,
+            "descriptions": {
+              "en": "15 reps Thruster at 65 lb, 15 Chin-over-bar Pull-ups. Same extension rules as above.",
+              "fr": "15 répétitions Thruster à 30 kg, 15 Chin-over-bar Pull-ups. Même règles de prolongation que ci-dessus."
+            },
+            "movements": [
+              {"movement": "thruster", "reps": 15, "weight": 65},
+              {"movement": "chin-over-bar-pull-up", "reps": 15, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 240,
+            "descriptions": {
+              "en": "15 reps Thruster at 45 lb, 15 Jumping Chest-to-bar Pull-ups. Same extension rules as above.",
+              "fr": "15 répétitions Thruster à 20 kg, 15 Jumping Chest-to-bar Pull-ups. Même règles de prolongation que ci-dessus."
+            },
+            "movements": [
+              {"movement": "thruster", "reps": 15, "weight": 45},
+              {"movement": "jumping-chest-to-bar-pull-up", "reps": 15, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 14.1",
+    "descriptions": {
+      "en": "Complete as many rounds and reps as possible in 10 minutes of 30 double-unders and 15 power snatches (men: 75 lb, women: 55 lb). Masters adjust weights accordingly.",
+      "fr": "Complétez autant de tours et répétitions que possible en 10 minutes : 30 double-unders et 15 power snatches (hommes : 34 kg, femmes : 25 kg). Les Masters ajustent les poids."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "30 reps Double Under, 15 reps Power snatch at 75 lb.",
+              "fr": "30 répétitions de Double Under, 15 répétition de Power Snatch à 34 kg."
+            },
+            "movements": [
+              {"movement": "double-under", "reps": 30, "weight": null},
+              {"movement": "power-snatch", "reps": 15, "weight": 75}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "30 reps Double Under, 15 reps Power snatch at 55 lb.",
+              "fr": "30 répétitions de Double Under, 15 répétition de Power Snatch à 25 kg."
+            },
+            "movements": [
+              {"movement": "double-under", "reps": 30, "weight": null},
+              {"movement": "power-snatch", "reps": 15, "weight": 55}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "30 reps Double Under, 15 reps Power snatch at 65 lb.",
+              "fr": "30 répétitions de Double Under, 15 répétition de Power Snatch à 30 kg."
+            },
+            "movements": [
+              {"movement": "double-under", "reps": 30, "weight": null},
+              {"movement": "power-snatch", "reps": 15, "weight": 65}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "30 reps Double Under, 15 reps Power snatch at 45 lb.",
+              "fr": "30 répétitions de Double Under, 15 répétition de Power Snatch à 20 kg."
+            },
+            "movements": [
+              {"movement": "double-under", "reps": 30, "weight": 45},
+              {"movement": "power-snatch", "reps": 15, "weight": 45}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 14.2",
+    "descriptions": {
+      "en": "Every 3 minutes for as long as possible complete 2 rounds of overhead squats and chest-to-bar pull-ups, increasing reps every 3 minutes.",
+      "fr": "Tous les 3 minutes, réalisez autant de tours que possible : 2 tours de overhead squats et chest-to-bar pull-ups, en augmentant les répétitions toutes les 3 minutes."
+    },
+    "type": "emom",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": null,
+            "descriptions": {
+              "en": "Every 3 minutes for as long as possible complete 2 rounds of overhead squats at 95lb and chest-to-bar pull-ups, increasing reps every 3 minutes.",
+              "fr": "Tous les 3 minutes, réalisez autant de tours que possible : 2 tours de overhead squats à 43kg et chest-to-bar pull-ups, en augmentant les répétitions toutes les 3 minutes."
+            },
+            "movements": [
+              {"movement": "overhead-squat", "reps": 10, "weight": 95},
+              {"movement": "chest-to-bar-pull-up", "reps": 10, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": null,
+            "descriptions": {
+              "en": "Every 3 minutes for as long as possible complete 2 rounds of overhead squats at 65lb and chest-to-bar pull-ups, increasing reps every 3 minutes.",
+              "fr": "Tous les 3 minutes, réalisez autant de tours que possible : 2 tours de overhead squats à 29kg et chest-to-bar pull-ups, en augmentant les répétitions toutes les 3 minutes."
+            },
+            "movements": [
+              {"movement": "overhead-squat", "reps": 10, "weight": 65},
+              {"movement": "chest-to-bar-pull-up", "reps": 10, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": null,
+            "descriptions": {
+              "en": "Every 3 minutes for as long as possible complete 2 rounds of overhead squats at 95lb and chest-to-bar pull-ups, increasing reps every 3 minutes.",
+              "fr": "Tous les 3 minutes, réalisez autant de tours que possible : 2 tours de overhead squats à 43kg et chest-to-bar pull-ups, en augmentant les répétitions toutes les 3 minutes."
+            },
+            "movements": [
+              {"movement": "overhead-squat", "reps": 10, "weight": 65},
+              {"movement": "chin-over-bar-pull-up", "reps": 10, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": null,
+            "descriptions": {
+              "en": "Every 3 minutes for as long as possible complete 2 rounds of overhead squats at 45lb and chest-to-bar pull-ups, increasing reps every 3 minutes.",
+              "fr": "Tous les 3 minutes, réalisez autant de tours que possible : 2 tours de overhead squats à 20kg et chest-to-bar pull-ups, en augmentant les répétitions toutes les 3 minutes."
+            },
+            "movements": [
+              {"movement": "overhead-squat", "reps": 10, "weight": 45},
+              {"movement": "jumping-chest-to-bar-pull-up", "reps": 10, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 14.3",
+    "descriptions": {
+      "en": "Complete as many reps as possible in 8 minutes of a sequence of deadlifts and box jumps, increasing weight and reps each round.",
+      "fr": "Complétez autant de répétitions que possible en 8 minutes : séquence de deadlifts et box jumps, avec augmentation du poids et des répétitions à chaque tour."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 480,
+            "descriptions": {
+              "en": "Start with 10 deadlifts at 135 lb and 15 box jumps. Increase the deadlift weight each round (185, 225, 275, 315, 365 lb) while keeping 15 box jumps every time. Time cap: 8 minutes.",
+              "fr": "Commencez par 10 deadlifts à 61 kg et 15 box jumps. Augmentez le poids des deadlifts à chaque tour (84, 102, 125, 143, 166 kg) tout en maintenant 15 box jumps. Temps limite : 8 minutes."
+            },
+            "movements": [
+              {"movement": "deadlift", "reps": 10, "weight": 135},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 15, "weight": 185},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 20, "weight": 225},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 25, "weight": 275},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 30, "weight": 315},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 35, "weight": 365},
+              {"movement": "box-jump", "reps": 15, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 480,
+            "descriptions": {
+              "en": "Start with 10 deadlifts at 95 lb and 15 box jumps. Increase the deadlift weight each round (135, 155, 185, 205, 225 lb) while keeping 15 box jumps every time. Time cap: 8 minutes.",
+              "fr": "Commencez par 10 deadlifts à 43 kg et 15 box jumps. Augmentez le poids des deadlifts à chaque tour (61, 70, 84, 93, 102 kg) tout en maintenant 15 box jumps. Temps limite : 8 minutes."
+            },
+            "movements": [
+              {"movement": "deadlift", "reps": 10, "weight": 95},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 15, "weight": 135},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 20, "weight": 155},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 25, "weight": 185},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 30, "weight": 205},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 35, "weight": 225},
+              {"movement": "box-jump", "reps": 15, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 480,
+            "descriptions": {
+              "en": "Start with 10 deadlifts at 95 lb and 15 box jumps. Increase the deadlift weight each round (135, 185, 225, 275, 315 lb) while keeping 15 box jumps every time. Time cap: 8 minutes.",
+              "fr": "Commencez par 10 deadlifts à 43 kg et 15 box jumps. Augmentez le poids des deadlifts à chaque tour (61, 84, 102, 125, 143 kg) tout en maintenant 15 box jumps. Temps limite : 8 minutes."
+            },
+            "movements": [
+              {"movement": "deadlift", "reps": 10, "weight": 95},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 15, "weight": 135},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 20, "weight": 185},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 25, "weight": 225},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 30, "weight": 275},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 35, "weight": 315},
+              {"movement": "box-jump", "reps": 15, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 480,
+            "descriptions": {
+              "en": "Start with 10 deadlifts at 65 lb and 15 box jumps. Increase the deadlift weight each round (95, 115, 135, 155, 185 lb) while keeping 15 box jumps every time. Time cap: 8 minutes.",
+              "fr": "Commencez par 10 deadlifts à 29 kg et 15 box jumps. Augmentez le poids des deadlifts à chaque tour (43, 52, 61, 70, 84 kg) tout en maintenant 15 box jumps. Temps limite : 8 minutes."
+            },
+            "movements": [
+              {"movement": "deadlift", "reps": 10, "weight": 65},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 15, "weight": 95},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 20, "weight": 115},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 25, "weight": 135},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 30, "weight": 155},
+              {"movement": "box-jump", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 35, "weight": 185},
+              {"movement": "box-jump", "reps": 15, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 14.4",
+    "descriptions": {
+      "en": "Complete as many rounds and repetitions as possible in 14 minutes of rowing, toes-to-bars, wall-ball shots, cleans, and muscle-ups. Weights and targets vary by gender and Masters category.",
+      "fr": "Complétez autant de tours et répétitions que possible en 14 minutes : rameur, toes-to-bars, wall-ball shots, cleans et muscle-ups. Les poids et cibles varient selon le genre et la catégorie Masters."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 840,
+            "descriptions": {
+              "en": "AMRAP in 14 minutes of: 60 calorie row, 50 toes-to-bar, 40 wall-ball shots (20 lb), 30 cleans (135 lb), 20 muscle-ups.",
+              "fr": "AMRAP de 14 minutes : 60 calories au rameur, 50 toes-to-bar, 40 wall-ball shots (9 kg), 30 cleans (61 kg), 20 muscle-ups."
+            },
+            "movements": [
+              {"movement": "row", "reps": 60, "weight": "calories"},
+              {"movement": "toes-to-bar", "reps": 50, "weight": null},
+              {"movement": "wall-ball-shot", "reps": 40, "weight": 20},
+              {"movement": "clean", "reps": 30, "weight": 135},
+              {"movement": "muscle-up", "reps": 20, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 840,
+            "descriptions": {
+              "en": "AMRAP in 14 minutes of: 60 calorie row, 50 toes-to-bar, 40 wall-ball shots (14 lb), 30 cleans (95 lb), 20 muscle-ups.",
+              "fr": "AMRAP de 14 minutes : 60 calories au rameur, 50 toes-to-bar, 40 wall-ball shots (6 kg), 30 cleans (43 kg), 20 muscle-ups."
+            },
+            "movements": [
+              {"movement": "row", "reps": 60, "weight": "calories"},
+              {"movement": "toes-to-bar", "reps": 50, "weight": null},
+              {"movement": "wall-ball-shot", "reps": 40, "weight": 14},
+              {"movement": "clean", "reps": 30, "weight": 95},
+              {"movement": "muscle-up", "reps": 20, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 840,
+            "descriptions": {
+              "en": "AMRAP in 14 minutes of: 60 calorie row, 50 toes-to-bar, 40 wall-ball shots (20 lb), 30 cleans (115 lb), 20 muscle-ups.",
+              "fr": "AMRAP de 14 minutes : 60 calories au rameur, 50 toes-to-bar, 40 wall-ball shots (9 kg), 30 cleans (52 kg), 20 muscle-ups."
+            },
+            "movements": [
+              {"movement": "row", "reps": 60, "weight": "calories"},
+              {"movement": "toes-to-bar", "reps": 50, "weight": null},
+              {"movement": "wall-ball-shot", "reps": 40, "weight": 20},
+              {"movement": "clean", "reps": 30, "weight": 115},
+              {"movement": "muscle-up", "reps": 20, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 840,
+            "descriptions": {
+              "en": "AMRAP in 14 minutes of: 60 calorie row, 50 toes-to-bar, 40 wall-ball shots (10 lb), 30 cleans (65 lb), 20 muscle-ups.",
+              "fr": "AMRAP de 14 minutes : 60 calories au rameur, 50 toes-to-bar, 40 wall-ball shots (4,5 kg), 30 cleans (29 kg), 20 muscle-ups."
+            },
+            "movements": [
+              {"movement": "row", "reps": 60, "weight": "calories"},
+              {"movement": "toes-to-bar", "reps": 50, "weight": null},
+              {"movement": "wall-ball-shot", "reps": 40, "weight": 10},
+              {"movement": "clean", "reps": 30, "weight": 65},
+              {"movement": "muscle-up", "reps": 20, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 14.5",
+    "descriptions": {
+      "en": "For time, complete 21-18-15-12-9-6-3 reps of thrusters and burpees. Weights vary by gender and Masters category.",
+      "fr": "Pour le temps : réalisez 21-18-15-12-9-6-3 répétitions de thrusters et burpees. Les poids varient selon le genre et la catégorie Masters."
+    },
+    "type": "for-time",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For time: 21-18-15-12-9-6-3 reps of thrusters (95 lb) and burpees.",
+              "fr": "Pour le temps : 21-18-15-12-9-6-3 thrusters (43 kg) et burpees."
+            },
+            "movements": [
+              {"movement": "thruster", "reps": 21, "weight": 95},
+              {"movement": "burpee", "reps": 21, "weight": null},
+              {"movement": "thruster", "reps": 18, "weight": 95},
+              {"movement": "burpee", "reps": 18, "weight": null},
+              {"movement": "thruster", "reps": 15, "weight": 95},
+              {"movement": "burpee", "reps": 15, "weight": null},
+              {"movement": "thruster", "reps": 12, "weight": 95},
+              {"movement": "burpee", "reps": 12, "weight": null},
+              {"movement": "thruster", "reps": 9, "weight": 95},
+              {"movement": "burpee", "reps": 9, "weight": null},
+              {"movement": "thruster", "reps": 6, "weight": 95},
+              {"movement": "burpee", "reps": 6, "weight": null},
+              {"movement": "thruster", "reps": 3, "weight": 95},
+              {"movement": "burpee", "reps": 3, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For time: 21-18-15-12-9-6-3 reps of thrusters (65 lb) and burpees.",
+              "fr": "Pour le temps : 21-18-15-12-9-6-3 thrusters (29 kg) et burpees."
+            },
+            "movements": [
+              {"movement": "thruster", "reps": 21, "weight": 65},
+              {"movement": "burpee", "reps": 21, "weight": null},
+              {"movement": "thruster", "reps": 18, "weight": 65},
+              {"movement": "burpee", "reps": 18, "weight": null},
+              {"movement": "thruster", "reps": 15, "weight": 65},
+              {"movement": "burpee", "reps": 15, "weight": null},
+              {"movement": "thruster", "reps": 12, "weight": 65},
+              {"movement": "burpee", "reps": 12, "weight": null},
+              {"movement": "thruster", "reps": 9, "weight": 65},
+              {"movement": "burpee", "reps": 9, "weight": null},
+              {"movement": "thruster", "reps": 6, "weight": 65},
+              {"movement": "burpee", "reps": 6, "weight": null},
+              {"movement": "thruster", "reps": 3, "weight": 65},
+              {"movement": "burpee", "reps": 3, "weight": null}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "masters",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For time: 21-18-15-12-9-6-3 reps of thrusters (65 lb) and burpees.",
+              "fr": "Pour le temps : 21-18-15-12-9-6-3 thrusters (29 kg) et burpees."
+            },
+            "movements": [
+              {"movement": "thruster", "reps": 21, "weight": 65},
+              {"movement": "burpee", "reps": 21, "weight": null},
+              {"movement": "thruster", "reps": 18, "weight": 65},
+              {"movement": "burpee", "reps": 18, "weight": null},
+              {"movement": "thruster", "reps": 15, "weight": 65},
+              {"movement": "burpee", "reps": 15, "weight": null},
+              {"movement": "thruster", "reps": 12, "weight": 65},
+              {"movement": "burpee", "reps": 12, "weight": null},
+              {"movement": "thruster", "reps": 9, "weight": 65},
+              {"movement": "burpee", "reps": 9, "weight": null},
+              {"movement": "thruster", "reps": 6, "weight": 65},
+              {"movement": "burpee", "reps": 6, "weight": null},
+              {"movement": "thruster", "reps": 3, "weight": 65},
+              {"movement": "burpee", "reps": 3, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For time: 21-18-15-12-9-6-3 reps of thrusters (45 lb) and burpees.",
+              "fr": "Pour le temps : 21-18-15-12-9-6-3 thrusters (20 kg) et burpees."
+            },
+            "movements": [
+              {"movement": "thruster", "reps": 21, "weight": 45},
+              {"movement": "burpee", "reps": 21, "weight": null},
+              {"movement": "thruster", "reps": 18, "weight": 45},
+              {"movement": "burpee", "reps": 18, "weight": null},
+              {"movement": "thruster", "reps": 15, "weight": 45},
+              {"movement": "burpee", "reps": 15, "weight": null},
+              {"movement": "thruster", "reps": 12, "weight": 45},
+              {"movement": "burpee", "reps": 12, "weight": null},
+              {"movement": "thruster", "reps": 9, "weight": 45},
+              {"movement": "burpee", "reps": 9, "weight": null},
+              {"movement": "thruster", "reps": 6, "weight": 45},
+              {"movement": "burpee", "reps": 6, "weight": null},
+              {"movement": "thruster", "reps": 3, "weight": 45},
+              {"movement": "burpee", "reps": 3, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 15.1",
+    "descriptions": {
+      "en": "Complete as many rounds and reps as possible in 9 minutes of: 15 toes-to-bars, 10 deadlifts (115 / 75 lb.), 5 snatches (115 / 75 lb.)",
+      "fr": "Réalisez autant de tours et de répétitions que possible en 9 minutes : 15 toes-to-bars, 10 deadlifts (52 / 34 kg), 5 snatches (52 / 34 kg)"
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 540,
+            "descriptions": {
+              "en": "AMRAP 9 minutes: 15 toes-to-bars, 10 deadlifts at 115 lb., 5 snatches at 115 lb.",
+              "fr": "AMRAP 9 minutes : 15 toes-to-bars, 10 deadlifts à 52 kg, 5 snatches à 52 kg"
+            },
+            "movements": [
+              {"movement": "toes-to-bar", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 10, "weight": 115},
+              {"movement": "snatch", "reps": 5, "weight": 115}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 540,
+            "descriptions": {
+              "en": "AMRAP 9 minutes: 15 toes-to-bars, 10 deadlifts at 75 lb., 5 snatches at 75 lb.",
+              "fr": "AMRAP 9 minutes : 15 toes-to-bars, 10 deadlifts à 34 kg, 5 snatches à 34 kg"
+            },
+            "movements": [
+              {"movement": "toes-to-bar", "reps": 15, "weight": null},
+              {"movement": "deadlift", "reps": 10, "weight": 75},
+              {"movement": "snatch", "reps": 5, "weight": 75}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 15.1a",
+    "descriptions": {
+      "en": "1-rep-max clean and jerk. 6-minute time cap.",
+      "fr": "1 répétition maximale clean and jerk. Time cap de 6 minutes."
+    },
+    "type": "for-time",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": 360,
+            "descriptions": {
+              "en": "1RM clean and jerk. 6-minute cap.",
+              "fr": "1RM clean and jerk. Time cap de 6 minutes."
+            },
+            "movements": [
+              {"movement": "clean-and-jerk", "reps": 1, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": 360,
+            "descriptions": {
+              "en": "1RM clean and jerk. 6-minute cap.",
+              "fr": "1RM clean and jerk. Time cap de 6 minutes."
+            },
+            "movements": [
+              {"movement": "clean-and-jerk", "reps": 1, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 15.2",
+    "descriptions": {
+      "en": "Every 3 minutes, for as long as possible: 2 rounds of overhead squats and chest-to-bar pull-ups, increasing reps every 3 minutes.",
+      "fr": "Toutes les 3 minutes, autant de rounds que possible : 2 tours de overhead squats et chest-to-bar pull-ups, avec augmentation des répétitions toutes les 3 minutes."
+    },
+    "type": "emom",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": null,
+            "descriptions": {
+              "en": "EMOM 3 min increments: 2 rounds of 10/12/14 overhead squats at 95 lb. and chest-to-bar pull-ups, increasing reps every 3 min.",
+              "fr": "EMOM par incréments de 3 min : 2 tours de 10/12/14 overhead squats à 43 kg et chest-to-bar pull-ups, augmentation toutes les 3 min."
+            },
+            "movements": [
+              {"movement": "overhead-squat", "reps": 10, "weight": 95},
+              {"movement": "chest-to-bar-pull-up", "reps": 10, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": null,
+            "descriptions": {
+              "en": "EMOM 3 min increments: 2 rounds of 10/12/14 overhead squats at 65 lb. and chest-to-bar pull-ups, increasing reps every 3 min.",
+              "fr": "EMOM par incréments de 3 min : 2 tours de 10/12/14 overhead squats à 29 kg et chest-to-bar pull-ups, augmentation toutes les 3 min."
+            },
+            "movements": [
+              {"movement": "overhead-squat", "reps": 10, "weight": 65},
+              {"movement": "chest-to-bar-pull-up", "reps": 10, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 15.3",
+    "descriptions": {
+      "en": "AMRAP 14 minutes: 7 muscle-ups, 50 wall-ball shots (20 lb. to 10 ft.), 100 double-unders.",
+      "fr": "AMRAP 14 minutes : 7 muscle-ups, 50 wall-ball shots (9 kg à 3 m), 100 double-unders."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 840,
+            "descriptions": {
+              "en": "AMRAP 14 min: 7 muscle-ups, 50 wall-ball shots (20 lb. to 10 ft.), 100 double-unders",
+              "fr": "AMRAP 14 min : 7 muscle-ups, 50 wall-ball shots (9 kg à 3 m), 100 double-unders"
+            },
+            "movements": [
+              {"movement": "muscle-up", "reps": 7, "weight": null},
+              {"movement": "wall-ball-shot", "reps": 50, "weight": 20},
+              {"movement": "double-under", "reps": 100, "weight": null}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 840,
+            "descriptions": {
+              "en": "AMRAP 14 min: 7 muscle-ups, 50 wall-ball shots (14 lb. to 9 ft.), 100 double-unders",
+              "fr": "AMRAP 14 min : 7 muscle-ups, 50 wall-ball shots (6 kg à 2,75 m), 100 double-unders"
+            },
+            "movements": [
+              {"movement": "muscle-up", "reps": 7, "weight": null},
+              {"movement": "wall-ball-shot", "reps": 50, "weight": 14},
+              {"movement": "double-under", "reps": 100, "weight": null}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 15.4",
+    "descriptions": {
+      "en": "AMRAP 8 minutes of handstand push-ups and cleans, adding reps each round.",
+      "fr": "AMRAP 8 minutes de handstand push-ups et cleans, ajout de répétitions à chaque round."
+    },
+    "type": "amrap",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 480,
+            "descriptions": {
+              "en": "AMRAP 8 min: 3 HSPU + 3 cleans, 6 HSPU + 3 cleans, etc. Men clean 185 lb.",
+              "fr": "AMRAP 8 min : 3 HSPU + 3 cleans, 6 HSPU + 3 cleans, etc. Hommes clean 84 kg"
+            },
+            "movements": [
+              {"movement": "handstand-push-up", "reps": 3, "weight": null},
+              {"movement": "clean", "reps": 3, "weight": 185}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 480,
+            "descriptions": {
+              "en": "AMRAP 8 min: 3 HSPU + 3 cleans, 6 HSPU + 3 cleans, etc. Women clean 125 lb.",
+              "fr": "AMRAP 8 min : 3 HSPU + 3 cleans, 6 HSPU + 3 cleans, etc. Femmes clean 57 kg"
+            },
+            "movements": [
+              {"movement": "handstand-push-up", "reps": 3, "weight": null},
+              {"movement": "clean", "reps": 3, "weight": 125}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "OPEN 15.5",
+    "descriptions": {
+      "en": "For time: 27-21-15-9 reps of Row (calories) and Thrusters. Men use 95 lb., Women 65 lb.",
+      "fr": "Pour le temps : 27-21-15-9 répétitions de Row (calories) et Thrusters. Hommes 43 kg, Femmes 29 kg"
+    },
+    "type": "for-time",
+    "category": "competition-and-qualifier",
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 27-21-15-9 reps of Row (calories) and Thrusters at 95 lb.",
+              "fr": "Pour le temps : 27-21-15-9 répétitions de Row (calories) et Thrusters à 43 kg"
+            },
+            "movements": [
+              {"movement": "row", "reps": 27, "weight": null},
+              {"movement": "thruster", "reps": 27, "weight": 95}
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 27-21-15-9 reps of Row (calories) and Thrusters at 65 lb.",
+              "fr": "Pour le temps : 27-21-15-9 répétitions de Row (calories) et Thrusters à 29 kg"
+            },
+            "movements": [
+              {"movement": "row", "reps": 27, "weight": null},
+              {"movement": "thruster", "reps": 27, "weight": 65}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

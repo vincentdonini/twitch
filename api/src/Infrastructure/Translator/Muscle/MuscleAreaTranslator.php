@@ -17,11 +17,11 @@ class MuscleAreaTranslator implements MuscleAreaTranslatorInterface
 
     public function getName(MuscleArea $muscleArea): string
     {
-        return $this->translator->trans('muscle.area.' . StringHelper::kebabToSnake($muscleArea->getSlug()) . '.name');
+        return $this->translator->trans('area.' . StringHelper::kebabToSnake($muscleArea->getSlug()) . '.name', [], 'muscle');
     }
 
     public function getDescription(MuscleArea $muscleArea): string
     {
-        return $this->translator->trans('muscle.area.' . StringHelper::kebabToSnake($muscleArea->getSlug()) . '.description');
+        return $this->translator->trans('area.' . StringHelper::kebabToSnake($muscleArea->getSlug()) . '.description', [], 'muscle');
     }
 }

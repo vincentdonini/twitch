@@ -7,7 +7,6 @@ use App\Domain\Wod\Repository\WodVersionRepositoryInterface;
 use App\Infrastructure\Persistence\Doctrine\Common\FilterableTrait;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
 
 class WodVersionRepository extends ServiceEntityRepository implements WodVersionRepositoryInterface
@@ -46,8 +45,8 @@ class WodVersionRepository extends ServiceEntityRepository implements WodVersion
 //    protected function applyCustomFilters(QueryBuilder $qb, string $alias, array $filters): void
 //    {
 //        $qb
-//            ->leftJoin("$alias.wodVersionExercises", "wve")
-//            ->leftJoin("wve.exercise", "e")
+//            ->leftJoin("$alias.wodVersionMovements", "wve")
+//            ->leftJoin("wve.movement", "e")
 //            ->leftJoin("e.equipment", "eq");
 //
 //        // Filter by Wod
@@ -73,9 +72,9 @@ class WodVersionRepository extends ServiceEntityRepository implements WodVersion
 //            $this->applyEquipmentFilters($qb, $alias, $filters);
 //        }
 //
-//        // Filter by exercises
-//        if (!empty($filters['allowedExerciseIds']) || !empty($filters['disallowedExerciseIds'])) {
-//            $this->applyExerciseFilters($qb, $alias, $filters);
+//        // Filter by movements
+//        if (!empty($filters['allowedMovementIds']) || !empty($filters['disallowedMovementIds'])) {
+//            $this->applyMovementFilters($qb, $alias, $filters);
 //        }
 //    }
 //
@@ -84,8 +83,8 @@ class WodVersionRepository extends ServiceEntityRepository implements WodVersion
 //        $subQb = $qb->getEntityManager()->createQueryBuilder();
 //        $subQb->select('wv_sub.id')
 //            ->from(WodVersion::class, 'wv_sub')
-//            ->leftJoin('wv_sub.wodVersionExercises', 'wve_sub')
-//            ->leftJoin('wve_sub.exercise', 'e_sub')
+//            ->leftJoin('wv_sub.wodVersionMovements', 'wve_sub')
+//            ->leftJoin('wve_sub.movement', 'e_sub')
 //            ->leftJoin('e_sub.equipment', 'eq_sub')
 //            ->groupBy('wv_sub.id');
 //
@@ -121,44 +120,44 @@ class WodVersionRepository extends ServiceEntityRepository implements WodVersion
 //        }
 //    }
 //
-//    private function applyExerciseFilters(QueryBuilder $qb, string $alias, array $filters): void
+//    private function applyMovementFilters(QueryBuilder $qb, string $alias, array $filters): void
 //    {
-//        $subQbExercises = $qb->getEntityManager()->createQueryBuilder();
-//        $subQbExercises->select('wv_sub2.id')
+//        $subQbMovements = $qb->getEntityManager()->createQueryBuilder();
+//        $subQbMovements->select('wv_sub2.id')
 //            ->from(WodVersion::class, 'wv_sub2')
-//            ->leftJoin('wv_sub2.wodVersionExercises', 'wve_sub2')
-//            ->leftJoin('wve_sub2.exercise', 'e_sub2')
+//            ->leftJoin('wv_sub2.wodVersionMovements', 'wve_sub2')
+//            ->leftJoin('wve_sub2.movement', 'e_sub2')
 //            ->groupBy('wv_sub2.id');
 //
-//        $havingExprsExercises = [];
+//        $havingExprsMovements = [];
 //
-//        if (!empty($filters['allowedExerciseIds'])) {
-//            $havingExprsExercises[] = $subQbExercises->expr()->eq(
-//                'SUM(CASE WHEN e_sub2.id IN (:allowedExerciseIds) THEN 1 ELSE 0 END)',
-//                count($filters['allowedExerciseIds'])
+//        if (!empty($filters['allowedMovementIds'])) {
+//            $havingExprsMovements[] = $subQbMovements->expr()->eq(
+//                'SUM(CASE WHEN e_sub2.id IN (:allowedMovementIds) THEN 1 ELSE 0 END)',
+//                count($filters['allowedMovementIds'])
 //            );
 //        }
 //
-//        if (!empty($filters['disallowedExerciseIds'])) {
-//            $havingExprsExercises[] = $subQbExercises->expr()->eq(
-//                'SUM(CASE WHEN e_sub2.id IN (:disallowedExerciseIds) THEN 1 ELSE 0 END)',
+//        if (!empty($filters['disallowedMovementIds'])) {
+//            $havingExprsMovements[] = $subQbMovements->expr()->eq(
+//                'SUM(CASE WHEN e_sub2.id IN (:disallowedMovementIds) THEN 1 ELSE 0 END)',
 //                0
 //            );
 //        }
 //
-//        if ($havingExprsExercises) {
-//            $subQbExercises->having(call_user_func_array([$subQbExercises->expr(), 'andX'], $havingExprsExercises));
+//        if ($havingExprsMovements) {
+//            $subQbMovements->having(call_user_func_array([$subQbMovements->expr(), 'andX'], $havingExprsMovements));
 //        }
 //
-//        $qb->andWhere($qb->expr()->in("$alias.id", $subQbExercises->getDQL()));
+//        $qb->andWhere($qb->expr()->in("$alias.id", $subQbMovements->getDQL()));
 //
-//        // Set parameters for exercise filters
-//        if (!empty($filters['allowedExerciseIds'])) {
-//            $qb->setParameter('allowedExerciseIds', $filters['allowedExerciseIds']);
+//        // Set parameters for movement filters
+//        if (!empty($filters['allowedMovementIds'])) {
+//            $qb->setParameter('allowedMovementIds', $filters['allowedMovementIds']);
 //        }
 //
-//        if (!empty($filters['disallowedExerciseIds'])) {
-//            $qb->setParameter('disallowedExerciseIds', $filters['disallowedExerciseIds']);
+//        if (!empty($filters['disallowedMovementIds'])) {
+//            $qb->setParameter('disallowedMovementIds', $filters['disallowedMovementIds']);
 //        }
 //    }
 

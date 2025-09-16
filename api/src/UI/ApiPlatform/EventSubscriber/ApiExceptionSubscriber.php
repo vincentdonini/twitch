@@ -1,0 +1,65 @@
+<?php
+
+namespace App\UI\ApiPlatform\EventSubscriber;
+
+use App\Infrastructure\ApiPlatform\Exception\ApiException;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpKernel\Event\ExceptionEvent;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use Symfony\Component\Security\Core\Exception\AuthenticationException;
+use Symfony\Contracts\Translation\TranslatorInterface;
+
+class ApiExceptionSubscriber implements EventSubscriberInterface
+{
+    public function __construct(
+        private readonly TranslatorInterface $translator
+    ) {
+
+    }
+
+    public function onKernelException(ExceptionEvent $event): void
+    {
+        $exception = $event->getThrowable();
+
+        if ($exception instanceof AuthenticationException) {
+            $status = 401;
+            $code   = 'unauthenticated';
+            $detail = $this->translator->trans('auth.unauthenticated', [], 'errors');
+        }
+        elseif ($exception instanceof AccessDeniedException) {
+            $status = 403;
+            $code   = 'access_denied';
+            $detail = $this->translator->trans('auth.access_denied', [], 'errors');
+        }
+        elseif ($exception instanceof ApiException) {
+            $status = $exception->getStatusCode();
+            $code   = $exception->getErrorKey();
+            $detail = $exception->getCustomMessage()
+                ?: $this->translator->trans($code, [], 'errors');
+        }
+        else {
+            $status = 500;
+            $code   = 'internal_server_error';
+            $detail = $this->translator->trans($code, [], 'errors');
+        }
+
+        $error = [
+            'status' => (string) $status,
+            'code'   => $code,
+            'title'  => $status >= 500 ? 'Server Error' : 'Error',
+            'detail' => $detail,
+        ];
+
+        $response = new JsonResponse(['errors' => [$error]], $status);
+        $event->setResponse($response);
+    }
+
+    public static function getSubscribedEvents(): array
+    {
+        return [
+            KernelEvents::EXCEPTION => ['onKernelException', 10],
+        ];
+    }
+}

@@ -2,7 +2,6 @@
 
 namespace App\Domain\Wod\Service;
 
-use App\Application\Wod\DTO\WodVersionVariantDTO;
 use App\Domain\Wod\Entity\WodVersionVariant;
 use App\Shared\Utils\LocalizationHelper;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -17,15 +16,10 @@ final class WodVersionVariantService
         $this->locale = $this->requestStack->getCurrentRequest()?->getLocale() ?? 'en';
     }
 
-    public function transformToDTO(WodVersionVariant $wodVersionVariant): WodVersionVariantDTO
+    public function enrichEntity(WodVersionVariant $wodVersionVariant): WodVersionVariant
     {
-        return new WodVersionVariantDTO(
-            $wodVersionVariant->getId(),
-            $wodVersionVariant->getGender(),
-            $wodVersionVariant->getRounds(),
-            $wodVersionVariant->getTimeCap(),
-            LocalizationHelper::getLocalizedValue($wodVersionVariant->getDescription(), $this->locale),
-            $wodVersionVariant->getWodVersion()->getId(),
-        );
+        $wodVersionVariant->setDescription(LocalizationHelper::getLocalizedValue($wodVersionVariant->getDescriptions(), $this->locale));
+
+        return $wodVersionVariant;
     }
 }

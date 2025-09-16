@@ -8,17 +8,18 @@ interface MovementRepositoryInterface
 {
     public function findOneById(string $id): ?Movement;
 
-    public function findOneBySlug(string $slug): ?Movement;
+    public function findOneByName(string $name): ?Movement;
 
     /** @return Movement[] */
     public function findAll(): array;
 
     /** @return Movement[] */
     public function findByFilters(
-        string $sortBy,
-        string $sortOrder,
-        int    $offset,
-        int    $limit,
+        string  $sortBy,
+        string  $sortOrder,
+        int     $offset,
+        int     $limit,
+        ?string $search,
     ): array;
 
     public function save(Movement $movement): void;

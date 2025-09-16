@@ -17,11 +17,11 @@ class WodTypeTranslator implements WodTypeTranslatorInterface
 
     public function getName(WodType $wodType): string
     {
-        return $this->translator->trans('wod.type.' . StringHelper::kebabToSnake($wodType->getSlug()) . '.name');
+        return $this->translator->trans('type.' . StringHelper::kebabToSnake($wodType->getSlug()) . '.name', [], 'wod');
     }
 
     public function getDescription(WodType $wodType): string
     {
-        return $this->translator->trans('wod.type.' . StringHelper::kebabToSnake($wodType->getSlug()) . '.description');
+        return $this->translator->trans('type.' . StringHelper::kebabToSnake($wodType->getSlug()) . '.description', [], 'wod');
     }
 }

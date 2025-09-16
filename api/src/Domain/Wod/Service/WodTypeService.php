@@ -2,7 +2,6 @@
 
 namespace App\Domain\Wod\Service;
 
-use App\Application\Wod\DTO\WodTypeDTO;
 use App\Domain\Wod\Entity\WodType;
 
 final class WodTypeService
@@ -12,13 +11,11 @@ final class WodTypeService
     ) {
     }
 
-    public function transformToDTO(WodType $wodType): WodTypeDTO
+    public function enrichEntity(WodType $wodType): WodType
     {
-        return new WodTypeDTO(
-            $wodType->getId(),
-            $wodType->getSlug(),
-            $this->wodTypeTranslator->getName($wodType),
-            $this->wodTypeTranslator->getDescription($wodType)
-        );
+        $wodType->setName($this->wodTypeTranslator->getName($wodType));
+        $wodType->setDescription($this->wodTypeTranslator->getDescription($wodType));
+
+        return $wodType;
     }
 }
