@@ -1,17 +1,56 @@
-import React from 'react';
-import RootLayout from '@layouts/RootLayout';
+"use client";
 
-const AdminLayout = ({children}: { children: React.ReactNode }) => {
+import {useEffect} from "react";
+import {useRouter} from "next/navigation";
+import {useApiAuth} from "@common/api/context/ApiAuthProvider";
+import {Box} from '@mui/material';
+import SideMenu from "@common/ui/layout/SideMenu";
+import AppNavbar from "@common/ui/layout/AppNavBar";
+import Header from "@common/ui/layout/Header";
+import MainGrid from "@common/ui/layout/MainGrid";
+import Copyright from '@common/ui/layout/Copyright';
+
+export default function AdminLayout({children}: { children: React.ReactNode }) {
+    const {isAuthenticated, isLoading} = useApiAuth();
+    const router = useRouter();
+
+    useEffect(() => {
+        if (!isLoading && !isAuthenticated) {
+            router.push("/auth");
+        }
+    }, [isAuthenticated, isLoading, router]);
+
+    if (isLoading || !isAuthenticated) {
+        return null;
+    }
+
     return (
-        <RootLayout>
-            <div
-                style={{border: '5px solid red'}}
-                className="flex justify-center items-center absolute z-[999] top-0 left-0 right-0 bottom-0 w-[750px] h-[1334px] bg-black text-white"
+        <>
+            {/*<CssBaseline enableColorScheme />*/}
+            <Box
+                sx={{
+                    height: "100vh",
+                    display: 'flex',
+                    flexGrow: 1,
+                }}
             >
-                {children}
-            </div>
-        </RootLayout>
+                <SideMenu/>
+                <AppNavbar/>
+                <Box
+                    component="main"
+                    sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        flexGrow: 1,
+                    }}
+                >
+                    <Header/>
+                    <MainGrid>
+                        {children}
+                    </MainGrid>
+                    <Copyright/>
+                </Box>
+            </Box>
+        </>
     );
-};
-
-export default AdminLayout;
+}

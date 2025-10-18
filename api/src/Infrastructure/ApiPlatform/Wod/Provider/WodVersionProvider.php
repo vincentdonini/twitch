@@ -8,18 +8,22 @@ use App\Domain\Wod\Entity\WodVersion;
 use App\Domain\Wod\Service\WodVersionService;
 use App\Infrastructure\ApiPlatform\Exception\ApiException;
 use App\Infrastructure\ApiPlatform\Provider\AbstractProvider;
+use App\Infrastructure\Persistence\Doctrine\Wod\WodVersionRepository;
+use Pagerfanta\Adapter\ArrayAdapter;
+use Pagerfanta\Pagerfanta;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 final class WodVersionProvider extends AbstractProvider
 {
     public function __construct(
-        RequestStack                       $requestStack,
+        RequestStack                          $requestStack,
         #[Autowire(service: 'api_platform.doctrine.orm.state.item_provider')]
-        private readonly ProviderInterface $itemProvider,
+        private readonly ProviderInterface    $itemProvider,
         #[Autowire(service: 'api_platform.doctrine.orm.state.collection_provider')]
-        private readonly ProviderInterface $collectionProvider,
-        private readonly WodVersionService $wodVersionService
+        private readonly ProviderInterface    $collectionProvider,
+        private readonly WodVersionService    $wodVersionService,
+        private readonly WodVersionRepository $wodVersionRepository,
     ) {
         parent::__construct($requestStack);
     }
@@ -38,15 +42,14 @@ final class WodVersionProvider extends AbstractProvider
     protected function provideCollection(Operation $operation, array $uriVariables, array $context): array
     {
         /** @var $wodVersions WodVersion[] */
-        $wodVersions = $this->getCollectionProvider()->provide($operation, $uriVariables, $context);
-        $this->handlePagination($wodVersions);
+        $wodVersions = $this->wodVersionRepository->findAll();
 
         $enriched = [];
         foreach ($wodVersions as $wodVersion) {
             $enriched[] = $this->wodVersionService->enrichEntity($wodVersion);
         }
 
-        return $enriched;
+        return $this->paginate($enriched, $operation, $context);
     }
 
     protected function provideItem(Operation $operation, array $uriVariables, array $context): mixed

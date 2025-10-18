@@ -16,7 +16,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 #[ORM\Table(name: 'wod_versions')]
 #[ApiResource(
     formats                      : ['json', 'jsonapi'],
-    paginationClientEnabled      : false,
+    paginationClientEnabled      : true,
     paginationClientItemsPerPage : true,
     paginationEnabled            : true,
     paginationItemsPerPage       : 10,

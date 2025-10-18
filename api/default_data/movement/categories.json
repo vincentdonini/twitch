@@ -1,53 +1,257 @@
 [
   {
-    "slug": "warm-up"
+    "slug": "warm-up",
+    "contents": {
+      "fr": {
+        "name": "Échauffement",
+        "summary": "Prépare le corps à l’effort physique à venir.",
+        "details": ""
+      },
+      "en": {
+        "name": "Warm-Up",
+        "summary": "Prepares the body for the upcoming physical effort.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "cardio"
+    "slug": "cardio",
+    "contents": {
+      "fr": {
+        "name": "Cardio",
+        "summary": "Travail axé sur l’endurance et la capacité cardiovasculaire.",
+        "details": ""
+      },
+      "en": {
+        "name": "Cardio",
+        "summary": "Focuses on endurance and cardiovascular capacity.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "conditioning"
+    "slug": "conditioning",
+    "contents": {
+      "fr": {
+        "name": "Conditionnement",
+        "summary": "Améliore la capacité de travail et la résistance à la fatigue.",
+        "details": ""
+      },
+      "en": {
+        "name": "Conditioning",
+        "summary": "Improves work capacity and resistance to fatigue.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "strength"
+    "slug": "strength",
+    "contents": {
+      "fr": {
+        "name": "Force",
+        "summary": "Développe la puissance musculaire et la capacité à soulever lourd.",
+        "details": ""
+      },
+      "en": {
+        "name": "Strength",
+        "summary": "Develops muscle power and the ability to lift heavy.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "weightlifting"
+    "slug": "weightlifting",
+    "contents": {
+      "fr": {
+        "name": "Haltérophilie",
+        "summary": "Travail technique autour de l’arraché et de l’épaulé-jeté.",
+        "details": ""
+      },
+      "en": {
+        "name": "Weightlifting",
+        "summary": "Technical work on the snatch and clean & jerk.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "powerlifting"
+    "slug": "powerlifting",
+    "contents": {
+      "fr": {
+        "name": "Powerlifting",
+        "summary": "Travail de force maximale sur trois mouvements fondamentaux.",
+        "details": ""
+      },
+      "en": {
+        "name": "Powerlifting",
+        "summary": "Maximal strength training through three fundamental lifts.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "gymnastics"
+    "slug": "gymnastics",
+    "contents": {
+      "fr": {
+        "name": "Gymnastique",
+        "summary": "Travail du poids du corps pour force, contrôle et agilité.",
+        "details": ""
+      },
+      "en": {
+        "name": "Gymnastics",
+        "summary": "Bodyweight training for strength, control, and agility.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "skill"
+    "slug": "skill",
+    "contents": {
+      "fr": {
+        "name": "Compétence (Skill)",
+        "summary": "Améliore la technique et la précision des mouvements.",
+        "details": ""
+      },
+      "en": {
+        "name": "Skill",
+        "summary": "Improves movement technique and precision.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "plyometrics"
+    "slug": "plyometrics",
+    "contents": {
+      "fr": {
+        "name": "Plyométrie",
+        "summary": "Développe la puissance et l’explosivité musculaire.",
+        "details": ""
+      },
+      "en": {
+        "name": "Plyometrics",
+        "summary": "Develops power and muscular explosiveness.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "mobility"
+    "slug": "mobility",
+    "contents": {
+      "fr": {
+        "name": "Mobilité",
+        "summary": "Améliore la souplesse et la liberté de mouvement.",
+        "details": ""
+      },
+      "en": {
+        "name": "Mobility",
+        "summary": "Improves flexibility and range of motion.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "core"
+    "slug": "core",
+    "contents": {
+      "fr": {
+        "name": "Gainage / Core",
+        "summary": "Renforce la sangle abdominale et le tronc.",
+        "details": ""
+      },
+      "en": {
+        "name": "Core",
+        "summary": "Strengthens the midsection and trunk.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "lower-body"
+    "slug": "lower-body",
+    "contents": {
+      "fr": {
+        "name": "Bas du corps",
+        "summary": "Renforce les jambes et les hanches.",
+        "details": ""
+      },
+      "en": {
+        "name": "Lower Body",
+        "summary": "Strengthens legs and hips.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "upper-body"
+    "slug": "upper-body",
+    "contents": {
+      "fr": {
+        "name": "Haut du corps",
+        "summary": "Travaille la force du dos, des bras et des épaules.",
+        "details": ""
+      },
+      "en": {
+        "name": "Upper Body",
+        "summary": "Builds upper body strength.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "full-body"
+    "slug": "full-body",
+    "contents": {
+      "fr": {
+        "name": "Corps complet",
+        "summary": "Sollicite l’ensemble des groupes musculaires.",
+        "details": ""
+      },
+      "en": {
+        "name": "Full Body",
+        "summary": "Engages all major muscle groups.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "accessory"
+    "slug": "accessory",
+    "contents": {
+      "fr": {
+        "name": "Accessoire",
+        "summary": "Cible des muscles ou faiblesses spécifiques.",
+        "details": ""
+      },
+      "en": {
+        "name": "Accessory",
+        "summary": "Targets specific muscles or weaknesses.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "strongman"
+    "slug": "strongman",
+    "contents": {
+      "fr": {
+        "name": "Strongman",
+        "summary": "Travail de force fonctionnelle et brute.",
+        "details": ""
+      },
+      "en": {
+        "name": "Strongman",
+        "summary": "Functional and raw strength training.",
+        "details": ""
+      }
+    }
   },
   {
-    "slug": "cool-down-recovery"
+    "slug": "cool-down-recovery",
+    "contents": {
+      "fr": {
+        "name": "Retour au calme / Récupération",
+        "summary": "Permet une transition douce après l’effort.",
+        "details": ""
+      },
+      "en": {
+        "name": "Cool-Down / Recovery",
+        "summary": "Allows a smooth transition after exertion.",
+        "details": ""
+      }
+    }
   }
 ]

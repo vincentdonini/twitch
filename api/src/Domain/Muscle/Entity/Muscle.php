@@ -6,6 +6,7 @@ use ApiPlatform\Metadata\ApiProperty;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
+use App\Domain\Content\Entity\ContentMuscle;
 use App\Domain\Movement\Entity\Movement;
 use App\Infrastructure\ApiPlatform\Muscle\Provider\MuscleProvider;
 use App\Infrastructure\Persistence\Doctrine\Muscle\MuscleRepository;
@@ -32,7 +33,7 @@ use Symfony\Component\Serializer\Annotation\SerializedName;
             'muscle:list',
         ],
     ],
-    provider: MuscleProvider::class
+    provider            : MuscleProvider::class
 )]
 #[Get(
     normalizationContext: [
@@ -40,7 +41,7 @@ use Symfony\Component\Serializer\Annotation\SerializedName;
             'muscle:detail',
         ],
     ],
-    provider: MuscleProvider::class,
+    provider            : MuscleProvider::class,
 )]
 class Muscle
 {
@@ -51,6 +52,7 @@ class Muscle
     #[Groups([
         'muscle:list', 'muscle:detail',
         'movement:list', 'movement:detail',
+        'wod:list', 'wod:detail',
     ])]
     #[OA\Property(description: "Muscle ID")]
     private ?int $id = null;
@@ -59,6 +61,7 @@ class Muscle
     #[Groups([
         'muscle:list', 'muscle:detail',
         'movement:list', 'movement:detail',
+        'wod:list', 'wod:detail',
     ])]
     #[OA\Property(description: "Muscle slug", example: "upper-pectoralis")]
     private string $slug;
@@ -66,6 +69,7 @@ class Muscle
     #[Groups([
         'muscle:list', 'muscle:detail',
         'movement:list', 'movement:detail',
+        'wod:list', 'wod:detail',
     ])]
     #[SerializedName('name')]
     private ?string $name = null;
@@ -73,15 +77,25 @@ class Muscle
     #[Groups([
         'muscle:list', 'muscle:detail',
         'movement:list', 'movement:detail',
+        'wod:list', 'wod:detail',
     ])]
-    #[SerializedName('description')]
-    private ?string $description = null;
+    #[SerializedName('summary')]
+    private string $summary;
+
+    #[Groups([
+        'muscle:list', 'muscle:detail',
+        'movement:list', 'movement:detail',
+        'wod:list', 'wod:detail',
+    ])]
+    #[SerializedName('details')]
+    private string $details;
 
     #[ORM\ManyToOne(targetEntity: MuscleArea::class)]
     #[ORM\JoinColumn(nullable: false)]
     #[Groups([
         'muscle:list', 'muscle:detail',
         'movement:list', 'movement:detail',
+        'wod:list', 'wod:detail',
     ])]
     private MuscleArea $area;
 
@@ -89,6 +103,7 @@ class Muscle
     #[Groups([
         'muscle:list', 'muscle:detail',
         'movement:list', 'movement:detail',
+        'wod:list', 'wod:detail',
     ])]
     private ?MuscleGroup $group = null;
 
@@ -96,9 +111,13 @@ class Muscle
     #[Groups(['muscle:detail'])]
     private Collection $movements;
 
+    #[ORM\OneToMany(targetEntity: ContentMuscle::class, mappedBy: "muscle", cascade: ["persist", "remove"], orphanRemoval: true)]
+    private Collection $contents;
+
     public function __construct()
     {
         $this->movements = new ArrayCollection();
+        $this->contents = new ArrayCollection();
     }
 
     // GETTERS / SETTERS
@@ -130,14 +149,25 @@ class Muscle
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getSummary(): ?string
     {
-        return $this->description;
+        return $this->summary;
     }
 
-    public function setDescription(string $description): self
+    public function setSummary(string $summary): self
     {
-        $this->description = $description;
+        $this->summary = $summary;
+        return $this;
+    }
+
+    public function getDetails(): string
+    {
+        return $this->details;
+    }
+
+    public function setDetails(string $details): self
+    {
+        $this->details = $details;
         return $this;
     }
 
@@ -185,5 +215,39 @@ class Muscle
             $movement->removeMuscle($this);
         }
         return $this;
+    }
+
+    // CONTENTS
+    // -----------------------------------------------------------------------------------------------------------------
+    public function getContents(): Collection
+    {
+        return $this->contents;
+    }
+
+    public function addContent(ContentMuscle $content): self
+    {
+        if (!$this->contents->contains($content)) {
+            $this->contents[] = $content;
+            $content->setMuscle($this);
+        }
+        return $this;
+    }
+
+    public function removeContent(ContentMuscle $content): self
+    {
+        if ($this->contents->contains($content)) {
+            $this->contents->removeElement($content);
+        }
+        return $this;
+    }
+
+    public function getContentByLocale(string $locale): ?ContentMuscle
+    {
+        foreach ($this->contents as $content) {
+            if ($content->getLocale() === $locale) {
+                return $content;
+            }
+        }
+        return null;
     }
 }

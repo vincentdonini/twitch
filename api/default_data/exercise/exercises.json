@@ -356,7 +356,7 @@
   },
   {
     "slug": "medicine-ball-clean",
-    "equipment": "medicine-ball-wall-ball",
+    "equipment": "wall-ball",
     "category": "full-body"
   },
   {
@@ -496,7 +496,7 @@
   },
   {
     "slug": "slam-ball",
-    "equipment": "medicine-ball-wall-ball",
+    "equipment": "wall-ball",
     "category": "full-body"
   },
   {
@@ -606,7 +606,7 @@
   },
   {
     "slug": "wall-ball",
-    "equipment": "medicine-ball-wall-ball",
+    "equipment": "wall-ball",
     "category": "conditioning"
   },
   {

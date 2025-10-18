@@ -8,18 +8,22 @@ use App\Domain\Wod\Entity\WodVersionType;
 use App\Domain\Wod\Service\WodVersionTypeService;
 use App\Infrastructure\ApiPlatform\Exception\ApiException;
 use App\Infrastructure\ApiPlatform\Provider\AbstractProvider;
+use App\Infrastructure\Persistence\Doctrine\Wod\WodVersionTypeRepository;
+use Pagerfanta\Adapter\ArrayAdapter;
+use Pagerfanta\Pagerfanta;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 final class WodVersionTypeProvider extends AbstractProvider
 {
     public function __construct(
-        RequestStack                           $requestStack,
+        RequestStack                              $requestStack,
         #[Autowire(service: 'api_platform.doctrine.orm.state.item_provider')]
-        private readonly ProviderInterface     $itemProvider,
+        private readonly ProviderInterface        $itemProvider,
         #[Autowire(service: 'api_platform.doctrine.orm.state.collection_provider')]
-        private readonly ProviderInterface     $collectionProvider,
-        private readonly WodVersionTypeService $wodVersionTypeService
+        private readonly ProviderInterface        $collectionProvider,
+        private readonly WodVersionTypeService    $wodVersionTypeService,
+        private readonly WodVersionTypeRepository $wodVersionTypeRepository
     ) {
         parent::__construct($requestStack);
     }
@@ -38,15 +42,14 @@ final class WodVersionTypeProvider extends AbstractProvider
     protected function provideCollection(Operation $operation, array $uriVariables, array $context): array
     {
         /** @var $wodVersionTypes WodVersionType[] */
-        $wodVersionTypes = $this->getCollectionProvider()->provide($operation, $uriVariables, $context);
-        $this->handlePagination($wodVersionTypes);
+        $wodVersionTypes = $this->wodVersionTypeRepository->findAll();
 
         $enriched = [];
         foreach ($wodVersionTypes as $wodVersionType) {
             $enriched[] = $this->wodVersionTypeService->enrichEntity($wodVersionType);
         }
 
-        return $enriched;
+        return $this->paginate($enriched, $operation, $context);
     }
 
     protected function provideItem(Operation $operation, array $uriVariables, array $context): mixed

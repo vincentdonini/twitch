@@ -5,6 +5,8 @@ namespace App\Domain\User\Entity;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
+use App\Infrastructure\ApiPlatform\User\Provider\MeProvider;
+use App\Infrastructure\ApiPlatform\User\Provider\UserProvider;
 use App\Infrastructure\Persistence\Doctrine\User\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use OpenApi\Attributes as OA;
@@ -22,7 +24,7 @@ use Symfony\Component\Validator\Constraints as Assert;
     paginationEnabled            : true,
     paginationItemsPerPage       : 10,
     paginationMaximumItemsPerPage: 50,
-    security: "is_granted('ROLE_ADMIN')"
+    security                     : "is_granted('ROLE_ADMIN')"
 )]
 #[GetCollection(
     normalizationContext: [
@@ -30,15 +32,13 @@ use Symfony\Component\Validator\Constraints as Assert;
             'user:list',
         ],
     ],
-    security: "is_granted('ROLE_ADMIN')"
+    security            : "is_granted('ROLE_ADMIN')"
 )]
 #[Get(
-    normalizationContext: [
-        'groups' => [
-            'user:detail',
-        ],
-    ],
-    security: "is_granted('ROLE_ADMIN') or object.getId() == user.getId()"
+    uriTemplate         : '/users/me',
+    normalizationContext: ['groups' => ['user:detail']],
+    security            : "is_granted('ROLE_USER')",
+    provider            : MeProvider::class
 )]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {

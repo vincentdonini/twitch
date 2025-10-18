@@ -6,12 +6,15 @@ use ApiPlatform\Metadata\CollectionOperationInterface;
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\ProviderInterface;
 use App\Infrastructure\ApiPlatform\Exception\ApiException;
+use Pagerfanta\Adapter\ArrayAdapter;
+use Pagerfanta\Pagerfanta;
 use ReflectionClass;
 use ReflectionException;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 abstract class AbstractProvider implements ProviderInterface
 {
+    // TODO : paginator (common) ???
     public function __construct(
         protected RequestStack $requestStack,
     ) {
@@ -34,32 +37,65 @@ abstract class AbstractProvider implements ProviderInterface
         return $this->provideItem($operation, $uriVariables, $context);
     }
 
-    protected function handlePagination($paginator): void
+    protected function paginate(array $items, Operation $operation, array $context = []): array
     {
-        $totalItems   = $paginator->getTotalItems();
-        $itemsPerPage = $paginator->getItemsPerPage();
-        $currentPage  = $paginator->getCurrentPage();
-        $totalPages   = (int)ceil($totalItems / max(1, $itemsPerPage));
+        $filters = $context['filters'] ?? [];
+
+        if ($this->isPaginationDisabled($filters, $operation)) {
+            return $items;
+        }
+
+        [$page, $itemsPerPage] = $this->resolvePaginationParams($filters, $operation);
+        $paginator = $this->createPaginator($items, $page, $itemsPerPage);
+        $this->updateRequestPagination($paginator, $page, $itemsPerPage);
+
+        return $paginator->getCurrentPageResults();
+    }
+
+    private function isPaginationDisabled(array $filters, Operation $operation): bool
+    {
+        return isset($filters['pagination']) && $filters['pagination'] === 'false'
+            || !$operation->getPaginationEnabled();
+    }
+
+    private function resolvePaginationParams(array $filters, Operation $operation): array
+    {
+        $page = isset($filters['page']) ? max(1, (int)$filters['page']) : 1;
+
+        $itemsPerPage = $operation->getPaginationItemsPerPage();
+        if (isset($filters['itemsPerPage'])) {
+            $requested    = (int)$filters['itemsPerPage'];
+            $max          = $operation->getPaginationMaximumItemsPerPage() ?? $itemsPerPage;
+            $itemsPerPage = min($requested, $max);
+        }
+
+        return [$page, $itemsPerPage];
+    }
+
+    private function createPaginator(array $items, int $page, int $itemsPerPage): Pagerfanta
+    {
+        $adapter   = new ArrayAdapter($items);
+        $paginator = new Pagerfanta($adapter);
+        $paginator
+            ->setCurrentPage($page)
+            ->setMaxPerPage($itemsPerPage);
+
+        return $paginator;
+    }
+
+    private function updateRequestPagination(Pagerfanta $paginator, int $page, int $itemsPerPage): void
+    {
+        $totalItems = $paginator->getNbResults();
+        $totalPages = (int)ceil($totalItems / max(1, $itemsPerPage));
 
         $pagination = [
             'totalItems'   => $totalItems,
             'itemsPerPage' => $itemsPerPage,
-            'currentPage'  => $currentPage,
+            'currentPage'  => $page,
             'totalPages'   => $totalPages,
         ];
 
         $request = $this->requestStack->getCurrentRequest();
         $request?->attributes->set('_api_pagination', $pagination);
-    }
-
-    protected function getItemOrThrow(Operation $operation, array $uriVariables, array $context, string $entityClass): object
-    {
-        $item = $this->getItemProvider()->provide($operation, $uriVariables, $context);
-
-        if (!$item instanceof $entityClass) {
-            throw new ApiException(strtolower((new ReflectionClass($entityClass))->getShortName()) . '.not_found', 404);
-        }
-
-        return $item;
     }
 }

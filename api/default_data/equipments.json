@@ -1,44 +1,617 @@
 [
-  {"slug": "abmat"},
-  {"slug": "air-bike"},
-  {"slug": "axle-bar"},
-  {"slug": "barbell"},
-  {"slug": "bench"},
-  {"slug": "bike"},
-  {"slug": "bike-erg"},
-  {"slug": "box"},
-  {"slug": "dead-ball-d-ball"},
-  {"slug": "dip-bars"},
-  {"slug": "dumbbells"},
-  {"slug": "ghd-machine"},
-  {"slug": "gymnastic-rings"},
-  {"slug": "jump-rope"},
-  {"slug": "keg"},
-  {"slug": "kettlebells"},
-  {"slug": "log"},
-  {"slug": "wall-ball"},
-  {"slug": "monkey-bars"},
-  {"slug": "paddleboard"},
-  {"slug": "parallettes"},
-  {"slug": "peg-board"},
-  {"slug": "plates"},
-  {"slug": "pool-open-water"},
-  {"slug": "pull-up-bar"},
-  {"slug": "pvc-pipe"},
-  {"slug": "ramp"},
-  {"slug": "rope"},
-  {"slug": "rower"},
-  {"slug": "ruck"},
-  {"slug": "sandbag"},
-  {"slug": "ski-erg"},
-  {"slug": "sled"},
-  {"slug": "sledgehammer"},
-  {"slug": "stairs"},
-  {"slug": "tire"},
-  {"slug": "treadmill"},
-  {"slug": "wall-obstacle"},
-  {"slug": "weight-rack"},
-  {"slug": "weight-vest"},
-  {"slug": "yoke"
+  {
+    "slug": "abmat",
+    "contents": {
+      "fr": {
+        "name": "AbMat",
+        "summary": "Coussin utilisé pour plus de confort et de flexibilité lors des sit-ups.",
+        "details": ""
+      },
+      "en": {
+        "name": "AbMat",
+        "summary": "Cushion used for added comfort and flexibility during sit-ups.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "air-bike",
+    "contents": {
+      "fr": {
+        "name": "Air Bike (Assault Bike)",
+        "summary": "Vélo d'exercice à résistance aérobie et musculaire, idéal pour un entraînement complet.",
+        "details": ""
+      },
+      "en": {
+        "name": "Air Bike (Assault Bike)",
+        "summary": "Exercise bike with both aerobic and muscular resistance, perfect for a full-body workout.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "axle-bar",
+    "contents": {
+      "fr": {
+        "name": "Axle Bar",
+        "summary": "Barre épaisse utilisée pour des exercices de force tels que les soulevés de terre.",
+        "details": ""
+      },
+      "en": {
+        "name": "Axle Bar",
+        "summary": "Thick bar used for strength exercises like deadlifts.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "barbell",
+    "contents": {
+      "fr": {
+        "name": "Barbell",
+        "summary": "Barre traditionnelle utilisée pour les exercices de force comme les squats et les deadlifts.",
+        "details": ""
+      },
+      "en": {
+        "name": "Barbell",
+        "summary": "Traditional bar used for strength exercises such as squats and deadlifts.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "bench",
+    "contents": {
+      "fr": {
+        "name": "Bench",
+        "summary": "Banc pour effectuer des exercices comme le développé couché.",
+        "details": ""
+      },
+      "en": {
+        "name": "Bench",
+        "summary": "Bench used for exercises like the bench press.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "bike",
+    "contents": {
+      "fr": {
+        "name": "Bike (Bicycle)",
+        "summary": "Vélo classique pour l'entraînement cardiovasculaire.",
+        "details": ""
+      },
+      "en": {
+        "name": "Bike (Bicycle)",
+        "summary": "Classic bike for cardiovascular training.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "bike-erg",
+    "contents": {
+      "fr": {
+        "name": "BikeErg / Stationary Bike",
+        "summary": "Vélo d'exercice stationnaire, idéal pour l'endurance et l'entraînement du bas du corps.",
+        "details": ""
+      },
+      "en": {
+        "name": "BikeErg / Stationary Bike",
+        "summary": "Stationary exercise bike, ideal for endurance and lower body training.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "box",
+    "contents": {
+      "fr": {
+        "name": "Box",
+        "summary": "Plateforme utilisée pour des sauts explosifs ou des montées, parfaite pour le travail de la puissance.",
+        "details": ""
+      },
+      "en": {
+        "name": "Box",
+        "summary": "Platform used for explosive jumps or step-ups, perfect for power training.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "dead-ball-d-ball",
+    "contents": {
+      "fr": {
+        "name": "Dead Ball (D-Ball)",
+        "summary": "Ballon de type medicine ball, utilisé pour des exercices de force et de puissance.",
+        "details": ""
+      },
+      "en": {
+        "name": "Dead Ball (D-Ball)",
+        "summary": "Medicine ball type ball used for strength and power exercises.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "dip-bars",
+    "contents": {
+      "fr": {
+        "name": "Dip Bars",
+        "summary": "Barres parallèles utilisées pour les dips, un exercice ciblant les triceps et les épaules.",
+        "details": ""
+      },
+      "en": {
+        "name": "Dip Bars",
+        "summary": "Parallel bars used for dips, an exercise targeting triceps and shoulders.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "dumbbells",
+    "contents": {
+      "fr": {
+        "name": "Dumbbell(s)",
+        "summary": "Haltères utilisés pour des exercices de musculation en isolation ou combinés.",
+        "details": ""
+      },
+      "en": {
+        "name": "Dumbbell(s)",
+        "summary": "Dumbbells used for isolation or combined muscle exercises.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "ghd-machine",
+    "contents": {
+      "fr": {
+        "name": "GHD Machine",
+        "summary": "Machine spécialisée pour les extensions du dos et les sit-ups.",
+        "details": ""
+      },
+      "en": {
+        "name": "GHD Machine",
+        "summary": "Machine specialized for back extensions and sit-ups.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "gymnastic-rings",
+    "contents": {
+      "fr": {
+        "name": "Gymnastic Rings",
+        "summary": "Anneaux utilisés pour des exercices de gymnastique et de renforcement musculaire.",
+        "details": ""
+      },
+      "en": {
+        "name": "Gymnastic Rings",
+        "summary": "Rings used for gymnastics exercises and muscle strengthening.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "jump-rope",
+    "contents": {
+      "fr": {
+        "name": "Jump Rope",
+        "summary": "Corde à sauter utilisée pour améliorer la coordination, l'agilité et l'endurance cardiovasculaire.",
+        "details": ""
+      },
+      "en": {
+        "name": "Jump Rope",
+        "summary": "Jump rope used to improve coordination, agility, and cardiovascular endurance.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "keg",
+    "contents": {
+      "fr": {
+        "name": "Keg",
+        "summary": "Fût utilisé pour les levées et les soulevés de terre, idéal pour la force fonctionnelle.",
+        "details": ""
+      },
+      "en": {
+        "name": "Keg",
+        "summary": "Barrel used for lifts and deadlifts, ideal for functional strength.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "kettlebells",
+    "contents": {
+      "fr": {
+        "name": "Kettlebell(s)",
+        "summary": "Poids en forme de cloche utilisés pour des exercices de puissance et de renforcement musculaire.",
+        "details": ""
+      },
+      "en": {
+        "name": "Kettlebell(s)",
+        "summary": "Bell-shaped weights used for power exercises and muscle strengthening.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "log",
+    "contents": {
+      "fr": {
+        "name": "Log",
+        "summary": "Bûche en bois utilisée pour des exercices de levées et de force.",
+        "details": ""
+      },
+      "en": {
+        "name": "Log",
+        "summary": "Wooden log used for lifting and strength exercises.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "wall-ball",
+    "contents": {
+      "fr": {
+        "name": "Medicine Ball (Wall Ball)",
+        "summary": "Ballon utilisé pour des lancers et des squats afin de travailler la force et l'endurance.",
+        "details": ""
+      },
+      "en": {
+        "name": "Medicine Ball (Wall Ball)",
+        "summary": "Ball used for throws and squats to work on strength and endurance.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "monkey-bars",
+    "contents": {
+      "fr": {
+        "name": "Monkey Bars",
+        "summary": "Barres horizontales utilisées pour des exercices de suspension et de coordination.",
+        "details": ""
+      },
+      "en": {
+        "name": "Monkey Bars",
+        "summary": "Horizontal bars used for suspension and coordination exercises.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "paddleboard",
+    "contents": {
+      "fr": {
+        "name": "Paddleboard",
+        "summary": "Planche utilisée pour les entraînements sur l'eau, développant la force du tronc et l'équilibre.",
+        "details": ""
+      },
+      "en": {
+        "name": "Paddleboard",
+        "summary": "Board used for water training, developing core strength and balance.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "parallettes",
+    "contents": {
+      "fr": {
+        "name": "Parallettes",
+        "summary": "Petites barres parallèles utilisées pour des exercices de gymnastique et de renforcement des poignets.",
+        "details": ""
+      },
+      "en": {
+        "name": "Parallettes",
+        "summary": "Small parallel bars used for gymnastics and wrist strengthening exercises.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "peg-board",
+    "contents": {
+      "fr": {
+        "name": "Peg Board",
+        "summary": "Planche avec des trous où l'on grimpe en insérant des pinces pour un travail de force et de coordination.",
+        "details": ""
+      },
+      "en": {
+        "name": "Peg Board",
+        "summary": "Board with holes where you climb by inserting pegs for strength and coordination training.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "plates",
+    "contents": {
+      "fr": {
+        "name": "Plate(s)",
+        "summary": "Poids utilisés pour les exercices avec barre, permettant d'ajuster l'intensité de l'entraînement.",
+        "details": ""
+      },
+      "en": {
+        "name": "Plate(s)",
+        "summary": "Weights used for bar exercises, allowing you to adjust workout intensity.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "pool-open-water",
+    "contents": {
+      "fr": {
+        "name": "Pool/Open Water",
+        "summary": "Environnement pour les entraînements de natation en piscine ou en eau libre.",
+        "details": ""
+      },
+      "en": {
+        "name": "Pool/Open Water",
+        "summary": "Environment for swimming training in a pool or open water.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "pull-up-bar",
+    "contents": {
+      "fr": {
+        "name": "Pull-Up Bar",
+        "summary": "Barre utilisée pour les tractions et autres exercices de suspension.",
+        "details": ""
+      },
+      "en": {
+        "name": "Pull-Up Bar",
+        "summary": "Bar used for pull-ups and other suspension exercises.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "pvc-pipe",
+    "contents": {
+      "fr": {
+        "name": "PVC Pipe",
+        "summary": "Tuyau en PVC utilisé pour les exercices de mobilité et les échauffements.",
+        "details": ""
+      },
+      "en": {
+        "name": "PVC Pipe",
+        "summary": "PVC pipe used for mobility exercises and warm-ups.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "ramp",
+    "contents": {
+      "fr": {
+        "name": "Ramp",
+        "summary": "Rampe utilisée pour des exercices de montée et de descente, souvent pour le travail de force et d'agilité.",
+        "details": ""
+      },
+      "en": {
+        "name": "Ramp",
+        "summary": "Ramp used for climbing and descending exercises, often for strength and agility training.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "rope",
+    "contents": {
+      "fr": {
+        "name": "Rope",
+        "summary": "Corde utilisée pour l'escalade, les sauts ou d'autres exercices de renforcement musculaire.",
+        "details": ""
+      },
+      "en": {
+        "name": "Rope",
+        "summary": "Rope used for climbing, jumping, or other muscle strengthening exercises.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "rower",
+    "contents": {
+      "fr": {
+        "name": "Rower",
+        "summary": "Appareil de rameur utilisé pour un entraînement cardiovasculaire complet du corps.",
+        "details": ""
+      },
+      "en": {
+        "name": "Rower",
+        "summary": "Rowing machine used for full-body cardiovascular training.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "ruck",
+    "contents": {
+      "fr": {
+        "name": "Ruck",
+        "summary": "Sac à dos lourd utilisé pour des marches ou des courses afin de développer la force et l'endurance.",
+        "details": ""
+      },
+      "en": {
+        "name": "Ruck",
+        "summary": "Heavy backpack used for walking or running to build strength and endurance.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "sandbag",
+    "contents": {
+      "fr": {
+        "name": "Sandbag",
+        "summary": "Sac rempli de sable, utilisé pour des exercices de force et de stabilité.",
+        "details": ""
+      },
+      "en": {
+        "name": "Sandbag",
+        "summary": "Bag filled with sand, used for strength and stability exercises.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "ski-erg",
+    "contents": {
+      "fr": {
+        "name": "SkiErg",
+        "summary": "Machine de ski à fondation aérobie, idéale pour le renforcement du tronc et des bras.",
+        "details": ""
+      },
+      "en": {
+        "name": "SkiErg",
+        "summary": "Ski machine with aerobic foundation, ideal for core and arm strengthening.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "sled",
+    "contents": {
+      "fr": {
+        "name": "Sled (Prowler)",
+        "summary": "Traîneau utilisé pour des exercices de poussée et de traction, souvent pour le travail de force.",
+        "details": ""
+      },
+      "en": {
+        "name": "Sled (Prowler)",
+        "summary": "Sled used for pushing and pulling exercises, often for strength training.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "sledgehammer",
+    "contents": {
+      "fr": {
+        "name": "Sledgehammer",
+        "summary": "Marteau utilisé pour des exercices de force fonctionnelle comme les frappes sur un pneu.",
+        "details": ""
+      },
+      "en": {
+        "name": "Sledgehammer",
+        "summary": "Hammer used for functional strength exercises such as tire strikes.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "stairs",
+    "contents": {
+      "fr": {
+        "name": "Stairs",
+        "summary": "Escaliers utilisés pour des montées, entraînant la force des jambes et l'endurance.",
+        "details": ""
+      },
+      "en": {
+        "name": "Stairs",
+        "summary": "Stairs used for stepping exercises, building leg strength and endurance.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "tire",
+    "contents": {
+      "fr": {
+        "name": "Tire",
+        "summary": "Pneu utilisé pour des exercices de levée, de retournement et de frappe.",
+        "details": ""
+      },
+      "en": {
+        "name": "Tire",
+        "summary": "Tire used for lifting, flipping, and striking exercises.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "treadmill",
+    "contents": {
+      "fr": {
+        "name": "Treadmill",
+        "summary": "Tapis de course pour un entraînement cardiovasculaire en intérieur.",
+        "details": ""
+      },
+      "en": {
+        "name": "Treadmill",
+        "summary": "Treadmill for indoor cardiovascular training.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "wall-obstacle",
+    "contents": {
+      "fr": {
+        "name": "Wall (Obstacle)",
+        "summary": "Mur d'escalade ou obstacle à franchir dans les parcours de type crossfit.",
+        "details": ""
+      },
+      "en": {
+        "name": "Wall (Obstacle)",
+        "summary": "Climbing wall or obstacle to overcome in a crossfit-style course.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "weight-rack",
+    "contents": {
+      "fr": {
+        "name": "Weight Rack",
+        "summary": "Étagère utilisée pour ranger les barres et les poids.",
+        "details": ""
+      },
+      "en": {
+        "name": "Weight Rack",
+        "summary": "Rack used for storing bars and weights.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "weight-vest",
+    "contents": {
+      "fr": {
+        "name": "Weight Vest",
+        "summary": "Gilet lesté porté pour ajouter de la résistance à divers exercices.",
+        "details": ""
+      },
+      "en": {
+        "name": "Weight Vest",
+        "summary": "Weighted vest worn to add resistance to various exercises.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "yoke",
+    "contents": {
+      "fr": {
+        "name": "Yoke",
+        "summary": "Cadre métallique utilisé dans l'entraînement strongman, porté sur les épaules et chargé de poids pour développer la force brute et la stabilité.",
+        "details": ""
+      },
+      "en": {
+        "name": "Yoke",
+        "summary": "A metal frame used in strongman training, carried on the shoulders and loaded with weights. It is designed to build raw strength, stability, and power during heavy carries.",
+        "details": ""
+      }
+    }
   }
 ]

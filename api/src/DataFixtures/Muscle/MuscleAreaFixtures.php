@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures\Muscle;
 
+use App\Domain\Content\Entity\ContentMuscleArea;
 use App\Domain\Muscle\Entity\MuscleArea;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -34,6 +35,22 @@ class MuscleAreaFixtures extends Fixture
         foreach ($data as $item) {
             $muscleArea = new MuscleArea();
             $muscleArea->setSlug($item['slug']);
+
+            // --- Gestion des contenus ---
+            if (!empty($item['contents']) && is_array($item['contents'])) {
+                foreach ($item['contents'] as $locale => $contentData) {
+                    $content = new ContentMuscleArea();
+                    $content->setMuscleArea($muscleArea);
+                    $content->setLocale($locale);
+
+                    $content->setName($contentData['name']);
+                    $content->setSummary($contentData['summary']);
+                    $content->setDetails($contentData['details']);
+
+                    $manager->persist($content);
+                    $muscleArea->addContent($content);
+                }
+            }
 
             $manager->persist($muscleArea);
         }

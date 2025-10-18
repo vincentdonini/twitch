@@ -14,7 +14,7 @@
 │   ├── 📂 services (Connexion API générique, gestion de l'état global)
 │   ├── 📂 hooks (Hooks réutilisables comme `useAuth`, `useApi`)
 ├── 📂 app (Pages Next.js)
-│   ├── index.tsx
+│   ├── SearchEngine.tsx
 │   ├── dashboard.tsx
 │   ├── profile.tsx
 └── 📂 public (Fichiers statiques)

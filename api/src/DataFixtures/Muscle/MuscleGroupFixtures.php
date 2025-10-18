@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures\Muscle;
 
+use App\Domain\Content\Entity\ContentMuscleGroup;
 use App\Domain\Muscle\Entity\MuscleArea;
 use App\Domain\Muscle\Entity\MuscleGroup;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -42,6 +43,22 @@ class MuscleGroupFixtures extends Fixture implements DependentFixtureInterface
                 throw new Exception("Muscle area not found: " . $item['area']);
             }
             $muscleGroup->setArea($area);
+
+            // --- Gestion des contenus ---
+            if (!empty($item['contents']) && is_array($item['contents'])) {
+                foreach ($item['contents'] as $locale => $contentData) {
+                    $content = new ContentMuscleGroup();
+                    $content->setMuscleGroup($muscleGroup);
+                    $content->setLocale($locale);
+
+                    $content->setName($contentData['name']);
+                    $content->setSummary($contentData['summary']);
+                    $content->setDetails($contentData['details']);
+
+                    $manager->persist($content);
+                    $muscleGroup->addContent($content); // pour la collection côté MuscleGroup
+                }
+            }
 
             $manager->persist($muscleGroup);
         }

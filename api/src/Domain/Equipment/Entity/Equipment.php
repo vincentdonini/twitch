@@ -6,8 +6,11 @@ use ApiPlatform\Metadata\ApiProperty;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
+use App\Domain\Content\Entity\ContentEquipment;
 use App\Infrastructure\ApiPlatform\Equipment\Provider\EquipmentProvider;
 use App\Infrastructure\Persistence\Doctrine\Equipment\EquipmentRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use OpenApi\Attributes as OA;
 use Symfony\Component\Serializer\Annotation\Groups;
@@ -17,7 +20,7 @@ use Symfony\Component\Serializer\Annotation\SerializedName;
 #[ORM\Table(name: 'equipments')]
 #[ApiResource(
     formats                      : ['json', 'jsonapi'],
-    paginationClientEnabled      : false,
+    paginationClientEnabled      : true,
     paginationClientItemsPerPage : true,
     paginationEnabled            : true,
     paginationItemsPerPage       : 10,
@@ -70,18 +73,30 @@ class Equipment
         'movement:list', 'movement:detail',
     ])]
     #[SerializedName('name')]
-    private string $name;
+    private ?string $name = null;
 
     #[Groups([
         'wod:list', 'wod:detail',
         'equipment:list', 'equipment:detail',
         'movement:list', 'movement:detail',
     ])]
-    #[SerializedName('description')]
-    private string $description;
+    #[SerializedName('summary')]
+    private string $summary;
+
+    #[Groups([
+        'wod:list', 'wod:detail',
+        'equipment:list', 'equipment:detail',
+        'movement:list', 'movement:detail',
+    ])]
+    #[SerializedName('details')]
+    private string $details;
+
+    #[ORM\OneToMany(targetEntity: ContentEquipment::class, mappedBy: "equipment", cascade: ["persist", "remove"], orphanRemoval: true)]
+    private Collection $contents;
 
     public function __construct()
     {
+        $this->contents = new ArrayCollection();
     }
 
     // GETTERS / SETTERS
@@ -113,14 +128,59 @@ class Equipment
         return $this;
     }
 
-    public function getDescription(): string
+    public function getSummary(): ?string
     {
-        return $this->description;
+        return $this->summary;
     }
 
-    public function setDescription(string $description): self
+    public function setSummary(string $summary): self
     {
-        $this->description = $description;
+        $this->summary = $summary;
         return $this;
+    }
+
+    public function getDetails(): string
+    {
+        return $this->details;
+    }
+
+    public function setDetails(string $details): self
+    {
+        $this->details = $details;
+        return $this;
+    }
+
+    // CONTENTS
+    // -----------------------------------------------------------------------------------------------------------------
+    public function getContents(): Collection
+    {
+        return $this->contents;
+    }
+
+    public function addContent(ContentEquipment $content): self
+    {
+        if (!$this->contents->contains($content)) {
+            $this->contents[] = $content;
+            $content->setEquipment($this);
+        }
+        return $this;
+    }
+
+    public function removeContent(ContentEquipment $content): self
+    {
+        if ($this->contents->contains($content)) {
+            $this->contents->removeElement($content);
+        }
+        return $this;
+    }
+
+    public function getContentByLocale(string $locale): ?ContentEquipment
+    {
+        foreach ($this->contents as $content) {
+            if ($content->getLocale() === $locale) {
+                return $content;
+            }
+        }
+        return null;
     }
 }

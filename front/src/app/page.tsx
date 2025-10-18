@@ -1,16 +1,12 @@
 "use client";
 
-import React from "react";
-import RootLayout from "@layouts/RootLayout";
+import PublicLayout from "@common/layouts/PublicLayout";
 
 export default function HomePage() {
     return (
-        <RootLayout>
-            <div
-                className="flex flex-col justify-center items-center text-center absolute z-[999] top-0 left-0 right-0 bottom-0 bg-black text-white"
-            >
-                Index
-            </div>
-        </RootLayout>
+        <PublicLayout>
+            <h1 className="text-3xl font-bold">Accueil</h1>
+            <p>Bienvenue sur l’application !</p>
+        </PublicLayout>
     );
 }

@@ -1,17 +1,13 @@
 import {configureStore} from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
 import {persistReducer, persistStore} from 'redux-persist';
-import rootReducer from './rootReducer';
+import rootReducer from '@common/stores/rootReducer';
 
 const persistConfig = {
     key: 'root',
     storage,
     whitelist: [
-        'alertQueue',
-        'soundQueue',
-        'chat',
-        'spotify',
-        'activeSubscriptions',
+        'user',
     ],
 };
 
@@ -28,3 +24,5 @@ export const store = configureStore({
 export const persistor = persistStore(store);
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+
+export {fetchCurrentUser} from '@common/stores/userSlice';

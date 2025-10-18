@@ -8,18 +8,20 @@ use App\Domain\Muscle\Entity\MuscleArea;
 use App\Domain\Muscle\Service\MuscleAreaService;
 use App\Infrastructure\ApiPlatform\Exception\ApiException;
 use App\Infrastructure\ApiPlatform\Provider\AbstractProvider;
+use App\Infrastructure\Persistence\Doctrine\Muscle\MuscleAreaRepository;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 final class MuscleAreaProvider extends AbstractProvider
 {
     public function __construct(
-        RequestStack $requestStack,
+        RequestStack                          $requestStack,
         #[Autowire(service: 'api_platform.doctrine.orm.state.item_provider')]
-        private readonly ProviderInterface $itemProvider,
+        private readonly ProviderInterface    $itemProvider,
         #[Autowire(service: 'api_platform.doctrine.orm.state.collection_provider')]
-        private readonly ProviderInterface $collectionProvider,
-        private readonly MuscleAreaService $muscleAreaService
+        private readonly ProviderInterface    $collectionProvider,
+        private readonly MuscleAreaService    $muscleAreaService,
+        private readonly MuscleAreaRepository $muscleAreaRepository
     ) {
         parent::__construct($requestStack);
     }
@@ -37,16 +39,15 @@ final class MuscleAreaProvider extends AbstractProvider
     /** @return MuscleArea[] */
     protected function provideCollection(Operation $operation, array $uriVariables, array $context): array
     {
-        /** @var $muscleAreas MuscleArea[]  */
-        $muscleAreas = $this->getCollectionProvider()->provide($operation, $uriVariables, $context);
-        $this->handlePagination($muscleAreas);
+        /** @var $muscleAreas MuscleArea[] */
+        $muscleAreas = $this->muscleAreaRepository->findAll();
 
         $enriched = [];
         foreach ($muscleAreas as $muscleArea) {
             $enriched[] = $this->muscleAreaService->enrichEntity($muscleArea);
         }
 
-        return $enriched;
+        return $this->paginate($enriched, $operation, $context);
     }
 
     protected function provideItem(Operation $operation, array $uriVariables, array $context): MuscleArea

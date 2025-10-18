@@ -8,18 +8,20 @@ use App\Domain\Muscle\Entity\Muscle;
 use App\Domain\Muscle\Service\MuscleService;
 use App\Infrastructure\ApiPlatform\Exception\ApiException;
 use App\Infrastructure\ApiPlatform\Provider\AbstractProvider;
+use App\Infrastructure\Persistence\Doctrine\Muscle\MuscleRepository;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 final class MuscleProvider extends AbstractProvider
 {
     public function __construct(
-        RequestStack $requestStack,
+        RequestStack                       $requestStack,
         #[Autowire(service: 'api_platform.doctrine.orm.state.item_provider')]
         private readonly ProviderInterface $itemProvider,
         #[Autowire(service: 'api_platform.doctrine.orm.state.collection_provider')]
         private readonly ProviderInterface $collectionProvider,
-        private readonly MuscleService     $muscleService
+        private readonly MuscleService     $muscleService,
+        private readonly MuscleRepository  $muscleRepository,
     ) {
         parent::__construct($requestStack);
     }
@@ -38,15 +40,14 @@ final class MuscleProvider extends AbstractProvider
     protected function provideCollection(Operation $operation, array $uriVariables, array $context): array
     {
         /** @var $muscles Muscle[] */
-        $muscles = $this->getCollectionProvider()->provide($operation, $uriVariables, $context);
-        $this->handlePagination($muscles);
+        $muscles = $this->muscleRepository->findAll();
 
         $enriched = [];
         foreach ($muscles as $muscle) {
             $enriched[] = $this->muscleService->enrichEntity($muscle);
         }
 
-        return $enriched;
+        return $this->paginate($enriched, $operation, $context);
     }
 
     protected function provideItem(Operation $operation, array $uriVariables, array $context): Muscle

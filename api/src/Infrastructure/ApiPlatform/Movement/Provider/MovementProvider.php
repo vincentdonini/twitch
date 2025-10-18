@@ -8,18 +8,20 @@ use App\Domain\Movement\Entity\Movement;
 use App\Domain\Movement\Service\MovementService;
 use App\Infrastructure\ApiPlatform\Exception\ApiException;
 use App\Infrastructure\ApiPlatform\Provider\AbstractProvider;
+use App\Infrastructure\Persistence\Doctrine\Movement\MovementRepository;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 final class MovementProvider extends AbstractProvider
 {
     public function __construct(
-        RequestStack                       $requestStack,
+        RequestStack                        $requestStack,
         #[Autowire(service: 'api_platform.doctrine.orm.state.item_provider')]
-        private readonly ProviderInterface $itemProvider,
+        private readonly ProviderInterface  $itemProvider,
         #[Autowire(service: 'api_platform.doctrine.orm.state.collection_provider')]
-        private readonly ProviderInterface $collectionProvider,
-        private readonly MovementService   $movementService
+        private readonly ProviderInterface  $collectionProvider,
+        private readonly MovementService    $movementService,
+        private readonly MovementRepository $movementRepository
     ) {
         parent::__construct($requestStack);
     }
@@ -37,16 +39,15 @@ final class MovementProvider extends AbstractProvider
     /** @return Movement[] */
     protected function provideCollection(Operation $operation, array $uriVariables, array $context): array
     {
-        /** @var $movements Movement[] */
-        $movements = $this->getCollectionProvider()->provide($operation, $uriVariables, $context);
-        $this->handlePagination($movements);
+        /** @var Movement[] $movements */
+        $movements = $this->movementRepository->findAll();
 
         $enriched = [];
         foreach ($movements as $movement) {
             $enriched[] = $this->movementService->enrichEntity($movement);
         }
 
-        return $enriched;
+        return $this->paginate($enriched, $operation, $context);
     }
 
     protected function provideItem(Operation $operation, array $uriVariables, array $context): mixed

@@ -2,12 +2,14 @@
 
 namespace App\Domain\Wod\Entity;
 
+use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
+use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiProperty;
 use ApiPlatform\Metadata\ApiResource;
-use ApiPlatform\Metadata\ApiFilter;
-use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
+use App\Infrastructure\ApiPlatform\Wod\Filter\EquipmentFilter;
+use App\Infrastructure\ApiPlatform\Wod\Filter\MuscleFilter;
 use App\Infrastructure\ApiPlatform\Wod\Provider\WodProvider;
 use App\Infrastructure\Persistence\Doctrine\Wod\WodRepository;
 use Doctrine\Common\Collections\ArrayCollection;

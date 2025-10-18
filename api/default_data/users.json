@@ -1,5 +1,14 @@
 [
   {
+    "email": "public@woder.fr",
+    "password": "Public123!!",
+    "firstName": "Public",
+    "lastName": "API",
+    "roles": [
+      "ROLE_PUBLIC"
+    ]
+  },
+  {
     "email": "admin@woder.fr",
     "password": "Woder123!!",
     "firstName": "Vincent",

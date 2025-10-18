@@ -8,18 +8,20 @@ use App\Domain\Wod\Entity\WodVersionVariantMovement;
 use App\Domain\Wod\Service\WodVersionVariantMovementService;
 use App\Infrastructure\ApiPlatform\Exception\ApiException;
 use App\Infrastructure\ApiPlatform\Provider\AbstractProvider;
+use App\Infrastructure\Persistence\Doctrine\Wod\WodVersionVariantMovementRepository;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 final class WodVersionVariantMovementProvider extends AbstractProvider
 {
     public function __construct(
-        RequestStack                                      $requestStack,
+        RequestStack                                         $requestStack,
         #[Autowire(service: 'api_platform.doctrine.orm.state.item_provider')]
-        private readonly ProviderInterface                $itemProvider,
+        private readonly ProviderInterface                   $itemProvider,
         #[Autowire(service: 'api_platform.doctrine.orm.state.collection_provider')]
-        private readonly ProviderInterface                $collectionProvider,
-        private readonly WodVersionVariantMovementService $wodVersionVariantMovementService
+        private readonly ProviderInterface                   $collectionProvider,
+        private readonly WodVersionVariantMovementService    $wodVersionVariantMovementService,
+        private readonly WodVersionVariantMovementRepository $wodVersionVariantMovementRepository
     ) {
         parent::__construct($requestStack);
     }
@@ -38,15 +40,14 @@ final class WodVersionVariantMovementProvider extends AbstractProvider
     protected function provideCollection(Operation $operation, array $uriVariables, array $context): array
     {
         /** @var $wodVersionVariantMovements WodVersionVariantMovement[] */
-        $wodVersionVariantMovements = $this->getCollectionProvider()->provide($operation, $uriVariables, $context);
-        $this->handlePagination($wodVersionVariantMovements);
+        $wodVersionVariantMovements = $this->wodVersionVariantMovementRepository->findAll();
 
         $enriched = [];
         foreach ($wodVersionVariantMovements as $wodVersionVariantMovement) {
             $enriched[] = $this->wodVersionVariantMovementService->enrichEntity($wodVersionVariantMovement);
         }
 
-        return $enriched;
+        return $this->paginate($enriched, $operation, $context);
     }
 
     protected function provideItem(Operation $operation, array $uriVariables, array $context): mixed

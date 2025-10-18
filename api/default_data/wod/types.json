@@ -1,8 +1,92 @@
 [
-  {"slug": "amrap"},
-  {"slug": "emom"},
-  {"slug": "for-load"},
-  {"slug": "for-quality"},
-  {"slug": "for-time"},
-  {"slug": "tabata"}
+  {
+    "slug": "amrap",
+    "contents": {
+      "fr": {
+        "name": "AMRAP (Autant de tours que possible)",
+        "summary": "WODs où l'objectif est de réaliser le plus de tours ou de répétitions possible dans un temps donné.",
+        "details": ""
+      },
+      "en": {
+        "name": "AMRAP (As Many Rounds As Possible)",
+        "summary": "WODs where the goal is to complete as many rounds or reps as possible within a set time frame.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "emom",
+    "contents": {
+      "fr": {
+        "name": "EMOM (Chaque minute à la minute)",
+        "summary": "WODs où une tâche spécifique doit être effectuée au début de chaque minute pendant une durée définie.",
+        "details": ""
+      },
+      "en": {
+        "name": "EMOM (Every Minute On the Minute)",
+        "summary": "WODs where a specific task is performed at the start of every minute for a set duration.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "for-load",
+    "contents": {
+      "fr": {
+        "name": "Pour la charge",
+        "summary": "WODs axés sur le fait de soulever la charge la plus lourde possible pour un ou plusieurs mouvements.",
+        "details": ""
+      },
+      "en": {
+        "name": "For Load",
+        "summary": "WODs focused on lifting the heaviest weight possible for a given movement or series of movements.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "for-quality",
+    "contents": {
+      "fr": {
+        "name": "Pour la qualité",
+        "summary": "WODs où l'accent est mis sur la qualité du mouvement et la technique, plutôt que sur la vitesse ou la charge.",
+        "details": ""
+      },
+      "en": {
+        "name": "For Quality",
+        "summary": "WODs where the emphasis is on movement quality and technique rather than speed or load.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "for-time",
+    "contents": {
+      "fr": {
+        "name": "Contre la montre",
+        "summary": "WODs où l'objectif est de terminer un entraînement prescrit le plus rapidement possible.",
+        "details": ""
+      },
+      "en": {
+        "name": "For Time",
+        "summary": "WODs where the objective is to complete a prescribed workout as fast as possible.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "tabata",
+    "contents": {
+      "fr": {
+        "name": "Tabata",
+        "summary": "WODs basés sur le protocole Tabata : 20 secondes d'effort suivies de 10 secondes de repos, généralement répétées pendant 8 tours.",
+        "details": ""
+      },
+      "en": {
+        "name": "Tabata",
+        "summary": "WODs structured around the Tabata protocol: 20 seconds of work followed by 10 seconds of rest, typically repeated for 8 rounds.",
+        "details": ""
+      }
+    }
+  }
 ]

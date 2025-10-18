@@ -5,8 +5,11 @@ namespace App\Domain\Movement\Entity;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
+use App\Domain\Content\Entity\ContentMovementCategory;
 use App\Infrastructure\ApiPlatform\Movement\Provider\MovementCategoryProvider;
 use App\Infrastructure\Persistence\Doctrine\Movement\MovementCategoryRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use OpenApi\Attributes as OA;
 use Symfony\Component\Serializer\Annotation\Groups;
@@ -73,11 +76,23 @@ class MovementCategory
         'movement:list', 'movement:detail',
         'movementCategory:list', 'movementCategory:detail',
     ])]
-    #[SerializedName('description')]
-    private ?string $description = null;
+    #[SerializedName('summary')]
+    private string $summary;
+
+    #[Groups([
+        'wod:list', 'wod:detail',
+        'movement:list', 'movement:detail',
+        'movementCategory:list', 'movementCategory:detail',
+    ])]
+    #[SerializedName('details')]
+    private string $description;
+
+    #[ORM\OneToMany(targetEntity: ContentMovementCategory::class, mappedBy: "movementCategory", cascade: ["persist", "remove"], orphanRemoval: true)]
+    private Collection $contents;
 
     public function __construct()
     {
+        $this->contents = new ArrayCollection();
     }
 
     // GETTERS / SETTERS
@@ -118,5 +133,39 @@ class MovementCategory
     {
         $this->description = $description;
         return $this;
+    }
+
+    // CONTENTS
+    // -----------------------------------------------------------------------------------------------------------------
+    public function getContents(): Collection
+    {
+        return $this->contents;
+    }
+
+    public function addContent(ContentMovementCategory $content): self
+    {
+        if (!$this->contents->contains($content)) {
+            $this->contents[] = $content;
+            $content->setMovementCategory($this);
+        }
+        return $this;
+    }
+
+    public function removeContent(ContentMovementCategory $content): self
+    {
+        if ($this->contents->contains($content)) {
+            $this->contents->removeElement($content);
+        }
+        return $this;
+    }
+
+    public function getContentByLocale(string $locale): ?ContentMovementCategory
+    {
+        foreach ($this->contents as $content) {
+            if ($content->getLocale() === $locale) {
+                return $content;
+            }
+        }
+        return null;
     }
 }

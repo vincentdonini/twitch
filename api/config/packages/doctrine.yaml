@@ -16,6 +16,18 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
         mappings:
+            DomainContent:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Content/Entity'
+                prefix: 'App\Domain\Content\Entity'
+                alias: DomainContent
+            DomainExercise:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Exercise/Entity'
+                prefix: 'App\Domain\Exercise\Entity'
+                alias: DomainEquipment
             DomainEquipment:
                 is_bundle: false
                 type: attribute
@@ -46,6 +58,12 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Domain/Wod/Entity'
                 prefix: 'App\Domain\Wod\Entity'
                 alias: DomainWod
+            DomainRefreshToken:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/RefreshToken/Entity'
+                prefix: 'App\Domain\RefreshToken\Entity'
+                alias: RefreshToken
 
 when@test:
     doctrine:

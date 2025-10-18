@@ -8,6 +8,9 @@ use App\Domain\Wod\Entity\WodType;
 use App\Domain\Wod\Service\WodTypeService;
 use App\Infrastructure\ApiPlatform\Exception\ApiException;
 use App\Infrastructure\ApiPlatform\Provider\AbstractProvider;
+use App\Infrastructure\Persistence\Doctrine\Wod\WodTypeRepository;
+use Pagerfanta\Adapter\ArrayAdapter;
+use Pagerfanta\Pagerfanta;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -19,7 +22,8 @@ final class WodTypeProvider extends AbstractProvider
         private readonly ProviderInterface $itemProvider,
         #[Autowire(service: 'api_platform.doctrine.orm.state.collection_provider')]
         private readonly ProviderInterface $collectionProvider,
-        private readonly WodTypeService    $wodTypeService
+        private readonly WodTypeService    $wodTypeService,
+        private readonly WodTypeRepository $wodTypeRepository
     ) {
         parent::__construct($requestStack);
     }
@@ -38,15 +42,14 @@ final class WodTypeProvider extends AbstractProvider
     protected function provideCollection(Operation $operation, array $uriVariables, array $context): array
     {
         /** @var $wodTypes WodType[] */
-        $wodTypes = $this->getCollectionProvider()->provide($operation, $uriVariables, $context);
-        $this->handlePagination($wodTypes);
+        $wodTypes = $this->wodTypeRepository->findAll();
 
         $enriched = [];
         foreach ($wodTypes as $wodType) {
             $enriched[] = $this->wodTypeService->enrichEntity($wodType);
         }
 
-        return $enriched;
+        return $this->paginate($enriched, $operation, $context);
     }
 
     protected function provideItem(Operation $operation, array $uriVariables, array $context): mixed

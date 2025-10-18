@@ -2,9 +2,10 @@
 
 namespace App\DataFixtures\Muscle;
 
+use App\Domain\Content\Entity\ContentMuscle;
 use App\Domain\Muscle\Entity\Muscle;
-use App\Domain\Muscle\Entity\MuscleGroup;
 use App\Domain\Muscle\Entity\MuscleArea;
+use App\Domain\Muscle\Entity\MuscleGroup;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
@@ -55,6 +56,22 @@ class MuscleFixtures extends Fixture implements DependentFixtureInterface
             }
 
             $manager->persist($muscle);
+
+            // --- Gestion des contenus ---
+            if (!empty($item['contents']) && is_array($item['contents'])) {
+                foreach ($item['contents'] as $locale => $contentData) {
+                    $content = new ContentMuscle();
+                    $content->setMuscle($muscle);
+                    $content->setLocale($locale);
+
+                    $content->setName($contentData['name']);
+                    $content->setSummary($contentData['summary']);
+                    $content->setDetails($contentData['details']);
+
+                    $manager->persist($content);
+                    $muscle->addContent($content); // pour la collection côté Muscle
+                }
+            }
         }
 
         $manager->flush();

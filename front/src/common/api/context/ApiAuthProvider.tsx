@@ -1,3 +1,5 @@
+"use client";
+
 import {
     createContext,
     useState,
@@ -6,99 +8,169 @@ import {
     useContext,
     useCallback
 } from "react";
-import {login} from "@common/api/infrastructure/ApiAuth";
-import {Api} from "@common/api/infrastructure/Api";
-import {setActiveSubscriptions} from "@stores/activeSubscriptionsSlice";
-import {store} from "@stores/stores";
-import {setAutoLoginCallback} from "@common/api/infrastructure/authService";
+import {useDispatch} from "react-redux";
+import {AppDispatch, fetchCurrentUser} from "@stores/stores";
+import {AuthService} from "@common/api/application/AuthService";
+import {LoginResponse} from "@common/api/infrastructure/ApiAuth";
 
 interface AuthContextProps {
+    // User
     isAuthenticated: boolean;
     isLoading: boolean;
     loginUser: (email: string, password: string) => Promise<void>;
-    autoLogin: () => Promise<boolean>;
+    logoutUser: () => void;
+
+    // Public
+    isPublicAuthenticated: boolean;
+    isPublicLoading: boolean;
+    publicToken: string | null;
+    loginPublic: () => Promise<LoginResponse>;
+    logoutPublic: () => void;
+    autoLoginPublic: () => Promise<boolean>;
+}
+
+function isTokenExpired(token: string): boolean {
+    try {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        const now = Math.floor(Date.now() / 1000); // timestamp en secondes
+        return payload.exp < now;
+    } catch {
+        return true; // token invalide → considérer comme expiré
+    }
 }
 
 export const ApiAuthContext = createContext<AuthContextProps | undefined>(undefined);
 
-let loginPromise: Promise<void> | null = null;
-
 export const ApiAuthProvider = ({children}: { children: ReactNode }) => {
+    const dispatch = useDispatch<AppDispatch>();
+
+    // -------------------- USER SESSION --------------------
+    const userAuthService = new AuthService("token", "refresh_token");
+
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
 
-    const autoLogin = useCallback(async (): Promise<boolean> => {
-        const storedToken = localStorage.getItem("token");
-
-        if (storedToken) {
+    const loginUser = async (email: string, password: string) => {
+        setIsLoading(true);
+        try {
+            await userAuthService.login(email, password);
+            await dispatch(fetchCurrentUser());
             setIsAuthenticated(true);
-            return true;
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const logoutUser = async () => {
+        setIsLoading(true);
+        try {
+            userAuthService.logout();
+            setIsAuthenticated(false);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    // -------------------- PUBLIC SESSION --------------------
+    const publicAuthService = new AuthService("public_token", "public_refresh_token");
+
+    const [publicToken, setPublicToken] = useState<string | null>(() => publicAuthService.getToken());
+    const [isPublicAuthenticated, setIsPublicAuthenticated] = useState(!!publicToken);
+    const [isPublicLoading, setIsPublicLoading] = useState(false);
+
+    const loginPublic = async () => {
+        setIsPublicLoading(true);
+        try {
+            const res = await publicAuthService.login(
+                process.env.NEXT_PUBLIC_PUBLIC_EMAIL!,
+                process.env.NEXT_PUBLIC_PUBLIC_PASSWORD!
+            );
+            setPublicToken(res.token);
+            setIsPublicAuthenticated(true);
+            return res;
+        } catch (err) {
+            console.error("Public login failed", err);
+            setIsPublicAuthenticated(false);
+            throw err;
+        } finally {
+            setIsPublicLoading(false);
+        }
+    };
+
+    const logoutPublic = () => {
+        publicAuthService.logout();
+        setPublicToken(null);
+        setIsPublicAuthenticated(false);
+    };
+
+    const autoLoginPublic = useCallback(async (): Promise<boolean> => {
+        const token = publicAuthService.getToken();
+
+        if (token && !isTokenExpired(token)) {
+            return true; // token valide
         }
 
-        const email = process.env.NEXT_PUBLIC_API_ADMIN_USER ?? "";
-        const password = process.env.NEXT_PUBLIC_API_ADMIN_PWD ?? "";
-
-        if (email && password) {
-            try {
-                await loginUser(email, password);
+        const refreshToken = publicAuthService.getRefreshToken();
+        if (refreshToken) {
+            const newToken = await publicAuthService.refreshToken();
+            if (newToken) {
+                setPublicToken(newToken);
+                setIsPublicAuthenticated(true);
                 return true;
-            } catch (err) {
-                console.error("❌ Auto-login failed:", err);
+            } else {
+                setPublicToken(null);
+                setIsPublicAuthenticated(false);
+                return false;
             }
         }
 
-        return false;
-    }, []);
+        // Pas de refresh token → login public
+        try {
+            const res = await loginPublic();
+            setPublicToken(res.token);
+            setIsPublicAuthenticated(true);
+            return true;
+        } catch {
+            setPublicToken(null);
+            setIsPublicAuthenticated(false);
+            return false;
+        }
+    }, [publicAuthService, loginPublic]);
 
     useEffect(() => {
-        setAutoLoginCallback(autoLogin);
-
-        autoLogin()
-            .then((success) => {
-                if (success) {
-                    console.log("✅ Auto-login successful");
-                } else {
-                    console.log("ℹ️ No auto-login attempted");
-                }
-                setIsLoading(false);
-            });
-    }, [autoLogin]);
-
-    const loginUser = async (email: string, password: string): Promise<void> => {
-        if (loginPromise) return loginPromise;
-
-        setIsLoading(true);
-
-        loginPromise = login({email, password})
-            .then(({token}) => {
-                localStorage.setItem("token", token);
-                setIsAuthenticated(true);
-                fetchAndSetActiveSubscriptions();
-            })
-            .catch((err) => {
-                setIsAuthenticated(false);
-                throw err;
-            })
-            .finally(() => {
-                setIsLoading(false);
-                loginPromise = null;
-            });
-
-        return loginPromise;
-    };
-
-    const fetchAndSetActiveSubscriptions = async () => {
-        try {
-            const activeSubscriptions = await Api.getActiveSubscriptions();
-            const usernames = activeSubscriptions.map(sub => sub.username.toLowerCase());
-            store.dispatch(setActiveSubscriptions(usernames));
-        } catch (err) {
-            console.error("Erreur lors de la récupération des abonnements actifs:", err);
-        }
-    };
+        const checkAuthPublic = async () => {
+            setIsPublicLoading(true);
+            try {
+                const success = await autoLoginPublic();
+                setIsPublicAuthenticated(success);
+            } catch {
+                setIsPublicAuthenticated(false);
+                userAuthService.logout();
+            } finally {
+                setIsPublicLoading(false);
+            }
+        };
+        checkAuthPublic();
+    }, [autoLoginPublic]);
 
     return (
-        <ApiAuthContext.Provider value={{isAuthenticated, isLoading, loginUser, autoLogin}}>
+        <ApiAuthContext.Provider
+            value={{
+                // User
+                isAuthenticated,
+                isLoading,
+                loginUser,
+                logoutUser,
+
+                // Public
+                isPublicAuthenticated,
+                isPublicLoading,
+                publicToken,
+                loginPublic,
+                logoutPublic,
+                autoLoginPublic,
+            }}
+        >
             {children}
         </ApiAuthContext.Provider>
     );
@@ -106,8 +178,7 @@ export const ApiAuthProvider = ({children}: { children: ReactNode }) => {
 
 export const useApiAuth = () => {
     const context = useContext(ApiAuthContext);
-    if (!context) {
-        throw new Error('useAuth must be used within an <ApiAuthProvider>');
-    }
+    if (!context)
+        throw new Error("useApiAuth must be used within an <ApiAuthProvider>");
     return context;
 };

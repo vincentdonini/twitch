@@ -1,9 +1,107 @@
 [
-  {"slug": "rx"},
-  {"slug": "scaled"},
-  {"slug": "foundations"},
-  {"slug": "adaptive"},
-  {"slug": "masters"},
-  {"slug": "teens"},
-  {"slug": "elite"}
+  {
+    "slug": "rx",
+    "contents": {
+      "fr": {
+        "name": "RX",
+        "summary": "Le niveau standard ou original du WOD, sans aucune modification. Ce niveau est destiné aux athlètes ayant un bon niveau de forme physique et de technique.",
+        "details": ""
+      },
+      "en": {
+        "name": "RX",
+        "summary": "The standard or original level of the WOD, with no modifications. This level is designed for athletes with a good level of fitness and technique.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "scaled",
+    "contents": {
+      "fr": {
+        "name": "Scaled",
+        "summary": "Une version modifiée du WOD, avec des exercices ou des charges allégées afin de rendre le WOD plus accessible pour les débutants ou ceux qui ne sont pas encore prêts pour les niveaux plus difficiles.",
+        "details": ""
+      },
+      "en": {
+        "name": "Scaled",
+        "summary": "A modified version of the WOD, with lighter exercises or weights to make the WOD more accessible for beginners or those not yet ready for higher levels.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "foundations",
+    "contents": {
+      "fr": {
+        "name": "Foundations",
+        "summary": "Un niveau pour les débutants, axé sur l'apprentissage des mouvements de base, la technique et la compréhension des principes fondamentaux du CrossFit.",
+        "details": ""
+      },
+      "en": {
+        "name": "Foundations",
+        "summary": "A level for beginners, focused on learning basic movements, technique, and understanding the fundamental principles of CrossFit.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "adaptive",
+    "contents": {
+      "fr": {
+        "name": "Adaptive",
+        "summary": "Un niveau conçu pour les athlètes ayant des besoins spécifiques ou des limitations physiques, permettant d’adapter les exercices à leurs capacités.",
+        "details": ""
+      },
+      "en": {
+        "name": "Adaptive",
+        "summary": "A level designed for athletes with specific needs or physical limitations, allowing exercises to be adapted to their abilities.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "masters",
+    "contents": {
+      "fr": {
+        "name": "Masters",
+        "summary": "Ce niveau est destiné aux athlètes de plus de 35 ans, avec des ajustements de charge ou de mouvement pour correspondre aux besoins des personnes plus âgées tout en maintenant l’intensité.",
+        "details": ""
+      },
+      "en": {
+        "name": "Masters",
+        "summary": "This level is intended for athletes over 35, with adjustments in weight or movement to suit the needs of older individuals while maintaining intensity.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "teens",
+    "contents": {
+      "fr": {
+        "name": "Teens",
+        "summary": "Un niveau pour les adolescents, où les exercices sont ajustés pour être adaptés à la croissance et aux capacités physiques des jeunes athlètes.",
+        "details": ""
+      },
+      "en": {
+        "name": "Teens",
+        "summary": "A level for teenagers, where exercises are adjusted to be appropriate for the growth and physical abilities of young athletes.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "elite",
+    "contents": {
+      "fr": {
+        "name": "Elite",
+        "summary": "Le niveau le plus avancé, destiné aux athlètes de haut niveau. Les WODs sont conçus pour tester les limites physiques et mentales de l’athlète.",
+        "details": ""
+      },
+      "en": {
+        "name": "Elite",
+        "summary": "The most advanced level, designed for high-level athletes. The WODs are intended to push the physical and mental limits of the athlete.",
+        "details": ""
+      }
+    }
+  }
 ]

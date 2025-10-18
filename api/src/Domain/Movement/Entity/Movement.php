@@ -6,6 +6,7 @@ use ApiPlatform\Metadata\ApiProperty;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
+use App\Domain\Content\Entity\ContentMovement;
 use App\Domain\Equipment\Entity\Equipment;
 use App\Domain\Muscle\Entity\Muscle;
 use App\Infrastructure\ApiPlatform\Movement\Provider\MovementProvider;
@@ -20,7 +21,7 @@ use Symfony\Component\Serializer\Annotation\SerializedName;
 #[ORM\Table(name: 'movements')]
 #[ApiResource(
     formats                      : ['json', 'jsonapi'],
-    paginationClientEnabled      : false,
+    paginationClientEnabled      : true,
     paginationClientItemsPerPage : true,
     paginationEnabled            : true,
     paginationItemsPerPage       : 10,
@@ -95,12 +96,19 @@ class Movement
         joinColumns: [new ORM\JoinColumn(name: 'movement_id', referencedColumnName: 'id')],
         inverseJoinColumns: [new ORM\JoinColumn(name: 'muscle_id', referencedColumnName: 'id')]
     )]
-    #[Groups(['movement:list', 'movement:detail'])]
+    #[Groups([
+        'wod:list', 'wod:detail',
+        'movement:list', 'movement:detail'
+    ])]
     private Collection $muscles;
+
+    #[ORM\OneToMany(targetEntity: ContentMovement::class, mappedBy: "movement", cascade: ["persist", "remove"], orphanRemoval: true)]
+    private Collection $contents;
 
     public function __construct()
     {
         $this->muscles = new ArrayCollection();
+        $this->contents = new ArrayCollection();
     }
 
     // GETTERS / SETTERS
@@ -184,5 +192,39 @@ class Movement
     {
         $this->muscles->removeElement($muscle);
         return $this;
+    }
+
+    // CONTENTS
+    // -----------------------------------------------------------------------------------------------------------------
+    public function getContents(): Collection
+    {
+        return $this->contents;
+    }
+
+    public function addContent(ContentMovement $content): self
+    {
+        if (!$this->contents->contains($content)) {
+            $this->contents[] = $content;
+            $content->setMovement($this);
+        }
+        return $this;
+    }
+
+    public function removeContent(ContentMovement $content): self
+    {
+        if ($this->contents->contains($content)) {
+            $this->contents->removeElement($content);
+        }
+        return $this;
+    }
+
+    public function getContentByLocale(string $locale): ?ContentMovement
+    {
+        foreach ($this->contents as $content) {
+            if ($content->getLocale() === $locale) {
+                return $content;
+            }
+        }
+        return null;
     }
 }

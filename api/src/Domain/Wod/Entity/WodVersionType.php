@@ -18,7 +18,7 @@ use Symfony\Component\Serializer\Annotation\SerializedName;
 #[ORM\Table(name: 'wod_version_types')]
 #[ApiResource(
     formats                      : ['json', 'jsonapi'],
-    paginationClientEnabled      : false,
+    paginationClientEnabled      : true,
     paginationClientItemsPerPage : true,
     paginationEnabled            : true,
     paginationItemsPerPage       : 10,

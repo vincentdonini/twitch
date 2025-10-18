@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures\Equipment;
 
+use App\Domain\Content\Entity\ContentEquipment;
 use App\Domain\Equipment\Entity\Equipment;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -36,6 +37,22 @@ class EquipmentFixtures extends Fixture
             $equipment->setSlug($item['slug']);
 
             $manager->persist($equipment);
+
+            // --- Gestion des contenus ---
+            if (!empty($item['contents']) && is_array($item['contents'])) {
+                foreach ($item['contents'] as $locale => $contentData) {
+                    $content = new ContentEquipment();
+                    $content->setEquipment($equipment);
+                    $content->setLocale($locale);
+
+                    $content->setName($contentData['name']);
+                    $content->setSummary($contentData['summary']);
+                    $content->setDetails($contentData['details']);
+
+                    $manager->persist($content);
+                    $equipment->addContent($content); // pour la collection côté Equipment
+                }
+            }
         }
 
         $manager->flush();

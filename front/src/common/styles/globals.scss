@@ -1,0 +1,80 @@
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* VARIABLES */
+/* ------------------------------------------------------------------------------------------------------------------ */
+$color-black   : #000;
+$color-white   : #fff;
+$color-grey    : #f5f6fa;
+$color-primary : #fd3737;
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* IMPORTS */
+/* ------------------------------------------------------------------------------------------------------------------ */
+@import "tailwindcss";
+@import './fonts';
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* CSS */
+/* ------------------------------------------------------------------------------------------------------------------ */
+* {
+	font-family : 'gotham_medium', sans-serif !important;
+}
+
+html,
+body {
+	font-family : 'gotham_medium', sans-serif !important;
+	font-size   : 12px !important;
+	margin      : 0;
+	padding     : 0;
+	background: #fcfcfc;
+}
+
+h1 {
+	font-family : 'gotham_bold', sans-serif !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+h2 {
+	font-family : 'gotham_bold', sans-serif !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+h3 {
+	font-family : 'gotham_bold', sans-serif !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+h4 {
+	font-family : 'gotham_bold', sans-serif !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+h5 {
+	font-family : 'gotham_bold', sans-serif !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+h6 {
+	font-family : 'gotham_bold', sans-serif !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+p {
+	font-family : 'gotham_book', sans-serif !important;
+}
+
+.primary-color {
+	color : $color-primary;
+}
+
+.ellipsis {
+	white-space   : nowrap;
+	overflow      : hidden;
+	text-overflow : ellipsis;
+	width         : inherit;
+}

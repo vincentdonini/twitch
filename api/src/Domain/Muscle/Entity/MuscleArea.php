@@ -7,8 +7,9 @@ use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
 use ApiPlatform\Metadata\Link;
-use App\Infrastructure\ApiPlatform\Muscle\Provider\MuscleAreaGroupProvider;
+use App\Domain\Content\Entity\ContentMuscleArea;
 use App\Infrastructure\ApiPlatform\Muscle\Provider\MuscleAreaGroupMusclesProvider;
+use App\Infrastructure\ApiPlatform\Muscle\Provider\MuscleAreaGroupProvider;
 use App\Infrastructure\ApiPlatform\Muscle\Provider\MuscleAreaProvider;
 use App\Infrastructure\Persistence\Doctrine\Muscle\MuscleAreaRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -106,15 +107,28 @@ class MuscleArea
         'muscleGroup:list','muscleGroup:detail',
         'movement:list','movement:detail',
     ])]
-    #[SerializedName('description')]
-    private ?string $description = null;
+    #[SerializedName('summary')]
+    private string $summary;
+
+    #[Groups([
+        'muscle:list','muscle:detail',
+        'muscleArea:list','muscleArea:detail',
+        'muscleGroup:list','muscleGroup:detail',
+        'movement:list','movement:detail',
+    ])]
+    #[SerializedName('details')]
+    private string $details;
 
     #[ORM\OneToMany(targetEntity: MuscleGroup::class, mappedBy: 'area', cascade: ['persist', 'remove'], orphanRemoval: true)]
     private Collection $muscleGroups;
 
+    #[ORM\OneToMany(targetEntity: ContentMuscleArea::class, mappedBy: "muscleArea", cascade: ["persist", "remove"])]
+    private Collection $contents;
+
     public function __construct()
     {
         $this->muscleGroups = new ArrayCollection();
+        $this->contents = new ArrayCollection();
     }
 
     // GETTERS / SETTERS
@@ -146,14 +160,25 @@ class MuscleArea
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getSummary(): ?string
     {
-        return $this->description;
+        return $this->summary;
     }
 
-    public function setDescription(?string $description): self
+    public function setSummary(string $summary): self
     {
-        $this->description = $description;
+        $this->summary = $summary;
+        return $this;
+    }
+
+    public function getDetails(): string
+    {
+        return $this->details;
+    }
+
+    public function setDetails(string $details): self
+    {
+        $this->details = $details;
         return $this;
     }
 
@@ -177,5 +202,39 @@ class MuscleArea
     {
         $this->muscleGroups->removeElement($group);
         return $this;
+    }
+
+    // CONTENTS
+    // -----------------------------------------------------------------------------------------------------------------
+    public function getContents(): Collection
+    {
+        return $this->contents;
+    }
+
+    public function addContent(ContentMuscleArea $content): self
+    {
+        if (!$this->contents->contains($content)) {
+            $this->contents[] = $content;
+            $content->setMuscleArea($this);
+        }
+        return $this;
+    }
+
+    public function removeContent(ContentMuscleArea $content): self
+    {
+        if ($this->contents->contains($content)) {
+            $this->contents->removeElement($content);
+        }
+        return $this;
+    }
+
+    public function getContentByLocale(string $locale): ?ContentMuscleArea
+    {
+        foreach ($this->contents as $content) {
+            if ($content->getLocale() === $locale) {
+                return $content;
+            }
+        }
+        return null;
     }
 }

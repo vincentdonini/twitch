@@ -8,18 +8,22 @@ use App\Domain\Wod\Entity\WodCategory;
 use App\Domain\Wod\Service\WodCategoryService;
 use App\Infrastructure\ApiPlatform\Exception\ApiException;
 use App\Infrastructure\ApiPlatform\Provider\AbstractProvider;
+use App\Infrastructure\Persistence\Doctrine\Wod\WodCategoryRepository;
+use Pagerfanta\Adapter\ArrayAdapter;
+use Pagerfanta\Pagerfanta;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 final class WodCategoryProvider extends AbstractProvider
 {
     public function __construct(
-        RequestStack $requestStack,
+        RequestStack                           $requestStack,
         #[Autowire(service: 'api_platform.doctrine.orm.state.item_provider')]
-        private readonly ProviderInterface $itemProvider,
+        private readonly ProviderInterface     $itemProvider,
         #[Autowire(service: 'api_platform.doctrine.orm.state.collection_provider')]
-        private readonly ProviderInterface $collectionProvider,
-        private readonly WodCategoryService $wodCategoryService
+        private readonly ProviderInterface     $collectionProvider,
+        private readonly WodCategoryService    $wodCategoryService,
+        private readonly WodCategoryRepository $wodCategoryRepository
     ) {
         parent::__construct($requestStack);
     }
@@ -38,15 +42,14 @@ final class WodCategoryProvider extends AbstractProvider
     protected function provideCollection(Operation $operation, array $uriVariables, array $context): array
     {
         /** @var $wodCategories WodCategory[] */
-        $wodCategories = $this->collectionProvider->provide($operation, $uriVariables, $context);
-        $this->handlePagination($wodCategories);
+        $wodCategories = $this->wodCategoryRepository->findAll();
 
         $enriched = [];
         foreach ($wodCategories as $wodCategory) {
             $enriched[] = $this->wodCategoryService->enrichEntity($wodCategory);
         }
 
-        return $enriched;
+        return $this->paginate($enriched, $operation, $context);
     }
 
     protected function provideItem(Operation $operation, array $uriVariables, array $context): mixed

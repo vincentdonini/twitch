@@ -4,6 +4,7 @@ namespace App\Domain\Movement\Service;
 
 use App\Domain\Movement\Entity\Movement;
 use App\Domain\Equipment\Service\EquipmentService;
+use App\Domain\Muscle\Entity\Muscle;
 use App\Domain\Muscle\Service\MuscleService;
 
 final class MovementService
@@ -31,6 +32,7 @@ final class MovementService
         $movement->setMovementCategory($this->movementCategoryService->enrichEntity($movement->getMovementCategory()));
 
         // Muscles
+        /** @var Muscle $muscle **/
         foreach ($movement->getMuscles() as $muscle) {
             $movement->addMuscle($this->muscleService->enrichEntity($muscle));
         }
