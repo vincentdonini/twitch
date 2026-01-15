@@ -1,8 +1,18 @@
 controllers:
     resource:
-        path: ../src/Controller/
-        namespace: App\Controller
+        path: ../src/UI/Controller/
+        namespace: App\UI\Controller
     type: attribute
+    prefix: /{_locale}
+    requirements:
+        _locale: en|fr
+    defaults:
+        _locale: en
     
 api_login_check:
     path: /auth/login
+    prefix: /
+    
+gesdinet_jwt_refresh_token:
+    path: /auth/token/refresh
+    controller: gesdinet.jwtrefreshtoken::refresh

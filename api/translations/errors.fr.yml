@@ -1,0 +1,56 @@
+internal_server_error: "Une erreur interne s'est produite. Veuillez réessayer ultérieurement..."
+bad_request: "Requête non valide"
+
+auth:
+  unauthenticated: "Non authentifié"
+  access_denied: "Accès refusé"
+
+movement:
+  movement:
+    required: "Le paramètre movementId est obligatoire"
+    not_found: "Le mouvement demandé est introuvable"
+  category:
+    required: "Le paramètre movementId est obligatoire"
+    not_found: "Le mouvement demandé est introuvable"
+
+equipment:
+  required: "Le paramètre equipmentId est obligatoire"
+  not_found: "Équipement introuvable"
+  
+event:
+  required: "Le paramètre eventId est obligatoire"
+  not_found: "Événement introuvable"
+
+muscle:
+  muscle:
+    required: "Le paramètre muscleId est obligatoire"
+    not_found: "Muscle introuvable"
+  area:
+    required: "Le paramètre areaId est obligatoire"
+    not_found: "Zone musculaire introuvable"
+  group:
+    required: "Le paramètre groupId est obligatoire"
+    not_found: "Groupe musculaire introuvable"
+    invalid-area: "Le groupe musculaire n'appartient pas à la zone spécifiée"
+    
+user:
+  required: "Le paramètre userId est obligatoire"
+  not_found: "Utilisateur introuvable"
+  self_deletion_denied: "Vous ne pouvez pas supprimer votre propre compte"
+  
+wod:
+  wod:
+    required: "Le paramètre wodId est obligatoire"
+    not_found: "WOD introuvable"
+  category:
+    required: "Le paramètre categoryId est obligatoire"
+    not_found: "Category du WOD introuvable"
+  type:
+    required: "Le paramètre typeId est obligatoire"
+    not_found: "Type du WOD introuvable"
+  version:
+    required: "Le paramètre versionId est obligatoire"
+    not_found: "Version du WOD introuvable"
+  version_type:
+    required: "Le paramètre versionTypeId est obligatoire"
+    not_found: "Type de version du WOD introuvable"

@@ -1,0 +1,2728 @@
+[
+  {
+    "name": "Arnie",
+    "descriptions": {
+      "en": "For Time: 21 Turkish Get-Ups (right), 50 Swings, 21 Overhead Squats (left), 50 Swings, 21 Overhead Squats (right), 50 Swings, 21 Turkish Get-Ups (left)",
+      "fr": "For Time : 21 Turkish Get-Ups (droite), 50 Swings, 21 Overhead Squats (gauche), 50 Swings, 21 Overhead Squats (droite), 50 Swings, 21 Turkish Get-Ups (gauche)"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 21 Turkish Get-Ups (right), 50 Swings, 21 Overhead Squats (left), 50 Swings, 21 Overhead Squats (right), 50 Swings, 21 Turkish Get-Ups (left)",
+              "fr": "For Time : 21 Turkish Get-Ups (droite), 50 Swings, 21 Overhead Squats (gauche), 50 Swings, 21 Overhead Squats (droite), 50 Swings, 21 Turkish Get-Ups (gauche)"
+            },
+            "exercises": [
+              {
+                "exercise": "dumbbell-turkish-get-up",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "overhead-squat",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "overhead-squat",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "dumbbell-turkish-get-up",
+                "metrics": {
+                  "repetitions": 21
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 21 Turkish Get-Ups (right), 50 Swings, 21 Overhead Squats (left), 50 Swings, 21 Overhead Squats (right), 50 Swings, 21 Turkish Get-Ups (left)",
+              "fr": "For Time : 21 Turkish Get-Ups (droite), 50 Swings, 21 Overhead Squats (gauche), 50 Swings, 21 Overhead Squats (droite), 50 Turkish Get-Ups (gauche)"
+            },
+            "exercises": [
+              {
+                "exercise": "dumbbell-turkish-get-up",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "overhead-squat",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "overhead-squat",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "dumbbell-turkish-get-up",
+                "metrics": {
+                  "repetitions": 21
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Badger",
+    "descriptions": {
+      "en": "For Time: 3 Rounds of 30 Squat Cleans, 30 Pull-Ups, 800 m Run",
+      "fr": "For Time : 3 Tours de 30 Squat Cleans, 30 Pull-Ups, 800 m de course"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 3,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 3 Rounds of 30 Squat Cleans, 30 Pull-Ups, 800 m Run",
+              "fr": "For Time : 3 Tours de 30 Squat Cleans, 30 Pull-Ups, 800 m de course"
+            },
+            "exercises": [
+              {
+                "exercise": "clean",
+                "metrics": {
+                  "repetitions": 30
+                }
+              },
+              {
+                "exercise": "pull-up",
+                "metrics": {
+                  "repetitions": 30
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 800
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 3,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 3 Rounds of 30 Squat Cleans, 30 Pull-Ups, 800 m Run",
+              "fr": "For Time : 3 Tours de 30 Squat Cleans, 30 Pull-Ups, 800 m de course"
+            },
+            "exercises": [
+              {
+                "exercise": "clean",
+                "metrics": {
+                  "repetitions": 30
+                }
+              },
+              {
+                "exercise": "pull-up",
+                "metrics": {
+                  "repetitions": 30
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 800
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bert",
+    "descriptions": {
+      "en": "For Time: 50 Burpees, 400 m Run, 100 Push-Ups, 400 m Run, 150 Walking Lunges, 400 m Run, 200 Air Squats, 400 m Run, 150 Walking Lunges, 400 m Run, 100 Push-Ups, 400 m Run, 50 Burpees",
+      "fr": "For Time : 50 Burpees, 400 m course, 100 Push-Ups, 400 m course, 150 Walking Lunges, 400 m course, 200 Air Squats, 400 m course, 150 Walking Lunges, 400 m course, 100 Push-Ups, 400 m course, 50 Burpees"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 50 Burpees, 400 m Run, 100 Push-Ups, 400 m Run, 150 Walking Lunges, 400 m Run, 200 Air Squats, 400 m Run, 150 Walking Lunges, 400 m Run, 100 Push-Ups, 400 m Run, 50 Burpees",
+              "fr": "For Time : 50 Burpees, 400 m course, 100 Push-Ups, 400 m course, 150 Walking Lunges, 400 m course, 200 Air Squats, 400 m course, 150 Walking Lunges, 400 m course, 100 Push-Ups, 400 m course, 50 Burpees"
+            },
+            "exercises": [
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 100
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "walking-lunge",
+                "metrics": {
+                  "repetitions": 150
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "air-squat",
+                "metrics": {
+                  "repetitions": 200
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "walking-lunge",
+                "metrics": {
+                  "repetitions": 150
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 100
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 50
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 50 Burpees, 400 m Run, 100 Push-Ups, 400 m Run, 150 Walking Lunges, 400 m Run, 200 Air Squats, 400 m Run, 150 Walking Lunges, 400 m Run, 100 Push-Ups, 400 m Run, 50 Burpees",
+              "fr": "For Time : 50 Burpees, 400 m course, 100 Push-Ups, 400 m course, 150 Walking Lunges, 400 m course, 200 Air Squats, 400 m course, 150 Walking Lunges, 400 m course, 100 Push-Ups, 400 m course, 50 Burpees"
+            },
+            "exercises": [
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 100
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "walking-lunge",
+                "metrics": {
+                  "repetitions": 150
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "air-squat",
+                "metrics": {
+                  "repetitions": 200
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "walking-lunge",
+                "metrics": {
+                  "repetitions": 150
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 100
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 50
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bull",
+    "descriptions": {
+      "en": "For Time (2 Rounds): 200 Double Unders, 50 Overhead Squats, 50 Pull-Ups, 1 Mile Run",
+      "fr": "For Time (2 Tours) : 200 Double Unders, 50 Overhead Squats, 50 Pull-Ups, 1600 m de course"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 2,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (2 Rounds): 200 Double Unders, 50 Overhead Squats (135 lb), 50 Pull-Ups, 1 Mile Run",
+              "fr": "For Time (2 Tours) : 200 Double Unders, 50 Overhead Squats (61 kg), 50 Pull-Ups, 1600 m de course"
+            },
+            "exercises": [
+              {
+                "exercise": "double-under",
+                "metrics": {
+                  "repetitions": 200
+                }
+              },
+              {
+                "exercise": "overhead-squat",
+                "metrics": {
+                  "repetitions": 50,
+                  "weight": 61
+                }
+              },
+              {
+                "exercise": "pull-up",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 1600
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 2,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (2 Rounds): 200 Double Unders, 50 Overhead Squats (95 lb), 50 Pull-Ups, 1 Mile Run",
+              "fr": "For Time (2 Tours) : 200 Double Unders, 50 Overhead Squats (43 kg), 50 Pull-Ups, 1600 m de course"
+            },
+            "exercises": [
+              {
+                "exercise": "double-under",
+                "metrics": {
+                  "repetitions": 200
+                }
+              },
+              {
+                "exercise": "overhead-squat",
+                "metrics": {
+                  "repetitions": 50,
+                  "weight": 43
+                }
+              },
+              {
+                "exercise": "pull-up",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 1600
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chad",
+    "descriptions": {
+      "en": "For Time: 1000 Box Step-Ups with weighted bag",
+      "fr": "For Time : 1000 Box Step-Ups avec sac lesté"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 1000 Box Step-Ups with weighted bag (44 lb)",
+              "fr": "For Time : 1000 Box Step-Ups avec sac lesté (20 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "box-step-up",
+                "metrics": {
+                  "repetitions": 1000,
+                  "weight": 20
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 1000 Box Step-Ups with weighted bag (35 lb)",
+              "fr": "For Time : 1000 Box Step-Ups avec sac lesté (16 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "box-step-up",
+                "metrics": {
+                  "repetitions": 1000,
+                  "weight": 16
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Collin",
+    "descriptions": {
+      "en": "For Time (6 Rounds): Carry 400 m with sandbag, 12 Push Press, 12 Box Jumps, 12 Sumo Deadlift High Pulls",
+      "fr": "For Time (6 Tours) : Transport de 400 m avec le sandbag, 12 Push Press, 12 Box Jumps, 12 Sumo Deadlift High Pulls"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 6,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (6 Rounds): Carry 50 m with sandbag, 12 Push Press (115 lb), 12 Box Jumps (24 in), 12 Sumo Deadlift High Pulls (95 lb)",
+              "fr": "For Time (6 Tours) : Transport de 50 m avec le sandbag (22 kg), 12 Push Press (52 kg), 12 Box Jumps, 12 Sumo Deadlift High Pulls (43 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "sandbag-carry",
+                "metrics": {
+                  "distance": 400,
+                  "weight": 22
+                }
+              },
+              {
+                "exercise": "push-press",
+                "metrics": {
+                  "repetitions": 12,
+                  "weight": 52
+                }
+              },
+              {
+                "exercise": "box-jump",
+                "metrics": {
+                  "repetitions": 12,
+                  "height": 61
+                }
+              },
+              {
+                "exercise": "sumo-deadlift-high-pull",
+                "metrics": {
+                  "repetitions": 12,
+                  "weight": 43
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 6,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (6 Rounds): Carry 50 m with sandbag, 12 Push Press (75 lb), 12 Box Jumps (20 in), 12 Sumo Deadlift High Pulls (65 lb)",
+              "fr": "For Time (6 Tours) : Transport de 50 m avec le sandbag (18 kg), 12 Push Press (34 kg), 12 Box Jumps (61/51 cm), 12 Sumo Deadlift High Pulls (30 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "sandbag-carry",
+                "metrics": {
+                  "distance": 50,
+                  "weight": 18
+                }
+              },
+              {
+                "exercise": "push-press",
+                "metrics": {
+                  "repetitions": 12
+                }
+              },
+              {
+                "exercise": "box-jump",
+                "metrics": {
+                  "repetitions": 12,
+                  "height": 51
+                }
+              },
+              {
+                "exercise": "sumo-deadlift-high-pull",
+                "metrics": {
+                  "repetitions": 12,
+                  "weight": 30
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "DG",
+    "descriptions": {
+      "en": "AMRAP (10 min): 8 Toes to Bars, 8 Dumbbell Thrusters, 12 Dumbbell Walking Lunges",
+      "fr": "AMRAP (10 min) : 8 Toes to Bars, 8 Dumbbell Thrusters, 12 Dumbbell Walking Lunges"
+    },
+    "type": "amrap",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "AMRAP (10 min): 8 Toes to Bars, 8 Dumbbell Thrusters (33 lb), 12 Dumbbell Walking Lunges (33 lb)",
+              "fr": "AMRAP (10 min) : 8 Toes to Bars, 8 Dumbbell Thrusters (15 kg), 12 Dumbbell Walking Lunges (15 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "toes-to-bar",
+                "metrics": {
+                  "repetitions": 8
+                }
+              },
+              {
+                "exercise": "dumbbell-thruster",
+                "metrics": {
+                  "repetitions": 8,
+                  "weight": 15
+                }
+              },
+              {
+                "exercise": "dumbbell-walking-lunge",
+                "metrics": {
+                  "repetitions": 12,
+                  "weight": 15
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 600,
+            "descriptions": {
+              "en": "AMRAP (10 min): 8 Toes to Bars, 8 Dumbbell Thrusters (22 lb), 12 Dumbbell Walking Lunges (22 lb)",
+              "fr": "AMRAP (10 min) : 8 Toes to Bars, 8 Dumbbell Thrusters (10 kg), 12 Dumbbell Walking Lunges (10 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "toes-to-bar",
+                "metrics": {
+                  "repetitions": 8
+                }
+              },
+              {
+                "exercise": "dumbbell-thruster",
+                "metrics": {
+                  "repetitions": 8,
+                  "weight": 10
+                }
+              },
+              {
+                "exercise": "dumbbell-walking-lunge",
+                "metrics": {
+                  "repetitions": 12,
+                  "weight": 10
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Donny",
+    "descriptions": {
+      "en": "For Time (21-15-9-9-15-21): Deadlifts & Burpees",
+      "fr": "For Time (21-15-9-9-15-21) : Deadlifts & Burpees"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (21-15-9-9-15-21): Deadlifts (226 lb) & Burpees",
+              "fr": "For Time (21-15-9-9-15-21) : Deadlifts (102 kg) & Burpees"
+            },
+            "exercises": [
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 21,
+                  "weight": 102
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 15,
+                  "weight": 102
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 9,
+                  "weight": 102
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 9
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 9,
+                  "weight": 102
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 9
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 15,
+                  "weight": 102
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 21,
+                  "weight": 102
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 21
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (21-15-9-9-15-21): Deadlifts (155 lb) & Burpees",
+              "fr": "For Time (21-15-9-9-15-21) : Deadlifts (70 kg) & Burpees"
+            },
+            "exercises": [
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 21,
+                  "weight": 70
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 15,
+                  "weight": 70
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 9,
+                  "weight": 70
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 9
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 9,
+                  "weight": 70
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 9
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 15,
+                  "weight": 70
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 21,
+                  "weight": 70
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 21
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dork",
+    "descriptions": {
+      "en": "For Time (6 Rounds): 60 Double Unders, 30 Kettlebell Swings, 15 Burpees",
+      "fr": "For Time (6 Tours) : 60 Double Unders, 30 Kettlebell Swings, 15 Burpees"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 6,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (6 Rounds): 60 Double Unders, 30 Kettlebell Swings (53 lb), 15 Burpees",
+              "fr": "For Time (6 Tours) : 60 Double Unders, 30 Kettlebell Swings (24 kg), 15 Burpees"
+            },
+            "exercises": [
+              {
+                "exercise": "double-under",
+                "metrics": {
+                  "repetitions": 60
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 30,
+                  "weight": 24
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 15
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 6,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (6 Rounds): 60 Double Unders, 30 Kettlebell Swings (35 lb), 15 Burpees",
+              "fr": "For Time (6 Tours) : 60 Double Unders, 30 Kettlebell Swings (16 kg), 15 Burpees"
+            },
+            "exercises": [
+              {
+                "exercise": "double-under",
+                "metrics": {
+                  "repetitions": 60
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 30,
+                  "weight": 16
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 15
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "DT",
+    "descriptions": {
+      "en": "For Time: 12 Deadlifts, 9 Hang Power Cleans, 6 Push Jerks",
+      "fr": "For Time : 12 Deadlifts, 9 Hang Power Cleans, 6 Push Jerks"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 12 Deadlifts (155 lb), 9 Hang Power Cleans (155 lb), 6 Push Jerks (155 lb)",
+              "fr": "For Time : 12 Deadlifts (70 kg), 9 Hang Power Cleans (70 kg), 6 Push Jerks (70 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 12,
+                  "weight": 70
+                }
+              },
+              {
+                "exercise": "hang-power-clean",
+                "metrics": {
+                  "repetitions": 9,
+                  "weight": 70
+                }
+              },
+              {
+                "exercise": "push-jerk",
+                "metrics": {
+                  "repetitions": 6,
+                  "weight": 70
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 12 Deadlifts (105 lb), 9 Hang Power Cleans (105 lb), 6 Push Jerks (105 lb)",
+              "fr": "For Time : 12 Deadlifts (47,5 kg), 9 Hang Power Cleans (47,5 kg), 6 Push Jerks (47,5 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 12,
+                  "weight": 47.5
+                }
+              },
+              {
+                "exercise": "hang-power-clean",
+                "metrics": {
+                  "repetitions": 9,
+                  "weight": 47.5
+                }
+              },
+              {
+                "exercise": "push-jerk",
+                "metrics": {
+                  "repetitions": 6,
+                  "weight": 47.5
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Emily",
+    "descriptions": {
+      "en": "For Time (10 Rounds): 30 Double Unders, 15 Pull-Ups, 30 Air Squats, 100 m Sprint - Rest 2 min between Rounds",
+      "fr": "For Time (10 Tours) : 30 Double Unders, 15 Pull-Ups, 30 Air Squats, sprint 100 m - Repos de 2 min entre chaque tour"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 10,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (10 Rounds): 30 Double Unders, 15 Pull-Ups, 30 Air Squats, 100 m Sprint - Rest 2 min between Rounds",
+              "fr": "For Time (10 Tours) : 30 Double Unders, 15 Pull-Ups, 30 Air Squats, sprint 100 m - Repos de 2 min entre chaque tour"
+            },
+            "exercises": [
+              {
+                "exercise": "double-under",
+                "metrics": {
+                  "repetitions": 30
+                }
+              },
+              {
+                "exercise": "pull-up",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "air-squat",
+                "metrics": {
+                  "repetitions": 30
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 100
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 10,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (10 Rounds): 30 Double Unders, 15 Pull-Ups, 30 Air Squats, 100 m Sprint - Rest 2 min between Rounds",
+              "fr": "For Time (10 Tours) : 30 Double Unders, 15 Pull-Ups, 30 Air Squats, sprint 100 m - Repos de 2 min entre chaque tour"
+            },
+            "exercises": [
+              {
+                "exercise": "double-under",
+                "metrics": {
+                  "repetitions": 30
+                }
+              },
+              {
+                "exercise": "pull-up",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "air-squat",
+                "metrics": {
+                  "repetitions": 30
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 100
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Glen",
+    "descriptions": {
+      "en": "For Time: 30 Clean & Jerk, 1 Mile Run, 1 Rope Climb (15 ft), 1 Mile Run, 100 Burpees",
+      "fr": "For Time : 30 Clean & Jerk, 1600 m de course, 1 grimpe de corde (4,5 m), 1600 m de course, 100 Burpees"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 30 Clean & Jerk (135 lb), 1 Mile Run, 1 Rope Climb (15 ft), 1 Mile Run, 100 Burpees",
+              "fr": "For Time : 30 Clean & Jerk (61 kg), 1600 m de course, 1 grimpe de corde (4,5 m), 1600 m de course, 100 Burpees"
+            },
+            "exercises": [
+              {
+                "exercise": "clean-and-jerk",
+                "metrics": {
+                  "repetitions": 30,
+                  "weight": 61
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 1600
+                }
+              },
+              {
+                "exercise": "rope-climb",
+                "metrics": {
+                  "repetitions": 1,
+                  "distance": 4.5
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 1600
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 100
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 30 Clean & Jerk (95 lb), 1 Mile Run, 1 Rope Climb 15 ft, 1 Mile Run, 100 Burpees",
+              "fr": "For Time : 30 Clean & Jerk (43 kg), 1600 m de course, 1 grimpe de corde (4,5 m) 1600 m de course, 100 Burpees"
+            },
+            "exercises": [
+              {
+                "exercise": "clean-and-jerk",
+                "metrics": {
+                  "repetitions": 30,
+                  "weight": 43
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 1600
+                }
+              },
+              {
+                "exercise": "rope-climb",
+                "metrics": {
+                  "repetitions": 1,
+                  "distance": 4.5
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 1600
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 100
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Holleyman",
+    "descriptions": {
+      "en": "For Time (30 Rounds): 5 Wall Balls, 3 Handstand Push-Ups, 1 Power Clean",
+      "fr": "For Time (30 Tours) : 5 Wall Balls, 3 Handstand Push-Ups, 1 Power Clean"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 30,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (30 Rounds): 5 Wall Balls (20 lb), 3 Handstand Push-Ups, 1 Power Clean (226 lb)",
+              "fr": "For Time (30 Tours) : 5 Wall Balls (9 kg), 3 Handstand Push-Ups, 1 Power Clean (102 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "wall-ball-shot",
+                "metrics": {
+                  "repetitions": 5,
+                  "weight": 9
+                }
+              },
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 3
+                }
+              },
+              {
+                "exercise": "power-clean",
+                "metrics": {
+                  "repetitions": 1,
+                  "weight": 102
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 30,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (30 Rounds): 5 Wall Balls (14 lb), 3 Handstand Push-Ups, 1 Power Clean (155 lb)",
+              "fr": "For Time (30 Tours) : 5 Wall Balls (6 kg), 3 Handstand Push-Ups, 1 Power Clean (70 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "wall-ball-shot",
+                "metrics": {
+                  "repetitions": 5,
+                  "weight": 6
+                }
+              },
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 3
+                }
+              },
+              {
+                "exercise": "power-clean",
+                "metrics": {
+                  "repetitions": 1,
+                  "weight": 70
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Kalsu",
+    "descriptions": {
+      "en": "For Time: 100 Thrusters - Every minute, perform 5 Burpees before resuming Thrusters",
+      "fr": "For Time : 100 Thrusters - À chaque minute, réalisez 5 Burpees avant de reprendre les Thrusters"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 100 Thrusters (135 lb) - Every minute, perform 5 Burpees before resuming Thrusters",
+              "fr": "For Time : 100 Thrusters (60 kg) - À chaque minute, réalisez 5 Burpees avant de reprendre les Thrusters"
+            },
+            "exercises": [
+              {
+                "exercise": "thruster",
+                "metrics": {
+                  "repetitions": 100,
+                  "weight": 60
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 5
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 100 Thrusters (95 lb) - Every minute, perform 5 Burpees before resuming Thrusters",
+              "fr": "For Time : 100 Thrusters (43 kg) - À chaque minute, réalisez 5 Burpees avant de reprendre les Thrusters"
+            },
+            "exercises": [
+              {
+                "exercise": "thruster",
+                "metrics": {
+                  "repetitions": 100,
+                  "weight": 43
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 5
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Jack",
+    "descriptions": {
+      "en": "AMRAP (20 min): 10 Push Press from floor, 10 Kettlebell Swings, 10 Box Jumps",
+      "fr": "AMRAP (20 min) : 10 Push Press depuis le sol, 10 Kettlebell Swings, 10 Box Jumps"
+    },
+    "type": "amrap",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 1200,
+            "descriptions": {
+              "en": "AMRAP (20 min): 10 Push Press (115 lb), 10 Kettlebell Swings (53 lb), 10 Box Jumps (24 in)",
+              "fr": "AMRAP (20 min) : 10 Push Press (52 kg), 10 Kettlebell Swings (24 kg), 10 Box Jumps (60 cm)"
+            },
+            "exercises": [
+              {
+                "exercise": "push-press",
+                "metrics": {
+                  "repetitions": 10,
+                  "weight": 52
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 10,
+                  "weight": 24
+                }
+              },
+              {
+                "exercise": "box-jump",
+                "metrics": {
+                  "repetitions": 10,
+                  "height": 60
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 1200,
+            "descriptions": {
+              "en": "AMRAP (20 min): 10 Push Press (84 lb), 10 Kettlebell Swings (35 lb), 10 Box Jumps (20 in)",
+              "fr": "AMRAP (20 min) : 10 Push Press (38 kg), 10 Kettlebell Swings (16 kg), 10 Box Jumps (50 cm)"
+            },
+            "exercises": [
+              {
+                "exercise": "push-press",
+                "metrics": {
+                  "repetitions": 10,
+                  "weight": 38
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 10,
+                  "weight": 16
+                }
+              },
+              {
+                "exercise": "box-jump",
+                "metrics": {
+                  "repetitions": 10,
+                  "height": 50
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "JT",
+    "descriptions": {
+      "en": "For Time (21-15-9): Handstand Push-Ups, Ring Dips & Push-Ups",
+      "fr": "For Time (21-15-9) : Handstand Push-Ups, Ring Dips & Push-Ups"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (21-15-9): Handstand Push-Ups, Ring Dips & Push-Ups",
+              "fr": "For Time (21-15-9) : Handstand Push-Ups, Ring Dips & Push-Ups"
+            },
+            "exercises": [
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "ring-dip",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "ring-dip",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 9
+                }
+              },
+              {
+                "exercise": "ring-dip",
+                "metrics": {
+                  "repetitions": 9
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 9
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (21-15-9): Handstand Push-Ups, Ring Dips & Push-Ups",
+              "fr": "For Time (21-15-9) : Handstand Push-Ups, Ring Dips & Push-Ups"
+            },
+            "exercises": [
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "ring-dip",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "ring-dip",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 9
+                }
+              },
+              {
+                "exercise": "ring-dip",
+                "metrics": {
+                  "repetitions": 9
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 9
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Laura",
+    "descriptions": {
+      "en": "AMRAP (21 min): 30 cal Row, 20 Burpees Over Row, 10 Power Cleans - Teams of 2",
+      "fr": "AMRAP (21 min) : 30 cal rameur, 20 Burpees Over Row, 10 Power Cleans - En équipe de 2"
+    },
+    "type": "amrap",
+    "category": "the-heroes",
+    "team_size": 2,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 1260,
+            "descriptions": {
+              "en": "AMRAP (21 min): 30 cal Row, 20 Burpees Over Row, 10 Power Cleans (154 lb) - Teams of 2",
+              "fr": "AMRAP (21 min) : 30 cal rameur, 20 Burpees Over Row, 10 Power Cleans (70 kg) - En équipe de 2"
+            },
+            "exercises": [
+              {
+                "exercise": "row",
+                "metrics": {
+                  "calories": 30
+                }
+              },
+              {
+                "exercise": "burpee-over-row",
+                "metrics": {
+                  "repetitions": 20
+                }
+              },
+              {
+                "exercise": "power-clean",
+                "metrics": {
+                  "repetitions": 10,
+                  "weight": 70
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 1260,
+            "descriptions": {
+              "en": "AMRAP (21 min): 30 cal Row, 20 Burpees Over Row, 10 Power Cleans (105 lb) - Teams of 2",
+              "fr": "AMRAP (21 min) : 30 cal rameur, 20 Burpees Over Row, 10 Power Cleans (47,5 kg) - En équipe de 2"
+            },
+            "exercises": [
+              {
+                "exercise": "row",
+                "metrics": {
+                  "calories": 30
+                }
+              },
+              {
+                "exercise": "burpee-over-row",
+                "metrics": {
+                  "repetitions": 20
+                }
+              },
+              {
+                "exercise": "power-clean",
+                "metrics": {
+                  "repetitions": 10,
+                  "weight": 47.5
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Loredo",
+    "descriptions": {
+      "en": "For Time (6 Rounds): 24 Air Squats, 24 Push-Ups, 24 Walking Lunges, 400 m Run",
+      "fr": "For Time (6 Tours) : 24 Air Squats, 24 Push-Ups, 24 Walking Lunges, 400 m de course"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 6,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (6 Rounds): 24 Air Squats, 24 Push-Ups, 24 Walking Lunges, 400 m Run",
+              "fr": "For Time (6 Tours) : 24 Air Squats, 24 Push-Ups, 24 Walking Lunges, 400 m de course"
+            },
+            "exercises": [
+              {
+                "exercise": "air-squat",
+                "metrics": {
+                  "repetitions": 24
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 24
+                }
+              },
+              {
+                "exercise": "walking-lunge",
+                "metrics": {
+                  "repetitions": 24
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 6,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (6 Rounds): 24 Air Squats, 24 Push-Ups, 24 Walking Lunges, 400 m Run",
+              "fr": "For Time (6 Tours) : 24 Air Squats, 24 Push-Ups, 24 Walking Lunges, 400 m de course"
+            },
+            "exercises": [
+              {
+                "exercise": "air-squat",
+                "metrics": {
+                  "repetitions": 24
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 24
+                }
+              },
+              {
+                "exercise": "walking-lunge",
+                "metrics": {
+                  "repetitions": 24
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Manion",
+    "descriptions": {
+      "en": "For Time (7 Rounds): 400 m Run, 29 Back Squats",
+      "fr": "For Time (7 Tours) : 400 m course, 29 Back Squats"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 7,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (7 Rounds): 400 m Run, 29 Back Squats (134 lb)",
+              "fr": "For Time (7 Tours) : 400 m course, 29 Back Squats (61 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "back-squat",
+                "metrics": {
+                  "repetitions": 29,
+                  "weight": 61
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 7,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (7 Rounds): 400 m Run, 29 Back Squats (95 lb)",
+              "fr": "For Time (7 Tours) : 400 m course, 29 Back Squats (43 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              },
+              {
+                "exercise": "back-squat",
+                "metrics": {
+                  "repetitions": 29,
+                  "weight": 43
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "McGhee",
+    "descriptions": {
+      "en": "AMRAP 30 min: 5 Deadlifts, 13 Push-Ups, 9 Box Jumps",
+      "fr": "AMRAP 30 min : 5 Deadlifts, 13 Push-Ups, 9 Box Jumps"
+    },
+    "type": "amrap",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 1800,
+            "descriptions": {
+              "en": "AMRAP 30 min: 5 Deadlifts (275 lb), 13 Push-Ups, 9 Box Jumps (24 in)",
+              "fr": "AMRAP 30 min : 5 Deadlifts (125 kg), 13 Push-Ups, 9 Box Jumps (60 cm)"
+            },
+            "exercises": [
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 5,
+                  "weight": 125
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 13
+                }
+              },
+              {
+                "exercise": "box-jump",
+                "metrics": {
+                  "repetitions": 9,
+                  "height": 60
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 1800,
+            "descriptions": {
+              "en": "AMRAP 30 min: 5 Deadlifts (185 lb), 13 Push-Ups, 9 Box Jumps (20 in)",
+              "fr": "AMRAP 30 min : 5 Deadlifts (84 kg), 13 Push-Ups, 9 Box Jumps (50 cm)"
+            },
+            "exercises": [
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 5,
+                  "weight": 38
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 13
+                }
+              },
+              {
+                "exercise": "box-jump",
+                "metrics": {
+                  "repetitions": 9,
+                  "height": 50
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Murph",
+    "descriptions": {
+      "en": "For Time: 1 Mile Run, 100 Pull-Ups, 200 Push-Ups, 300 Air Squats, 1 Mile Run - Weighted vest",
+      "fr": "For Time : 1600 m de course, 100 Pull-Ups, 200 Push-Ups, 300 Air Squats, 1600 m de course - Gilet lesté"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 1 Mile Run, 100 Pull-Ups, 200 Push-Ups, 300 Air Squats, 1 Mile Run - Weighted vest (20 lb)",
+              "fr": "For Time : 1600 m de course, 100 Pull-Ups, 200 Push-Ups, 300 Air Squats, 1600 m de course - Gilet lesté (9 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "run",
+                "metrics": {
+                  "weight": 9,
+                  "distance": 1600
+                }
+              },
+              {
+                "exercise": "pull-up",
+                "metrics": {
+                  "repetitions": 100,
+                  "weight": 9
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 200,
+                  "weight": 9
+                }
+              },
+              {
+                "exercise": "air-squat",
+                "metrics": {
+                  "repetitions": 300,
+                  "weight": 9
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "weight": 9,
+                  "distance": 1600
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 1 Mile Run, 100 Pull-Ups, 200 Push-Ups, 300 Air Squats, 1 Mile Run - Weighted vest (13 lb)",
+              "fr": "For Time : 1600 m de course, 100 Pull-Ups, 200 Push-Ups, 300 Air Squats, 1600 m de course - Gilet lesté (6 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 1600,
+                  "weight": 6
+                }
+              },
+              {
+                "exercise": "pull-up",
+                "metrics": {
+                  "repetitions": 100,
+                  "weight": 6
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 200,
+                  "weight": 6
+                }
+              },
+              {
+                "exercise": "air-squat",
+                "metrics": {
+                  "repetitions": 300,
+                  "weight": 6
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 1600,
+                  "weight": 6
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Nate",
+    "descriptions": {
+      "en": "AMRAP (20 min): 2 Muscle-Ups, 4 Handstand Push-Ups, 8 Kettlebell Swings",
+      "fr": "AMRAP (20 min) : 2 Muscle-Ups, 4 Handstand Push-Ups, 8 Kettlebell Swings"
+    },
+    "type": "amrap",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": null,
+            "time_cap": 1200,
+            "descriptions": {
+              "en": "AMRAP (20 min): 2 Muscle-Ups, 4 Handstand Push-Ups, 8 Kettlebell Swings (70 lb)",
+              "fr": "AMRAP (20 min) : 2 Muscle-Ups, 4 Handstand Push-Ups, 8 Kettlebell Swings (32 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "muscle-up",
+                "metrics": {
+                  "repetitions": 2
+                }
+              },
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 4
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 8,
+                  "weight": 32
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": null,
+            "time_cap": 1200,
+            "descriptions": {
+              "en": "AMRAP (20 min): 2 Muscle-Ups, 4 Handstand Push-Ups, 8 Kettlebell Swings (53 lb)",
+              "fr": "AMRAP (20 min) : 2 Muscle-Ups, 4 Handstand Push-Ups, 8 Kettlebell Swings (24 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "muscle-up",
+                "metrics": {
+                  "repetitions": 2
+                }
+              },
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 4
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 8,
+                  "weight": 24
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Nutts",
+    "descriptions": {
+      "en": "For Time: 10 Handstand Push-Ups, 15 Deadlifts, 25 Box Jumps, 50 Pull-Ups, 100 Wall-Ball Shots, 200 Double-Unders, 400 m Weighted Run",
+      "fr": "For Time : 10 Handstand Push-Ups, 15 Deadlifts, 25 Box Jumps, 50 Pull-Ups, 100 Wall-Ball Shots, 200 Double-Unders, 400 m de course lestée"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 10 Handstand Push-Ups, 15 Deadlifts (250 lb), 25 Box Jumps (30 in), 50 Pull-Ups, 100 Wall-Ball Shots (20 lb), 200 Double-Unders, 400 m Weighted Run (with a 45 lb plate)",
+              "fr": "For Time : 10 Handstand Push-Ups, 15 Deadlifts (113 kg), 25 Box Jumps (76 cm), 50 Pull-Ups, 100 Wall-Ball Shots (9 kg), 200 Double-Unders, 400 m course lestée (avec une plate de 20 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 10
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 15,
+                  "weight": 113
+                }
+              },
+              {
+                "exercise": "box-jump",
+                "metrics": {
+                  "repetitions": 25,
+                  "height": 76
+                }
+              },
+              {
+                "exercise": "pull-up",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "wall-ball-shot",
+                "metrics": {
+                  "repetitions": 100,
+                  "height": 9
+                }
+              },
+              {
+                "exercise": "double-under",
+                "metrics": {
+                  "repetitions": 200
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 10 Handstand Push-Ups, 15 Deadlifts (175 lb), 25 Box Jumps, 50 Pull-Ups, 100 Wall-Ball Shots (14 lb), 200 Double-Unders, 400 m Weighted Run (with a 35 lb plate)",
+              "fr": "For Time : 10 Handstand Push-Ups, 15 Deadlifts (80 kg), 25 Box Jumps (61 cm), 50 Pull-Ups, 100 Wall-Ball Shots (6 kg), 200 Double-Unders, 400 m course lestée (avec une plate de 15 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 10
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 15,
+                  "weight": 80
+                }
+              },
+              {
+                "exercise": "box-jump",
+                "metrics": {
+                  "repetitions": 25,
+                  "height": 61
+                }
+              },
+              {
+                "exercise": "pull-up",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "wall-ball-shot",
+                "metrics": {
+                  "repetitions": 100,
+                  "height": 6
+                }
+              },
+              {
+                "exercise": "double-under",
+                "metrics": {
+                  "repetitions": 200
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 400,
+                  "weight": 15
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Randy",
+    "descriptions": {
+      "en": "For Time: 75 Power Snatches",
+      "fr": "For Time : 75 Power Snatches"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 75 Power Snatches (75 lb)",
+              "fr": "For Time : 75 Power Snatches (34 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "power-snatch",
+                "metrics": {
+                  "repetitions": 75,
+                  "weight": 34
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 75 Power Snatches (55 lb)",
+              "fr": "For Time : 75 Power Snatches (25 kg)"
+            },
+            "exercises": [
+              {
+                "exercise": "power-snatch",
+                "metrics": {
+                  "repetitions": 75,
+                  "weight": 25
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Seven",
+    "descriptions": {
+      "en": "For Time (7 Rounds): 7 Handstand Push-Ups, 7 Thrusters, 7 Knee To Elbows, 7 Deadlifts, 7 Burpees, 7 Kettlebell Swings, 7 Pull-Ups",
+      "fr": "For Time (7 Tours) : 7 Handstand Push-Ups, 7 Thrusters, 7 Knee To Elbows, 7 Deadlifts, 7 Burpees, 7 Kettlebell Swings, 7 Pull-Ups"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 7,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (7 Rounds): 7 Handstand Push-Ups, 7 Thrusters (134 lb), 7 Knee To Elbows, 7 Deadlifts (245 lb), 7 Burpees, 7 Kettlebell Swings (70 lb), 7 Pull-Ups",
+              "fr": "For Time (7 Tours) : 7 Handstand Push-Ups, 7 Thrusters (61 kg), 7 Knee To Elbows, 7 Deadlifts (111 kg), 7 Burpees, 7 Kettlebell Swings (32 kg), 7 Pull-Ups"
+            },
+            "exercises": [
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 7
+                }
+              },
+              {
+                "exercise": "thruster",
+                "metrics": {
+                  "repetitions": 7,
+                  "weight": 61
+                }
+              },
+              {
+                "exercise": "knees-to-elbows",
+                "metrics": {
+                  "repetitions": 7
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 7,
+                  "weight": 111
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 7
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 7,
+                  "weight": 32
+                }
+              },
+              {
+                "exercise": "pull-up",
+                "metrics": {
+                  "repetitions": 7
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 7,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (7 Rounds): 7 Handstand Push-Ups, 7 Thrusters (95 lb), 7 Knee To Elbows, 7 Deadlifts (165 lb), 7 Burpees, 7 Kettlebell Swings (53 lb), 7 Pull-Ups",
+              "fr": "For Time (7 Tours) : 7 Handstand Push-Ups, 7 Thrusters (43 kg), 7 Knee To Elbows, 7 Deadlifts (75 kg), 7 Burpees, 7 Kettlebell Swings (24 kg), 7 Pull-Ups"
+            },
+            "exercises": [
+              {
+                "exercise": "handstand-push-up",
+                "metrics": {
+                  "repetitions": 7
+                }
+              },
+              {
+                "exercise": "thruster",
+                "metrics": {
+                  "repetitions": 7,
+                  "weight": 43
+                }
+              },
+              {
+                "exercise": "knees-to-elbows",
+                "metrics": {
+                  "repetitions": 7
+                }
+              },
+              {
+                "exercise": "deadlift",
+                "metrics": {
+                  "repetitions": 7,
+                  "weight": 75
+                }
+              },
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 7
+                }
+              },
+              {
+                "exercise": "kettlebell-swing",
+                "metrics": {
+                  "repetitions": 7,
+                  "weight": 24
+                }
+              },
+              {
+                "exercise": "pull-up",
+                "metrics": {
+                  "repetitions": 7
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ship",
+    "descriptions": {
+      "en": "For Time (9 Rounds): 7 Squat Cleans, 8 Burpee Box Jumps, 150 m Run, 15 Double-Unders",
+      "fr": "For Time (9 Tours) : 7 Squat Cleans, 8 Burpee Box Jumps, 150 m de course, 15 Double-Unders"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 9,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (9 Rounds): 7 Squat Cleans, 8 Burpee Box Jumps, 150 m Run, 15 Double-Unders",
+              "fr": "For Time (9 Tours) : 7 Squat Cleans, 8 Burpee Box Jumps, 150 m de course, 15 Double-Unders"
+            },
+            "exercises": [
+              {
+                "exercise": "clean",
+                "metrics": {
+                  "repetitions": 7
+                }
+              },
+              {
+                "exercise": "burpee-box-jump",
+                "metrics": {
+                  "repetitions": 8
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 150
+                }
+              },
+              {
+                "exercise": "double-under",
+                "metrics": {
+                  "repetitions": 15
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 9,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time (9 Rounds): 7 Squat Cleans, 8 Burpee Box Jumps, 150 m Run, 15 Double-Unders",
+              "fr": "For Time (9 Tours) : 7 Squat Cleans, 8 Burpee Box Jumps, 150 m de course, 15 Double-Unders"
+            },
+            "exercises": [
+              {
+                "exercise": "clean",
+                "metrics": {
+                  "repetitions": 7
+                }
+              },
+              {
+                "exercise": "burpee-box-jump",
+                "metrics": {
+                  "repetitions": 8
+                }
+              },
+              {
+                "exercise": "run",
+                "metrics": {
+                  "distance": 150
+                }
+              },
+              {
+                "exercise": "double-under",
+                "metrics": {
+                  "repetitions": 15
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tommy V",
+    "descriptions": {
+      "en": "For Time: 21 Thrusters, 12 Rope Climbs, 15 Thrusters, 9 Rope Climbs, 9 Thrusters, 6 Rope Climbs",
+      "fr": "For Time : 21 Thrusters, 12 Rope Climbs, 15 Thrusters, 9 Rope Climbs, 9 Thrusters, 6 Rope Climbs"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 21 Thrusters, 12 Rope Climbs, 15 Thrusters, 9 Rope Climbs, 9 Thrusters, 6 Rope Climbs",
+              "fr": "For Time : 21 Thrusters, 12 Rope Climbs, 15 Thrusters, 9 Rope Climbs, 9 Thrusters, 6 Rope Climbs"
+            },
+            "exercises": [
+              {
+                "exercise": "thruster",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "rope-climb",
+                "metrics": {
+                  "repetitions": 12
+                }
+              },
+              {
+                "exercise": "thruster",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "rope-climb",
+                "metrics": {
+                  "repetitions": 9
+                }
+              },
+              {
+                "exercise": "thruster",
+                "metrics": {
+                  "repetitions": 9
+                }
+              },
+              {
+                "exercise": "rope-climb",
+                "metrics": {
+                  "repetitions": 6
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 21 Thrusters, 12 Rope Climbs, 15 Thrusters, 9 Rope Climbs, 9 Thrusters, 6 Rope Climbs",
+              "fr": "For Time : 21 Thrusters, 12 Rope Climbs, 15 Thrusters, 9 Rope Climbs, 9 Thrusters, 6 Rope Climbs"
+            },
+            "exercises": [
+              {
+                "exercise": "thruster",
+                "metrics": {
+                  "repetitions": 21
+                }
+              },
+              {
+                "exercise": "rope-climb",
+                "metrics": {
+                  "repetitions": 12
+                }
+              },
+              {
+                "exercise": "thruster",
+                "metrics": {
+                  "repetitions": 15
+                }
+              },
+              {
+                "exercise": "rope-climb",
+                "metrics": {
+                  "repetitions": 9
+                }
+              },
+              {
+                "exercise": "thruster",
+                "metrics": {
+                  "repetitions": 9
+                }
+              },
+              {
+                "exercise": "rope-climb",
+                "metrics": {
+                  "repetitions": 6
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Zachary Tellier",
+    "descriptions": {
+      "en": "For Time: 10 Burpees, 25 Push-Ups, 50 Lunges, 100 Sit-Ups, 150 Air Squats - Each new segment starts with 10 Burpees",
+      "fr": "For Time : 10 Burpees, 25 Push-Ups, 50 fentes, 100 sit-ups, 150 Air Squats - Chaque nouveau segment commence par 10 Burpees"
+    },
+    "type": "for-time",
+    "category": "the-heroes",
+    "team_size": null,
+    "versions": [
+      {
+        "type": "rx",
+        "variants": [
+          {
+            "gender": "male",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 10 Burpees, 25 Push-Ups, 50 Lunges, 100 Sit-Ups, 150 Air Squats - Each new segment starts with 10 Burpees",
+              "fr": "For Time : 10 Burpees, 25 Push-Ups, 50 fentes, 100 sit-ups, 150 Air Squats - Chaque nouveau segment commence par 10 Burpees"
+            },
+            "exercises": [
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 10
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 25
+                }
+              },
+              {
+                "exercise": "lunge",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "sit-up",
+                "metrics": {
+                  "repetitions": 100
+                }
+              },
+              {
+                "exercise": "air-squat",
+                "metrics": {
+                  "repetitions": 150
+                }
+              }
+            ]
+          },
+          {
+            "gender": "female",
+            "rounds": 1,
+            "time_cap": null,
+            "descriptions": {
+              "en": "For Time: 10 Burpees, 25 Push-Ups, 50 Lunges, 100 Sit-Ups, 150 Air Squats - Each new segment starts with 10 Burpees",
+              "fr": "For Time : 10 Burpees, 25 Push-Ups, 50 fentes, 100 sit-ups, 150 Air Squats - Chaque nouveau segment commence par 10 Burpees"
+            },
+            "exercises": [
+              {
+                "exercise": "burpee",
+                "metrics": {
+                  "repetitions": 10
+                }
+              },
+              {
+                "exercise": "push-up",
+                "metrics": {
+                  "repetitions": 25
+                }
+              },
+              {
+                "exercise": "lunge",
+                "metrics": {
+                  "repetitions": 50
+                }
+              },
+              {
+                "exercise": "sit-up",
+                "metrics": {
+                  "repetitions": 100
+                }
+              },
+              {
+                "exercise": "air-squat",
+                "metrics": {
+                  "repetitions": 150
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

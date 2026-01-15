@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "memorials-tributes-and-holidays",
+    "contents": {
+      "fr": {
+        "title": "Memorials, Tribute & Holidays",
+        "summary": "WODs conçus pour honorer des événements spéciaux, des jours fériés ou rendre hommage à des personnes importantes.",
+        "details": ""
+      },
+      "en": {
+        "title": "Memorials, Tribute & Holidays",
+        "summary": "WODs designed to honor special events, holidays, or pay tribute to important people.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "the-heroes",
+    "contents": {
+      "fr": {
+        "title": "The Heroes",
+        "summary": "WODs en hommage aux militaires, policiers, pompiers et autres héros tombés au combat. Souvent longs, intenses et très exigeants.",
+        "details": ""
+      },
+      "en": {
+        "title": "The Heroes",
+        "summary": "WODs dedicated to soldiers, police officers, firefighters, and other heroes who fell in combat. Often long, intense, and very demanding.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "classic-benchmarks",
+    "contents": {
+      "fr": {
+        "title": "Classic Benchmarks",
+        "summary": "Les WODs emblématiques de CrossFit, souvent appelés les 'Girls', servant de référence pour mesurer les progrès dans le temps.",
+        "details": ""
+      },
+      "en": {
+        "title": "Classic Benchmarks",
+        "summary": "The iconic CrossFit WODs, often referred to as the 'Girls', serving as a benchmark for measuring progress over time.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "coach-creations",
+    "contents": {
+      "fr": {
+        "title": "Coach Creations",
+        "summary": "WODs uniques créés par les coachs ou les boxs locales, souvent adaptés à un style ou objectif spécifique.",
+        "details": ""
+      },
+      "en": {
+        "title": "Coach Creations",
+        "summary": "Unique WODs created by coaches or local boxes, often tailored to a specific style or goal.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "competition-and-qualifier",
+    "contents": {
+      "fr": {
+        "title": "Competition & Qualifier",
+        "summary": "WODs utilisés lors de compétitions officielles ou de phases de qualification comme les Open ou les Games.",
+        "details": ""
+      },
+      "en": {
+        "title": "Competition & Qualifier",
+        "summary": "WODs used in official competitions or qualification phases such as the Open or the Games.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "class-daily",
+    "contents": {
+      "fr": {
+        "title": "Class Daily",
+        "summary": "Les WODs quotidiens proposés en classe, adaptés à un public large et équilibrés entre intensité, technique et récupération.",
+        "details": ""
+      },
+      "en": {
+        "title": "Class Daily",
+        "summary": "The daily WODs offered in class, suitable for a wide audience and balanced between intensity, technique, and recovery.",
+        "details": ""
+      }
+    }
+  }
+]

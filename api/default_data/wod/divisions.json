@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "rx",
+    "contents": {
+      "fr": {
+        "title": "RX",
+        "summary": "Le niveau standard ou original du WOD, sans aucune modification. Ce niveau est destiné aux athlètes ayant un bon niveau de forme physique et de technique.",
+        "details": ""
+      },
+      "en": {
+        "title": "RX",
+        "summary": "The standard or original level of the WOD, with no modifications. This level is designed for athletes with a good level of fitness and technique.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "masters",
+    "contents": {
+      "fr": {
+        "title": "Masters",
+        "summary": "Ce niveau est destiné aux athlètes de plus de 35 ans, avec des ajustements de charge ou de mouvement pour correspondre aux besoins des personnes plus âgées tout en maintenant l’intensité.",
+        "details": ""
+      },
+      "en": {
+        "title": "Masters",
+        "summary": "This level is intended for athletes over 35, with adjustments in weight or movement to suit the needs of older individuals while maintaining intensity.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "teenagers",
+    "contents": {
+      "fr": {
+        "title": "Teenagers",
+        "summary": "Un niveau pour les adolescents, où les exercices sont ajustés pour être adaptés à la croissance et aux capacités physiques des jeunes athlètes.",
+        "details": ""
+      },
+      "en": {
+        "title": "Teenagers",
+        "summary": "A level for teenagers, where exercises are adjusted to be appropriate for the growth and physical abilities of young athletes.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "foundations",
+    "contents": {
+      "fr": {
+        "title": "Foundations",
+        "summary": "Un niveau pour les débutants, axé sur l'apprentissage des mouvements de base, la technique et la compréhension des principes fondamentaux du CrossFit.",
+        "details": ""
+      },
+      "en": {
+        "title": "Foundations",
+        "summary": "A level for beginners, focused on learning basic movements, technique, and understanding the fundamental principles of CrossFit.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "elite",
+    "contents": {
+      "fr": {
+        "title": "Elite",
+        "summary": "Le niveau le plus avancé, destiné aux athlètes de haut niveau. Les WODs sont conçus pour tester les limites physiques et mentales de l’athlète.",
+        "details": ""
+      },
+      "en": {
+        "title": "Elite",
+        "summary": "The most advanced level, designed for high-level athletes. The WODs are intended to push the physical and mental limits of the athlete.",
+        "details": ""
+      }
+    }
+  }
+]

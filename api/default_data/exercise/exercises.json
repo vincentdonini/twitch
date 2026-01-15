@@ -1,0 +1,5473 @@
+[
+  {
+    "slug":"arch-up-arch-hold-superman",
+    "movements":["hold"],
+    "equipment":null,
+    "category":"core",
+    "muscles":[5,18,17],
+    "contents": {
+      "fr": {
+        "title": "Arch-up / Arch Hold / Superman",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Arch-up / Arch Hold / Superman",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"back-tuck",
+    "movements":["jump"],
+    "equipment":null,
+    "category":"gymnastics",
+    "muscles":[5,6,29,18],
+    "contents": {
+      "fr": {
+        "title": "Back Tuck",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Back Tuck",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"ball-slam",
+    "movements":["ball-slam"],
+    "equipment":"wall-ball",
+    "category":"full-body",
+    "muscles":[5,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Ball Slam",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Ball Slam",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"bear-crawl",
+    "movements":["bear-crawl"],
+    "equipment":null,"category":"conditioning",
+    "muscles":[5,6,26,17,4],
+    "contents": {
+      "fr": {
+        "title": "Bear Crawl",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Bear Crawl",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"bench-press",
+    "movements":["press"],
+    "equipment":"barbell",
+    "category":"upper-body",
+    "muscles":[1,3,22,34,35,14],
+    "contents": {
+      "fr": {
+        "title": "Bench Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Bench Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"bent-over-row",
+    "movements":["row"],
+    "equipment":"barbell",
+    "category":"upper-body",
+    "muscles":[14,23,5,6,27,28],
+    "contents": {
+      "fr": {
+        "title": "Bent Over Row",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Bent Over Row",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"broad-jump",
+    "movements":["jump"],
+    "equipment":null,"category":"plyometrics",
+    "muscles":[5,6,4,26,29],
+    "contents": {
+      "fr": {
+        "title": "Broad Jump",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Broad Jump",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"candlestick",
+    "movements":["candlestick"],
+    "equipment":null,"category":"gymnastics",
+    "muscles":[17,33,18],
+    "contents": {
+      "fr": {
+        "title": "Candlestick",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Candlestick",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"curl",
+    "movements":["curl"],
+    "equipment":"barbell",
+    "category":"upper-body",
+    "muscles":[15,30],
+    "contents": {
+      "fr": {
+        "title": "Curl",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Curl",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"devil-press",
+    "movements":["press"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,17,22],
+    "contents": {
+      "fr": {
+        "title": "Devil Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Devil Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"farmers-carry",
+    "movements":["carry"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,4,8,36,37],
+    "contents": {
+      "fr": {
+        "title": "Farmers carry",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Farmers carry",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"firemans-carry",
+    "movements":["carry"],
+    "equipment":null,"category":"conditioning",
+    "muscles":[5,6,4,8,36,37],
+    "contents": {
+      "fr": {
+        "title": "Firemans carry",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Firemans carry",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"floor-wiper",
+    "movements":["floor-wiper"],
+    "equipment":"barbell",
+    "category":"core",
+    "muscles":[17,33,25,5,6],
+    "contents": {
+      "fr": {
+        "title": "Floor wiper",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Floor wiper",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"flutter-kick-leg-raise",
+    "movements":["flutter-kick-leg-raise"],
+    "equipment":null,"category":"core",
+    "muscles":[17,33,4],
+    "contents": {
+      "fr": {
+        "title": "Flutter kick Leg raise",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Flutter kick Leg raise",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"glide-kip",
+    "movements":["muscle-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[5,6,14,17,33,1,3],
+    "contents": {
+      "fr": {
+        "title": "Glide kip",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Glide kip",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"good-morning",
+    "movements":["squat"],
+    "equipment":"barbell",
+    "category":"lower-body",
+    "muscles":[5,12,18,23],
+    "contents": {
+      "fr": {
+        "title": "Good morning",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Good morning",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"grasshopper",
+    "movements":["grasshopper"],
+    "equipment":null,"category":"core",
+    "muscles":[17,25,33,5],
+    "contents": {
+      "fr": {
+        "title": "Grasshopper",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Grasshopper",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"ground-to-overhead",
+    "movements":["overhead"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Ground-to-overhead",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Ground-to-overhead",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hack-squat",
+    "movements":["squat"],
+    "equipment":"barbell",
+    "category":"lower-body",
+    "muscles":[5,6,4,26,29,9],
+    "contents": {
+      "fr": {
+        "title": "Hack Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hack Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hammer-strike",
+    "movements":["hammer-strike"],
+    "equipment":"wall-ball",
+    "category":"full-body",
+    "muscles":[1,11,13,16,14],
+    "contents": {
+      "fr": {
+        "title": "Hammer strike",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hammer strike",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"handstand-hold",
+    "movements":["hold"],
+    "equipment":null,"category":"gymnastics",
+    "muscles":[1,11,13,16,14],
+    "contents": {
+      "fr": {
+        "title": "Handstand Hold",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Handstand Hold",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"handstand-walk",
+    "movements":["handstand"],
+    "equipment":null,"category":"gymnastics",
+    "muscles":[1,3,11,35,24,5,6],
+    "contents": {
+      "fr": {
+        "title": "Handstand walk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Handstand walk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hanging-l-sit",
+    "movements":["l-sit"],
+    "equipment":"barbell",
+    "category":"core",
+    "muscles":[17,33,25],
+    "contents": {
+      "fr": {
+        "title": "Hanging l-sit",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hanging l-sit",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"heel-clap",
+    "movements":["jump"],
+    "equipment":null,"category":"plyometrics",
+    "muscles":[4,5,6],
+    "contents": {
+      "fr": {
+        "title": "Heel clap",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Heel clap",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"inchworm",
+    "movements":["inchworm"],
+    "equipment":null,"category":"conditioning",
+    "muscles":[17,33,5,6,1,3],
+    "contents": {
+      "fr": {
+        "title": "Inchworm",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Inchworm",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"jumping-jack",
+    "movements":["jump"],
+    "equipment":null,"category":"conditioning",
+    "muscles":[4,31,5,6,1,11],
+    "contents": {
+      "fr": {
+        "title": "Jumping jack",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Jumping jack",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"lateral-jump",
+    "movements":["jump"],
+    "equipment":null,"category":"plyometrics",
+    "muscles":[5,6,4,26,29,7,10],
+    "contents": {
+      "fr": {
+        "title": "Lateral Jump",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Lateral Jump",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"lateral-raise",
+    "movements":["lateral-raise"],
+    "equipment":"dumbbells",
+    "category":"upper-body",
+    "muscles":[11,27,28],
+    "contents": {
+      "fr": {
+        "title": "Lateral raise",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Lateral raise",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"man-maker",
+    "movements":["man-maker"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,22,34,14,17],
+    "contents": {
+      "fr": {
+        "title": "Man maker",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Man maker",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"medicine-ball-clean",
+    "movements":["clean"],
+    "equipment":"wall-ball",
+    "category":"full-body",
+    "muscles":[5,6,1,3,22,34,14],
+    "contents": {
+      "fr": {
+        "title": "Medicine Ball Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Medicine Ball Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"monkey-bar-traverse",
+    "movements":["monkey-bar-traverse"],
+    "equipment":"pull-up-bar",
+    "category":"gymnastics",
+    "muscles":[14,15,8,23,5,6],
+    "contents": {
+      "fr": {
+        "title": "Monkey Bar Traverse",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Monkey Bar Traverse",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"mountain-climber",
+    "movements":["mountain-climber"],
+    "equipment":null,"category":"conditioning",
+    "muscles":[17,33,5,6,4],
+    "contents": {
+      "fr": {
+        "title": "Mountain Climber",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Mountain Climber",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"paddleboard",
+    "movements":["paddleboard"],
+    "equipment":"paddleboard",
+    "category":"cardio",
+    "muscles":[5,6,17,18,25],
+    "contents": {
+      "fr": {
+        "title": "Paddleboard",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Paddleboard",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"parallette-pass-through",
+    "movements":["parallette-pass-through"],
+    "equipment":"parallettes",
+    "category":"gymnastics",
+    "muscles":[5,6,17,33,1,3],
+    "contents": {
+      "fr": {
+        "title": "Parallette Pass-through",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Parallette Pass-through",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"pegboard-ascent",
+    "movements":["pegboard-ascent"],
+    "equipment":"peg-board",
+    "category":"upper-body",
+    "muscles":[14,15,8,1,3,5,6],
+    "contents": {
+      "fr": {
+        "title": "Pegboard Ascent",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Pegboard Ascent",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"plank-hold",
+    "movements":["hold"],
+    "equipment":null,"category":"core",
+    "muscles":[17,33,25,5,6,18],
+    "contents": {
+      "fr": {
+        "title": "Plank Hold",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Plank Hold",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"pull-over",
+    "movements":["pull-over"],
+    "equipment":"barbell",
+    "category":"upper-body",
+    "muscles":[14,23,34,22],
+    "contents": {
+      "fr": {
+        "title": "Pull-over",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Pull-over",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"russian-twist",
+    "movements":["russian-twist"],
+    "equipment":"wall-ball",
+    "category":"core",
+    "muscles":[25,17,33],
+    "contents": {
+      "fr": {
+        "title": "Russian twist",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Russian twist",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"sandbag-carry",
+    "movements":["carry"],
+    "equipment":"sandbag",
+    "category":"full-body",
+    "muscles":[5,6,4,8,36,37],
+    "contents": {
+      "fr": {
+        "title": "Sandbag carry",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Sandbag carry",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"shoulder-to-overhead",
+    "movements":["overhead"],
+    "equipment":"barbell",
+    "category":"upper-body",
+    "muscles":[1,3,11,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Shoulder-to-overhead",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Shoulder-to-overhead",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"ski-skiing-on-ski-erg",
+    "movements":["ski-skiing-on-ski-erg"],
+    "equipment":"ski-erg",
+    "category":"cardio",
+    "muscles":[14,15,17,33,5,6],
+    "contents": {
+      "fr": {
+        "title": "Skiing on ski-erg",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Skiing on ski-erg",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"skin-the-cat",
+    "movements":["skin-the-cat"],
+    "equipment":null,"category":"gymnastics",
+    "muscles":[14,17,33,1,3,5,6],
+    "contents": {
+      "fr": {
+        "title": "Skin The Cat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Skin The Cat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"sled-pull",
+    "movements":["sled-pull"],
+    "equipment":"sled",
+    "category":"conditioning",
+    "muscles":[5,6,4,29,26,7],
+    "contents": {
+      "fr": {
+        "title": "Sled Pull",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Sled Pull",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"sled-push-prowler-push",
+    "movements":["sled-push-prowler-push"],
+    "equipment":"sled",
+    "category":"conditioning",
+    "muscles":[5,6,4,26,29,7],
+    "contents": {
+      "fr": {
+        "title": "Sled Push / Prowler Push",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Sled Push / Prowler Push",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"sots-press",
+    "movements":["press"],
+    "equipment":"barbell",
+    "category":"upper-body",
+    "muscles":[1,3,34,22,35,5,6],
+    "contents": {
+      "fr": {
+        "title": "Sots Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Sots Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"straddle-press-to-handstand",
+    "movements":["handstand"],
+    "equipment":null,"category":"gymnastics",
+    "muscles":[1,3,34,22,35,17,33],
+    "contents": {
+      "fr": {
+        "title": "Straddle Press-to-Handstand",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Straddle Press-to-Handstand",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"swim-swimming",
+    "movements":["swim-swimming"],
+    "equipment":null,"category":"cardio",
+    "muscles":[14,15,1,3,5,6,4],
+    "contents": {
+      "fr": {
+        "title": "Swim / Swimming",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Swim / Swimming",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"thruster",
+    "movements":["thruster"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Thruster",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Thruster",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"tip-touch",
+    "movements":["tip-touch"],
+    "equipment":null,"category":"core",
+    "muscles":[17,33,25,5,6],
+    "contents": {
+      "fr": {
+        "title": "Tip Touch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Tip Touch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"tire-flip",
+    "movements":["tire-flip"],
+    "equipment":"sled",
+    "category":"conditioning",
+    "muscles":[5,6,26,29,4,1,3],
+    "contents": {
+      "fr": {
+        "title": "Tire Flip",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Tire Flip",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"up-down",
+    "movements":["up-down"],
+    "equipment":null,"category":"full-body",
+    "muscles":[17,33,5,6,1,3],
+    "contents": {
+      "fr": {
+        "title": "Up Down",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Up Down",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"v-up",
+    "movements":["v-up"],
+    "equipment":null,"category":"core",
+    "muscles":[17,33,25],
+    "contents": {
+      "fr": {
+        "title": "V-Up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "V-Up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"wall-ball-shot",
+    "movements":["wall-ball-shot"],
+    "equipment":"wall-ball",
+    "category":"full-body",
+    "muscles":[5,6,26,29,17,33,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Wall Ball Shot",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Wall Ball Shot",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"wall-climb-wall-walk",
+    "movements":["wall-climb-wall-walk"],
+    "equipment":null,"category":"gymnastics",
+    "muscles":[5,6,4,1,3,14,17,33],
+    "contents": {
+      "fr": {
+        "title": "Wall Climb / Wall Walk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Wall Climb / Wall Walk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"wall-sit",
+    "movements":["wall-sit"],
+    "equipment":null,"category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Wall Sit",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Wall Sit",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"yoke-carry",
+    "movements":["carry"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,4,29,26,7,8],
+    "contents": {
+      "fr": {
+        "title": "Yoke carry",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Yoke carry",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"back-scale",
+    "movements":["scale"],
+    "equipment":null,
+    "category":"gymnastics",
+    "muscles":[5,6,26,18],
+    "contents": {
+      "fr": {
+        "title": "Back Scale",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Back Scale",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"front-scale",
+    "movements":["scale"],
+    "equipment":null,
+    "category":"gymnastics",
+    "muscles":[5,6,26,18],
+    "contents": {
+      "fr": {
+        "title": "Front Scale",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Front Scale",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"backward-roll",
+    "movements":["roll"],
+    "equipment":null,
+    "category":"gymnastics",
+    "muscles":[17,33,5,6,26],
+    "contents": {
+      "fr": {
+        "title": "Backward Roll",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Backward Roll",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"forward-roll",
+    "movements":["roll"],
+    "equipment":null,
+    "category":"gymnastics",
+    "muscles":[17,33,5,6,26],
+    "contents": {
+      "fr": {
+        "title": "Forward Roll",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Forward Roll",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"swing-to-backward-roll-to-support",
+    "movements":["roll"],
+    "equipment":null,
+    "category":"gymnastics",
+    "muscles":[17,33,5,6,26],
+    "contents": {
+      "fr": {
+        "title": "Swing-to-backward roll-to-support",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Swing-to-backward roll-to-support",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"hollow-hold",
+    "movements":["hollow", "hold"],
+    "equipment":null,
+    "category":"core",
+    "muscles":[17,33,25],
+    "contents": {
+      "fr": {
+        "title": "Hollow Hold",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hollow Hold",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hollow-rock",
+    "movements":["hollow"],
+    "equipment":null,
+    "category":"core",
+    "muscles":[17,33,25],
+    "contents": {
+      "fr": {
+        "title": "Hollow rock",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hollow rock",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"tuck-up",
+    "movements":["tuck"],
+    "equipment":null,
+    "category":"core",
+    "muscles":[17,33,5,6],
+    "contents": {
+      "fr": {
+        "title": "Tuck up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Tuck up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"tuck-jump",
+    "movements":["tuck","jump"],
+    "equipment":null,
+    "category":"core",
+    "muscles":[17,33,5,6],
+    "contents": {
+      "fr": {
+        "title": "Tuck Jump",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Tuck Jump",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"hang-hold",
+    "movements":["hold"],
+    "equipment":"pull-up-bar",
+    "category":"gymnastics",
+    "muscles":[1,3,14,17,33],
+    "contents": {
+      "fr": {
+        "title": "Hang Hold",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hang Hold",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"inverted-hang",
+    "movements":["inverted-hang"],
+    "equipment":"pull-up-bar",
+    "category":"gymnastics",
+    "muscles":[1,3,14,17,33],
+    "contents": {
+      "fr": {
+        "title": "Inverted hang",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Inverted hang",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"inverted-tuck",
+    "movements":["tuck"],
+    "equipment":"pull-up-bar",
+    "category":"gymnastics",
+    "muscles":[1,3,14,17,33],
+    "contents": {
+      "fr": {
+        "title": "Inverted Tuck",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Inverted Tuck",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"inverted-pike",
+    "movements":["inverted-pike"],
+    "equipment":"pull-up-bar",
+    "category":"gymnastics",
+    "muscles":[1,3,14,17,33],
+    "contents": {
+      "fr": {
+        "title": "Inverted Pike",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Inverted Pike",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"row",
+    "movements":["row"],
+    "equipment":"rower",
+    "category":"cardio",
+    "muscles":[14,23,5,6,27,28],
+    "contents": {
+      "fr": {
+        "title": "Row",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Row",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"ring-row",
+    "movements":["row"],
+    "equipment":"rower",
+    "category":"cardio",
+    "muscles":[14,23,5,6,27,28],
+    "contents": {
+      "fr": {
+        "title": "Ring Row",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Ring Row",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"bike",
+    "movements":["bike"],
+    "equipment":"air-bike",
+    "category":"cardio",
+    "muscles":[4,5,17,33],
+    "contents": {
+      "fr": {
+        "title": "Bike",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Bike",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"air-bike",
+    "movements":["bike"],
+    "equipment":"air-bike",
+    "category":"cardio",
+    "muscles":[4,5,17,33],
+    "contents": {
+      "fr": {
+        "title": "Air bike",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Air bike",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"push-up",
+    "movements":["push-up"],
+    "equipment":null,
+    "category":"upper-body",
+    "muscles":[1,3,22,34,17,33],
+    "contents": {
+      "fr": {
+        "title": "Push-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Push-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"ring-push-up",
+    "movements":["push-up"],
+    "equipment":null,
+    "category":"upper-body",
+    "muscles":[1,3,22,34,17,33],
+    "contents": {
+      "fr": {
+        "title": "Ring push-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Ring push-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"lunge",
+    "movements":["lunge"],
+    "equipment":null,
+    "category":"lower-body",
+    "muscles":[5,6,29,26,4],
+    "contents": {
+      "fr": {
+        "title": "Lunge",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Lunge",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"walking-lunge",
+    "movements":["lunge"],
+    "equipment":null,
+    "category":"lower-body",
+    "muscles":[5,6,29,26,4],
+    "contents": {
+      "fr": {
+        "title": "Walking lunge",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Walking lunge",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"barbell-front-rack-lunge",
+    "movements":["lunge"],
+    "equipment":"barbell",
+    "category":"lower-body",
+    "muscles":[5,6,29,26,4],
+    "contents": {
+      "fr": {
+        "title": "Barbell front rack lunge",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Barbell front rack lunge",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"air-squat",
+    "movements":["squat"],
+    "equipment":null,
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Air Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Air Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"pistol",
+    "movements":["squat"],
+    "equipment":null,
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Pistol",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Pistol",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"back-extension",
+    "movements":["back-extension"],
+    "equipment":"ghd-machine",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Back extension",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Back extension",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hip-extension",
+    "movements":["hip-extension"],
+    "equipment":"ghd-machine",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Hip extension",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hip extension",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"box-jump",
+    "movements":["jump"],
+    "equipment":"box",
+    "category":"plyometrics",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Box Jump",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Box Jump",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"box-step-up",
+    "movements":["box-step-up"],
+    "equipment":"box",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Box step-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Box step-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"burpee",
+    "movements":["burpee"],
+    "equipment":null,
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,17,33],
+    "contents": {
+      "fr": {
+        "title": "Burpee",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Burpee",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"inverted-burpee",
+    "movements":["burpee"],
+    "equipment":null,
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,17,33],
+    "contents": {
+      "fr": {
+        "title": "Inverted burpee",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Inverted burpee",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"bar-over-burpee",
+    "movements":["burpee"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,17,33],
+    "contents": {
+      "fr": {
+        "title": "Bar-over burpee",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Bar-over burpee",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"bar-facing-burpee",
+    "movements":["burpee"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,17,33],
+    "contents": {
+      "fr": {
+        "title": "Bar facing burpee",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Bar facing burpee",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"burpee-box-jump",
+    "movements":["burpee","jump"],
+    "equipment":"box",
+    "category":"plyometrics",
+    "muscles":[5,6,26,29,1,3,17,33],
+    "contents": {
+      "fr": {
+        "title": "Burpee Box Jump",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Burpee Box Jump",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"burpee-box-jump-over",
+    "movements":["burpee","jump"],
+    "equipment":"box",
+    "category":"plyometrics",
+    "muscles":[5,6,26,29,1,3,17,33],
+    "contents": {
+      "fr": {
+        "title": "Burpee Box Jump Over",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Burpee Box Jump Over",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"burpee-over-row",
+    "movements":["burpee"],
+    "equipment":"rower",
+    "category":"plyometrics",
+    "muscles":[5,6,26,29,1,3,17,33],
+    "contents": {
+      "fr": {
+        "title": "Burpee Over Row",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Burpee Over Row",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-over-burpee",
+    "movements":["burpee"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,17,33],
+    "contents": {
+      "fr": {
+        "title": "Burpees Over the Dumbbell",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Burpees Over the Dumbbell",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-facing-burpee",
+    "movements":["burpee"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,17,33],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell facing burpee",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell facing burpee",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"chest-to-bar-pull-up",
+    "movements":["pull-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[14,15,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Chest-to-bar Pull-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Chest-to-bar Pull-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"jumping-chest-to-bar-pull-up",
+    "movements":["pull-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[14,15,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Jumping Chest-to-bar Pull-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Jumping Chest-to-bar Pull-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kipping-chest-to-bar-pull-up",
+    "movements":["pull-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[14,15,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kipping Chest-to-bar Pull-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kipping Chest-to-bar Pull-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"strict-chest-to-bar-pull-up",
+    "movements":["pull-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[14,15,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Strict Chest-to-bar Pull-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Strict Chest-to-bar Pull-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"clean",
+    "movements":["clean"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"clean-pull",
+    "movements":["clean"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Clean Pull",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Clean Pull",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"power-clean",
+    "movements":["clean"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Power Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Power Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"squat-clean",
+    "movements":["clean"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Squat Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Squat Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"muscle-clean",
+    "movements":["clean"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Muscle Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Muscle Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"split-clean",
+    "movements":["clean"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Split Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Split Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hang-clean",
+    "movements":["clean"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Hang Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hang Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hang-power-clean",
+    "movements":["clean"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Hang Power Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hang Power Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hang-squat-clean",
+    "movements":["clean"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Hang Squat Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hang Squat Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hang-muscle-clean",
+    "movements":["clean"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Hang Muscle Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hang Muscle Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hang-split-clean",
+    "movements":["clean"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Hang Split Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hang Split Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug": "clean-and-jerk",
+    "movements": ["clean","jerk"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Clean and Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Clean and Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "power-clean-and-jerk",
+    "movements": ["clean","jerk"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Power Clean and Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Power Clean and Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "squat-clean-and-jerk",
+    "movements": ["clean","jerk"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Squat Clean and Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Squat Clean and Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "split-clean-and-jerk",
+    "movements": ["clean","jerk"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Split Clean and Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Split Clean and Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "clean-and-push-press",
+    "movements": ["clean","press"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Clean and Push Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Clean and Push Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "power-clean-and-push-press",
+    "movements": ["clean","press"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Power Clean and Push Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Power Clean and Push Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "squat-clean-and-push-press",
+    "movements": ["clean","press"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Squat Clean and Push Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Squat Clean and Push Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "split-clean-and-push-press",
+    "movements": ["clean","press"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Split Clean and Push Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Split Clean and Push Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug": "clean-and-push-jerk",
+    "movements": ["clean","jerk"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Clean and Push Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Clean and Push Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "power-clean-and-push-jerk",
+    "movements": ["clean","jerk"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Power Clean and Push Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Power Clean and Push Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "squat-clean-and-push-jerk",
+    "movements": ["clean","jerk"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Squat Clean and Push Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Squat Clean and Push Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "split-clean-and-push-jerk",
+    "movements": ["clean","jerk"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Split Clean and Push Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Split Clean and Push Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug": "clean-and-split-jerk",
+    "movements": ["clean","jerk"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Clean and Split Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Clean and Split Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "power-clean-and-split-jerk",
+    "movements": ["clean","jerk"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Power Clean and Split Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Power Clean and Split Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "squat-clean-and-split-jerk",
+    "movements": ["clean","jerk"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Squat Clean and Split Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Squat Clean and Split Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "split-clean-and-split-jerk",
+    "movements": ["clean","jerk"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles": [5,6,1,3,14,22,34,35,11],
+    "contents": {
+      "fr": {
+        "title": "Split Clean and Split Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Split Clean and Split Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"sumo-deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Sumo Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Sumo Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"sumo-deadlift-high-pull",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29,1,3],
+    "contents": {
+      "fr": {
+        "title": "Sumo Deadlift High-Pull",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Sumo Deadlift High-Pull",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"romanian-deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title":"Romanian Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title":"Romanian Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"romanian-deadlift-high-pull",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29,1,3],
+    "contents": {
+      "fr": {
+        "title": "Romanian Deadlift High-Pull",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Romanian Deadlift High-Pull",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"stiff-legged-deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Stiff Legged Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Stiff Legged Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"snatch-grip-deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Snatch-Grip Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Snatch-Grip Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"snatch-grip-deadlift-high-pull",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29,1,3],
+    "contents": {
+      "fr": {
+        "title": "Snatch-Grip Deadlift High-Pull",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Snatch-Grip Deadlift High-Pull",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"clean-grip-deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Clean-Grip Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Clean-Grip Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"clean-grip-deadlift-high-pull",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29,1,3],
+    "contents": {
+      "fr": {
+        "title": "Clean-Grip Deadlift High-Pull",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Clean-Grip Deadlift High-Pull",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"deficit-deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Deficit Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Deficit Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"block-pull-deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Block Pull Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Block Pull Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"trap-bar-deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Trap Bar Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Trap Bar Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"trap-bar-deadlift-high-pull",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29,1,3],
+    "contents": {
+      "fr": {
+        "title": "Trap Bar Deadlift High-Pull",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Trap Bar Deadlift High-Pull",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"rack-pull-deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Rack Pull Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Rack Pull Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"pause-deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Pause Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Pause Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hex-bar-deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Hex Bar Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hex Bar Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hex-bar-deadlift-high-pull",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29,1,3],
+    "contents": {
+      "fr": {
+        "title": "Hex Bar Deadlift High-Pull",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hex Bar Deadlift High-Pull",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"single-leg-deadlift",
+    "movements":["deadlift"],
+    "equipment":"barbell",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Single Leg Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Single Leg Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"dip",
+    "movements":["dip"],
+    "equipment":"parallettes",
+    "category":"upper-body",
+    "muscles":[13,16,21,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dip",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dip",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"ring-dip",
+    "movements":["dip"],
+    "equipment":"gymnastic-rings",
+    "category":"upper-body",
+    "muscles":[13,16,21,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Ring Dip",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Ring Dip",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"tricep-dip",
+    "movements":["dip"],
+    "equipment":"parallettes",
+    "category":"upper-body",
+    "muscles":[13,16,21,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Tricep Dip",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Tricep Dip",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"straight-bar-dip",
+    "movements":["dip"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[13,16,21,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Pull-Up Bar",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Pull-Up Bar",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"dumbbell-snatch",
+    "movements":["snatch"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-power-snatch",
+    "movements":["snatch"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Power Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Power Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-squat-snatch",
+    "movements":["snatch"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Squat Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Squat Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-muscle-snatch",
+    "movements":["snatch"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Muscle Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Muscle Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-split-snatch",
+    "movements":["snatch"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Split Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Split Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-thruster",
+    "movements":["thruster"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Thruster",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Thruster",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-swing",
+    "movements":["swing"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Swing",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Swing",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-tater",
+    "movements":["tater"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Tater",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Tater",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-clean",
+    "movements":["clean"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-press",
+    "movements":["press"],
+    "equipment":"dumbbells",
+    "category":"upper-body",
+    "muscles":[1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-push-press",
+    "movements":["press"],
+    "equipment":"dumbbells",
+    "category":"upper-body",
+    "muscles":[1,3,22,34,5,6],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Push-Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Push-Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-power-clean",
+    "movements":["clean"],
+    "equipment":"dumbbells",
+    "category":"upper-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Power Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Power Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-squat-clean",
+    "movements":["clean"],
+    "equipment":"dumbbells",
+    "category":"upper-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Squat Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Squat Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-muscle-clean",
+    "movements":["clean"],
+    "equipment":"dumbbells",
+    "category":"upper-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Muscle Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Muscle Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-split-clean",
+    "movements":["clean"],
+    "equipment":"dumbbells",
+    "category":"upper-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Split Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Split Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-push-jerk",
+    "movements":["jerk"],
+    "equipment":"dumbbells",
+    "category":"upper-body",
+    "muscles":[1,3,22,34,5,6],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Push Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Push Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-front-squat",
+    "movements":["squat"],
+    "equipment":"dumbbells",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Front Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Front Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-goblet-squat",
+    "movements":["squat"],
+    "equipment":"dumbbells",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Goblet Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Goblet Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-overhead-squat",
+    "movements":["overhead","squat"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,26,29,4,1,3,22],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Overhead Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Overhead Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-overhead-walking-lunge",
+    "movements":["overhead","lunge"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,26,29,4,1,3,22],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Overhead Walking Lunge",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Overhead Walking Lunge",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-front-rack-lunge",
+    "movements":["lunge"],
+    "equipment":"dumbbells",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4,1,3],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Front Rack Lunge",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Front Rack Lunge",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-walking-lunge",
+    "movements":["lunge"],
+    "equipment":"dumbbells",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Walking Lunge",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Walking Lunge",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-row",
+    "movements":["row"],
+    "equipment":"dumbbells",
+    "category":"upper-body",
+    "muscles":[14,23,5,6,27,28],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Row",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Row",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-high-pull",
+    "movements":["high-pull"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell High Pull",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell High Pull",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-turkish-get-up",
+    "movements":["turkish-get-up"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,17,33],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Turkish Get-Up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Turkish Get-Up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-windmill",
+    "movements":["windmill"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,17,33,25],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Windmill",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Windmill",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-deadlift",
+    "movements":["deadlift"],
+    "equipment":"dumbbells",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-snatch-to-overhead",
+    "movements":["overhead","snatch"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Snatch-To-Overhead",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Snatch-To-Overhead",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-clean-and-press",
+    "movements":["clean","press"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Clean and Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Clean and Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-halo",
+    "movements":["halo"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[1,3,11,27,28],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Halo",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Halo",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-russian-twist",
+    "movements":["russian-twist"],
+    "equipment":"wall-ball",
+    "category":"core",
+    "muscles":[25,17,33],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Russian Twist",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Russian Twist",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-suitcase-carry",
+    "movements":["carry"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,4,8,36,37],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Suitcase Carry",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Suitcase Carry",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-farmers-carry",
+    "movements":["carry"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,4,8,36,37],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Farmer's Carry",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Farmer's Carry",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"dumbbell-hang-clean-to-overhead",
+    "movements":["overhead","clean"],
+    "equipment":"dumbbells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Dumbbell Hang Clean-To-Overheads",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Dumbbell Hang Clean-To-Overheads",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"single-under",
+    "movements":["jump-rope"],
+    "equipment":"jump-rope",
+    "category":"cardio",
+    "muscles":[4,5,17,33],
+    "contents": {
+      "fr": {
+        "title": "Single Under",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Single Under",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"double-under",
+    "movements":["jump-rope"],
+    "equipment":"jump-rope",
+    "category":"cardio",
+    "muscles":[4,5,17,33],
+    "contents": {
+      "fr": {
+        "title": "Double Under",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Double Under",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"triple-under",
+    "movements":["jump-rope"],
+    "equipment":"jump-rope",
+    "category":"cardio",
+    "muscles":[4,5,17,33],
+    "contents": {
+      "fr": {
+        "title": "Triple Under",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Triple Under",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"crossover",
+    "movements":["jump-rope"],
+    "equipment":"jump-rope",
+    "category":"cardio",
+    "muscles":[4,5,17,33],
+    "contents": {
+      "fr": {
+        "title": "Crossover",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Crossover",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"handstand-push-up",
+    "movements":["push-up","handstand"],
+    "equipment":null,"category":"upper-body",
+    "muscles":[1,3,11,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kipping-handstand-push-up",
+    "movements":["push-up","handstand"],
+    "equipment":null,"category":"upper-body",
+    "muscles":[1,3,11,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Kipping Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kipping Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"strict-handstand-push-up",
+    "movements":["push-up","handstand"],
+    "equipment":null,"category":"upper-body",
+    "muscles":[1,3,11,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Strict Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Strict Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"deficit-handstand-push-up",
+    "movements":["push-up","handstand"],
+    "equipment":null,"category":"upper-body",
+    "muscles":[1,3,11,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Deficit Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Deficit Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kipping-deficit-handstand-push-up",
+    "movements":["push-up","handstand"],
+    "equipment":null,"category":"upper-body",
+    "muscles":[1,3,11,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Kipping Deficit Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kipping Deficit Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"strict-deficit-handstand-push-up",
+    "movements":["push-up","handstand"],
+    "equipment":null,"category":"upper-body",
+    "muscles":[1,3,11,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Strict Deficit Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Strict Deficit Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"freestanding-handstand-push-up",
+    "movements":["push-up","handstand"],
+    "equipment":null,"category":"upper-body",
+    "muscles":[1,3,11,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Freestanding Deficit Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Freestanding Deficit Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"chest-to-wall-handstand-push-up",
+    "movements":["push-up","handstand"],
+    "equipment":null,"category":"upper-body",
+    "muscles":[1,3,11,22,34,35],
+    "contents": {
+      "fr": {
+        "title": "Chest-To-Wall Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Chest-To-Wall Handstand Push-Up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"kettlebell-snatch",
+    "movements":["snatch"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-power-snatch",
+    "movements":["snatch"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Power Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Power Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-squat-snatch",
+    "movements":["snatch"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Squat Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Squat Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-muscle-snatch",
+    "movements":["snatch"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Muscle Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Muscle Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-split-snatch",
+    "movements":["snatch"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Split Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Split Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-thruster",
+    "movements":["thruster"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell thruster",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell thruster",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-swing",
+    "movements":["swing"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell swing",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell swing",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-tater",
+    "movements":["tater"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell tater",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell tater",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-clean",
+    "movements":["clean"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-press",
+    "movements":["press"],
+    "equipment":"kettlebells",
+    "category":"upper-body",
+    "muscles":[1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-push-press",
+    "movements":["press"],
+    "equipment":"kettlebells",
+    "category":"upper-body",
+    "muscles":[1,3,22,34,5,6],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell push Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell push Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-power-clean",
+    "movements":["clean"],
+    "equipment":"kettlebells",
+    "category":"upper-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Power Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Power Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-squat-clean",
+    "movements":["clean"],
+    "equipment":"kettlebells",
+    "category":"upper-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Squat Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Squat Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-muscle-clean",
+    "movements":["clean"],
+    "equipment":"kettlebells",
+    "category":"upper-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Muscle Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Muscle Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-split-clean",
+    "movements":["clean"],
+    "equipment":"kettlebells",
+    "category":"upper-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell split Clean",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell split Clean",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-push-jerk",
+    "movements":["jerk"],
+    "equipment":"kettlebells",
+    "category":"upper-body",
+    "muscles":[1,3,22,34,5,6],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell push Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell push Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-front-squat",
+    "movements":["squat"],
+    "equipment":"kettlebells",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell front Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell front Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-goblet-squat",
+    "movements":["squat"],
+    "equipment":"kettlebells",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell goblet Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell goblet Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-overhead-squat",
+    "movements":["overhead","squat"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,26,29,4,1,3,22],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell overhead Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell overhead Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-overhead-walking-lunge",
+    "movements":["overhead","lunge"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,26,29,4,1,3,22],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell overhead walking lunge",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell overhead walking lunge",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-front-rack-lunge",
+    "movements":["lunge"],
+    "equipment":"kettlebells",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4,1,3],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell front rack lunge",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell front rack lunge",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-walking-lunge",
+    "movements":["lunge"],
+    "equipment":"kettlebells",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell walking lunge",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell walking lunge",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-row",
+    "movements":["row"],
+    "equipment":"kettlebells",
+    "category":"upper-body",
+    "muscles":[14,23,5,6,27,28],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Row",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Row",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-high-pull",
+    "movements":["high-pull"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell High-Pull",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell High-Pull",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-turkish-get-up",
+    "movements":["turkish-get-up"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,17,33],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell turkish get-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell turkish get-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-windmill",
+    "movements":["windmill"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,17,33,25],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell windmill",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell windmill",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-deadlift",
+    "movements":["deadlift"],
+    "equipment":"kettlebells",
+    "category":"strength",
+    "muscles":[5,6,12,18,23,26,29],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Deadlift",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Deadlift",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-snatch-to-overhead",
+    "movements":["overhead","snatch"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Snatch-to-overhead",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Snatch-to-overhead",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-clean-and-press",
+    "movements":["clean","press"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Clean and Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Clean and Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-halo",
+    "movements":["halo"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[1,3,11,27,28],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Halo",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Halo",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-russian-twist",
+    "movements":["russian-twist"],
+    "equipment":"kettlebells",
+    "category":"core",
+    "muscles":[25,17,33],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Russian Twist",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Russian Twist",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-suitcase-carry",
+    "movements":["carry"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,4,8,36,37],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Suitcase Carry",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Suitcase Carry",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kettlebell-farmers-carry",
+    "movements":["carry"],
+    "equipment":"kettlebells",
+    "category":"full-body",
+    "muscles":[5,6,4,8,36,37],
+    "contents": {
+      "fr": {
+        "title": "Kettlebell Farmer's Carry",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kettlebell Farmer's Carry",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"knees-to-elbows",
+    "movements":["knees-to-elbows"],
+    "equipment":"pull-up-bar",
+    "category":"core",
+    "muscles":[17,33,25],
+    "contents": {
+      "fr": {
+        "title": "Knees-to-Elbows",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Knees-to-Elbows",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kipping-knees-to-elbows",
+    "movements":["knees-to-elbows"],
+    "equipment":"pull-up-bar",
+    "category":"core",
+    "muscles":[17,33,25],
+    "contents": {
+      "fr": {
+        "title": "Kipping Knees-to-Elbows",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kipping Knees-to-Elbows",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"strict-knees-to-elbows",
+    "movements":["knees-to-elbows"],
+    "equipment":"pull-up-bar",
+    "category":"core",
+    "muscles":[17,33,25],
+    "contents": {
+      "fr": {
+        "title": "Strict knees-to-elbows",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Strict knees-to-elbows",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"l-sit",
+    "movements":["l-sit"],
+    "equipment":null,"category":"core",
+    "muscles":[17,33,25,5],
+    "contents": {
+      "fr": {
+        "title": "L-sit",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "L-sit",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"l-sit-on-rings",
+    "movements":["l-sit"],
+    "equipment":"gymnastic-rings",
+    "category":"core",
+    "muscles":[17,33,25,5],
+    "contents": {
+      "fr": {
+        "title": "L-sit on rings",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "L-sit on rings",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"l-sit-rope-climb",
+    "movements":["l-sit","rope-climb"],
+    "equipment":"rope",
+    "category":"upper-body",
+    "muscles":[17,33,25,5],
+    "contents": {
+      "fr": {
+        "title": "L-sit rope climb",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "L-sit rope climb",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"l-sit-to-shoulder-stand",
+    "movements":["l-sit"],
+    "equipment":null,"category":"gymnastics",
+    "muscles":[17,33,25,5],
+    "contents": {
+      "fr": {
+        "title": "L-sit-to-shoulder stand",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "L-sit-to-shoulder stand",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"muscle-up",
+    "movements":["muscle-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[1,3,14,22,34,35,27],
+    "contents": {
+      "fr": {
+        "title": "Muscle-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Muscle-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kipping-muscle-up",
+    "movements":["muscle-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[1,3,14,22,34,35,27],
+    "contents": {
+      "fr": {
+        "title": "Kipping Muscle-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kipping Muscle-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"strict-muscle-up",
+    "movements":["muscle-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[1,3,14,22,34,35,27],
+    "contents": {
+      "fr": {
+        "title": "Strict Muscle-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Strict Muscle-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"ring-muscle-up",
+    "movements":["muscle-up"],
+    "equipment":"gymnastic-rings",
+    "category":"upper-body",
+    "muscles":[1,3,14,22,34,35,27],
+    "contents": {
+      "fr": {
+        "title": "Ring Muscle-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Ring Muscle-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kipping-ring-muscle-up",
+    "movements":["muscle-up"],
+    "equipment":"gymnastic-rings",
+    "category":"upper-body",
+    "muscles":[1,3,14,22,34,35,27],
+    "contents": {
+      "fr": {
+        "title": "Kipping ring Muscle-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kipping ring Muscle-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"strict-ring-muscle-up",
+    "movements":["muscle-up"],
+    "equipment":"gymnastic-rings",
+    "category":"upper-body",
+    "muscles":[1,3,14,22,34,35,27],
+    "contents": {
+      "fr": {
+        "title": "Strict ring Muscle-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Strict ring Muscle-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"pull-up",
+    "movements":["pull-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[14,23,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Pull-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Pull-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"weighted-pull-up",
+    "movements":["pull-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[14,23,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Weighted Pull-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Weighted Pull-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"jumping-pull-up",
+    "movements":["pull-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[14,23,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Jumping Pull-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Jumping Pull-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"chin-over-bar-pull-up",
+    "movements":["pull-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[14,23,1,3,22,34,17,33],
+    "contents": {
+      "fr": {
+        "title": "Chin over-bar Pull-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Chin over-bar Pull-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"butterfly-pull-up",
+    "movements":["pull-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[14,23,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Butterfly Pull-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Butterfly Pull-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kipping-pull-up",
+    "movements":["pull-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[14,23,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Kipping Pull-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kipping Pull-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"strict-pull-up",
+    "movements":["pull-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[14,23,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Strict Pull-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Strict Pull-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"l-pull-up",
+    "movements":["pull-up"],
+    "equipment":"pull-up-bar",
+    "category":"upper-body",
+    "muscles":[14,23,1,3,22,34,17,33],
+    "contents": {
+      "fr": {
+        "title": "L Pull-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "L Pull-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"rope-climb",
+    "movements":["rope-climb"],
+    "equipment":"rope",
+    "category":"upper-body",
+    "muscles":[14,23,1,3,22,34,5,6],
+    "contents": {
+      "fr": {
+        "title": "Rope climb",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Rope climb",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"legless-rope-climb",
+    "movements":["rope-climb"],
+    "equipment":"rope",
+    "category":"upper-body",
+    "muscles":[14,23,1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Legless rope climb",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Legless rope climb",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"modified-rope-climb",
+    "movements":["rope-climb"],
+    "equipment":"rope",
+    "category":"upper-body",
+    "muscles":[14,23,1,3,22,34,5,6],
+    "contents": {
+      "fr": {
+        "title": "Modified rope climb",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Modified rope climb",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"run",
+    "movements":["run"],
+    "equipment":null,"category":"cardio",
+    "muscles":[5,6,26,29,4,17,33],
+    "contents": {
+      "fr": {
+        "title": "Run",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Run",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"weighted-run",
+    "movements":["run"],
+    "equipment":null,"category":"cardio",
+    "muscles":[5,6,26,29,4,17,33,36,37],
+    "contents": {
+      "fr": {
+        "title": "Weighted run",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Weighted run",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"shuttle-run",
+    "movements":["run"],
+    "equipment":null,"category":"cardio",
+    "muscles":[5,6,26,29,4,17,33],
+    "contents": {
+      "fr": {
+        "title": "Shuttle run",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Shuttle run",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"sit-up",
+    "movements":["sit-up"],
+    "equipment":null,"category":"core",
+    "muscles":[17,33,25],
+    "contents": {
+      "fr": {
+        "title": "Sit-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Sit-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"ghd-sit-up",
+    "movements":["sit-up"],
+    "equipment":"ghd-machine",
+    "category":"core",
+    "muscles":[17,33,25],
+    "contents": {
+      "fr": {
+        "title": "GHD Sit-up",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "GHD Sit-up",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"toes-to-bar",
+    "movements":["toes-to"],
+    "equipment":"pull-up-bar",
+    "category":"core",
+    "muscles":[17,33,25,1,3],
+    "contents": {
+      "fr": {
+        "title": "Toes-to-bar",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Toes-to-bar",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kipping-toes-to-bar",
+    "movements":["toes-to"],
+    "equipment":"pull-up-bar",
+    "category":"core",
+    "muscles":[17,33,25,1,3],
+    "contents": {
+      "fr": {
+        "title": "Kipping Toes-to-bar",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kipping Toes-to-bar",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"strict-toes-to-bar",
+    "movements":["toes-to"],
+    "equipment":"pull-up-bar",
+    "category":"core",
+    "muscles":[17,33,25,1,3],
+    "contents": {
+      "fr": {
+        "title": "Strict Toes-to-bar",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Strict Toes-to-bar",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"toes-to-rings",
+    "movements":["toes-to"],
+    "equipment":"gymnastic-rings",
+    "category":"core",
+    "muscles":[17,33,25,1,3],
+    "contents": {
+      "fr": {
+        "title": "Toes-to-ring",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Toes-to-ring",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"kipping-toes-to-rings",
+    "movements":["toes-to"],
+    "equipment":"gymnastic-rings",
+    "category":"core",
+    "muscles":[17,33,25,1,3],
+    "contents": {
+      "fr": {
+        "title": "Kipping Toes-to-ring",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Kipping Toes-to-ring",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"strict-toes-to-rings",
+    "movements":["toes-to"],
+    "equipment":"gymnastic-rings",
+    "category":"core",
+    "muscles":[17,33,25,1,3],
+    "contents": {
+      "fr": {
+        "title": "Strict Toes-to-ring",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Strict Toes-to-ring",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"snatch",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"snatch-pull",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,14,23],
+    "contents": {
+      "fr": {
+        "title": "Snatch Pull",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Snatch Pull",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"power-snatch",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Power Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Power Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"squat-snatch",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Squat Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Squat Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"muscle-snatch",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Muscle Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Muscle Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"split-snatch",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Split Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Split Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hang-snatch",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Hang Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hang Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hang-power-snatch",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Hang Power Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hang Power Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hang-squat-snatch",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Hang Squat Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hang Squat Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"hang-muscle-snatch",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Hang Muscle Snatch",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Hang Muscle Snatch",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"snatch-balance",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Snatch Balance",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Snatch Balance",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"power-snatch-balance",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Power Snatch Balance",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Power Snatch Balance",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"squat-snatch-balance",
+    "movements":["snatch"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,1,3,14,22,34],
+    "contents": {
+      "fr": {
+        "title": "Squat Snatch Balance",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Squat Snatch Balance",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"jerk",
+    "movements":["jerk"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[1,3,22,34,5,6,26,29],
+    "contents": {
+      "fr": {
+        "title": "Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"push-jerk",
+    "movements":["jerk"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[1,3,22,34,5,6,26,29],
+    "contents": {
+      "fr": {
+        "title": "Push Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Push Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"split-jerk",
+    "movements":["jerk"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[1,3,22,34,5,6,26,29],
+    "contents": {
+      "fr": {
+        "title": "Split Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Split Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"power-jerk",
+    "movements":["jerk"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[1,3,22,34,5,6,26,29],
+    "contents": {
+      "fr": {
+        "title": "Power Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Power Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"shoulder-press",
+    "movements":["press"],
+    "equipment":"barbell",
+    "category":"upper-body",
+    "muscles":[1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Shoulder Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Shoulder Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"strict-press",
+    "movements":["press"],
+    "equipment":"barbell",
+    "category":"upper-body",
+    "muscles":[1,3,22,34],
+    "contents": {
+      "fr": {
+        "title": "Strict Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Strict Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"push-press",
+    "movements":["press"],
+    "equipment":"barbell",
+    "category":"upper-body",
+    "muscles":[1,3,22,34,5,6],
+    "contents": {
+      "fr": {
+        "title": "Push Press",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Push Press",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"push-jerk",
+    "movements":["jerk"],
+    "equipment":"barbell",
+    "category":"upper-body",
+    "muscles":[1,3,22,34,5,6,26,29],
+    "contents": {
+      "fr": {
+        "title": "Push Jerk",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Push Jerk",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"overhead-squat",
+    "movements":["overhead","squat"],
+    "equipment":"barbell",
+    "category":"full-body",
+    "muscles":[5,6,26,29,4,1,3,22],
+    "contents": {
+      "fr": {
+        "title": "Overhead Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Overhead Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "snatch-grip-overhead-squat",
+    "movements": ["overhead", "squat"],
+    "equipment": "barbell",
+    "category": "full-body",
+    "muscles":[5,6,26,29,4,1,3,22],
+    "contents": {
+      "fr": {
+        "title": "Snatch-Grip overhead Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Snatch-Grip overhead Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+
+  {
+    "slug":"back-squat",
+    "movements":["squat"],
+    "equipment":"barbell",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Back Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Back Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"front-squat",
+    "movements":["squat"],
+    "equipment":"barbell",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Front Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Front Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"goblet-squat",
+    "movements":["squat"],
+    "equipment":"dumbbells",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Gobelet Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Gobelet Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug":"zercher-squat",
+    "movements":["squat"],
+    "equipment":"barbell",
+    "category":"lower-body",
+    "muscles":[5,6,26,29,4],
+    "contents": {
+      "fr": {
+        "title": "Zercher Squat",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Zercher Squat",
+        "summary": "",
+        "details": ""
+      }
+    }
+  }
+]

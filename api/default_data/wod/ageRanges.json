@@ -1,0 +1,223 @@
+[
+  {
+    "slug": "rx",
+    "min_age": 16,
+    "max_age": 54,
+    "contents": {
+      "fr": {
+        "title": "16-54",
+        "summary": "Catégorie principale pour les adultes, appelée 'Individual', destinée aux athlètes de 16 à 54 ans.",
+        "details": "Cette tranche d’âge correspond à la catégorie individuelle standard pour les compétitions et WODs Open, sans ajustements particuliers."
+      },
+      "en": {
+        "title": "16-54",
+        "summary": "Main category for adults, called 'Individual', intended for athletes aged 16-54.",
+        "details": "This age range corresponds to the standard individual category for competitions and Open WODs, without special adjustments."
+      }
+    }
+  },
+  {
+    "slug": "masters",
+    "min_age": 55,
+    "max_age": null,
+    "contents": {
+      "fr": {
+        "title": "55+",
+        "summary": "Catégorie Masters pour les athlètes de 55 ans et plus.",
+        "details": "Les WODs sont adaptés pour assurer la sécurité et l’efficacité des participants tout en conservant un challenge adapté à cette tranche d’âge."
+      },
+      "en": {
+        "title": "55+",
+        "summary": "Masters category for athletes aged 55 and above.",
+        "details": "WODs are adjusted to ensure participants’ safety and effectiveness while maintaining a challenge suitable for this age range."
+      }
+    }
+  },
+  {
+    "slug": "teenagers",
+    "min_age": 14,
+    "max_age": 15,
+    "contents": {
+      "fr": {
+        "title": "14-15",
+        "summary": "Tranche d’âge pour les adolescents plus âgés, adaptée aux capacités physiques des jeunes athlètes.",
+        "details": "Cette catégorie permet aux adolescents de 14 à 15 ans de réaliser les WODs avec des ajustements adaptés pour leur sécurité et progression."
+      },
+      "en": {
+        "title": "14-15",
+        "summary": "Age range for older teenagers, adapted to the physical abilities of young athletes.",
+        "details": "This category allows teenagers aged 14-15 to perform WODs with appropriate adjustments for safety and progression."
+      }
+    }
+  },
+  {
+    "slug": "14_15",
+    "min_age": 14,
+    "max_age": 15,
+    "contents": {
+      "fr": {
+        "title": "14-15",
+        "summary": "Tranche d’âge pour les adolescents, adaptée aux capacités physiques des jeunes athlètes.",
+        "details": "Cette catégorie permet aux adolescents de suivre les WODs avec des charges et mouvements adaptés à leur âge et à leur développement."
+      },
+      "en": {
+        "title": "14-15",
+        "summary": "Age range for teenagers, adapted to the physical abilities of young athletes.",
+        "details": "This category allows teenagers to perform WODs with weights and movements adjusted to their age and development."
+      }
+    }
+  },
+  {
+    "slug": "16_17",
+    "min_age": 16,
+    "max_age": 17,
+    "contents": {
+      "fr": {
+        "title": "16-17",
+        "summary": "Tranche d’âge pour les adolescents plus âgés, adaptée aux capacités physiques des jeunes athlètes.",
+        "details": "Cette catégorie permet aux adolescents de 16 à 17 ans de réaliser les WODs avec des ajustements adaptés pour leur sécurité et progression."
+      },
+      "en": {
+        "title": "16-17",
+        "summary": "Age range for older teenagers, adapted to the physical abilities of young athletes.",
+        "details": "This category allows teenagers aged 16-17 to perform WODs with appropriate adjustments for safety and progression."
+      }
+    }
+  },
+  {
+    "slug": "35_39",
+    "min_age": 35,
+    "max_age": 39,
+    "contents": {
+      "fr": {
+        "title": "35-39",
+        "summary": "Catégorie Masters pour les athlètes de 35 à 39 ans.",
+        "details": "Cette tranche d’âge permet aux athlètes de plus de 35 ans de participer aux WODs avec des ajustements appropriés pour la charge et le mouvement."
+      },
+      "en": {
+        "title": "35-39",
+        "summary": "Masters category for athletes aged 35-39.",
+        "details": "This age range allows athletes over 35 to participate in WODs with appropriate adjustments for weight and movement."
+      }
+    }
+  },
+  {
+    "slug": "40_44",
+    "min_age": 40,
+    "max_age": 44,
+    "contents": {
+      "fr": {
+        "title": "40-44",
+        "summary": "Catégorie Masters pour les athlètes de 40 à 44 ans.",
+        "details": "Cette tranche d’âge permet aux athlètes de 40 à 44 ans de suivre les WODs avec des adaptations sur les charges et mouvements."
+      },
+      "en": {
+        "title": "40-44",
+        "summary": "Masters category for athletes aged 40-44.",
+        "details": "This age range allows athletes aged 40-44 to perform WODs with adjustments on weights and movements."
+      }
+    }
+  },
+  {
+    "slug": "45_49",
+    "min_age": 45,
+    "max_age": 49,
+    "contents": {
+      "fr": {
+        "title": "45-49",
+        "summary": "Catégorie Masters pour les athlètes de 45 à 49 ans.",
+        "details": "Cette tranche d’âge permet de maintenir l’intensité des WODs tout en adaptant les charges et mouvements pour la sécurité et le confort des participants."
+      },
+      "en": {
+        "title": "45-49",
+        "summary": "Masters category for athletes aged 45-49.",
+        "details": "This age range maintains WOD intensity while adjusting weights and movements for participants’ safety and comfort."
+      }
+    }
+  },
+  {
+    "slug": "50_54",
+    "min_age": 50,
+    "max_age": 54,
+    "contents": {
+      "fr": {
+        "title": "50-54",
+        "summary": "Catégorie Masters pour les athlètes de 50 à 54 ans.",
+        "details": "Les WODs sont adaptés pour permettre aux participants de cette tranche d’âge de performer en toute sécurité tout en conservant un challenge sportif."
+      },
+      "en": {
+        "title": "50-54",
+        "summary": "Masters category for athletes aged 50-54.",
+        "details": "WODs are adjusted to allow participants in this age range to perform safely while maintaining a sporting challenge."
+      }
+    }
+  },
+  {
+    "slug": "55_59",
+    "min_age": 55,
+    "max_age": 59,
+    "contents": {
+      "fr": {
+        "title": "55-59",
+        "summary": "Catégorie Masters pour les athlètes de 55 à 59 ans.",
+        "details": "Cette tranche d’âge permet de pratiquer les WODs avec des adaptations sur la charge et les mouvements pour limiter les risques tout en gardant l’intensité."
+      },
+      "en": {
+        "title": "55-59",
+        "summary": "Masters category for athletes aged 55-59.",
+        "details": "This age range allows performing WODs with adjustments on weights and movements to limit risks while maintaining intensity."
+      }
+    }
+  },
+  {
+    "slug": "60_64",
+    "min_age": 60,
+    "max_age": 64,
+    "contents": {
+      "fr": {
+        "title": "60-64",
+        "summary": "Catégorie Masters pour les athlètes de 60 à 64 ans.",
+        "details": "Les WODs sont adaptés pour permettre aux participants de cette tranche d’âge de performer en toute sécurité tout en conservant un challenge sportif."
+      },
+      "en": {
+        "title": "60-64",
+        "summary": "Masters category for athletes aged 60-64.",
+        "details": "WODs are adjusted to allow participants in this age range to perform safely while maintaining a sporting challenge."
+      }
+    }
+  },
+  {
+    "slug": "65_69",
+    "min_age": 65,
+    "max_age": 69,
+    "contents": {
+      "fr": {
+        "title": "65-69",
+        "summary": "Catégorie Masters pour les athlètes de 65 à 69 ans.",
+        "details": "Cette tranche d’âge permet de pratiquer les WODs avec des adaptations sur la charge et les mouvements pour limiter les risques tout en gardant l’intensité."
+      },
+      "en": {
+        "title": "65-69",
+        "summary": "Masters category for athletes aged 65-69.",
+        "details": "This age range allows performing WODs with adjustments on weights and movements to limit risks while maintaining intensity."
+      }
+    }
+  },
+  {
+    "slug": "70_plus",
+    "min_age": 70,
+    "max_age": null,
+    "contents": {
+      "fr": {
+        "title": "70+",
+        "summary": "Catégorie Masters pour les athlètes de 70 ans et plus.",
+        "details": "Les WODs sont adaptés pour assurer la sécurité et l’efficacité des participants tout en conservant un challenge adapté à cette tranche d’âge."
+      },
+      "en": {
+        "title": "70+",
+        "summary": "Masters category for athletes aged 70 and above.",
+        "details": "WODs are adjusted to ensure participants’ safety and effectiveness while maintaining a challenge suitable for this age range."
+      }
+    }
+  }
+]

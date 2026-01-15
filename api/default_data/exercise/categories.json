@@ -1,0 +1,257 @@
+[
+  {
+    "slug": "warm-up",
+    "contents": {
+      "fr": {
+        "title": "Échauffement",
+        "summary": "Prépare le corps à l’effort physique à venir.",
+        "details": ""
+      },
+      "en": {
+        "title": "Warm-Up",
+        "summary": "Prepares the body for the upcoming physical effort.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "cardio",
+    "contents": {
+      "fr": {
+        "title": "Cardio",
+        "summary": "Travail axé sur l’endurance et la capacité cardiovasculaire.",
+        "details": ""
+      },
+      "en": {
+        "title": "Cardio",
+        "summary": "Focuses on endurance and cardiovascular capacity.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "conditioning",
+    "contents": {
+      "fr": {
+        "title": "Conditionnement",
+        "summary": "Améliore la capacité de travail et la résistance à la fatigue.",
+        "details": ""
+      },
+      "en": {
+        "title": "Conditioning",
+        "summary": "Improves work capacity and resistance to fatigue.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "strength",
+    "contents": {
+      "fr": {
+        "title": "Force",
+        "summary": "Développe la puissance musculaire et la capacité à soulever lourd.",
+        "details": ""
+      },
+      "en": {
+        "title": "Strength",
+        "summary": "Develops muscle power and the ability to lift heavy.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "weightlifting",
+    "contents": {
+      "fr": {
+        "title": "Haltérophilie",
+        "summary": "Travail technique autour de l’arraché et de l’épaulé-jeté.",
+        "details": ""
+      },
+      "en": {
+        "title": "Weightlifting",
+        "summary": "Technical work on the snatch and clean & jerk.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "powerlifting",
+    "contents": {
+      "fr": {
+        "title": "Powerlifting",
+        "summary": "Travail de force maximale sur trois mouvements fondamentaux.",
+        "details": ""
+      },
+      "en": {
+        "title": "Powerlifting",
+        "summary": "Maximal strength training through three fundamental lifts.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "gymnastics",
+    "contents": {
+      "fr": {
+        "title": "Gymnastique",
+        "summary": "Travail du poids du corps pour force, contrôle et agilité.",
+        "details": ""
+      },
+      "en": {
+        "title": "Gymnastics",
+        "summary": "Bodyweight training for strength, control, and agility.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "skill",
+    "contents": {
+      "fr": {
+        "title": "Compétence (Skill)",
+        "summary": "Améliore la technique et la précision des mouvements.",
+        "details": ""
+      },
+      "en": {
+        "title": "Skill",
+        "summary": "Improves movement technique and precision.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "plyometrics",
+    "contents": {
+      "fr": {
+        "title": "Plyométrie",
+        "summary": "Développe la puissance et l’explosivité musculaire.",
+        "details": ""
+      },
+      "en": {
+        "title": "Plyometrics",
+        "summary": "Develops power and muscular explosiveness.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "mobility",
+    "contents": {
+      "fr": {
+        "title": "Mobilité",
+        "summary": "Améliore la souplesse et la liberté de mouvement.",
+        "details": ""
+      },
+      "en": {
+        "title": "Mobility",
+        "summary": "Improves flexibility and range of motion.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "core",
+    "contents": {
+      "fr": {
+        "title": "Gainage / Core",
+        "summary": "Renforce la sangle abdominale et le tronc.",
+        "details": ""
+      },
+      "en": {
+        "title": "Core",
+        "summary": "Strengthens the midsection and trunk.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "lower-body",
+    "contents": {
+      "fr": {
+        "title": "Bas du corps",
+        "summary": "Renforce les jambes et les hanches.",
+        "details": ""
+      },
+      "en": {
+        "title": "Lower Body",
+        "summary": "Strengthens legs and hips.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "upper-body",
+    "contents": {
+      "fr": {
+        "title": "Haut du corps",
+        "summary": "Travaille la force du dos, des bras et des épaules.",
+        "details": ""
+      },
+      "en": {
+        "title": "Upper Body",
+        "summary": "Builds upper body strength.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "full-body",
+    "contents": {
+      "fr": {
+        "title": "Corps complet",
+        "summary": "Sollicite l’ensemble des groupes musculaires.",
+        "details": ""
+      },
+      "en": {
+        "title": "Full Body",
+        "summary": "Engages all major muscle groups.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "accessory",
+    "contents": {
+      "fr": {
+        "title": "Accessoire",
+        "summary": "Cible des muscles ou faiblesses spécifiques.",
+        "details": ""
+      },
+      "en": {
+        "title": "Accessory",
+        "summary": "Targets specific muscles or weaknesses.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "strongman",
+    "contents": {
+      "fr": {
+        "title": "Strongman",
+        "summary": "Travail de force fonctionnelle et brute.",
+        "details": ""
+      },
+      "en": {
+        "title": "Strongman",
+        "summary": "Functional and raw strength training.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "cool-down-recovery",
+    "contents": {
+      "fr": {
+        "title": "Retour au calme / Récupération",
+        "summary": "Permet une transition douce après l’effort.",
+        "details": ""
+      },
+      "en": {
+        "title": "Cool-Down / Recovery",
+        "summary": "Allows a smooth transition after exertion.",
+        "details": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,1190 @@
+[
+  {
+    "name": "1RM Back Squat",
+    "contents": {
+      "fr": {
+        "title": "1RM Back Squat",
+        "summary": "Testez votre force maximale sur le back squat. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Back Squat est un test de force visant à mesurer votre charge maximale sur une seule répétition.\n\n### Préparation\n- Échauffez-vous correctement avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez que vos chaussures et votre barre sont adaptées.\n- Si possible, utilisez un spotter pour la sécurité.\n\n### Exécution\n1. Placez la barre sur vos trapèzes hautes (position haute sur les épaules).\n2. Pieds écartés à la largeur des épaules, orteils légèrement tournés.\n3. Descendez en squat complet (hanches sous les genoux).\n4. Remontez en position debout, en gardant le tronc stable.\n5. Essayez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- N’essayez jamais de nouvelles charges maximales sans supervision si vous n’êtes pas expérimenté.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avant le test avec des séries progressives.\n- La barre doit être placée correctement sur les trapèzes.\n- Squat complet : hanches sous les genoux.\n- Une seule répétition à la charge maximale par tentative.\n- Utilisez un spotter pour les charges lourdes.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique avant de chercher la charge maximale.\n- Respirez profondément et engagez le tronc pendant la descente.\n- Augmentez progressivement la charge pour éviter la fatigue excessive.\n- Prenez le temps de récupérer entre chaque tentative.\n- Restez concentré et gardez votre posture correcte pour chaque essai."
+      },
+      "en": {
+        "title": "1RM Back Squat",
+        "summary": "Test your maximum strength on the back squat. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Back Squat is a strength test designed to measure your maximum load for a single repetition.\n\n### Preparation\n- Warm up properly with progressive sets (empty bar, then light weights).\n- Make sure your shoes and bar are appropriate.\n- Use a spotter if possible for safety.\n\n### Execution\n1. Place the bar on your upper traps.\n2. Feet shoulder-width apart, toes slightly out.\n3. Descend into a full squat (hips below knees).\n4. Rise back to standing, keeping your core stable.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision if inexperienced.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets before the test.\n- Place the bar correctly on the traps.\n- Full squat: hips below knees.\n- Only one repetition per max attempt.\n- Use a spotter for heavy weights.\n- The final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique before increasing weight.\n- Breathe deeply and engage your core during the descent.\n- Increase weight gradually to avoid excessive fatigue.\n- Take sufficient rest between attempts.\n- Stay focused and maintain proper posture for each lift."
+      }
+    },
+    "type": "weight",
+    "exercise": "back-squat",
+    "value": 1
+  },
+  {
+    "name": "1RM Bench Press",
+    "contents": {
+      "fr": {
+        "title": "1RM Bench Press",
+        "summary": "Testez votre force maximale au bench press. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Bench Press est un test de force visant à mesurer votre charge maximale sur une seule répétition.\n\n### Préparation\n- Échauffez-vous correctement avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez que vos chaussures et votre barre sont adaptées.\n- Utilisez un spotter pour la sécurité.\n\n### Exécution\n1. Allongez-vous sur le banc, pieds au sol.\n2. Saisissez la barre avec une prise légèrement plus large que les épaules.\n3. Descendez la barre jusqu’à toucher légèrement la poitrine.\n4. Poussez la barre vers le haut en gardant les coudes sous contrôle.\n5. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision si vous n’êtes pas expérimenté.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives avant le test.\n- Saisissez correctement la barre.\n- Descendez jusqu’à la poitrine de manière contrôlée.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter pour les charges lourdes.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique avant d’augmenter la charge.\n- Gardez les pieds au sol et engagez le tronc.\n- Augmentez progressivement la charge pour éviter la fatigue.\n- Prenez le temps de récupérer entre chaque tentative.\n- Restez concentré et maintenez une posture correcte pour chaque essai."
+      },
+      "en": {
+        "title": "1RM Bench Press",
+        "summary": "Test your maximum strength on the bench press. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Bench Press is a strength test designed to measure your maximum load for a single repetition.\n\n### Preparation\n- Warm up properly with progressive sets (empty bar, then light weights).\n- Ensure your shoes and bar are appropriate.\n- Use a spotter for safety.\n\n### Execution\n1. Lie flat on the bench, feet on the floor.\n2. Grip the bar slightly wider than shoulder-width.\n3. Lower the bar to lightly touch your chest.\n4. Push the bar up while keeping elbows under control.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision if inexperienced.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets before the test.\n- Grip the bar correctly.\n- Lower it to the chest in a controlled manner.\n- Only one repetition per max attempt.\n- Use a spotter for heavy weights.\n- The final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique before increasing weight.\n- Keep feet on the floor and engage your core.\n- Increase weight gradually to avoid fatigue.\n- Rest sufficiently between attempts.\n- Stay focused and maintain proper posture for each lift."
+      }
+    },
+    "type": "weight",
+    "exercise": "bench-press",
+    "value": 1
+  },
+  {
+    "name": "1RM Clean & Jerk",
+    "contents": {
+      "fr": {
+        "title": "1RM Clean & Jerk",
+        "summary": "Testez votre force maximale au clean & jerk. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Clean & Jerk est un test de force et de technique visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un entraîneur pour la sécurité.\n\n### Exécution\n1. Placez la barre au sol devant vous, pieds à la largeur des épaules.\n2. Effectuez un clean : tirez la barre jusqu’aux épaules en position front squat.\n3. Réalisez un jerk : poussez la barre au-dessus de la tête avec les bras tendus.\n4. Stabilisez la charge avant de descendre.\n5. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez la technique correcte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Commencez avec la barre au sol.\n- Clean complet jusqu’aux épaules.\n- Jerk avec bras tendus et stabilisation.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou un coach.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et le timing.\n- Engagez le tronc et les jambes pour stabiliser la barre.\n- Augmentez progressivement la charge.\n- Reposez-vous suffisamment entre chaque essai.\n- Gardez une posture stricte tout au long du mouvement."
+      },
+      "en": {
+        "title": "1RM Clean & Jerk",
+        "summary": "Test your maximum strength on the clean & jerk. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Clean & Jerk is a strength and technique test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on the floor, feet shoulder-width apart.\n2. Perform the clean: lift the bar to your shoulders in a front squat position.\n3. Perform the jerk: push the bar overhead with arms fully extended.\n4. Stabilize the weight before lowering.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain correct technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Start with the bar on the floor.\n- Complete clean to shoulders.\n- Jerk with arms fully extended and stabilized.\n- Only one repetition per max attempt.\n- Use a spotter or coach.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and timing.\n- Engage core and legs to stabilize the bar.\n- Increase weight gradually.\n- Rest sufficiently between attempts.\n- Maintain strict posture throughout the lift."
+      }
+    },
+    "type": "weight",
+    "exercise": "clean-and-jerk",
+    "value": 1
+  },
+  {
+    "name": "1RM Deadlift",
+    "contents": {
+      "fr": {
+        "title": "1RM Deadlift",
+        "summary": "Testez votre force maximale au deadlift. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Deadlift est un test de force visant à mesurer votre charge maximale sur une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez vos chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach si nécessaire.\n\n### Exécution\n1. Placez vos pieds sous la barre, largeur des épaules.\n2. Saisissez la barre avec une prise pronation ou mixte.\n3. Gardez le dos droit et le tronc engagé.\n4. Soulevez la barre jusqu’à être complètement debout.\n5. Abaissez la barre au sol de manière contrôlée.\n6. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision si vous êtes débutant.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Positionnez correctement les pieds et la prise.\n- Gardez le dos droit et le tronc engagé.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et la posture.\n- Engagez le tronc et gardez le dos droit.\n- Augmentez progressivement la charge.\n- Reposez-vous suffisamment entre les essais.\n- Maintenez une bonne respiration et un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "1RM Deadlift",
+        "summary": "Test your maximum strength on the deadlift. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Deadlift is a strength test designed to measure your maximum load for a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check your shoes and the bar condition.\n- Use a spotter or coach if needed.\n\n### Execution\n1. Place your feet under the bar, shoulder-width apart.\n2. Grip the bar with pronation or mixed grip.\n3. Keep your back straight and core engaged.\n4. Lift the bar until fully standing.\n5. Lower the bar to the floor in a controlled manner.\n6. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision if inexperienced.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Position feet and grip correctly.\n- Keep back straight and core engaged.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and posture.\n- Engage core and keep back straight.\n- Increase weight gradually.\n- Rest sufficiently between attempts.\n- Maintain proper breathing and total control of the lift."
+      }
+    },
+    "type": "weight",
+    "exercise": "deadlift",
+    "value": 1
+  },
+  {
+    "name": "1RM Front Squat",
+    "contents": {
+      "fr": {
+        "title": "1RM Front Squat",
+        "summary": "Testez votre force maximale au front squat. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Front Squat est un test de force visant à mesurer votre charge maximale sur une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez vos chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre sur le haut des épaules, coudes hauts.\n2. Pieds écartés à la largeur des épaules, orteils légèrement tournés.\n3. Descendez en squat complet (hanches sous les genoux).\n4. Remontez en position debout en gardant le tronc engagé.\n5. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision si vous êtes débutant.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Placez correctement la barre sur les épaules.\n- Squat complet : hanches sous les genoux.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et la posture.\n- Gardez les coudes hauts et le tronc engagé.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez une respiration contrôlée et une bonne stabilité."
+      },
+      "en": {
+        "title": "1RM Front Squat",
+        "summary": "Test your maximum strength on the front squat. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Front Squat is a strength test designed to measure your maximum load for a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check your shoes and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on your upper shoulders, elbows high.\n2. Feet shoulder-width apart, toes slightly out.\n3. Descend into a full squat (hips below knees).\n4. Rise to standing while keeping your core engaged.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision if inexperienced.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Position the bar correctly on the shoulders.\n- Full squat: hips below knees.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and posture.\n- Keep elbows high and core engaged.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain controlled breathing and stability."
+      }
+    },
+    "type": "weight",
+    "exercise": "front-squat",
+    "value": 1
+  },
+  {
+    "name": "1RM Hang Power Clean",
+    "contents": {
+      "fr": {
+        "title": "1RM Hang Power Clean",
+        "summary": "Testez votre force maximale au hang power clean. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Hang Power Clean est un test de force et de technique visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre juste au-dessus des genoux, pieds à la largeur des épaules.\n2. Saisissez la barre avec une prise pronation.\n3. Effectuez un tirage explosif pour amener la barre jusqu’aux épaules.\n4. Terminez en position debout, coudes hauts.\n5. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Placez la barre juste au-dessus des genoux.\n- Effectuez un tirage explosif jusqu’aux épaules.\n- Position finale : debout, coudes hauts.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et l’explosivité.\n- Engagez le tronc et gardez les coudes hauts.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "1RM Hang Power Clean",
+        "summary": "Test your maximum strength on the hang power clean. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Hang Power Clean is a strength and technique test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar just above the knees, feet shoulder-width apart.\n2. Grip the bar with a pronated grip.\n3. Perform an explosive pull to bring the bar to the shoulders.\n4. Finish standing upright with elbows high.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Place the bar just above the knees.\n- Perform an explosive pull to the shoulders.\n- Final position: standing, elbows high.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and explosiveness.\n- Engage core and keep elbows high.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "hang-power-clean",
+    "value": 1
+  },
+  {
+    "name": "1RM Hang Power Snatch",
+    "contents": {
+      "fr": {
+        "title": "1RM Hang Power Snatch",
+        "summary": "Testez votre force maximale au hang power snatch. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Hang Power Snatch est un test de force et de technique visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre juste au-dessus des genoux, pieds à la largeur des épaules.\n2. Saisissez la barre avec une prise pronation.\n3. Effectuez un tirage explosif pour amener la barre au-dessus de la tête.\n4. Terminez en position debout, bras tendus.\n5. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Placez la barre juste au-dessus des genoux.\n- Effectuez un tirage explosif jusqu’au-dessus de la tête.\n- Position finale : debout, bras tendus.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et l’explosivité.\n- Engagez le tronc et gardez les bras tendus.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "1RM Hang Power Snatch",
+        "summary": "Test your maximum strength on the hang power snatch. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Hang Power Snatch is a strength and technique test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar just above the knees, feet shoulder-width apart.\n2. Grip the bar with a pronated grip.\n3. Perform an explosive pull to bring the bar overhead.\n4. Finish standing upright with arms fully extended.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Place the bar just above the knees.\n- Perform an explosive pull overhead.\n- Final position: standing, arms fully extended.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and explosiveness.\n- Engage core and keep arms extended.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "hang-power-snatch",
+    "value": 1
+  },
+  {
+    "name": "1RM Hang Squat Clean",
+    "contents": {
+      "fr": {
+        "title": "1RM Hang Squat Clean",
+        "summary": "Testez votre force maximale au hang squat clean. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Hang Squat Clean est un test de force et de technique visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre juste au-dessus des genoux, pieds à la largeur des épaules.\n2. Saisissez la barre avec une prise pronation.\n3. Effectuez un tirage explosif pour amener la barre aux épaules.\n4. Recevez la barre en squat complet (hanches sous les genoux).\n5. Redressez-vous pour terminer en position debout.\n6. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Placez la barre juste au-dessus des genoux.\n- Tirage explosif jusqu’aux épaules.\n- Réception en squat complet.\n- Redressez-vous pour terminer.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et l’explosivité.\n- Engagez le tronc et gardez les coudes hauts.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "1RM Hang Squat Clean",
+        "summary": "Test your maximum strength on the hang squat clean. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Hang Squat Clean is a strength and technique test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar just above the knees, feet shoulder-width apart.\n2. Grip the bar with a pronated grip.\n3. Perform an explosive pull to bring the bar to the shoulders.\n4. Catch the bar in a full squat (hips below knees).\n5. Stand up fully to finish.\n6. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Place the bar just above the knees.\n- Perform an explosive pull to the shoulders.\n- Catch in full squat.\n- Stand up fully to finish.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and explosiveness.\n- Engage core and keep elbows high.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "hang-squat-clean",
+    "value": 1
+  },
+  {
+    "name": "1RM Hang Squat Snatch",
+    "contents": {
+      "fr": {
+        "title": "1RM Hang Squat Snatch",
+        "summary": "Testez votre force maximale au hang squat snatch. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Hang Squat Snatch est un test de force et de technique visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre juste au-dessus des genoux, pieds à la largeur des épaules.\n2. Saisissez la barre avec une prise pronation.\n3. Effectuez un tirage explosif pour amener la barre au-dessus de la tête.\n4. Recevez la barre en squat complet (hanches sous les genoux).\n5. Redressez-vous pour terminer en position debout.\n6. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Placez la barre juste au-dessus des genoux.\n- Tirage explosif jusqu’au-dessus de la tête.\n- Réception en squat complet.\n- Redressez-vous pour terminer.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et l’explosivité.\n- Engagez le tronc et gardez les bras tendus.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "1RM Hang Squat Snatch",
+        "summary": "Test your maximum strength on the hang squat snatch. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Hang Squat Snatch is a strength and technique test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar just above the knees, feet shoulder-width apart.\n2. Grip the bar with a pronated grip.\n3. Perform an explosive pull to bring the bar overhead.\n4. Catch the bar in a full squat (hips below knees).\n5. Stand up fully to finish.\n6. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Place the bar just above the knees.\n- Perform an explosive pull overhead.\n- Catch in full squat.\n- Stand up fully to finish.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and explosiveness.\n- Engage core and keep arms extended.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "hang-squat-snatch",
+    "value": 1
+  },
+  {
+    "name": "1RM Overhead Squat",
+    "contents": {
+      "fr": {
+        "title": "1RM Overhead Squat",
+        "summary": "Testez votre force maximale à l’overhead squat. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Overhead Squat est un test de force et de stabilité visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre au-dessus de la tête, bras complètement tendus.\n2. Pieds écartés à la largeur des épaules, orteils légèrement tournés.\n3. Descendez en squat complet (hanches sous les genoux) tout en maintenant la barre stable.\n4. Remontez en position debout, en gardant le tronc engagé.\n5. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Barre au-dessus de la tête, bras tendus.\n- Squat complet : hanches sous les genoux.\n- Maintenez la barre stable.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et la stabilité.\n- Engagez le tronc et gardez les bras droits.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "1RM Overhead Squat",
+        "summary": "Test your maximum strength on the overhead squat. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Overhead Squat is a strength and stability test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar overhead with arms fully extended.\n2. Feet shoulder-width apart, toes slightly out.\n3. Descend into a full squat (hips below knees) while keeping the bar stable.\n4. Rise to standing while keeping your core engaged.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Bar overhead with arms fully extended.\n- Full squat: hips below knees.\n- Keep the bar stable.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and stability.\n- Engage core and keep arms straight.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "overhead-squat",
+    "value": 1
+  },
+  {
+    "name": "1RM Power Clean",
+    "contents": {
+      "fr": {
+        "title": "1RM Power Clean",
+        "summary": "Testez votre force maximale au power clean. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Power Clean est un test de force et de technique visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre sur le sol, pieds à la largeur des épaules.\n2. Saisissez la barre avec une prise pronation.\n3. Effectuez un tirage explosif pour amener la barre aux épaules.\n4. Terminez en position debout, coudes hauts.\n5. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Barre au sol, pieds à la largeur des épaules.\n- Tirage explosif jusqu’aux épaules.\n- Position finale : debout, coudes hauts.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et l’explosivité.\n- Engagez le tronc et gardez les coudes hauts.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "1RM Power Clean",
+        "summary": "Test your maximum strength on the power clean. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Power Clean is a strength and technique test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on the floor, feet shoulder-width apart.\n2. Grip the bar with a pronated grip.\n3. Perform an explosive pull to bring the bar to the shoulders.\n4. Finish standing upright with elbows high.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Bar on the floor, feet shoulder-width apart.\n- Perform an explosive pull to the shoulders.\n- Final position: standing, elbows high.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and explosiveness.\n- Engage core and keep elbows high.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "power-clean",
+    "value": 1
+  },
+  {
+    "name": "1RM Power Snatch",
+    "contents": {
+      "fr": {
+        "title": "1RM Power Snatch",
+        "summary": "Testez votre force maximale au power snatch. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Power Snatch est un test de force et de technique visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre sur le sol, pieds à la largeur des épaules.\n2. Saisissez la barre avec une prise pronation.\n3. Effectuez un tirage explosif pour amener la barre au-dessus de la tête.\n4. Terminez en position debout, bras tendus.\n5. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Barre au sol, pieds à la largeur des épaules.\n- Tirage explosif jusqu’au-dessus de la tête.\n- Position finale : debout, bras tendus.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et l’explosivité.\n- Engagez le tronc et gardez les bras tendus.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "1RM Power Snatch",
+        "summary": "Test your maximum strength on the power snatch. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Power Snatch is a strength and technique test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on the floor, feet shoulder-width apart.\n2. Grip the bar with a pronated grip.\n3. Perform an explosive pull to bring the bar overhead.\n4. Finish standing upright with arms fully extended.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Bar on the floor, feet shoulder-width apart.\n- Perform an explosive pull overhead.\n- Final position: standing, arms fully extended.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and explosiveness.\n- Engage core and keep arms extended.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "power-snatch",
+    "value": 1
+  },
+  {
+    "name": "1RM Push Jerk",
+    "contents": {
+      "fr": {
+        "title": "1RM Push Jerk",
+        "summary": "Testez votre force maximale au push jerk. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Push Jerk est un test de force et de puissance visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre sur les épaules, pieds à la largeur des épaules.\n2. Fléchissez légèrement les genoux puis effectuez un tir explosif pour pousser la barre au-dessus de la tête.\n3. Recevez la barre avec bras tendus et jambes légèrement fléchies.\n4. Redressez-vous complètement.\n5. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Barre sur les épaules, pieds à la largeur des épaules.\n- Tir explosif pour pousser la barre au-dessus de la tête.\n- Réception : bras tendus, jambes légèrement fléchies.\n- Redressez-vous complètement.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et l’explosivité.\n- Engagez le tronc et pliez légèrement les jambes.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "1RM Push Jerk",
+        "summary": "Test your maximum strength on the push jerk. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Push Jerk is a strength and power test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on your shoulders, feet shoulder-width apart.\n2. Slightly bend your knees then perform an explosive push to lift the bar overhead.\n3. Catch the bar with arms extended and knees slightly bent.\n4. Stand fully upright.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Bar on shoulders, feet shoulder-width apart.\n- Explosive push to lift the bar overhead.\n- Catch: arms extended, knees slightly bent.\n- Stand fully upright.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and explosiveness.\n- Engage core and slightly bend knees.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "push-jerk",
+    "value": 1
+  },
+  {
+    "name": "1RM Push Press",
+    "contents": {
+      "fr": {
+        "title": "1RM Push Press",
+        "summary": "Testez votre force maximale au push press. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Push Press est un test de force et de puissance visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre sur les épaules, pieds à la largeur des épaules.\n2. Fléchissez légèrement les genoux et effectuez un tir explosif pour pousser la barre au-dessus de la tête.\n3. Redressez-vous complètement en gardant les bras tendus.\n4. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Barre sur les épaules, pieds à la largeur des épaules.\n- Tir explosif pour pousser la barre au-dessus de la tête.\n- Redressez-vous complètement, bras tendus.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et l’explosivité.\n- Engagez le tronc et pliez légèrement les genoux.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "1RM Push Press",
+        "summary": "Test your maximum strength on the push press. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Push Press is a strength and power test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on your shoulders, feet shoulder-width apart.\n2. Slightly bend your knees and perform an explosive push to lift the bar overhead.\n3. Stand fully upright keeping arms extended.\n4. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Bar on shoulders, feet shoulder-width apart.\n- Explosive push to lift the bar overhead.\n- Stand fully upright, arms extended.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and explosiveness.\n- Engage core and slightly bend knees.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "push-press",
+    "value": 1
+  },
+  {
+    "name": "1RM Shoulder Press",
+    "contents": {
+      "fr": {
+        "title": "1RM Shoulder Press",
+        "summary": "Testez votre force maximale au shoulder press. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Shoulder Press est un test de force visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre sur vos épaules, pieds à la largeur des épaules.\n2. Poussez la barre au-dessus de la tête avec les bras tendus, sans fléchir les genoux.\n3. Redescendez la barre avec contrôle.\n4. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Barre sur les épaules, pieds à la largeur des épaules.\n- Poussez la barre au-dessus de la tête, bras tendus.\n- Redescendez la barre avec contrôle.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et la stabilité.\n- Engagez le tronc et gardez les bras tendus.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "1RM Shoulder Press",
+        "summary": "Test your maximum strength on the shoulder press. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Shoulder Press is a strength test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on your shoulders, feet shoulder-width apart.\n2. Push the bar overhead with arms fully extended, without bending knees.\n3. Lower the bar under control.\n4. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Bar on shoulders, feet shoulder-width apart.\n- Push the bar overhead, arms fully extended.\n- Lower the bar under control.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and stability.\n- Engage core and keep arms extended.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "shoulder-press",
+    "value": 1
+  },
+  {
+    "name": "1RM Split Jerk",
+    "contents": {
+      "fr": {
+        "title": "1RM Split Jerk",
+        "summary": "Testez votre force maximale au split jerk. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Split Jerk est un test de force et de puissance visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre sur les épaules, pieds à la largeur des épaules.\n2. Fléchissez légèrement les genoux puis effectuez un tir explosif pour pousser la barre au-dessus de la tête.\n3. Recevez la barre en position fendue : un pied en avant, l’autre en arrière.\n4. Redressez-vous complètement.\n5. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Barre sur les épaules, pieds à la largeur des épaules.\n- Tir explosif pour pousser la barre au-dessus de la tête.\n- Réception : position fendue, un pied devant, un pied derrière.\n- Redressez-vous complètement.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et l’explosivité.\n- Engagez le tronc et gardez l’équilibre.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "1RM Split Jerk",
+        "summary": "Test your maximum strength on the split jerk. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Split Jerk is a strength and power test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on your shoulders, feet shoulder-width apart.\n2. Slightly bend your knees and perform an explosive push to lift the bar overhead.\n3. Catch the bar in a split stance: one foot forward, one foot back.\n4. Stand fully upright.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Bar on shoulders, feet shoulder-width apart.\n- Explosive push to lift the bar overhead.\n- Catch in a split stance: one foot forward, one foot back.\n- Stand fully upright.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and explosiveness.\n- Engage core and maintain balance.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "split-jerk",
+    "value": 1
+  },
+  {
+    "name": "1RM Squat Clean",
+    "contents": {
+      "fr": {
+        "title": "1RM Squat Clean",
+        "summary": "Testez votre force maximale au squat clean. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Squat Clean est un test de force et de technique visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre au sol, pieds à la largeur des épaules.\n2. Effectuez un tirage explosif pour amener la barre sur vos épaules.\n3. Descendez en squat complet pour réceptionner la barre.\n4. Remontez en position debout avec bras tendus.\n5. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Barre au sol, pieds à la largeur des épaules.\n- Tirage explosif jusqu’aux épaules.\n- Réception en squat complet.\n- Remontez debout avec bras tendus.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et l’explosivité.\n- Engagez le tronc et gardez le contrôle.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un mouvement fluide et stable."
+      },
+      "en": {
+        "title": "1RM Squat Clean",
+        "summary": "Test your maximum strength on the squat clean. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Squat Clean is a strength and technique test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on the floor, feet shoulder-width apart.\n2. Perform an explosive pull to bring the bar to your shoulders.\n3. Catch the bar in a full squat.\n4. Stand up fully with arms extended.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Bar on the floor, feet shoulder-width apart.\n- Explosive pull to shoulders.\n- Catch in a full squat.\n- Stand up fully with arms extended.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and explosiveness.\n- Engage core and maintain control.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain smooth and stable movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "squat-clean",
+    "value": 1
+  },
+  {
+    "name": "1RM Squat Snatch",
+    "contents": {
+      "fr": {
+        "title": "1RM Squat Snatch",
+        "summary": "Testez votre force maximale au squat snatch. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Squat Snatch est un test de force et de technique visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre au sol, pieds à la largeur des épaules.\n2. Effectuez un tirage explosif pour amener la barre au-dessus de la tête.\n3. Descendez en squat complet pour réceptionner la barre.\n4. Remontez en position debout avec bras tendus.\n5. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Barre au sol, pieds à la largeur des épaules.\n- Tirage explosif jusqu’au-dessus de la tête.\n- Réception en squat complet.\n- Remontez debout avec bras tendus.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et l’explosivité.\n- Engagez le tronc et gardez le contrôle.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un mouvement fluide et stable."
+      },
+      "en": {
+        "title": "1RM Squat Snatch",
+        "summary": "Test your maximum strength on the squat snatch. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Squat Snatch is a strength and technique test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on the floor, feet shoulder-width apart.\n2. Perform an explosive pull to lift the bar overhead.\n3. Catch the bar in a full squat.\n4. Stand up fully with arms extended.\n5. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Bar on the floor, feet shoulder-width apart.\n- Explosive pull overhead.\n- Catch in a full squat.\n- Stand up fully with arms extended.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and explosiveness.\n- Engage core and maintain control.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain smooth and stable movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "squat-snatch",
+    "value": 1
+  },
+  {
+    "name": "1RM Thruster",
+    "contents": {
+      "fr": {
+        "title": "1RM Thruster",
+        "summary": "Testez votre force maximale au thruster. Soulevez la charge la plus lourde possible en une seule répétition avec une technique correcte.",
+        "details": "Le 1RM Thruster est un test de force et de puissance visant à mesurer la charge maximale que vous pouvez soulever en une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez l’adhérence des chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre sur vos épaules, pieds à la largeur des épaules.\n2. Descendez en squat complet puis remontez en poussant la barre au-dessus de la tête.\n3. Redescendez la barre avec contrôle.\n4. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg)**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Barre sur les épaules, pieds à la largeur des épaules.\n- Squat complet suivi d’un push overhead.\n- Redescendez la barre avec contrôle.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie en kg.",
+        "tips": "- Concentrez-vous sur la technique et la coordination.\n- Engagez le tronc et les jambes.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez un mouvement fluide et stable."
+      },
+      "en": {
+        "title": "1RM Thruster",
+        "summary": "Test your maximum strength on the thruster. Lift the heaviest weight possible for a single repetition with proper technique.",
+        "details": "The 1RM Thruster is a strength and power test designed to measure the maximum load you can lift in a single repetition.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check shoes grip and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on your shoulders, feet shoulder-width apart.\n2. Descend into a full squat and then push the bar overhead as you stand.\n3. Lower the bar under control.\n4. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt new max loads without supervision.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg)**.",
+        "rules": "- Warm up with progressive sets.\n- Bar on shoulders, feet shoulder-width apart.\n- Full squat followed by push overhead.\n- Lower the bar under control.\n- Only one repetition per max attempt.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted in kg.",
+        "tips": "- Focus on technique and coordination.\n- Engage core and legs.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain smooth and stable movement."
+      }
+    },
+    "type": "weight",
+    "exercise": "thruster",
+    "value": 1
+  },
+  {
+    "name": "1RM Weighted Pull-up",
+    "contents": {
+      "fr": {
+        "title": "1RM Weighted Pull-up",
+        "summary": "Testez votre force maximale sur le pull-up lesté. Soulevez votre poids corporel avec le maximum de charge additionnelle possible pour une seule répétition.",
+        "details": "Le 1RM Weighted Pull-up est un test de force visant à mesurer votre charge maximale additionnelle sur une seule répétition.\n\n### Préparation\n- Échauffez-vous avec des séries de pull-ups sans charge.\n- Attachez le poids additionnel de manière sécurisée (ceinture ou gilet).\n- Vérifiez la barre et la sécurité de l’équipement.\n\n### Exécution\n1. Suspendez-vous à la barre avec les mains en pronation.\n2. Tirez-vous vers le haut jusqu’à ce que le menton dépasse la barre.\n3. Redescendez avec contrôle.\n4. Tentez votre charge maximale pour **1 répétition seulement**.\n\n### Sécurité\n- Ne tentez pas de charges maximales sans supervision.\n- Maintenez un mouvement contrôlé pour éviter les blessures.\n\n### Score\n- La valeur correspond au **poids additionnel soulevé (en kg)**, ajouté à votre poids corporel.",
+        "rules": "- Échauffez-vous avec des séries sans charge.\n- Attachez le poids additionnel correctement.\n- Tirez-vous jusqu’à ce que le menton dépasse la barre.\n- Redescendez avec contrôle.\n- Une seule répétition par tentative maximale.\n- Utilisez un spotter si nécessaire.\n- Le score final est le poids additionnel soulevé en kg.",
+        "tips": "- Concentrez-vous sur la technique et la traction complète.\n- Engagez le tronc et les épaules.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Assurez-vous de garder la barre stable et sécurisée."
+      },
+      "en": {
+        "title": "1RM Weighted Pull-up",
+        "summary": "Test your maximum strength on the weighted pull-up. Lift your body plus the heaviest added weight possible for a single repetition.",
+        "details": "The 1RM Weighted Pull-up is a strength test designed to measure the maximum additional load you can lift in a single repetition.\n\n### Preparation\n- Warm up with unweighted pull-up sets.\n- Securely attach additional weight (belt or vest).\n- Check bar and equipment safety.\n\n### Execution\n1. Hang from the bar with hands in pronation.\n2. Pull yourself up until your chin passes the bar.\n3. Lower yourself under control.\n4. Attempt your maximum load for **1 repetition only**.\n\n### Safety\n- Never attempt max loads without supervision.\n- Maintain controlled movement to avoid injury.\n\n### Score\n- The score corresponds to the **additional weight lifted (in kg)**, added to your body weight.",
+        "rules": "- Warm up with unweighted sets.\n- Attach additional weight securely.\n- Pull until chin passes the bar.\n- Lower under control.\n- Only one repetition per max attempt.\n- Use a spotter if necessary.\n- Final score is the additional weight lifted in kg.",
+        "tips": "- Focus on full range of motion.\n- Engage core and shoulders.\n- Increase weight gradually.\n- Rest between attempts.\n- Keep bar stable and secure."
+      }
+    },
+    "type": "weight",
+    "exercise": "weighted-pull-up",
+    "value": 1
+  },
+  {
+    "name": "30 Muscle-ups For Time",
+    "contents": {
+      "fr": {
+        "title": "30 Muscle-ups For Time",
+        "summary": "Complétez 30 muscle-ups le plus rapidement possible. L’objectif est d’optimiser la vitesse tout en maintenant une technique correcte.",
+        "details": "Le benchmark « 30 Muscle-ups For Time » mesure votre capacité à effectuer 30 muscle-ups consécutifs le plus rapidement possible.\n\n### Préparation\n- Échauffez-vous correctement avec des mouvements de traction et de dips.\n- Assurez-vous que la barre ou les anneaux sont sécurisés.\n- Préparez votre équipement si nécessaire (gant, magnésie).\n\n### Exécution\n1. Effectuez 30 muscle-ups consécutifs.\n2. Maintenez une technique correcte : traction complète puis transition vers le dip.\n3. Chronométrez votre performance.\n\n### Sécurité\n- Ne sacrifiez jamais la technique pour la vitesse.\n- Évitez de vous fatiguer au point de perdre le contrôle.\n\n### Score\n- Le score correspond au **temps total nécessaire pour compléter les 30 muscle-ups**.",
+        "rules": "- Effectuez 30 muscle-ups consécutifs.\n- Maintenez une technique correcte.\n- Chronométrez votre performance.\n- Le score final est le temps total pour compléter les 30 répétitions.",
+        "tips": "- Gardez un rythme constant et contrôlé.\n- Préparez vos poignets et épaules avant le test.\n- Respirez régulièrement.\n- Si nécessaire, fractionnez légèrement les répétitions sans perdre trop de temps.\n- Concentrez-vous sur la transition entre traction et dip."
+      },
+      "en": {
+        "title": "30 Muscle-ups For Time",
+        "summary": "Complete 30 muscle-ups as fast as possible. Focus on speed while maintaining proper technique.",
+        "details": "The benchmark '30 Muscle-ups For Time' measures your ability to perform 30 consecutive muscle-ups as quickly as possible.\n\n### Preparation\n- Warm up properly with pull and dip movements.\n- Ensure the bar or rings are secure.\n- Prepare equipment if needed (chalk, gloves).\n\n### Execution\n1. Perform 30 consecutive muscle-ups.\n2. Maintain proper technique: full pull followed by transition into dip.\n3. Time your performance.\n\n### Safety\n- Never sacrifice technique for speed.\n- Avoid fatigue that causes loss of control.\n\n### Score\n- The score corresponds to the **total time needed to complete all 30 muscle-ups**.",
+        "rules": "- Perform 30 consecutive muscle-ups.\n- Maintain proper technique.\n- Time your performance.\n- Final score is the total time to complete 30 reps.",
+        "tips": "- Keep a steady and controlled pace.\n- Prepare wrists and shoulders before testing.\n- Breathe regularly.\n- If necessary, break reps slightly without losing too much time.\n- Focus on smooth pull-to-dip transitions."
+      }
+    },
+    "type": "time",
+    "exercise": "muscle-up",
+    "value": 30
+  },
+  {
+    "name": "3RM Back Squat",
+    "contents": {
+      "fr": {
+        "title": "3RM Back Squat",
+        "summary": "Testez votre force maximale sur le back squat. Soulevez la charge la plus lourde possible pour 3 répétitions avec une technique correcte.",
+        "details": "Le 3RM Back Squat est un test de force visant à mesurer la charge maximale que vous pouvez soulever pour **3 répétitions consécutives**.\n\n### Préparation\n- Échauffez-vous correctement avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez que vos chaussures et votre barre sont adaptées.\n- Si possible, utilisez un spotter pour la sécurité.\n\n### Exécution\n1. Placez la barre sur vos trapèzes hautes (position haute sur les épaules).\n2. Pieds écartés à la largeur des épaules, orteils légèrement tournés.\n3. Descendez en squat complet (hanches sous les genoux).\n4. Remontez en position debout, en gardant le tronc stable.\n5. Essayez votre charge maximale pour **3 répétitions seulement**.\n\n### Sécurité\n- N’essayez jamais de nouvelles charges maximales sans supervision si vous n’êtes pas expérimenté.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg) pour 3 répétitions**.",
+        "rules": "- Échauffez-vous avant le test avec des séries progressives.\n- La barre doit être placée correctement sur les trapèzes.\n- Squat complet : hanches sous les genoux.\n- Trois répétitions maximales consécutives.\n- Utilisez un spotter pour les charges lourdes.\n- Le score final est la charge maximale réussie pour 3 répétitions en kg.",
+        "tips": "- Concentrez-vous sur la technique avant de chercher la charge maximale.\n- Respirez profondément et engagez le tronc pendant la descente.\n- Augmentez progressivement la charge pour éviter la fatigue excessive.\n- Prenez le temps de récupérer entre chaque tentative.\n- Restez concentré et gardez votre posture correcte pour chaque répétition."
+      },
+      "en": {
+        "title": "3RM Back Squat",
+        "summary": "Test your maximum strength on the back squat. Lift the heaviest weight possible for 3 repetitions with proper technique.",
+        "details": "The 3RM Back Squat is a strength test designed to measure the maximum load you can lift for **3 consecutive repetitions**.\n\n### Preparation\n- Warm up properly with progressive sets (empty bar, then light weights).\n- Make sure your shoes and bar are appropriate.\n- Use a spotter if possible for safety.\n\n### Execution\n1. Place the bar on your upper traps.\n2. Feet shoulder-width apart, toes slightly out.\n3. Descend into a full squat (hips below knees).\n4. Rise back to standing, keeping your core stable.\n5. Attempt your maximum load for **3 repetitions only**.\n\n### Safety\n- Never attempt new max loads without supervision if inexperienced.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg) for 3 repetitions**.",
+        "rules": "- Warm up with progressive sets before the test.\n- Place the bar correctly on the traps.\n- Full squat: hips below knees.\n- Three consecutive max repetitions.\n- Use a spotter for heavy weights.\n- The final score is the maximum weight successfully lifted for 3 repetitions in kg.",
+        "tips": "- Focus on technique before increasing weight.\n- Breathe deeply and engage your core during the descent.\n- Increase weight gradually to avoid excessive fatigue.\n- Take sufficient rest between attempts.\n- Stay focused and maintain proper posture for each repetition."
+      }
+    },
+    "type": "weight",
+    "exercise": "back-squat",
+    "value": 3
+  },
+  {
+    "name": "3RM Deadlift",
+    "contents": {
+      "fr": {
+        "title": "3RM Deadlift",
+        "summary": "Testez votre force maximale au deadlift. Soulevez la charge la plus lourde possible pour 3 répétitions avec une technique correcte.",
+        "details": "Le 3RM Deadlift est un test de force visant à mesurer la charge maximale que vous pouvez soulever pour **3 répétitions consécutives**.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez vos chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach si nécessaire.\n\n### Exécution\n1. Placez vos pieds sous la barre, largeur des épaules.\n2. Saisissez la barre avec une prise pronation ou mixte.\n3. Gardez le dos droit et le tronc engagé.\n4. Soulevez la barre jusqu’à être complètement debout.\n5. Abaissez la barre au sol de manière contrôlée.\n6. Tentez votre charge maximale pour **3 répétitions seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision si vous êtes débutant.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg) pour 3 répétitions**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Positionnez correctement les pieds et la prise.\n- Gardez le dos droit et le tronc engagé.\n- Trois répétitions maximales consécutives.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie pour 3 répétitions en kg.",
+        "tips": "- Concentrez-vous sur la technique et la posture.\n- Engagez le tronc et gardez le dos droit.\n- Augmentez progressivement la charge.\n- Reposez-vous suffisamment entre les essais.\n- Maintenez une bonne respiration et un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "3RM Deadlift",
+        "summary": "Test your maximum strength on the deadlift. Lift the heaviest weight possible for 3 repetitions with proper technique.",
+        "details": "The 3RM Deadlift is a strength test designed to measure the maximum load you can lift for **3 consecutive repetitions**.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check your shoes and the bar condition.\n- Use a spotter or coach if needed.\n\n### Execution\n1. Place your feet under the bar, shoulder-width apart.\n2. Grip the bar with pronation or mixed grip.\n3. Keep your back straight and core engaged.\n4. Lift the bar until fully standing.\n5. Lower the bar to the floor in a controlled manner.\n6. Attempt your maximum load for **3 repetitions only**.\n\n### Safety\n- Never attempt new max loads without supervision if inexperienced.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg) for 3 repetitions**.",
+        "rules": "- Warm up with progressive sets.\n- Position feet and grip correctly.\n- Keep back straight and core engaged.\n- Three consecutive max repetitions.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted for 3 repetitions in kg.",
+        "tips": "- Focus on technique and posture.\n- Engage core and keep back straight.\n- Increase weight gradually.\n- Rest sufficiently between attempts.\n- Maintain proper breathing and total control of the lift."
+      }
+    },
+    "type": "weight",
+    "exercise": "deadlift",
+    "value": 3
+  },
+  {
+    "name": "3RM Front Squat",
+    "contents": {
+      "fr": {
+        "title": "3RM Front Squat",
+        "summary": "Testez votre force maximale au front squat. Soulevez la charge la plus lourde possible pour 3 répétitions avec une technique correcte.",
+        "details": "Le 3RM Front Squat est un test de force visant à mesurer la charge maximale que vous pouvez soulever pour **3 répétitions consécutives**.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez vos chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre sur le haut des épaules, coudes hauts.\n2. Pieds écartés à la largeur des épaules, orteils légèrement tournés.\n3. Descendez en squat complet (hanches sous les genoux).\n4. Remontez en position debout en gardant le tronc engagé.\n5. Tentez votre charge maximale pour **3 répétitions seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision si vous êtes débutant.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg) pour 3 répétitions**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Placez correctement la barre sur les épaules.\n- Squat complet : hanches sous les genoux.\n- Trois répétitions maximales consécutives.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie pour 3 répétitions en kg.",
+        "tips": "- Concentrez-vous sur la technique et la posture.\n- Gardez les coudes hauts et le tronc engagé.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez une respiration contrôlée et une bonne stabilité."
+      },
+      "en": {
+        "title": "3RM Front Squat",
+        "summary": "Test your maximum strength on the front squat. Lift the heaviest weight possible for 3 repetitions with proper technique.",
+        "details": "The 3RM Front Squat is a strength test designed to measure the maximum load you can lift for **3 consecutive repetitions**.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check your shoes and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on your upper shoulders, elbows high.\n2. Feet shoulder-width apart, toes slightly out.\n3. Descend into a full squat (hips below knees).\n4. Rise to standing while keeping your core engaged.\n5. Attempt your maximum load for **3 repetitions only**.\n\n### Safety\n- Never attempt new max loads without supervision if inexperienced.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg) for 3 repetitions**.",
+        "rules": "- Warm up with progressive sets.\n- Position the bar correctly on the shoulders.\n- Full squat: hips below knees.\n- Three consecutive max repetitions.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted for 3 repetitions in kg.",
+        "tips": "- Focus on technique and posture.\n- Keep elbows high and core engaged.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain controlled breathing and stability."
+      }
+    },
+    "type": "weight",
+    "exercise": "front-squat",
+    "value": 3
+  },
+  {
+    "name": "5RM Back Squat",
+    "contents": {
+      "fr": {
+        "title": "5RM Back Squat",
+        "summary": "Testez votre force maximale sur le back squat. Soulevez la charge la plus lourde possible pour 5 répétitions avec une technique correcte.",
+        "details": "Le 5RM Back Squat est un test de force visant à mesurer la charge maximale que vous pouvez soulever pour **5 répétitions consécutives**.\n\n### Préparation\n- Échauffez-vous correctement avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez que vos chaussures et votre barre sont adaptées.\n- Si possible, utilisez un spotter pour la sécurité.\n\n### Exécution\n1. Placez la barre sur vos trapèzes hautes (position haute sur les épaules).\n2. Pieds écartés à la largeur des épaules, orteils légèrement tournés.\n3. Descendez en squat complet (hanches sous les genoux).\n4. Remontez en position debout, en gardant le tronc stable.\n5. Essayez votre charge maximale pour **5 répétitions seulement**.\n\n### Sécurité\n- N’essayez jamais de nouvelles charges maximales sans supervision si vous n’êtes pas expérimenté.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg) pour 5 répétitions**.",
+        "rules": "- Échauffez-vous avant le test avec des séries progressives.\n- La barre doit être placée correctement sur les trapèzes.\n- Squat complet : hanches sous les genoux.\n- Trois répétitions maximales consécutives.\n- Utilisez un spotter pour les charges lourdes.\n- Le score final est la charge maximale réussie pour 5 répétitions en kg.",
+        "tips": "- Concentrez-vous sur la technique avant de chercher la charge maximale.\n- Respirez profondément et engagez le tronc pendant la descente.\n- Augmentez progressivement la charge pour éviter la fatigue excessive.\n- Prenez le temps de récupérer entre chaque tentative.\n- Restez concentré et gardez votre posture correcte pour chaque répétition."
+      },
+      "en": {
+        "title": "5RM Back Squat",
+        "summary": "Test your maximum strength on the back squat. Lift the heaviest weight possible for 5 repetitions with proper technique.",
+        "details": "The 5RM Back Squat is a strength test designed to measure the maximum load you can lift for **5 consecutive repetitions**.\n\n### Preparation\n- Warm up properly with progressive sets (empty bar, then light weights).\n- Make sure your shoes and bar are appropriate.\n- Use a spotter if possible for safety.\n\n### Execution\n1. Place the bar on your upper traps.\n2. Feet shoulder-width apart, toes slightly out.\n3. Descend into a full squat (hips below knees).\n4. Rise back to standing, keeping your core stable.\n5. Attempt your maximum load for **5 repetitions only**.\n\n### Safety\n- Never attempt new max loads without supervision if inexperienced.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg) for 5 repetitions**.",
+        "rules": "- Warm up with progressive sets before the test.\n- Place the bar correctly on the traps.\n- Full squat: hips below knees.\n- Three consecutive max repetitions.\n- Use a spotter for heavy weights.\n- The final score is the maximum weight successfully lifted for 5 repetitions in kg.",
+        "tips": "- Focus on technique before increasing weight.\n- Breathe deeply and engage your core during the descent.\n- Increase weight gradually to avoid excessive fatigue.\n- Take sufficient rest between attempts.\n- Stay focused and maintain proper posture for each repetition."
+      }
+    },
+    "type": "weight",
+    "exercise": "back-squat",
+    "value": 5
+  },
+  {
+    "name": "5RM Deadlift",
+    "contents": {
+      "fr": {
+        "title": "5RM Deadlift",
+        "summary": "Testez votre force maximale au deadlift. Soulevez la charge la plus lourde possible pour 5 répétitions avec une technique correcte.",
+        "details": "Le 5RM Deadlift est un test de force visant à mesurer la charge maximale que vous pouvez soulever pour **5 répétitions consécutives**.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez vos chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach si nécessaire.\n\n### Exécution\n1. Placez vos pieds sous la barre, largeur des épaules.\n2. Saisissez la barre avec une prise pronation ou mixte.\n3. Gardez le dos droit et le tronc engagé.\n4. Soulevez la barre jusqu’à être complètement debout.\n5. Abaissez la barre au sol de manière contrôlée.\n6. Tentez votre charge maximale pour **5 répétitions seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision si vous êtes débutant.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg) pour 5 répétitions**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Positionnez correctement les pieds et la prise.\n- Gardez le dos droit et le tronc engagé.\n- Trois répétitions maximales consécutives.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie pour 5 répétitions en kg.",
+        "tips": "- Concentrez-vous sur la technique et la posture.\n- Engagez le tronc et gardez le dos droit.\n- Augmentez progressivement la charge.\n- Reposez-vous suffisamment entre les essais.\n- Maintenez une bonne respiration et un contrôle total du mouvement."
+      },
+      "en": {
+        "title": "5RM Deadlift",
+        "summary": "Test your maximum strength on the deadlift. Lift the heaviest weight possible for 5 repetitions with proper technique.",
+        "details": "The 5RM Deadlift is a strength test designed to measure the maximum load you can lift for **5 consecutive repetitions**.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check your shoes and the bar condition.\n- Use a spotter or coach if needed.\n\n### Execution\n1. Place your feet under the bar, shoulder-width apart.\n2. Grip the bar with pronation or mixed grip.\n3. Keep your back straight and core engaged.\n4. Lift the bar until fully standing.\n5. Lower the bar to the floor in a controlled manner.\n6. Attempt your maximum load for **5 repetitions only**.\n\n### Safety\n- Never attempt new max loads without supervision if inexperienced.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg) for 5 repetitions**.",
+        "rules": "- Warm up with progressive sets.\n- Position feet and grip correctly.\n- Keep back straight and core engaged.\n- Three consecutive max repetitions.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted for 3 repetitions in kg.",
+        "tips": "- Focus on technique and posture.\n- Engage core and keep back straight.\n- Increase weight gradually.\n- Rest sufficiently between attempts.\n- Maintain proper breathing and total control of the lift."
+      }
+    },
+    "type": "weight",
+    "exercise": "deadlift",
+    "value": 5
+  },
+  {
+    "name": "5RM Front Squat",
+    "contents": {
+      "fr": {
+        "title": "5RM Front Squat",
+        "summary": "Testez votre force maximale au front squat. Soulevez la charge la plus lourde possible pour 5 répétitions avec une technique correcte.",
+        "details": "Le 5RM Front Squat est un test de force visant à mesurer la charge maximale que vous pouvez soulever pour **5 répétitions consécutives**.\n\n### Préparation\n- Échauffez-vous avec des séries progressives (barre vide, puis charges légères).\n- Vérifiez vos chaussures et l’état de la barre.\n- Utilisez un spotter ou un coach pour la sécurité.\n\n### Exécution\n1. Placez la barre sur le haut des épaules, coudes hauts.\n2. Pieds écartés à la largeur des épaules, orteils légèrement tournés.\n3. Descendez en squat complet (hanches sous les genoux).\n4. Remontez en position debout en gardant le tronc engagé.\n5. Tentez votre charge maximale pour **5 répétitions seulement**.\n\n### Sécurité\n- Ne tentez jamais de charges maximales sans supervision si vous êtes débutant.\n- Maintenez une technique stricte pour éviter toute blessure.\n\n### Score\n- La valeur correspond à la **charge maximale soulevée (en kg) pour 5 répétitions**.",
+        "rules": "- Échauffez-vous avec des séries progressives.\n- Placez correctement la barre sur les épaules.\n- Squat complet : hanches sous les genoux.\n- Trois répétitions maximales consécutives.\n- Utilisez un spotter ou coach si nécessaire.\n- Le score final est la charge maximale réussie pour 5 répétitions en kg.",
+        "tips": "- Concentrez-vous sur la technique et la posture.\n- Gardez les coudes hauts et le tronc engagé.\n- Augmentez progressivement la charge.\n- Reposez-vous entre les essais.\n- Maintenez une respiration contrôlée et une bonne stabilité."
+      },
+      "en": {
+        "title": "5RM Front Squat",
+        "summary": "Test your maximum strength on the front squat. Lift the heaviest weight possible for 5 repetitions with proper technique.",
+        "details": "The 5RM Front Squat is a strength test designed to measure the maximum load you can lift for **5 consecutive repetitions**.\n\n### Preparation\n- Warm up with progressive sets (empty bar, then light weights).\n- Check your shoes and bar condition.\n- Use a spotter or coach for safety.\n\n### Execution\n1. Place the bar on your upper shoulders, elbows high.\n2. Feet shoulder-width apart, toes slightly out.\n3. Descend into a full squat (hips below knees).\n4. Rise to standing while keeping your core engaged.\n5. Attempt your maximum load for **5 repetitions only**.\n\n### Safety\n- Never attempt new max loads without supervision if inexperienced.\n- Maintain strict technique to avoid injury.\n\n### Score\n- The score corresponds to the **maximum weight lifted (in kg) for 5 repetitions**.",
+        "rules": "- Warm up with progressive sets.\n- Position the bar correctly on the shoulders.\n- Full squat: hips below knees.\n- Three consecutive max repetitions.\n- Use a spotter or coach if necessary.\n- Final score is the maximum weight successfully lifted for 3 repetitions in kg.",
+        "tips": "- Focus on technique and posture.\n- Keep elbows high and core engaged.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain controlled breathing and stability."
+      }
+    },
+    "type": "weight",
+    "exercise": "front-squat",
+    "value": 5
+  },
+  {
+    "name": "Max Pull-ups",
+    "contents": {
+      "fr": {
+        "title": "Max Pull-ups",
+        "summary": "Testez votre nombre maximal de tractions. L’objectif est de réaliser le plus de répétitions possibles avec une technique correcte.",
+        "details": "Le Max Pull-ups est un test de force et d’endurance visant à mesurer le **nombre maximal de tractions consécutives** que vous pouvez réaliser.\n\n### Préparation\n- Échauffez vos épaules, bras et dos avec des séries légères.\n- Vérifiez que la barre est stable et sécurisée.\n\n### Exécution\n1. Saisissez la barre avec une prise pronation (paumes vers l’avant), largeur des épaules.\n2. Suspendez-vous complètement, bras tendus.\n3. Tirez-vous vers le haut jusqu’à ce que le menton dépasse la barre.\n4. Redescendez de manière contrôlée.\n5. Répétez autant de fois que possible jusqu’à l’échec.\n\n### Sécurité\n- Évitez les balancements excessifs et gardez le corps contrôlé.\n- N’essayez pas le maximum sans échauffement ou supervision si nécessaire.\n\n### Score\n- Le score correspond au **nombre total de tractions réussies**.",
+        "rules": "- Échauffez-vous avant le test.\n- Utilisez une prise correcte, bras tendus en départ.\n- Remontez le menton au-dessus de la barre pour valider chaque répétition.\n- Effectuez le maximum de répétitions consécutives.\n- Gardez un contrôle total du mouvement.\n- Le score final est le nombre total de tractions réussies.",
+        "tips": "- Concentrez-vous sur la technique pour éviter les blessures.\n- Gardez le corps droit et contrôlé.\n- Respirez correctement pendant l’effort.\n- Progressez progressivement vers votre maximum.\n- Utilisez des séries préparatoires si nécessaire."
+      },
+      "en": {
+        "title": "Max Pull-ups",
+        "summary": "Test your maximum pull-ups. The goal is to perform as many repetitions as possible with proper technique.",
+        "details": "The Max Pull-ups test measures the **maximum number of consecutive pull-ups** you can perform, testing strength and endurance.\n\n### Preparation\n- Warm up shoulders, arms, and back with light sets.\n- Ensure the bar is stable and secure.\n\n### Execution\n1. Grip the bar with a pronated grip (palms forward), shoulder-width apart.\n2. Hang fully with arms extended.\n3. Pull yourself up until your chin passes the bar.\n4. Lower down in a controlled manner.\n5. Repeat as many times as possible until failure.\n\n### Safety\n- Avoid excessive swinging and keep your body controlled.\n- Do not attempt max reps without proper warm-up or supervision if needed.\n\n### Score\n- The score corresponds to the **total number of successful pull-ups**.",
+        "rules": "- Warm up before the test.\n- Use a correct grip, arms fully extended at start.\n- Pull until chin passes the bar for each rep.\n- Perform as many consecutive reps as possible.\n- Maintain full control throughout.\n- Final score is the total number of successful pull-ups.",
+        "tips": "- Focus on proper technique to avoid injury.\n- Keep the body straight and controlled.\n- Breathe correctly during the effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
+      }
+    },
+    "type": "repetitions",
+    "exercise": "pull-up",
+    "value": null
+  },
+  {
+    "name": "Max Pull-ups (Strict)",
+    "contents": {
+      "fr": {
+        "title": "Max Pull-ups (Strict)",
+        "summary": "Testez votre nombre maximal de tractions strictes. L’objectif est de réaliser le plus de répétitions possibles en respectant une technique stricte.",
+        "details": "Le Max Pull-ups (Strict) est un test de force et d’endurance visant à mesurer le **nombre maximal de tractions consécutives strictes** que vous pouvez réaliser.\n\n### Préparation\n- Échauffez vos épaules, bras et dos avec des séries légères.\n- Vérifiez que la barre est stable et sécurisée.\n\n### Exécution\n1. Saisissez la barre avec une prise pronation (paumes vers l’avant), largeur des épaules.\n2. Suspendez-vous complètement, bras tendus, corps droit.\n3. Tirez-vous vers le haut jusqu’à ce que le menton dépasse la barre.\n4. Redescendez de manière contrôlée, bras complètement tendus.\n5. Répétez autant de fois que possible jusqu’à l’échec, sans balancer le corps.\n\n### Sécurité\n- Maintenez un corps contrôlé et évitez les mouvements brusques.\n- Ne tentez pas le maximum sans échauffement ou supervision si nécessaire.\n\n### Score\n- Le score correspond au **nombre total de tractions strictes réussies**.",
+        "rules": "- Échauffez-vous avant le test.\n- Utilisez une prise correcte, bras tendus au départ.\n- Remontez le menton au-dessus de la barre pour valider chaque répétition.\n- Pas de balancement ni d’élan avec les jambes.\n- Effectuez le maximum de répétitions strictes consécutives.\n- Le score final est le nombre total de tractions strictes réussies.",
+        "tips": "- Concentrez-vous sur la technique stricte.\n- Gardez le corps droit et contrôlé.\n- Respirez correctement pendant l’effort.\n- Progressez progressivement vers votre maximum.\n- Utilisez des séries préparatoires si nécessaire."
+      },
+      "en": {
+        "title": "Max Pull-ups (Strict)",
+        "summary": "Test your maximum strict pull-ups. The goal is to perform as many repetitions as possible with strict technique.",
+        "details": "The Max Pull-ups (Strict) test measures the **maximum number of consecutive strict pull-ups** you can perform, testing strength and endurance.\n\n### Preparation\n- Warm up shoulders, arms, and back with light sets.\n- Ensure the bar is stable and secure.\n\n### Execution\n1. Grip the bar with a pronated grip (palms forward), shoulder-width apart.\n2. Hang fully, arms extended, body straight.\n3. Pull yourself up until your chin passes the bar.\n4. Lower down in a controlled manner, arms fully extended.\n5. Repeat as many times as possible until failure, without swinging.\n\n### Safety\n- Maintain a controlled body and avoid jerky movements.\n- Do not attempt max reps without proper warm-up or supervision if needed.\n\n### Score\n- The score corresponds to the **total number of successful strict pull-ups**.",
+        "rules": "- Warm up before the test.\n- Use a correct grip, arms fully extended at start.\n- Pull until chin passes the bar for each rep.\n- No swinging or leg momentum.\n- Perform the maximum number of consecutive strict reps.\n- Final score is the total number of successful strict pull-ups.",
+        "tips": "- Focus on strict technique.\n- Keep body straight and controlled.\n- Breathe correctly during the effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
+      }
+    },
+    "type": "repetitions",
+    "exercise": "pull-up",
+    "value": null
+  },
+  {
+    "name": "Max Muscle-ups",
+    "contents": {
+      "fr": {
+        "title": "Max Muscle-ups",
+        "summary": "Testez votre nombre maximal de muscle-ups. L’objectif est de réaliser le plus de répétitions possibles avec une technique correcte.",
+        "details": "Le Max Muscle-ups est un test de force, de puissance et d’endurance visant à mesurer le **nombre maximal de muscle-ups consécutifs** que vous pouvez réaliser.\n\n### Préparation\n- Échauffez vos épaules, bras, dos et tronc avec des séries légères.\n- Vérifiez que la barre ou les anneaux sont stables et sécurisés.\n\n### Exécution\n1. Saisissez la barre ou les anneaux avec une prise pronation (paumes vers l’avant) ou neutre pour les anneaux.\n2. Suspendez-vous complètement, bras tendus.\n3. Tirez-vous vers le haut et basculez pour passer la poitrine au-dessus de la barre ou des anneaux.\n4. Redescendez de manière contrôlée.\n5. Répétez autant de fois que possible jusqu’à l’échec.\n\n### Sécurité\n- Évitez les balancements excessifs et gardez le corps contrôlé.\n- Ne tentez pas le maximum sans échauffement ou supervision si nécessaire.\n\n### Score\n- Le score correspond au **nombre total de muscle-ups réussis**.",
+        "rules": "- Échauffez-vous avant le test.\n- Utilisez une prise correcte.\n- Le muscle-up est validé lorsque la poitrine passe au-dessus de la barre ou des anneaux.\n- Effectuez le maximum de répétitions consécutives.\n- Gardez un corps contrôlé et stable.\n- Le score final est le nombre total de muscle-ups réussis.",
+        "tips": "- Concentrez-vous sur la technique et la fluidité.\n- Gardez le corps stable et contrôlé.\n- Respirez correctement pendant l’effort.\n- Progressez progressivement vers votre maximum.\n- Utilisez des séries préparatoires si nécessaire."
+      },
+      "en": {
+        "title": "Max Muscle-ups",
+        "summary": "Test your maximum muscle-ups. The goal is to perform as many repetitions as possible with proper technique.",
+        "details": "The Max Muscle-ups test measures the **maximum number of consecutive muscle-ups** you can perform, testing strength, power, and endurance.\n\n### Preparation\n- Warm up shoulders, arms, back, and core with light sets.\n- Ensure the bar or rings are stable and secure.\n\n### Execution\n1. Grip the bar or rings with a pronated grip (palms forward) or neutral for rings.\n2. Hang fully, arms extended.\n3. Pull yourself up and transition to bring your chest above the bar or rings.\n4. Lower down in a controlled manner.\n5. Repeat as many times as possible until failure.\n\n### Safety\n- Avoid excessive swinging and keep your body controlled.\n- Do not attempt max reps without proper warm-up or supervision if needed.\n\n### Score\n- The score corresponds to the **total number of successful muscle-ups**.",
+        "rules": "- Warm up before the test.\n- Use a correct grip.\n- Muscle-up is valid when the chest passes above the bar or rings.\n- Perform the maximum number of consecutive reps.\n- Keep body controlled and stable.\n- Final score is the total number of successful muscle-ups.",
+        "tips": "- Focus on technique and fluidity.\n- Keep body stable and controlled.\n- Breathe properly during effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
+      }
+    },
+    "type": "repetitions",
+    "exercise": "muscle-up",
+    "value": null
+  },
+  {
+    "name": "Max Muscle-ups (Strict)",
+    "contents": {
+      "fr": {
+        "title": "Max Muscle-ups (Strict)",
+        "summary": "Testez votre nombre maximal de muscle-ups stricts. L’objectif est de réaliser le plus de répétitions possibles en respectant une technique stricte.",
+        "details": "Le Max Muscle-ups (Strict) est un test de force, puissance et endurance visant à mesurer le **nombre maximal de muscle-ups consécutifs stricts** que vous pouvez réaliser.\n\n### Préparation\n- Échauffez vos épaules, bras, dos et tronc avec des séries légères.\n- Vérifiez que la barre ou les anneaux sont stables et sécurisés.\n\n### Exécution\n1. Saisissez la barre ou les anneaux avec une prise pronation (paumes vers l’avant) ou neutre pour les anneaux.\n2. Suspendez-vous complètement, bras tendus, corps droit.\n3. Tirez-vous vers le haut et passez la poitrine au-dessus de la barre ou des anneaux sans balancement.\n4. Redescendez de manière contrôlée, bras tendus.\n5. Répétez autant de fois que possible jusqu’à l’échec, en gardant une technique stricte.\n\n### Sécurité\n- Maintenez le corps contrôlé et évitez les mouvements brusques.\n- Ne tentez pas le maximum sans échauffement ou supervision si nécessaire.\n\n### Score\n- Le score correspond au **nombre total de muscle-ups stricts réussis**.",
+        "rules": "- Échauffez-vous avant le test.\n- Utilisez une prise correcte.\n- Muscle-up strict validé lorsque la poitrine passe au-dessus de la barre ou des anneaux.\n- Pas de balancement ni d’élan avec le corps.\n- Effectuez le maximum de répétitions strictes consécutives.\n- Le score final est le nombre total de muscle-ups stricts réussis.",
+        "tips": "- Concentrez-vous sur la technique stricte.\n- Gardez le corps droit et contrôlé.\n- Respirez correctement pendant l’effort.\n- Progressez progressivement vers votre maximum.\n- Utilisez des séries préparatoires si nécessaire."
+      },
+      "en": {
+        "title": "Max Muscle-ups (Strict)",
+        "summary": "Test your maximum strict muscle-ups. The goal is to perform as many repetitions as possible with strict technique.",
+        "details": "The Max Muscle-ups (Strict) test measures the **maximum number of consecutive strict muscle-ups** you can perform, testing strength, power, and endurance.\n\n### Preparation\n- Warm up shoulders, arms, back, and core with light sets.\n- Ensure the bar or rings are stable and secure.\n\n### Execution\n1. Grip the bar or rings with a pronated grip (palms forward) or neutral for rings.\n2. Hang fully, arms extended, body straight.\n3. Pull yourself up and bring your chest above the bar or rings without swinging.\n4. Lower down in a controlled manner, arms extended.\n5. Repeat as many times as possible until failure, maintaining strict technique.\n\n### Safety\n- Keep your body controlled and avoid jerky movements.\n- Do not attempt max reps without proper warm-up or supervision if needed.\n\n### Score\n- The score corresponds to the **total number of successful strict muscle-ups**.",
+        "rules": "- Warm up before the test.\n- Use a correct grip.\n- Strict muscle-up is valid when the chest passes above the bar or rings.\n- No swinging or body momentum.\n- Perform the maximum number of consecutive strict reps.\n- Final score is the total number of successful strict muscle-ups.",
+        "tips": "- Focus on strict technique.\n- Keep body straight and controlled.\n- Breathe properly during effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
+      }
+    },
+    "type": "repetitions",
+    "exercise": "muscle-up",
+    "value": null
+  },
+  {
+    "name": "Max Toes-to-bar",
+    "contents": {
+      "fr": {
+        "title": "Max Toes-to-Bar",
+        "summary": "Testez votre nombre maximal de toes-to-bar. L’objectif est de réaliser le plus de répétitions possibles avec une technique correcte.",
+        "details": "Le Max Toes-to-Bar est un test d’endurance, de force et de coordination visant à mesurer le **nombre maximal de toes-to-bar consécutifs** que vous pouvez réaliser.\n\n### Préparation\n- Échauffez vos épaules, bras, tronc et hanches avec des séries légères.\n- Vérifiez que la barre est stable et sécurisée.\n\n### Exécution\n1. Suspendez-vous à la barre, bras tendus, corps droit.\n2. Ramenez vos pieds pour toucher la barre avec vos orteils.\n3. Redescendez de manière contrôlée jusqu’à bras complètement tendus.\n4. Répétez autant de fois que possible jusqu’à l’échec.\n\n### Sécurité\n- Maintenez un corps contrôlé et évitez les balancements excessifs.\n- Ne tentez pas le maximum sans échauffement ou supervision si nécessaire.\n\n### Score\n- Le score correspond au **nombre total de toes-to-bar réussis**.",
+        "rules": "- Échauffez-vous avant le test.\n- Suspendez-vous correctement à la barre, bras tendus.\n- Les orteils doivent toucher la barre pour valider la répétition.\n- Effectuez le maximum de répétitions consécutives.\n- Gardez le corps contrôlé et stable.\n- Le score final est le nombre total de toes-to-bar réussis.",
+        "tips": "- Concentrez-vous sur la technique et le contrôle.\n- Gardez le corps droit et engagez le tronc.\n- Respirez correctement pendant l’effort.\n- Progressez progressivement vers votre maximum.\n- Utilisez des séries préparatoires si nécessaire."
+      },
+      "en": {
+        "title": "Max Toes-to-Bar",
+        "summary": "Test your maximum toes-to-bar. The goal is to perform as many repetitions as possible with proper technique.",
+        "details": "The Max Toes-to-Bar test measures the **maximum number of consecutive toes-to-bar** you can perform, testing endurance, strength, and coordination.\n\n### Preparation\n- Warm up shoulders, arms, core, and hips with light sets.\n- Ensure the bar is stable and secure.\n\n### Execution\n1. Hang from the bar, arms extended, body straight.\n2. Raise your feet to touch the bar with your toes.\n3. Lower down in a controlled manner until arms are fully extended.\n4. Repeat as many times as possible until failure.\n\n### Safety\n- Keep your body controlled and avoid excessive swinging.\n- Do not attempt max reps without proper warm-up or supervision if needed.\n\n### Score\n- The score corresponds to the **total number of successful toes-to-bar**.",
+        "rules": "- Warm up before the test.\n- Hang correctly from the bar, arms extended.\n- Toes must touch the bar to validate the rep.\n- Perform the maximum number of consecutive repetitions.\n- Keep body controlled and stable.\n- Final score is the total number of successful toes-to-bar.",
+        "tips": "- Focus on technique and control.\n- Keep body straight and engage the core.\n- Breathe properly during effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
+      }
+    },
+    "type": "repetitions",
+    "exercise": "toes-to-bar",
+    "value": null
+  },
+  {
+    "name": "Max Chest-to-bar Pull-ups",
+    "contents": {
+      "fr": {
+        "title": "Max Chest-to-Bar Pull-ups",
+        "summary": "Testez votre nombre maximal de chest-to-bar pull-ups. L’objectif est de réaliser le plus de répétitions possibles avec une technique correcte.",
+        "details": "Le Max Chest-to-Bar Pull-ups est un test d’endurance et de force visant à mesurer le **nombre maximal de chest-to-bar pull-ups consécutifs** que vous pouvez réaliser.\n\n### Préparation\n- Échauffez vos épaules, bras et tronc avec des séries légères.\n- Vérifiez que la barre est stable et sécurisée.\n\n### Exécution\n1. Suspendez-vous à la barre, bras tendus, paumes en pronation.\n2. Tirez-vous vers le haut jusqu’à ce que la poitrine touche la barre.\n3. Redescendez de manière contrôlée jusqu’à bras complètement tendus.\n4. Répétez autant de fois que possible jusqu’à l’échec.\n\n### Sécurité\n- Maintenez un corps contrôlé et évitez les balancements excessifs.\n- Ne tentez pas le maximum sans échauffement ou supervision si nécessaire.\n\n### Score\n- Le score correspond au **nombre total de chest-to-bar pull-ups réussis**.",
+        "rules": "- Échauffez-vous avant le test.\n- Suspendez-vous correctement à la barre, bras tendus.\n- La poitrine doit toucher la barre pour valider la répétition.\n- Effectuez le maximum de répétitions consécutives.\n- Gardez le corps contrôlé et stable.\n- Le score final est le nombre total de chest-to-bar pull-ups réussis.",
+        "tips": "- Concentrez-vous sur la technique et le contrôle.\n- Gardez le corps droit et engagez le tronc.\n- Respirez correctement pendant l’effort.\n- Progressez progressivement vers votre maximum.\n- Utilisez des séries préparatoires si nécessaire."
+      },
+      "en": {
+        "title": "Max Chest-to-Bar Pull-ups",
+        "summary": "Test your maximum chest-to-bar pull-ups. The goal is to perform as many repetitions as possible with proper technique.",
+        "details": "The Max Chest-to-Bar Pull-ups test measures the **maximum number of consecutive chest-to-bar pull-ups** you can perform, testing endurance and strength.\n\n### Preparation\n- Warm up shoulders, arms, and core with light sets.\n- Ensure the bar is stable and secure.\n\n### Execution\n1. Hang from the bar, arms extended, palms pronated.\n2. Pull yourself up until your chest touches the bar.\n3. Lower down in a controlled manner until arms are fully extended.\n4. Repeat as many times as possible until failure.\n\n### Safety\n- Keep your body controlled and avoid excessive swinging.\n- Do not attempt max reps without proper warm-up or supervision if needed.\n\n### Score\n- The score corresponds to the **total number of successful chest-to-bar pull-ups**.",
+        "rules": "- Warm up before the test.\n- Hang correctly from the bar, arms extended.\n- Chest must touch the bar to validate the rep.\n- Perform the maximum number of consecutive repetitions.\n- Keep body controlled and stable.\n- Final score is the total number of successful chest-to-bar pull-ups.",
+        "tips": "- Focus on technique and control.\n- Keep body straight and engage the core.\n- Breathe properly during effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
+      }
+    },
+    "type": "repetitions",
+    "exercise": "chest-to-bar-pull-up",
+    "value": null
+  },
+  {
+    "name": "Max Double-Unders",
+    "contents": {
+      "fr": {
+        "title": "Max Double-Unders",
+        "summary": "Testez votre nombre maximal de double-unders. L’objectif est de réaliser le plus de répétitions possibles avec une technique correcte.",
+        "details": "Le Max Double-Unders est un test d’endurance, coordination et agilité visant à mesurer le **nombre maximal de double-unders consécutifs** que vous pouvez réaliser avec une corde à sauter.\n\n### Préparation\n- Échauffez vos chevilles, mollets, épaules et tronc avec des sauts légers.\n- Vérifiez que la corde est de longueur appropriée et la zone dégagée.\n\n### Exécution\n1. Tenez la corde à sauter correctement, bras près du corps.\n2. Effectuez des sauts rapides et légers, en laissant passer la corde deux fois sous vos pieds à chaque saut.\n3. Maintenez un rythme constant et contrôlé.\n4. Répétez autant de fois que possible jusqu’à l’échec.\n\n### Sécurité\n- Gardez le corps droit et contrôlez les sauts pour éviter toute chute.\n- Ne tentez pas le maximum sans échauffement approprié.\n\n### Score\n- Le score correspond au **nombre total de double-unders réussis**.",
+        "rules": "- Échauffez-vous avant le test.\n- Utilisez une corde adaptée à votre taille.\n- Sautez avec les pieds légèrement décollés du sol.\n- La corde doit passer deux fois sous vos pieds par saut.\n- Effectuez le maximum de double-unders consécutifs.\n- Le score final est le nombre total de double-unders réussis.",
+        "tips": "- Concentrez-vous sur le rythme et la coordination.\n- Gardez le tronc engagé et les épaules détendues.\n- Respirez régulièrement pendant l’effort.\n- Progressez progressivement vers votre maximum.\n- Utilisez des séries préparatoires pour vous échauffer."
+      },
+      "en": {
+        "title": "Max Double-Unders",
+        "summary": "Test your maximum double-unders. The goal is to perform as many repetitions as possible with proper technique.",
+        "details": "The Max Double-Unders test measures the **maximum number of consecutive double-unders** you can perform, testing endurance, coordination, and agility with a jump rope.\n\n### Preparation\n- Warm up ankles, calves, shoulders, and core with light jumps.\n- Make sure the rope is the correct length and the area is clear.\n\n### Execution\n1. Hold the jump rope correctly, arms close to the body.\n2. Perform quick, light jumps, letting the rope pass twice under your feet each jump.\n3. Maintain a steady, controlled rhythm.\n4. Repeat as many times as possible until failure.\n\n### Safety\n- Keep your body upright and control jumps to avoid falls.\n- Do not attempt max reps without proper warm-up.\n\n### Score\n- The score corresponds to the **total number of successful double-unders**.",
+        "rules": "- Warm up before the test.\n- Use a rope appropriate for your height.\n- Jump with feet slightly off the ground.\n- The rope must pass twice under your feet per jump.\n- Perform the maximum number of consecutive double-unders.\n- Final score is the total number of successful double-unders.",
+        "tips": "- Focus on rhythm and coordination.\n- Keep core engaged and shoulders relaxed.\n- Breathe steadily during effort.\n- Progress gradually toward your max.\n- Use preparatory sets to warm up."
+      }
+    },
+    "type": "repetitions",
+    "exercise": "double-under",
+    "value": null
+  },
+  {
+    "name": "Max Handstand Hold (Free)",
+    "contents": {
+      "fr": {
+        "title": "Max Handstand Hold (Free)",
+        "summary": "Testez votre équilibre et votre endurance en handstand. L’objectif est de maintenir l’équilibre le plus longtemps possible sans appui.",
+        "details": "Le Max Handstand Hold (Free) est un test d’équilibre, de force et de contrôle visant à mesurer **la durée maximale que vous pouvez rester en équilibre sur les mains sans appui**.\n\n### Préparation\n- Échauffez les épaules, poignets et tronc.\n- Choisissez une zone dégagée et sécurisée.\n- Préparez un tapis si nécessaire pour la sécurité.\n\n### Exécution\n1. Placez-vous en position de handstand sans appui (free).\n2. Tenez le corps droit et stable, en engageant tronc et épaules.\n3. Respirez calmement et concentrez-vous sur l’équilibre.\n4. Maintenez la position aussi longtemps que possible jusqu’à l’échec.\n\n### Sécurité\n- Pratiquez près d’un mur pour les premières tentatives si besoin.\n- Ne forcez pas si vous sentez une instabilité dangereuse.\n\n### Score\n- Le score correspond au **temps total en secondes maintenu en équilibre**.",
+        "rules": "- Échauffez-vous avant le test.\n- Maintenez le corps droit et stable.\n- Respirez calmement.\n- Ne touchez pas le sol avec les pieds ou mains pour valider.\n- Effectuez le maximum de temps en équilibre.\n- Le score final est le temps total en secondes.",
+        "tips": "- Concentrez-vous sur la respiration et le contrôle.\n- Engagez le tronc et les épaules.\n- Progressez progressivement pour améliorer la durée.\n- Évitez de regarder trop bas ou trop loin.\n- Utilisez un spotter pour les premières tentatives si nécessaire."
+      },
+      "en": {
+        "title": "Max Handstand Hold (Free)",
+        "summary": "Test your balance and endurance in a handstand. The goal is to hold the position as long as possible without support.",
+        "details": "The Max Handstand Hold (Free) test measures **the maximum time you can maintain a handstand without support**, testing balance, strength, and control.\n\n### Preparation\n- Warm up shoulders, wrists, and core.\n- Choose a clear and safe area.\n- Use a mat if needed for safety.\n\n### Execution\n1. Get into a free handstand position.\n2. Keep your body straight and stable, engaging core and shoulders.\n3. Breathe calmly and focus on balance.\n4. Maintain the position as long as possible until failure.\n\n### Safety\n- Practice near a wall for initial attempts if needed.\n- Do not push through dangerous instability.\n\n### Score\n- The score corresponds to the **total time in seconds held in balance**.",
+        "rules": "- Warm up before the test.\n- Keep the body straight and stable.\n- Breathe calmly.\n- Do not touch the ground with feet or hands for a valid hold.\n- Hold for maximum time possible.\n- Final score is total time in seconds.",
+        "tips": "- Focus on breathing and control.\n- Engage core and shoulders.\n- Progress gradually to increase duration.\n- Avoid looking too far up or down.\n- Use a spotter for first attempts if needed."
+      }
+    },
+    "type": "time",
+    "exercise": "handstand-hold",
+    "value": null
+  },
+  {
+    "name": "Max Handstand Hold (Wall)",
+    "contents": {
+      "fr": {
+        "title": "Max Handstand Hold (Wall)",
+        "summary": "Testez votre endurance en handstand avec appui au mur. Maintenez la position le plus longtemps possible avec une technique correcte.",
+        "details": "Le Max Handstand Hold (Wall) est un test de force, d’équilibre et de contrôle visant à mesurer **la durée maximale que vous pouvez tenir un handstand en appui contre un mur**.\n\n### Préparation\n- Échauffez épaules, poignets et tronc.\n- Choisissez un mur solide et une zone dégagée.\n- Préparez un tapis pour la sécurité si nécessaire.\n\n### Exécution\n1. Placez vos pieds contre le mur et vos mains au sol.\n2. Gardez le corps droit et stable, en engageant tronc et épaules.\n3. Respirez calmement et concentrez-vous sur la posture.\n4. Maintenez la position aussi longtemps que possible jusqu’à l’échec.\n\n### Sécurité\n- Ne forcez pas si vous sentez une instabilité.\n- Utilisez un spotter pour plus de sécurité si besoin.\n\n### Score\n- Le score correspond au **temps total en secondes maintenu en équilibre**.",
+        "rules": "- Échauffez-vous avant le test.\n- Placez les pieds contre le mur et mains au sol.\n- Gardez le corps droit et stable.\n- Respirez calmement.\n- Maintenez la position le plus longtemps possible.\n- Le score final est le temps total en secondes.",
+        "tips": "- Concentrez-vous sur le contrôle et la respiration.\n- Engagez tronc et épaules.\n- Progressez progressivement pour améliorer la durée.\n- Gardez le regard droit pour maintenir la posture.\n- Utilisez un spotter si nécessaire pour plus de sécurité."
+      },
+      "en": {
+        "title": "Max Handstand Hold (Wall)",
+        "summary": "Test your endurance in a handstand with wall support. Hold the position as long as possible with proper technique.",
+        "details": "The Max Handstand Hold (Wall) test measures **the maximum time you can maintain a handstand against a wall**, testing strength, balance, and control.\n\n### Preparation\n- Warm up shoulders, wrists, and core.\n- Choose a solid wall and clear area.\n- Use a mat for safety if necessary.\n\n### Execution\n1. Place your feet against the wall and hands on the floor.\n2. Keep your body straight and stable, engaging core and shoulders.\n3. Breathe calmly and focus on posture.\n4. Maintain the position as long as possible until failure.\n\n### Safety\n- Do not push through dangerous instability.\n- Use a spotter for extra safety if needed.\n\n### Score\n- The score corresponds to the **total time in seconds held in balance**.",
+        "rules": "- Warm up before the test.\n- Place feet against the wall and hands on the floor.\n- Keep body straight and stable.\n- Breathe calmly.\n- Hold the position as long as possible.\n- Final score is total time in seconds.",
+        "tips": "- Focus on control and breathing.\n- Engage core and shoulders.\n- Progress gradually to increase duration.\n- Keep gaze straight to maintain posture.\n- Use a spotter if necessary for safety."
+      }
+    },
+    "type": "time",
+    "exercise": "handstand-hold",
+    "value": null
+  },
+  {
+    "name": "Max Handstand Push-ups",
+    "contents": {
+      "fr": {
+        "title": "Max Handstand Push-ups",
+        "summary": "Testez votre force et endurance en handstand push-ups. L’objectif est de réaliser le plus de répétitions possibles avec une technique correcte.",
+        "details": "Le Max Handstand Push-ups est un test de force, équilibre et coordination visant à mesurer **le nombre maximal de handstand push-ups que vous pouvez réaliser**.\n\n### Préparation\n- Échauffez épaules, poignets et tronc.\n- Préparez une zone dégagée et sécurisée.\n- Optionnel : utilisez un tapis pour plus de confort.\n\n### Exécution\n1. Placez-vous en position de handstand contre un mur.\n2. Descendez lentement jusqu’à ce que la tête touche légèrement le sol.\n3. Poussez pour revenir à la position initiale.\n4. Répétez autant de fois que possible avec contrôle.\n\n### Sécurité\n- Maintenez le corps droit et contrôlé pour éviter blessures.\n- Ne tentez pas de nouvelles charges ou répétitions maximales sans supervision.\n\n### Score\n- Le score correspond au **nombre total de handstand push-ups réalisés correctement**.",
+        "rules": "- Échauffez-vous avant le test.\n- Utilisez un mur pour soutien.\n- Descendez jusqu’à toucher légèrement le sol.\n- Remontez complètement à chaque répétition.\n- Effectuez le maximum de répétitions possibles.\n- Le score final est le nombre total de répétitions correctes.",
+        "tips": "- Concentrez-vous sur la technique et le contrôle.\n- Engagez tronc et épaules.\n- Respirez régulièrement pendant les répétitions.\n- Progressez progressivement pour éviter la fatigue excessive.\n- Maintenez une posture correcte pour chaque répétition."
+      },
+      "en": {
+        "title": "Max Handstand Push-ups",
+        "summary": "Test your strength and endurance in handstand push-ups. The goal is to perform as many repetitions as possible with proper technique.",
+        "details": "The Max Handstand Push-ups test measures **the maximum number of handstand push-ups you can perform**, testing strength, balance, and coordination.\n\n### Preparation\n- Warm up shoulders, wrists, and core.\n- Prepare a clear and safe area.\n- Optional: use a mat for comfort.\n\n### Execution\n1. Get into a handstand position against a wall.\n2. Lower yourself slowly until your head lightly touches the ground.\n3. Push back up to the starting position.\n4. Repeat as many times as possible with control.\n\n### Safety\n- Keep your body straight and controlled to avoid injury.\n- Do not attempt new max repetitions without supervision.\n\n### Score\n- The score corresponds to the **total number of correctly performed handstand push-ups**.",
+        "rules": "- Warm up before the test.\n- Use a wall for support.\n- Lower until your head lightly touches the ground.\n- Fully extend on each repetition.\n- Perform the maximum number of repetitions possible.\n- Final score is the total number of correct repetitions.",
+        "tips": "- Focus on technique and control.\n- Engage core and shoulders.\n- Breathe steadily during repetitions.\n- Progress gradually to avoid excessive fatigue.\n- Maintain correct posture for each rep."
+      }
+    },
+    "type": "repetitions",
+    "exercise": "handstand-push-up",
+    "value": null
+  },
+  {
+    "name": "Max Handstand Push-ups (Strict)",
+    "contents": {
+      "fr": {
+        "title": "Max Handstand Push-ups (Strict)",
+        "summary": "Testez votre force et contrôle en handstand push-ups stricts. L’objectif est de réaliser le maximum de répétitions avec une technique parfaite.",
+        "details": "Le Max Handstand Push-ups (Strict) est un test de force, équilibre et contrôle visant à mesurer **le nombre maximal de handstand push-ups réalisés sans flexion des coudes ou mouvements compensatoires**.\n\n### Préparation\n- Échauffez épaules, poignets et tronc.\n- Préparez une zone sécurisée et dégagée.\n- Optionnel : utilisez un tapis pour plus de confort.\n\n### Exécution\n1. Placez-vous en handstand contre un mur.\n2. Descendez lentement jusqu’à ce que votre tête touche légèrement le sol.\n3. Remontez à la position initiale en gardant les coudes strictement verrouillés.\n4. Répétez autant de fois que possible en respectant la technique.\n\n### Sécurité\n- Maintenez le corps droit et contrôlé pour éviter toute blessure.\n- Ne tentez pas de répétitions maximales strictes sans supervision si vous êtes débutant.\n\n### Score\n- Le score correspond au **nombre total de répétitions strictes correctement réalisées**.",
+        "rules": "- Échauffez-vous avant le test.\n- Utilisez un mur pour soutien.\n- Descendez jusqu’à toucher légèrement le sol.\n- Remontez complètement en gardant la technique stricte.\n- Effectuez le maximum de répétitions correctes.\n- Le score final est le nombre total de répétitions strictes.",
+        "tips": "- Concentrez-vous sur la technique et le contrôle.\n- Engagez tronc et épaules.\n- Respirez régulièrement.\n- Progressez progressivement pour éviter fatigue et blessures.\n- Maintenez posture et verrouillage correct pour chaque répétition."
+      },
+      "en": {
+        "title": "Max Handstand Push-ups (Strict)",
+        "summary": "Test your strength and control in strict handstand push-ups. The goal is to perform the maximum repetitions with perfect technique.",
+        "details": "The Max Handstand Push-ups (Strict) test measures **the maximum number of handstand push-ups performed without elbow flexion or compensatory movements**, testing strength, balance, and control.\n\n### Preparation\n- Warm up shoulders, wrists, and core.\n- Prepare a clear and safe area.\n- Optional: use a mat for comfort.\n\n### Execution\n1. Get into a handstand position against a wall.\n2. Lower slowly until your head lightly touches the ground.\n3. Push back up to the starting position while keeping elbows strictly locked.\n4. Repeat as many times as possible maintaining strict technique.\n\n### Safety\n- Keep your body straight and controlled to avoid injury.\n- Do not attempt strict max repetitions without supervision if inexperienced.\n\n### Score\n- The score corresponds to the **total number of strict repetitions correctly performed**.",
+        "rules": "- Warm up before the test.\n- Use a wall for support.\n- Lower until your head lightly touches the ground.\n- Fully extend while keeping strict technique.\n- Perform the maximum correct repetitions possible.\n- Final score is the total number of strict repetitions.",
+        "tips": "- Focus on technique and control.\n- Engage core and shoulders.\n- Breathe steadily.\n- Progress gradually to avoid fatigue and injury.\n- Maintain proper posture and elbow lock for each rep."
+      }
+    },
+    "type": "repetitions",
+    "exercise": "handstand-push-up",
+    "value": null
+  },
+  {
+    "name": "Max L-Sit Hold",
+    "contents": {
+      "fr": {
+        "title": "Max L-Sit Hold",
+        "summary": "Testez votre force et endurance en L-Sit. Maintenez la position le plus longtemps possible avec une technique correcte.",
+        "details": "Le Max L-Sit Hold est un test visant à mesurer **la durée maximale pendant laquelle vous pouvez maintenir un L-Sit**, sollicitant les abdominaux, les hanches et les épaules.\n\n### Préparation\n- Échauffez vos épaules, poignets et tronc.\n- Choisissez un support stable (parallèles, barres ou sol).\n- Préparez un tapis si nécessaire pour plus de confort.\n\n### Exécution\n1. Asseyez-vous entre deux barres parallèles ou sur le sol.\n2. Soulevez vos jambes devant vous et maintenez-les droites.\n3. Appuyez fortement sur vos mains pour soulever les hanches.\n4. Maintenez la position aussi longtemps que possible.\n\n### Sécurité\n- Ne forcez pas si vous sentez de la douleur.\n- Gardez les bras et le tronc engagés pour éviter toute tension inutile.\n\n### Score\n- Le score correspond au **temps total en secondes maintenu en L-Sit**.",
+        "rules": "- Échauffez-vous avant le test.\n- Soulevez les jambes droites devant vous.\n- Maintenez les hanches soulevées.\n- Gardez le corps engagé.\n- Maintenez la position le plus longtemps possible.\n- Le score final est le temps total en secondes.",
+        "tips": "- Concentrez-vous sur la posture et le contrôle.\n- Engagez abdominaux et épaules.\n- Respirez régulièrement.\n- Progressez progressivement pour améliorer la durée.\n- Utilisez un support stable et sûr."
+      },
+      "en": {
+        "title": "Max L-Sit Hold",
+        "summary": "Test your strength and endurance in an L-Sit. Hold the position as long as possible with proper technique.",
+        "details": "The Max L-Sit Hold test measures **the maximum time you can maintain an L-Sit**, engaging the abdominals, hips, and shoulders.\n\n### Preparation\n- Warm up shoulders, wrists, and core.\n- Choose a stable support (parallettes, bars, or floor).\n- Use a mat for comfort if necessary.\n\n### Execution\n1. Sit between two parallel bars or on the floor.\n2. Lift your legs straight in front of you.\n3. Press down on your hands to lift your hips.\n4. Hold the position as long as possible.\n\n### Safety\n- Do not push through pain.\n- Keep arms and core engaged to avoid strain.\n\n### Score\n- The score corresponds to the **total time in seconds held in L-Sit**.",
+        "rules": "- Warm up before the test.\n- Lift legs straight in front.\n- Keep hips elevated.\n- Maintain core engagement.\n- Hold the position as long as possible.\n- Final score is total time in seconds.",
+        "tips": "- Focus on posture and control.\n- Engage abs and shoulders.\n- Breathe steadily.\n- Progress gradually to increase duration.\n- Use a stable and safe support."
+      }
+    },
+    "type": "time",
+    "exercise": "l-sit",
+    "value": null
+  },
+  {
+    "name": "Row 100m",
+    "contents": {
+      "fr": {
+        "title": "Row 100m",
+        "summary": "Testez votre vitesse et puissance sur 100 mètres de rameur. L’objectif est de parcourir la distance le plus rapidement possible.",
+        "details": "Le Row 100m est un test de vitesse et puissance visant à mesurer **le temps nécessaire pour parcourir 100 mètres sur un rameur**.\n\n### Préparation\n- Échauffez bras, épaules, dos et jambes.\n- Réglez le rameur correctement et assurez-vous qu’il est stable.\n- Vérifiez la position des pieds et la prise des poignées.\n\n### Exécution\n1. Asseyez-vous sur le rameur, pieds bien calés.\n2. Saisissez la poignée avec une prise ferme.\n3. Ramez à pleine puissance pour couvrir les 100 mètres.\n4. Maintenez une technique correcte tout au long du parcours.\n\n### Sécurité\n- Gardez le dos droit et évitez les mouvements brusques.\n- Ne forcez pas si vous ressentez une douleur.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 100 mètres**.",
+        "rules": "- Échauffez-vous avant le test.\n- Pieds bien calés et prise ferme.\n- Ramez à pleine puissance.\n- Maintenez la technique correcte.\n- Le score final est le temps total en secondes.",
+        "tips": "- Concentrez-vous sur la technique et la cadence.\n- Respirez régulièrement.\n- Engagez jambes, dos et bras.\n- Donnez un effort maximal mais contrôlé.\n- Gardez le tronc stable pour maximiser la puissance."
+      },
+      "en": {
+        "title": "Row 100m",
+        "summary": "Test your speed and power over 100 meters on the rower. The goal is to cover the distance as fast as possible.",
+        "details": "The Row 100m test measures **the time required to row 100 meters**, assessing speed and power.\n\n### Preparation\n- Warm up arms, shoulders, back, and legs.\n- Adjust the rower properly and ensure stability.\n- Check foot position and grip on the handle.\n\n### Execution\n1. Sit on the rower with feet firmly secured.\n2. Grab the handle with a firm grip.\n3. Row at full power to cover 100 meters.\n4. Maintain proper technique throughout.\n\n### Safety\n- Keep your back straight and avoid jerky movements.\n- Do not push through pain.\n\n### Score\n- The score corresponds to the **total time in seconds to cover 100 meters**.",
+        "rules": "- Warm up before the test.\n- Feet secured and grip firm.\n- Row at full power.\n- Maintain proper technique.\n- Final score is the total time in seconds.",
+        "tips": "- Focus on technique and stroke rate.\n- Breathe steadily.\n- Engage legs, back, and arms.\n- Apply maximum but controlled effort.\n- Keep core stable to maximize power."
+      }
+    },
+    "type": "time",
+    "exercise": "row",
+    "value": 100
+  },
+  {
+    "name": "Row 250m",
+    "contents": {
+      "fr": {
+        "title": "Row 250m",
+        "summary": "Testez votre vitesse et puissance sur 250 mètres de rameur. Parcourez la distance le plus rapidement possible avec une technique correcte.",
+        "details": "Le Row 250m est un test de vitesse et puissance visant à mesurer **le temps nécessaire pour parcourir 250 mètres sur un rameur**.\n\n### Préparation\n- Échauffez bras, épaules, dos et jambes.\n- Réglez le rameur correctement et assurez sa stabilité.\n- Vérifiez la position des pieds et la prise des poignées.\n\n### Exécution\n1. Asseyez-vous sur le rameur, pieds bien calés.\n2. Saisissez la poignée avec une prise ferme.\n3. Ramez à pleine puissance pour couvrir les 250 mètres.\n4. Maintenez une technique correcte tout au long du parcours.\n\n### Sécurité\n- Gardez le dos droit et évitez les mouvements brusques.\n- Ne forcez pas si vous ressentez une douleur.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 250 mètres**.",
+        "rules": "- Échauffez-vous avant le test.\n- Pieds bien calés et prise ferme.\n- Ramez à pleine puissance.\n- Maintenez la technique correcte.\n- Le score final est le temps total en secondes.",
+        "tips": "- Concentrez-vous sur la technique et la cadence.\n- Respirez régulièrement.\n- Engagez jambes, dos et bras.\n- Donnez un effort maximal mais contrôlé.\n- Gardez le tronc stable pour maximiser la puissance."
+      },
+      "en": {
+        "title": "Row 250m",
+        "summary": "Test your speed and power over 250 meters on the rower. Cover the distance as fast as possible with proper technique.",
+        "details": "The Row 250m test measures **the time required to row 250 meters**, assessing speed and power.\n\n### Preparation\n- Warm up arms, shoulders, back, and legs.\n- Adjust the rower properly and ensure stability.\n- Check foot position and grip on the handle.\n\n### Execution\n1. Sit on the rower with feet firmly secured.\n2. Grab the handle with a firm grip.\n3. Row at full power to cover 250 meters.\n4. Maintain proper technique throughout.\n\n### Safety\n- Keep your back straight and avoid jerky movements.\n- Do not push through pain.\n\n### Score\n- The score corresponds to the **total time in seconds to cover 250 meters**.",
+        "rules": "- Warm up before the test.\n- Feet secured and grip firm.\n- Row at full power.\n- Maintain proper technique.\n- Final score is the total time in seconds.",
+        "tips": "- Focus on technique and stroke rate.\n- Breathe steadily.\n- Engage legs, back, and arms.\n- Apply maximum but controlled effort.\n- Keep core stable to maximize power."
+      }
+    },
+    "type": "time",
+    "exercise": "row",
+    "value": 250
+  },
+  {
+    "name": "Row 500m",
+    "contents": {
+      "fr": {
+        "title": "Row 500m",
+        "summary": "Testez votre vitesse et puissance sur 500 mètres de rameur. Parcourez la distance le plus rapidement possible avec une technique correcte.",
+        "details": "Le Row 500m est un test de vitesse et puissance visant à mesurer **le temps nécessaire pour parcourir 500 mètres sur un rameur**.\n\n### Préparation\n- Échauffez bras, épaules, dos et jambes.\n- Réglez le rameur correctement et assurez sa stabilité.\n- Vérifiez la position des pieds et la prise des poignées.\n\n### Exécution\n1. Asseyez-vous sur le rameur, pieds bien calés.\n2. Saisissez la poignée avec une prise ferme.\n3. Ramez à pleine puissance pour couvrir les 500 mètres.\n4. Maintenez une technique correcte tout au long du parcours.\n\n### Sécurité\n- Gardez le dos droit et évitez les mouvements brusques.\n- Ne forcez pas si vous ressentez une douleur.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 500 mètres**.",
+        "rules": "- Échauffez-vous avant le test.\n- Pieds bien calés et prise ferme.\n- Ramez à pleine puissance.\n- Maintenez la technique correcte.\n- Le score final est le temps total en secondes.",
+        "tips": "- Concentrez-vous sur la technique et la cadence.\n- Respirez régulièrement.\n- Engagez jambes, dos et bras.\n- Donnez un effort maximal mais contrôlé.\n- Gardez le tronc stable pour maximiser la puissance."
+      },
+      "en": {
+        "title": "Row 500m",
+        "summary": "Test your speed and power over 500 meters on the rower. Cover the distance as fast as possible with proper technique.",
+        "details": "The Row 500m test measures **the time required to row 500 meters**, assessing speed and power.\n\n### Preparation\n- Warm up arms, shoulders, back, and legs.\n- Adjust the rower properly and ensure stability.\n- Check foot position and grip on the handle.\n\n### Execution\n1. Sit on the rower with feet firmly secured.\n2. Grab the handle with a firm grip.\n3. Row at full power to cover 500 meters.\n4. Maintain proper technique throughout.\n\n### Safety\n- Keep your back straight and avoid jerky movements.\n- Do not push through pain.\n\n### Score\n- The score corresponds to the **total time in seconds to cover 500 meters**.",
+        "rules": "- Warm up before the test.\n- Feet secured and grip firm.\n- Row at full power.\n- Maintain proper technique.\n- Final score is the total time in seconds.",
+        "tips": "- Focus on technique and stroke rate.\n- Breathe steadily.\n- Engage legs, back, and arms.\n- Apply maximum but controlled effort.\n- Keep core stable to maximize power."
+      }
+    },
+    "type": "time",
+    "exercise": "row",
+    "value": 500
+  },
+  {
+    "name": "Row 1K",
+    "contents": {
+      "fr": {
+        "title": "Row 1K",
+        "summary": "Testez votre vitesse et endurance sur 1000 mètres de rameur. Parcourez la distance le plus rapidement possible en maintenant une technique correcte.",
+        "details": "Le Row 1K est un test de vitesse et endurance visant à mesurer **le temps nécessaire pour parcourir 1000 mètres sur un rameur**.\n\n### Préparation\n- Échauffez bras, épaules, dos et jambes.\n- Réglez le rameur correctement et assurez sa stabilité.\n- Vérifiez la position des pieds et la prise des poignées.\n\n### Exécution\n1. Asseyez-vous sur le rameur, pieds bien calés.\n2. Saisissez la poignée avec une prise ferme.\n3. Ramez à un rythme soutenu pour couvrir les 1000 mètres.\n4. Maintenez une technique correcte tout au long du parcours.\n\n### Sécurité\n- Gardez le dos droit et évitez les mouvements brusques.\n- Ne forcez pas si vous ressentez une douleur.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 1000 mètres**.",
+        "rules": "- Échauffez-vous avant le test.\n- Pieds bien calés et prise ferme.\n- Ramez à un rythme soutenu.\n- Maintenez la technique correcte.\n- Le score final est le temps total en secondes.",
+        "tips": "- Concentrez-vous sur la technique et la régularité.\n- Respirez profondément et régulièrement.\n- Engagez jambes, dos et bras.\n- Gardez un effort constant mais contrôlé.\n- Maintenez le tronc stable pour maximiser la puissance."
+      },
+      "en": {
+        "title": "Row 1K",
+        "summary": "Test your speed and endurance over 1000 meters on the rower. Cover the distance as fast as possible while maintaining proper technique.",
+        "details": "The Row 1K test measures **the time required to row 1000 meters**, assessing speed and endurance.\n\n### Preparation\n- Warm up arms, shoulders, back, and legs.\n- Adjust the rower properly and ensure stability.\n- Check foot position and grip on the handle.\n\n### Execution\n1. Sit on the rower with feet firmly secured.\n2. Grab the handle with a firm grip.\n3. Row at a sustained pace to cover 1000 meters.\n4. Maintain proper technique throughout.\n\n### Safety\n- Keep your back straight and avoid jerky movements.\n- Do not push through pain.\n\n### Score\n- The score corresponds to the **total time in seconds to cover 1000 meters**.",
+        "rules": "- Warm up before the test.\n- Feet secured and grip firm.\n- Row at a sustained pace.\n- Maintain proper technique.\n- Final score is the total time in seconds.",
+        "tips": "- Focus on technique and consistency.\n- Breathe deeply and regularly.\n- Engage legs, back, and arms.\n- Maintain a steady but controlled effort.\n- Keep core stable to maximize power."
+      }
+    },
+    "type": "time",
+    "exercise": "row",
+    "value": 1000
+  },
+  {
+    "name": "Row 2K",
+    "contents": {
+      "fr": {
+        "title": "Row 2K",
+        "summary": "Testez votre endurance et puissance sur 2000 mètres de rameur. Parcourez la distance le plus rapidement possible en maintenant une technique correcte.",
+        "details": "Le Row 2K est un test d’endurance et de puissance visant à mesurer **le temps nécessaire pour parcourir 2000 mètres sur un rameur**.\n\n### Préparation\n- Échauffez bras, épaules, dos et jambes.\n- Réglez le rameur correctement et assurez sa stabilité.\n- Vérifiez la position des pieds et la prise des poignées.\n\n### Exécution\n1. Asseyez-vous sur le rameur, pieds bien calés.\n2. Saisissez la poignée avec une prise ferme.\n3. Ramez à un rythme soutenu pour couvrir les 2000 mètres.\n4. Maintenez une technique correcte tout au long du parcours.\n\n### Sécurité\n- Gardez le dos droit et évitez les mouvements brusques.\n- Ne forcez pas si vous ressentez une douleur.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 2000 mètres**.",
+        "rules": "- Échauffez-vous avant le test.\n- Pieds bien calés et prise ferme.\n- Ramez à un rythme soutenu.\n- Maintenez la technique correcte.\n- Le score final est le temps total en secondes.",
+        "tips": "- Concentrez-vous sur la technique et la régularité.\n- Respirez profondément et régulièrement.\n- Engagez jambes, dos et bras.\n- Gardez un effort constant mais contrôlé.\n- Maintenez le tronc stable pour maximiser la puissance."
+      },
+      "en": {
+        "title": "Row 2K",
+        "summary": "Test your endurance and power over 2000 meters on the rower. Cover the distance as fast as possible while maintaining proper technique.",
+        "details": "The Row 2K test measures **the time required to row 2000 meters**, assessing endurance and power.\n\n### Preparation\n- Warm up arms, shoulders, back, and legs.\n- Adjust the rower properly and ensure stability.\n- Check foot position and grip on the handle.\n\n### Execution\n1. Sit on the rower with feet firmly secured.\n2. Grab the handle with a firm grip.\n3. Row at a sustained pace to cover 2000 meters.\n4. Maintain proper technique throughout.\n\n### Safety\n- Keep your back straight and avoid jerky movements.\n- Do not push through pain.\n\n### Score\n- The score corresponds to the **total time in seconds to cover 2000 meters**.",
+        "rules": "- Warm up before the test.\n- Feet secured and grip firm.\n- Row at a sustained pace.\n- Maintain proper technique.\n- Final score is the total time in seconds.",
+        "tips": "- Focus on technique and consistency.\n- Breathe deeply and regularly.\n- Engage legs, back, and arms.\n- Maintain a steady but controlled effort.\n- Keep core stable to maximize power."
+      }
+    },
+    "type": "time",
+    "exercise": "row",
+    "value": 2000
+  },
+  {
+    "name": "Row 3K",
+    "contents": {
+      "fr": {
+        "title": "Row 3K",
+        "summary": "Testez votre endurance sur 3000 mètres de rameur. Parcourez la distance le plus rapidement possible tout en maintenant une technique correcte.",
+        "details": "Le Row 3K est un test d’endurance visant à mesurer **le temps nécessaire pour parcourir 3000 mètres sur un rameur**.\n\n### Préparation\n- Échauffez bras, épaules, dos et jambes.\n- Réglez le rameur correctement et assurez sa stabilité.\n- Vérifiez la position des pieds et la prise des poignées.\n\n### Exécution\n1. Asseyez-vous sur le rameur, pieds bien calés.\n2. Saisissez la poignée avec une prise ferme.\n3. Ramez à un rythme soutenu pour couvrir les 3000 mètres.\n4. Maintenez une technique correcte tout au long du parcours.\n\n### Sécurité\n- Gardez le dos droit et évitez les mouvements brusques.\n- Ne forcez pas si vous ressentez une douleur.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 3000 mètres**.",
+        "rules": "- Échauffez-vous avant le test.\n- Pieds bien calés et prise ferme.\n- Ramez à un rythme soutenu.\n- Maintenez la technique correcte.\n- Le score final est le temps total en secondes.",
+        "tips": "- Concentrez-vous sur la technique et la régularité.\n- Respirez profondément et régulièrement.\n- Engagez jambes, dos et bras.\n- Gardez un effort constant mais contrôlé.\n- Maintenez le tronc stable pour maximiser la puissance."
+      },
+      "en": {
+        "title": "Row 3K",
+        "summary": "Test your endurance over 3000 meters on the rower. Cover the distance as fast as possible while maintaining proper technique.",
+        "details": "The Row 3K test measures **the time required to row 3000 meters**, assessing endurance.\n\n### Preparation\n- Warm up arms, shoulders, back, and legs.\n- Adjust the rower properly and ensure stability.\n- Check foot position and grip on the handle.\n\n### Execution\n1. Sit on the rower with feet firmly secured.\n2. Grab the handle with a firm grip.\n3. Row at a sustained pace to cover 3000 meters.\n4. Maintain proper technique throughout.\n\n### Safety\n- Keep your back straight and avoid jerky movements.\n- Do not push through pain.\n\n### Score\n- The score corresponds to the **total time in seconds to cover 3000 meters**.",
+        "rules": "- Warm up before the test.\n- Feet secured and grip firm.\n- Row at a sustained pace.\n- Maintain proper technique.\n- Final score is the total time in seconds.",
+        "tips": "- Focus on technique and consistency.\n- Breathe deeply and regularly.\n- Engage legs, back, and arms.\n- Maintain a steady but controlled effort.\n- Keep core stable to maximize power."
+      }
+    },
+    "type": "time",
+    "exercise": "row",
+    "value": 3000
+  },
+  {
+    "name": "Row 5K",
+    "contents": {
+      "fr": {
+        "title": "Row 5K",
+        "summary": "Testez votre endurance sur 5000 mètres de rameur. Parcourez la distance le plus rapidement possible tout en maintenant une technique correcte.",
+        "details": "Le Row 5K est un test d’endurance visant à mesurer **le temps nécessaire pour parcourir 5000 mètres sur un rameur**.\n\n### Préparation\n- Échauffez bras, épaules, dos et jambes.\n- Réglez le rameur correctement et assurez sa stabilité.\n- Vérifiez la position des pieds et la prise des poignées.\n\n### Exécution\n1. Asseyez-vous sur le rameur, pieds bien calés.\n2. Saisissez la poignée avec une prise ferme.\n3. Ramez à un rythme soutenu pour couvrir les 5000 mètres.\n4. Maintenez une technique correcte tout au long du parcours.\n\n### Sécurité\n- Gardez le dos droit et évitez les mouvements brusques.\n- Ne forcez pas si vous ressentez une douleur.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 5000 mètres**.",
+        "rules": "- Échauffez-vous avant le test.\n- Pieds bien calés et prise ferme.\n- Ramez à un rythme soutenu.\n- Maintenez la technique correcte.\n- Le score final est le temps total en secondes.",
+        "tips": "- Concentrez-vous sur la technique et la régularité.\n- Respirez profondément et régulièrement.\n- Engagez jambes, dos et bras.\n- Gardez un effort constant mais contrôlé.\n- Maintenez le tronc stable pour maximiser la puissance."
+      },
+      "en": {
+        "title": "Row 5K",
+        "summary": "Test your endurance over 5000 meters on the rower. Cover the distance as fast as possible while maintaining proper technique.",
+        "details": "The Row 5K test measures **the time required to row 5000 meters**, assessing endurance.\n\n### Preparation\n- Warm up arms, shoulders, back, and legs.\n- Adjust the rower properly and ensure stability.\n- Check foot position and grip on the handle.\n\n### Execution\n1. Sit on the rower with feet firmly secured.\n2. Grab the handle with a firm grip.\n3. Row at a sustained pace to cover 5000 meters.\n4. Maintain proper technique throughout.\n\n### Safety\n- Keep your back straight and avoid jerky movements.\n- Do not push through pain.\n\n### Score\n- The score corresponds to the **total time in seconds to cover 5000 meters**.",
+        "rules": "- Warm up before the test.\n- Feet secured and grip firm.\n- Row at a sustained pace.\n- Maintain proper technique.\n- Final score is the total time in seconds.",
+        "tips": "- Focus on technique and consistency.\n- Breathe deeply and regularly.\n- Engage legs, back, and arms.\n- Maintain a steady but controlled effort.\n- Keep core stable to maximize power."
+      }
+    },
+    "type": "time",
+    "exercise": "row",
+    "value": 5000
+  },
+  {
+    "name": "Run 100m",
+    "contents": {
+      "fr": {
+        "title": "Run 100m",
+        "summary": "Testez votre vitesse sur 100 mètres. Courez le plus rapidement possible en maintenant une technique de course correcte.",
+        "details": "Le Run 100m est un test de vitesse visant à mesurer **le temps nécessaire pour parcourir 100 mètres**.\n\n### Préparation\n- Échauffez jambes, hanches et mollets.\n- Choisissez une surface plane et sécurisée.\n- Vérifiez vos chaussures pour un bon maintien.\n\n### Exécution\n1. Placez-vous sur la ligne de départ.\n2. Adoptez une posture de départ correcte.\n3. Courez à votre vitesse maximale sur 100 mètres.\n4. Maintenez une technique de course efficace tout au long.\n\n### Sécurité\n- Évitez de forcer si vous ressentez une douleur.\n- Faites attention à la surface de course.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 100 mètres**.",
+        "rules": "- Échauffez-vous avant le test.\n- Surface plane et sécurisée.\n- Courir à vitesse maximale.\n- Maintenez une technique correcte.\n- Le score final est le temps total en secondes.",
+        "tips": "- Concentrez-vous sur la technique de départ.\n- Gardez un rythme explosif mais contrôlé.\n- Respirez régulièrement.\n- Utilisez les bras pour aider la propulsion.\n- Maintenez le corps droit pour maximiser la vitesse."
+      },
+      "en": {
+        "title": "Run 100m",
+        "summary": "Test your speed over 100 meters. Run as fast as possible while maintaining proper running technique.",
+        "details": "The 100m Run measures **the time required to sprint 100 meters**, assessing speed.\n\n### Preparation\n- Warm up legs, hips, and calves.\n- Choose a flat, safe surface.\n- Check your shoes for proper support.\n\n### Execution\n1. Stand on the starting line.\n2. Adopt a proper starting posture.\n3. Run at maximum speed for 100 meters.\n4. Maintain effective running technique throughout.\n\n### Safety\n- Avoid pushing through pain.\n- Watch the running surface.\n\n### Score\n- The score corresponds to the **total time in seconds to complete 100 meters**.",
+        "rules": "- Warm up before the test.\n- Flat and safe surface.\n- Run at maximum speed.\n- Maintain proper technique.\n- Final score is the total time in seconds.",
+        "tips": "- Focus on starting technique.\n- Keep an explosive but controlled pace.\n- Breathe regularly.\n- Use arms to help propulsion.\n- Keep body straight to maximize speed."
+      }
+    },
+    "type": "time",
+    "exercise": "run",
+    "value": 100
+  },
+  {
+    "name": "Run 200m",
+    "contents": {
+      "fr": {
+        "title": "Run 200m",
+        "summary": "Testez votre vitesse sur 200 mètres. Courez le plus rapidement possible en maintenant une technique de course correcte.",
+        "details": "Le Run 200m est un test de vitesse visant à mesurer **le temps nécessaire pour parcourir 200 mètres**.\n\n### Préparation\n- Échauffez jambes, hanches et mollets.\n- Choisissez une surface plane et sécurisée.\n- Vérifiez vos chaussures pour un bon maintien.\n\n### Exécution\n1. Placez-vous sur la ligne de départ.\n2. Adoptez une posture de départ correcte.\n3. Courez à votre vitesse maximale sur 200 mètres.\n4. Maintenez une technique de course efficace tout au long.\n\n### Sécurité\n- Évitez de forcer si vous ressentez une douleur.\n- Faites attention à la surface de course.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 200 mètres**.",
+        "rules": "- Échauffez-vous avant le test.\n- Surface plane et sécurisée.\n- Courir à vitesse maximale.\n- Maintenez une technique correcte.\n- Le score final est le temps total en secondes.",
+        "tips": "- Concentrez-vous sur la technique de départ.\n- Gardez un rythme explosif mais contrôlé.\n- Respirez régulièrement.\n- Utilisez les bras pour aider la propulsion.\n- Maintenez le corps droit pour maximiser la vitesse."
+      },
+      "en": {
+        "title": "Run 200m",
+        "summary": "Test your speed over 200 meters. Run as fast as possible while maintaining proper running technique.",
+        "details": "The 200m Run measures **the time required to sprint 200 meters**, assessing speed.\n\n### Preparation\n- Warm up legs, hips, and calves.\n- Choose a flat, safe surface.\n- Check your shoes for proper support.\n\n### Execution\n1. Stand on the starting line.\n2. Adopt a proper starting posture.\n3. Run at maximum speed for 200 meters.\n4. Maintain effective running technique throughout.\n\n### Safety\n- Avoid pushing through pain.\n- Watch the running surface.\n\n### Score\n- The score corresponds to the **total time in seconds to complete 200 meters**.",
+        "rules": "- Warm up before the test.\n- Flat and safe surface.\n- Run at maximum speed.\n- Maintain proper technique.\n- Final score is the total time in seconds.",
+        "tips": "- Focus on starting technique.\n- Keep an explosive but controlled pace.\n- Breathe regularly.\n- Use arms to help propulsion.\n- Keep body straight to maximize speed."
+      }
+    },
+    "type": "time",
+    "exercise": "run",
+    "value": 200
+  },
+  {
+    "name": "Run 400m",
+    "contents": {
+      "fr": {
+        "title": "Run 400m",
+        "summary": "Testez votre vitesse et votre endurance sur 400 mètres. Courez le plus rapidement possible en maintenant une technique correcte.",
+        "details": "Le Run 400m est un test de vitesse et d’endurance visant à mesurer **le temps nécessaire pour parcourir 400 mètres**.\n\n### Préparation\n- Échauffez jambes, hanches et mollets.\n- Choisissez une surface plane et sécurisée.\n- Vérifiez vos chaussures pour un bon maintien.\n\n### Exécution\n1. Placez-vous sur la ligne de départ.\n2. Adoptez une posture correcte.\n3. Courez à votre rythme maximal sur 400 mètres.\n4. Maintenez une technique efficace tout au long.\n\n### Sécurité\n- Évitez de forcer si douleur.\n- Surveillez la surface de course.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 400 mètres**.",
+        "rules": "- Échauffez-vous avant le test.\n- Surface plane et sécurisée.\n- Courir à rythme maximal.\n- Maintenez une technique correcte.\n- Score final = temps total en secondes.",
+        "tips": "- Concentrez-vous sur un départ explosif.\n- Respirez régulièrement.\n- Engagez bras et jambes.\n- Maintenez la technique sur toute la distance.\n- Gardez le tronc stable."
+      },
+      "en": {
+        "title": "Run 400m",
+        "summary": "Test your speed and endurance over 400 meters. Run as fast as possible while maintaining proper technique.",
+        "details": "The 400m Run measures **the time required to cover 400 meters**, assessing speed and endurance.\n\n### Preparation\n- Warm up legs, hips, and calves.\n- Choose a flat, safe surface.\n- Check your shoes.\n\n### Execution\n1. Stand on the starting line.\n2. Adopt proper posture.\n3. Run at maximum pace for 400 meters.\n4. Maintain effective technique.\n\n### Safety\n- Avoid pushing through pain.\n- Watch the running surface.\n\n### Score\n- Score = **total time in seconds for 400 meters**.",
+        "rules": "- Warm up before the test.\n- Flat, safe surface.\n- Run at maximum pace.\n- Maintain proper technique.\n- Final score = total time in seconds.",
+        "tips": "- Focus on explosive start.\n- Breathe regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
+      }
+    },
+    "type": "time",
+    "exercise": "run",
+    "value": 400
+  },
+  {
+    "name": "Run 800m",
+    "contents": {
+      "fr": {
+        "title": "Run 800m",
+        "summary": "Testez votre vitesse et endurance sur 800 mètres. Courez le plus rapidement possible tout en maintenant une technique correcte.",
+        "details": "Le Run 800m mesure **le temps nécessaire pour parcourir 800 mètres**, testant à la fois vitesse et endurance.\n\n### Préparation\n- Échauffez jambes, hanches et mollets.\n- Choisissez une surface plane et sécurisée.\n- Vérifiez vos chaussures.\n\n### Exécution\n1. Placez-vous sur la ligne de départ.\n2. Adoptez une posture correcte.\n3. Courez à votre rythme maximal sur 800 mètres.\n4. Maintenez une technique efficace tout au long.\n\n### Sécurité\n- Évitez de forcer si douleur.\n- Surveillez la surface.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 800 mètres**.",
+        "rules": "- Échauffez-vous avant le test.\n- Surface plane et sécurisée.\n- Courir à rythme maximal.\n- Maintenir technique correcte.\n- Score final = temps total en secondes.",
+        "tips": "- Concentrez-vous sur un départ explosif.\n- Respirez régulièrement.\n- Engagez bras et jambes.\n- Maintenez la technique sur toute la distance.\n- Gardez le tronc stable."
+      },
+      "en": {
+        "title": "Run 800m",
+        "summary": "Test your speed and endurance over 800 meters. Run as fast as possible while maintaining proper technique.",
+        "details": "The 800m Run measures **the time required to cover 800 meters**, testing both speed and endurance.\n\n### Preparation\n- Warm up legs, hips, and calves.\n- Choose a flat, safe surface.\n- Check your shoes.\n\n### Execution\n1. Stand on the starting line.\n2. Adopt proper posture.\n3. Run at maximum pace for 800 meters.\n4. Maintain effective technique.\n\n### Safety\n- Avoid pushing through pain.\n- Watch the running surface.\n\n### Score\n- Score = **total time in seconds for 800 meters**.",
+        "rules": "- Warm up before the test.\n- Flat, safe surface.\n- Run at maximum pace.\n- Maintain proper technique.\n- Final score = total time in seconds.",
+        "tips": "- Focus on explosive start.\n- Breathe regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
+      }
+    },
+    "type": "time",
+    "exercise": "run",
+    "value": 800
+  },
+  {
+    "name": "Run 5K",
+    "contents": {
+      "fr": {
+        "title": "Run 5K",
+        "summary": "Testez votre vitesse et endurance sur 5 km. Courez le plus rapidement possible en maintenant une technique correcte.",
+        "details": "Le Run 5K mesure **le temps nécessaire pour parcourir 5 kilomètres**, évaluant endurance et gestion de l’effort.\n\n### Préparation\n- Échauffez jambes, hanches et mollets.\n- Choisissez une surface plane et sécurisée.\n- Vérifiez vos chaussures.\n\n### Exécution\n1. Placez-vous sur la ligne de départ.\n2. Adoptez une posture correcte.\n3. Courez à votre rythme maximal sur 5 km.\n4. Maintenez une technique efficace tout au long.\n\n### Sécurité\n- Évitez de forcer si douleur.\n- Surveillez la surface.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 5 km**.",
+        "rules": "- Échauffez-vous avant le test.\n- Surface plane et sécurisée.\n- Courir à rythme maximal.\n- Maintenir technique correcte.\n- Score final = temps total en secondes.",
+        "tips": "- Concentrez-vous sur un départ régulier.\n- Respirez profondément et régulièrement.\n- Engagez bras et jambes.\n- Maintenez la technique sur toute la distance.\n- Gardez le tronc stable."
+      },
+      "en": {
+        "title": "Run 5K",
+        "summary": "Test your speed and endurance over 5 km. Run as fast as possible while maintaining proper technique.",
+        "details": "The 5K Run measures **the time required to cover 5 kilometers**, assessing endurance and pacing.\n\n### Preparation\n- Warm up legs, hips, and calves.\n- Choose a flat, safe surface.\n- Check your shoes.\n\n### Execution\n1. Stand on the starting line.\n2. Adopt proper posture.\n3. Run at maximum pace for 5 km.\n4. Maintain effective technique.\n\n### Safety\n- Avoid pushing through pain.\n- Watch the running surface.\n\n### Score\n- Score = **total time in seconds for 5 km**.",
+        "rules": "- Warm up before the test.\n- Flat, safe surface.\n- Run at maximum pace.\n- Maintain proper technique.\n- Final score = total time in seconds.",
+        "tips": "- Focus on consistent pacing.\n- Breathe deeply and regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
+      }
+    },
+    "type": "time",
+    "exercise": "run",
+    "value": 5000
+  },
+  {
+    "name": "Run 10K",
+    "contents": {
+      "fr": {
+        "title": "Run 10K",
+        "summary": "Testez votre vitesse et endurance sur 10 km. Courez le plus rapidement possible en maintenant une technique correcte.",
+        "details": "Le Run 10K mesure **le temps nécessaire pour parcourir 10 kilomètres**, évaluant endurance et gestion de l’effort.\n\n### Préparation\n- Échauffez jambes, hanches et mollets.\n- Choisissez une surface plane et sécurisée.\n- Vérifiez vos chaussures.\n\n### Exécution\n1. Placez-vous sur la ligne de départ.\n2. Adoptez une posture correcte.\n3. Courez à votre rythme maximal sur 10 km.\n4. Maintenez une technique efficace tout au long.\n\n### Sécurité\n- Évitez de forcer si douleur.\n- Surveillez la surface.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 10 km**.",
+        "rules": "- Échauffez-vous avant le test.\n- Surface plane et sécurisée.\n- Courir à rythme maximal.\n- Maintenir technique correcte.\n- Score final = temps total en secondes.",
+        "tips": "- Concentrez-vous sur un départ régulier.\n- Respirez profondément et régulièrement.\n- Engagez bras et jambes.\n- Maintenez la technique sur toute la distance.\n- Gardez le tronc stable."
+      },
+      "en": {
+        "title": "Run 10K",
+        "summary": "Test your speed and endurance over 10 km. Run as fast as possible while maintaining proper technique.",
+        "details": "The 10K Run measures **the time required to cover 10 kilometers**, assessing endurance and pacing.\n\n### Preparation\n- Warm up legs, hips, and calves.\n- Choose a flat, safe surface.\n- Check your shoes.\n\n### Execution\n1. Stand on the starting line.\n2. Adopt proper posture.\n3. Run at maximum pace for 10 km.\n4. Maintain effective technique.\n\n### Safety\n- Avoid pushing through pain.\n- Watch the running surface.\n\n### Score\n- Score = **total time in seconds for 10 km**.",
+        "rules": "- Warm up before the test.\n- Flat, safe surface.\n- Run at maximum pace.\n- Maintain proper technique.\n- Final score = total time in seconds.",
+        "tips": "- Focus on consistent pacing.\n- Breathe deeply and regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
+      }
+    },
+    "type": "time",
+    "exercise": "run",
+    "value": 10000
+  },
+  {
+    "name": "Run 1 Mile",
+    "contents": {
+      "fr": {
+        "title": "Run 1 Mile",
+        "summary": "Testez votre vitesse et endurance sur 1 Mile (1610 m). Courez le plus rapidement possible en maintenant une technique correcte.",
+        "details": "Le Run 1 Mile mesure **le temps nécessaire pour parcourir 1 Mile (1610 m)**, évaluant vitesse et endurance.\n\n### Préparation\n- Échauffez jambes, hanches et mollets.\n- Choisissez une surface plane et sécurisée.\n- Vérifiez vos chaussures.\n\n### Exécution\n1. Placez-vous sur la ligne de départ.\n2. Adoptez une posture correcte.\n3. Courez à votre rythme maximal sur 1 Mile.\n4. Maintenez une technique efficace tout au long.\n\n### Sécurité\n- Évitez de forcer si douleur.\n- Surveillez la surface.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 1 Mile**.",
+        "rules": "- Échauffez-vous avant le test.\n- Surface plane et sécurisée.\n- Courir à rythme maximal.\n- Maintenir technique correcte.\n- Score final = temps total en secondes.",
+        "tips": "- Concentrez-vous sur un départ explosif.\n- Respirez régulièrement.\n- Engagez bras et jambes.\n- Maintenez la technique sur toute la distance.\n- Gardez le tronc stable."
+      },
+      "en": {
+        "title": "Run 1 Mile",
+        "summary": "Test your speed and endurance over 1 Mile (1610 m). Run as fast as possible while maintaining proper technique.",
+        "details": "The 1 Mile Run measures **the time required to cover 1 Mile (1610 m)**, assessing speed and endurance.\n\n### Preparation\n- Warm up legs, hips, and calves.\n- Choose a flat, safe surface.\n- Check your shoes.\n\n### Execution\n1. Stand on the starting line.\n2. Adopt proper posture.\n3. Run at maximum pace for 1 Mile.\n4. Maintain effective technique.\n\n### Safety\n- Avoid pushing through pain.\n- Watch the running surface.\n\n### Score\n- Score = **total time in seconds for 1 Mile**.",
+        "rules": "- Warm up before the test.\n- Flat, safe surface.\n- Run at maximum pace.\n- Maintain proper technique.\n- Final score = total time in seconds.",
+        "tips": "- Focus on explosive start.\n- Breathe regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
+      }
+    },
+    "type": "time",
+    "exercise": "run",
+    "value": 1610
+  },
+  {
+    "name": "Run 2 Miles",
+    "contents": {
+      "fr": {
+        "title": "Run 2 Miles",
+        "summary": "Testez votre vitesse et endurance sur 2 Miles (3219 m). Courez le plus rapidement possible tout en maintenant une technique correcte.",
+        "details": "Le Run 2 Miles mesure **le temps nécessaire pour parcourir 2 Miles (3219 m)**, évaluant vitesse et endurance.\n\n### Préparation\n- Échauffez jambes, hanches et mollets.\n- Choisissez une surface plane et sécurisée.\n- Vérifiez vos chaussures.\n\n### Exécution\n1. Placez-vous sur la ligne de départ.\n2. Adoptez une posture correcte.\n3. Courez à votre rythme maximal sur 2 Miles.\n4. Maintenez une technique efficace tout au long.\n\n### Sécurité\n- Évitez de forcer si douleur.\n- Surveillez la surface.\n\n### Score\n- Le score correspond au **temps total en secondes pour parcourir 2 Miles**.",
+        "rules": "- Échauffez-vous avant le test.\n- Surface plane et sécurisée.\n- Courir à rythme maximal.\n- Maintenir technique correcte.\n- Score final = temps total en secondes.",
+        "tips": "- Concentrez-vous sur un départ explosif.\n- Respirez régulièrement.\n- Engagez bras et jambes.\n- Maintenez la technique sur toute la distance.\n- Gardez le tronc stable."
+      },
+      "en": {
+        "title": "Run 2 Miles",
+        "summary": "Test your speed and endurance over 2 Miles (3219 m). Run as fast as possible while maintaining proper technique.",
+        "details": "The 2 Mile Run measures **the time required to cover 2 Miles (3219 m)**, assessing speed and endurance.\n\n### Preparation\n- Warm up legs, hips, and calves.\n- Choose a flat, safe surface.\n- Check your shoes.\n\n### Execution\n1. Stand on the starting line.\n2. Adopt proper posture.\n3. Run at maximum pace for 2 Miles.\n4. Maintain effective technique.\n\n### Safety\n- Avoid pushing through pain.\n- Watch the running surface.\n\n### Score\n- Score = **total time in seconds for 2 Miles**.",
+        "rules": "- Warm up before the test.\n- Flat, safe surface.\n- Run at maximum pace.\n- Maintain proper technique.\n- Final score = total time in seconds.",
+        "tips": "- Focus on explosive start.\n- Breathe regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
+      }
+    },
+    "type": "time",
+    "exercise": "run",
+    "value": 3219
+  }
+]

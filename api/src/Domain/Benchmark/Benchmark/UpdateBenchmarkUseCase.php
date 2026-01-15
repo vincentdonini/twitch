@@ -1,0 +1,71 @@
+<?php
+
+namespace App\Domain\Benchmark\Benchmark;
+
+use App\Domain\Core\Exceptions\AlreadyExistException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
+use App\Domain\Core\Ports\DatabaseInterface;
+use App\Domain\Benchmark\Entity\Benchmark;
+use App\Domain\Benchmark\Ports\BenchmarkDALInterface;
+use App\Domain\Exercise\Ports\ExerciseDALInterface;
+
+final readonly class UpdateBenchmarkUseCase
+{
+    public function __construct(
+        private DatabaseInterface     $database,
+        private BenchmarkDALInterface $benchmarkDAL,
+        private ExerciseDALInterface  $exerciseDAL,
+    ) {
+    }
+
+    public function execute(
+        UpdateBenchmarkDTOInterface $dto
+    ): Benchmark {
+        $benchmark = $this->benchmarkDAL->getById($dto->getId());
+        if (!$benchmark instanceof Benchmark) {
+            throw new EntityNotFoundException();
+        }
+
+        if (!empty($dto->getExerciseId())) {
+            $exercise = $this->exerciseDAL->getById($dto->getExerciseId());
+            $benchmark->setExercise($exercise);
+        }
+
+        if (!empty($dto->getName())) {
+            if (!$this->validateDuplicateField($dto->getName(), $benchmark->getId())) {
+                throw new AlreadyExistException();
+            }
+            $benchmark->setName($dto->getName());
+        }
+
+        if (!empty($dto->getType())) {
+            if (!$this->validateDuplicateField($dto->getType(), $benchmark->getId())) {
+                throw new AlreadyExistException();
+            }
+            $benchmark->setType($dto->getType());
+        }
+
+        if (!empty($dto->getValue())) {
+            if (!$this->validateDuplicateField($dto->getValue(), $benchmark->getId())) {
+                throw new AlreadyExistException();
+            }
+            $benchmark->setValue($dto->getValue());
+        }
+
+        $this->database->preSave($benchmark);
+        $this->database->save();
+
+        return $benchmark;
+    }
+
+    private function validateDuplicateField(string $value, int $currentBenchmarkId): bool
+    {
+        $existingBenchmark = $this->benchmarkDAL->getByName($value);
+
+        if (!$existingBenchmark) {
+            return true;
+        }
+
+        return $existingBenchmark->getId() === $currentBenchmarkId;
+    }
+}

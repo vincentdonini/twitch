@@ -1,7 +1,16 @@
 [
   {
+    "email": "public@woder.fr",
+    "password": "Woder123!!",
+    "firstName": "Public",
+    "lastName": "API",
+    "roles": [
+      "ROLE_USER"
+    ]
+  },
+  {
     "email": "admin@woder.fr",
-    "password": "Admin123!!",
+    "password": "Woder123!!",
     "firstName": "Vincent",
     "lastName": "DONINI",
     "roles": [
@@ -9,8 +18,17 @@
     ]
   },
   {
-    "email": "user1@woder.fr",
-    "password": "User123!!",
+    "email": "coach@woder.fr",
+    "password": "Woder123!!",
+    "firstName": "Mr",
+    "lastName": "Coach",
+    "roles": [
+      "ROLE_COACH"
+    ]
+  },
+  {
+    "email": "user@woder.fr",
+    "password": "Woder123!!",
     "firstName": "John",
     "lastName": "DOE",
     "roles": [
@@ -19,7 +37,7 @@
   },
   {
     "email": "user2@woder.fr",
-    "password": "User123!!",
+    "password": "Woder123!!",
     "firstName": "Jane",
     "lastName": "DO",
     "roles": [

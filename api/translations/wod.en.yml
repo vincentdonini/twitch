@@ -1,0 +1,62 @@
+type:
+  amrap:
+    name: "AMRAP (As Many Rounds As Possible)"
+    description: "WODs where the goal is to complete as many rounds or reps as possible within a set time frame."
+  emom:
+    name: "EMOM (Every Minute On the Minute)"
+    description: "WODs where a specific task is performed at the start of every minute for a set duration."
+  for_load:
+    name: "For Load"
+    description: "WODs focused on lifting the heaviest weight possible for a given movement or series of movements."
+  for_quality:
+    name: "For Quality"
+    description: "WODs where the emphasis is on movement quality and technique rather than speed or load."
+  for_time:
+    name: "For Time"
+    description: "WODs where the objective is to complete a prescribed workout as fast as possible."
+  tabata:
+    name: "Tabata"
+    description: "WODs structured around the Tabata protocol: 20 seconds of work followed by 10 seconds of rest, typically repeated for 8 rounds."
+    
+category:
+  memorials_tributes_and_holidays:
+    name: "Memorials, Tribute & Holidays"
+    description: "WODs designed to honor special events, holidays, or pay tribute to important people."
+  the_heroes:
+    name: "The Heroes"
+    description: "WODs dedicated to soldiers, police officers, firefighters, and other heroes who fell in combat. Often long, intense, and very demanding."
+  classic_benchmarks:
+    name: "Classic Benchmarks"
+    description: "The iconic CrossFit WODs, often referred to as the 'Girls', serving as a benchmark for measuring progress over time."
+  coach_creations:
+    name: "Coach Creations"
+    description: "Unique WODs created by coaches or local boxes, often tailored to a specific style or goal."
+  competition_and_qualifier:
+    name: "Competition & Qualifier"
+    description: "WODs used in official competitions or qualification phases such as the Open or the Games."
+  class_daily:
+    name: "Class Daily"
+    description: "The daily WODs offered in class, suitable for a wide audience and balanced between intensity, technique, and recovery."
+
+version_type:
+  rx:
+    name: "RX"
+    description: "The standard or original level of the WOD, with no modifications. This level is designed for athletes with a good level of fitness and technique."
+  scaled:
+    name: "Scaled"
+    description: "A modified version of the WOD, with lighter exercises or weights to make the WOD more accessible for beginners or those not yet ready for higher levels."
+  foundations:
+    name: "Foundations"
+    description: "A level for beginners, focused on learning basic movements, technique, and understanding the fundamental principles of CrossFit."
+  adaptive:
+    name: "Adaptive"
+    description: "A level designed for athletes with specific needs or physical limitations, allowing exercises to be adapted to their abilities."
+  masters:
+    name: "Masters"
+    description: "This level is intended for athletes over 35, with adjustments in weight or movement to suit the needs of older individuals while maintaining intensity."
+  teens:
+    name: "Teens"
+    description: "A level for teenagers, where exercises are adjusted to be appropriate for the growth and physical abilities of young athletes."
+  elite:
+    name: "Elite"
+    description: "The most advanced level, designed for high-level athletes. The WODs are intended to push the physical and mental limits of the athlete."

@@ -1,0 +1,166 @@
+lower_abdominals:
+  name: "Lower Abdominals"
+  description: "Lower section of the abdominal muscles, important for pelvic stability and lower core strength."
+upper_abdominals:
+  name: "Upper Abdominals"
+  description: "Upper section of the abdominal muscles, activated during crunching and upper core movements."
+long_head_triceps:
+  name: "Long Head Triceps"
+  description: "Largest head of the triceps, involved in overhead extensions and arm adduction."
+lateral_head_triceps:
+  name: "Lateral Head Triceps"
+  description: "Outer portion of the triceps, contributing to arm extension and width of the upper arm."
+medial_head_triceps:
+  name: "Medial Head Triceps"
+  description: "Smallest part of the triceps, active during all forms of arm extension."
+long_head_biceps:
+  name: "Long Head Biceps"
+  description: "Outer section of the biceps, responsible for arm flexion and shoulder stabilization."
+short_head_biceps:
+  name: "Short Head Biceps"
+  description: "Inner section of the biceps, mainly contributing to arm flexion and width."
+wrist_extensors:
+  name: "Wrist Extensors"
+  description: "Muscles that extend the wrist and fingers, important for gripping and lifting strength."
+wrist_flexors:
+  name: "Wrist Flexors"
+  description: "Muscles that flex the wrist, crucial for grip and forearm strength."
+lateral_deltoid:
+  name: "Lateral Deltoid"
+  description: "Middle portion of the shoulder muscle, responsible for arm abduction."
+anterior_deltoid:
+  name: "Anterior Deltoid"
+  description: "Front part of the shoulder muscle, active in shoulder flexion and front raises."
+posterior_deltoid:
+  name: "Posterior Deltoid"
+  description: "Rear part of the shoulder muscle, engaged in pulling and rear shoulder movements."
+front_shoulders:
+  name: "Front Shoulders"
+  description: "General term for muscles involved in anterior shoulder movements."
+rear_shoulders:
+  name: "Rear Shoulders"
+  description: "Muscles located at the back of the shoulders, important for posture and pulling motions."
+lats:
+  name: "Latissimus Dorsi"
+  description: "Large muscles of the back, essential for pulling, lifting, and spinal support."
+upper_traps:
+  name: "Upper Trapezius"
+  description: "Upper portion of the trapezius muscle, responsible for shoulder elevation and neck stability."
+lower_traps:
+  name: "Lower Trapezius"
+  description: "Lower part of the trapezius muscle, supporting scapular movement and spinal posture."
+mid_back:
+  name: "Mid Back"
+  description: "Central muscles of the back, crucial for posture, pulling, and core stability."
+lower_back:
+  name: "Lower Back"
+  description: "Muscles supporting lumbar spine stability and trunk movement."
+neck:
+  name: "Neck"
+  description: "Muscles around the cervical spine, supporting head movements and posture."
+upper_pectoralis:
+  name: "Upper Pectoralis"
+  description: "Top section of the chest muscles, heavily involved in incline pressing."
+mid_and_lower_chest:
+  name: "Mid and Lower Chest"
+  description: "Central and lower portions of the chest muscles, engaged in flat and decline pressing."
+gluteus_medius:
+  name: "Gluteus Medius"
+  description: "Muscle on the outer surface of the pelvis, important for hip stability and abduction."
+gluteus_maximus:
+  name: "Gluteus Maximus"
+  description: "Largest muscle of the glutes, responsible for hip extension, rotation, and power."
+medial_hamstrings:
+  name: "Medial Hamstrings"
+  description: "Inner part of the hamstring group, contributing to knee flexion and hip extension."
+lateral_hamstrings:
+  name: "Lateral Hamstrings"
+  description: "Outer portion of the hamstring muscles, involved in bending the knee and extending the hip."
+inner_quadriceps:
+  name: "Inner Quadriceps"
+  description: "Medial section of the quadriceps, important for knee extension and leg stability."
+outer_quadriceps:
+  name: "Outer Quadriceps"
+  description: "Lateral section of the quadriceps, aiding in knee extension and outward leg stabilization."
+rectus_femoris:
+  name: "Rectus Femoris"
+  description: "Central quadriceps muscle crossing the hip and knee, active in kicking and squatting motions."
+gastrocnemius:
+  name: "Gastrocnemius"
+  description: "Calf muscle responsible for ankle plantarflexion and explosive leg power."
+soleus:
+  name: "Soleus"
+  description: "Deep calf muscle, critical for endurance activities and standing stability."
+inner_thigh:
+  name: "Inner Thigh"
+  description: "Muscles on the inside of the thigh, important for leg adduction and pelvic control."
+groin:
+  name: "Groin"
+  description: "Muscles connecting the inner thigh to the pelvis, crucial for leg movement and hip stabilization."
+tibialis:
+  name: "Tibialis Anterior"
+  description: "Muscle located at the front of the shin, responsible for dorsiflexion of the foot."
+feet:
+  name: "Feet Muscles"
+  description: "Small muscles in the feet, vital for balance, posture, and agility."
+hands:
+  name: "Hand Muscles"
+  description: "Small muscles enabling fine finger movements, grip strength, and movement precision."
+obliques:
+  name: "Oblique Muscles"
+  description: "Muscles located on the sides of the abdomen, crucial for trunk rotation, core stability, and postural support."
+  
+area:
+  core:
+    name: "Core"
+    description: "Muscles in the abdominal and lower back region that stabilize the spine and pelvis."
+  arms:
+    name: "Arms"
+    description: "Includes biceps, triceps, and forearms — responsible for elbow movement and grip strength."
+  shoulders:
+    name: "Shoulders"
+    description: "Deltoid muscles that control shoulder motion and upper arm rotation."
+  back:
+    name: "Back"
+    description: "Includes upper, middle, and lower back muscles like lats and traps, essential for pulling movements."
+  chest:
+    name: "Chest"
+    description: "Pectoral muscles used in pushing movements and upper body strength."
+  glutes:
+    name: "Glutes"
+    description: "Gluteus maximus, medius, and minimus — key muscles for hip extension and stability."
+  hamstrings:
+    name: "Hamstrings"
+    description: "Muscles at the back of the thigh involved in knee flexion and hip extension."
+  quadriceps:
+    name: "Quadriceps"
+    description: "Large muscles on the front of the thigh that extend the knee and stabilize movement."
+  calves:
+    name: "Calves"
+    description: "Lower leg muscles including gastrocnemius and soleus, important for ankle and foot movement."
+  adductors:
+    name: "Adductors"
+    description: "Inner thigh muscles responsible for bringing the legs toward the body’s midline."
+  lower_leg:
+    name: "Lower Leg"
+    description: "Muscles located below the knee, essential for ankle movement, balance, and propulsion during walking and running."
+    
+group:
+  abdominals:
+    name: "Abdominals"
+    description: "Group of muscles located in the front of the abdomen, responsible for core strength and stability."
+  triceps:
+    name: "Triceps"
+    description: "Three-headed muscle at the back of the upper arm, essential for elbow extension and pushing movements."
+  biceps:
+    name: "Biceps"
+    description: "Two-headed muscle on the front of the upper arm, responsible for elbow flexion and forearm rotation."
+  forearms:
+    name: "Forearms"
+    description: "Muscles between the elbow and wrist, crucial for grip strength and wrist movement."
+  deltoid:
+    name: "Deltoid"
+    description: "Major shoulder muscle divided into anterior, lateral, and posterior parts, responsible for arm rotation and lifting."
+  traps:
+    name: "Trapezius"
+    description: "Large triangular muscle extending across the neck and upper back, controlling posture and shoulder blade movement."

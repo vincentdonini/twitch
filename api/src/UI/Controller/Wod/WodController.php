@@ -1,0 +1,656 @@
+<?php
+
+namespace App\UI\Controller\Wod;
+
+use App\Domain\Core\Exceptions\AlreadyExistException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
+use App\Domain\User\Entity\User;
+use App\Domain\Wod\Entity\Wod;
+use App\Domain\Wod\Filters\WodFilterMapping;
+use App\Domain\Wod\Filters\WodFilterRules;
+use App\Domain\Wod\Filters\WodScoreFilterMapping;
+use App\Domain\Wod\Filters\WodScoreFilterRules;
+use App\Domain\Wod\Service\WodScoreService;
+use App\Domain\Wod\Service\WodService;
+use App\Domain\Wod\Sort\WodSortMapping;
+use App\Domain\Wod\Wod\CreateWodUseCase;
+use App\Domain\Wod\Wod\GetWodByIdUseCase;
+use App\Domain\Wod\Wod\GetWodLeaderboardUseCase;
+use App\Domain\Wod\Wod\ListWodUseCase;
+use App\Domain\Wod\Wod\UpdateWodUseCase;
+use App\Infrastructure\Filters\RequestFilters;
+use App\Infrastructure\Paginator\RequestPaginator;
+use App\Infrastructure\Paginator\ResponsePaginator;
+use App\Infrastructure\Security\Voters\ListPermissions;
+use App\Infrastructure\Serialization\FrontGroupsEnum;
+use App\Infrastructure\Sorts\RequestSort;
+use App\UI\Adapters\Http\Wod\Wod\CreateWodHttp;
+use App\UI\Adapters\Http\Wod\Wod\GetWodByIdHttp;
+use App\UI\Adapters\Http\Wod\Wod\ListWodsHttp;
+use App\UI\Adapters\Http\Wod\Wod\UpdateWodHttp;
+use App\UI\Adapters\Http\Wod\WodScore\GetWodLeaderboardHttp;
+use InvalidArgumentException;
+use Nelmio\ApiDocBundle\Attribute\Model;
+use Nelmio\ApiDocBundle\Attribute\Security;
+use OpenApi\Attributes as OAT;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Attribute\AsController;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
+#[AsController]
+#[Route(path: '/wods', name: 'wod_')]
+final class WodController extends AbstractController
+{
+    public function __construct(
+        private readonly WodService      $wodService,
+        private readonly WodScoreService $wodScoreService,
+    ) {
+    }
+
+    #[Route(
+        path   : '',
+        name   : 'list',
+        methods: ['GET']
+    )]
+    #[IsGranted(ListPermissions::PERMISSION_WOD_LIST)]
+    #[Security(name: 'bearerAuth')]
+    #[OAT\Get(
+        description: 'Returns a list of WODs available in the system.',
+        summary    : 'List of WODs',
+        security   : [['bearerAuth' => []]],
+        parameters : [
+            new OAT\Parameter('#/components/parameters/QueryRequestPage'),
+            new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // name
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[name][eq]',
+                description: 'Filter by WOD name (exact match)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'string')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[name][like]',
+                description: 'Filter by WOD name (partial match)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'string')
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // teamSize
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[teamSize][eq]',
+                description: 'Filter by team size (exact match)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[teamSize][lt]',
+                description: 'Filter by team size (less than)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[teamSize][lte]',
+                description: 'Filter by team size (less than or equal)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[teamSize][gt]',
+                description: 'Filter by team size (greater than)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[teamSize][gte]',
+                description: 'Filter by team size (greater than or equal)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // type.id (wodType.id)
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[type.id][eq]',
+                description: 'Filter by WOD type ID',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // type.slug (wodType.slug)
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[type.slug][eq]',
+                description: 'Filter by WOD type slug',
+                required   : false,
+                schema     : new OAT\Schema(type: 'string')
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // category.id (wodCategory.id)
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[category.id][eq]',
+                description: 'Filter by WOD category ID',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // category.slug (wodCategory.slug)
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[category.slug][eq]',
+                description: 'Filter by WOD category slug',
+                required   : false,
+                schema     : new OAT\Schema(type: 'string')
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // division.id (wodVersions.wodDivision.id)
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[division.id][eq]',
+                description: 'Filter by WOD division ID',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // division.slug (wodVersions.wodDivision.slug)
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[division.slug][eq]',
+                description: 'Filter by WOD division slug',
+                required   : false,
+                schema     : new OAT\Schema(type: 'string')
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // gender (wodVersions.wodVariants.gender)
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[gender][eq]',
+                description: 'Filter by gender',
+                required   : false,
+                schema     : new OAT\Schema(type: 'string', enum: ['male', 'female', 'mixed'])
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // rounds (wodVersions.wodVariants.rounds)
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[rounds][eq]',
+                description: 'Filter by rounds (exact match, in seconds)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[rounds][lt]',
+                description: 'Filter by rounds (less than, in seconds)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[rounds][lte]',
+                description: 'Filter by rounds (less than or equal, in seconds)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[rounds][gt]',
+                description: 'Filter by rounds (greater than, in seconds)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[rounds][gte]',
+                description: 'Filter by rounds (greater than or equal, in seconds)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // timeCap (wodVersions.wodVariants.timeCap)
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[timeCap][eq]',
+                description: 'Filter by time cap (exact match, in seconds)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[timeCap][lt]',
+                description: 'Filter by time cap (less than, in seconds)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[timeCap][lte]',
+                description: 'Filter by time cap (less than or equal, in seconds)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[timeCap][gt]',
+                description: 'Filter by time cap (greater than, in seconds)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter(
+                name       : 'filters[timeCap][gte]',
+                description: 'Filter by time cap (greater than or equal, in seconds)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+        ],
+        responses  : [
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'List of WODs',
+                headers    : [
+                    new OAT\Header(ref: '#/components/headers/Element-Count', header: 'Element-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Page', header: 'Pagination-Page'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Count', header: 'Pagination-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Limit', header: 'Pagination-Limit'),
+                ],
+                content    : new OAT\JsonContent(
+                    type : 'array',
+                    items: new OAT\Items(
+                        ref: new Model(
+                            type  : Wod::class,
+                            groups: [FrontGroupsEnum::WOD_LIST]
+                        )
+                    )
+                )
+            ),
+        ]
+    )]
+    public function list(
+        Request             $request,
+        ListWodUseCase      $useCase,
+        NormalizerInterface $normalizer,
+    ): JsonResponse {
+        $paginatorValues = RequestPaginator::extractValues(
+            request: $request
+        );
+
+        $filters = RequestFilters::extractValues(
+            request         : $request,
+            fieldMapping    : WodFilterMapping::FIELD_MAP,
+            allowedOperators: WodFilterRules::ALLOWED_OPERATORS
+        );
+
+        $sorts = RequestSort::extractValues(
+            request    : $request,
+            fieldMap   : WodSortMapping::FIELD_MAP,
+            defaultSort: 'name'
+        );
+
+        try {
+            $paginator = $useCase->execute(
+                new ListWodsHttp(
+                    page   : $paginatorValues->getPage(),
+                    limit  : $paginatorValues->getLimit(),
+                    filters: $filters,
+                    sorts  : $sorts,
+                )
+            );
+        } catch (InvalidArgumentException) {
+            throw new InvalidArgumentException();
+        }
+
+        $dtoItems = $this->wodService->transformCollectionToDTO(
+            wods   : $paginator->getItems(),
+            filters: $filters
+        );
+
+        return new JsonResponse(
+            data   : $normalizer->normalize(
+                object : $dtoItems,
+                format : 'json',
+                context: [
+                    'groups' => [
+                        FrontGroupsEnum::WOD_LIST,
+                    ],
+                ]
+            ),
+            status : Response::HTTP_OK,
+            headers: ResponsePaginator::buildPaginationHeaders(
+                paginator      : $paginator,
+                paginatorValues: $paginatorValues
+            )
+        );
+    }
+
+    #[Route(
+        path   : '',
+        name   : 'create',
+        methods: ['POST']
+    )]
+    #[IsGranted(ListPermissions::PERMISSION_WOD_MANAGE)]
+    #[Security(name: 'bearerAuth')]
+    #[OAT\Post(
+        description: 'Creates a new WOD and returns the created resource ID.',
+        summary    : 'Create a WOD',
+        security   : [['bearerAuth' => []]],
+        requestBody: new OAT\RequestBody(
+            description: 'Created a WOD',
+            required   : true,
+            content    : new OAT\JsonContent(
+                ref: new Model(
+                    type  : Wod::class,
+                    groups: [FrontGroupsEnum::WOD_LIST]
+                )
+            )
+        ),
+        responses  : [
+            new OAT\Response(
+                response   : Response::HTTP_CREATED,
+                description: 'WOD created successfully',
+                headers    : [
+                    new OAT\Header(
+                        header     : 'X-RESOURCE-ID',
+                        description: 'ID of WOD created',
+                        schema     : new OAT\Schema(type: 'integer')
+                    ),
+                ],
+                content    : new OAT\JsonContent(
+                    ref: new Model(
+                        type  : Wod::class,
+                        groups: [FrontGroupsEnum::WOD_LIST]
+                    )
+                )
+            ),
+        ]
+    )]
+    public function create(
+        Request             $request,
+        CreateWodUseCase    $useCase,
+        NormalizerInterface $normalizer,
+    ): JsonResponse {
+        try {
+            $payload = json_decode($request->getContent(), true);
+            $wod     = $useCase->execute(
+                new CreateWodHttp($payload)
+            );
+
+            return new JsonResponse(
+                data   : $normalizer->normalize(
+                    object : $wod,
+                    format : 'json',
+                    context: ['groups' => [FrontGroupsEnum::WOD_MANAGE]]
+                ),
+                status : Response::HTTP_CREATED,
+                headers: ['X-RESOURCE-ID' => $wod->getId()]
+            );
+        } catch (InvalidArgumentException) {
+            $statusCode = Response::HTTP_BAD_REQUEST;
+        } catch (AlreadyExistException) {
+            $statusCode = Response::HTTP_CONFLICT;
+        }
+
+        return new JsonResponse(null, $statusCode);
+    }
+
+    #[Route(
+        path        : '/{wodId}',
+        name        : 'detail',
+        requirements: [
+            'wodId' => '\d+',
+        ],
+        methods     : ['GET']
+    )]
+    #[IsGranted(ListPermissions::PERMISSION_WOD_VIEW)]
+    #[Security(name: 'bearerAuth')]
+    #[OAT\Get(
+        description: 'Returns detailed information for a specific WOD.',
+        summary    : 'Get WOD details',
+        security   : [['bearerAuth' => []]],
+        responses  : [
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'Detail of WOD',
+                content    : new OAT\JsonContent(
+                    ref : new Model(
+                        type  : Wod::class,
+                        groups: [FrontGroupsEnum::WOD_DETAIL]
+                    ),
+                    type: 'object'
+                )
+            ),
+        ],
+    )]
+    public function detail(
+        GetWodByIdUseCase   $useCase,
+        NormalizerInterface $normalizer,
+        string              $wodId
+    ): JsonResponse {
+        try {
+            $wod = $useCase->execute(
+                new GetWodByIdHttp(
+                    id: $wodId
+                )
+            );
+        } catch (EntityNotFoundException) {
+            return new JsonResponse(
+                data  : null,
+                status: Response::HTTP_NOT_FOUND
+            );
+        }
+
+        $dtoItem = $this->wodService->transformToDTO($wod);
+
+        return new JsonResponse(
+            data  : $normalizer->normalize(
+                object : $dtoItem,
+                format : 'json',
+                context: [
+                    'groups' => [
+                        FrontGroupsEnum::WOD_DETAIL,
+                    ],
+                ]
+            ),
+            status: Response::HTTP_OK,
+        );
+    }
+
+    #[Route(
+        path   : '/{wodId}',
+        name   : 'update',
+        methods: ['PATCH']
+    )]
+    #[IsGranted(ListPermissions::PERMISSION_WOD_MANAGE)]
+    #[Security(name: 'bearerAuth')]
+    #[OAT\Patch(
+        description: 'Updates an existing WOD with the provided data.',
+        summary    : 'Update a WOD',
+        security   : [['bearerAuth' => []]],
+        requestBody: new OAT\RequestBody(
+            description: 'Update a WOD',
+            required   : true,
+            content    : new OAT\JsonContent(
+                ref: new Model(
+                    type  : Wod::class,
+                    groups: [FrontGroupsEnum::WOD_LIST]
+                ),
+            ),
+        ),
+        parameters : [
+            new OAT\PathParameter(
+                name       : 'name',
+                description: 'Name of the WOD',
+                required   : true,
+                schema     : new OAT\Schema(type: 'string'),
+            ),
+            new OAT\PathParameter(
+                name       : 'typeId',
+                description: 'Type ID of the WOD',
+                required   : true,
+                schema     : new OAT\Schema(type: 'integer'),
+            ),
+            new OAT\PathParameter(
+                name       : 'categoryId',
+                description: 'Category ID of the WOD',
+                required   : true,
+                schema     : new OAT\Schema(type: 'integer'),
+            ),
+            new OAT\PathParameter(
+                name       : 'teamSize',
+                description: 'Team size of the WOD',
+                schema     : new OAT\Schema(type: 'integer'),
+            ),
+            new OAT\PathParameter(
+                name       : 'descriptions',
+                description: 'Descriptions of the WOD',
+                schema     : new OAT\Schema(type: 'string'),
+            ),
+        ],
+        responses  : [
+            new OAT\Response(
+                response   : Response::HTTP_NO_CONTENT,
+                description: 'WOD updated successfully',
+            ),
+        ]
+    )]
+    public function patch(
+        Request          $request,
+        string           $wodId,
+        UpdateWodUseCase $useCase,
+    ): JsonResponse {
+        try {
+            $payload = json_decode($request->getContent(), true);
+
+            $useCase->execute(
+                new UpdateWodHttp(
+                    id     : $wodId,
+                    payload: $payload
+                )
+            );
+
+            $statusCode = Response::HTTP_NO_CONTENT;
+        } catch (EntityNotFoundException) {
+            $statusCode = Response::HTTP_NOT_FOUND;
+        }
+
+        return new JsonResponse(null, $statusCode);
+    }
+
+    #[Route(
+        path        : '/{wodId}/division/{wodDivisionId}/leaderboard/{gender}',
+        name        : 'leaderboard',
+        requirements: [
+            'wodId'         => '\d+',
+            'wodDivisionId' => '\d+',
+            'gender'        => 'male|female|mixed',
+        ],
+        methods     : ['GET']
+    )]
+    #[IsGranted(ListPermissions::PERMISSION_WOD_SCORE_LIST)]
+    #[Security(name: 'bearerAuth')]
+    #[OAT\Get(
+        description: 'Returns the leaderboard for a specific WOD.',
+        summary    : 'Get WOD leaderboard',
+        security   : [['bearerAuth' => []]],
+        parameters : [
+            new OAT\PathParameter(
+                name       : 'wodId',
+                description: 'WOD ID',
+                required   : true,
+                schema     : new OAT\Schema(type: 'integer')
+            ),
+            new OAT\Parameter('#/components/parameters/QueryRequestPage'),
+            new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
+        ],
+        responses  : [
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'Leaderboard for the WOD',
+            ),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'WOD not found'),
+        ]
+    )]
+    public function leaderboard(
+        int                      $wodId,
+        int                      $wodDivisionId,
+        string                   $gender,
+        Request                  $request,
+        GetWodByIdUseCase        $getWodUseCase,
+        GetWodLeaderboardUseCase $useCase,
+        NormalizerInterface      $normalizer,
+    ): JsonResponse {
+        /** @var User|null $currentUser */
+        $currentUser = $this->getUser();
+
+        $paginatorValues = RequestPaginator::extractValues(
+            request: $request
+        );
+
+        $filters = RequestFilters::extractValues(
+            request         : $request,
+            fieldMapping    : WodScoreFilterMapping::FIELD_MAP,
+            allowedOperators: WodScoreFilterRules::ALLOWED_OPERATORS
+        );
+
+        try {
+            $wod = $getWodUseCase->execute(
+                new GetWodByIdHttp(
+                    id: $wodId
+                )
+            );
+
+            $allowedMetrics = $wod->getWodType()->getAllowedMetrics();
+
+            // REFACTO THAT.... PLZ
+            $metric = $allowedMetrics[0];
+
+            $paginator = $useCase->execute(
+                new GetWodLeaderboardHttp(
+                    wodId        : $wodId,
+                    wodDivisionId: $wodDivisionId,
+                    gender       : $gender,
+                    metric       : $metric,
+                    page         : $paginatorValues->getPage(),
+                    limit        : $paginatorValues->getLimit(),
+                    filters      : $filters,
+                ),
+                currentUser: $currentUser,
+            );
+        } catch (EntityNotFoundException) {
+            return new JsonResponse(null, Response::HTTP_NOT_FOUND);
+        }
+
+        $dtoItems = $this->wodScoreService->transformCollectionToDTO(
+            wodScores: $paginator->getItems(),
+            filters  : $filters,
+        );
+
+        return new JsonResponse(
+            data   : $normalizer->normalize(
+                object : $dtoItems,
+                format : 'json',
+                context: [
+                    'groups' => [
+                        FrontGroupsEnum::WOD_LEADERBOARD,
+                    ],
+                ]
+            ),
+            status : Response::HTTP_OK,
+            headers: ResponsePaginator::buildPaginationHeaders(
+                paginator      : $paginator,
+                paginatorValues: $paginatorValues
+            )
+        );
+    }
+}

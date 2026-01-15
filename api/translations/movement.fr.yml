@@ -1,0 +1,905 @@
+air_bike:
+  name: "Air Bike"
+  description: "Pédalage dynamique sur vélo d’exercice, sollicitant le cardio et les abdominaux."
+air_squat:
+  name: "Air Squat"
+  description: "Squat au poids du corps, renforçant jambes et fessiers."
+arch_up_arch_hold_superman:
+  name: "Arch Up / Arch Hold / Superman"
+  description: "Exercice de renforcement du dos et des lombaires, imitant la position du Superman."
+back_extension:
+  name: "Back Extension"
+  description: "Extension du dos sur banc ou sol, ciblant les muscles lombaires."
+back_scale:
+  name: "Back Scale"
+  description: "Exercice d’équilibre sur le dos, sollicitant la force du tronc et la stabilité."
+back_squat:
+  name: "Back Squat"
+  description: "Squat avec barre sur les épaules, renforçant jambes et tronc."
+back_tuck:
+  name: "Back Tuck"
+  description: "Saut arrière groupé, sollicitant explosivité et coordination."
+backward_roll:
+  name: "Backward Roll"
+  description: "Roulade arrière, mobilisant dos et tronc pour l’équilibre."
+ball_slam:
+  name: "Ball Slam"
+  description: "Lancer explosif d’un ballon lesté au sol, travaillant explosivité et haut du corps."
+bar_facing_burpee:
+  name: "Bar Facing Burpee"
+  description: "Burpee réalisé face à une barre, suivi d’un saut par-dessus celle-ci. Exercice complet combinant endurance, explosivité et coordination."
+bar_over_burpee:
+  name: "Bar Over Burpee"
+  description: "Burpee suivi d’un saut au-dessus de la barre, combinant cardio et agilité."
+barbell_front_rack_lunge:
+  name: "Barbell Front Rack Lunge"
+  description: "Fente avec barre tenue en position avant, renforçant jambes et tronc."
+bear_crawl:
+  name: "Bear Crawl"
+  description: "Déplacement à quatre pattes, sollicitant épaules, tronc et coordination."
+bench_press:
+  name: "Bench Press"
+  description: "Développé couché avec barre, ciblant pectoraux, épaules et triceps."
+bent_over_row:
+  name: "Bent Over Row"
+  description: "Rowing barre penché, renforçant le dos et les biceps."
+bike:
+  name: "Bike"
+  description: "Pédalage sur vélo, exercice cardiovasculaire."
+block_pull_deadlift:
+  name: "Block Pull Deadlift"
+  description: "Soulevé de terre partiel depuis blocs, accent sur chaîne postérieure."
+broad_jump:
+  name: "Broad Jump"
+  description: "Saut en longueur, travaillant explosivité des jambes."
+box_jump:
+  name: "Box Jump"
+  description: "Saut sur une boîte, renforçant jambes et coordination."
+box_step_up:
+  name: "Box Step-Up"
+  description: "Montée sur boîte avec une jambe, sollicitant jambes et équilibre."
+burpee:
+  name: "Burpee"
+  description: "Exercice complet combinant squat, pompe et saut, cardio et renforcement."
+burpee_box_jump:
+  name: "Burpee Box Jump"
+  description: "Burpee suivi d’un saut sur boîte, mélange cardio et explosivité."
+burpee_box_jump_over:
+  name: "Burpee Box Jump Over"
+  description: "Burpee puis saut par-dessus la boîte, travaillant agilité et explosivité."
+burpee_over_row:
+  name: "Burpee Over Row"
+  description: "Burpee combiné à un passage au-dessus d’une barre de rowing, coordination et cardio."
+butterfly_pull_up:
+  name: "Butterfly Pull-Up"
+  description: "Traction avec mouvement circulaire des jambes, vitesse et efficacité accrue."
+candlestick:
+  name: "Candlestick"
+  description: "Position allongée pieds vers le haut, renforcement abdos et tronc."
+chest_to_bar_pull_up:
+  name: "Chest-to-Bar Pull-Up"
+  description: "Traction amenant la poitrine à la barre, sollicitant dos et bras."
+chest_to_wall_handstand_push_up:
+  name: "Chest-to-Wall Handstand Push-Up"
+  description: "Pompes en équilibre contre un mur, tête vers le sol, renforçant épaules et triceps."
+chin_over_bar_pull_up:
+  name: "Chin Over Bar Pull-Up"
+  description: "Traction où le menton doit passer au-dessus de la barre. Exercice de tirage sollicitant principalement le dos et les biceps."
+clean:
+  name: "Clean"
+  description: "Mouvement olympique de lever de barre jusqu’aux épaules, explosivité et coordination."
+clean_and_jerk:
+  name: "Clean and Jerk"
+  description: "Clean suivi d’un arraché par-dessus la tête, force et puissance totales."
+clean_and_push_jerk:
+  name: "Clean and Push Jerk"
+  description: "Clean puis poussée de la barre au-dessus de la tête en impulsion, travail de puissance."
+clean_and_push_press:
+  name: "Clean and Push Press"
+  description: "Clean puis développé vertical avec les bras, utilisant les jambes pour l’impulsion."
+clean_and_split_jerk:
+  name: "Clean and Split Jerk"
+  description: "Clean puis poussée en fente avec barre au-dessus de la tête, coordination et force."
+clean_grip_deadlift:
+  name: "Clean-Grip Deadlift"
+  description: "Soulevé de terre avec prise type clean, renforçant chaîne postérieure et prise."
+clean_grip_deadlift_high_pull:
+  name: "Clean-Grip Deadlift High Pull"
+  description: "Soulevé de terre puis tirage haut avec barre, développant dos et explosivité."
+clean_pull:
+  name: "Clean Pull"
+  description: "Tirage de barre jusqu’aux épaules sans réception, travaillant puissance et technique."
+crossover:
+  name: "Crossover"
+  description: "Mouvement de jambes croisées ou de saut, coordination et agilité."
+curl:
+  name: "Curl"
+  description: "Flexion des bras avec charge, ciblant principalement les biceps."
+deadlift:
+  name: "Deadlift"
+  description: "Soulevé de terre classique, renforçant dos, fessiers et jambes."
+deficit_deadlift:
+  name: "Deficit Deadlift"
+  description: "Soulevé de terre avec pieds surélevés, accent sur l’amplitude et la puissance."
+deficit_handstand_push_up:
+  name: "Deficit Handstand Push-Up"
+  description: "Pompes en équilibre tête vers le sol avec amplitude accrue, renforcement épaules et triceps."
+devil_press:
+  name: "Devil Press"
+  description: "Burpee suivi d’un développé avec haltères au-dessus de la tête, cardio et puissance."
+dip:
+  name: "Dip"
+  description: "Flexion-extension des bras sur barres parallèles, ciblant triceps et épaules."
+double_under:
+  name: "Double Under"
+  description: "Saut à la corde où la corde passe deux fois sous les pieds, cardio et coordination."
+dumbbell_clean:
+  name: "Dumbbell Clean"
+  description: "Lever d’haltères jusqu’aux épaules en un mouvement explosif, coordination et puissance."
+dumbbell_clean_and_press:
+  name: "Dumbbell Clean and Press"
+  description: "Dumbbell Clean suivi d’un développé au-dessus de la tête, force et explosivité."
+dumbbell_deadlift:
+  name: "Dumbbell Deadlift"
+  description: "Soulevé de terre avec haltères, ciblant chaîne postérieure et gainage."
+dumbbell_farmers_carry:
+  name: "Dumbbell Farmers Carry"
+  description: "Marche avec haltères dans chaque main, renforcement grip et tronc."
+dumbbell_front_rack_lunge:
+  name: "Dumbbell Front Rack Lunge"
+  description: "Fente avec haltères en position avant, jambes et tronc sollicités."
+dumbbell_front_squat:
+  name: "Dumbbell Front Squat"
+  description: "Squat avec haltères devant les épaules, renforçant quadriceps et tronc."
+dumbbell_goblet_squat:
+  name: "Dumbbell Goblet Squat"
+  description: "Squat tenant un haltère contre la poitrine, jambes et tronc sollicités."
+dumbbell_halo:
+  name: "Dumbbell Halo"
+  description: "Mouvement circulaire de l’haltère autour de la tête, épaules et tronc renforcés."
+dumbbell_high_pull:
+  name: "Dumbbell High Pull"
+  description: "Tirage explosif des haltères jusqu’au menton, épaules et trapèzes renforcés."
+dumbbell_muscle_clean:
+  name: "Dumbbell Muscle Clean"
+  description: "Clean d’haltères sans impulsion des jambes, travaillant explosivité et coordination."
+dumbbell_muscle_snatch:
+  name: "Dumbbell Muscle Snatch"
+  description: "Arraché d’haltère sans flexion des jambes, force et coordination épaules."
+dumbbell_overhead_squat:
+  name: "Dumbbell Overhead Squat"
+  description: "Squat avec haltères au-dessus de la tête, stabilité et force des épaules et tronc."
+dumbbell_overhead_walking_lunge:
+  name: "Dumbbell Overhead Walking Lunge"
+  description: "Fente marchée avec haltères au-dessus de la tête, stabilité et force globale."
+dumbbell_power_clean:
+  name: "Dumbbell Power Clean"
+  description: "Clean d’haltères avec réception plus haute, explosivité et coordination."
+dumbbell_power_snatch:
+  name: "Dumbbell Power Snatch"
+  description: "Arraché d’haltère avec réception haute, puissance et technique."
+dumbbell_press:
+  name: "Dumbbell Press"
+  description: "Développé vertical avec haltères, épaules et triceps sollicités."
+dumbbell_push_jerk:
+  name: "Dumbbell Push Jerk"
+  description: "Développé explosif avec impulsion des jambes, puissance et coordination."
+dumbbell_push_press:
+  name: "Dumbbell Push Press"
+  description: "Développé vertical avec léger appui des jambes, épaules et triceps renforcés."
+dumbbell_row:
+  name: "Dumbbell Row"
+  description: "Rowing avec haltère, ciblant dos et biceps."
+dumbbell_snatch:
+  name: "Dumbbell Snatch"
+  description: "Arraché d’un haltère du sol jusqu’au-dessus de la tête, puissance et coordination."
+dumbbell_snatch_to_overhead:
+  name: "Dumbbell Snatch to Overhead"
+  description: "Arraché avec réception directement au-dessus de la tête, force et explosivité."
+dumbbell_split_clean:
+  name: "Dumbbell Split Clean"
+  description: "Clean d’haltères avec fente arrière, coordination et explosivité."
+dumbbell_split_snatch:
+  name: "Dumbbell Split Snatch"
+  description: "Arraché d’haltères avec fente arrière, force et stabilité."
+dumbbell_squat_clean:
+  name: "Dumbbell Squat Clean"
+  description: "Clean avec réception en squat, puissance et mobilité des jambes."
+dumbbell_squat_snatch:
+  name: "Dumbbell Squat Snatch"
+  description: "Arraché avec réception en squat complet, coordination et explosivité."
+dumbbell_thruster:
+  name: "Dumbbell Thruster"
+  description: "Squat suivi d’un développé vertical avec haltères, force complète du corps."
+dumbbell_tater:
+  name: "Dumbbell Tater"
+  description: "Swing ou levée dynamique d’haltère, mettant l’accent sur chaîne postérieure et tronc."
+dumbbell_turkish_get_up:
+  name: "Dumbbell Turkish Get-Up"
+  description: "Passage du sol à la position debout avec haltère au-dessus de la tête, stabilité et coordination."
+dumbbell_russian_twist:
+  name: "Dumbbell Russian Twist"
+  description: "Rotation du tronc assis avec haltère, renforcement obliques."
+dumbbell_suitcase_carry:
+  name: "Dumbbell Suitcase Carry"
+  description: "Marche avec haltère dans une main, stabilisation du tronc et grip."
+dumbbell_swing:
+  name: "Balancement avec haltère"
+  description: "Mouvement dynamique consistant à balancer un haltère de l’entrejambe jusqu’à la hauteur de la poitrine ou au-dessus de la tête, sollicitant les fessiers, les ischio-jambiers et le tronc."
+dumbbell_walking_lunge:
+  name: "Dumbbell Walking Lunge"
+  description: "Fente marchée avec haltères, renforcement jambes et équilibre."
+dumbbell_windmill:
+  name: "Dumbbell Windmill"
+  description: "Inclinaison latérale avec haltère au-dessus de la tête, stabilité tronc et étirement latéral."
+farmers_carry:
+  name: "Farmers Carry"
+  description: "Marche avec charges lourdes dans chaque main, renforcement global et grip."
+firemans_carry:
+  name: "Fireman’s Carry"
+  description: "Transport de charge sur les épaules, coordination et force."
+floor_wiper:
+  name: "Floor Wiper"
+  description: "Mouvement des jambes de gauche à droite en position allongée, renforcement abdos."
+flutter_kick_leg_raise:
+  name: "Flutter Kick / Leg Raise"
+  description: "Battements de jambes allongé, sollicitant abdominaux et flexeurs de hanches."
+forward_roll:
+  name: "Forward Roll"
+  description: "Roulade avant, mobilisant dos, jambes et coordination."
+freestanding_handstand_push_up:
+  name: "Freestanding Handstand Push-Up"
+  description: "Pompes en équilibre sans support, épaules et triceps renforcés."
+front_scale:
+  name: "Front Scale"
+  description: "Exercice d’équilibre sur une jambe, sollicitant jambes et tronc."
+front_squat:
+  name: "Front Squat"
+  description: "Squat avec barre devant les épaules, quadriceps et tronc sollicités."
+ghd_sit_up:
+  name: "GHD Sit-Up"
+  description: "Abdos complets sur machine GHD, renforçant tronc et flexeurs de hanches."
+glide_kip:
+  name: "Glide Kip"
+  description: "Mouvement de balancement sur barre pour faciliter la traction, coordination et explosivité."
+good_morning:
+  name: "Good Morning"
+  description: "Flexion du tronc avec barre sur les épaules, renforcement lombaires et ischio-jambiers."
+goblet_squat:
+  name: "Goblet Squat"
+  description: "Squat tenant un poids devant la poitrine, jambes et tronc renforcés."
+grasshopper:
+  name: "Grasshopper"
+  description: "Mouvement d’abdos dynamique avec rotation des jambes, renforcement obliques et tronc."
+ground_to_overhead:
+  name: "Ground to Overhead"
+  description: "Lever d’une charge du sol jusqu’au-dessus de la tête, puissance totale du corps."
+hack_squat:
+  name: "Hack Squat"
+  description: "Squat avec barre derrière les jambes, sollicitant quadriceps et fessiers."
+hammer_strike:
+  name: "Hammer Strike"
+  description: "Frappes simulées avec un marteau ou sac, puissance et explosivité du haut du corps."
+handstand_hold:
+  name: "Handstand Hold"
+  description: "Maintien en équilibre sur les mains, renforcement épaules, tronc et équilibre."
+handstand_push_up:
+  name: "Handstand Push-Up"
+  description: "Pompes en équilibre sur les mains, ciblant épaules et triceps."
+handstand_walk:
+  name: "Handstand Walk"
+  description: "Marche sur les mains, équilibre, coordination et force du tronc."
+hanging_l_sit:
+  name: "Hanging L-Sit"
+  description: "Suspension à la barre avec jambes tendues, abdos et gainage renforcés."
+hang_clean:
+  name: "Hang Clean"
+  description: "Clean depuis position suspendue (barre au-dessus des genoux), explosivité et technique."
+hang_muscle_clean:
+  name: "Hang Muscle Clean"
+  description: "Clean sans impulsion des jambes depuis barre suspendue, force et coordination."
+hang_power_clean:
+  name: "Hang Power Clean"
+  description: "Clean avec réception haute depuis barre suspendue, puissance et technique."
+hang_split_clean:
+  name: "Hang Split Clean"
+  description: "Clean avec fente arrière depuis barre suspendue, coordination et puissance."
+hang_squat_clean:
+  name: "Hang Squat Clean"
+  description: "Clean avec réception en squat depuis barre suspendue, puissance et mobilité."
+hang_muscle_snatch:
+  name: "Hang Muscle Snatch"
+  description: "Arraché sans flexion des jambes depuis barre suspendue, force et coordination."
+hang_snatch:
+  name: "Hang Snatch"
+  description: "Arraché depuis barre suspendue, puissance et technique."
+hang_power_snatch:
+  name: "Hang Power Snatch"
+  description: "Arraché avec réception haute depuis barre suspendue, explosivité et coordination."
+hang_squat_snatch:
+  name: "Hang Squat Snatch"
+  description: "Arraché avec réception en squat depuis barre suspendue, puissance et mobilité."
+hang_hold:
+  name: "Hang Hold"
+  description: "Suspension statique à la barre, renforcement grip et tronc."
+heel_clap:
+  name: "Heel Clap"
+  description: "Saut ou extension des jambes pour taper les talons, explosivité et coordination."
+hex_bar_deadlift:
+  name: "Hex Bar Deadlift"
+  description: "Soulevé de terre avec barre hexagonale, renforcement chaîne postérieure et grip."
+hex_bar_deadlift_high_pull:
+  name: "Hex Bar Deadlift High Pull"
+  description: "Soulevé de terre suivi d’un tirage haut avec barre hexagonale, dos et épaules sollicités."
+hip_extension:
+  name: "Hip Extension"
+  description: "Extension de hanches sur banc ou sol, renforcement fessiers et lombaires."
+hollow_hold:
+  name: "Hollow Hold"
+  description: "Maintien en position creuse allongée, gainage et force du tronc."
+hollow_rock:
+  name: "Hollow Rock"
+  description: "Basculer en position creuse d’avant en arrière, renforçant tronc et coordination."
+inchworm:
+  name: "Inchworm"
+  description: "Flexion avant puis marche des mains, mobilisant tronc, épaules et ischio-jambiers."
+inverted_burpee:
+  name: "Inverted Burpee"
+  description: "Burpee avec traction ou renversement, explosivité et coordination."
+inverted_hang:
+  name: "Inverted Hang"
+  description: "Suspension inversée à la barre, renforcement dos et épaules."
+inverted_pike:
+  name: "Inverted Pike"
+  description: "Position inversée avec jambes tendues vers le sol, tronc et épaules sollicités."
+inverted_tuck:
+  name: "Inverted Tuck"
+  description: "Position inversée avec jambes repliées, gainage et coordination."
+jerk:
+  name: "Jerk"
+  description: "Poussée explosive de la barre au-dessus de la tête, puissance et coordination."
+jumping_jack:
+  name: "Jumping Jack"
+  description: "Exercice de gymnastique complète consistant à sauter pour écarter les jambes et lever les bras au-dessus de la tête, puis revenir à la position de départ, améliorant la condition cardiovasculaire."
+jumping_pull_up:
+  name: "Jumping Pull-Up"
+  description: "Traction assistée par un saut à la barre, permettant de franchir la barre plus facilement."
+jumping_chest_to_bar_pull_up:
+  name: "Jumping Chest to Bar Pull-Up"
+  description: "Traction assistée par un saut, où la poitrine doit toucher la barre. Exercice de tirage adapté pour travailler la force du dos et des bras avec assistance des jambes."
+kettlebell_clean:
+  name: "Kettlebell Clean"
+  description: "Lever du kettlebell jusqu’aux épaules, explosivité et coordination."
+kettlebell_clean_and_press:
+  name: "Kettlebell Clean and Press"
+  description: "Clean suivi d’un développé, force et puissance globale."
+kettlebell_deadlift:
+  name: "Kettlebell Deadlift"
+  description: "Soulevé de terre avec kettlebell, renforcement chaîne postérieure et tronc."
+kettlebell_farmers_carry:
+  name: "Kettlebell Farmers Carry"
+  description: "Marche avec kettlebells, grip et tronc renforcés."
+kettlebell_front_rack_lunge:
+  name: "Kettlebell Front Rack Lunge"
+  description: "Fente réalisée avec une ou deux kettlebells tenues en position de front rack. Exercice sollicitant principalement les jambes, les fessiers et le gainage."
+kettlebell_front_squat:
+  name: "Squat avant avec kettlebell"
+  description: "Squat réalisé en tenant un kettlebell devant la poitrine, sollicitant les quadriceps, les fessiers et le tronc pour la stabilité."
+kettlebell_goblet_squat:
+  name: "Kettlebell Goblet Squat"
+  description: "Squat tenant le kettlebell contre la poitrine, jambes et tronc sollicités."
+kettlebell_high_pull:
+  name: "Kettlebell High Pull"
+  description: "Tirage explosif du kettlebell jusqu’au menton, épaules et trapèzes sollicités."
+kettlebell_halo:
+  name: "Kettlebell Halo"
+  description: "Mouvement circulaire du kettlebell autour de la tête, stabilité et renforcement des épaules."
+kettlebell_lunge:
+  name: "Kettlebell Lunge"
+  description: "Fente avec kettlebell, jambes et équilibre sollicités."
+kettlebell_muscle_clean:
+  name: "Kettlebell Muscle Clean"
+  description: "Mouvement où la kettlebell est tirée du sol jusqu’à la position de rack en un geste fluide, sans passage par un squat ou une flexion marquée des jambes. Exercice qui développe la technique, la puissance et le haut du corps."
+kettlebell_muscle_snatch:
+  name: "Kettlebell Muscle Snatch"
+  description: "Mouvement explosif où la kettlebell est tirée du sol directement au-dessus de la tête en un seul geste, sans squat ni flexion marquée des jambes. Sollicite puissance, coordination et épaules."
+kettlebell_overhead_squat:
+  name: "Kettlebell Overhead Squat"
+  description: "Squat avec kettlebell au-dessus de la tête, stabilité et force du tronc."
+kettlebell_overhead_walking_lunge:
+  name: "Kettlebell Overhead Walking Lunge"
+  description: "Fentes marchées réalisées avec une ou deux kettlebells maintenues bras tendus au-dessus de la tête. Exercice sollicitant les jambes, les fessiers, les épaules et le gainage pour la stabilité."
+kettlebell_power_clean:
+  name: "Kettlebell Power Clean"
+  description: "Mouvement où la kettlebell est tirée du sol jusqu’en position de rack avec un squat partiel ou sans squat complet. Développe puissance, coordination et force du haut du corps."
+kettlebell_power_snatch:
+  name: "Kettlebell Power Snatch"
+  description: "Mouvement explosif où la kettlebell est tirée du sol jusqu’au-dessus de la tête en un seul geste, réception en squat partiel ou jambes presque tendues. Sollicite puissance, explosivité et épaules."
+kettlebell_press:
+  name: "Kettlebell Press"
+  description: "Développé vertical avec kettlebell, épaules et triceps sollicités."
+kettlebell_push_jerk:
+  name: "Kettlebell Push Jerk"
+  description: "Développé explosif avec impulsion des jambes, puissance et coordination."
+kettlebell_push_press:
+  name: "Kettlebell Push Press"
+  description: "Développé vertical avec léger appui des jambes, épaules et triceps renforcés."
+kettlebell_russian_twist:
+  name: "Kettlebell Russian Twist"
+  description: "Rotation du tronc assis avec kettlebell, renforcement obliques."
+kettlebell_row:
+  name: "Kettlebell Row"
+  description: "Rowing avec kettlebell, ciblant dos et biceps."
+kettlebell_snatch:
+  name: "Kettlebell Snatch"
+  description: "Arraché du kettlebell du sol jusqu’au-dessus de la tête, puissance et coordination."
+kettlebell_snatch_to_overhead:
+  name: "Kettlebell Snatch to Overhead"
+  description: "Arraché avec réception directement au-dessus de la tête, force et explosivité."
+kettlebell_split_clean:
+  name: "Kettlebell Split Clean"
+  description: "Clean réalisé avec un écart des jambes (split stance) lors de la réception de la kettlebell en position de rack. Développe puissance, équilibre et coordination."
+kettlebell_split_snatch:
+  name: "Kettlebell Split Snatch"
+  description: "Snatch réalisé avec un écart des jambes lors de la réception de la kettlebell au-dessus de la tête. Exercice complet pour puissance, équilibre et stabilité des épaules."
+kettlebell_squat_clean:
+  name: "Kettlebell Squat Clean"
+  description: "Mouvement où la kettlebell est tirée du sol jusqu’à la position de rack, avec une descente en squat complet avant de se relever. Exercice qui développe la puissance, la coordination et la force des jambes."
+kettlebell_squat_snatch:
+  name: "Kettlebell Squat Snatch"
+  description: "Mouvement explosif où la kettlebell est tirée du sol jusqu’au-dessus de la tête en un seul geste, avec une réception en squat complet avant de se relever. Sollicite force, explosivité et mobilité."
+kettlebell_suitcase_carry:
+  name: "Kettlebell Suitcase Carry"
+  description: "Marche avec kettlebell dans une main, stabilisation du tronc et grip."
+kettlebell_swing:
+  name: "Balancement avec kettlebell"
+  description: "Mouvement dynamique de flexion des hanches, balançant un kettlebell de l’entrejambe jusqu’à la hauteur de la poitrine ou au-dessus de la tête, sollicitant les fessiers, les ischio-jambiers et le tronc."
+kettlebell_tater:
+  name: "Kettlebell Tater"
+  description: "Swing ou levée dynamique de kettlebell, mettant l’accent sur chaîne postérieure et tronc."
+kettlebell_thruster:
+  name: "Kettlebell Thruster"
+  description: "Combinaison d’un squat complet suivi d’un développé explosif des kettlebells au-dessus de la tête. Sollicite jambes, épaules, tronc et endurance."
+kettlebell_turkish_get_up:
+  name: "Kettlebell Turkish Get-Up"
+  description: "Passage du sol à la position debout avec kettlebell au-dessus de la tête, stabilité et coordination."
+kettlebell_windmill:
+  name: "Kettlebell Windmill"
+  description: "Inclinaison latérale avec kettlebell au-dessus de la tête, stabilité tronc et étirement latéral."
+kettlebell_walking_lunge:
+  name: "Kettlebell Walking Lunge"
+  description: "Fentes marchées avec une ou deux kettlebells en position de rack. Exercice ciblant jambes, fessiers et gainage pour la stabilité."
+kipping_chest_to_bar_pull_up:
+  name: "Kipping Chest-to-Bar Pull-Up"
+  description: "Traction dynamique amenant la poitrine à la barre, vitesse et coordination."
+kipping_deficit_handstand_push_up:
+  name: "Kipping Deficit Handstand Push-Up"
+  description: "Pompes tête vers le sol avec amplitude accrue et balancement, explosivité épaules et triceps."
+kipping_handstand_push_up:
+  name: "Kipping Handstand Push-Up"
+  description: "Pompes en équilibre avec balancement, force et coordination."
+kipping_knees_to_elbows:
+  name: "Kipping Knees-to-Elbows"
+  description: "Traction dynamique amenant les genoux aux coudes, gainage et coordination."
+kipping_muscle_up:
+  name: "Kipping Muscle-Up"
+  description: "Transition explosive barre/ring, traction puis dip, coordination et force globale."
+kipping_pull_up:
+  name: "Kipping Pull-Up"
+  description: "Traction avec balancement, vitesse et efficacité améliorées."
+kipping_toes_to_bar:
+  name: "Kipping Toes-to-Bar"
+  description: "Traction dynamique amenant les pieds à la barre, gainage et coordination."
+kipping_toes_to_rings:
+  name: "Kipping Toes-to-Rings"
+  description: "Traction dynamique aux anneaux amenant les pieds aux anneaux, force et coordination."
+kipping_ring_muscle_up:
+  name: "Kipping Ring Muscle-Up"
+  description: "Transition explosive aux anneaux, traction puis dip, coordination et force globale."
+knees_to_elbows:
+  name: "Genoux aux coudes"
+  description: "Mouvement en suspension où les genoux sont ramenés vers les coudes, sollicitant les muscles abdominaux et renforçant le tronc."
+l_sit:
+  name: "L-Sit"
+  description: "Position assise en L suspendu ou au sol, renforcement abdos et tronc."
+l_sit_on_rings:
+  name: "L-Sit on Rings"
+  description: "L-Sit tenu aux anneaux, stabilité et force du tronc."
+l_sit_rope_climb:
+  name: "L-Sit Rope Climb"
+  description: "Ascension de corde en position L, gainage et force des bras."
+l_sit_to_shoulder_stand:
+  name: "L-Sit to Shoulder Stand"
+  description: "Transition de L-Sit à appui sur épaules, tronc et coordination sollicités."
+lateral_jump:
+  name: "Lateral Jump"
+  description: "Saut latéral, explosivité et agilité des jambes."
+lateral_raise:
+  name: "Lateral Raise"
+  description: "Élévation latérale des bras, ciblant deltoïdes."
+legless_rope_climb:
+  name: "Legless Rope Climb"
+  description: "Ascension de corde sans aide des jambes, force bras et grip."
+lunge:
+  name: "Lunge"
+  description: "Fente avant classique, renforcement jambes et équilibre."
+l_pull_up:
+  name: "L-Pull-Up"
+  description: "Traction avec jambes en position L, gainage et force du dos."
+man_maker:
+  name: "Man Maker"
+  description: "Burpee avec haltères suivi d’un développé et tirage, exercice complet corps entier."
+medicine_ball_clean:
+  name: "Medicine Ball Clean"
+  description: "Lever de médecine-ball jusqu’aux épaules, puissance et coordination."
+modified_rope_climb:
+  name: "Modified Rope Climb"
+  description: "Ascension de corde avec technique simplifiée ou assistance, bras et tronc sollicités."
+monkey_bar_traverse:
+  name: "Monkey Bar Traverse"
+  description: "Parcours horizontal aux barres, force bras et coordination."
+mountain_climber:
+  name: "Mountain Climber"
+  description: "Exercice cardio au sol avec genoux alternés vers la poitrine, gainage et endurance."
+muscle_up:
+  name: "Muscle-Up"
+  description: "Mouvement combiné passant d’une traction à un dips sur une barre ou des anneaux, sollicitant les muscles du haut du corps et le tronc."
+muscle_clean:
+  name: "Muscle Clean"
+  description: "Clean sans impulsion des jambes, force et coordination épaules et tronc."
+muscle_snatch:
+  name: "Muscle Snatch"
+  description: "Arraché sans flexion des jambes, puissance et coordination des épaules."
+overhead_squat:
+  name: "Overhead Squat"
+  description: "Squat avec barre ou haltère au-dessus de la tête, stabilité et force globale."
+paddleboard:
+  name: "Paddleboard"
+  description: "Exercice d’équilibre sur planche ou paddle, sollicitant tronc et coordination."
+parallette_pass_through:
+  name: "Passage à travers les parallètes"
+  description: "Mouvement sur parallètes où le corps passe à travers les bras, améliorant la mobilité des épaules, la force du tronc et la coordination."
+pause_deadlift:
+  name: "Pause Deadlift"
+  description: "Soulevé de terre avec pause à mi-chemin, renforcement force et technique."
+pegboard_ascent:
+  name: "Pegboard Ascent"
+  description: "Montée verticale sur mur à chevilles, force bras et coordination."
+pistol:
+  name: "Pistol"
+  description: "Squat sur une jambe, équilibre et force jambe complète."
+plank_hold:
+  name: "Plank Hold"
+  description: "Gainage en planche, renforçant tronc, épaules et stabilité globale."
+power_clean:
+  name: "Power Clean"
+  description: "Clean avec réception haute, puissance et explosivité des jambes et tronc."
+power_clean_and_jerk:
+  name: "Power Clean and Jerk"
+  description: "Power clean suivi d’un jerk, coordination et force globale."
+power_clean_and_push_jerk:
+  name: "Power Clean and Push Jerk"
+  description: "Power clean puis push jerk, puissance et explosivité."
+power_clean_and_push_press:
+  name: "Power Clean and Push Press"
+  description: "Power clean suivi d’un push press, force et coordination."
+power_clean_and_split_jerk:
+  name: "Power Clean and Split Jerk"
+  description: "Power clean suivi d’un split jerk, puissance et stabilité."
+power_jerk:
+  name: "Power Jerk"
+  description: "Élévation explosive d’une barre au-dessus de la tête à partir des épaules, impliquant les jambes, les épaules et le tronc, réalisée avec un léger fléchissement des jambes pour propulser le poids."
+power_snatch:
+  name: "Power Snatch"
+  description: "Arraché avec réception haute, force explosive et coordination."
+power_snatch_balance:
+  name: "Power Snatch Balance"
+  description: "Arraché avec mouvement de squat partiel, stabilité et puissance épaules."
+pull_over:
+  name: "Pull-Over"
+  description: "Mouvement des bras avec charge derrière la tête, poitrine et dos sollicités."
+pull_up:
+  name: "Pull-Up"
+  description: "Traction classique à la barre, dos et bras renforcés."
+push_jerk:
+  name: "Push Jerk"
+  description: "Développé explosif avec impulsion des jambes, puissance et coordination."
+push_press:
+  name: "Push Press"
+  description: "Développé vertical avec léger appui des jambes, épaules et triceps renforcés."
+push_up:
+  name: "Push-Up"
+  description: "Pompe au poids du corps, pectoraux, triceps et tronc sollicités."
+rack_pull_deadlift:
+  name: "Rack Pull Deadlift"
+  description: "Soulevé de terre partiel depuis supports, chaîne postérieure renforcée."
+romanian_deadlift:
+  name: "Romanian Deadlift"
+  description: "Soulevé de terre jambes presque tendues, ischio-jambiers et dos sollicités."
+romanian_deadlift_high_pull:
+  name: "Romanian Deadlift High Pull"
+  description: "Soulevé de terre jambes tendues suivi d’un tirage haut, dos et épaules renforcés."
+rope_climb:
+  name: "Rope Climb"
+  description: "Ascension de corde, force bras, grip et coordination."
+row:
+  name: "Row"
+  description: "Mouvement de tirage ciblant les muscles du dos, les épaules et les bras, réalisé avec une barre, des haltères ou le poids du corps."
+run:
+  name: "Run"
+  description: "Course à pied, endurance cardiovasculaire et renforcement jambes."
+russian_twist:
+  name: "Russian Twist"
+  description: "Rotation du tronc assis, renforcement obliques et gainage."
+ring_dip:
+  name: "Ring Dip"
+  description: "Flexion-extension sur anneaux, triceps, épaules et tronc sollicités."
+ring_muscle_up:
+  name: "Ring Muscle-Up"
+  description: "Traction puis dip aux anneaux, force globale et coordination."
+ring_push_up:
+  name: "Ring Push-Up"
+  description: "Pompe aux anneaux, instabilité et force pectoraux/triceps."
+ring_row:
+  name: "Ring Row"
+  description: "Rowing aux anneaux, dos et biceps sollicités."
+sandbag_carry:
+  name: "Sandbag Carry"
+  description: "Transport de sac lesté, tronc, jambes et grip renforcés."
+shoulder_press:
+  name: "Shoulder Press"
+  description: "Développé vertical, épaules et triceps sollicités."
+shoulder_to_overhead:
+  name: "Shoulder to Overhead"
+  description: "Lever de la charge des épaules jusqu’au-dessus de la tête, puissance et coordination."
+shuttle_run:
+  name: "Shuttle Run"
+  description: "Course en navette, cardio et agilité."
+ski_skiing_on_ski_erg:
+  name: "Ski / Skiing on Ski Erg"
+  description: "Mouvement de ski simulé sur ergomètre, cardio et haut du corps sollicités."
+skin_the_cat:
+  name: "Skin the Cat"
+  description: "Passage complet sous barre ou anneaux, mobilité épaules et gainage."
+sled_pull:
+  name: "Sled Pull"
+  description: "Traction d’un traîneau lesté, jambes, tronc et bras sollicités."
+sled_push_prowler_push:
+  name: "Sled Push / Prowler Push"
+  description: "Poussée de traîneau, force jambes et puissance globale."
+snatch:
+  name: "Snatch"
+  description: "Arraché olympique complet, puissance, coordination et explosivité."
+snatch_balance:
+  name: "Snatch Balance"
+  description: "Arraché avec squat partiel à la réception, stabilité et force globale."
+snatch_grip_deadlift:
+  name: "Snatch-Grip Deadlift"
+  description: "Soulevé de terre avec prise large, dos, jambes et grip renforcés."
+snatch_grip_deadlift_high_pull:
+  name: "Snatch-Grip Deadlift High Pull"
+  description: "Soulevé de terre prise large suivi d’un tirage haut, dos et épaules sollicités."
+snatch_grip_overhead_squat:
+  name: "Snatch-Grip Overhead Squat"
+  description: "Squat avec prise large et barre au-dessus de la tête, stabilité et force globale."
+snatch_pull:
+  name: "Snatch Pull"
+  description: "Tirage haut avec barre, puissance et technique arraché."
+sit_up:
+  name: "Sit-Up"
+  description: "Abdos classiques, tronc et flexeurs de hanches renforcés."
+single_leg_deadlift:
+  name: "Single-Leg Deadlift"
+  description: "Soulevé de terre sur une jambe, équilibre et chaîne postérieure sollicités."
+single_under:
+  name: "Single Under"
+  description: "Saut simple à la corde, cardio et coordination."
+sots_press:
+  name: "Sots Press"
+  description: "Développé au-dessus de la tête depuis position squat profond, mobilité et force épaules."
+split_clean:
+  name: "Split Clean"
+  description: "Clean avec fente arrière à la réception, coordination et explosivité."
+split_clean_and_jerk:
+  name: "Split Clean and Jerk"
+  description: "Split clean suivi d’un jerk, puissance et stabilité."
+split_clean_and_push_jerk:
+  name: "Split Clean and Push Jerk"
+  description: "Split clean puis push jerk, coordination et force globale."
+split_clean_and_push_press:
+  name: "Épaulé-jeté fendu"
+  description: "Mouvement explosif commençant par un épaulé en position fendue, suivi d’un push press au-dessus de la tête, sollicitant les jambes, les épaules et la stabilité du tronc."
+split_clean_and_split_jerk:
+  name: "Split Clean and Split Jerk"
+  description: "Split clean suivi d’un split jerk, puissance et équilibre."
+split_snatch:
+  name: "Split Snatch"
+  description: "Arraché avec fente arrière à la réception, coordination et puissance."
+split_jerk:
+  name: "Split Jerk"
+  description: "Poussée de la barre au-dessus de la tête en fente, force et équilibre."
+squat_clean:
+  name: "Squat Clean"
+  description: "Clean avec réception en squat complet, puissance et mobilité jambes."
+squat_clean_and_jerk:
+  name: "Squat Clean and Jerk"
+  description: "Squat clean suivi d’un jerk, coordination et force globale."
+squat_clean_and_push_jerk:
+  name: "Squat Clean and Push Jerk"
+  description: "Squat clean puis push jerk, explosivité et puissance."
+squat_clean_and_push_press:
+  name: "Squat Clean and Push Press"
+  description: "Squat clean suivi d’un push press, force et coordination."
+squat_clean_and_split_jerk:
+  name: "Squat Clean and Split Jerk"
+  description: "Squat clean suivi d’un split jerk, stabilité et puissance."
+squat_snatch:
+  name: "Squat Snatch"
+  description: "Arraché avec réception en squat complet, coordination et explosivité."
+squat_snatch_balance:
+  name: "Squat Snatch Balance"
+  description: "Arraché avec squat partiel à la réception, stabilité et force."
+stiff_legged_deadlift:
+  name: "Stiff-Legged Deadlift"
+  description: "Soulevé de terre jambes presque tendues, ischio-jambiers et dos ciblés."
+straddle_press_to_handstand:
+  name: "Press écarté vers l’équilibre sur les mains"
+  description: "Passage d’une position assise à l’équilibre sur les mains avec jambes écartées, travaillant force, équilibre et contrôle corporel."
+straight_bar_dip:
+  name: "Straight Bar Dip"
+  description: "Flexion-extension sur barre droite, triceps et épaules sollicités."
+strict_chest_to_bar_pull_up:
+  name: "Strict Chest-to-Bar Pull-Up"
+  description: "Traction poitrine à la barre sans balancement, dos et bras renforcés."
+strict_deficit_handstand_push_up:
+  name: "Strict Deficit Handstand Push-Up"
+  description: "Pompes tête vers le sol avec amplitude accrue, sans balancement, épaules et triceps renforcés."
+strict_handstand_push_up:
+  name: "Strict Handstand Push-Up"
+  description: "Pompes en équilibre strict, épaules et triceps sollicités."
+strict_knees_to_elbows:
+  name: "Strict Knees-to-Elbows"
+  description: "Genoux amenés aux coudes en suspension, gainage et force du tronc."
+strict_muscle_up:
+  name: "Strict Muscle-Up"
+  description: "Traction puis dip strict aux barres ou anneaux, force globale et coordination."
+strict_press:
+  name: "Développé strict"
+  description: "Élévation verticale de la barre ou des haltères sans élan, renforçant les épaules et les triceps."
+strict_pull_up:
+  name: "Strict Pull-Up"
+  description: "Traction sans balancement, dos et bras renforcés."
+strict_toes_to_bar:
+  name: "Strict Toes-to-Bar"
+  description: "Amener les pieds à la barre sans balancement, gainage et contrôle."
+strict_toes_to_rings:
+  name: "Strict Toes-to-Rings"
+  description: "Amener les pieds aux anneaux sans balancement, force et stabilité."
+strict_ring_muscle_up:
+  name: "Muscle-up strict aux anneaux"
+  description: "Transition de traction à dips sur anneaux sans élan, sollicitant le haut du corps et le tronc."
+sumo_deadlift:
+  name: "Soulevé de terre sumo"
+  description: "Soulevé de terre avec position large des pieds, ciblant les jambes, les fessiers et le bas du dos."
+sumo_deadlift_high_pull:
+  name: "Soulevé de terre sumo avec tirage haut"
+  description: "Soulevé de terre sumo combiné avec un tirage vers le menton, sollicitant le bas du corps et les trapèzes."
+swim_swimming:
+  name: "Nage"
+  description: "Mouvement simulant la nage, renforçant le dos, les épaules et l’endurance générale."
+swing_to_backward_roll_to_support:
+  name: "Balancement à roulade arrière jusqu'au support"
+  description: "Balancement suivi d'une roulade arrière pour terminer en position de support, travaillant la coordination et le contrôle corporel."
+thruster:
+  name: "Thruster"
+  description: "Squat suivi d’un développé vertical, puissance complète du corps."
+tip_touch:
+  name: "Tip Touch"
+  description: "Flexion du tronc pour toucher les pointes de pied, abdos et mobilité renforcés."
+tire_flip:
+  name: "Tire Flip"
+  description: "Renversement de pneu, force et explosivité globales."
+toes_to_bar:
+  name: "Doigts de pieds à la barre"
+  description: "Suspension à la barre en ramenant les pieds vers les mains, sollicitant les abdominaux et la force de préhension."
+toes_to_rings:
+  name: "Doigts de pieds aux anneaux"
+  description: "Mouvement sur anneaux où l'on ramène les pieds vers les mains, renforçant le tronc et la stabilité des épaules."
+tuck_jump:
+  name: "Tuck Jump"
+  description: "Saut groupé, genoux vers la poitrine, explosivité jambes."
+tuck_up:
+  name: "Tuck-Up"
+  description: "Abdos avec jambes ramenées vers le torse, gainage et explosivité tronc."
+tricep_dip:
+  name: "Tricep Dip"
+  description: "Flexion-extension des bras sur barres ou banc, triceps et épaules ciblés."
+triple_under:
+  name: "Triple Under"
+  description: "Saut à la corde où la corde passe trois fois sous les pieds, cardio et coordination."
+trap_bar_deadlift:
+  name: "Trap Bar Deadlift"
+  description: "Soulevé de terre avec barre hexagonale, jambes et dos renforcés."
+trap_bar_deadlift_high_pull:
+  name: "Trap Bar Deadlift High Pull"
+  description: "Soulevé de terre suivi d’un tirage haut avec barre hexagonale, dos et épaules sollicités."
+up_down:
+  name: "Up-Down"
+  description: "Exercice combinant flexion et extension, tronc et cardio sollicités."
+v_up:
+  name: "V-Up"
+  description: "Abdos en V, jambes et tronc levés simultanément, gainage renforcé."
+wall_ball_shot:
+  name: "Wall Ball Shot"
+  description: "Lancer de médecine-ball contre le mur après squat, jambes et tronc sollicités."
+wall_climb_wall_walk:
+  name: "Wall Climb / Wall Walk"
+  description: "Marcher sur le mur en position horizontale, épaules et tronc renforcés."
+wall_sit:
+  name: "Wall Sit"
+  description: "Squat statique contre le mur, quadriceps et endurance sollicités."
+weighted_run:
+  name: "Weighted Run"
+  description: "Course avec charge additionnelle, jambes et cardio renforcés."
+walking_lunge:
+  name: "Walking Lunge"
+  description: "Fente marchée, jambes, tronc et équilibre sollicités."
+yoke_carry:
+  name: "Yoke Carry"
+  description: "Transport d’une charge sur les épaules, force jambes et tronc sollicités."
+zercher_squat:
+  name: "Zercher Squat"
+  description: "Squat avec barre tenue dans le creux des bras, quadriceps, tronc et bras renforcés."
+
+category:
+  warm_up:
+    name: "Échauffement"
+    description: "Exercices légers pour élever la température corporelle et préparer les articulations à l'effort."
+  cardio:
+    name: "Cardio"
+    description: "Exercices d’endurance visant à améliorer la capacité cardiovasculaire."
+  conditioning:
+    name: "Conditionnement"
+    description: "Entraînement métabolique combinant intensité et endurance musculaire."
+  strength:
+    name: "Force"
+    description: "Développement de la force maximale avec des charges lourdes."
+  weightlifting:
+    name: "Haltérophilie"
+    description: "Mouvements olympiques comme l’arraché (snatch) et l’épaulé-jeté (clean & jerk)."
+  powerlifting:
+    name: "Powerlifting"
+    description: "Exercices de force pure : squat, développé couché et soulevé de terre."
+  gymnastics:
+    name: "Gymnastique"
+    description: "Mouvements au poids du corps mettant l’accent sur le contrôle, la force et la technique."
+  skill:
+    name: "Compétence"
+    description: "Travail technique sur des mouvements complexes ou précis comme les double unders ou le handstand."
+  plyometrics:
+    name: "Plyométrie"
+    description: "Exercices explosifs basés sur les sauts pour développer la puissance et la vitesse."
+  mobility:
+    name: "Mobilité"
+    description: "Exercices pour améliorer l’amplitude articulaire et la souplesse fonctionnelle."
+  core:
+    name: "Gainage"
+    description: "Renforcement de la ceinture abdominale et du gainage."
+  lower_body:
+    name: "Bas du corps"
+    description: "Entraînement ciblant les jambes, les fessiers et les mollets."
+  upper_body:
+    name: "Haut du corps"
+    description: "Exercices pour les bras, les épaules, la poitrine et le dos."
+  full_body:
+    name: "Corps entier"
+    description: "Mouvements polyarticulaires sollicitant l’ensemble du corps."
+  accessory:
+    name: "Accessoires"
+    description: "Travail complémentaire ciblé pour corriger des faiblesses ou améliorer la stabilité."
+  strongman:
+    name: "Strongman"
+    description: "Exercices fonctionnels lourds inspirés des compétitions Strongman."
+  cool_down_recovery:
+    name: "Retour au calme / Récupération"
+    description: "Séance de retour au calme pour favoriser la récupération et diminuer les tensions musculaires."

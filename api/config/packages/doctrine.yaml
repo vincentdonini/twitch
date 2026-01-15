@@ -16,12 +16,66 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
         mappings:
-            App:
-                type: attribute
+            DomainBenchmark:
                 is_bundle: false
-                dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'App\Entity'
-                alias: App
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Benchmark/Entity'
+                prefix: 'App\Domain\Benchmark\Entity'
+                alias: DomainBenchmark
+            DomainBox:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Box/Entity'
+                prefix: 'App\Domain\Box\Entity'
+                alias: DomainBox
+            DomainContent:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Content/Entity'
+                prefix: 'App\Domain\Content\Entity'
+                alias: DomainContent
+            DomainEquipment:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Equipment/Entity'
+                prefix: 'App\Domain\Equipment\Entity'
+                alias: DomainEquipment
+            DomainExercise:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Exercise/Entity'
+                prefix: 'App\Domain\Exercise\Entity'
+                alias: DomainExercise
+            DomainMuscle:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Muscle/Entity'
+                prefix: 'App\Domain\Muscle\Entity'
+                alias: DomainMuscle
+            DomainRefreshToken:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/RefreshToken/Entity'
+                prefix: 'App\Domain\RefreshToken\Entity'
+                alias: RefreshToken
+            DomainSecurity:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Security/Entity'
+                prefix: 'App\Domain\Security\Entity'
+                alias: DomainSecurity
+            DomainUser:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/User/Entity'
+                prefix: 'App\Domain\User\Entity'
+                alias: DomainUser
+            DomainWod:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Wod/Entity'
+                prefix: 'App\Domain\Wod\Entity'
+                alias: DomainWod
 
 when@test:
     doctrine:
