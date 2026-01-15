@@ -67,7 +67,7 @@ db-schema-diff:
     docker compose exec api bash -c 'php bin/console doctrine:schema:update --dump-sql'
 
 db-schema-update:
-    docker compose exec api bash -c 'php bin/console doctrine:schema:update --force --complete'
+    docker compose exec api bash -c 'php bin/console doctrine:schema:update --force'
 
 
 # ----------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,143 @@
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* VARIABLES */
+/* ------------------------------------------------------------------------------------------------------------------ */
+$color-black   : #000;
+$color-white   : #fff;
+$color-primary : #fd3737;
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* IMPORTS */
+/* ------------------------------------------------------------------------------------------------------------------ */
+@import "tailwindcss";
+@import './styles/fonts';
+@import './styles/alertBox.scss';
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* CSS */
+/* ------------------------------------------------------------------------------------------------------------------ */
+html,
+body {
+	font-family : 'gotham_book', sans-serif !important;
+	font-size   : 12px !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+#overlay {
+	overflow   : hidden;
+	position   : relative;
+	margin     : 0;
+	padding    : 0;
+	z-index    : 999;
+
+	// JUST TO HAVE BEAUTIFUL VIEW
+	width      : 1920px;
+	height     : 1080px;
+	background : url("/background.jpg") no-repeat;
+}
+
+
+h1 {
+	font-family : 'gotham_ultraItalic', sans-serif !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+h2 {
+	font-family : 'gotham_ultraItalic', sans-serif !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+h3 {
+	font-family : 'gotham_ultraItalic', sans-serif !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+h4 {
+	font-family : 'gotham_ultraItalic', sans-serif !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+h5 {
+	font-family : 'gotham_ultraItalic', sans-serif !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+h6 {
+	font-family : 'gotham_ultraItalic', sans-serif !important;
+	margin      : 0;
+	padding     : 0;
+}
+
+p {
+	font-family : 'gotham_book', sans-serif !important;
+}
+
+.primary-color {
+	color : $color-primary;
+}
+
+.ellipsis {
+	white-space   : nowrap;
+	overflow      : hidden;
+	text-overflow : ellipsis;
+	width         : inherit;
+}
+
+.animated-text {
+	color          : #fff;
+	position       : relative;
+	display        : inline-block;
+	text-transform : uppercase;
+	padding-right  : 5px;
+	font-size      : 35px !important;
+	font-weight    : bold !important;
+}
+
+.fade-in {
+	animation : fadeInUp 0.5s forwards;
+}
+
+.fade-out {
+	animation : fadeOutDown 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity   : 0;
+		transform : translateY(100%);
+	}
+	to {
+		opacity   : 1;
+		transform : translateY(0);
+	}
+}
+
+@keyframes fadeOutDown {
+	from {
+		opacity   : 1;
+		transform : translateY(0);
+	}
+	to {
+		opacity   : 0;
+		transform : translateY(100%);
+	}
+}
+
+.timer-completed {
+	font-family : 'gotham_ultraItalic', sans-serif !important;
+	font-size   : 100px;
+	color       : $color-primary;
+}
+
+.countdown-timer {
+	font-family : 'gotham_ultraItalic', sans-serif !important;
+	display     : flex;
+	font-size   : 100px;
+	gap         : 5px;
+	color       : $color-primary;
+}

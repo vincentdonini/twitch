@@ -1,0 +1,182 @@
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* HEADING PRO ULTRA COMP */
+/* ------------------------------------------------------------------------------------------------------------------ */
+@font-face {
+	font-family : 'headingpro_extraBoldItalic';
+	src         : url('headingproultracomp/headingproultracomp-extraBoldItalic.woff2') format('woff2'),
+	url('headingproultracomp/headingproultracomp-extraBoldItalic.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.heading-pro-extra-bold-italic {
+	font-family : 'headingPro_extraBoldItalic', sans-serif !important;
+}
+
+@font-face {
+	font-family : 'headingPro_regular';
+	src         : url('headingproultracomp/headingproultracomp-regular.woff2') format('woff2'),
+	url('headingproultracomp/headingproultracomp-regular.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.heading-pro-regular {
+	font-family : 'headingPro_regular', sans-serif !important;
+}
+
+@font-face {
+	font-family : 'headingPro_italic';
+	src         : url('headingproultracomp/headingproultracomp-italic.woff2') format('woff2'),
+	url('headingproultracomp/headingproultracomp-italic.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.heading-pro-italic {
+	font-family : 'headingPro_italic', sans-serif !important;
+}
+
+@font-face {
+	font-family : 'headingPro_thin';
+	src         : url('headingproultracomp/headingproultracomp-thin.woff2') format('woff2'),
+	url('headingproultracomp/headingproultracomp-thin.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.heading-pro-thin {
+	font-family : 'headingPro_thin', sans-serif !important;
+}
+
+@font-face {
+	font-family : 'headingPro_thinItalic';
+	src         : url('headingproultracomp/headingproultracomp-thinItalic.woff2') format('woff2'),
+	url('headingproultracomp/headingproultracomp-thinItalic.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.heading-pro-thin-italic {
+	font-family : 'headingPro_thinItalic', sans-serif !important;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* GOTHAM */
+/* ------------------------------------------------------------------------------------------------------------------ */
+@font-face {
+	font-family : 'gotham_black';
+	src         : url('gotham/gotham-black.woff2') format('woff2'),
+	url('gotham/gotham-black.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.gotham-black {
+	font-family : 'gotham_black', sans-serif !important;
+}
+
+@font-face {
+	font-family : 'gotham_bold';
+	src         : url('gotham/gotham-bold.woff2') format('woff2'),
+	url('gotham/gotham-bold.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.gotham-bold {
+	font-family : 'gotham_bold', sans-serif !important;;
+}
+
+@font-face {
+	font-family : 'gotham_boldItalic';
+	src         : url('gotham/gotham-boldItalic.woff2') format('woff2'),
+	url('gotham/gotham-boldItalic.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.gotham-bold-italic {
+	font-family : 'gotham_boldItalic', sans-serif !important;;
+}
+
+@font-face {
+	font-family : 'gotham_book';
+	src         : url('gotham/gotham-book.woff2') format('woff2'),
+	url('gotham/gotham-book.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.gotham-book {
+	font-family : 'gotham_book', sans-serif !important;;
+}
+
+@font-face {
+	font-family : 'gotham_bookItalic';
+	src         : url('gotham/gotham-bookItalic.woff2') format('woff2'),
+	url('gotham/gotham-bookItalic.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.gotham-book-italic {
+	font-family : 'gotham_bookItalic', sans-serif !important;;
+}
+
+@font-face {
+	font-family : 'gotham_light';
+	src         : url('gotham/gotham-light.woff2') format('woff2'),
+	url('gotham/gotham-light.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.gotham-light {
+	font-family : 'gotham_light', sans-serif !important;;
+}
+
+@font-face {
+	font-family : 'gotham_lightItalic';
+	src         : url('gotham/gotham-lightItalic.woff2') format('woff2'),
+	url('gotham/gotham-lightItalic.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.gotham-light-italic {
+	font-family : 'gotham_lightItalic', sans-serif !important;;
+}
+
+@font-face {
+	font-family : 'gotham_medium';
+	src         : url('gotham/gotham-medium.woff2') format('woff2'),
+	url('gotham/gotham-medium.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.gotham-medium {
+	font-family : 'gotham_medium', sans-serif !important;;
+}
+
+@font-face {
+	font-family : 'gotham_thin';
+	src         : url('gotham/gotham-thin.woff2') format('woff2'),
+	url('gotham/gotham-thin.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.gotham-medium-thin{
+	font-family : 'gotham_thin', sans-serif !important;;
+}
+
+@font-face {
+	font-family : 'gotham_thinItalic';
+	src         : url('gotham/gotham-thinItalic.woff2') format('woff2'),
+	url('gotham/gotham-thinItalic.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.gotham-thin-italic {
+	font-family : 'gotham_thinItalic', sans-serif !important;;
+}
+
+@font-face {
+	font-family : 'gotham_ultraItalic';
+	src         : url('gotham/gotham-ultraItalic.woff2') format('woff2'),
+	url('gotham/gotham-ultraItalic.woff') format('woff');
+	font-weight : normal;
+	font-style  : normal;
+}
+.gotham-ultra-italic {
+	font-family : 'gotham_ultraItalic', sans-serif !important;;
+}
