@@ -90,6 +90,7 @@ class ExerciseFixtures extends Fixture implements DependentFixtureInterface
         }
 
         $manager->flush();
+        $manager->clear();
     }
 
     public function getDependencies(): array

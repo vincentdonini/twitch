@@ -5,7 +5,7 @@
     "firstName": "Public",
     "lastName": "API",
     "roles": [
-      "ROLE_USER"
+      "ROLE_ATHLETE"
     ]
   },
   {
@@ -32,7 +32,7 @@
     "firstName": "John",
     "lastName": "DOE",
     "roles": [
-      "ROLE_USER"
+      "ROLE_ATHLETE"
     ]
   },
   {
@@ -41,7 +41,7 @@
     "firstName": "Jane",
     "lastName": "DO",
     "roles": [
-      "ROLE_USER"
+      "ROLE_ATHLETE"
     ]
   }
 ]

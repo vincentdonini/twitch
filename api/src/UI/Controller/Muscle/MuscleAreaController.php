@@ -117,7 +117,8 @@ final readonly class MuscleAreaController
         $filters = RequestFilters::extractValues(
             request         : $request,
             fieldMapping    : MuscleAreaFilterMapping::FIELD_MAP,
-            allowedOperators: MuscleAreaFilterRules::ALLOWED_OPERATORS
+            allowedOperators: MuscleAreaFilterRules::ALLOWED_OPERATORS,
+            allowedFields   : MuscleAreaFilterRules::PUBLIC_FIELDS,
         );
 
         $sorts = RequestSort::extractValues(
@@ -401,7 +402,7 @@ final readonly class MuscleAreaController
         path        : '/{muscleAreaId}/contents',
         name        : 'contents_upsert_bulk',
         requirements: [
-            'muscleAreaId' => '\d+'
+            'muscleAreaId' => '\d+',
         ],
         methods     : ['PUT']
     )]

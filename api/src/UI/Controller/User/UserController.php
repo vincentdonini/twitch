@@ -31,7 +31,6 @@ final class UserController extends AbstractController
     public function __construct(
         private readonly UserService $userService,
     ) {
-
     }
 
     #[Route(
@@ -116,7 +115,7 @@ final class UserController extends AbstractController
         path        : '/{userId}',
         name        : 'detail',
         requirements: [
-            'userId' => '\d+',
+            'userId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]

@@ -4,6 +4,7 @@ namespace App\Application\User\DTO;
 
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 
 class UserDTO
 {
@@ -13,8 +14,9 @@ class UserDTO
         FrontGroupsEnum::WOD_SCORE_LIST, FrontGroupsEnum::WOD_SCORE_DETAIL,
         FrontGroupsEnum::WOD_LEADERBOARD,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
+        FrontGroupsEnum::ATHLETE_LIST,
     ])]
-    public int $id;
+    public Uuid $id;
 
     #[Groups([
         FrontGroupsEnum::USER_ME,
@@ -28,6 +30,7 @@ class UserDTO
         FrontGroupsEnum::WOD_SCORE_LIST, FrontGroupsEnum::WOD_SCORE_DETAIL,
         FrontGroupsEnum::WOD_LEADERBOARD,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
+        FrontGroupsEnum::ATHLETE_LIST,
     ])]
     public string $firstName;
 
@@ -37,11 +40,13 @@ class UserDTO
         FrontGroupsEnum::WOD_SCORE_LIST, FrontGroupsEnum::WOD_SCORE_DETAIL,
         FrontGroupsEnum::WOD_LEADERBOARD,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
+        FrontGroupsEnum::ATHLETE_LIST,
     ])]
     public string $lastName;
 
     #[Groups([
         FrontGroupsEnum::USER_ME,
+        FrontGroupsEnum::ATHLETE_LIST,
     ])]
     public array $roles;
 
@@ -51,7 +56,7 @@ class UserDTO
     public array $permissions;
 
     public function __construct(
-        int    $id,
+        Uuid   $id,
         string $email,
         string $firstName,
         string $lastName,

@@ -113,7 +113,8 @@ final readonly class MuscleController
         $filters = RequestFilters::extractValues(
             request         : $request,
             fieldMapping    : MuscleFilterMapping::FIELD_MAP,
-            allowedOperators: MuscleFilterRules::ALLOWED_OPERATORS
+            allowedOperators: MuscleFilterRules::ALLOWED_OPERATORS,
+            allowedFields   : MuscleFilterRules::PUBLIC_FIELDS,
         );
 
         $sorts = RequestSort::extractValues(

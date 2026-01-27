@@ -2,6 +2,8 @@
 
 namespace App\Domain\User\Entity;
 
+use App\Domain\Organization\Entity\Company;
+use App\Domain\Organization\Entity\Place;
 use App\Domain\Security\Entity\Role;
 use App\Infrastructure\Doctrine\Repository\User\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -10,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
 use OpenApi\Attributes as OA;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
@@ -18,48 +20,64 @@ use Symfony\Component\Validator\Constraints as Assert;
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(type: 'uuid', unique: true)]
     #[OA\Property(description: "User ID")]
-    #[Groups(['user:list', 'user:detail'])]
-    private ?int $id = null;
+    private Uuid $id;
 
     #[ORM\Column(length: 180, unique: true)]
     #[Assert\NotBlank]
     #[Assert\Email]
     #[OA\Property(description: "User email", example: "user@example.com")]
-    #[Groups(['user:list', 'user:detail'])]
-    private ?string $email = null;
+    private string $email;
 
     #[ORM\Column]
-    #[OA\Property(description: "User password.", example: "Azerty123!")]
+    #[OA\Property(description: "User password.")]
     private ?string $password = null;
 
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank]
     #[OA\Property(description: "User firstname", example: "John")]
-    #[Groups(['user:list', 'user:detail'])]
-    private ?string $firstName = null;
+    private string $firstName;
 
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank]
     #[OA\Property(description: "User lastname", example: "DOE")]
-    #[Groups(['user:list', 'user:detail'])]
-    private ?string $lastName = null;
+    private string $lastName;
+
+    #[ORM\ManyToMany(targetEntity: Company::class, inversedBy: 'owners')]
+    #[ORM\JoinTable(name: 'user_has_company')]
+    private Collection $companies;
+
+    #[ORM\ManyToMany(targetEntity: Place::class, inversedBy: 'users')]
+    #[ORM\JoinTable(name: 'user_has_place')]
+    private Collection $places;
 
     #[ORM\ManyToMany(targetEntity: Role::class)]
     #[ORM\JoinTable(name: 'user_role')]
     private Collection $roles;
 
-    public function __construct()
-    {
-        $this->roles = new ArrayCollection();
+    /**
+     * Constructeur avec toutes les propriétés obligatoires pour créer un User
+     */
+    public function __construct(
+        string $email,
+        string $firstName,
+        string $lastName
+    ) {
+        $this->id        = Uuid::v7();
+        $this->email     = $email;
+        $this->firstName = $firstName;
+        $this->lastName  = $lastName;
+
+        $this->roles     = new ArrayCollection();
+        $this->companies = new ArrayCollection();
+        $this->places    = new ArrayCollection();
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
-    public function getId(): ?int
+    public function getId(): ?Uuid
     {
         return $this->id;
     }
@@ -97,6 +115,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
+        return $this;
+    }
+
+    public function eraseCredentials(): void
+    {
+        // Méthode requise par UserInterface
+    }
+
+    public function getUserIdentifier(): string
+    {
+        return $this->email;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    // Roles
+    // -----------------------------------------------------------------------------------------------------------------
     public function addRole(Role $role): self
     {
         if (!$this->roles->contains($role)) {
@@ -126,16 +168,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
+    // -----------------------------------------------------------------------------------------------------------------
+    // Permissions
+    // -----------------------------------------------------------------------------------------------------------------
     public function getPermissions(): array
     {
         $permissions = [];
-
         foreach ($this->roles as $role) {
             foreach ($role->getPermissions() as $permission) {
                 $permissions[] = $permission->getCode();
             }
         }
-
         return array_unique($permissions);
     }
 
@@ -144,24 +187,53 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return in_array($permissionCode, $this->getPermissions(), true);
     }
 
-    public function getPassword(): ?string
+    // -----------------------------------------------------------------------------------------------------------------
+    // Companies
+    // -----------------------------------------------------------------------------------------------------------------
+    public function getCompanies(): Collection
     {
-        return $this->password;
+        return $this->companies;
     }
 
-    public function setPassword(string $password): self
+    public function addCompany(Company $company): self
     {
-        $this->password = $password;
+        if (!$this->companies->contains($company)) {
+            $this->companies[] = $company;
+            $company->addOwner($this);
+        }
         return $this;
     }
 
-    public function eraseCredentials(): void
+    public function removeCompany(Company $company): self
     {
-        // Méthode requise par UserInterface, mais non utilisée ici.
+        if ($this->companies->removeElement($company)) {
+            $company->removeOwner($this);
+        }
+        return $this;
     }
 
-    public function getUserIdentifier(): string
+    // -----------------------------------------------------------------------------------------------------------------
+    // Places
+    // -----------------------------------------------------------------------------------------------------------------
+    public function getPlaces(): Collection
     {
-        return $this->email;
+        return $this->places;
+    }
+
+    public function addPlace(Place $place): self
+    {
+        if (!$this->places->contains($place)) {
+            $this->places[] = $place;
+            $place->addUser($this);
+        }
+        return $this;
+    }
+
+    public function removePlace(Place $place): self
+    {
+        if ($this->places->removeElement($place)) {
+            $place->removeUser($this);
+        }
+        return $this;
     }
 }

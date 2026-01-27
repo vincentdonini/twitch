@@ -1,0 +1,22 @@
+[
+  {
+    "name": "France",
+    "default_locale": "fr-FR"
+  },
+  {
+    "name": "Germany",
+    "default_locale": "de-DE"
+  },
+  {
+    "name": "Italy",
+    "default_locale": "it-IT"
+  },
+  {
+    "name": "Spain",
+    "default_locale": "es-ES"
+  },
+  {
+    "name": "United Kingdom",
+    "default_locale": "en-GB"
+  }
+]

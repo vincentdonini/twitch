@@ -8,6 +8,7 @@ use App\Infrastructure\Filters\FilterValue;
 use App\Shared\Api\Doctrine\DoctrineFieldResolver;
 use BackedEnum;
 use Doctrine\ORM\QueryBuilder;
+use Symfony\Component\Uid\Uuid;
 
 final class DoctrineFilterApplier
 {
@@ -50,46 +51,48 @@ final class DoctrineFilterApplier
 
         $paramBase = str_replace('.', '_', $filter->field) . '_' . $operatorValue;
 
+        $isUuid = $this->isUuidField($qb, $dqlField);
+
         match ($operator) {
             Operator::EQ       => $qb
-                ->andWhere("LOWER($dqlField) = :$paramBase")
-                ->setParameter($paramBase, strtolower($value)),
+                ->andWhere($isUuid ? "$dqlField = :$paramBase" : "LOWER($dqlField) = :$paramBase")
+                ->setParameter($paramBase, $isUuid ? Uuid::fromString($value)->toBinary() : strtolower($value)),
 
             Operator::NEQ      => $qb
-                ->andWhere("LOWER($dqlField) != :$paramBase")
-                ->setParameter($paramBase, strtolower($value)),
+                ->andWhere($isUuid ? "$dqlField != :$paramBase" : "LOWER($dqlField) != :$paramBase")
+                ->setParameter($paramBase, $isUuid ? Uuid::fromString($value)->toBinary() : strtolower($value)),
 
-            Operator::LIKE     => $qb
+            Operator::LIKE     => !$isUuid ? $qb
                 ->andWhere("LOWER($dqlField) LIKE :$paramBase")
-                ->setParameter($paramBase, '%' . strtolower($value) . '%'),
+                ->setParameter($paramBase, '%' . strtolower($value) . '%') : null,
 
-            Operator::NOT_LIKE => $qb
+            Operator::NOT_LIKE => !$isUuid ? $qb
                 ->andWhere("LOWER($dqlField) NOT LIKE :$paramBase")
-                ->setParameter($paramBase, '%' . strtolower($value) . '%'),
+                ->setParameter($paramBase, '%' . strtolower($value) . '%') : null,
 
-            Operator::LT       => $qb
+            Operator::LT       => !$isUuid ? $qb
                 ->andWhere("$dqlField < :$paramBase")
-                ->setParameter($paramBase, $value),
+                ->setParameter($paramBase, $value) : null,
 
-            Operator::LTE      => $qb
+            Operator::LTE      => !$isUuid ? $qb
                 ->andWhere("$dqlField <= :$paramBase")
-                ->setParameter($paramBase, $value),
+                ->setParameter($paramBase, $value) : null,
 
-            Operator::GT       => $qb
+            Operator::GT       => !$isUuid ? $qb
                 ->andWhere("$dqlField > :$paramBase")
-                ->setParameter($paramBase, $value),
+                ->setParameter($paramBase, $value) : null,
 
-            Operator::GTE      => $qb
+            Operator::GTE      => !$isUuid ? $qb
                 ->andWhere("$dqlField >= :$paramBase")
-                ->setParameter($paramBase, $value),
+                ->setParameter($paramBase, $value) : null,
 
-            Operator::IN       => $qb
+            Operator::IN       => !$isUuid ? $qb
                 ->andWhere("$dqlField IN (:$paramBase)")
-                ->setParameter($paramBase, (array)$value),
+                ->setParameter($paramBase, (array)$value) : null,
 
-            Operator::NOT_IN   => $qb
+            Operator::NOT_IN   => !$isUuid ? $qb
                 ->andWhere("$dqlField NOT IN (:$paramBase)")
-                ->setParameter($paramBase, (array)$value),
+                ->setParameter($paramBase, (array)$value) : null,
 
             Operator::BETWEEN  => $this->applyBetween(
                 $qb,
@@ -100,6 +103,22 @@ final class DoctrineFilterApplier
 
             default            => null
         };
+    }
+
+    private function isUuidField(QueryBuilder $qb, string $field): bool
+    {
+        $em   = $qb->getEntityManager();
+        $root = $qb->getRootEntities()[0];
+        $meta = $em->getClassMetadata($root);
+
+        $parts     = explode('.', $field);
+        $fieldName = end($parts);
+
+        if (!$meta->hasField($fieldName)) {
+            return false;
+        }
+
+        return in_array($meta->getTypeOfField($fieldName), ['uuid', 'uuid_binary', 'guid'], true);
     }
 
     private function applyBetween(

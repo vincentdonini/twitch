@@ -1,0 +1,953 @@
+[
+  {
+    "name": "CrossFit Sequani",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "16 Rue Lucie Aubrac",
+    "postalCode": "25800",
+    "city": "Valdahon",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Sebastien Vienot",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33613142895",
+    "email": "sebvienot@orange.fr",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Sequani",
+        "legalName": null,
+        "address": "16 Rue Lucie Aubrac",
+        "postalCode": "25800",
+        "city": "Valdahon",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33613142895",
+        "email": "sebvienot@orange.fr",
+        "website": "https://crossfit-sequani.fr/"
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "CrossFit HEKA - Croix-Rousse",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "31 Rue de Cuire",
+    "postalCode": "69004",
+    "city": "Lyon",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Julien Bonnardel",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33411815937",
+    "email": "contact.lyon4@crossfit-heka.fr",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit HEKA - Croix-Rousse",
+        "legalName": null,
+        "address": "31 Rue de Cuire",
+        "postalCode": "69004",
+        "city": "Lyon",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33411815937",
+        "email": "contact.lyon4@crossfit-heka.fr",
+        "website": "https://crossfit-heka.fr/box-lyon-croix-rousse"
+      }
+    ],
+    "staff": [
+      {
+        "name": "Simon Poiree",
+        "role": "COACH"
+      }
+    ]
+  },
+  {
+    "name": "CrossFit Agde",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "9 Rue du père Jean Baptiste Balles",
+    "postalCode": "34300",
+    "city": "Agde",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Renaud Antherieu",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33769117532",
+    "email": "renaudbeatone@gmail.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Agde",
+        "legalName": null,
+        "address": "9 Rue du père Jean Baptiste Balles",
+        "postalCode": "34300",
+        "city": "Agde",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33769117532",
+        "email": "renaudbeatone@gmail.com",
+        "website": null
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "CrossFit L’archipel",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "24 Rue Des Entrepreneurs",
+    "postalCode": "34300",
+    "city": "Agde",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Marion Douzal",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 6 45 09 85 71",
+    "email": "crossfitarchipel@gmail.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit L’archipel",
+        "legalName": null,
+        "address": "24 Rue Des Entrepreneurs",
+        "postalCode": "34300",
+        "city": "Agde",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 6 45 09 85 71",
+        "email": "crossfitarchipel@gmail.com",
+        "website": "https://crossfit-archipel.fr/"
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "1789 CrossFit",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "380 Rue Claude Nicolas Ledoux",
+    "postalCode": "13100",
+    "city": "Aix-en-Provence",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Nicolas Jacques",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33442227762",
+    "email": "1789crossfit@frenchrevo.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "1789 CrossFit",
+        "legalName": null,
+        "address": "380 Rue Claude Nicolas Ledoux",
+        "postalCode": "13100",
+        "city": "Aix-en-Provence",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33442227762",
+        "email": "1789crossfit@frenchrevo.com",
+        "website": "https://www.1789crossfit.com"
+      }
+    ],
+    "staff": [
+      {
+        "name": "Pacôme Colas",
+        "role": "COACH"
+      },
+      {
+        "name": "Mickael Guillot",
+        "role": "COACH"
+      }
+    ]
+  },
+  {
+    "name": "CrossFit Aix en Provence",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "505 Rue Victor Baltard",
+    "postalCode": "13090",
+    "city": "Aix-en-Provence",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Thierry Floriant",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 6 73 78 68 49",
+    "email": "crossfitaixenprovence@gmail.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Aix en Provence",
+        "legalName": null,
+        "address": "505 Rue Victor Baltard",
+        "postalCode": "13090",
+        "city": "Aix-en-Provence",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 6 73 78 68 49",
+        "email": "crossfitaixenprovence@gmail.com",
+        "website": null
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "CrossFit Gaius",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "10 Avenue Maréchal de Lattre de Tassigny",
+    "postalCode": "13100",
+    "city": "Aix-en-Provence",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Romain Ouharzoune",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 7 62 86 98 13",
+    "email": "romain.ouharzoune@gmail.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Gaius",
+        "legalName": null,
+        "address": "10 Avenue Maréchal de Lattre de Tassigny",
+        "postalCode": "13100",
+        "city": "Aix-en-Provence",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 7 62 86 98 13",
+        "email": "romain.ouharzoune@gmail.com",
+        "website": null
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "CrossFit DAHU",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "154 Avenue de Saint-Simond",
+    "postalCode": "73100",
+    "city": "Aix-les-Bains",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Nicolas Garavel",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 6 79 42 41 62",
+    "email": "nicolas.garavel@gmail.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit DAHU",
+        "legalName": null,
+        "address": "154 Avenue de Saint-Simond",
+        "postalCode": "73100",
+        "city": "Aix-les-Bains",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 6 79 42 41 62",
+        "email": "nicolas.garavel@gmail.com",
+        "website": null
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "CrossFit Atom ALB",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "490 Boulevard Lepic",
+    "postalCode": "73100",
+    "city": "Aix-les-Bains",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Julien Silliani",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 7 81 05 78 15",
+    "email": "julien_sillani@msn.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Atom ALB",
+        "legalName": null,
+        "address": "490 Boulevard Lepic",
+        "postalCode": "73100",
+        "city": "Aix-les-Bains",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 7 81 05 78 15",
+        "email": "julien_sillani@msn.com",
+        "website": null
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "CrossFit Asianum",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "8 Rue Elisa Deroche",
+    "postalCode": "85190",
+    "city": "Aizenay",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Romain Sauzeau",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 6 69 58 83 30",
+    "email": "cfasianum@gmail.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Asianum",
+        "legalName": null,
+        "address": "8 Rue Elisa Deroche",
+        "postalCode": "85190",
+        "city": "Aizenay",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 6 69 58 83 30",
+        "email": "cfasianum@gmail.com",
+        "website": null
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "CrossFit Ajaccio",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "Route du Ricanto plage Tahiti",
+    "postalCode": "20090",
+    "city": "Ajaccio",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Laurent Maggia",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 6 69 51 61 40",
+    "email": "laurent_maggia@hotmail.fr",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Ajaccio",
+        "legalName": null,
+        "address": "Route du Ricanto plage Tahiti",
+        "postalCode": "20090",
+        "city": "Ajaccio",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 6 69 51 61 40",
+        "email": "laurent_maggia@hotmail.fr",
+        "website": "http://www.crossfitajaccio.com/"
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "Kalliste CrossFit",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "Route de Mezzavia Chemin du Rannuchietu, lieu-dit Miniatojo",
+    "postalCode": "20090",
+    "city": "Ajaccio",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Marvin Molton",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 6 14 03 82 47",
+    "email": "marvin2a@hotmail.fr",
+    "places": [
+      {
+        "siret": null,
+        "name": "Kalliste CrossFit",
+        "legalName": null,
+        "address": "Route de Mezzavia Chemin du Rannuchietu, lieu-dit Miniatojo",
+        "postalCode": "20090",
+        "city": "Ajaccio",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 6 14 03 82 47",
+        "email": "marvin2a@hotmail.fr",
+        "website": null
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "Irok CrossFit",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "655 Rue Louis Armand",
+    "postalCode": "73200",
+    "city": "Albertville",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Hendrick Pongan",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33620557962",
+    "email": "irok.crossfit@gmail.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "Irok CrossFit",
+        "legalName": null,
+        "address": "655 Rue Louis Armand",
+        "postalCode": "73200",
+        "city": "Albertville",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33620557962",
+        "email": "irok.crossfit@gmail.com",
+        "website": "http://www.irokcrossfit.com/"
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "CrossFit Albertville",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "137 Chemin de la Charrette",
+    "postalCode": "73200",
+    "city": "Albertville",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Ghislain Blesses",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 4 56 10 14 46",
+    "email": "contact@crossfit-albertville.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Albertville",
+        "legalName": null,
+        "address": "137 Chemin de la Charrette",
+        "postalCode": "73200",
+        "city": "Albertville",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 4 56 10 14 46",
+        "email": "contact@crossfit-albertville.com",
+        "website": "http://www.crossfit-albertville.com/"
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "CrossFit Albi",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "24 Route de Castres",
+    "postalCode": "81000",
+    "city": "Albi",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Thomas Baillot",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 6 33 36 45 90",
+    "email": "thomas.crossfitalbi@gmail.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Albi",
+        "legalName": null,
+        "address": "24 Route de Castres",
+        "postalCode": "81000",
+        "city": "Albi",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 6 33 36 45 90",
+        "email": "thomas.crossfitalbi@gmail.com",
+        "website": null
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "Balios CrossFit",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "81 Rue du Gué de Sorre",
+    "postalCode": "61000",
+    "city": "Alençon",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Julien Baron",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 6 42 85 03 83",
+    "email": "jub61@hotmail.fr",
+    "places": [
+      {
+        "siret": null,
+        "name": "Balios CrossFit",
+        "legalName": null,
+        "address": "81 Rue du Gué de Sorre",
+        "postalCode": "61000",
+        "city": "Alençon",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 6 42 85 03 83",
+        "email": "jub61@hotmail.fr",
+        "website": null
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "CrossFit Le Troisieme Endroit",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "1457 Avenue des Maladreries",
+    "postalCode": "30100",
+    "city": "Alès",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Thomas Bouzige",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 6 22 11 49 68",
+    "email": "alesmoving@aol.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Le Troisieme Endroit",
+        "legalName": null,
+        "address": "1457 Avenue des Maladreries",
+        "postalCode": "30100",
+        "city": "Alès",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 6 22 11 49 68",
+        "email": "alesmoving@aol.com",
+        "website": "http://crossfit-letroisiemeendroit.fr/"
+      }
+    ],
+    "staff": [
+      {
+        "name": "Guillaume Bouzige",
+        "role": "COACH"
+      },
+      {
+        "name": "Florent Pertus",
+        "role": "COACH"
+      }
+    ]
+  },
+  {
+    "name": "CrossFit Rapace",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "45 rue des Terres Rouges",
+    "postalCode": "25490",
+    "city": "Allenjoie",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Jean Benalioua",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 6 45 77 64 48",
+    "email": "crossfitrapace@gmail.com",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Rapace",
+        "legalName": null,
+        "address": "45 rue des Terres Rouges",
+        "postalCode": "25490",
+        "city": "Allenjoie",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 6 45 77 64 48",
+        "email": "crossfitrapace@gmail.com",
+        "website": "https://crossfitrapace.fr/"
+      }
+    ],
+    "staff": [
+      {
+        "name": "Oscar Lenfant",
+        "role": "COACH"
+      }
+    ]
+  },
+  {
+    "name": "CrossFit Cordée",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "521 rue du Quarre",
+    "postalCode": "74800",
+    "city": "Amancy",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Yvan Moenne-Loccoz",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33 6 71 01 00 42",
+    "email": "yvan.moenne-loccoz@orange.fr",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Cordée",
+        "legalName": null,
+        "address": "521 rue du Quarre",
+        "postalCode": "74800",
+        "city": "Amancy",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33 6 71 01 00 42",
+        "email": "yvan.moenne-loccoz@orange.fr",
+        "website": "https://crossfitcordee.com/"
+      }
+    ],
+    "staff": [
+      {
+        "name": "Marie Pistre",
+        "role": "COACH"
+      },
+      {
+        "name": "Jeremie Virot",
+        "role": "COACH"
+      },
+      {
+        "name": "Sylvain Charles",
+        "role": "MANAGER"
+      }
+    ]
+  },
+  {
+    "name": "Atom Fit Aix",
+    "legalName": null,
+    "siren": "991051343",
+    "vatNumber": "FR57991051343",
+    "legalForm": "sarl",
+    "activityCode": "9313Z",
+    "address": "490 Boulevard Ludovic Napoleon Lepic",
+    "postalCode": "73100",
+    "city": "Aix-les-Bains",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Julien Sillani",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33450926428",
+    "email": "contact@crossfit-atom.com",
+    "places": [
+      {
+        "siret": "99105134300010",
+        "name": "CrossFit Atom",
+        "legalName": "Atom Fit Aix",
+        "address": "ZA Juge Guerin",
+        "postalCode": "74160",
+        "city": "Aix-les-Bains",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33450926428",
+        "email": "contact@crossfit-atom.com",
+        "website": "https://www.crossfit-atom.com/"
+      }
+    ],
+    "staff": []
+  },
+  {
+    "name": "CrossFit Dole",
+    "legalName": "CFD SPORT",
+    "siren": "948329073",
+    "vatNumber": "FR26948329073",
+    "legalForm": "sas",
+    "activityCode": "9311Z",
+    "address": "24 Chemin de Rougemont",
+    "postalCode": "39100",
+    "city": "Foucherans",
+    "country": "france",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Théo",
+        "role": "OWNER"
+      },
+      {
+        "name": "Linda TONG",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33609710116",
+    "places": [
+      {
+        "siret": "94832907300019",
+        "name": "CrossFit Dole",
+        "legalName": "CFD SPORT - 39100",
+        "address": "24 Chemin de Rougemont",
+        "postalCode": "39100",
+        "city": "Foucherans",
+        "country": "france",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": "2023-01-25",
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33609710116",
+        "email": "contact@crossfitdole.fr",
+        "website": "https://crossfitdole.fr/"
+      }
+    ],
+    "staff": [
+      {
+        "name": "Nino",
+        "role": "COACH"
+      }]
+  }
+]

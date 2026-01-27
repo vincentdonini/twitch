@@ -4,6 +4,13 @@ namespace App\Infrastructure\Serialization;
 
 final class FrontGroupsEnum
 {
+    public const ADMIN = 'front:admin';
+
+    // ATHLETES
+    // -----------------------------------------------------------------------------------------------------------------
+    public const ATHLETE_LIST = 'front:athletes:list';
+
+
     // BENCHMARK
     // -----------------------------------------------------------------------------------------------------------------
     public const BENCHMARK_CREATE = 'front:benchmark:create';
@@ -93,6 +100,22 @@ final class FrontGroupsEnum
     public const MUSCLE_AREA_MANAGE = 'front:muscleArea:manage';
     public const MUSCLE_AREA_LIST   = 'front:muscleArea:list';
     public const MUSCLE_AREA_DETAIL = 'front:muscleArea:detail';
+
+    // ORGANIZATION
+    // -----------------------------------------------------------------------------------------------------------------
+    public const COMPANY_CREATE = 'front:company:create';
+    public const COMPANY_MANAGE = 'front:company:manage';
+    public const COMPANY_LIST_PUBLIC   = 'front:company:list:public';
+    public const COMPANY_LIST_ADMIN   = 'front:company:list:admin';
+    public const COMPANY_DETAIL_PUBLIC = 'front:company:detail:public';
+    public const COMPANY_DETAIL_ADMIN = 'front:company:detail:admin';
+
+    public const PLACE_CREATE       = 'front:place:create';
+    public const PLACE_MANAGE       = 'front:place:manage';
+    public const PLACE_LIST_PUBLIC  = 'front:place:list:public';
+    public const PLACE_LIST_ADMIN   = 'front:place:list:admin';
+    public const PLACE_DETAIL_PUBLIC = 'front:place:detail:public';
+    public const PLACE_DETAIL_ADMIN  = 'front:place:detail:admin';
 
 
     // SECURITY

@@ -289,7 +289,8 @@ final class WodController extends AbstractController
         $filters = RequestFilters::extractValues(
             request         : $request,
             fieldMapping    : WodFilterMapping::FIELD_MAP,
-            allowedOperators: WodFilterRules::ALLOWED_OPERATORS
+            allowedOperators: WodFilterRules::ALLOWED_OPERATORS,
+            allowedFields   : WodFilterRules::PUBLIC_FIELDS,
         );
 
         $sorts = RequestSort::extractValues(
@@ -600,7 +601,8 @@ final class WodController extends AbstractController
         $filters = RequestFilters::extractValues(
             request         : $request,
             fieldMapping    : WodScoreFilterMapping::FIELD_MAP,
-            allowedOperators: WodScoreFilterRules::ALLOWED_OPERATORS
+            allowedOperators: WodScoreFilterRules::ALLOWED_OPERATORS,
+            allowedFields   : WodFilterRules::PUBLIC_FIELDS,
         );
 
         try {

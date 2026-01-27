@@ -1,0 +1,507 @@
+[
+  {
+    "region": "Nouvelle-Aquitaine",
+    "code": "40",
+    "name": "Landes"
+  },
+  {
+    "region": "Occitanie",
+    "code": "09",
+    "name": "Ariège"
+  },
+  {
+    "region": "Grand Est",
+    "code": "10",
+    "name": "Aube"
+  },
+  {
+    "region": "Hauts-de-France",
+    "code": "80",
+    "name": "Somme"
+  },
+  {
+    "region": "Nouvelle-Aquitaine",
+    "code": "79",
+    "name": "Deux-Sèvres"
+  },
+  {
+    "region": "Normandie",
+    "code": "50",
+    "name": "Manche"
+  },
+  {
+    "region": "Corse",
+    "code": "2A",
+    "name": "Corse-du-Sud"
+  },
+  {
+    "region": "Pays de la Loire",
+    "code": "44",
+    "name": "Loire-Atlantique"
+  },
+  {
+    "region": "Bourgogne-Franche-Comté",
+    "code": "70",
+    "name": "Haute-Saône"
+  },
+  {
+    "region": "Nouvelle-Aquitaine",
+    "code": "87",
+    "name": "Haute-Vienne"
+  },
+  {
+    "region": "Normandie",
+    "code": "76",
+    "name": "Seine-Maritime"
+  },
+  {
+    "region": "Centre-Val de Loire",
+    "code": "45",
+    "name": "Loiret"
+  },
+  {
+    "region": "Nouvelle-Aquitaine",
+    "code": "19",
+    "name": "Corrèze"
+  },
+  {
+    "region": "Occitanie",
+    "code": "65",
+    "name": "Hautes-Pyrénées"
+  },
+  {
+    "region": "Occitanie",
+    "code": "46",
+    "name": "Lot"
+  },
+  {
+    "region": "Nouvelle-Aquitaine",
+    "code": "33",
+    "name": "Gironde"
+  },
+  {
+    "region": "Centre-Val de Loire",
+    "code": "36",
+    "name": "Indre"
+  },
+  {
+    "region": "Grand Est",
+    "code": "52",
+    "name": "Haute-Marne"
+  },
+  {
+    "region": "Normandie",
+    "code": "14",
+    "name": "Calvados"
+  },
+  {
+    "region": "Grand Est",
+    "code": "88",
+    "name": "Vosges"
+  },
+  {
+    "region": "Bretagne",
+    "code": "35",
+    "name": "Ille-et-Vilaine"
+  },
+  {
+    "region": "Occitanie",
+    "code": "32",
+    "name": "Gers"
+  },
+  {
+    "region": "Grand Est",
+    "code": "67",
+    "name": "Bas-Rhin"
+  },
+  {
+    "region": "Occitanie",
+    "code": "11",
+    "name": "Aude"
+  },
+  {
+    "region": "Nouvelle-Aquitaine",
+    "code": "47",
+    "name": "Lot-et-Garonne"
+  },
+  {
+    "region": "Auvergne-Rhône-Alpes",
+    "code": "07",
+    "name": "Ardèche"
+  },
+  {
+    "region": "Pays de la Loire",
+    "code": "72",
+    "name": "Sarthe"
+  },
+  {
+    "region": "Auvergne-Rhône-Alpes",
+    "code": "38",
+    "name": "Isère"
+  },
+  {
+    "region": "Bourgogne-Franche-Comté",
+    "code": "21",
+    "name": "Côte-d'Or"
+  },
+  {
+    "region": "Occitanie",
+    "code": "31",
+    "name": "Haute-Garonne"
+  },
+  {
+    "region": "Île-de-France",
+    "code": "91",
+    "name": "Essonne"
+  },
+  {
+    "region": "Guadeloupe",
+    "code": "971",
+    "name": "Guadeloupe"
+  },
+  {
+    "region": "Mayotte",
+    "code": "976",
+    "name": "Mayotte"
+  },
+  {
+    "region": "Hauts-de-France",
+    "code": "60",
+    "name": "Oise"
+  },
+  {
+    "region": "Nouvelle-Aquitaine",
+    "code": "24",
+    "name": "Dordogne"
+  },
+  {
+    "region": "Occitanie",
+    "code": "81",
+    "name": "Tarn"
+  },
+  {
+    "region": "Occitanie",
+    "code": "66",
+    "name": "Pyrénées-Orientales"
+  },
+  {
+    "region": "Grand Est",
+    "code": "51",
+    "name": "Marne"
+  },
+  {
+    "region": "Auvergne-Rhône-Alpes",
+    "code": "26",
+    "name": "Drôme"
+  },
+  {
+    "region": "Provence-Alpes-Côte d'Azur",
+    "code": "84",
+    "name": "Vaucluse"
+  },
+  {
+    "region": "Occitanie",
+    "code": "82",
+    "name": "Tarn-et-Garonne"
+  },
+  {
+    "region": "Pays de la Loire",
+    "code": "85",
+    "name": "Vendée"
+  },
+  {
+    "region": "Bourgogne-Franche-Comté",
+    "code": "25",
+    "name": "Doubs"
+  },
+  {
+    "region": "Île-de-France",
+    "code": "95",
+    "name": "Val-d'Oise"
+  },
+  {
+    "region": "Centre-Val de Loire",
+    "code": "41",
+    "name": "Loir-et-Cher"
+  },
+  {
+    "region": "Guyane",
+    "code": "973",
+    "name": "Guyane"
+  },
+  {
+    "region": "Nouvelle-Aquitaine",
+    "code": "16",
+    "name": "Charente"
+  },
+  {
+    "region": "Hauts-de-France",
+    "code": "62",
+    "name": "Pas-de-Calais"
+  },
+  {
+    "region": "Auvergne-Rhône-Alpes",
+    "code": "63",
+    "name": "Puy-de-Dôme"
+  },
+  {
+    "region": "Île-de-France",
+    "code": "92",
+    "name": "Hauts-de-Seine"
+  },
+  {
+    "region": "Auvergne-Rhône-Alpes",
+    "code": "03",
+    "name": "Allier"
+  },
+  {
+    "region": "Centre-Val de Loire",
+    "code": "18",
+    "name": "Cher"
+  },
+  {
+    "region": "Grand Est",
+    "code": "08",
+    "name": "Ardennes"
+  },
+  {
+    "region": "Grand Est",
+    "code": "57",
+    "name": "Moselle"
+  },
+  {
+    "region": "La Réunion",
+    "code": "974",
+    "name": "La Réunion"
+  },
+  {
+    "region": "Provence-Alpes-Côte d'Azur",
+    "code": "83",
+    "name": "Var"
+  },
+  {
+    "region": "Grand Est",
+    "code": "55",
+    "name": "Meuse"
+  },
+  {
+    "region": "Bourgogne-Franche-Comté",
+    "code": "90",
+    "name": "Territoire de Belfort"
+  },
+  {
+    "region": "Provence-Alpes-Côte d'Azur",
+    "code": "05",
+    "name": "Hautes-Alpes"
+  },
+  {
+    "region": "Provence-Alpes-Côte d'Azur",
+    "code": "13",
+    "name": "Bouches-du-Rhône"
+  },
+  {
+    "region": "Pays de la Loire",
+    "code": "53",
+    "name": "Mayenne"
+  },
+  {
+    "region": "Nouvelle-Aquitaine",
+    "code": "23",
+    "name": "Creuse"
+  },
+  {
+    "region": "Auvergne-Rhône-Alpes",
+    "code": "42",
+    "name": "Loire"
+  },
+  {
+    "region": "Bourgogne-Franche-Comté",
+    "code": "39",
+    "name": "Jura"
+  },
+  {
+    "region": "Corse",
+    "code": "2B",
+    "name": "Haute-Corse"
+  },
+  {
+    "region": "Nouvelle-Aquitaine",
+    "code": "17",
+    "name": "Charente-Maritime"
+  },
+  {
+    "region": "Bretagne",
+    "code": "56",
+    "name": "Morbihan"
+  },
+  {
+    "region": "Pays de la Loire",
+    "code": "49",
+    "name": "Maine-et-Loire"
+  },
+  {
+    "region": "Île-de-France",
+    "code": "93",
+    "name": "Seine-Saint-Denis"
+  },
+  {
+    "region": "Auvergne-Rhône-Alpes",
+    "code": "15",
+    "name": "Cantal"
+  },
+  {
+    "region": "Normandie",
+    "code": "61",
+    "name": "Orne"
+  },
+  {
+    "region": "Île-de-France",
+    "code": "75",
+    "name": "Paris"
+  },
+  {
+    "region": "Bourgogne-Franche-Comté",
+    "code": "89",
+    "name": "Yonne"
+  },
+  {
+    "region": "Nouvelle-Aquitaine",
+    "code": "64",
+    "name": "Pyrénées-Atlantiques"
+  },
+  {
+    "region": "Auvergne-Rhône-Alpes",
+    "code": "01",
+    "name": "Ain"
+  },
+  {
+    "region": "Île-de-France",
+    "code": "94",
+    "name": "Val-de-Marne"
+  },
+  {
+    "region": "Île-de-France",
+    "code": "78",
+    "name": "Yvelines"
+  },
+  {
+    "region": "Normandie",
+    "code": "27",
+    "name": "Eure"
+  },
+  {
+    "region": "Auvergne-Rhône-Alpes",
+    "code": "43",
+    "name": "Haute-Loire"
+  },
+  {
+    "region": "Provence-Alpes-Côte d'Azur",
+    "code": "04",
+    "name": "Alpes-de-Haute-Provence"
+  },
+  {
+    "region": "Grand Est",
+    "code": "54",
+    "name": "Meurthe-et-Moselle"
+  },
+  {
+    "region": "Centre-Val de Loire",
+    "code": "28",
+    "name": "Eure-et-Loir"
+  },
+  {
+    "region": "Hauts-de-France",
+    "code": "02",
+    "name": "Aisne"
+  },
+  {
+    "region": "Occitanie",
+    "code": "48",
+    "name": "Lozère"
+  },
+  {
+    "region": "Bretagne",
+    "code": "29",
+    "name": "Finistère"
+  },
+  {
+    "region": "Nouvelle-Aquitaine",
+    "code": "86",
+    "name": "Vienne"
+  },
+  {
+    "region": "Auvergne-Rhône-Alpes",
+    "code": "74",
+    "name": "Haute-Savoie"
+  },
+  {
+    "region": "Bourgogne-Franche-Comté",
+    "code": "71",
+    "name": "Saône-et-Loire"
+  },
+  {
+    "region": "Occitanie",
+    "code": "12",
+    "name": "Aveyron"
+  },
+  {
+    "region": "Occitanie",
+    "code": "34",
+    "name": "Hérault"
+  },
+  {
+    "region": "Bretagne",
+    "code": "22",
+    "name": "Côtes-d'Armor"
+  },
+  {
+    "region": "Île-de-France",
+    "code": "77",
+    "name": "Seine-et-Marne"
+  },
+  {
+    "region": "Hauts-de-France",
+    "code": "59",
+    "name": "Nord"
+  },
+  {
+    "region": "Bourgogne-Franche-Comté",
+    "code": "58",
+    "name": "Nièvre"
+  },
+  {
+    "region": "Centre-Val de Loire",
+    "code": "37",
+    "name": "Indre-et-Loire"
+  },
+  {
+    "region": "Provence-Alpes-Côte d'Azur",
+    "code": "06",
+    "name": "Alpes-Maritimes"
+  },
+  {
+    "region": "Occitanie",
+    "code": "30",
+    "name": "Gard"
+  },
+  {
+    "region": "Grand Est",
+    "code": "68",
+    "name": "Haut-Rhin"
+  },
+  {
+    "region": "Auvergne-Rhône-Alpes",
+    "code": "69",
+    "name": "Rhône"
+  },
+  {
+    "region": "Martinique",
+    "code": "972",
+    "name": "Martinique"
+  },
+  {
+    "region": "Auvergne-Rhône-Alpes",
+    "code": "73",
+    "name": "Savoie"
+  }
+]

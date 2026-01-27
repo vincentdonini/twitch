@@ -50,7 +50,8 @@ reload-local-fixtures:
 	@just load-fixtures
 
 load-fixtures:
-    docker compose exec api bash -c "php bin/console doctrine:fixtures:load --no-interaction"
+    #docker compose exec api bash -c "php bin/console doctrine:fixtures:load --no-interaction"
+    docker compose exec api bash -c "php -d memory_limit=1G bin/console doctrine:fixtures:load --no-interaction"
 
 db-restart:
     -@just db-drop

@@ -22,12 +22,6 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Domain/Benchmark/Entity'
                 prefix: 'App\Domain\Benchmark\Entity'
                 alias: DomainBenchmark
-            DomainBox:
-                is_bundle: false
-                type: attribute
-                dir: '%kernel.project_dir%/src/Domain/Box/Entity'
-                prefix: 'App\Domain\Box\Entity'
-                alias: DomainBox
             DomainContent:
                 is_bundle: false
                 type: attribute
@@ -46,12 +40,24 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Domain/Exercise/Entity'
                 prefix: 'App\Domain\Exercise\Entity'
                 alias: DomainExercise
+            DomainGeo:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Geo/Entity'
+                prefix: 'App\Domain\Geo\Entity'
+                alias: DomainGeo
             DomainMuscle:
                 is_bundle: false
                 type: attribute
                 dir: '%kernel.project_dir%/src/Domain/Muscle/Entity'
                 prefix: 'App\Domain\Muscle\Entity'
                 alias: DomainMuscle
+            DomainOrganization:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Organization/Entity'
+                prefix: 'App\Domain\Organization\Entity'
+                alias: DomainOrganization
             DomainRefreshToken:
                 is_bundle: false
                 type: attribute

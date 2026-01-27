@@ -42,10 +42,16 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
             // ---------------------------------------------------------------------------------------------------------
             // USER
             // ---------------------------------------------------------------------------------------------------------
-            $user = new User();
-            $user->setEmail($item['email']);
-            $user->setFirstName($item['firstName']);
-            $user->setLastName($item['lastName']);
+            $user = new User(
+                email    : $item['email'],
+                firstName: $item['firstName'],
+                lastName : $item['lastName'],
+            );
+
+            // Password
+            // ---------------------------------------------------------------------------------------------------------
+            $hashedPassword = $this->passwordHasher->hashPassword($user, $item['password']);
+            $user->setPassword($hashedPassword);
 
             // Roles
             // ---------------------------------------------------------------------------------------------------------
@@ -71,11 +77,6 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
                     $user->addRole($role);
                 }
             }
-
-            // Password
-            // ---------------------------------------------------------------------------------------------------------
-            $hashedPassword = $this->passwordHasher->hashPassword($user, $item['password']);
-            $user->setPassword($hashedPassword);
 
             $manager->persist($user);
         }

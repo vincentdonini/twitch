@@ -113,7 +113,8 @@ final readonly class ExerciseCategoryController
         $filters = RequestFilters::extractValues(
             request         : $request,
             fieldMapping    : ExerciseCategoryFilterMapping::FIELD_MAP,
-            allowedOperators: ExerciseCategoryFilterRules::ALLOWED_OPERATORS
+            allowedOperators: ExerciseCategoryFilterRules::ALLOWED_OPERATORS,
+            allowedFields   : ExerciseCategoryFilterRules::PUBLIC_FIELDS
         );
 
         $sorts = RequestSort::extractValues(

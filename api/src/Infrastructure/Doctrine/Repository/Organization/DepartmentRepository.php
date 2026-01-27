@@ -1,0 +1,90 @@
+<?php
+
+namespace App\Infrastructure\Doctrine\Repository\Organization;
+
+use App\Domain\Geo\Entity\Region;
+use App\Domain\Organization\Ports\RegionDALInterface;
+use App\Infrastructure\Doctrine\Filters\DoctrineFilterApplier;
+use App\Infrastructure\Doctrine\Pagination\LightPaginator;
+use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
+use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
+use App\Infrastructure\Doctrine\Sorts\DoctrineSortApplier;
+use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Sorts\SortCollection;
+use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\HttpFoundation\RequestStack;
+
+class DepartmentRepository extends AbstractEntityRepository implements RegionDALInterface
+{
+    use LocaleTrait;
+
+    public function __construct(
+        protected ManagerRegistry     $registry,
+        private readonly RequestStack $requestStack,
+        private readonly string       $locale,
+    ) {
+        parent::__construct($registry);
+    }
+
+    public function getClass(): string
+    {
+        return Region::class;
+    }
+
+    public function getManager(): string
+    {
+        return Region::class;
+    }
+
+    public function getById(string $id): ?Region
+    {
+        return $this->find($id);
+    }
+
+    public function listRegions(
+        int              $page = 1,
+        int              $limit = 10,
+        FilterCollection $filters = null,
+        SortCollection   $sorts = null,
+    ): LightPaginator {
+        $qb = $this->createQueryBuilder('d');
+
+        // Filters
+        // -------------------------------------------------------------------------------------------------------------
+        if (!$filters->isEmpty()) {
+            $qb = (new DoctrineFilterApplier())
+                ->apply($qb, 'd', $filters);
+        }
+
+        // Sort
+        // -------------------------------------------------------------------------------------------------------------
+        if (!$sorts->isEmpty()) {
+            $qb = (new DoctrineSortApplier())
+                ->apply($qb, 'd', $sorts);
+        }
+
+        // Pagination
+        // -------------------------------------------------------------------------------------------------------------
+        $aggQb     = clone $qb;
+        $aggResult = $aggQb
+            ->select('COUNT(d.id) as count')
+            ->resetDQLPart('orderBy')
+            ->getQuery()
+            ->getSingleResult();
+
+        $count = (int)$aggResult['count'];
+
+        $items = $qb
+            ->setFirstResult(($page - 1) * $limit)
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+
+        return new LightPaginator(
+            $items,
+            $count,
+            $page,
+            $limit,
+        );
+    }
+}

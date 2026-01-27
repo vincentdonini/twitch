@@ -9,7 +9,5 @@ interface UserDALInterface
 {
     public function getById(string $id): ?User;
 
-    public function getByEmail(string $email): ?User;
-
     public function listUsers(int $page = 1, int $limit = 15, $filters = []): LightPaginator;
 }

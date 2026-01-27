@@ -75,6 +75,22 @@
     { "code": "PERMISSION_CONTENT_MUSCLE_GROUP_MANAGE", "label": "Manager les contents des groupes musculaires" }
   ],
 
+  "ORGANIZATION": [
+    { "code": "PERMISSION_COMPANY_LIST", "label": "Lister les companies" },
+    { "code": "PERMISSION_COMPANY_VIEW", "label": "Voir une company" },
+    { "code": "PERMISSION_COMPANY_MANAGE", "label": "Manager une company" },
+    { "code": "PERMISSION_COMPANY_CREATE", "label": "Créer une company" },
+    { "code": "PERMISSION_COMPANY_EDIT", "label": "Modifier une company" },
+    { "code": "PERMISSION_COMPANY_DELETE", "label": "Supprimer une company" },
+
+    { "code": "PERMISSION_PLACE_LIST", "label": "Lister les places" },
+    { "code": "PERMISSION_PLACE_VIEW", "label": "Voir une place" },
+    { "code": "PERMISSION_PLACE_MANAGE", "label": "Manager une place" },
+    { "code": "PERMISSION_PLACE_CREATE", "label": "Créer une place" },
+    { "code": "PERMISSION_PLACE_EDIT", "label": "Modifier une place" },
+    { "code": "PERMISSION_PLACE_DELETE", "label": "Supprimer une place" }
+  ],
+
   "WOD": [
     { "code": "PERMISSION_WOD_LIST", "label": "Lister les WODs" },
     { "code": "PERMISSION_WOD_VIEW", "label": "Voir un WOD" },

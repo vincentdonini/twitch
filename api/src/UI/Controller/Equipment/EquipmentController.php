@@ -117,7 +117,8 @@ final readonly class EquipmentController
         $filters = RequestFilters::extractValues(
             request         : $request,
             fieldMapping    : EquipmentFilterMapping::FIELD_MAP,
-            allowedOperators: EquipmentFilterRules::ALLOWED_OPERATORS
+            allowedOperators: EquipmentFilterRules::ALLOWED_OPERATORS,
+            allowedFields   : EquipmentFilterRules::PUBLIC_FIELDS,
         );
 
         $sorts = RequestSort::extractValues(

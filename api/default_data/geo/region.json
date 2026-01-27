@@ -1,0 +1,92 @@
+[
+  {
+    "code": "02",
+    "name": "Martinique",
+    "country": "France"
+  },
+  {
+    "code": "27",
+    "name": "Bourgogne-Franche-Comté",
+    "country": "France"
+  },
+  {
+    "code": "93",
+    "name": "Provence-Alpes-Côte d'Azur",
+    "country": "France"
+  },
+  {
+    "code": "44",
+    "name": "Grand Est",
+    "country": "France"
+  },
+  {
+    "code": "11",
+    "name": "Île-de-France",
+    "country": "France"
+  },
+  {
+    "code": "28",
+    "name": "Normandie",
+    "country": "France"
+  },
+  {
+    "code": "75",
+    "name": "Nouvelle-Aquitaine",
+    "country": "France"
+  },
+  {
+    "code": "84",
+    "name": "Auvergne-Rhône-Alpes",
+    "country": "France"
+  },
+  {
+    "code": "24",
+    "name": "Centre-Val de Loire",
+    "country": "France"
+  },
+  {
+    "code": "06",
+    "name": "Mayotte",
+    "country": "France"
+  },
+  {
+    "code": "04",
+    "name": "La Réunion",
+    "country": "France"
+  },
+  {
+    "code": "53",
+    "name": "Bretagne",
+    "country": "France"
+  },
+  {
+    "code": "76",
+    "name": "Occitanie",
+    "country": "France"
+  },
+  {
+    "code": "32",
+    "name": "Hauts-de-France",
+    "country": "France"
+  },
+  {
+    "code": "52",
+    "name": "Pays de la Loire",
+    "country": "France"
+  },
+  {
+    "code": "94",
+    "name": "Corse",
+    "country": "France"
+  },
+  {
+    "code": "03",
+    "name": "Guyane",
+    "country": "France"
+  },
+  {
+    "code": "01",
+    "name": "Guadeloupe",
+    "country": "France"
+  }
+]

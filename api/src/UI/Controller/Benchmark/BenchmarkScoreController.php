@@ -132,7 +132,8 @@ final class BenchmarkScoreController extends AbstractController
         $filters = RequestFilters::extractValues(
             request         : $request,
             fieldMapping    : BenchmarkScoreFilterMapping::FIELD_MAP,
-            allowedOperators: BenchmarkScoreFilterRules::ALLOWED_OPERATORS
+            allowedOperators: BenchmarkScoreFilterRules::ALLOWED_OPERATORS,
+            allowedFields   : BenchmarkScoreFilterRules::PUBLIC_FIELDS,
         );
 
         try {

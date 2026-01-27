@@ -108,6 +108,24 @@ final class ListPermissions
     public const PERMISSION_CONTENT_MUSCLE_GROUP_DELETE = 'PERMISSION_CONTENT_MUSCLE_GROUP_DELETE';
 
 
+    // BENCHMARK
+    // -----------------------------------------------------------------------------------------------------------------
+    public const PERMISSION_COMPANY_LIST = 'PERMISSION_COMPANY_LIST';
+    public const PERMISSION_COMPANY_VIEW = 'PERMISSION_COMPANY_VIEW';
+    public const PERMISSION_COMPANY_MANAGE = 'PERMISSION_COMPANY_MANAGE';
+    public const PERMISSION_COMPANY_CREATE = 'PERMISSION_COMPANY_CREATE';
+    public const PERMISSION_COMPANY_EDIT = 'PERMISSION_COMPANY_EDIT';
+    public const PERMISSION_COMPANY_DELETE = 'PERMISSION_COMPANY_DELETE';
+
+    public const PERMISSION_PLACE_LIST = 'PERMISSION_PLACE_LIST';
+    public const PERMISSION_PLACE_VIEW = 'PERMISSION_PLACE_VIEW';
+    public const PERMISSION_PLACE_MANAGE = 'PERMISSION_PLACE_MANAGE';
+    public const PERMISSION_PLACE_CREATE = 'PERMISSION_PLACE_CREATE';
+    public const PERMISSION_PLACE_EDIT = 'PERMISSION_PLACE_EDIT';
+    public const PERMISSION_PLACE_DELETE = 'PERMISSION_PLACE_DELETE';
+
+
+
     // SECURITY
     // -----------------------------------------------------------------------------------------------------------------
     public const PERMISSION_USER_LIST = 'PERMISSION_USER_LIST';

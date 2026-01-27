@@ -9,6 +9,7 @@ use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class UserRepository extends AbstractEntityRepository implements UserDALInterface
 {
@@ -33,20 +34,7 @@ class UserRepository extends AbstractEntityRepository implements UserDALInterfac
 
     public function getById(string $id): ?User
     {
-        return $this->createQueryBuilder('u')
-            ->where('u.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
-    }
-
-    public function getByEmail(string $email): ?User
-    {
-        return $this->createQueryBuilder('u')
-            ->where('u.email = :email')
-            ->setParameter('email', $email)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function listUsers(

@@ -3,8 +3,10 @@
 namespace App\Infrastructure\Filters;
 
 use App\Domain\Common\Filter\Operator;
+use BackedEnum;
 use InvalidArgumentException;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use ValueError;
 
 final class RequestFilters
@@ -12,17 +14,28 @@ final class RequestFilters
     public static function extractValues(
         Request $request,
         array   $fieldMapping,
-        array   $allowedOperators
+        array   $allowedOperators,
+        array   $allowedFields
     ): FilterCollection {
         $rawFilters = $request->query->all()['filters'] ?? [];
         $filters    = [];
 
         foreach ($rawFilters as $frontField => $conditions) {
             if (!is_array($conditions)) {
-                throw new InvalidArgumentException("Filters for field '$frontField' must be an array");
+                throw new InvalidArgumentException();
             }
 
             $field = $fieldMapping[$frontField] ?? $frontField;
+
+            if (!\in_array($field, $allowedFields, true)) {
+                throw new AccessDeniedHttpException(
+                    sprintf("Filtering on field '%s' is not allowed for your role", $field)
+                );
+            }
+
+            if (!isset($allowedOperators[$field])) {
+                throw new InvalidArgumentException("Field '$field' is not filterable");
+            }
 
             foreach ($conditions as $operatorStr => $value) {
                 $operatorStr = strtolower($operatorStr);
@@ -33,21 +46,18 @@ final class RequestFilters
                     throw new InvalidArgumentException("Unknown operator '$operatorStr' for field '$field'");
                 }
 
-                if (!isset($allowedOperators[$field])) {
-                    throw new InvalidArgumentException("Field '$field' is not filterable");
-                }
-                $allowed = array_map(
-                    fn($op) => $op instanceof \BackedEnum ? $op->value : (string)$op,
+                $allowedOps = array_map(
+                    fn($op) => $op instanceof BackedEnum ? $op->value : (string)$op,
                     $allowedOperators[$field]
                 );
 
-                if (!in_array($operatorEnum->value, $allowed, true)) {
+                if (!in_array($operatorEnum->value, $allowedOps, true)) {
                     throw new InvalidArgumentException(
                         sprintf(
                             "Operator '%s' not allowed for field '%s'. Allowed: %s",
                             $operatorEnum->value,
                             $field,
-                            implode(', ', $allowed)
+                            implode(', ', $allowedOps)
                         )
                     );
                 }

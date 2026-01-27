@@ -135,7 +135,8 @@ final class BenchmarkController extends AbstractController
         $filters = RequestFilters::extractValues(
             request         : $request,
             fieldMapping    : BenchmarkFilterMapping::FIELD_MAP,
-            allowedOperators: BenchmarkFilterRules::ALLOWED_OPERATORS
+            allowedOperators: BenchmarkFilterRules::ALLOWED_OPERATORS,
+            allowedFields   : BenchmarkFilterRules::PUBLIC_FIELDS,
         );
 
         $sorts = RequestSort::extractValues(

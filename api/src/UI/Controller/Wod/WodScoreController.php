@@ -135,7 +135,8 @@ final class WodScoreController extends AbstractController
         $filters = RequestFilters::extractValues(
             request         : $request,
             fieldMapping    : WodScoreFilterMapping::FIELD_MAP,
-            allowedOperators: WodScoreFilterRules::ALLOWED_OPERATORS
+            allowedOperators: WodScoreFilterRules::ALLOWED_OPERATORS,
+            allowedFields   : WodScoreFilterRules::PUBLIC_FIELDS
         );
 
         try {

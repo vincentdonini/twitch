@@ -118,7 +118,8 @@ final readonly class MuscleGroupController
         $filters = RequestFilters::extractValues(
             request         : $request,
             fieldMapping    : MuscleGroupFilterMapping::FIELD_MAP,
-            allowedOperators: MuscleGroupFilterRules::ALLOWED_OPERATORS
+            allowedOperators: MuscleGroupFilterRules::ALLOWED_OPERATORS,
+            allowedFields   : MuscleGroupFilterRules::PUBLIC_FIELDS,
         );
 
         $sorts = RequestSort::extractValues(
