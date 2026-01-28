@@ -11,6 +11,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 class BenchmarkScoreDTO extends BaseDTO
 {
     #[Groups([
+        FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
     ])]
     public int $id;
@@ -21,36 +22,43 @@ class BenchmarkScoreDTO extends BaseDTO
     public UserDTO $user;
 
     #[Groups([
+        FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
     ])]
     public BenchmarkDTO $benchmark;
 
     #[Groups([
+        FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
     ])]
     public ?int $time;
 
     #[Groups([
+        FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
     ])]
     public ?int $repetitions;
 
     #[Groups([
+        FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
     ])]
     public ?int $weight;
 
     #[Groups([
+        FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
     ])]
     public DateTimeImmutable $performedAt;
 
     #[Groups([
+        FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
     ])]
     public ?string $notes;
 
     #[Groups([
+        FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
     ])]
     public bool $private;

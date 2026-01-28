@@ -2,6 +2,7 @@
 
 namespace App\UI\Controller\Benchmark;
 
+use App\Domain\Benchmark\Sort\BenchmarkScoreSortMapping;
 use App\Domain\User\Entity\User;
 use App\Domain\Benchmark\Entity\BenchmarkScore;
 use App\Domain\Benchmark\Filters\BenchmarkScoreFilterMapping;
@@ -15,6 +16,7 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Paginator\ResponsePaginator;
 use App\Infrastructure\Security\Voters\ListPermissions;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
+use App\Infrastructure\Sorts\RequestSort;
 use App\UI\Adapters\Http\Benchmark\BenchmarkScore\CreateBenchmarkScoreHttp;
 use App\UI\Adapters\Http\Benchmark\BenchmarkScore\GetBenchmarkScoreByIdHttp;
 use App\UI\Adapters\Http\Benchmark\BenchmarkScore\ListBenchmarkScoresHttp;
@@ -99,6 +101,12 @@ final class BenchmarkScoreController extends AbstractController
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
+                name       : 'filters[benchmark.slug][eq]',
+                description: 'Filter by benchmark slug (exact match)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'string')
+            ),
+            new OAT\Parameter(
                 name       : 'filters[benchmark.name][eq]',
                 description: 'Filter by benchmark name (exact match)',
                 required   : false,
@@ -122,9 +130,6 @@ final class BenchmarkScoreController extends AbstractController
         ListBenchmarkScoresUseCase $useCase,
         NormalizerInterface        $normalizer,
     ): JsonResponse {
-        /** @var User|null $currentUser */
-        $currentUser = $this->getUser();
-
         $paginatorValues = RequestPaginator::extractValues(
             request: $request
         );
@@ -136,14 +141,21 @@ final class BenchmarkScoreController extends AbstractController
             allowedFields   : BenchmarkScoreFilterRules::PUBLIC_FIELDS,
         );
 
+        $sorts = RequestSort::extractValues(
+            request    : $request,
+            fieldMap   : BenchmarkScoreSortMapping::FIELD_MAP,
+            defaultSort: 'name'
+        );
+
         try {
             $paginator = $useCase->execute(
                 new ListBenchmarkScoresHttp(
                     page   : $paginatorValues->getPage(),
                     limit  : $paginatorValues->getLimit(),
                     filters: $filters,
+                    sorts  : $sorts,
                 ),
-                $currentUser
+                user: null,
             );
         } catch (InvalidArgumentException) {
             throw new InvalidArgumentException();

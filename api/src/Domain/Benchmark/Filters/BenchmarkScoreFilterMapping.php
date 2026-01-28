@@ -9,6 +9,7 @@ final class BenchmarkScoreFilterMapping
         'user.firstName' => 'user.firstName',
         'user.lastName'  => 'user.lastName',
         'benchmark.id'   => 'benchmark.id',
+        'benchmark.slug' => 'benchmark.slug',
         'benchmark.name' => 'benchmark.name',
     ];
 }

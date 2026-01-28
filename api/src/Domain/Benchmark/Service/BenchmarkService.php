@@ -28,6 +28,7 @@ final readonly class BenchmarkService
 
         return new BenchmarkDTO(
             id      : $benchmark->getId(),
+            slug    : $benchmark->getSlug(),
             name    : $benchmark->getName(),
             type    : $benchmark->getType(),
             title   : $content ? $content->getTitle() : '',

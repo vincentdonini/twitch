@@ -11,6 +11,7 @@ final class BenchmarkScoreFilterRules
         'user.firstName' => [Operator::EQ, Operator::LIKE],
         'user.lastName'  => [Operator::EQ, Operator::LIKE],
         'benchmark.id'   => [Operator::EQ],
+        'benchmark.slug' => [Operator::EQ],
         'benchmark.name' => [Operator::EQ, Operator::LIKE],
     ];
 
@@ -19,6 +20,7 @@ final class BenchmarkScoreFilterRules
         'user.firstName',
         'user.lastName',
         'benchmark.id',
+        'benchmark.slug',
         'benchmark.name',
     ];
 }

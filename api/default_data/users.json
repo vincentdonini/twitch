@@ -11,8 +11,8 @@
   {
     "email": "admin@woder.fr",
     "password": "Woder123!!",
-    "firstName": "Vincent",
-    "lastName": "DONINI",
+    "firstName": "Admin",
+    "lastName": "API",
     "roles": [
       "ROLE_ADMIN"
     ]

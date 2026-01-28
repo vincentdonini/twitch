@@ -4,8 +4,10 @@ namespace App\DataFixtures\Benchmark;
 
 use App\DataFixtures\Exercise\ExerciseFixtures;
 use App\Domain\Benchmark\Entity\Benchmark;
+use App\Domain\Benchmark\Enum\Type;
 use App\Domain\Content\Entity\ContentBenchmark;
 use App\Domain\Exercise\Entity\Exercise;
+use App\Shared\Utils\StringHelper;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
@@ -34,7 +36,7 @@ class BenchmarkFixtures extends Fixture implements DependentFixtureInterface
         foreach ($data as $item) {
 
             if (empty($item['name']) || empty($item['type']) || empty($item['exercise'])) {
-                throw new Exception('Benchmark invalide (name/type/exercise manquant)');
+                throw new Exception('Invalid benchmark (missing name/type/exercise)');
             }
 
             $exercise = $manager
@@ -47,17 +49,23 @@ class BenchmarkFixtures extends Fixture implements DependentFixtureInterface
                 );
             }
 
+            $typeEnum = Type::tryFrom($item['type']);
+            if (!$typeEnum) {
+                throw new Exception("Unknown type : " . $item['type']);
+            }
+
             $benchmark = new Benchmark(
                 exercise: $exercise,
+                slug    : StringHelper::slugify($item['name']),
                 name    : $item['name'],
-                type    : $item['type']
+                type    : $typeEnum
             );
             $benchmark->setValue($item['value'] ?? null);
             $benchmark->setExercise($exercise);
 
-            // -----------------------------------------------------------------------------------------------------
+            // ---------------------------------------------------------------------------------------------------------
             //  CONTENTS
-            // -----------------------------------------------------------------------------------------------------
+            // ---------------------------------------------------------------------------------------------------------
             if (!empty($item['contents']) && is_array($item['contents'])) {
                 foreach ($item['contents'] as $locale => $contentData) {
                     $content = new ContentBenchmark(

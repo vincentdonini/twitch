@@ -4,6 +4,7 @@ namespace App\UI\Adapters\Http\Benchmark\BenchmarkScore;
 
 use App\Domain\Benchmark\BenchmarkScore\ListBenchmarkScoresDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Sorts\SortCollection;
 
 readonly class ListBenchmarkScoresHttp implements ListBenchmarkScoresDTOInterface
 {
@@ -11,6 +12,7 @@ readonly class ListBenchmarkScoresHttp implements ListBenchmarkScoresDTOInterfac
         private ?int              $page = null,
         private ?int              $limit = null,
         private ?FilterCollection $filters = null,
+        private ?SortCollection   $sorts = null,
     ) {
     }
 
@@ -27,5 +29,10 @@ readonly class ListBenchmarkScoresHttp implements ListBenchmarkScoresDTOInterfac
     public function getFilters(): ?FilterCollection
     {
         return $this->filters;
+    }
+
+    public function getSorts(): ?SortCollection
+    {
+        return $this->sorts;
     }
 }

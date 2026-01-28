@@ -138,7 +138,7 @@ class BenchmarkScore
 
     public function assertScoreIsValid(): void
     {
-        $allowed[] = $this->getBenchmark()->getType();
+        $allowed[] = $this->getBenchmark()->getType()->value;
 
         $metrics = [
             'time'        => $this->time,

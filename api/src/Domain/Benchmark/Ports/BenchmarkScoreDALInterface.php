@@ -15,6 +15,6 @@ interface BenchmarkScoreDALInterface
         int               $page = 1,
         int               $limit = 15,
         ?FilterCollection $filters = null,
-        ?User             $currentUser = null,
+        ?User             $user = null,
     ): LightPaginator;
 }

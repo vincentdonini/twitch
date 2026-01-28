@@ -6,10 +6,10 @@ use App\Domain\Benchmark\Entity\BenchmarkScore;
 use App\Domain\Benchmark\Ports\BenchmarkScoreDALInterface;
 use Doctrine\ORM\EntityNotFoundException;
 
-class GetBenchmarkScoreByIdUseCase
+readonly class GetBenchmarkScoreByIdUseCase
 {
     public function __construct(
-        private readonly BenchmarkScoreDALInterface $benchmarkScoreDAL,
+        private BenchmarkScoreDALInterface $benchmarkScoreDAL,
     ) {
 
     }

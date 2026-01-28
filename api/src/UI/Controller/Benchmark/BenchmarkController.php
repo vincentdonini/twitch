@@ -66,6 +66,16 @@ final class BenchmarkController extends AbstractController
             new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
 
             // ---------------------------------------------------------------------------------------------------------
+            // slug
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[slug][eq]',
+                description: 'Filter by benchmark slug (exact match)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'string')
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
             // name
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
@@ -77,6 +87,16 @@ final class BenchmarkController extends AbstractController
             new OAT\Parameter(
                 name       : 'filters[name][like]',
                 description: 'Filter by benchmark name (partial match)',
+                required   : false,
+                schema     : new OAT\Schema(type: 'string')
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // type
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[type][eq]',
+                description: 'Filter by benchmark type (exact match)',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),

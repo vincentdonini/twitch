@@ -2,6 +2,7 @@
 
 namespace App\Domain\Benchmark\Entity;
 
+use App\Domain\Benchmark\Enum\Type;
 use App\Domain\Content\Entity\ContentBenchmark;
 use App\Domain\Exercise\Entity\Exercise;
 use App\Infrastructure\Doctrine\Repository\Benchmark\BenchmarkRepository;
@@ -17,21 +18,20 @@ class Benchmark
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
-    #[Groups(['benchmark:list', 'benchmark:detail'])]
     private ?int $id = null;
 
     #[ORM\ManyToOne(targetEntity: Exercise::class, fetch: 'EAGER')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Groups(['benchmark:detail'])]
     private Exercise $exercise;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Groups(['benchmark:list', 'benchmark:detail'])]
+    private string $slug;
+
+    #[ORM\Column(type: 'string', length: 255)]
     private string $name;
 
-    #[ORM\Column(type: 'string', length: 20)]
-    #[Groups(['benchmark:detail'])]
-    private string $type;
+    #[ORM\Column(type: 'string', enumType: Type::class)]
+    private Type $type;
 
     #[ORM\Column(type: 'float', nullable: true)]
     private ?float $value = null;
@@ -41,13 +41,15 @@ class Benchmark
 
     public function __construct(
         Exercise $exercise,
+        string   $slug,
         string   $name,
-        string   $type,
+        Type     $type,
     ) {
         $this->exercise = $exercise;
+        $this->slug     = $slug;
         $this->name     = $name;
         $this->type     = $type;
-        $this->contents    = new ArrayCollection();
+        $this->contents = new ArrayCollection();
     }
 
     // -----------------------------------------------------------------------------------------------------------------
@@ -70,6 +72,17 @@ class Benchmark
         return $this;
     }
 
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+        return $this;
+    }
+
     public function getName(): string
     {
         return $this->name;
@@ -81,12 +94,12 @@ class Benchmark
         return $this;
     }
 
-    public function getType(): string
+    public function getType(): Type
     {
         return $this->type;
     }
 
-    public function setType(string $type): self
+    public function setType(Type $type): self
     {
         $this->type = $type;
         return $this;

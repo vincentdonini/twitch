@@ -2,12 +2,10 @@
 
 namespace App\Domain\Benchmark\Sort;
 
-final class BenchmarkSortMapping
+final class BenchmarkScoreSortMapping
 {
     public const FIELD_MAP = [
-        'slug'          => 'slug',
         'name'          => 'name',
-        'type'          => 'type',
         'exercise.id'   => 'exercise.id',
         'exercise.slug' => 'exercise.slug',
     ];

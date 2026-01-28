@@ -11,6 +11,7 @@ use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
 use App\Infrastructure\Filters\FilterCollection;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class BenchmarkScoreRepository extends AbstractEntityRepository implements BenchmarkScoreDALInterface
@@ -21,6 +22,7 @@ class BenchmarkScoreRepository extends AbstractEntityRepository implements Bench
         protected ManagerRegistry     $registry,
         private readonly RequestStack $requestStack,
         private readonly string       $locale,
+        private readonly Security     $security,
     ) {
         parent::__construct($registry);
     }
@@ -48,25 +50,22 @@ class BenchmarkScoreRepository extends AbstractEntityRepository implements Bench
         int               $page = 1,
         int               $limit = 15,
         ?FilterCollection $filters = null,
-        ?User             $currentUser = null,
+        ?User             $user = null,
     ): LightPaginator {
+        $currentUser = $this->security->getUser();
+
         $qb = $this->createQueryBuilder('bs');
 
         // Visibility rules
         // -------------------------------------------------------------------------------------------------------------
-        if ($currentUser === null) {
-            $qb->andWhere('bs.private = false');
-        } elseif (
-            $currentUser->hasRole('ROLE_ADMIN') ||
-            $currentUser->hasRole('ROLE_COACH')
-        ) {
-            // Admin or Coach → full access
-            // No restrictions
-        } else {
-            // User connecté standard
+        if ($user) {
             $qb
-                ->andWhere('bs.private = false OR bs.user = :currentUser')
-                ->setParameter('currentUser', $currentUser);
+                ->andWhere('bs.user = :userId')
+                ->setParameter('userId', hex2bin(str_replace('-', '', (string)$user->getId())));
+        }
+
+        if ($currentUser !== $user) {
+            $qb->andWhere('bs.private = false');
         }
 
         // Filters

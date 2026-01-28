@@ -7,26 +7,26 @@ use App\Domain\Benchmark\Ports\BenchmarkScoreDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use InvalidArgumentException;
 
-class ListBenchmarkScoresUseCase
+readonly class ListBenchmarkScoresUseCase
 {
     public function __construct(
-        private readonly BenchmarkScoreDALInterface $benchmarkScoreDAL,
+        private BenchmarkScoreDALInterface $benchmarkScoreDAL,
     ) {
     }
 
     public function execute(
         ListBenchmarkScoresDTOInterface $dto,
-        ?User                           $currentUser,
+        ?User                           $user,
     ): LightPaginator {
         if ($dto->getPage() && $dto->getPage() < 0) {
             throw new InvalidArgumentException();
         }
 
         return $this->benchmarkScoreDAL->listBenchmarkScores(
-            page       : $dto->getPage(),
-            limit      : $dto->getLimit(),
-            filters    : $dto->getFilters(),
-            currentUser: $currentUser,
+            page   : $dto->getPage(),
+            limit  : $dto->getLimit(),
+            filters: $dto->getFilters(),
+            user   : $user,
         );
     }
 }
