@@ -39,11 +39,7 @@ class BenchmarkScoreRepository extends AbstractEntityRepository implements Bench
 
     public function getById(string $id): ?BenchmarkScore
     {
-        return $this->createQueryBuilder('bs')
-            ->where('bs.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function listBenchmarkScores(

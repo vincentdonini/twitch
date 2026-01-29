@@ -2,12 +2,15 @@
 
 namespace App\Domain\Benchmark\Benchmark;
 
+use App\Domain\Benchmark\Enum\TypeEnum;
 use App\Domain\Core\Exceptions\AlreadyExistException;
 use App\Domain\Core\Exceptions\EntityNotFoundException;
+use App\Domain\Core\Exceptions\InvalidPayloadException;
 use App\Domain\Core\Ports\DatabaseInterface;
 use App\Domain\Benchmark\Entity\Benchmark;
 use App\Domain\Benchmark\Ports\BenchmarkDALInterface;
 use App\Domain\Exercise\Ports\ExerciseDALInterface;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class UpdateBenchmarkUseCase
 {
@@ -42,7 +45,12 @@ final readonly class UpdateBenchmarkUseCase
             if (!$this->validateDuplicateField($dto->getType(), $benchmark->getId())) {
                 throw new AlreadyExistException();
             }
-            $benchmark->setType($dto->getType());
+
+            $typeEnum = TypeEnum::tryFrom($dto->getType());
+            if (!$typeEnum) {
+                throw new InvalidPayloadException();
+            }
+            $benchmark->setType($typeEnum);
         }
 
         if (!empty($dto->getValue())) {
@@ -58,9 +66,9 @@ final readonly class UpdateBenchmarkUseCase
         return $benchmark;
     }
 
-    private function validateDuplicateField(string $value, int $currentBenchmarkId): bool
+    private function validateDuplicateField(string $value, Uuid $currentBenchmarkId): bool
     {
-        $existingBenchmark = $this->benchmarkDAL->getByName($value);
+        $existingBenchmark = $this->benchmarkDAL->findOneBy(['name' => $value]);
 
         if (!$existingBenchmark) {
             return true;

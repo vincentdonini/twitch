@@ -11,8 +11,6 @@ interface BenchmarkDALInterface
 {
     public function getById(string $id): ?Benchmark;
 
-    public function getByName(string $name): ?Benchmark;
-
     public function listBenchmarks(
         int              $page = 1,
         int              $limit = 15,

@@ -38,20 +38,7 @@ class BenchmarkRepository extends AbstractEntityRepository implements BenchmarkD
 
     public function getById(string $id): ?Benchmark
     {
-        return $this->createQueryBuilder('b')
-            ->where('b.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
-    }
-
-    public function getByName(string $name): ?Benchmark
-    {
-        return $this->createQueryBuilder('b')
-            ->where('b.name = :name')
-            ->setParameter('name', $name)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function listBenchmarks(

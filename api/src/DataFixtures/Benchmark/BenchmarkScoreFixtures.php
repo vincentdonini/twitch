@@ -3,10 +3,9 @@
 namespace App\DataFixtures\Benchmark;
 
 use App\DataFixtures\User\UserFixtures;
-use App\DataFixtures\Benchmark\BenchmarkFixtures;
 use App\Domain\Benchmark\Entity\Benchmark;
 use App\Domain\Benchmark\Entity\BenchmarkScore;
-use App\Domain\Benchmark\Enum\Type;
+use App\Domain\Benchmark\Enum\TypeEnum;
 use App\Domain\User\Entity\User;
 use DateTimeImmutable;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -68,15 +67,15 @@ class BenchmarkScoreFixtures extends Fixture implements DependentFixtureInterfac
                 );
 
                 switch ($benchmark->getType()) {
-                    case Type::WEIGHT:
+                    case TypeEnum::WEIGHT:
                         $score->setWeight($scoreData['weight'] ?? null);
                         break;
 
-                    case Type::TIME:
+                    case TypeEnum::TIME:
                         $score->setTime($scoreData['time'] ?? null);
                         break;
 
-                    case Type::REPETITIONS:
+                    case TypeEnum::REPETITIONS:
                         $score->setRepetitions($scoreData['repetitions'] ?? null);
                         break;
 

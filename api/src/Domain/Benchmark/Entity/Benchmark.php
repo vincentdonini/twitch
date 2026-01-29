@@ -2,23 +2,24 @@
 
 namespace App\Domain\Benchmark\Entity;
 
-use App\Domain\Benchmark\Enum\Type;
+use App\Domain\Benchmark\Enum\TypeEnum;
 use App\Domain\Content\Entity\ContentBenchmark;
 use App\Domain\Exercise\Entity\Exercise;
 use App\Infrastructure\Doctrine\Repository\Benchmark\BenchmarkRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Serializer\Annotation\Groups;
+use OpenApi\Attributes as OA;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: BenchmarkRepository::class)]
 #[ORM\Table(name: 'benchmark')]
 class Benchmark
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    private ?int $id = null;
+    #[ORM\Column(type: 'uuid', unique: true)]
+    #[OA\Property(description: "Benchmark ID")]
+    private Uuid $id;
 
     #[ORM\ManyToOne(targetEntity: Exercise::class, fetch: 'EAGER')]
     #[ORM\JoinColumn(nullable: false)]
@@ -30,8 +31,8 @@ class Benchmark
     #[ORM\Column(type: 'string', length: 255)]
     private string $name;
 
-    #[ORM\Column(type: 'string', enumType: Type::class)]
-    private Type $type;
+    #[ORM\Column(type: 'string', enumType: TypeEnum::class)]
+    private TypeEnum $type;
 
     #[ORM\Column(type: 'float', nullable: true)]
     private ?float $value = null;
@@ -43,8 +44,9 @@ class Benchmark
         Exercise $exercise,
         string   $slug,
         string   $name,
-        Type     $type,
+        TypeEnum $type,
     ) {
+        $this->id       = Uuid::v7();
         $this->exercise = $exercise;
         $this->slug     = $slug;
         $this->name     = $name;
@@ -56,7 +58,7 @@ class Benchmark
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
 
-    public function getId(): ?int
+    public function getId(): Uuid
     {
         return $this->id;
     }
@@ -94,12 +96,12 @@ class Benchmark
         return $this;
     }
 
-    public function getType(): Type
+    public function getType(): TypeEnum
     {
         return $this->type;
     }
 
-    public function setType(Type $type): self
+    public function setType(TypeEnum $type): self
     {
         $this->type = $type;
         return $this;

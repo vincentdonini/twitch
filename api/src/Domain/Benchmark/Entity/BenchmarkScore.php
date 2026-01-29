@@ -6,16 +6,18 @@ use App\Domain\User\Entity\User;
 use App\Infrastructure\Doctrine\Repository\Benchmark\BenchmarkScoreRepository;
 use DateTimeImmutable;
 use Doctrine\ORM\Mapping as ORM;
+use OpenApi\Attributes as OA;
 use DomainException;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: BenchmarkScoreRepository::class)]
 #[ORM\Table(name: 'benchmark_score')]
 class BenchmarkScore
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    private ?int $id = null;
+    #[ORM\Column(type: 'uuid', unique: true)]
+    #[OA\Property(description: "Benchmark score ID")]
+    private Uuid $id;
 
     #[ORM\ManyToOne(targetEntity: User::class)]
     #[ORM\JoinColumn(nullable: false, onDelete: 'CASCADE')]
@@ -49,13 +51,18 @@ class BenchmarkScore
         DateTimeImmutable $performedAt,
         bool              $private = false,
     ) {
+        $this->id          = Uuid::v7();
         $this->user        = $user;
         $this->benchmark   = $benchmark;
         $this->performedAt = $performedAt;
         $this->private     = $private;
     }
 
-    public function getId(): ?int
+    // -----------------------------------------------------------------------------------------------------------------
+    // GETTERS / SETTERS
+    // -----------------------------------------------------------------------------------------------------------------
+
+    public function getId(): Uuid
     {
         return $this->id;
     }

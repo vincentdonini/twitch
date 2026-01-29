@@ -2,12 +2,14 @@
 
 namespace App\Domain\Benchmark\Benchmark;
 
+use App\Domain\Benchmark\Enum\TypeEnum;
 use App\Domain\Core\Exceptions\AlreadyExistException;
 use App\Domain\Core\Exceptions\InvalidPayloadException;
 use App\Domain\Core\Ports\DatabaseInterface;
 use App\Domain\Benchmark\Entity\Benchmark;
 use App\Domain\Benchmark\Ports\BenchmarkDALInterface;
 use App\Domain\Exercise\Ports\ExerciseDALInterface;
+use App\Shared\Utils\StringHelper;
 
 final readonly class CreateBenchmarkUseCase
 {
@@ -30,10 +32,16 @@ final readonly class CreateBenchmarkUseCase
 
         $exercise = $this->exerciseDAL->getById($dto->getExerciseId());
 
+        $typeEnum = TypeEnum::tryFrom($dto->getType());
+        if (!$typeEnum) {
+            throw new InvalidPayloadException();
+        }
+
         $benchmark = new Benchmark(
             exercise: $exercise,
+            slug    : StringHelper::slugify($dto->getName()),
             name    : $dto->getName(),
-            type    : $dto->getType(),
+            type    : $typeEnum,
         );
 
         $this->database->preSave($benchmark);
@@ -56,6 +64,6 @@ final readonly class CreateBenchmarkUseCase
 
     private function validateDuplicate(string $name): bool
     {
-        return !$this->benchmarkDAL->getByName($name);
+        return !$this->benchmarkDAL->findOneBy(['name' => $name]);
     }
 }

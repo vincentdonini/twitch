@@ -33,6 +33,7 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route('/benchmark-scores', name: 'benchmark_score_')]
@@ -265,7 +266,7 @@ final class BenchmarkScoreController extends AbstractController
         path        : '/{benchmarkScoreId}',
         name        : 'detail',
         requirements: [
-            'benchmarkScoreId' => '\d+',
+            'benchmarkScoreId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
@@ -298,7 +299,7 @@ final class BenchmarkScoreController extends AbstractController
         try {
             $benchmarkScore = $useCase->execute(
                 new GetBenchmarkScoreByIdHttp(
-                    id: $benchmarkScoreId
+                    id: Uuid::fromString($benchmarkScoreId),
                 )
             );
 

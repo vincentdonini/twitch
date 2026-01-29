@@ -4,18 +4,19 @@ namespace App\Application\Benchmark\DTO;
 
 use App\Application\DTO\BaseDTO;
 use App\Application\Exercise\DTO\ExerciseDTO;
-use App\Domain\Benchmark\Enum\Type;
+use App\Domain\Benchmark\Enum\TypeEnum;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 
-class BenchmarkDTO extends BaseDTO
+class BenchmarkDTO
 {
     #[Groups([
         FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
     ])]
-    public int $id;
+    public Uuid $id;
 
     #[Groups([
         FrontGroupsEnum::USER_ME,
@@ -35,7 +36,7 @@ class BenchmarkDTO extends BaseDTO
         FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
     ])]
-    public Type $type;
+    public TypeEnum $type;
 
     #[Groups([
         FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
@@ -68,10 +69,10 @@ class BenchmarkDTO extends BaseDTO
     public ExerciseDTO $exercise;
 
     public function __construct(
-        int         $id,
+        Uuid        $id,
         string      $slug,
         string      $name,
-        Type        $type,
+        TypeEnum    $type,
         string      $title,
         string      $summary,
         string      $details,
@@ -79,8 +80,7 @@ class BenchmarkDTO extends BaseDTO
         string      $tips,
         ExerciseDTO $exercise,
     ) {
-        parent::__construct($id);
-
+        $this->id       = $id;
         $this->slug     = $slug;
         $this->name     = $name;
         $this->type     = $type;

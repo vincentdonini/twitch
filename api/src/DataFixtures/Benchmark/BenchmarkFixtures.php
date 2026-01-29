@@ -4,7 +4,7 @@ namespace App\DataFixtures\Benchmark;
 
 use App\DataFixtures\Exercise\ExerciseFixtures;
 use App\Domain\Benchmark\Entity\Benchmark;
-use App\Domain\Benchmark\Enum\Type;
+use App\Domain\Benchmark\Enum\TypeEnum;
 use App\Domain\Content\Entity\ContentBenchmark;
 use App\Domain\Exercise\Entity\Exercise;
 use App\Shared\Utils\StringHelper;
@@ -49,8 +49,8 @@ class BenchmarkFixtures extends Fixture implements DependentFixtureInterface
                 );
             }
 
-            $typeEnum = Type::tryFrom($item['type']);
-            if (!$typeEnum) {
+            $type = TypeEnum::tryFrom($item['type']);
+            if (!$type) {
                 throw new Exception("Unknown type : " . $item['type']);
             }
 
@@ -58,7 +58,7 @@ class BenchmarkFixtures extends Fixture implements DependentFixtureInterface
                 exercise: $exercise,
                 slug    : StringHelper::slugify($item['name']),
                 name    : $item['name'],
-                type    : $typeEnum
+                type    : $type
             );
             $benchmark->setValue($item['value'] ?? null);
             $benchmark->setExercise($exercise);

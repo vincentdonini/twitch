@@ -40,6 +40,7 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/benchmarks', name: 'benchmark_')]
@@ -275,7 +276,7 @@ final class BenchmarkController extends AbstractController
         path        : '/{benchmarkId}',
         name        : 'detail',
         requirements: [
-            'benchmarkId' => '\d+',
+            'benchmarkId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
@@ -307,7 +308,7 @@ final class BenchmarkController extends AbstractController
         try {
             $benchmark = $useCase->execute(
                 new GetBenchmarkByIdHttp(
-                    id: $benchmarkId
+                    id: Uuid::fromString($benchmarkId),
                 )
             );
         } catch (EntityNotFoundException) {

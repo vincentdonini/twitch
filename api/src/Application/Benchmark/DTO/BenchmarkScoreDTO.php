@@ -2,19 +2,19 @@
 
 namespace App\Application\Benchmark\DTO;
 
-use App\Application\DTO\BaseDTO;
 use App\Application\User\DTO\UserDTO;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use DateTimeImmutable;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 
-class BenchmarkScoreDTO extends BaseDTO
+class BenchmarkScoreDTO
 {
     #[Groups([
         FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
     ])]
-    public int $id;
+    public Uuid $id;
 
     #[Groups([
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
@@ -64,7 +64,7 @@ class BenchmarkScoreDTO extends BaseDTO
     public bool $private;
 
     public function __construct(
-        int               $id,
+        Uuid              $id,
         UserDTO           $user,
         BenchmarkDTO      $benchmark,
         ?int              $time,
@@ -74,8 +74,7 @@ class BenchmarkScoreDTO extends BaseDTO
         ?string           $notes,
         bool              $private,
     ) {
-        parent::__construct($id);
-
+        $this->id          = $id;
         $this->user        = $user;
         $this->benchmark   = $benchmark;
         $this->time        = $time;
