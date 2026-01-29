@@ -9,7 +9,7 @@ use App\Domain\Wod\Entity\WodScore;
 use App\Domain\Wod\Entity\WodVariant;
 use App\Domain\Wod\Entity\WodDivision;
 use App\Domain\Wod\Entity\WodAgeRange;
-use App\Domain\Wod\Enum\Gender;
+use App\Domain\Wod\Enum\GenderEnum;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -81,7 +81,7 @@ class WodScoreFixtures extends Fixture implements DependentFixtureInterface
             // ---------------------------------------------------------------------------------------------------------
             $gender = null;
             if (!empty($item['variant']['gender'])) {
-                $gender = Gender::from($item['variant']['gender']);
+                $gender = GenderEnum::from($item['variant']['gender']);
             }
 
             // ---------------------------------------------------------------------------------------------------------

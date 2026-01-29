@@ -6,7 +6,7 @@ use App\Domain\Wod\Entity\WodAgeRange;
 use App\Domain\Wod\Entity\WodDivision;
 use App\Domain\Wod\Entity\WodVariant;
 use App\Domain\Wod\Entity\Wod;
-use App\Domain\Wod\Enum\Gender;
+use App\Domain\Wod\Enum\GenderEnum;
 use App\Domain\Wod\Ports\WodVariantDALInterface;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
@@ -59,7 +59,7 @@ class WodVariantRepository extends AbstractEntityRepository implements WodVarian
         Wod          $wod,
         WodDivision  $division,
         ?WodAgeRange $ageRange,
-        ?Gender      $gender
+        ?GenderEnum $gender
     ): ?WodVariant {
         $qb = $this->createQueryBuilder('wv')
             ->where('v.wod = :wod')

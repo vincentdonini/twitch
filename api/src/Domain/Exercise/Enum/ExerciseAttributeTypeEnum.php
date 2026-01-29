@@ -2,7 +2,7 @@
 
 namespace App\Domain\Exercise\Enum;
 
-enum ExerciseAttributeType: string
+enum ExerciseAttributeTypeEnum: string
 {
     case REPS = 'reps';
     case WEIGHT = 'weight';

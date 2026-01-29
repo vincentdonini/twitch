@@ -2,7 +2,7 @@
 
 namespace App\Domain\Wod\Entity;
 
-use App\Domain\Wod\Enum\Gender;
+use App\Domain\Wod\Enum\GenderEnum;
 use App\Infrastructure\Doctrine\Repository\Wod\WodVariantRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -45,9 +45,9 @@ class WodVariant
     // -----------------------------------------------------------------------------------------------------------------
     // GENDER
     // -----------------------------------------------------------------------------------------------------------------
-    #[ORM\Column(type: 'string', length: 10, enumType: Gender::class, nullable: true)]
+    #[ORM\Column(type: 'string', length: 10, enumType: GenderEnum::class, nullable: true)]
     #[Groups(['wod:list', 'wod:detail'])]
-    private ?Gender $gender = null;
+    private ?GenderEnum $gender = null;
 
     // -----------------------------------------------------------------------------------------------------------------
     // SCALED / RX
@@ -117,12 +117,12 @@ class WodVariant
         return $this;
     }
 
-    public function getGender(): ?Gender
+    public function getGender(): ?GenderEnum
     {
         return $this->gender;
     }
 
-    public function setGender(?Gender $gender): self
+    public function setGender(?GenderEnum $gender): self
     {
         $this->gender = $gender;
         return $this;

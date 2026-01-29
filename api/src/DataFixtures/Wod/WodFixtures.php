@@ -13,7 +13,7 @@ use App\Domain\Wod\Entity\WodType;
 use App\Domain\Wod\Entity\WodVariant;
 use App\Domain\Wod\Entity\WodVariantExercise;
 use App\Domain\Wod\Entity\WodVariantExerciseMetric;
-use App\Domain\Wod\Enum\Gender;
+use App\Domain\Wod\Enum\GenderEnum;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
@@ -131,11 +131,11 @@ class WodFixtures extends Fixture implements DependentFixtureInterface
                     // GENDER
                     // -------------------------------------------------------------------------------------------------
                     if (!empty($wodVariantData['gender'])) {
-                        $genderEnum = Gender::tryFrom($wodVariantData['gender']);
-                        if (!$genderEnum) {
+                        $gender = GenderEnum::tryFrom($wodVariantData['gender']);
+                        if (!$gender) {
                             throw new Exception("Genre inconnu : " . $wodVariantData['gender']);
                         }
-                        $wodVariant->setGender($genderEnum);
+                        $wodVariant->setGender($gender);
                     }
 
                     // -------------------------------------------------------------------------------------------------

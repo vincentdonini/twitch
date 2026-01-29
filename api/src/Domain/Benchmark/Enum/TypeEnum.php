@@ -2,7 +2,7 @@
 
 namespace App\Domain\Benchmark\Enum;
 
-enum Type: string
+enum TypeEnum: string
 {
     case WEIGHT = 'weight';
     case TIME = 'time';

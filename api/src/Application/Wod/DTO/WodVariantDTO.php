@@ -3,7 +3,7 @@
 namespace App\Application\Wod\DTO;
 
 use App\Application\DTO\BaseDTO;
-use App\Domain\Wod\Enum\Gender;
+use App\Domain\Wod\Enum\GenderEnum;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use Symfony\Component\Serializer\Annotation\Groups;
 
@@ -39,7 +39,7 @@ class WodVariantDTO extends BaseDTO
         FrontGroupsEnum::WOD_SCORE_LIST, FrontGroupsEnum::WOD_SCORE_DETAIL,
         FrontGroupsEnum::WOD_LEADERBOARD,
     ])]
-    public Gender $gender;
+    public GenderEnum $gender;
 
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
@@ -66,7 +66,7 @@ class WodVariantDTO extends BaseDTO
     public function __construct(
         int             $id,
         WodDivisionDTO  $division,
-        Gender          $gender,
+        GenderEnum      $gender,
         ?WodAgeRangeDTO $ageRange,
         ?int            $rounds,
         ?int            $timeCap,

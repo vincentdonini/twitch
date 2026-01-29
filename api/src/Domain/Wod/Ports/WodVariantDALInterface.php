@@ -6,7 +6,7 @@ use App\Domain\Wod\Entity\Wod;
 use App\Domain\Wod\Entity\WodAgeRange;
 use App\Domain\Wod\Entity\WodDivision;
 use App\Domain\Wod\Entity\WodVariant;
-use App\Domain\Wod\Enum\Gender;
+use App\Domain\Wod\Enum\GenderEnum;
 
 interface WodVariantDALInterface
 {
@@ -19,6 +19,6 @@ interface WodVariantDALInterface
         Wod          $wod,
         WodDivision  $division,
         ?WodAgeRange $ageRange,
-        ?Gender      $gender
+        ?GenderEnum  $gender
     ): ?WodVariant;
 }
