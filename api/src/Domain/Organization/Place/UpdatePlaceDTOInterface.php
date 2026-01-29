@@ -15,11 +15,8 @@ interface UpdatePlaceDTOInterface
     public function getAddress2(): ?string;
     public function getPostalCode(): ?string;
     public function getCity(): ?string;
-    public function getCountry(): ?string;
     public function getNbDaysBeforeReservation(): ?string;
     public function getNbHoursBeforeCancelReservation(): ?string;
-    public function getLat(): ?string;
-    public function getLng(): ?string;
     public function getPhone(): ?string;
     public function getEmail(): ?string;
     public function getWebsite(): ?string;

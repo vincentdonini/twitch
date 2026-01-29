@@ -5,16 +5,18 @@ namespace App\Domain\Organization\Company;
 use App\Domain\Core\Exceptions\AlreadyExistException;
 use App\Domain\Core\Exceptions\InvalidPayloadException;
 use App\Domain\Core\Ports\DatabaseInterface;
-use App\Domain\Geo\Enum\CountryEnum;
+use App\Domain\Geo\Ports\CityDALInterface;
 use App\Domain\Organization\Entity\Company;
 use App\Domain\Organization\Enum\CompanyStatusEnum;
 use App\Domain\Organization\Ports\CompanyDALInterface;
+use App\Shared\Utils\StringHelper;
 use InvalidArgumentException;
 
 final readonly class CreateCompanyUseCase
 {
     public function __construct(
         private DatabaseInterface   $database,
+        private CityDALInterface    $cityDAL,
         private CompanyDALInterface $companyDAL,
     ) {
     }
@@ -23,10 +25,6 @@ final readonly class CreateCompanyUseCase
     {
         if (!$this->validatePayload($dto)) {
             throw new InvalidPayloadException();
-        }
-
-        if (!$this->validateDuplicate('slug', $dto->getSlug())) {
-            throw new AlreadyExistException();
         }
 
         if (!$this->validateDuplicate('name', $dto->getName())) {
@@ -41,20 +39,25 @@ final readonly class CreateCompanyUseCase
             throw new AlreadyExistException();
         }
 
-        try {
-            $country = CountryEnum::from($dto->getCountry());
-        } catch (\Exception $exception) {
+        $city = $this->cityDAL->findOneBy([
+            'slug' => StringHelper::slugify($dto->getCity()),
+        ]);
+
+        if (!$city) {
+            throw new InvalidPayloadException();
+        }
+
+        if ($dto->getPostalCode() && !$city->hasPostalCode($dto->getPostalCode())) {
             throw new InvalidPayloadException();
         }
 
         $company = new Company(
-            slug      : $dto->getSlug(),
+            slug      : StringHelper::slugify($dto->getName()),
             name      : $dto->getName(),
             legalName : $dto->getLegalName(),
             address   : $dto->getAddress(),
             postalCode: $dto->getPostalCode(),
-            city      : $dto->getCity(),
-            country   : $country,
+            city      : $city,
         );
 
         $company->setSiren($dto->getSiren() ?? null);
@@ -67,9 +70,9 @@ final readonly class CreateCompanyUseCase
         $company->setRegistrationDate($dto->getRegistrationDate() ?? null);
 
         try {
-            $statusEnum = CompanyStatusEnum::from($dto->getStatus());
-            $company->setStatus($statusEnum);
-        } catch (\Exception $exception) {
+            $status = CompanyStatusEnum::from($dto->getStatus());
+            $company->setStatus($status);
+        } catch (\Exception) {
             throw new InvalidPayloadException();
         }
 
@@ -86,8 +89,7 @@ final readonly class CreateCompanyUseCase
             !$dto->getLegalName() ||
             !$dto->getAddress() ||
             !$dto->getPostalCode() ||
-            !$dto->getCity() ||
-            !$dto->getCountry()
+            !$dto->getCity()
         ) {
             return false;
         }
@@ -97,7 +99,6 @@ final readonly class CreateCompanyUseCase
     private function validateDuplicate(string $field, string $value): bool
     {
         $existingCompany = match ($field) {
-            'slug'      => $this->companyDAL->findOneBy(['slug' => $value]),
             'name'      => $this->companyDAL->findOneBy(['name' => $value]),
             'legalName' => $this->companyDAL->findOneBy(['legalName' => $value]),
             'siren'     => $this->companyDAL->findOneBy(['siren' => $value]),

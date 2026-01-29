@@ -6,10 +6,11 @@ use App\Domain\Core\Exceptions\AlreadyExistException;
 use App\Domain\Core\Exceptions\EntityNotFoundException;
 use App\Domain\Core\Exceptions\InvalidPayloadException;
 use App\Domain\Core\Ports\DatabaseInterface;
-use App\Domain\Geo\Enum\CountryEnum;
+use App\Domain\Geo\Ports\CityDALInterface;
 use App\Domain\Organization\Entity\Company;
 use App\Domain\Organization\Enum\CompanyStatusEnum;
 use App\Domain\Organization\Ports\CompanyDALInterface;
+use App\Shared\Utils\StringHelper;
 use InvalidArgumentException;
 
 final readonly class UpdateCompanyUseCase
@@ -17,6 +18,7 @@ final readonly class UpdateCompanyUseCase
     public function __construct(
         private DatabaseInterface   $database,
         private CompanyDALInterface $companyDAL,
+        private CityDALInterface    $cityDAL,
     ) {
     }
 
@@ -27,19 +29,12 @@ final readonly class UpdateCompanyUseCase
             throw new EntityNotFoundException();
         }
 
-        if (!empty($dto->getSlug())) {
-            if (!$this->validateDuplicate('slug', $dto->getSlug(), $company)) {
-                throw new AlreadyExistException();
-            }
-
-            $company->setSlug($dto->getSlug());
-        }
-
         if (!empty($dto->getName())) {
             if ($this->validateDuplicate('name', $dto->getName(), $company)) {
                 throw new AlreadyExistException();
             }
 
+            $company->setSlug(StringHelper::slugify($dto->getName()));
             $company->setName($dto->getName());
         }
 
@@ -88,16 +83,13 @@ final readonly class UpdateCompanyUseCase
         }
 
         if (!empty($dto->getCity())) {
-            $company->setCity($dto->getCity());
-        }
-
-        if (!empty($dto->getCountry())) {
             try {
-                $countryEnum = CountryEnum::from($dto->getCountry());
-                $company->setCountry($countryEnum);
-            } catch (\Exception $exception) {
+                $city = $this->cityDAL->findOneBy(['slug' => StringHelper::slugify($dto->getCity())]);
+            } catch (\Exception) {
                 throw new InvalidPayloadException();
             }
+
+            $company->setCity($city);
         }
 
         if (!empty($dto->getPhone())) {
@@ -114,9 +106,9 @@ final readonly class UpdateCompanyUseCase
 
         if (!empty($dto->getStatus())) {
             try {
-                $statusEnum = CompanyStatusEnum::from($dto->getStatus());
-                $company->setStatus($statusEnum);
-            } catch (\Exception $exception) {
+                $status = CompanyStatusEnum::from($dto->getStatus());
+                $company->setStatus($status);
+            } catch (\Exception) {
                 throw new InvalidPayloadException();
             }
         }

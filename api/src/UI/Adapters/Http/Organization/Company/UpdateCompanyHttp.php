@@ -19,11 +19,6 @@ final readonly class UpdateCompanyHttp implements UpdateCompanyDTOInterface
         return $this->id;
     }
 
-    public function getSlug(): ?string
-    {
-        return $this->payload['slug'] ?? null;
-    }
-
     public function getName(): ?string
     {
         return $this->payload['name'] ?? null;
@@ -72,16 +67,6 @@ final readonly class UpdateCompanyHttp implements UpdateCompanyDTOInterface
     public function getCity(): ?string
     {
         return $this->payload['city'] ?? null;
-    }
-
-    public function getCountry(): ?string
-    {
-        return $this->payload['country'] ?? null;
-    }
-
-    public function getTimezone(): ?string
-    {
-        return $this->payload['timezone'] ?? null;
     }
 
     public function getPhone(): ?string

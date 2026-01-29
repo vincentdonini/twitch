@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Organization\Ports;
+namespace App\Domain\Geo\Ports;
 
 use App\Domain\Geo\Entity\Department;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;

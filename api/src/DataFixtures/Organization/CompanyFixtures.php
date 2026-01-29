@@ -28,8 +28,8 @@ class CompanyFixtures extends Fixture implements DependentFixtureInterface
 
     public function load(ObjectManager $manager): void
     {
-        $jsonPath = __DIR__ . '/../../../default_data/organization/companies.json';
-//        $jsonPath = __DIR__ . '/../../../default_data/organization/companies_small.json';
+//        $jsonPath = __DIR__ . '/../../../default_data/organization/companies.json';
+        $jsonPath = __DIR__ . '/../../../default_data/organization/companies_small.json';
 
         if (!file_exists($jsonPath)) {
             throw new Exception("The JSON file does not exist: " . $jsonPath);

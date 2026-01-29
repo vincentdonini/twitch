@@ -58,11 +58,6 @@ final readonly class UpdatePlaceHttp implements UpdatePlaceDTOInterface
         return $this->payload['city'] ?? null;
     }
 
-    public function getCountry(): ?string
-    {
-        return $this->payload['country'] ?? null;
-    }
-
     public function getNbDaysBeforeReservation(): ?string
     {
         return $this->payload['nbDaysBeforeReservation'] ?? null;
@@ -71,16 +66,6 @@ final readonly class UpdatePlaceHttp implements UpdatePlaceDTOInterface
     public function getNbHoursBeforeCancelReservation(): ?string
     {
         return $this->payload['nbHoursBeforeCancelReservation'] ?? null;
-    }
-
-    public function getLat(): ?string
-    {
-        return $this->payload['lat'] ?? null;
-    }
-
-    public function getLng(): ?string
-    {
-        return $this->payload['lng'] ?? null;
     }
 
     public function getPhone(): ?string

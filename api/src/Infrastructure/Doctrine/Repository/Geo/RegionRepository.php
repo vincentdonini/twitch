@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Infrastructure\Doctrine\Repository\Organization;
+namespace App\Infrastructure\Doctrine\Repository\Geo;
 
 use App\Domain\Geo\Entity\Region;
-use App\Domain\Organization\Ports\RegionDALInterface;
+use App\Domain\Geo\Ports\RegionDALInterface;
 use App\Infrastructure\Doctrine\Filters\DoctrineFilterApplier;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
@@ -14,7 +14,7 @@ use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-class DepartmentRepository extends AbstractEntityRepository implements RegionDALInterface
+class RegionRepository extends AbstractEntityRepository implements RegionDALInterface
 {
     use LocaleTrait;
 
@@ -47,27 +47,27 @@ class DepartmentRepository extends AbstractEntityRepository implements RegionDAL
         FilterCollection $filters = null,
         SortCollection   $sorts = null,
     ): LightPaginator {
-        $qb = $this->createQueryBuilder('d');
+        $qb = $this->createQueryBuilder('r');
 
         // Filters
         // -------------------------------------------------------------------------------------------------------------
         if (!$filters->isEmpty()) {
             $qb = (new DoctrineFilterApplier())
-                ->apply($qb, 'd', $filters);
+                ->apply($qb, 'r', $filters);
         }
 
         // Sort
         // -------------------------------------------------------------------------------------------------------------
         if (!$sorts->isEmpty()) {
             $qb = (new DoctrineSortApplier())
-                ->apply($qb, 'd', $sorts);
+                ->apply($qb, 'r', $sorts);
         }
 
         // Pagination
         // -------------------------------------------------------------------------------------------------------------
         $aggQb     = clone $qb;
         $aggResult = $aggQb
-            ->select('COUNT(d.id) as count')
+            ->select('COUNT(r.id) as count')
             ->resetDQLPart('orderBy')
             ->getQuery()
             ->getSingleResult();

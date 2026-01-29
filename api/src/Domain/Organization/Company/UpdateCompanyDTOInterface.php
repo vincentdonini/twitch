@@ -7,7 +7,6 @@ use Symfony\Component\Uid\Uuid;
 interface UpdateCompanyDTOInterface
 {
     public function getId(): Uuid;
-    public function getSlug(): ?string;
     public function getName(): ?string;
     public function getLegalName(): ?string;
     public function getSiren(): ?string;
@@ -18,8 +17,6 @@ interface UpdateCompanyDTOInterface
     public function getAddress2(): ?string;
     public function getPostalCode(): ?string;
     public function getCity(): ?string;
-    public function getCountry(): ?string;
-    public function getTimezone(): ?string;
     public function getPhone(): ?string;
     public function getEmail(): ?string;
     public function getRegistrationDate(): ?string;

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Infrastructure\Doctrine\Repository\Organization;
+namespace App\Infrastructure\Doctrine\Repository\Geo;
 
-use App\Domain\Geo\Entity\Region;
-use App\Domain\Organization\Ports\RegionDALInterface;
+use App\Domain\Geo\Entity\City;
+use App\Domain\Geo\Ports\CityDALInterface;
 use App\Infrastructure\Doctrine\Filters\DoctrineFilterApplier;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
@@ -14,7 +14,7 @@ use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-class RegionRepository extends AbstractEntityRepository implements RegionDALInterface
+class CityRepository extends AbstractEntityRepository implements CityDALInterface
 {
     use LocaleTrait;
 
@@ -28,46 +28,46 @@ class RegionRepository extends AbstractEntityRepository implements RegionDALInte
 
     public function getClass(): string
     {
-        return Region::class;
+        return City::class;
     }
 
     public function getManager(): string
     {
-        return Region::class;
+        return City::class;
     }
 
-    public function getById(string $id): ?Region
+    public function getById(string $id): ?City
     {
         return $this->find($id);
     }
 
-    public function listRegions(
+    public function listCities(
         int              $page = 1,
         int              $limit = 10,
         FilterCollection $filters = null,
         SortCollection   $sorts = null,
     ): LightPaginator {
-        $qb = $this->createQueryBuilder('r');
+        $qb = $this->createQueryBuilder('c');
 
         // Filters
         // -------------------------------------------------------------------------------------------------------------
         if (!$filters->isEmpty()) {
             $qb = (new DoctrineFilterApplier())
-                ->apply($qb, 'r', $filters);
+                ->apply($qb, 'c', $filters);
         }
 
         // Sort
         // -------------------------------------------------------------------------------------------------------------
         if (!$sorts->isEmpty()) {
             $qb = (new DoctrineSortApplier())
-                ->apply($qb, 'r', $sorts);
+                ->apply($qb, 'c', $sorts);
         }
 
         // Pagination
         // -------------------------------------------------------------------------------------------------------------
         $aggQb     = clone $qb;
         $aggResult = $aggQb
-            ->select('COUNT(r.id) as count')
+            ->select('COUNT(c.id) as count')
             ->resetDQLPart('orderBy')
             ->getQuery()
             ->getSingleResult();

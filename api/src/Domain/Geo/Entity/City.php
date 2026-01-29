@@ -125,6 +125,11 @@ class City
         return $this;
     }
 
+    public function hasPostalCode(string $postalCode): bool
+    {
+        return in_array($postalCode, $this->getPostalCodes(), true);
+    }
+
     public function getInseeCode(): ?string
     {
         return $this->inseeCode;

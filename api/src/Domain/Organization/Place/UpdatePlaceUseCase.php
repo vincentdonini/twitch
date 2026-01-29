@@ -6,7 +6,7 @@ use App\Domain\Core\Exceptions\AlreadyExistException;
 use App\Domain\Core\Exceptions\EntityNotFoundException;
 use App\Domain\Core\Exceptions\InvalidPayloadException;
 use App\Domain\Core\Ports\DatabaseInterface;
-use App\Domain\Geo\Enum\CountryEnum;
+use App\Domain\Geo\Ports\CityDALInterface;
 use App\Domain\Organization\Entity\Place;
 use App\Domain\Organization\Enum\PlaceStatusEnum;
 use App\Domain\Organization\Ports\CompanyDALInterface;
@@ -20,6 +20,7 @@ final readonly class UpdatePlaceUseCase
         private DatabaseInterface   $database,
         private PlaceDALInterface   $placeDAL,
         private CompanyDALInterface $companyDAL,
+        private CityDALInterface    $cityDAL,
     ) {
     }
 
@@ -72,21 +73,30 @@ final readonly class UpdatePlaceUseCase
             $place->setAddress($dto->getAddress2());
         }
 
-        if (!empty($dto->getPostalCode())) {
-            $place->setPostalCode($dto->getPostalCode());
-        }
+        $targetCity = $place->getCity();
 
-        if (!empty($dto->getCity())) {
-            $place->setCity($dto->getCity());
-        }
+        if ($dto->getCity()) {
+            $targetCity = $this->cityDAL->findOneBy([
+                'slug' => StringHelper::slugify($dto->getCity()),
+            ]);
 
-        if (!empty($dto->getCountry())) {
-            try {
-                $countryEnum = CountryEnum::from($dto->getCountry());
-                $place->setCountry($countryEnum);
-            } catch (\Exception $exception) {
+            if (!$targetCity) {
                 throw new InvalidPayloadException();
             }
+        }
+
+        $targetPostalCode = $dto->getPostalCode() ?? $place->getPostalCode();
+
+        if ($targetPostalCode && !$targetCity->hasPostalCode($targetPostalCode)) {
+            throw new InvalidPayloadException();
+        }
+
+        if ($dto->getCity()) {
+            $place->setCity($targetCity);
+        }
+
+        if ($dto->getPostalCode()) {
+            $place->setPostalCode($targetPostalCode);
         }
 
         if (!empty($dto->getNbDaysBeforeReservation())) {
@@ -95,14 +105,6 @@ final readonly class UpdatePlaceUseCase
 
         if (!empty($dto->getNbHoursBeforeCancelReservation())) {
             $place->setNbHoursBeforeCancelReservation($dto->getNbHoursBeforeCancelReservation());
-        }
-
-        if (!empty($dto->getLat())) {
-            $place->setLat($dto->getLat());
-        }
-
-        if (!empty($dto->getLng())) {
-            $place->setLng($dto->getLng());
         }
 
         if (!empty($dto->getPhone())) {
@@ -123,9 +125,9 @@ final readonly class UpdatePlaceUseCase
 
         if (!empty($dto->getStatus())) {
             try {
-                $statusEnum = PlaceStatusEnum::from($dto->getStatus());
-                $place->setStatus($statusEnum);
-            } catch (\Exception $exception) {
+                $status = PlaceStatusEnum::from($dto->getStatus());
+                $place->setStatus($status);
+            } catch (\Exception) {
                 throw new InvalidPayloadException();
             }
         }
@@ -139,7 +141,6 @@ final readonly class UpdatePlaceUseCase
     private function validateDuplicate(string $field, string $value, Place $currentPlace): bool
     {
         $existingPlace = match ($field) {
-//            'slug'      => $this->placeDAL->findOneBy(['slug' => $value]),
             'name'      => $this->placeDAL->findOneBy(['name' => $value]),
             'legalName' => $this->placeDAL->findOneBy(['legalName' => $value]),
             'siret'     => $this->placeDAL->findOneBy(['siret' => $value]),

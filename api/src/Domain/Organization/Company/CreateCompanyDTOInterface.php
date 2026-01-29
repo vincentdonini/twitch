@@ -4,7 +4,6 @@ namespace App\Domain\Organization\Company;
 
 interface CreateCompanyDTOInterface
 {
-    public function getSlug(): ?string;
     public function getName(): ?string;
     public function getLegalName(): ?string;
     public function getSiren(): ?string;
@@ -16,7 +15,6 @@ interface CreateCompanyDTOInterface
     public function getPostalCode(): ?string;
     public function getCity(): ?string;
     public function getCountry(): ?string;
-    public function getTimezone(): ?string;
     public function getPhone(): ?string;
     public function getEmail(): ?string;
     public function getRegistrationDate(): ?string;
