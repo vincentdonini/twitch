@@ -14,6 +14,7 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class MuscleAreaRepository extends AbstractEntityRepository implements MuscleAreaDALInterface
 {
@@ -37,13 +38,9 @@ class MuscleAreaRepository extends AbstractEntityRepository implements MuscleAre
         return MuscleArea::class;
     }
 
-    public function getById(string $id): ?MuscleArea
+    public function getById(Uuid $id): ?MuscleArea
     {
-        return $this->createQueryBuilder('ma')
-            ->where('ma.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function listMuscleAreas(

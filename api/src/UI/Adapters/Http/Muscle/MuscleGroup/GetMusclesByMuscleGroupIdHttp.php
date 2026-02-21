@@ -3,16 +3,16 @@
 namespace App\UI\Adapters\Http\Muscle\MuscleGroup;
 
 use App\Domain\Muscle\MuscleGroup\GetMusclesByMuscleGroupIdDTOInterface;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class GetMusclesByMuscleGroupIdHttp implements GetMusclesByMuscleGroupIdDTOInterface
 {
     public function __construct(
-        private string $muscleGroupId,
+        private Uuid $muscleGroupId,
     ) {
-
     }
 
-    public function getMuscleGroupId(): string
+    public function getMuscleGroupId(): Uuid
     {
         return $this->muscleGroupId;
     }

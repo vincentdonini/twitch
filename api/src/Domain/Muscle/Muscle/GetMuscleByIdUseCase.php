@@ -10,9 +10,7 @@ class GetMuscleByIdUseCase
 {
     public function __construct(
         private readonly MuscleDALInterface $muscleDAL,
-    )
-    {
-
+    ) {
     }
 
     public function execute(GetMuscleByIdDTOInterface $dto): Muscle

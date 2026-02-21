@@ -23,7 +23,7 @@ class GetMusclesByMuscleGroupIdUseCase
             throw new EntityNotFoundException();
         }
 
-        return $this->muscleDAL->getByMuscleGroupId($muscleGroup->getId());
+        return $this->muscleDAL->getByMuscleGroupId($dto->getMuscleGroupId());
     }
 }
 

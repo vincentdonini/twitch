@@ -10,15 +10,13 @@ class GetMuscleAreaByIdUseCase
 {
     public function __construct(
         private readonly MuscleAreaDALInterface $muscleAreaDAL,
-    )
-    {
-
+    ) {
     }
 
     public function execute(GetMuscleAreaByIdDTOInterface $dto): MuscleArea
     {
         $muscleArea = $this->muscleAreaDAL->getById($dto->getId());
-        if(!$muscleArea instanceof MuscleArea){
+        if (!$muscleArea instanceof MuscleArea) {
             throw new EntityNotFoundException();
         }
 

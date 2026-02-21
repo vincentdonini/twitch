@@ -10,20 +10,19 @@ use Doctrine\ORM\EntityNotFoundException;
 class GetMuscleGroupsByMuscleAreaIdUseCase
 {
     public function __construct(
-        private readonly MuscleAreaDALInterface $muscleAreaDAL,
+        private readonly MuscleAreaDALInterface  $muscleAreaDAL,
         private readonly MuscleGroupDALInterface $muscleGroupDAL,
     ) {
-
     }
 
+    /** @return MuscleArea[] */
     public function execute(GetMuscleGroupsByMuscleAreaIdDTOInterface $dto): array
     {
         $muscleArea = $this->muscleAreaDAL->getById($dto->getMuscleAreaId());
-        if(!$muscleArea instanceof MuscleArea){
+        if (!$muscleArea instanceof MuscleArea) {
             throw new EntityNotFoundException();
         }
 
-        return $this->muscleGroupDAL->getByMuscleAreaId($muscleArea->getId());
+        return $this->muscleGroupDAL->getByMuscleAreaId($dto->getMuscleAreaId());
     }
 }
-

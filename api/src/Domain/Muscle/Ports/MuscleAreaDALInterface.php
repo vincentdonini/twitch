@@ -7,10 +7,11 @@ use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Filters\FilterCollection;
 use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
+use Symfony\Component\Uid\Uuid;
 
 interface MuscleAreaDALInterface
 {
-    public function getById(string $id): ?MuscleArea;
+    public function getById(Uuid $id): ?MuscleArea;
 
     public function listMuscleAreas(
         int               $page = 1,

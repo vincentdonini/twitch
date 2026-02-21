@@ -36,14 +36,15 @@ class MuscleFixtures extends Fixture implements DependentFixtureInterface
         });
 
         foreach ($data as $item) {
-            $muscle = new Muscle();
-            $muscle->setSlug($item['slug']);
-
             $muscleArea = $manager->getRepository(MuscleArea::class)->findOneBy(['slug' => $item['area']]);
             if (!$muscleArea) {
                 throw new Exception("Muscle area not found: " . $item['area']);
             }
-            $muscle->setMuscleArea($muscleArea);
+
+            $muscle = new Muscle(
+                slug      : $item['slug'],
+                muscleArea: $muscleArea,
+            );
 
             if (isset($item['group'])) {
                 $muscleGroup = $manager->getRepository(MuscleGroup::class)->findOneBy(['slug' => $item['group']]);
@@ -57,7 +58,7 @@ class MuscleFixtures extends Fixture implements DependentFixtureInterface
 
             $manager->persist($muscle);
 
-            // Gestion des contenus
+            // Contents
             // ---------------------------------------------------------------------------------------------------------
             if (!empty($item['contents']) && is_array($item['contents'])) {
                 foreach ($item['contents'] as $locale => $contentData) {
@@ -70,7 +71,7 @@ class MuscleFixtures extends Fixture implements DependentFixtureInterface
                     );
 
                     $manager->persist($content);
-                    $muscle->addContent($content); // pour la collection côté Muscle
+                    $muscle->addContent($content);
                 }
             }
         }

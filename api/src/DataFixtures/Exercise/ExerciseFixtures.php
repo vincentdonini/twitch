@@ -59,12 +59,12 @@ class ExerciseFixtures extends Fixture implements DependentFixtureInterface
             }
 
             if (!empty($item['muscles'])) {
-                foreach ($item['muscles'] as $muscleId) {
-                    $muscle = $manager->getRepository(Muscle::class)->find($muscleId);
+                foreach ($item['muscles'] as $muscleSlug) {
+                    $muscle = $manager->getRepository(Muscle::class)->findOneBy(['slug' => $muscleSlug]);
                     if ($muscle) {
                         $exercise->addMuscle($muscle);
                     } else {
-                        throw new Exception("Muscle with ID $muscleId not found");
+                        throw new Exception("Muscle with slug $muscleSlug not found");
                     }
                 }
             }

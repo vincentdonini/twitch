@@ -8,16 +8,16 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use OpenApi\Attributes as OA;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: MuscleAreaRepository::class)]
 #[ORM\Table(name: 'muscle_area')]
 class MuscleArea
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'uuid', unique: true)]
     #[OA\Property(description: "Muscle area ID")]
-    private ?int $id = null;
+    private Uuid $id;
 
     #[ORM\Column(type: 'string')]
     #[OA\Property(description: "Muscle area slug", example: "arms")]
@@ -29,8 +29,13 @@ class MuscleArea
     #[ORM\OneToMany(targetEntity: ContentMuscleArea::class, mappedBy: "muscleArea", cascade: ["persist", "remove"])]
     private Collection $contents;
 
-    public function __construct()
-    {
+    public function __construct(
+        string $slug,
+    ) {
+        $this->id = Uuid::v7();
+
+        $this->slug = $slug;
+
         $this->muscleGroups = new ArrayCollection();
         $this->contents     = new ArrayCollection();
     }
@@ -38,7 +43,7 @@ class MuscleArea
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
-    public function getId(): ?int
+    public function getId(): Uuid
     {
         return $this->id;
     }

@@ -13,7 +13,9 @@ use App\Infrastructure\Filters\FilterCollection;
 use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class MuscleGroupRepository extends AbstractEntityRepository implements MuscleGroupDALInterface
 {
@@ -37,13 +39,9 @@ class MuscleGroupRepository extends AbstractEntityRepository implements MuscleGr
         return MuscleGroup::class;
     }
 
-    public function getById(string $id): ?MuscleGroup
+    public function getById(Uuid $id): ?MuscleGroup
     {
-        return $this->createQueryBuilder('mg')
-            ->where('mg.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function listMuscleGroups(
@@ -91,11 +89,12 @@ class MuscleGroupRepository extends AbstractEntityRepository implements MuscleGr
         );
     }
 
-    public function getByMuscleAreaId(string $muscleAreaId): array
+    /** @return MuscleGroup[] */
+    public function getByMuscleAreaId(Uuid $muscleAreaId): array
     {
         return $this->createQueryBuilder('mg')
-            ->where('mg.muscleArea = :muscleAreaId')
-            ->setParameter('muscleArea', $muscleAreaId)
+            ->where('mg.muscleArea = :muscleArea')
+            ->setParameter('muscleArea', $muscleAreaId, UuidType::NAME)
             ->getQuery()
             ->getResult();
     }

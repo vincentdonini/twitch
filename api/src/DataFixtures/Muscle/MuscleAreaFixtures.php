@@ -33,10 +33,11 @@ class MuscleAreaFixtures extends Fixture
         });
 
         foreach ($data as $item) {
-            $muscleArea = new MuscleArea();
-            $muscleArea->setSlug($item['slug']);
+            $muscleArea = new MuscleArea(
+                slug: $item['slug']
+            );
 
-            // Gestion des contenus
+            // Content
             // ---------------------------------------------------------------------------------------------------------
             if (!empty($item['contents']) && is_array($item['contents'])) {
                 foreach ($item['contents'] as $locale => $contentData) {

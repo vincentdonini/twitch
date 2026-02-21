@@ -4,13 +4,14 @@ namespace App\Application\Muscle\DTO;
 
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 
 class MuscleDTO
 {
     #[Groups([
         FrontGroupsEnum::MUSCLE_LIST, FrontGroupsEnum::MUSCLE_DETAIL,
     ])]
-    public int $id;
+    public Uuid $id;
 
     #[Groups([
         FrontGroupsEnum::MUSCLE_LIST, FrontGroupsEnum::MUSCLE_DETAIL,
@@ -43,7 +44,7 @@ class MuscleDTO
     public ?MuscleGroupDTO $group = null;
 
     public function __construct(
-        int             $id,
+        Uuid            $id,
         string          $slug,
         string          $title,
         string          $summary,

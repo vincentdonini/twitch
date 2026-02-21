@@ -13,7 +13,9 @@ use App\Infrastructure\Filters\FilterCollection;
 use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class MuscleRepository extends AbstractEntityRepository implements MuscleDALInterface
 {
@@ -37,13 +39,9 @@ class MuscleRepository extends AbstractEntityRepository implements MuscleDALInte
         return Muscle::class;
     }
 
-    public function getById(string $id): ?Muscle
+    public function getById(Uuid $id): ?Muscle
     {
-        return $this->createQueryBuilder('m')
-            ->where('m.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function listMuscles(
@@ -91,11 +89,12 @@ class MuscleRepository extends AbstractEntityRepository implements MuscleDALInte
         );
     }
 
-    public function getByMuscleGroupId(int $muscleGroupId): array
+    /** @return Muscle[] */
+    public function getByMuscleGroupId(Uuid $muscleGroupId): array
     {
         return $this->createQueryBuilder('mg')
             ->where('mg.muscleGroup = :muscleGroup')
-            ->setParameter('muscleGroup', $muscleGroupId)
+            ->setParameter('muscleGroup', $muscleGroupId, UuidType::NAME)
             ->getQuery()
             ->getResult();
     }
