@@ -39,14 +39,15 @@ class ExerciseFixtures extends Fixture implements DependentFixtureInterface
         });
 
         foreach ($data as $item) {
-            $exercise = new Exercise();
-            $exercise->setSlug($item['slug']);
-
             $exerciseCategory = $manager->getRepository(ExerciseCategory::class)->findOneBy(['slug' => $item['category']]);
             if (!$exerciseCategory) {
                 throw new Exception("Category not found: " . $item['category']);
             }
-            $exercise->setExerciseCategory($exerciseCategory);
+
+            $exercise = new Exercise(
+                slug            : $item['slug'],
+                exerciseCategory: $exerciseCategory
+            );
 
             if (isset($item['equipment'])) {
                 $equipment = $manager->getRepository(Equipment::class)->findOneBy(['slug' => $item['equipment']]);
@@ -71,7 +72,7 @@ class ExerciseFixtures extends Fixture implements DependentFixtureInterface
 
             $manager->persist($exercise);
 
-            // Gestion des contenus
+            // Content
             // ---------------------------------------------------------------------------------------------------------
             if (!empty($item['contents']) && is_array($item['contents'])) {
                 foreach ($item['contents'] as $locale => $contentData) {

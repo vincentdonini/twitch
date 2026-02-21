@@ -2,18 +2,18 @@
 
 namespace App\Application\Exercise\DTO;
 
-use App\Application\DTO\BaseDTO;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 
-class ExerciseDTO extends BaseDTO
+class ExerciseDTO
 {
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
         FrontGroupsEnum::EXERCISE_LIST, FrontGroupsEnum::EXERCISE_DETAIL,
         FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
     ])]
-    public int $id;
+    public Uuid $id;
 
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
@@ -40,14 +40,13 @@ class ExerciseDTO extends BaseDTO
     public string $details;
 
     public function __construct(
-        int    $id,
+        Uuid   $id,
         string $slug,
         string $title,
         string $summary,
         string $details
     ) {
-        parent::__construct($id);
-
+        $this->id      = $id;
         $this->slug    = $slug;
         $this->title   = $title;
         $this->summary = $summary;

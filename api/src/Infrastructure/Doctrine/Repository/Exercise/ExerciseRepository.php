@@ -14,6 +14,7 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class ExerciseRepository extends AbstractEntityRepository implements ExerciseDALInterface
 {
@@ -37,13 +38,9 @@ class ExerciseRepository extends AbstractEntityRepository implements ExerciseDAL
         return Exercise::class;
     }
 
-    public function getById(string $id): ?Exercise
+    public function getById(Uuid $id): ?Exercise
     {
-        return $this->createQueryBuilder('e')
-            ->where('e.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function listExercises(
@@ -65,45 +62,6 @@ class ExerciseRepository extends AbstractEntityRepository implements ExerciseDAL
         if (!$sorts->isEmpty()) {
             (new DoctrineSortApplier())->apply($qb, 'e', $sorts);
         }
-
-        // TODO MAYBE ???
-        /*
-        if (!$sorts->isEmpty()) {
-            $joinedAliases = [];
-
-            foreach ($sorts as $sort) {
-                if (!$sort instanceof \App\Infrastructure\Sorts\SortValue) {
-                    continue;
-                }
-
-                $field = $sort->field;
-                $direction = $sort->direction->value;
-
-                if ($field === 'contents.title') {
-                    $relation = 'contents';
-                    $alias = 'contents_0';
-
-                    if (!isset($joinedAliases[$relation])) {
-                        $qb->leftJoin(
-                            "e.$relation",
-                            $alias,
-                            'WITH',
-                            "$alias.locale = :locale"
-                        );
-                        $joinedAliases[$relation] = true;
-                    }
-
-                    $qb->addOrderBy("$alias.name", $direction);
-                } else {
-                    $qb->addOrderBy("e.$field", $direction);
-                }
-            }
-
-            if (!empty($joinedAliases['contents'])) {
-                $qb->setParameter('locale', $this->getLocale());
-            }
-        }
-        */
 
         // Pagination
         // -------------------------------------------------------------------------------------------------------------

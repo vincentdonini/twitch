@@ -8,16 +8,16 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use OpenApi\Attributes as OA;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: ExerciseCategoryRepository::class)]
 #[ORM\Table(name: 'exercise_category')]
 class ExerciseCategory
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'uuid', unique: true)]
     #[OA\Property(description: "Exercise category ID")]
-    private ?int $id = null;
+    private Uuid $id;
 
     #[ORM\Column(type: 'string')]
     #[OA\Property(description: "Exercise category slug", example: "warm-up")]
@@ -26,15 +26,20 @@ class ExerciseCategory
     #[ORM\OneToMany(targetEntity: ContentExerciseCategory::class, mappedBy: "movementCategory", cascade: ["persist", "remove"], orphanRemoval: true)]
     private Collection $contents;
 
-    public function __construct()
-    {
+    public function __construct(
+        string $slug,
+    ) {
+        $this->id = Uuid::v7();
+
+        $this->slug = $slug;
+
         $this->contents = new ArrayCollection();
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
-    public function getId(): ?int
+    public function getId(): Uuid
     {
         return $this->id;
     }

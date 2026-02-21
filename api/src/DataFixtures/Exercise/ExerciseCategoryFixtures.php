@@ -33,10 +33,11 @@ class ExerciseCategoryFixtures extends Fixture
         });
 
         foreach ($data as $item) {
-            $exerciseCategory = new ExerciseCategory();
-            $exerciseCategory->setSlug($item['slug']);
+            $exerciseCategory = new ExerciseCategory(
+                slug: $item['slug'],
+            );
 
-            // Gestion des contenus
+            // Content
             // ---------------------------------------------------------------------------------------------------------
             if (!empty($item['contents']) && is_array($item['contents'])) {
                 foreach ($item['contents'] as $locale => $contentData) {

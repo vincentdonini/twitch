@@ -14,6 +14,7 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class ExerciseCategoryRepository extends AbstractEntityRepository implements ExerciseCategoryDALInterface
 {
@@ -37,13 +38,9 @@ class ExerciseCategoryRepository extends AbstractEntityRepository implements Exe
         return ExerciseCategory::class;
     }
 
-    public function getById(string $id): ?ExerciseCategory
+    public function getById(Uuid $id): ?ExerciseCategory
     {
-        return $this->createQueryBuilder('ec')
-            ->where('ec.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function listExerciseCategories(

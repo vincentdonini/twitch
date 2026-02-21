@@ -9,15 +9,17 @@ use App\Infrastructure\Doctrine\Repository\Exercise\ExerciseRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use OpenApi\Attributes as OA;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: ExerciseRepository::class)]
 #[ORM\Table(name: 'exercise')]
 class Exercise
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    private ?int $id = null;
+    #[ORM\Column(type: 'uuid', unique: true)]
+    #[OA\Property(description: "Exercise ID")]
+    private Uuid $id;
 
     #[ORM\Column(type: 'string')]
     private string $slug;
@@ -39,8 +41,15 @@ class Exercise
     #[ORM\OneToMany(targetEntity: ContentExercise::class, mappedBy: "exercise", cascade: ["persist", "remove"], orphanRemoval: true)]
     private Collection $contents;
 
-    public function __construct()
-    {
+    public function __construct(
+        string           $slug,
+        ExerciseCategory $exerciseCategory
+    ) {
+        $this->id = Uuid::v7();
+
+        $this->slug             = $slug;
+        $this->exerciseCategory = $exerciseCategory;
+
         $this->muscles  = new ArrayCollection();
         $this->contents = new ArrayCollection();
     }
@@ -48,7 +57,7 @@ class Exercise
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
-    public function getId(): ?int
+    public function getId(): Uuid
     {
         return $this->id;
     }

@@ -7,10 +7,11 @@ use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Filters\FilterCollection;
 use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
+use Symfony\Component\Uid\Uuid;
 
 interface ExerciseDALInterface
 {
-    public function getById(string $id): ?Exercise;
+    public function getById(Uuid $id): ?Exercise;
 
     public function listExercises(
         int               $page = 1,

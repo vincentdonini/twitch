@@ -34,6 +34,7 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/exercises', name: 'exercise_')]
@@ -53,7 +54,7 @@ final readonly class ExerciseController
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
         description: 'Returns a list of exercises available in the system.',
-        summary    : 'List of exercises',
+        summary    : 'List of exercises.',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
@@ -90,7 +91,7 @@ final readonly class ExerciseController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[summary][like]',
-                description: 'Filter by exercise summary (partial match)',
+                description: 'Filter by exercise summary (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -100,7 +101,7 @@ final readonly class ExerciseController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[details][like]',
-                description: 'Filter by exercise details (partial match)',
+                description: 'Filter by exercise details (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -188,19 +189,21 @@ final readonly class ExerciseController
     #[Route(
         path        : '/{exerciseId}',
         name        : 'detail',
-        requirements: ['exerciseId' => '\d+'],
+        requirements: [
+            'exerciseId' => '[0-9a-fA-F\-]+',
+        ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_EXERCISE_VIEW)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
         description: 'Returns detailed information for a specific exercise.',
-        summary    : 'Get exercise details',
+        summary    : 'Get exercise details.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'Exercise details'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'Exercise not found'),
+            new OAT\Response(response: 200, description: 'Exercise details.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Exercise not found.'),
         ]
     )]
     public function detail(
@@ -210,7 +213,9 @@ final readonly class ExerciseController
     ): JsonResponse {
         try {
             $exercise = $useCase->execute(
-                new GetExerciseByIdHttp($exerciseId)
+                new GetExerciseByIdHttp(
+                    id: Uuid::fromString($exerciseId)
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(
@@ -243,20 +248,20 @@ final readonly class ExerciseController
         path        : '/{exerciseId}/contents',
         name        : 'contents_list',
         requirements: [
-            'exerciseId' => '\d+',
+            'exerciseId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_EXERCISE_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns all localized contents for an exercise',
-        summary    : 'List of all exercise contents',
+        description: 'Returns all localized contents for an exercise.',
+        summary    : 'List of all exercise contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of all exercise contents',
+                description: 'List of all exercise contents.',
                 content    : new OAT\JsonContent(
                     type : 'array',
                     items: new OAT\Items(
@@ -276,7 +281,9 @@ final readonly class ExerciseController
     ): JsonResponse {
         try {
             $exerciseContents = $useCase->execute(
-                new GetExerciseByIdHttp($exerciseId)
+                new GetExerciseByIdHttp(
+                    id: Uuid::fromString($exerciseId)
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
@@ -309,7 +316,7 @@ final readonly class ExerciseController
         path        : '/{exerciseId}/contents/{locale}',
         name        : 'content_upsert',
         requirements: [
-            'exerciseId' => '\d+',
+            'exerciseId' => '[0-9a-fA-F\-]+',
             'locale'     => '[a-z]{2}',
         ],
         methods     : ['PUT']
@@ -318,7 +325,7 @@ final readonly class ExerciseController
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
         description: 'Create or update exercise content for a given locale.',
-        summary    : 'Upsert exercise localized content',
+        summary    : 'Upsert exercise localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
@@ -334,11 +341,11 @@ final readonly class ExerciseController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully',
+                description: 'Contents upserted successfully.',
                 headers    : [
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted exercise contents'
+                        description: 'Resource ID of the upserted exercise contents.'
                     ),
                 ]
             ),
@@ -366,22 +373,27 @@ final readonly class ExerciseController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        return new JsonResponse(null, $statusCode);
+        $response = new JsonResponse(null, $statusCode);
+        if ($statusCode === Response::HTTP_NO_CONTENT) {
+            $response->headers->set('X-RESOURCE-ID', $exerciseId);
+        }
+
+        return $response;
     }
 
     #[Route(
         path        : '/{exerciseId}/contents',
         name        : 'contents_upsert_bulk',
         requirements: [
-            'exerciseId' => '\d+',
+            'exerciseId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['PUT']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_EXERCISE_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
-        description: 'Create or update multiple localized contents for an exercise',
-        summary    : 'Upsert multiple exercise contents',
+        description: 'Create or update multiple localized contents for an exercise.',
+        summary    : 'Upsert multiple exercise contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
@@ -403,11 +415,11 @@ final readonly class ExerciseController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully',
+                description: 'Contents upserted successfully.',
                 headers    : [
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted contents'
+                        description: 'Resource ID of the upserted contents.'
                     ),
                 ]
             ),
@@ -433,6 +445,11 @@ final readonly class ExerciseController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        return new JsonResponse(null, $statusCode);
+        $response = new JsonResponse(null, $statusCode);
+        if ($statusCode === Response::HTTP_NO_CONTENT) {
+            $response->headers->set('X-RESOURCE-ID', $exerciseId);
+        }
+
+        return $response;
     }
 }
