@@ -4,10 +4,10 @@ namespace App\UI\Adapters\Http\Muscle\MuscleArea;
 
 use App\Domain\Muscle\MuscleArea\GetMuscleAreaByIdDTOInterface;
 
-class GetMuscleAreaByIdHttp implements GetMuscleAreaByIdDTOInterface
+final readonly class GetMuscleAreaByIdHttp implements GetMuscleAreaByIdDTOInterface
 {
     public function __construct(
-        private readonly string $id,
+        private string $id,
     ) {
 
     }

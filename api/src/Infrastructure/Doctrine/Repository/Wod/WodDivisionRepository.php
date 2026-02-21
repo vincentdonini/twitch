@@ -7,6 +7,9 @@ use App\Domain\Wod\Ports\WodDivisionDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
+use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
+use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -51,57 +54,15 @@ class WodDivisionRepository extends AbstractEntityRepository implements WodDivis
     }
 
     public function listWodDivisions(
-        int $page = 1,
-        int $limit = 10,
-            $filters = []
+        int               $page = 1,
+        int               $limit = RequestPaginator::DEFAULT_LIMIT,
+        ?FilterCollection $filters = null,
+        ?SortCollection   $sorts = null,
     ): LightPaginator {
-        $locale = $this->getLocale();
-
         $qb = $this->createQueryBuilder('wd');
 
-        $hasJoinedContent = false;
-
-        if (!empty($filters['filters'])) {
-
-            // WodDivision
-            // ---------------------------------------------------------------------------------------------------------
-            if (!empty($filters['filters']['slug'])) {
-                $qb
-                    ->andWhere('wd.slug LIKE :slug')
-                    ->setParameter(
-                        'slug',
-                        sprintf(
-                            '%%%s%%',
-                            $filters['filters']['slug']
-                        )
-                    );
-            }
-
-            // ContentWodDivision
-            // ---------------------------------------------------------------------------------------------------------
-            $contentFilters = ['name', 'summary', 'details'];
-
-            foreach ($contentFilters as $field) {
-                if (!empty($filters['filters'][$field])) {
-                    if (!$hasJoinedContent) {
-                        $qb->join('wd.contents', 'wdc');
-                        $qb->andWhere('wdc.locale = :locale');
-                        $qb->setParameter('locale', $locale);
-                        $hasJoinedContent = true;
-                    }
-
-                    $qb->andWhere(sprintf('wdc.%s LIKE :%s', $field, $field))
-                        ->setParameter(
-                            $field,
-                            sprintf(
-                                '%%%s%%',
-                                $filters['filters'][$field]
-                            )
-                        );
-                }
-            }
-        }
-
+        // Pagination
+        // -------------------------------------------------------------------------------------------------------------
         $aggQb     = clone $qb;
         $aggResult = $aggQb
             ->select('COUNT(wd.id) as count')

@@ -15,4 +15,3 @@ interface ListBenchmarkDTOInterface
 
     public function getSorts(): ?SortCollection;
 }
-

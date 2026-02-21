@@ -7,6 +7,9 @@ use App\Domain\Wod\Ports\WodCategoryDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
+use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
+use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -42,65 +45,24 @@ class WodCategoryRepository extends AbstractEntityRepository implements WodCateg
     }
 
     public function listWodCategories(
-        int $page = 1,
-        int $limit = 10,
-            $filters = []
+        int               $page = 1,
+        int               $limit = RequestPaginator::DEFAULT_LIMIT,
+        ?FilterCollection $filters = null,
+        ?SortCollection   $sorts = null,
     ): LightPaginator {
-        $locale = $this->getLocale();
-
         $qb = $this->createQueryBuilder('wc');
 
-        $hasJoinedContent = false;
+        // Pagination
+        // -------------------------------------------------------------------------------------------------------------
 
-        if (!empty($filters['filters'])) {
-
-            // WodCategory
-            // ---------------------------------------------------------------------------------------------------------
-            if (!empty($filters['filters']['slug'])) {
-                $qb
-                    ->andWhere('wc.slug LIKE :slug')
-                    ->setParameter(
-                        'slug',
-                        sprintf(
-                            '%%%s%%',
-                            $filters['filters']['slug']
-                        )
-                    );
-            }
-
-            // ContentWodCategory
-            // ---------------------------------------------------------------------------------------------------------
-            $contentFilters = ['name', 'summary', 'details'];
-
-            foreach ($contentFilters as $field) {
-                if (!empty($filters['filters'][$field])) {
-                    if (!$hasJoinedContent) {
-                        $qb->join('wc.contents', 'wcc');
-                        $qb->andWhere('wcc.locale = :locale');
-                        $qb->setParameter('locale', $locale);
-                        $hasJoinedContent = true;
-                    }
-
-                    $qb->andWhere(sprintf('wcc.%s LIKE :%s', $field, $field))
-                        ->setParameter(
-                            $field,
-                            sprintf(
-                                '%%%s%%',
-                                $filters['filters'][$field]
-                            )
-                        );
-                }
-            }
-        }
-
-        $aggQb = clone $qb;
+        $aggQb     = clone $qb;
         $aggResult = $aggQb
             ->select('COUNT(wc.id) as count')
             ->resetDQLPart('orderBy')
             ->getQuery()
             ->getSingleResult();
 
-        $count = (int) $aggResult['count'];
+        $count = (int)$aggResult['count'];
 
         $items = $qb
             ->setFirstResult(($page - 1) * $limit)

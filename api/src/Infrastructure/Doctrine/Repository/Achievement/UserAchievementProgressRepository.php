@@ -10,6 +10,7 @@ use App\Domain\User\Entity\User;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
+use App\Infrastructure\Paginator\RequestPaginator;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Uid\Uuid;
@@ -43,7 +44,7 @@ class UserAchievementProgressRepository extends AbstractEntityRepository impleme
 
     public function listUserAchievementProgresses(
         int   $page = 1,
-        int   $limit = 10,
+        int   $limit = RequestPaginator::DEFAULT_LIMIT,
         ?User $user = null,
     ): LightPaginator {
         $qb = $this->createQueryBuilder('uap');

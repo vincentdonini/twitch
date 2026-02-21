@@ -15,4 +15,3 @@ interface ListEquipmentsDTOInterface
 
     public function getSorts(): ?SortCollection;
 }
-

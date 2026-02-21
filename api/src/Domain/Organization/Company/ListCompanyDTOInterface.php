@@ -15,4 +15,3 @@ interface ListCompanyDTOInterface
 
     public function getSorts(): ?SortCollection;
 }
-

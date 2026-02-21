@@ -4,8 +4,10 @@ namespace App\UI\Adapters\Http\Wod\WodScore;
 
 use App\Domain\Wod\Wod\GetWodLeaderboardDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
+use App\Infrastructure\Sorts\SortCollection;
 
-readonly class GetWodLeaderboardHttp implements GetWodLeaderboardDTOInterface
+final readonly class GetWodLeaderboardHttp implements GetWodLeaderboardDTOInterface
 {
     public function __construct(
         private string            $wodId,
@@ -46,11 +48,16 @@ readonly class GetWodLeaderboardHttp implements GetWodLeaderboardDTOInterface
 
     public function getLimit(): int
     {
-        return $this->limit ?? 15;
+        return $this->limit ?? RequestPaginator::DEFAULT_LIMIT;
     }
 
     public function getFilters(): ?FilterCollection
     {
         return $this->filters;
+    }
+
+    public function getSorts(): ?SortCollection
+    {
+        return $this->sorts;
     }
 }

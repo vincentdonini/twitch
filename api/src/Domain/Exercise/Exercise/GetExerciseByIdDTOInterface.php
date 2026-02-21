@@ -7,4 +7,3 @@ interface GetExerciseByIdDTOInterface
 {
     public function getId(): string;
 }
-

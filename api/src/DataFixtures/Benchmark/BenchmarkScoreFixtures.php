@@ -17,7 +17,7 @@ class BenchmarkScoreFixtures extends Fixture implements DependentFixtureInterfac
 {
     public function load(ObjectManager $manager): void
     {
-        $jsonFile = __DIR__ . '/../../../default_data/benchmark/benchmark_scores.json';
+        $jsonFile = __DIR__ . '/../../../default_data/benchmark/benchmarkScores.json';
 
         if (!file_exists($jsonFile)) {
             throw new Exception("Benchmark scores JSON file not found: $jsonFile");

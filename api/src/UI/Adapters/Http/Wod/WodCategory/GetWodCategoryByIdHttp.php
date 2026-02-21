@@ -4,10 +4,10 @@ namespace App\UI\Adapters\Http\Wod\WodCategory;
 
 use App\Domain\Wod\WodCategory\GetWodCategoryByIdDTOInterface;
 
-class GetWodCategoryByIdHttp implements GetWodCategoryByIdDTOInterface
+final readonly class GetWodCategoryByIdHttp implements GetWodCategoryByIdDTOInterface
 {
     public function __construct(
-        private readonly string $id,
+        private string $id,
     ) {
     }
 

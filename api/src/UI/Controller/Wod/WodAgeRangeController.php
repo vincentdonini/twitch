@@ -50,26 +50,6 @@ final readonly class WodAgeRangeController
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
             new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
-            new OAT\Parameter(
-                name       : 'slug',
-                description: 'Filter result by slug.',
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-            new OAT\Parameter(
-                name       : 'title',
-                description: 'Filter result by title.',
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-            new OAT\Parameter(
-                name       : 'summary',
-                description: 'Filter result by summary.',
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-            new OAT\Parameter(
-                name       : 'details',
-                description: 'Filter result by details.',
-                schema     : new OAT\Schema(type: 'string'),
-            ),
         ],
         responses  : [
             new OAT\Response(response: 200, description: 'List of WOD age ranges'),
@@ -87,11 +67,8 @@ final readonly class WodAgeRangeController
         try {
             $paginator = $useCase->execute(
                 new ListWodAgeRangesHttp(
-                    page   : $paginatorValues->getPage(),
-                    limit  : $paginatorValues->getLimit(),
-                    filters: [
-                        'filters' => $request->query->all('filters'),
-                    ]
+                    page : $paginatorValues->getPage(),
+                    limit: $paginatorValues->getLimit(),
                 )
             );
         } catch (InvalidArgumentException) {

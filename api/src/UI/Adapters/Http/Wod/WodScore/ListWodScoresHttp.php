@@ -4,14 +4,16 @@ namespace App\UI\Adapters\Http\Wod\WodScore;
 
 use App\Domain\Wod\WodScore\ListWodScoresDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 
-readonly class ListWodScoresHttp implements ListWodScoresDTOInterface
+final readonly class ListWodScoresHttp implements ListWodScoresDTOInterface
 {
     public function __construct(
         private ?int              $page = null,
         private ?int              $limit = null,
         private ?FilterCollection $filters = null,
+        private ?SortCollection   $sorts = null,
     ) {
     }
 
@@ -22,11 +24,16 @@ readonly class ListWodScoresHttp implements ListWodScoresDTOInterface
 
     public function getLimit(): int
     {
-        return $this->limit ?? 15;
+        return $this->limit ?? RequestPaginator::DEFAULT_LIMIT;
     }
 
     public function getFilters(): ?FilterCollection
     {
         return $this->filters;
+    }
+
+    public function getSorts(): ?SortCollection
+    {
+        return $this->sorts;
     }
 }

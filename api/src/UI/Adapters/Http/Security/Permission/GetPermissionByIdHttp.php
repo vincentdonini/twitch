@@ -5,10 +5,10 @@ namespace App\UI\Adapters\Http\Security\Permission;
 
 use App\Domain\Security\Permission\GetPermissionByIdDTOInterface;
 
-class GetPermissionByIdHttp implements GetPermissionByIdDTOInterface
+final readonly class GetPermissionByIdHttp implements GetPermissionByIdDTOInterface
 {
     public function __construct(
-        private readonly string $id,
+        private string $id,
     ) {
 
     }

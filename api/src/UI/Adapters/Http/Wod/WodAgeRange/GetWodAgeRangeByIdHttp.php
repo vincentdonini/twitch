@@ -4,10 +4,10 @@ namespace App\UI\Adapters\Http\Wod\WodAgeRange;
 
 use App\Domain\Wod\WodAgeRange\GetWodAgeRangeByIdDTOInterface;
 
-class GetWodAgeRangeByIdHttp implements GetWodAgeRangeByIdDTOInterface
+final readonly class GetWodAgeRangeByIdHttp implements GetWodAgeRangeByIdDTOInterface
 {
     public function __construct(
-        private readonly string $id,
+        private string $id,
     ) {
 
     }

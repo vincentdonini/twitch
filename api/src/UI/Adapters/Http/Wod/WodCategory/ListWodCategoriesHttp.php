@@ -3,13 +3,17 @@
 namespace App\UI\Adapters\Http\Wod\WodCategory;
 
 use App\Domain\Wod\WodCategory\ListWodCategoriesDTOInterface;
+use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
+use App\Infrastructure\Sorts\SortCollection;
 
-class ListWodCategoriesHttp implements ListWodCategoriesDTOInterface
+final readonly class ListWodCategoriesHttp implements ListWodCategoriesDTOInterface
 {
     public function __construct(
-        private readonly ?int   $page = null,
-        private readonly ?int   $limit = null,
-        private readonly ?array $filters = null,
+        private ?int              $page = null,
+        private ?int              $limit = null,
+        private ?FilterCollection $filters = null,
+        private ?SortCollection   $sorts = null,
     ) {
     }
 
@@ -20,11 +24,16 @@ class ListWodCategoriesHttp implements ListWodCategoriesDTOInterface
 
     public function getLimit(): int
     {
-        return $this->limit ?? 15;
+        return $this->limit ?? RequestPaginator::DEFAULT_LIMIT;
     }
 
-    public function getFilters(): ?array
+    public function getFilters(): ?FilterCollection
     {
         return $this->filters;
+    }
+
+    public function getSorts(): ?SortCollection
+    {
+        return $this->sorts;
     }
 }

@@ -4,6 +4,7 @@ namespace App\UI\Adapters\Http\Achievement\AchievementCategory;
 
 use App\Domain\Achievement\AchievementCategory\ListAchievementCategoryDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 
 final readonly class ListAchievementCategoriesHttp implements ListAchievementCategoryDTOInterface
@@ -24,7 +25,7 @@ final readonly class ListAchievementCategoriesHttp implements ListAchievementCat
 
     public function getLimit(): int
     {
-        return $this->limit ?? 15;
+        return $this->limit ?? RequestPaginator::DEFAULT_LIMIT;
     }
 
     public function getFilters(): ?FilterCollection

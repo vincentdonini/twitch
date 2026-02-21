@@ -50,26 +50,6 @@ final readonly class WodCategoryController
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
             new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
-            new OAT\Parameter(
-                name       : 'slug',
-                description: 'Filter result by slug.',
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-            new OAT\Parameter(
-                name       : 'title',
-                description: 'Filter result by title.',
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-            new OAT\Parameter(
-                name       : 'summary',
-                description: 'Filter result by summary.',
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-            new OAT\Parameter(
-                name       : 'details',
-                description: 'Filter result by details.',
-                schema     : new OAT\Schema(type: 'string'),
-            ),
         ],
         responses  : [
             new OAT\Response(response: 200, description: 'List of WOD categories'),
@@ -89,9 +69,6 @@ final readonly class WodCategoryController
                 new ListWodCategoriesHttp(
                     page   : $paginatorValues->getPage(),
                     limit  : $paginatorValues->getLimit(),
-                    filters: [
-                        'filters' => $request->query->all('filters'),
-                    ]
                 )
             );
         } catch (InvalidArgumentException) {
@@ -100,7 +77,6 @@ final readonly class WodCategoryController
 
         $dtoItems = $this->wodCategoryService->transformCollectionToDTO(
             wodCategories: $paginator->getItems(),
-            filters      : null
         );
 
         return new JsonResponse(

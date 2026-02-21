@@ -87,11 +87,8 @@ final readonly class WodTypeController
         try {
             $paginator = $useCase->execute(
                 new ListWodTypesHttp(
-                    page   : $paginatorValues->getPage(),
-                    limit  : $paginatorValues->getLimit(),
-                    filters: [
-                        'filters' => $request->query->all('filters'),
-                    ]
+                    page : $paginatorValues->getPage(),
+                    limit: $paginatorValues->getLimit(),
                 )
             );
         } catch (InvalidArgumentException) {

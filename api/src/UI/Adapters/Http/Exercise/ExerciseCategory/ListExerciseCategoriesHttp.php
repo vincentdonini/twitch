@@ -4,13 +4,14 @@ namespace App\UI\Adapters\Http\Exercise\ExerciseCategory;
 
 use App\Domain\Exercise\ExerciseCategory\ListExerciseCategoryDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 
-class ListExerciseCategoriesHttp implements ListExerciseCategoryDTOInterface
+final readonly class ListExerciseCategoriesHttp implements ListExerciseCategoryDTOInterface
 {
     public function __construct(
-        private readonly ?int     $page = null,
-        private readonly ?int     $limit = null,
+        private ?int              $page = null,
+        private ?int              $limit = null,
         private ?FilterCollection $filters = null,
         private ?SortCollection   $sorts = null,
     ) {
@@ -24,7 +25,7 @@ class ListExerciseCategoriesHttp implements ListExerciseCategoryDTOInterface
 
     public function getLimit(): int
     {
-        return $this->limit ?? 15;
+        return $this->limit ?? RequestPaginator::DEFAULT_LIMIT;
     }
 
     public function getFilters(): ?FilterCollection

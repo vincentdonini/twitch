@@ -5,10 +5,10 @@ namespace App\UI\Adapters\Http\Exercise\Exercise;
 
 use App\Domain\Exercise\Exercise\GetExerciseByIdDTOInterface;
 
-class GetExerciseByIdHttp implements GetExerciseByIdDTOInterface
+final readonly class GetExerciseByIdHttp implements GetExerciseByIdDTOInterface
 {
     public function __construct(
-        private readonly string $id,
+        private string $id,
     ) {
 
     }

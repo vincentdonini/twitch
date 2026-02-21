@@ -4,7 +4,7 @@ namespace App\UI\Adapters\Http\Wod\WodScore;
 
 use App\Domain\Wod\WodScore\GetWodScoreByIdDTOInterface;
 
-readonly class GetWodScoreByIdHttp implements GetWodScoreByIdDTOInterface
+final readonly class GetWodScoreByIdHttp implements GetWodScoreByIdDTOInterface
 {
     public function __construct(
         private string $id,

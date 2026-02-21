@@ -4,6 +4,7 @@ namespace App\UI\Adapters\Http\Organization\Place;
 
 use App\Domain\Organization\Place\ListPlaceDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 
 final readonly class ListPlacesHttp implements ListPlaceDTOInterface
@@ -24,7 +25,7 @@ final readonly class ListPlacesHttp implements ListPlaceDTOInterface
 
     public function getLimit(): int
     {
-        return $this->limit ?? 15;
+        return $this->limit ?? RequestPaginator::DEFAULT_LIMIT;
     }
 
     public function getFilters(): ?FilterCollection

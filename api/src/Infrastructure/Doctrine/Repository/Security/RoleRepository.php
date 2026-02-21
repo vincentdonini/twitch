@@ -4,12 +4,11 @@ namespace App\Infrastructure\Doctrine\Repository\Security;
 
 use App\Domain\Security\Entity\Role;
 use App\Domain\Security\Ports\RoleDALInterface;
-use App\Infrastructure\Doctrine\Filters\DoctrineFilterApplier;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
-use App\Infrastructure\Doctrine\Sorts\DoctrineSortApplier;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -46,24 +45,12 @@ class RoleRepository extends AbstractEntityRepository implements RoleDALInterfac
     }
 
     public function listRoles(
-        int              $page = 1,
-        int              $limit = 10,
-        FilterCollection $filters = null,
-        SortCollection   $sorts = null,
+        int               $page = 1,
+        int               $limit = RequestPaginator::DEFAULT_LIMIT,
+        ?FilterCollection $filters = null,
+        ?SortCollection   $sorts = null,
     ): LightPaginator {
         $qb = $this->createQueryBuilder('r');
-
-        // Filters
-        // -------------------------------------------------------------------------------------------------------------
-//        if (!$filters->isEmpty()) {
-//            (new DoctrineFilterApplier())->apply($qb, 'r', $filters);
-//        }
-
-        // Sort
-        // -------------------------------------------------------------------------------------------------------------
-//        if (!$sorts->isEmpty()) {
-//            (new DoctrineSortApplier())->apply($qb, 'r', $sorts);
-//        }
 
         // Pagination
         // -------------------------------------------------------------------------------------------------------------

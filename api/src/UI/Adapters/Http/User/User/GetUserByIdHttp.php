@@ -5,10 +5,10 @@ namespace App\UI\Adapters\Http\User\User;
 use App\Domain\User\User\GetUserByIdDTOInterface;
 use Symfony\Component\Uid\Uuid;
 
-class GetUserByIdHttp implements GetUserByIdDTOInterface
+final readonly class GetUserByIdHttp implements GetUserByIdDTOInterface
 {
     public function __construct(
-        private readonly Uuid $id,
+        private Uuid $id,
     ) {
 
     }

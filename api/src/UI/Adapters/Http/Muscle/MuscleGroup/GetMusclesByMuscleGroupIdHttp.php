@@ -4,10 +4,10 @@ namespace App\UI\Adapters\Http\Muscle\MuscleGroup;
 
 use App\Domain\Muscle\MuscleGroup\GetMusclesByMuscleGroupIdDTOInterface;
 
-class GetMusclesByMuscleGroupIdHttp implements GetMusclesByMuscleGroupIdDTOInterface
+final readonly class GetMusclesByMuscleGroupIdHttp implements GetMusclesByMuscleGroupIdDTOInterface
 {
     public function __construct(
-        private readonly string $muscleGroupId,
+        private string $muscleGroupId,
     ) {
 
     }

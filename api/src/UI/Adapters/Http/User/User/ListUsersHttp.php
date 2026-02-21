@@ -7,11 +7,11 @@ use App\Infrastructure\Filters\FilterCollection;
 use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 
-class ListUsersHttp implements ListUsersDTOInterface
+final readonly class ListUsersHttp implements ListUsersDTOInterface
 {
     public function __construct(
-        private readonly ?int     $page = null,
-        private readonly ?int     $limit = null,
+        private ?int              $page = null,
+        private ?int              $limit = null,
         private ?FilterCollection $filters = null,
         private ?SortCollection   $sorts = null,
     ) {

@@ -4,9 +4,10 @@ namespace App\UI\Adapters\Http\Benchmark\BenchmarkScore;
 
 use App\Domain\Benchmark\BenchmarkScore\ListBenchmarkScoresDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 
-readonly class ListBenchmarkScoresHttp implements ListBenchmarkScoresDTOInterface
+final readonly class ListBenchmarkScoresHttp implements ListBenchmarkScoresDTOInterface
 {
     public function __construct(
         private ?int              $page = null,
@@ -23,7 +24,7 @@ readonly class ListBenchmarkScoresHttp implements ListBenchmarkScoresDTOInterfac
 
     public function getLimit(): int
     {
-        return $this->limit ?? 15;
+        return $this->limit ?? RequestPaginator::DEFAULT_LIMIT;
     }
 
     public function getFilters(): ?FilterCollection

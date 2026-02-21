@@ -4,13 +4,14 @@ namespace App\UI\Adapters\Http\Muscle\MuscleArea;
 
 use App\Domain\Muscle\MuscleArea\ListMuscleAreasDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 
-class ListMuscleAreasHttp implements ListMuscleAreasDTOInterface
+final readonly class ListMuscleAreasHttp implements ListMuscleAreasDTOInterface
 {
     public function __construct(
-        private readonly ?int     $page = null,
-        private readonly ?int     $limit = null,
+        private ?int              $page = null,
+        private ?int              $limit = null,
         private ?FilterCollection $filters = null,
         private ?SortCollection   $sorts = null,
     ) {
@@ -24,7 +25,7 @@ class ListMuscleAreasHttp implements ListMuscleAreasDTOInterface
 
     public function getLimit(): int
     {
-        return $this->limit ?? 15;
+        return $this->limit ?? RequestPaginator::DEFAULT_LIMIT;
     }
 
     public function getFilters(): ?FilterCollection

@@ -4,9 +4,10 @@ namespace App\UI\Adapters\Http\Security\Role;
 
 use App\Domain\Security\Role\listPermissionsByRoleDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 
-readonly class listPermissionsByRoleHttp implements listPermissionsByRoleDTOInterface
+final readonly class listPermissionsByRoleHttp implements listPermissionsByRoleDTOInterface
 {
     public function __construct(
         private string            $id,
@@ -29,7 +30,7 @@ readonly class listPermissionsByRoleHttp implements listPermissionsByRoleDTOInte
 
     public function getLimit(): int
     {
-        return $this->limit ?? 15;
+        return $this->limit ?? RequestPaginator::DEFAULT_LIMIT;
     }
 
     public function getFilters(): ?FilterCollection

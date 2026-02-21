@@ -2,12 +2,12 @@
 
 namespace App\UI\Adapters\Http\Security\Permission;
 
-use App\Domain\Equipment\Equipment\ListEquipmentsDTOInterface;
 use App\Domain\Security\Permission\ListPermissionDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 
-readonly class ListPermissionHttp implements ListPermissionDTOInterface
+final readonly class ListPermissionHttp implements ListPermissionDTOInterface
 {
     public function __construct(
         private ?int              $page = null,
@@ -25,7 +25,7 @@ readonly class ListPermissionHttp implements ListPermissionDTOInterface
 
     public function getLimit(): int
     {
-        return $this->limit ?? 15;
+        return $this->limit ?? RequestPaginator::DEFAULT_LIMIT;
     }
 
     public function getFilters(): ?FilterCollection

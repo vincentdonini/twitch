@@ -10,6 +10,7 @@ use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
 use App\Infrastructure\Doctrine\Sorts\DoctrineSortApplier;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -55,10 +56,10 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
     }
 
     public function listWods(
-        int              $page = 1,
-        int              $limit = 10,
-        FilterCollection $filters = null,
-        SortCollection   $sorts = null,
+        int               $page = 1,
+        int               $limit = RequestPaginator::DEFAULT_LIMIT,
+        ?FilterCollection $filters = null,
+        ?SortCollection   $sorts = null,
     ): LightPaginator {
         $qb = $this->createQueryBuilder('w');
 
@@ -103,7 +104,7 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
 
     public function countWods(): int
     {
-        return (int) $this->createQueryBuilder('w')
+        return (int)$this->createQueryBuilder('w')
             ->select('COUNT(w.id)')
             ->getQuery()
             ->getSingleScalarResult();
@@ -111,7 +112,7 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
 
     public function countByWodCategorySlug(string $wodCategorySlug): int
     {
-        return (int) $this->createQueryBuilder('w')
+        return (int)$this->createQueryBuilder('w')
             ->join('w.wodCategory', 'wc')
             ->select('COUNT(w.id)')
             ->where('wc.slug = :slug')
@@ -122,7 +123,7 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
 
     public function countByName(string $name): int
     {
-        return (int) $this->createQueryBuilder('w')
+        return (int)$this->createQueryBuilder('w')
             ->select('COUNT(w.id)')
             ->where('w.name LIKE :name')
             ->setParameter('name', $name . '%')

@@ -3,6 +3,7 @@
 namespace App\Domain\Wod\Wod;
 
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Sorts\SortCollection;
 
 interface GetWodLeaderboardDTOInterface
 {
@@ -19,5 +20,6 @@ interface GetWodLeaderboardDTOInterface
     public function getLimit(): int;
 
     public function getFilters(): ?FilterCollection;
-}
 
+    public function getSorts(): ?SortCollection;
+}

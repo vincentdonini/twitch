@@ -412,7 +412,9 @@ final class BenchmarkController extends AbstractController
     #[Route(
         path        : '/{benchmarkId}/contents',
         name        : 'contents_list',
-        requirements: ['benchmarkId' => '\d+'],
+        requirements: [
+            'benchmarkId' => '[0-9a-fA-F\-]+'
+        ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_BENCHMARK_LIST)]
@@ -434,7 +436,9 @@ final class BenchmarkController extends AbstractController
     ): JsonResponse {
         try {
             $wodCategoryContents = $useCase->execute(
-                new GetBenchmarkByIdHttp($benchmarkId)
+                new GetBenchmarkByIdHttp(
+                    id: Uuid::fromString($benchmarkId)
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
@@ -467,7 +471,7 @@ final class BenchmarkController extends AbstractController
         path        : '/{benchmarkId}/contents/{locale}',
         name        : 'content_upsert',
         requirements: [
-            'benchmarkId' => '\d+',
+            'benchmarkId' => '[0-9a-fA-F\-]+',
             'locale'      => '[a-z]{2}',
         ],
         methods     : ['PUT']

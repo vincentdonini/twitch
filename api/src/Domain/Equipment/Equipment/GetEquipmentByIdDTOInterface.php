@@ -6,4 +6,3 @@ interface GetEquipmentByIdDTOInterface
 {
     public function getId(): string;
 }
-

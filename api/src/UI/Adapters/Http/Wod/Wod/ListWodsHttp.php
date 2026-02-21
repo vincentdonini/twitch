@@ -4,6 +4,7 @@ namespace App\UI\Adapters\Http\Wod\Wod;
 
 use App\Domain\Wod\Wod\ListWodDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 
 final readonly class ListWodsHttp implements ListWodDTOInterface
@@ -24,7 +25,7 @@ final readonly class ListWodsHttp implements ListWodDTOInterface
 
     public function getLimit(): int
     {
-        return $this->limit ?? 15;
+        return $this->limit ?? RequestPaginator::DEFAULT_LIMIT;
     }
 
     public function getFilters(): ?FilterCollection

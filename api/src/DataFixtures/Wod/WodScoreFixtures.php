@@ -20,7 +20,7 @@ class WodScoreFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
-        $jsonFile = __DIR__ . '/../../../default_data/wod/wod_scores.json';
+        $jsonFile = __DIR__ . '/../../../default_data/wod/wodScores.json';
 
         if (!file_exists($jsonFile)) {
             throw new Exception("JSON file not found: $jsonFile");

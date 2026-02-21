@@ -4,10 +4,10 @@ namespace App\UI\Adapters\Http\Exercise\ExerciseCategory;
 
 use App\Domain\Exercise\ExerciseCategory\GetExerciseCategoryByIdDTOInterface;
 
-class GetExerciseCategoryByIdHttp implements GetExerciseCategoryByIdDTOInterface
+final readonly class GetExerciseCategoryByIdHttp implements GetExerciseCategoryByIdDTOInterface
 {
     public function __construct(
-        private readonly string $id,
+        private string $id,
     ) {
 
     }

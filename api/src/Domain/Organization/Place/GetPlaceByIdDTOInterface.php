@@ -9,4 +9,3 @@ interface GetPlaceByIdDTOInterface
 {
     public function getId(): Uuid;
 }
-

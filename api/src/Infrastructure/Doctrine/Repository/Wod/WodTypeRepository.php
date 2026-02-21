@@ -7,6 +7,9 @@ use App\Domain\Wod\Ports\WodTypeDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
+use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
+use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -42,65 +45,23 @@ class WodTypeRepository extends AbstractEntityRepository implements WodTypeDALIn
     }
 
     public function listWodTypes(
-        int $page = 1,
-        int $limit = 10,
-            $filters = []
+        int               $page = 1,
+        int               $limit = RequestPaginator::DEFAULT_LIMIT,
+        ?FilterCollection $filters = null,
+        ?SortCollection   $sorts = null,
     ): LightPaginator {
-        $locale = $this->getLocale();
-
         $qb = $this->createQueryBuilder('wt');
 
-        $hasJoinedContent = false;
-
-        if (!empty($filters['filters'])) {
-
-            // WodType
-            // ---------------------------------------------------------------------------------------------------------
-            if (!empty($filters['filters']['slug'])) {
-                $qb
-                    ->andWhere('wt.slug LIKE :slug')
-                    ->setParameter(
-                        'slug',
-                        sprintf(
-                            '%%%s%%',
-                            $filters['filters']['slug']
-                        )
-                    );
-            }
-
-            // ContentWodType
-            // ---------------------------------------------------------------------------------------------------------
-            $contentFilters = ['name', 'summary', 'details'];
-
-            foreach ($contentFilters as $field) {
-                if (!empty($filters['filters'][$field])) {
-                    if (!$hasJoinedContent) {
-                        $qb->join('wt.contents', 'wtc');
-                        $qb->andWhere('wtc.locale = :locale');
-                        $qb->setParameter('locale', $locale);
-                        $hasJoinedContent = true;
-                    }
-
-                    $qb->andWhere(sprintf('wtc.%s LIKE :%s', $field, $field))
-                        ->setParameter(
-                            $field,
-                            sprintf(
-                                '%%%s%%',
-                                $filters['filters'][$field]
-                            )
-                        );
-                }
-            }
-        }
-
-        $aggQb = clone $qb;
+        // Pagination
+        // -------------------------------------------------------------------------------------------------------------
+        $aggQb     = clone $qb;
         $aggResult = $aggQb
             ->select('COUNT(wt.id) as count')
             ->resetDQLPart('orderBy')
             ->getQuery()
             ->getSingleResult();
 
-        $count = (int) $aggResult['count'];
+        $count = (int)$aggResult['count'];
 
         $items = $qb
             ->setFirstResult(($page - 1) * $limit)

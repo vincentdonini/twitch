@@ -4,10 +4,10 @@ namespace App\UI\Adapters\Http\Wod\WodDivision;
 
 use App\Domain\Wod\WodDivision\GetWodDivisionByIdDTOInterface;
 
-class GetWodDivisionByIdHttp implements GetWodDivisionByIdDTOInterface
+final readonly class GetWodDivisionByIdHttp implements GetWodDivisionByIdDTOInterface
 {
     public function __construct(
-        private readonly string $id,
+        private string $id,
     ) {
 
     }

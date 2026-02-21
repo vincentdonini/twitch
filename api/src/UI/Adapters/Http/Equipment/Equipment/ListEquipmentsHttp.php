@@ -4,9 +4,10 @@ namespace App\UI\Adapters\Http\Equipment\Equipment;
 
 use App\Domain\Equipment\Equipment\ListEquipmentsDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 
-readonly class ListEquipmentsHttp implements ListEquipmentsDTOInterface
+final readonly class ListEquipmentsHttp implements ListEquipmentsDTOInterface
 {
     public function __construct(
         private ?int              $page = null,
@@ -24,7 +25,7 @@ readonly class ListEquipmentsHttp implements ListEquipmentsDTOInterface
 
     public function getLimit(): int
     {
-        return $this->limit ?? 15;
+        return $this->limit ?? RequestPaginator::DEFAULT_LIMIT;
     }
 
     public function getFilters(): ?FilterCollection

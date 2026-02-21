@@ -7,6 +7,9 @@ use App\Domain\Wod\Ports\WodAgeRangeDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
+use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
+use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -51,65 +54,23 @@ class WodAgeRangeRepository extends AbstractEntityRepository implements WodAgeRa
     }
 
     public function listWodAgeRanges(
-        int $page = 1,
-        int $limit = 10,
-            $filters = []
+        int               $page = 1,
+        int               $limit = RequestPaginator::DEFAULT_LIMIT,
+        ?FilterCollection $filters = null,
+        ?SortCollection   $sorts = null,
     ): LightPaginator {
-        $locale = $this->getLocale();
-
         $qb = $this->createQueryBuilder('war');
 
-        $hasJoinedContent = false;
-
-        if (!empty($filters['filters'])) {
-
-            // WodAgeRange
-            // ---------------------------------------------------------------------------------------------------------
-            if (!empty($filters['filters']['slug'])) {
-                $qb
-                    ->andWhere('war.slug LIKE :slug')
-                    ->setParameter(
-                        'slug',
-                        sprintf(
-                            '%%%s%%',
-                            $filters['filters']['slug']
-                        )
-                    );
-            }
-
-            // ContentWodAgeRange
-            // ---------------------------------------------------------------------------------------------------------
-//            $contentFilters = ['name', 'summary', 'details'];
-//
-//            foreach ($contentFilters as $field) {
-//                if (!empty($filters['filters'][$field])) {
-//                    if (!$hasJoinedContent) {
-//                        $qb->join('war.contents', 'warc');
-//                        $qb->andWhere('warc.locale = :locale');
-//                        $qb->setParameter('locale', $locale);
-//                        $hasJoinedContent = true;
-//                    }
-//
-//                    $qb->andWhere(sprintf('warc.%s LIKE :%s', $field, $field))
-//                        ->setParameter(
-//                            $field,
-//                            sprintf(
-//                                '%%%s%%',
-//                                $filters['filters'][$field]
-//                            )
-//                        );
-//                }
-//            }
-        }
-
-        $aggQb = clone $qb;
+        // Pagination
+        // -------------------------------------------------------------------------------------------------------------
+        $aggQb     = clone $qb;
         $aggResult = $aggQb
             ->select('COUNT(war.id) as count')
             ->resetDQLPart('orderBy')
             ->getQuery()
             ->getSingleResult();
 
-        $count = (int) $aggResult['count'];
+        $count = (int)$aggResult['count'];
 
         $items = $qb
             ->setFirstResult(($page - 1) * $limit)

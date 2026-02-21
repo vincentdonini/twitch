@@ -10,9 +10,11 @@ use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
 use App\Infrastructure\Doctrine\Sorts\DoctrineSortApplier;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class BenchmarkRepository extends AbstractEntityRepository implements BenchmarkDALInterface
 {
@@ -36,16 +38,16 @@ class BenchmarkRepository extends AbstractEntityRepository implements BenchmarkD
         return Benchmark::class;
     }
 
-    public function getById(string $id): ?Benchmark
+    public function getById(Uuid $id): ?Benchmark
     {
         return $this->find($id);
     }
 
     public function listBenchmarks(
-        int              $page = 1,
-        int              $limit = 10,
-        FilterCollection $filters = null,
-        SortCollection   $sorts = null,
+        int               $page = 1,
+        int               $limit = RequestPaginator::DEFAULT_LIMIT,
+        ?FilterCollection $filters = null,
+        ?SortCollection   $sorts = null,
     ): LightPaginator {
         $qb = $this->createQueryBuilder('b');
 

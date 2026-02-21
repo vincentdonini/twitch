@@ -15,10 +15,10 @@ interface WodDALInterface
     public function getByName(string $name): ?Wod;
 
     public function listWods(
-        int              $page = 1,
-        int              $limit = RequestPaginator::DEFAULT_LIMIT,
-        FilterCollection $filters = null,
-        SortCollection   $sorts = null
+        int               $page = 1,
+        int               $limit = RequestPaginator::DEFAULT_LIMIT,
+        ?FilterCollection $filters = null,
+        ?SortCollection   $sorts = null
     ): LightPaginator;
 
     public function countWods(): int;
