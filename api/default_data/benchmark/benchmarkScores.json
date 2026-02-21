@@ -1,0 +1,54 @@
+[
+  {
+    "user": "admin@woder.fr",
+    "scores": [
+      {
+        "benchmark": "1RM Deadlift",
+        "weight": 150,
+        "performedAt": "2019-03-07 13:51:00",
+        "private": true,
+        "notes": "Super forme !"
+      },
+      {
+        "benchmark": "1RM Squat Clean",
+        "weight": 92.5,
+        "performedAt": "2026-01-19 13:09:00",
+        "private": false,
+        "notes": "Reprise de l'haltéro après une longue période de creux. Bonne forme avec de très bonnes sensations. Echec à 95kg avant de réussir la perf'."
+      },
+      {
+        "benchmark": "5RM Back Squat",
+        "weight": 100,
+        "performedAt": "2026-01-23 08:45:00",
+        "private": false,
+        "notes": "Très bonnes sensations. Benchmark performé après un WOD. Progression possible."
+      },
+      {
+        "benchmark": "Max Push-ups",
+        "repetitions": 30,
+        "performedAt": "2026-02-11 15:57:00",
+        "private": false,
+        "notes": "Test rapide sans préparation particulière, juste pour avoir une valeur de référence"
+      }
+    ]
+  },
+  {
+    "user": "user@woder.fr",
+    "scores": [
+      {
+        "benchmark": "1RM Squat Clean",
+        "weight": 80,
+        "performedAt": "2025-01-19 13:09:00",
+        "private": false,
+        "notes": "USER"
+      },
+      {
+        "benchmark": "1RM Back Squat",
+        "weight": 100,
+        "performedAt": "2025-01-23 08:45:00",
+        "private": false,
+        "notes": "USER"
+      }
+    ]
+  }
+]

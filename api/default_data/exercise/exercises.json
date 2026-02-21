@@ -5469,5 +5469,25 @@
         "details": ""
       }
     }
+  },
+
+  {
+    "slug":"swim",
+    "movements":["swim"],
+    "equipment":null,
+    "category":"cardio",
+    "muscles":[14,1,11,15,34,22,33,17,25,5],
+    "contents": {
+      "fr": {
+        "title": "Swim",
+        "summary": "",
+        "details": ""
+      },
+      "en": {
+        "title": "Swim",
+        "summary": "",
+        "details": ""
+      }
+    }
   }
 ]

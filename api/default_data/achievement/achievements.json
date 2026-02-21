@@ -1,0 +1,2430 @@
+{
+  "categories": [
+    {
+      "code": "FIRST_STEPS_MILESTONES",
+      "contents": {
+        "fr": {
+          "title": "Premiers pas & Étapes clefs",
+          "description": "Les débuts comptent ! Débloque ces succès en réalisant tes premières activités et en franchissant les premières étapes de ton parcours sportif."
+        },
+        "en": {
+          "title": "First Steps & Milestones",
+          "description": "Every journey starts somewhere! Unlock these achievements by completing your first activities and hitting your early fitness milestones."
+        }
+      },
+      "groups": [
+        {
+          "code": "GENERAL",
+          "contents": {
+            "fr": {
+              "title": "Général",
+              "description": "Débloque ces succès en accomplissant tes premiers WODs, en enregistrant tes premiers PRs, et en participant à tes premières activités sportives. Parfait pour poser les bases de ton parcours !"
+            },
+            "en": {
+              "title": "General",
+              "description": "Unlock these achievements by completing your first WODs, recording your first PRs, and participating in your first fitness activities. A great way to start your journey!"
+            }
+          },
+          "achievements": [
+            {
+              "code": "FIRST_WOD",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Premier WOD",
+                  "description": "Débloque ce succès en terminant ton tout premier WOD."
+                },
+                "en": {
+                  "title": "First WOD",
+                  "description": "Unlock this achievement by completing your very first WOD."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "FIRST_RX",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Premier RX",
+                  "description": "Débloque ce succès en terminant ton premier WOD en RX."
+                },
+                "en": {
+                  "title": "First RX",
+                  "description": "Unlock this achievement by completing your first WOD RX."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "FIRST_SCALED_TO_RX",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Premier Scaled → RX",
+                  "description": "Débloque ce succès en terminant ton premier WOD Scaled, puis ton premier WOD RX."
+                },
+                "en": {
+                  "title": "First Scaled → RX",
+                  "description": "Unlock this achievement by completing your first Scaled WOD, then your first RX WOD."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "FIRST_PR",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Premier PR",
+                  "description": "Débloque ce succès en enregistrant ton tout premier PR."
+                },
+                "en": {
+                  "title": "First PR",
+                  "description": "Unlock this achievement by logging your very first PR."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "WODS_10",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "10 WODs",
+                  "description": "Débloque ce succès en complétant 10 WODs."
+                },
+                "en": {
+                  "title": "10 WODs",
+                  "description": "Unlock this achievement by completing 10 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "WODS_25",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "25 WODs",
+                  "description": "Débloque ce succès en complétant 25 WODs."
+                },
+                "en": {
+                  "title": "25 WODs",
+                  "description": "Unlock this achievement by completing 25 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "WODS_50",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "50 WODs",
+                  "description": "Débloque ce succès en complétant 50 WODs."
+                },
+                "en": {
+                  "title": "50 WODs",
+                  "description": "Unlock this achievement by completing 50 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "WODS_100",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "100 WODs",
+                  "description": "Débloque ce succès en complétant 100 WODs."
+                },
+                "en": {
+                  "title": "100 WODs",
+                  "description": "Unlock this achievement by completing 100 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "WODS_250",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "250 WODs",
+                  "description": "Débloque ce succès en complétant 250 WODs."
+                },
+                "en": {
+                  "title": "250 WODs",
+                  "description": "Unlock this achievement by completing 250 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "WODS_500",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "500 WODs",
+                  "description": "Débloque ce succès en complétant 500 WODs."
+                },
+                "en": {
+                  "title": "500 WODs",
+                  "description": "Unlock this achievement by completing 500 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "REGULARITY_DISCIPLINE",
+      "contents": {
+        "fr": {
+          "title": "Regularité & Discipline",
+          "description": "La clé du progrès, c’est la régularité ! Débloque ces succès en t’entraînant régulièrement, en gardant le rythme et en faisant preuve de discipline dans la durée."
+        },
+        "en": {
+          "title": "Regularity & Discipline",
+          "description": "Consistency is the key to progress! Unlock these achievements by training regularly, staying on track, and building discipline over time."
+        }
+      },
+      "groups": [
+        {
+          "code": "GENERAL",
+          "contents": {
+            "fr": {
+              "title": "Général",
+              "description": "Débloque ces succès en maintenant une pratique régulière, en respectant ton rythme et en montrant de la discipline au fil des entraînements."
+            },
+            "en": {
+              "title": "General",
+              "description": "Unlock these achievements by keeping a consistent practice, sticking to your routine, and showing discipline throughout your training."
+            }
+          },
+          "achievements": [
+            {
+              "code": "NO_REST_WEEK",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "No Rest Week",
+                  "description": "Débloque ce succès en t’entraînant 7 jours d’affilée sans repos."
+                },
+                "en": {
+                  "title": "No Rest Week",
+                  "description": "Unlock this achievement by training 7 days in a row without rest."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "TWO_A_DAY",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Two a Day",
+                  "description": "Débloque ce succès en réalisant deux WODs le même jour."
+                },
+                "en": {
+                  "title": "Two a Day",
+                  "description": "Unlock this achievement by completing two WODs in the same day."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "FIVE_DAYS_STRONG",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Five Days Strong",
+                  "description": "Débloque ce succès en t’entraînant 5 jours sur 7."
+                },
+                "en": {
+                  "title": "Five Days Strong",
+                  "description": "Unlock this achievement by training 5 days out of 7."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "EARLY_BIRD",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Early Bird",
+                  "description": "Débloque ce succès en réalisant un WOD avant 8h."
+                },
+                "en": {
+                  "title": "Early Bird",
+                  "description": "Unlock this achievement by completing a WOD before 8 AM."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "LUNCH_BREAK_HERO",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Lunch Break Hero",
+                  "description": "Débloque ce succès en réalisant un WOD entre 12h et 14h."
+                },
+                "en": {
+                  "title": "Lunch Break Hero",
+                  "description": "Unlock this achievement by completing a WOD between 12 PM and 2 PM."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "NIGHT_OWL",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Night Owl",
+                  "description": "Débloque ce succès en réalisant un WOD après 21h."
+                },
+                "en": {
+                  "title": "Night Owl",
+                  "description": "Unlock this achievement by completing a WOD after 9 PM."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "WEEKEND_WARRIOR",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Weekend Warrior",
+                  "description": "Débloque ce succès en réalisant un WOD le samedi et le dimanche."
+                },
+                "en": {
+                  "title": "Weekend Warrior",
+                  "description": "Unlock this achievement by completing a WOD on both Saturday and Sunday."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "NO_EXCUSES",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "No Excuses",
+                  "description": "Débloque ce succès en complétant un WOD un jour férié."
+                },
+                "en": {
+                  "title": "No Excuses",
+                  "description": "Unlock this achievement by completing a WOD on a public holiday."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "BACK_AFTER_BREAK",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Back After Break",
+                  "description": "Débloque ce succès en reprenant l’entraînement après 14 jours de pause."
+                },
+                "en": {
+                  "title": "Back After Break",
+                  "description": "Unlock this achievement by returning to training after a 14-day break."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "CONSISTENCY_KING",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Consistency King",
+                  "description": "Débloque ce succès en réalisant au moins 3 WODs par semaine pendant 8 semaines."
+                },
+                "en": {
+                  "title": "Consistency King",
+                  "description": "Unlock this achievement by completing at least 3 WODs per week for 8 weeks."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FORCE_SKILLS",
+      "contents": {
+        "fr": {
+          "title": "Force & Compétences",
+          "description": "Développe ta puissance et maîtrise de nouvelles compétences. Débloque ces succès en améliorant ta force et en perfectionnant tes skills à travers tes entraînements."
+        },
+        "en": {
+          "title": "Force & Skills",
+          "description": "Build your strength and master new skills. Unlock these achievements by improving your power and refining your skills through training."
+        }
+      },
+      "groups": [
+        {
+          "code": "GYMNASTICS",
+          "contents": {
+            "fr": {
+              "title": "Gymnastics",
+              "description": "Débloque ces succès en maîtrisant les mouvements de gymnastique, en améliorant ton équilibre, ta coordination et ta fluidité dans les exercices."
+            },
+            "en": {
+              "title": "Gymnastics",
+              "description": "Unlock these achievements by mastering gymnastic movements, improving your balance, coordination, and flow in exercises."
+            }
+          },
+          "achievements": [
+            {
+              "code": "PUSH_UPS",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Push-Ups",
+                  "description": "Débloque ce succès en réalisant des push-ups sans interruption."
+                },
+                "en": {
+                  "title": "Push-Ups",
+                  "description": "Unlock this achievement by completing push-ups unbroken."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "PULL_UPS",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Pull-Ups",
+                  "description": "Débloque ce succès en réalisant des pull-ups sans interruption."
+                },
+                "en": {
+                  "title": "Pull-Ups",
+                  "description": "Unlock this achievement by completing pull-ups unbroken."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "MUSCLE_UPS",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Muscle-Ups",
+                  "description": "Débloque ce succès en réalisant des Muscle-Ups sans interruption."
+                },
+                "en": {
+                  "title": "Muscle-Ups",
+                  "description": "Unlock this achievement by completing Muscle-Ups unbroken."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "TOES_TO_BAR",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Toes-to-Bar",
+                  "description": "Débloque ce succès en réalisant des Toes-to-Bar sans interruption."
+                },
+                "en": {
+                  "title": "Toes-to-Bar",
+                  "description": "Unlock this achievement by completing Toes-to-Bar unbroken."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "DOUBLE_UNDERS",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Double-Unders",
+                  "description": "Débloque ce succès en réalisant des Double-Unders sans interruption."
+                },
+                "en": {
+                  "title": "Double-Unders",
+                  "description": "Unlock this achievement by completing Double-Unders unbroken."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "LEGLESS_ROPE_CLIMB",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Legless Rope Climb",
+                  "description": "Débloque ce succès en grimpant la corde sans utiliser les jambes."
+                },
+                "en": {
+                  "title": "Legless Rope Climb",
+                  "description": "Unlock this achievement by climbing the rope without using your legs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "WEIGHTLIFTING",
+          "contents": {
+            "fr": {
+              "title": "Weightlifting",
+              "description": "Débloque ces succès en maîtrisant les mouvements d’haltérophilie, en améliorant ta technique, ta puissance et ta précision dans les exercices."
+            },
+            "en": {
+              "title": "Weightlifting",
+              "description": "Unlock these achievements by mastering weightlifting movements, improving your technique, power, and precision in exercises."
+            }
+          },
+          "achievements": [
+            {
+              "code": "DEADLIFT_100_CLUB",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Deadlift 100 Club",
+                  "description": "Débloque ce succès en soulevant 100 kg au deadlift."
+                },
+                "en": {
+                  "title": "Deadlift 100 Club",
+                  "description": "Unlock this achievement by deadlifting 100 kg."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "CLEAN_100_CLUB",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Clean 100 Club",
+                  "description": "Débloque ce succès en réalisant un clean de 100 kg."
+                },
+                "en": {
+                  "title": "Clean 100 Club",
+                  "description": "Unlock this achievement by completing a 100 kg clean."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "JERK_100_CLUB",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Jerk 100 Club",
+                  "description": "Débloque ce succès en réalisant un jerk de 100 kg."
+                },
+                "en": {
+                  "title": "Jerk 100 Club",
+                  "description": "Unlock this achievement by completing a 100 kg jerk."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "SNATCH_100_CLUB",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Snatch 100 Club",
+                  "description": "Débloque ce succès en réalisant un snatch de 100 kg."
+                },
+                "en": {
+                  "title": "Snatch 100 Club",
+                  "description": "Unlock this achievement by completing a 100 kg snatch."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENDURANCE_CARDIO",
+      "contents": {
+        "fr": {
+          "title": "Endurance & Cardio",
+          "description": "Repousse tes limites et améliore ton souffle. Débloque ces succès en augmentant ton endurance et en enchaînant les efforts cardio."
+        },
+        "en": {
+          "title": "Endurance & Cardio",
+          "description": "Push your limits and boost your stamina. Unlock these achievements by building endurance and powering through cardio workouts."
+        }
+      },
+      "groups": [
+        {
+          "code": "GENERAL",
+          "contents": {
+            "fr": {
+              "title": "Général",
+              "description": "Débloque ces succès en développant ton endurance et en progressant régulièrement dans tes efforts cardio."
+            },
+            "en": {
+              "title": "General",
+              "description": "Unlock these achievements by building your endurance and steadily progressing in your cardio efforts."
+            }
+          },
+          "achievements": [
+            {
+              "code": "BURPEES_LOVER",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Burpees Lover",
+                  "description": "Débloque ce succès en complétant le WOD Burpees lover."
+                },
+                "en": {
+                  "title": "Burpees Lover",
+                  "description": "Unlock this achievement by completing the Burpees lover"
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "RUN",
+          "contents": {
+            "fr": {
+              "title": "Run",
+              "description": "Débloque ces succès en parcourant différentes distances, en améliorant ton rythme et en repoussant tes limites en course à pied."
+            },
+            "en": {
+              "title": "Run",
+              "description": "Unlock these achievements by covering various running distances, improving your pace, and pushing your limits in running."
+            }
+          },
+          "achievements": [
+            {
+              "code": "RUN_100M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Sprinter Rookie 100m",
+                  "description": "Débloque ce succès en complétant un sprint de 100 m."
+                },
+                "en": {
+                  "title": "Sprinter Rookie 100m",
+                  "description": "Unlock this achievement by completing a 100 m sprint."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "RUN_200M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Speed Challenger 200m",
+                  "description": "Débloque ce succès en complétant un sprint de 200 m."
+                },
+                "en": {
+                  "title": "Speed Challenger 200m",
+                  "description": "Unlock this achievement by completing a 200 m sprint."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "RUN_400M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Quarter-Mile Hero 400m",
+                  "description": "Débloque ce succès en complétant un sprint de 400 m."
+                },
+                "en": {
+                  "title": "Quarter-Mile Hero 400m",
+                  "description": "Unlock this achievement by completing a 400 m sprint."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "RUN_800M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Quarter-Mile Hero 800m",
+                  "description": "Débloque ce succès en complétant un sprint de 800 m."
+                },
+                "en": {
+                  "title": "Quarter-Mile Hero 800m",
+                  "description": "Unlock this achievement by completing a 800 m sprint."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "RUN_1_MILE",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Road Runner 1 mile",
+                  "description": "Débloque ce succès en courant environ 1,6 km (1 mile)."
+                },
+                "en": {
+                  "title": "Road Runner 1 mile",
+                  "description": "Unlock this achievement by running approximately 1.6 km (1 mile)."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "RUN_2_MILES",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Endurance Challenger 2 miles",
+                  "description": "Débloque ce succès en courant environ 3,2 km (2 miles)."
+                },
+                "en": {
+                  "title": "Endurance Challenger 2 miles",
+                  "description": "Unlock this achievement by running approximately 3.2 km (2 miles)."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "RUN_5K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "5K Finisher",
+                  "description": "Débloque ce succès en courant 5 km."
+                },
+                "en": {
+                  "title": "5K Finisher",
+                  "description": "Unlock this achievement by running 5 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "RUN_10K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "10K Finisher",
+                  "description": "Débloque ce succès en courant 10 km."
+                },
+                "en": {
+                  "title": "10K Finisher",
+                  "description": "Unlock this achievement by running 10 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "RUN_HALF_MARATHON",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Half-Marathon Hero",
+                  "description": "Débloque ce succès en courant 21,1 km (semi-marathon)."
+                },
+                "en": {
+                  "title": "Half-Marathon Hero",
+                  "description": "Unlock this achievement by running 21.1 km (half-marathon)."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "RUN_MARATHON",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Marathon Titan",
+                  "description": "Débloque ce succès en courant 42,2 km (marathon)."
+                },
+                "en": {
+                  "title": "Marathon Titan",
+                  "description": "Unlock this achievement by running 42.2 km (marathon)."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "ROW",
+          "contents": {
+            "fr": {
+              "title": "Row",
+              "description": "Débloque ces succès en parcourant différentes distances à l’aviron, en améliorant ton rythme et en développant ton endurance sur le rameur."
+            },
+            "en": {
+              "title": "Row",
+              "description": "Unlock these achievements by covering various rowing distances, improving your pace, and building your endurance on the rower."
+            }
+          },
+          "achievements": [
+            {
+              "code": "ROW_100M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Quick Stroke 100m",
+                  "description": "Débloque ce succès en nageant 100 m."
+                },
+                "en": {
+                  "title": "Quick Stroke 100m",
+                  "description": "Unlock this achievement by swimming 100 m."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "ROW_250M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Power Burst 250m",
+                  "description": "Débloque ce succès en nageant 250 m."
+                },
+                "en": {
+                  "title": "Power Burst 250m",
+                  "description": "Unlock this achievement by swimming 250 m."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "ROW_500M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Sprinter Rower 500m",
+                  "description": "Débloque ce succès en parcourant 500 m à l’aviron."
+                },
+                "en": {
+                  "title": "Sprinter Rower 500m",
+                  "description": "Unlock this achievement by rowing 500 m."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "ROW_1K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Mid-Distance Master 1000m",
+                  "description": "Débloque ce succès en parcourant 1000m à l’aviron."
+                },
+                "en": {
+                  "title": "Mid-Distance Master 1000m",
+                  "description": "Unlock this achievement by rowing 1000m."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "ROW_2K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Endurance Rower 2000m",
+                  "description": "Débloque ce succès en parcourant 2000m à l’aviron."
+                },
+                "en": {
+                  "title": "Endurance Rower 2000m",
+                  "description": "Unlock this achievement by rowing 2000m."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "ROW_3K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Rowing Titan 3000m",
+                  "description": "Débloque ce succès en parcourant 3000m à l’aviron."
+                },
+                "en": {
+                  "title": "Rowing Titan 3000m",
+                  "description": "Unlock this achievement by rowing 3000m."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "ROW_5K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Ultra Rower 5 km",
+                  "description": "Débloque ce succès en parcourant 5 km à l’aviron."
+                },
+                "en": {
+                  "title": "Ultra Rower 5 km",
+                  "description": "Unlock this achievement by rowing 5 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SWIM",
+          "contents": {
+            "fr": {
+              "title": "Swim",
+              "description": "Débloque ces succès en nageant différentes distances, en améliorant ta technique et en développant ton endurance dans l’eau."
+            },
+            "en": {
+              "title": "Swim",
+              "description": "Unlock these achievements by swimming various distances, improving your technique, and building your endurance in the water."
+            }
+          },
+          "achievements": [
+            {
+              "code": "SWIM_50M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Splash Initiate 50m",
+                  "description": "Débloque ce succès en nageant 50 m."
+                },
+                "en": {
+                  "title": "Splash Initiate 50m",
+                  "description": "Unlock this achievement by swimming 50 m."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "SWIM_100M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Stroke Rookie 100m",
+                  "description": "Débloque ce succès en nageant 100 m."
+                },
+                "en": {
+                  "title": "Stroke Rookie 100m",
+                  "description": "Unlock this achievement by swimming 100 m."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "SWIM_200M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Freestyle Challenger 200m",
+                  "description": "Débloque ce succès en nageant 200 m en style libre."
+                },
+                "en": {
+                  "title": "Freestyle Challenger 200m",
+                  "description": "Unlock this achievement by swimming 200 m freestyle."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "SWIM_400M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Aquatic Hero 400m",
+                  "description": "Débloque ce succès en nageant 400 m."
+                },
+                "en": {
+                  "title": "Aquatic Hero 400m",
+                  "description": "Unlock this achievement by swimming 400 m."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "SWIM_500M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Endurance Swimmer 500m",
+                  "description": "Débloque ce succès en nageant 500 m."
+                },
+                "en": {
+                  "title": "Endurance Swimmer 500m",
+                  "description": "Unlock this achievement by swimming 500 m."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "SWIM_800M",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Mariner Master 800m",
+                  "description": "Débloque ce succès en nageant 800 m."
+                },
+                "en": {
+                  "title": "Mariner Master 800m",
+                  "description": "Unlock this achievement by swimming 800 m."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "SWIM_1K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Ocean Titan 1 km",
+                  "description": "Débloque ce succès en nageant 1 km."
+                },
+                "en": {
+                  "title": "Ocean Titan 1 km",
+                  "description": "Unlock this achievement by swimming 1 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "SWIM_1_5K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Sea Conqueror 1,5 km",
+                  "description": "Débloque ce succès en nageant 1,5 km."
+                },
+                "en": {
+                  "title": "Sea Conqueror 1.5 km",
+                  "description": "Unlock this achievement by swimming 1.5 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "SWIM_2K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Aquatic Champion 2 km",
+                  "description": "Débloque ce succès en nageant 2 km."
+                },
+                "en": {
+                  "title": "Aquatic Champion 2 km",
+                  "description": "Unlock this achievement by swimming 2 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "SWIM_3K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Olympian Swimmer 3 km",
+                  "description": "Débloque ce succès en nageant 3 km."
+                },
+                "en": {
+                  "title": "Olympian Swimmer 3 km",
+                  "description": "Unlock this achievement by swimming 3 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "BIKE",
+          "contents": {
+            "fr": {
+              "title": "Bike",
+              "description": "Débloque ces succès en parcourant différentes distances à vélo, en améliorant ton rythme et en développant ton endurance sur deux roues."
+            },
+            "en": {
+              "title": "Bike",
+              "description": "Unlock these achievements by covering various cycling distances, improving your pace, and building your endurance on two wheels."
+            }
+          },
+          "achievements": [
+            {
+              "code": "BIKE_1K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Rookie Rider 1 km",
+                  "description": "Débloque ce succès en parcourant 1 km à vélo."
+                },
+                "en": {
+                  "title": "Rookie Rider 1 km",
+                  "description": "Unlock this achievement by cycling 1 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "BIKE_5K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Road Challenger 5 km",
+                  "description": "Débloque ce succès en parcourant 5 km à vélo."
+                },
+                "en": {
+                  "title": "Road Challenger 5 km",
+                  "description": "Unlock this achievement by cycling 5 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "BIKE_10K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Cycling Hero 10 km",
+                  "description": "Débloque ce succès en parcourant 10 km à vélo."
+                },
+                "en": {
+                  "title": "Cycling Hero 10 km",
+                  "description": "Unlock this achievement by cycling 10 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "BIKE_20K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Endurance Rider 20 km",
+                  "description": "Débloque ce succès en parcourant 20 km à vélo."
+                },
+                "en": {
+                  "title": "Endurance Rider 20 km",
+                  "description": "Unlock this achievement by cycling 20 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "BIKE_30K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Peloton Conqueror 30 km",
+                  "description": "Débloque ce succès en parcourant 30 km à vélo."
+                },
+                "en": {
+                  "title": "Peloton Conqueror 30 km",
+                  "description": "Unlock this achievement by cycling 30 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "BIKE_50K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Century Rider 50 km",
+                  "description": "Débloque ce succès en parcourant 50 km à vélo."
+                },
+                "en": {
+                  "title": "Century Rider 50 km",
+                  "description": "Unlock this achievement by cycling 50 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            },
+            {
+              "code": "BIKE_100K",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Olympian Cyclist 100 km",
+                  "description": "Débloque ce succès en parcourant 100 km à vélo."
+                },
+                "en": {
+                  "title": "Olympian Cyclist 100 km",
+                  "description": "Unlock this achievement by cycling 100 km."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "MENTAL_EFFORT",
+      "contents": {
+        "fr": {
+          "title": "Mental & Effort",
+          "description": "La force mentale fait la différence. Débloque ces succès en dépassant tes limites, en faisant preuve de détermination et en donnant le meilleur de toi-même."
+        },
+        "en": {
+          "title": "Mental & Effort",
+          "description": "Mental strength makes the difference. Unlock these achievements by pushing past your limits, staying determined, and giving your best effort."
+        }
+      },
+      "groups": [
+        {
+          "code": "GENERAL",
+          "contents": {
+            "fr": {
+              "title": "Général",
+              "description": "Débloque ces succès en faisant preuve de persévérance, de concentration et de motivation dans tes entraînements et défis sportifs."
+            },
+            "en": {
+              "title": "General",
+              "description": "Unlock these achievements by showing perseverance, focus, and motivation in your workouts and fitness challenges."
+            }
+          },
+          "achievements": [
+            {
+              "code": "FRAN_UNDER_5",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Fran Under 5",
+                  "description": "Débloque ce succès en terminant le WOD Fran en moins de 5 minutes."
+                },
+                "en": {
+                  "title": "Fran Under 5",
+                  "description": "Unlock this achievement by completing the Fran WOD in under 5 minutes."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "MURPH_COMPLETED",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Murph Completed",
+                  "description": "Débloque ce succès en complétant le WOD Murph."
+                },
+                "en": {
+                  "title": "Murph Completed",
+                  "description": "Unlock this achievement by completing the Murph WOD."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "COMPETITION_BENCHMARKS",
+      "contents": {
+        "fr": {
+          "title": "Compétition & Repères",
+          "description": "Mesure-toi aux autres et à toi-même. Débloque ces succès en relevant des défis, en battant des records et en atteignant de nouveaux benchmarks."
+        },
+        "en": {
+          "title": "Competition & Benchmarks",
+          "description": "Test yourself against others and against your own limits. Unlock these achievements by taking on challenges, breaking records, and reaching new benchmarks."
+        }
+      },
+      "groups": [
+        {
+          "code": "GIRLS",
+          "title": "Girls",
+          "contents": {
+            "fr": {
+              "title": "Girls",
+              "description": "Débloque différents niveaux de succès en complétant un certain pourcentage des WODs de type 'Girl'."
+            },
+            "en": {
+              "title": "Girls",
+              "description": "Unlock different levels of achievements by completing varying percentages of 'Girl' WODs."
+            }
+          },
+          "achievements": [
+            {
+              "code": "GIRLS",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Girls",
+                  "description": "Débloque différents niveaux de succès en complétant un certain pourcentage des WODs de type 'Girl'."
+                },
+                "en": {
+                  "title": "Girls",
+                  "description": "Unlock different levels of achievements by completing varying percentages of 'Girl' WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "HEROES",
+          "source": "wod",
+          "contents": {
+            "fr": {
+              "title": "Heroes",
+              "description": "Débloque différents niveaux de succès en complétant un certain pourcentage des WODs de type 'Heroe'."
+            },
+            "en": {
+              "title": "Heroes",
+              "description": "Unlock different levels of achievements by completing varying percentages of 'Heroe' WODs."
+            }
+          },
+          "achievements": [
+            {
+              "code": "HEROES",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Heroes",
+                  "description": "Débloque différents niveaux de succès en complétant un certain pourcentage des WODs de type 'Heroe'."
+                },
+                "en": {
+                  "title": "Heroes",
+                  "description": "Unlock different levels of achievements by completing varying percentages of 'Heroe' WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                },
+                {
+                  "level": "PLATINUM"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "BENCHMARKS",
+          "title": "Benchmarks",
+          "contents": {
+            "fr": {
+              "title": "Benchmarks",
+              "description": "Débloque différents niveaux de succès en complétant un certain pourcentage de Benchmarks."
+            },
+            "en": {
+              "title": "Benchmarks",
+              "description": "Unlock different levels of achievements by completing varying percentages of Benchmarks."
+            }
+          },
+          "achievements": [
+            {
+              "code": "BENCHMARKS",
+              "source": "benchmark",
+              "contents": {
+                "fr": {
+                  "title": "Benchmarks",
+                  "description": "Débloque différents niveaux de succès en complétant un certain pourcentage de Benchmarks."
+                },
+                "en": {
+                  "title": "Benchmarks",
+                  "description": "Unlock different levels of achievements by completing varying percentages of Benchmarks."
+                }
+              },
+              "levels": [
+                {
+                  "level": "BRONZE"
+                },
+                {
+                  "level": "SILVER"
+                },
+                {
+                  "level": "GOLD"
+                },
+                {
+                  "level": "PLATINUM"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "OPEN",
+          "contents": {
+            "fr": {
+              "title": "Open",
+              "description": "Débloque ces succès en participant aux WODs des Open et en progressant sur les différents challenges proposés."
+            },
+            "en": {
+              "title": "Open",
+              "description": "Unlock these achievements by taking part in the Open WODs and progressing through the various challenges."
+            }
+          },
+          "achievements": [
+            {
+              "code": "OPEN_2011",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2011 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2011."
+                },
+                "en": {
+                  "title": "Open 2011 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2011 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2012",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2012 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2012."
+                },
+                "en": {
+                  "title": "Open 2012 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2012 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2013",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2013 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2013."
+                },
+                "en": {
+                  "title": "Open 2013 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2013 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2014",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2014 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2014."
+                },
+                "en": {
+                  "title": "Open 2014 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2014 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2015",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2015 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2015."
+                },
+                "en": {
+                  "title": "Open 2015 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2015 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2016",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2016 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2016."
+                },
+                "en": {
+                  "title": "Open 2016 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2016 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2017",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2017 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2017."
+                },
+                "en": {
+                  "title": "Open 2017 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2017 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2018",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2018 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2018."
+                },
+                "en": {
+                  "title": "Open 2018 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2018 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2019",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2019 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2019."
+                },
+                "en": {
+                  "title": "Open 2019 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2019 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2020",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2020 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2020."
+                },
+                "en": {
+                  "title": "Open 2020 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2020 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2021",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2021 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2021."
+                },
+                "en": {
+                  "title": "Open 2021 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2021 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2022",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2022 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2022."
+                },
+                "en": {
+                  "title": "Open 2022 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2021 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2023",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2023 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2023."
+                },
+                "en": {
+                  "title": "Open 2023 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2023 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2024",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2024 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2024."
+                },
+                "en": {
+                  "title": "Open 2024 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2024 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "OPEN_2025",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Open 2025 Challenger",
+                  "description": "Débloque ce succès en complétant tous les WODs de l'Open 2025."
+                },
+                "en": {
+                  "title": "Open 2025 Challenger",
+                  "description": "Unlock this achievement by completing all Open 2025 WODs."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "COMMUNITY_FUN",
+      "contents": {
+        "fr": {
+          "title": "Communauté & Fun",
+          "description": "Partage, connecte-toi et amuse-toi ! Débloque ces succès en participant à des activités collectives et en profitant de l’esprit de communauté."
+        },
+        "en": {
+          "title": "Community & Fun",
+          "description": "Share, connect, and have fun! Unlock these achievements by joining group activities and enjoying the community spirit."
+        }
+      },
+      "groups": [
+        {
+          "code": "GENERAL",
+          "contents": {
+            "fr": {
+              "title": "Général",
+              "description": "Débloque ces succès en participant à la vie de la communauté, en interagissant avec les autres membres et en profitant des activités sociales et challenges ludiques."
+            },
+            "en": {
+              "title": "General",
+              "description": "Unlock these achievements by engaging with the community, interacting with other members, and taking part in social activities and fun challenges."
+            }
+          },
+          "achievements": [
+            {
+              "code": "TEAM_PLAYER",
+              "source": "wod",
+              "contents": {
+                "fr": {
+                  "title": "Team Player",
+                  "description": "Débloque ce succès en complétant un WOD en équipe."
+                },
+                "en": {
+                  "title": "Team Player",
+                  "description": "Unlock this achievement by completing a WOD as a team."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "CHEERLEADER",
+              "source": "social",
+              "contents": {
+                "fr": {
+                  "title": "Cheerleader",
+                  "description": "Débloque ce succès en laissant des commentaires ou des likes à d’autres membres. (fonctionnalité à venir)"
+                },
+                "en": {
+                  "title": "Cheerleader",
+                  "description": "Unlock this achievement by leaving comments or likes for other members. (future feature)"
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "COACHS_FAVORITE",
+              "source": "social",
+              "contents": {
+                "fr": {
+                  "title": "Coach’s Favorite",
+                  "description": "Débloque ce succès en étant reconnu par un coach pour tes performances ou ton effort. (fonctionnalité à venir)"
+                },
+                "en": {
+                  "title": "Coach’s Favorite",
+                  "description": "Unlock this achievement by being recognized by a coach for your performance or effort. (future feature)"
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "BOX_REGULAR",
+              "source": "social",
+              "contents": {
+                "fr": {
+                  "title": "Box Regular",
+                  "description": "Débloque ce succès en étant présent 10 fois dans la même box."
+                },
+                "en": {
+                  "title": "Box Regular",
+                  "description": "Unlock this achievement by attending the same box 10 times."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "BOX_LEGEND",
+              "source": "social",
+              "contents": {
+                "fr": {
+                  "title": "Legend of the Box",
+                  "description": "Débloque ce succès en étant présent dans la même box plus de 50 fois ou après 1 an de fréquentation régulière."
+                },
+                "en": {
+                  "title": "Legend of the Box",
+                  "description": "Unlock this achievement by attending the same box 50+ times or after 1 year of regular attendance."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "HIGH_FIVE_HERO",
+              "source": "social",
+              "contents": {
+                "fr": {
+                  "title": "High-Five Hero",
+                  "description": "Débloque ce succès en félicitant 50 membres différents dans l’app. (fonctionnalité à venir)"
+                },
+                "en": {
+                  "title": "High-Five Hero",
+                  "description": "Unlock this achievement by giving kudos to 50 different members in the app. (future feature)"
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "REFERRAL_STAR",
+              "source": "social",
+              "contents": {
+                "fr": {
+                  "title": "Referral Star",
+                  "description": "Débloque ce succès en invitant un ami qui complète son premier WOD. (fonctionnalité à venir)"
+                },
+                "en": {
+                  "title": "Referral Star",
+                  "description": "Unlock this achievement by inviting a friend who completes their first WOD. (future feature)"
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "RISING_STAR",
+              "source": "social",
+              "contents": {
+                "fr": {
+                  "title": "Rising Star",
+                  "description": "Débloque ce succès en apparaissant dans le top du leaderboard ou en obtenant le PR du mois. (fonctionnalité à venir)"
+                },
+                "en": {
+                  "title": "Rising Star",
+                  "description": "Unlock this achievement by appearing in the leaderboard top or achieving the PR of the month. (future feature)"
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            },
+            {
+              "code": "SPIRIT_OF_THE_BOX",
+              "source": "social",
+              "contents": {
+                "fr": {
+                  "title": "Spirit of the Box",
+                  "description": "Débloque ce succès en participant à toutes les activités sociales du mois (challenge + événement)."
+                },
+                "en": {
+                  "title": "Spirit of the Box",
+                  "description": "Unlock this achievement by participating in all social activities of the month (challenge + event)."
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PANTHEON",
+      "contents": {
+        "fr": {
+          "title": "Panthéon",
+          "description": "Le succès ultime ! Débloque-le en accomplissant tous les autres succès et en prouvant que tu as maîtrisé chaque étape de ton parcours sportif."
+        },
+        "en": {
+          "title": "Pantheon",
+          "description": "The ultimate achievement! Unlock it by completing all other achievements and proving you’ve mastered every step of your fitness journey."
+        }
+      },
+      "groups": [
+        {
+          "code": "GENERAL",
+          "contents": {
+            "fr": {
+              "title": "Général",
+              "description": "Débloque ce succès en atteignant des niveaux exceptionnels et en montrant ton engagement et ta maîtrise dans ton parcours sportif."
+            },
+            "en": {
+              "title": "General",
+              "description": "Unlock this achievement by reaching exceptional levels and demonstrating your dedication and mastery in your fitness journey."
+            }
+          },
+          "achievements": [
+            {
+              "code": "WALL_OF_FAME",
+              "source": "social",
+              "contents": {
+                "fr": {
+                  "title": "Wall of fame",
+                  "description": "Débloquer tous les autres achievements"
+                },
+                "en": {
+                  "title": "Wall of fame",
+                  "description": "Débloquer tous les autres achievements"
+                }
+              },
+              "levels": [
+                {
+                  "level": "DEFAULT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

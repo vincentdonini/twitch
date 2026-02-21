@@ -6,26 +6,25 @@ use App\Domain\User\Ports\UserDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use InvalidArgumentException;
 
-class ListUsersUseCase
+final readonly class ListUsersUseCase
 {
     public function __construct(
-        private readonly UserDALInterface $exerciseDAL,
-    )
-    {
+        private UserDALInterface $userDAL,
+    ) {
 
     }
 
-    public function execute(ListUsersDTOInterface $dto): LightPaginator
-    {
-        if($dto->getPage() && $dto->getPage() < 0) {
+    public function execute(
+        ListUsersDTOInterface $dto,
+    ): LightPaginator {
+        if ($dto->getPage() && $dto->getPage() < 0) {
             throw new InvalidArgumentException();
         }
 
-        return $this->exerciseDAL->listUsers(
-           page: $dto->getPage(),
-           limit: $dto->getLimit(),
-           filters: $dto->getFilters(),
+        return $this->userDAL->listUsers(
+            page   : $dto->getPage(),
+            limit  : $dto->getLimit(),
+            filters: $dto->getFilters(),
         );
     }
 }
-

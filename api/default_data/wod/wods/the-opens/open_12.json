@@ -1,0 +1,398 @@
+[
+  {
+    "name": "OPEN 12.1",
+    "contents": {
+      "fr": {
+        "title": "AMRAP (7 min) : Burpees",
+        "summary": "AMRAP de 7 minutes entièrement dédié aux burpees. Un workout simple en apparence, mais extrêmement exigeant sur le cardio, la coordination et la capacité à maintenir un rythme élevé sur une courte durée.",
+        "details": "Le Workout 12.1 est un AMRAP de 7 minutes composé uniquement de burpees.\nCe test met l’accent sur l’endurance cardiovasculaire, la régularité du mouvement et la capacité de l’athlète à gérer l’intensité sans chute brutale du rythme.\nChaque répétition impose un cycle complet sol-saut, avec un objectif clair : accumuler le plus grand nombre de répétitions possibles en maintenant des standards stricts.\n\n### Règles\n\n- Le workout débute **en position debout**.\n- À chaque répétition, l’athlète doit partir d’une position **allongée au sol**, poitrine et cuisses en contact avec le sol.\n- L’athlète se relève ensuite et doit **toucher avec les deux mains un objet situé à 6 pouces (environ 15 cm) au-dessus de sa portée maximale**.\n- Le saut doit être suffisamment haut pour permettre un **contact clair avec l’objet** à chaque répétition.\n- Les deux mains doivent **toucher l’objet simultanément** pour valider la répétition.\n- Le score correspond au **nombre total de burpees complétés** à la fin des **7 minutes**.\n- **Il n’y a pas de tiebreak.**",
+        "rules": "- Le workout commence **debout**.\n- Chaque répétition débute avec la poitrine et les cuisses **au sol**.\n- L’athlète doit ensuite se relever et **toucher un objet situé à 6 pouces au-dessus de sa portée maximale**.\n- Le contact avec l’objet doit être effectué **avec les deux mains en même temps**.\n- Chaque saut doit montrer un contrôle suffisant pour valider la hauteur requise.\n- Le score est le **nombre total de répétitions complétées** en **7 minutes**.\n- **Aucun tiebreak n’est appliqué.**",
+        "tips": "- Trouve un rythme soutenable dès les premières minutes pour éviter un effondrement du cardio.\n- Respire de manière contrôlée et régulière tout au long du mouvement.\n- Évite les pauses longues : privilégie des micro-pauses rapides si nécessaire.\n- Garde un mouvement fluide entre le sol et le saut pour économiser de l’énergie.\n- Reste précis sur la hauteur du saut afin d’éviter toute répétition non validée."
+      },
+      "en": {
+        "title": "AMRAP (7 min): Burpees",
+        "summary": "A 7-minute AMRAP consisting solely of burpees. Simple in structure but highly demanding, this workout tests cardiovascular endurance, consistency, and pacing under fatigue.",
+        "details": "Workout 12.1 is a 7-minute AMRAP of burpees.\nThis test challenges the athlete’s aerobic capacity, movement efficiency, and ability to sustain intensity throughout a short but intense effort.\nEach repetition requires a full cycle from the floor to a jump, with the goal of accumulating as many valid reps as possible within the time cap.\n\n### Rules\n\n- The workout begins **from a standing position**.\n- For each repetition, the athlete must start **lying flat on the ground**, with chest and thighs in contact with the floor.\n- The athlete then jumps and must **touch an object with both hands that is 6 inches above their maximum reach**.\n- The jump must be high enough to allow a **clear touch of the object**.\n- **Both hands must touch the object simultaneously** to count the rep.\n- The score is the **total number of repetitions completed** at the end of the **7 minutes**.\n- **There is no tiebreak.**",
+        "rules": "- Start **standing**.\n- Each rep begins with chest and thighs **on the floor**.\n- Athlete must jump and **touch an object 6 inches above max reach**.\n- The object must be touched **with both hands at the same time**.\n- Each jump must clearly meet the required height.\n- Score equals **total reps completed** in **7 minutes**.\n- **No tiebreak applies.**",
+        "tips": "- Establish a sustainable pace early to avoid excessive fatigue.\n- Focus on steady breathing throughout each repetition.\n- Limit long breaks; opt for brief, controlled pauses if needed.\n- Keep the movement smooth from floor to jump to conserve energy.\n- Be precise on jump height to ensure every repetition counts."
+      }
+    },
+    "type": "amrap",
+    "category": "the-opens",
+    "team_size": null,
+    "variants": [
+      {
+        "division": "rx",
+        "gender": "male",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": 420,
+        "exercises": [
+          {
+            "exercise": "burpee",
+            "metrics": {
+              "repetitions": null
+            }
+          }
+        ]
+      },
+      {
+        "division": "rx",
+        "gender": "female",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": 420,
+        "exercises": [
+          {
+            "exercise": "burpee",
+            "metrics": {
+              "repetitions": null
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "OPEN 12.2",
+    "contents": {
+      "fr": {
+        "title": "AMRAP (10 min) : Snatch",
+        "summary": "AMRAP de 10 minutes composé de snatchs avec des charges progressives selon la division. Ce workout teste la puissance, la technique et l’endurance musculaire tout en exigeant une précision sur la position et le contrôle de la barre.",
+        "details": "Workout 12.2 est un AMRAP de 10 minutes basé sur des séquences de snatch avec des poids progressifs.\nChaque répétition doit respecter des standards stricts de position et de verrouillage. La transition entre les charges doit se faire de manière fluide, sans rebond de la barre au sol si « touch and go » n’est pas autorisé.\n\n### Règles\n\n- **Position de départ avec charge** : la barre commence au sol. Le « touch and go » est permis, mais aucun rebond excessif n’est autorisé.\n- **Position de départ avec barre vide** : si la division commence avec une barre vide, chaque répétition doit commencer **avec la barre sous les genoux**.\n- **Position barre au-dessus de la tête** : la barre doit atteindre un verrouillage complet au-dessus de la tête, avec hanches, genoux et bras entièrement étendus et la barre directement au-dessus des talons.\n- **Séquence selon la division** :\n  - **Hommes et Masters Men jusqu’à 54 ans** : 75 lb x 30 reps, 135 lb x 30 reps, 165 lb x 30 reps, 210 lb x maximum de reps.\n  - **Femmes et Masters Women jusqu’à 54 ans** : 45 lb x 30 reps, 75 lb x 30 reps, 100 lb x 30 reps, 120 lb x maximum de reps.\n  - **Masters Men 55+** : 45 lb x 30 reps, 75 lb x 30 reps, 100 lb x 30 reps, 120 lb x maximum de reps.\n  - **Masters Women 55+** : 35 lb x 30 reps, 55 lb x 30 reps, 75 lb x 30 reps, 90 lb x maximum de reps.\n- Le score correspond au **nombre total de répétitions validées** à la fin des **10 minutes**.\n- **Aucun tiebreak n’est appliqué.**",
+        "rules": "- Barre au sol au départ. « Touch and go » autorisé, pas de rebond.\n- Si barre vide, répéter depuis **sous les genoux**.\n- Verrouillage complet au-dessus de la tête : hanches, genoux et bras étendus, barre au-dessus des talons.\n- Séquences de poids selon division :\n  - Hommes & Masters Men ≤54 ans : 75-135-165-210 lb\n  - Femmes & Masters Women ≤54 ans : 45-75-100-120 lb\n  - Masters Men 55+ : 45-75-100-120 lb\n  - Masters Women 55+ : 35-55-75-90 lb\n- Score = total reps en 10 min.\n- Pas de tiebreak.",
+        "tips": "- Commence avec une technique parfaite sur les charges légères pour économiser de l’énergie.\n- Maintiens un rythme constant, surtout sur les séries les plus lourdes.\n- Assure-toi que chaque verrouillage au-dessus de la tête est complet avant de valider la répétition.\n- Utilise un mouvement fluide lors des transitions entre les charges pour éviter les pauses inutiles.\n- Évite de rebondir la barre pour conserver le contrôle et la sécurité."
+      },
+      "en": {
+        "title": "AMRAP (10 min): Snatch",
+        "summary": "A 10-minute AMRAP of snatches with progressive loads by division. This workout tests power, technique, and muscular endurance while requiring strict attention to bar position and control.",
+        "details": "Workout 12.2 is a 10-minute AMRAP consisting of snatch sequences with progressive weights.\nEach repetition must meet strict standards for start position and overhead lockout. Transitions between loads should be smooth, and excessive bar bouncing is not allowed unless \"touch and go\" is permitted.\n\n### Rules\n\n- **Setup with load**: barbell starts on the ground. Touch and go is allowed; no excessive bouncing.\n- **Setup with empty bar**: if the division starts with an empty bar, each rep must begin **below the knees**.\n- **Overhead bar position**: bar must reach full lockout overhead with hips, knees, and arms fully extended, directly over the heels.\n- **Sequence by division**:\n  - **Men & Masters Men ≤54 years**: 75 lb x 30 reps, 135 lb x 30 reps, 165 lb x 30 reps, 210 lb x max reps.\n  - **Women & Masters Women ≤54 years**: 45 lb x 30 reps, 75 lb x 30 reps, 100 lb x 30 reps, 120 lb x max reps.\n  - **Masters Men 55+**: 45 lb x 30 reps, 75 lb x 30 reps, 100 lb x 30 reps, 120 lb x max reps.\n  - **Masters Women 55+**: 35 lb x 30 reps, 55 lb x 30 reps, 75 lb x 30 reps, 90 lb x max reps.\n- Score is **total validated reps** at the end of **10 minutes**.\n- **No tiebreak.**",
+        "rules": "- Barbell starts on the ground. Touch and go allowed; no bouncing.\n- If starting with empty bar, each rep starts **below the knees**.\n- Full overhead lockout: hips, knees, arms extended, bar over heels.\n- Sequence by division:\n  - Men & Masters Men ≤54: 75-135-165-210 lb\n  - Women & Masters Women ≤54: 45-75-100-120 lb\n  - Masters Men 55+: 45-75-100-120 lb\n  - Masters Women 55+: 35-55-75-90 lb\n- Score = total reps in 10 min.\n- No tiebreak.",
+        "tips": "- Start with perfect technique on lighter loads to conserve energy.\n- Maintain a steady pace, especially on heavier sets.\n- Ensure full overhead lockout before counting each rep.\n- Move smoothly between weights to minimize unnecessary breaks.\n- Avoid bouncing the bar to maintain control and safety."
+      }
+    },
+    "type": "amrap",
+    "category": "the-opens",
+    "team_size": null,
+    "variants": [
+      {
+        "division": "rx",
+        "gender": "male",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": 600,
+        "exercises": [
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 34
+            }
+          },
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 61
+            }
+          },
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 75
+            }
+          },
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 95
+            }
+          }
+        ]
+      },
+      {
+        "division": "rx",
+        "gender": "female",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": 600,
+        "exercises": [
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 20
+            }
+          },
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 34
+            }
+          },
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 45
+            }
+          },
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": null,
+              "weight": 54
+            }
+          }
+        ]
+      },
+      {
+        "division": "masters",
+        "gender": "male",
+        "minAge": 55,
+        "maxAge": null,
+        "ageRange": "masters",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": 600,
+        "exercises": [
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 20
+            }
+          },
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 34
+            }
+          },
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 45
+            }
+          },
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": null,
+              "weight": 54
+            }
+          }
+        ]
+      },
+      {
+        "division": "masters",
+        "gender": "female",
+        "minAge": 55,
+        "maxAge": null,
+        "ageRange": "masters",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": 600,
+        "exercises": [
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 16
+            }
+          },
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 25
+            }
+          },
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": 30,
+              "weight": 34
+            }
+          },
+          {
+            "exercise": "snatch",
+            "metrics": {
+              "repetitions": null,
+              "weight": 41
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "OPEN 12.3",
+    "contents": {
+      "fr": {
+        "title": "AMRAP (18 min) : Box Jumps, Push Press, Toes-to-Bar",
+        "summary": "AMRAP de 18 minutes combinant box jumps, push press et toes-to-bar. Ce workout teste l’endurance, la puissance explosive et la coordination tout en exigeant un strict contrôle technique sur chaque mouvement.",
+        "details": "Workout 12.3 est un AMRAP de 18 minutes combinant des sauts sur box, des push press avec barre et des toes-to-bar.\nChaque mouvement a des standards stricts : contrôle complet, verrouillage correct et amplitude maximale.\n\n### Règles\n\n- **Box jumps** : sauter sur la box avec les deux pieds en même temps. Hanches et genoux doivent s’ouvrir complètement en haut de la box tout en gardant le contrôle.\n  - Descendre peut se faire en sautant ou en marchant (step-down), mais **le saut est obligatoire** pour monter sur la box.\n  - Seule exception : les Masters 55+ peuvent utiliser le step-up.\n- **Push press / Push jerk / Split jerk / Shoulder press** :\n  - Chaque répétition commence avec la barre sur les épaules et se termine avec la barre **verrouillée au-dessus de la tête**.\n  - Les coudes, épaules, hanches et genoux doivent être complètement étendus.\n  - La barre doit finir **directement au-dessus des talons**, les pieds ensemble.\n  - Chaque série débute avec la barre **au sol**. L’usage d’un rack n’est pas autorisé.\n- **Toes-to-bar** :\n  - Commencer en position suspendue complète, amener les orteils à toucher la barre.\n  - Les deux pieds doivent toucher la barre **en même temps**.\n  - Bras et hanches complètement étendus en bas, les pieds doivent revenir **derrière la barre**, pas devant.\n- **Séquence selon la division** :\n  - **Hommes & Masters Men ≤54 ans** : 15 box jumps 24”, 115 lb push press x12, 9 toes-to-bar.\n  - **Femmes & Masters Women ≤54 ans** : 15 box jumps 20”, 75 lb push press x12, 9 toes-to-bar.\n  - **Masters Men 55+** : 15 box jumps ou step-ups 20”, 95 lb push press x12, 9 toes-to-bar.\n  - **Masters Women 55+** : 15 box jumps ou step-ups 20”, 55 lb push press x12, 9 toes-to-bar.\n- Le score correspond au **nombre total de tours et répétitions complétés** à la fin des 18 minutes.\n- **Pas de tiebreak**.",
+        "rules": "- Box jumps : sauter avec les deux pieds, hanches et genoux ouverts, contrôle en haut.\n- Descendre : saut ou step-down (step-up uniquement pour Masters 55+).\n- Push press / jerk / shoulder press : barre sur épaules au départ, verrouillage complet au-dessus de la tête, pieds ensemble.\n- Barre doit commencer au sol, usage de rack interdit.\n- Toes-to-bar : suspendu → orteils touchent barre, bras et hanches étendus en bas, pieds derrière barre.\n- Séquence selon division (poids et hauteur box). Score = total tours et reps en 18 min.\n- Pas de tiebreak.",
+        "tips": "- Commence chaque box jump avec contrôle pour économiser les jambes.\n- Maintiens une technique parfaite sur le push press, surtout en fin de fatigue.\n- Utilise des séries courtes et régulières sur les toes-to-bar pour préserver ton rythme.\n- Planifie les transitions box → barre → pull-up bar pour minimiser les pertes de temps.\n- Respire profondément et garde un rythme constant tout au long des 18 minutes."
+      },
+      "en": {
+        "title": "AMRAP (18 min): Box Jumps, Push Press, Toes-to-Bar",
+        "summary": "An 18-minute AMRAP combining box jumps, push presses, and toes-to-bar. This workout tests endurance, explosive power, and coordination while requiring strict control and technique on every movement.",
+        "details": "Workout 12.3 is an 18-minute AMRAP featuring box jumps, push presses, and toes-to-bar.\nEach movement has strict standards: full control, proper lockout, and full range of motion.\n\n### Rules\n\n- **Box jumps**: two-foot jump onto the box. Hips and knees must open fully at the top while maintaining control.\n  - Stepping down or jumping down is allowed, but **jumping up is mandatory**.\n  - Exception: Masters 55+ may step up.\n- **Push press / Push jerk / Split jerk / Shoulder press**:\n  - Each rep begins with the barbell on the shoulders and finishes **fully locked out overhead**.\n  - Elbows, shoulders, hips, and knees must fully extend.\n  - Bar must finish **directly over the heels**, feet together.\n  - Each set starts with the barbell on the ground. Using a rack is not allowed.\n- **Toes-to-bar**:\n  - Start from full hang, touch toes to the bar.\n  - Both feet must touch the bar **simultaneously**.\n  - Arms and hips fully extended at bottom, feet return **behind the bar**.\n- **Sequence by division**:\n  - **Men & Masters Men ≤54**: 15 box jumps 24”, 115 lb push press x12, 9 toes-to-bar.\n  - **Women & Masters Women ≤54**: 15 box jumps 20”, 75 lb push press x12, 9 toes-to-bar.\n  - **Masters Men 55+**: 15 box jumps or step-ups 20”, 95 lb push press x12, 9 toes-to-bar.\n  - **Masters Women 55+**: 15 box jumps or step-ups 20”, 55 lb push press x12, 9 toes-to-bar.\n- Score = **total rounds and reps completed** in 18 minutes.\n- **No tiebreak.**",
+        "rules": "- Box jumps: two feet, hips and knees open, control on top.\n- Descend: jump down or step-down (step-up only for Masters 55+).\n- Push press / jerk / shoulder press: start on shoulders, lockout overhead, feet together.\n- Bar starts on ground, rack not allowed.\n- Toes-to-bar: hang → toes touch bar, arms and hips extended, feet behind bar.\n- Sequence by division. Score = total rounds and reps in 18 min.\n- No tiebreak.",
+        "tips": "- Land box jumps with control to conserve legs.\n- Maintain perfect push press technique, especially under fatigue.\n- Use short, consistent sets on toes-to-bar to preserve rhythm.\n- Plan transitions box → bar → pull-up bar to minimize wasted time.\n- Breathe deeply and keep a steady pace throughout the 18 minutes."
+      }
+    },
+    "type": "amrap",
+    "category": "the-opens",
+    "team_size": null,
+    "variants": [
+      {
+        "division": "rx",
+        "gender": "male",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": 1080,
+        "exercises": [
+          {
+            "exercise": "box-jump",
+            "metrics": {
+              "repetitions": 15,
+              "height": 61
+            }
+          },
+          {
+            "exercise": "push-press",
+            "metrics": {
+              "repetitions": 12,
+              "weight": 52
+            }
+          },
+          {
+            "exercise": "toes-to-bar",
+            "metrics": {
+              "repetitions": 9
+            }
+          }
+        ]
+      },
+      {
+        "division": "rx",
+        "gender": "female",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": 1080,
+        "exercises": [
+          {
+            "exercise": "box-jump",
+            "metrics": {
+              "repetitions": 15,
+              "height": 51
+            }
+          },
+          {
+            "exercise": "push-press",
+            "metrics": {
+              "repetitions": 12,
+              "weight": 34
+            }
+          },
+          {
+            "exercise": "toes-to-bar",
+            "metrics": {
+              "repetitions": 9
+            }
+          }
+        ]
+      },
+      {
+        "division": "masters",
+        "gender": "male",
+        "minAge": 55,
+        "maxAge": null,
+        "ageRange": "masters",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": 1080,
+        "exercises": [
+          {
+            "exercise": "box-step-up",
+            "metrics": {
+              "repetitions": 15,
+              "height": 51
+            }
+          },
+          {
+            "exercise": "push-press",
+            "metrics": {
+              "repetitions": 12,
+              "weight": 43
+            }
+          },
+          {
+            "exercise": "toes-to-bar",
+            "metrics": {
+              "repetitions": 9
+            }
+          }
+        ]
+      },
+      {
+        "division": "masters",
+        "gender": "female",
+        "minAge": 55,
+        "maxAge": null,
+        "ageRange": "masters",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": 1080,
+        "exercises": [
+          {
+            "exercise": "box-jump",
+            "metrics": {
+              "repetitions": 15,
+              "height": 61
+            }
+          },
+          {
+            "exercise": "push-press",
+            "metrics": {
+              "repetitions": 12,
+              "weight": 25
+            }
+          },
+          {
+            "exercise": "toes-to-bar",
+            "metrics": {
+              "repetitions": 9
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

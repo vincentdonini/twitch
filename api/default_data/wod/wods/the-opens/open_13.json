@@ -1,0 +1,966 @@
+[
+  {
+    "name": "OPEN 13.1",
+    "descriptions": {
+      "en": "AMRAP (17 min): 40 Burpees, 30 Snatches, 30 Burpees, 30 Snatches, 20 Burpees, 30 Snatches, 10 Burpees, 30 Snatches",
+      "fr": "AMRAP (17 min): 40 Burpees, 30 Snatches, 30 Burpees, 30 Snatches, 20 Burpees, 30 Snatches, 10 Burpees, 30 Snatches"
+    },
+    "type": "amrap",
+    "category": "the-opens",
+    "team_size": null,
+    "versions": [
+      {
+        "division": "rx",
+        "gender": "male",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "variant": {
+          "rounds": null,
+          "time_cap": 1020,
+          "descriptions": {
+            "en": "AMRAP (17 min): 40 Burpees, 30 Snatches (75 lb), 30 Burpees, 30 Snatches (135 lb), 20 Burpees, 30 Snatch (165 lb), 10 Burpees, 30 Snatch (210 lb)",
+            "fr": "AMRAP (17 min): 40 Burpees, 30 Snatches (34 kg), 30 Burpees, 30 Snatches (61 kg), 20 Burpees, 30 Snatch (75 kg), 10 Burpees, 30 Snatches (95 kg)"
+          },
+          "exercises": [
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 40
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "repetitions": 30,
+                "weight": 75
+              }
+            },
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 30
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "repetitions": 30,
+                "weight": 135
+              }
+            },
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 20
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "repetitions": 30,
+                "weight": 165
+              }
+            },
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 10
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "weight": 210
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "rx",
+        "gender": "female",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "variant": {
+          "rounds": null,
+          "time_cap": 1020,
+          "descriptions": {
+            "en": "AMRAP (17 min): 40 Burpees, 30 Snatches (45 lb), 30 Burpees, 30 Snatches (75 lb), 20 Burpees, 30 Snatch (100 lb), 10 Burpees, 30 Snatch (120 lb)",
+            "fr": "AMRAP (17 min): 40 Burpees, 30 Snatches (20 kg), 30 Burpees, 30 Snatches (34 kg), 20 Burpees, 30 Snatch (45 kg), 10 Burpees, 30 Snatches (55 kg)"
+          },
+          "exercises": [
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 40
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "repetitions": 30,
+                "weight": 45
+              }
+            },
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 30
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "repetitions": 30,
+                "weight": 75
+              }
+            },
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 20
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "repetitions": 30,
+                "weight": 100
+              }
+            },
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 10
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "weight": 120
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "masters",
+        "gender": "male",
+        "minAge": 55,
+        "ageRange": "masters",
+        "variant": {
+          "rounds": null,
+          "time_cap": 1020,
+          "descriptions": {
+            "en": "AMRAP (17 min): 40 Burpees, 30 Snatches (45 lb), 30 Burpees, 30 Snatches (75 lb), 20 Burpees, 30 Snatch (100 lb), 10 Burpees, 30 Snatch (120 lb)",
+            "fr": "AMRAP (17 min): 40 Burpees, 30 Snatches (20 kg), 30 Burpees, 30 Snatches (34 kg), 20 Burpees, 30 Snatch (45 kg), 10 Burpees, 30 Snatches (55 kg)"
+          },
+          "exercises": [
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 40
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "repetitions": 30,
+                "weight": 45
+              }
+            },
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 30
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "repetitions": 30,
+                "weight": 75
+              }
+            },
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 20
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "repetitions": 30,
+                "weight": 100
+              }
+            },
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 10
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "weight": 120
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "masters",
+        "gender": "female",
+        "minAge": 55,
+        "ageRange": "masters",
+        "variant": {
+          "rounds": null,
+          "time_cap": 1020,
+          "descriptions": {
+            "en": "AMRAP (17 min): 40 Burpees, 30 Snatches (35 lb), 30 Burpees, 30 Snatches (55 lb), 20 Burpees, 30 Snatch (75 lb), 10 Burpees, 30 Snatch (90 lb)",
+            "fr": "AMRAP (17 min): 40 Burpees, 30 Snatches (16 kg), 30 Burpees, 30 Snatches (25 kg), 20 Burpees, 30 Snatch (34 kg), 10 Burpees, 30 Snatches (41 kg)"
+          },
+          "exercises": [
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 40
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "repetitions": 30,
+                "weight": 35
+              }
+            },
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 30
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "repetitions": 30,
+                "weight": 55
+              }
+            },
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 20
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "repetitions": 30,
+                "weight": 75
+              }
+            },
+            {
+              "exercise": "burpee",
+              "metrics": {
+                "repetitions": 10
+              }
+            },
+            {
+              "exercise": "snatch",
+              "metrics": {
+                "weight": 90
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "OPEN 13.2",
+    "descriptions": {
+      "en": "AMRAP (10 min): 5 Shoulder-to-Overhead, 10 Deadlifts, 15 Box Jumps",
+      "fr": "AMRAP (10 min) : 5 Shoulder-to-Overhead, 10 Deadlifts, 15 Box Jumps"
+    },
+    "type": "amrap",
+    "category": "the-opens",
+    "team_size": null,
+    "versions": [
+      {
+        "division": "rx",
+        "gender": "male",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "variant": {
+          "rounds": null,
+          "time_cap": 600,
+          "descriptions": {
+            "en": "AMRAP (10 min): 5 Shoulder-to-Overhead (115 lb), 10 Deadlifts (115 lb), 15 Box Jumps (24 in)",
+            "fr": "AMRAP (10 min) : 5 Shoulder-to-Overhead (52 kg), 10 Deadlifts (52 kg), 15 Box Jumps (61 cm)"
+          },
+          "exercises": [
+            {
+              "exercise": "shoulder-to-overhead",
+              "metrics": {
+                "repetitions": 5,
+                "weight": 52
+              }
+            },
+            {
+              "exercise": "deadlift",
+              "metrics": {
+                "repetitions": 10,
+                "weight": 52
+              }
+            },
+            {
+              "exercise": "box-jump",
+              "metrics": {
+                "repetitions": 15,
+                "height": 61
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "rx",
+        "gender": "female",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "variant": {
+          "rounds": null,
+          "time_cap": 600,
+          "descriptions": {
+            "en": "AMRAP (10 min): 5 Shoulder-to-Overhead (75 lb), 10 Deadlifts (75 lb), 15 Box Jumps (20 in)",
+            "fr": "AMRAP (10 min) : 5 Shoulder-to-Overhead (34 kg), 10 Deadlifts (34 kg), 15 Box Jumps (51 cm)"
+          },
+          "exercises": [
+            {
+              "exercise": "shoulder-to-overhead",
+              "metrics": {
+                "repetitions": 5,
+                "weight": 75
+              }
+            },
+            {
+              "exercise": "deadlift",
+              "metrics": {
+                "repetitions": 10,
+                "weight": 34
+              }
+            },
+            {
+              "exercise": "box-jump",
+              "metrics": {
+                "repetitions": 15,
+                "height": 51
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "masters",
+        "gender": "male",
+        "minAge": 55,
+        "ageRange": "masters",
+        "variant": {
+          "rounds": null,
+          "time_cap": 600,
+          "descriptions": {
+            "en": "AMRAP (10 min): 5 Shoulder-to-Overhead (95 lb), 10 Deadlifts (95 lb), 15 Box Jumps (20 in)",
+            "fr": "AMRAP (10 min) : 5 Shoulder-to-Overhead (43 kg), 10 Deadlifts (43 kg), 15 Box Jumps (51 cm)"
+          },
+          "exercises": [
+            {
+              "exercise": "shoulder-to-overhead",
+              "metrics": {
+                "repetitions": 5,
+                "weight": 43
+              }
+            },
+            {
+              "exercise": "deadlift",
+              "metrics": {
+                "repetitions": 10,
+                "weight": 43
+              }
+            },
+            {
+              "exercise": "box-jump",
+              "metrics": {
+                "repetitions": 15,
+                "height": 51
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "masters",
+        "gender": "female",
+        "minAge": 55,
+        "ageRange": "masters",
+        "variant": {
+          "rounds": null,
+          "time_cap": 600,
+          "descriptions": {
+            "en": "AMRAP (10 min): 5 Shoulder-to-Overhead (55 lb), 10 Deadlifts (55 lb), 15 Box Jumps (20 in)",
+            "fr": "AMRAP (10 min) : 5 Shoulder-to-Overhead (25 kg), 10 Deadlifts (25 kg), 15 Box Jumps (51 cm)"
+          },
+          "exercises": [
+            {
+              "exercise": "shoulder-to-overhead",
+              "metrics": {
+                "repetitions": 5,
+                "weight": 55
+              }
+            },
+            {
+              "exercise": "deadlift",
+              "metrics": {
+                "repetitions": 10,
+                "weight": 55
+              }
+            },
+            {
+              "exercise": "box-jump",
+              "metrics": {
+                "repetitions": 15
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "OPEN 13.3",
+    "descriptions": {
+      "en": "AMRAP (12 min): 150 Wall Balls, 90 Double-Unders, 30 Muscle-ups",
+      "fr": "AMRAP (12min) : 150 Wall Balls, 90 Double-Unders, 30 Muscle-up"
+    },
+    "type": "amrap",
+    "category": "the-opens",
+    "team_size": null,
+    "versions": [
+      {
+        "division": "rx",
+        "gender": "male",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "variant": {
+          "rounds": null,
+          "time_cap": 720,
+          "descriptions": {
+            "en": "AMRAP (12 min): 150 Wall Balls (20 lb to 10 in target), 90 Double-Unders, 30 Muscle-ups",
+            "fr": "AMRAP (12min) : 150 Wall Balls (9 kg à cible 3,05 m), 90 Double-Unders, 30 Muscle-up"
+          },
+          "exercises": [
+            {
+              "exercise": "wall-ball-shot",
+              "metrics": {
+                "repetitions": 150,
+                "weight": 9,
+                "height": 305
+              }
+            },
+            {
+              "exercise": "double-under",
+              "metrics": {
+                "repetitions": 90
+              }
+            },
+            {
+              "exercise": "muscle-up",
+              "metrics": {
+                "repetitions": 30
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "rx",
+        "gender": "female",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "variant": {
+          "rounds": null,
+          "time_cap": 720,
+          "descriptions": {
+            "en": "AMRAP (12 min): 150 Wall Balls (14 lb to 9 in target), 90 Double-Unders, 30 Muscle-ups",
+            "fr": "AMRAP (12min) : 150 Wall Balls (6 kg à cible 2,74 m), 90 Double-Unders, 30 Muscle-up"
+          },
+          "exercises": [
+            {
+              "exercise": "wall-ball-shot",
+              "metrics": {
+                "repetitions": 150,
+                "weight": 6,
+                "height": 274
+              }
+            },
+            {
+              "exercise": "double-under",
+              "metrics": {
+                "repetitions": 90
+              }
+            },
+            {
+              "exercise": "muscle-up",
+              "metrics": {
+                "repetitions": 30
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "masters",
+        "gender": "male",
+        "minAge": 55,
+        "ageRange": "masters",
+        "variant": {
+          "rounds": null,
+          "time_cap": 720,
+          "descriptions": {
+            "en": "AMRAP (12 min): 150 Wall Balls (20 lb to 9 in target), 90 Double-Unders, 30 Muscle-ups",
+            "fr": "AMRAP (12min) : 150 Wall Balls (9 kg à cible 2,74 m), 90 Double-Unders, 30 Muscle-up"
+          },
+          "exercises": [
+            {
+              "exercise": "wall-ball-shot",
+              "metrics": {
+                "repetitions": 150,
+                "weight": 9,
+                "height": 274
+              }
+            },
+            {
+              "exercise": "double-under",
+              "metrics": {
+                "repetitions": 90
+              }
+            },
+            {
+              "exercise": "muscle-up",
+              "metrics": {
+                "repetitions": 30
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "masters",
+        "gender": "female",
+        "minAge": 55,
+        "ageRange": "masters",
+        "variant": {
+          "rounds": null,
+          "time_cap": 720,
+          "descriptions": {
+            "en": "AMRAP (12 min): 150 Wall Balls (10 lb to 9 in target), 90 Double-Unders, 30 Muscle-ups",
+            "fr": "AMRAP (12min) : 150 Wall Balls (4,5 kg à cible 2,74 m), 90 Double-Unders, 30 Muscle-up"
+          },
+          "exercises": [
+            {
+              "exercise": "wall-ball-shot",
+              "metrics": {
+                "repetitions": 150,
+                "weight": 4.5
+              }
+            },
+            {
+              "exercise": "double-under",
+              "metrics": {
+                "repetitions": 90
+              }
+            },
+            {
+              "exercise": "muscle-up",
+              "metrics": {
+                "repetitions": 30
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "OPEN 13.4",
+    "descriptions": {
+      "en": "AMRAP (7 min): 3 Clean and Jerk, 3 Toes-to-bar, 6 Clean and Jerk, 6 Toes-to-bar, 9 Clean and Jerk, 9 Toes-to-bar, ...",
+      "fr": "AMRAP (7 min): 3 Clean and Jerk, 3 Toes-to-bar, 6 Clean and Jerk, 6 Toes-to-bar, 9 Clean and Jerk, 9 Toes-to-bar, ..."
+    },
+    "type": "amrap",
+    "category": "the-opens",
+    "team_size": null,
+    "versions": [
+      {
+        "division": "rx",
+        "gender": "male",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "variant": {
+          "rounds": null,
+          "time_cap": 420,
+          "descriptions": {
+            "en": "AMRAP (7 min): 3 Clean and Jerk (135 lb), 3 Toes-to-bar, 6 Clean and Jerk (135 lb), 6 Toes-to-bar, 9 Clean and Jerk (135 lb), 9 Toes-to-bar, ...",
+            "fr": "AMRAP (7 min): 3 Clean and Jerk (61 kg), 3 Toes-to-bar, 6 Clean and Jerk (61 kg), 6 Toes-to-bar, 9 Clean and Jerk (61 kg), 9 Toes-to-bar, ..."
+          },
+          "exercises": [
+            {
+              "exercise": "clean-and-jerk",
+              "metrics": {
+                "repetitions": 3,
+                "weight": 61
+              }
+            },
+            {
+              "exercise": "toes-to-bar",
+              "metrics": {
+                "repetitions": 3
+              }
+            },
+            {
+              "exercise": "clean-and-jerk",
+              "metrics": {
+                "repetitions": 6,
+                "weight": 61
+              }
+            },
+            {
+              "exercise": "toes-to-bar",
+              "metrics": {
+                "repetitions": 6
+              }
+            },
+            {
+              "exercise": "clean-and-jerk",
+              "metrics": {
+                "repetitions": 9,
+                "weight": 135
+              }
+            },
+            {
+              "exercise": "toes-to-bar",
+              "metrics": {
+                "repetitions": 9
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "rx",
+        "gender": "female",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "variant": {
+          "rounds": null,
+          "time_cap": 420,
+          "descriptions": {
+            "en": "AMRAP (7 min): 3 Clean and Jerk (95 lb), 3 Toes-to-bar, 6 Clean and Jerk (95 lb), 6 Toes-to-bar, 9 Clean and Jerk (95 lb), 9 Toes-to-bar, ...",
+            "fr": "AMRAP (7 min): 3 Clean and Jerk (43 kg), 3 Toes-to-bar, 6 Clean and Jerk (43 kg), 6 Toes-to-bar, 9 Clean and Jerk (43 kg), 9 Toes-to-bar, ..."
+          },
+          "exercises": [
+            {
+              "exercise": "clean-and-jerk",
+              "metrics": {
+                "repetitions": 3,
+                "weight": 43
+              }
+            },
+            {
+              "exercise": "toes-to-bar",
+              "metrics": {
+                "repetitions": 3
+              }
+            },
+            {
+              "exercise": "clean-and-jerk",
+              "metrics": {
+                "repetitions": 6,
+                "weight": 43
+              }
+            },
+            {
+              "exercise": "toes-to-bar",
+              "metrics": {
+                "repetitions": 6
+              }
+            },
+            {
+              "exercise": "clean-and-jerk",
+              "metrics": {
+                "repetitions": 9,
+                "weight": 43
+              }
+            },
+            {
+              "exercise": "toes-to-bar",
+              "metrics": {
+                "repetitions": 9
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "masters",
+        "gender": "male",
+        "minAge": 55,
+        "ageRange": "masters",
+        "variant": {
+          "rounds": null,
+          "time_cap": 420,
+          "descriptions": {
+            "en": "AMRAP (7 min): 3 Clean and Jerk (115 lb), 3 Toes-to-bar, 6 Clean and Jerk (115 lb), 6 Toes-to-bar, 9 Clean and Jerk (115 lb), 9 Toes-to-bar, ...",
+            "fr": "AMRAP (7 min): 3 Clean and Jerk (52 kg), 3 Toes-to-bar, 6 Clean and Jerk (52 kg), 6 Toes-to-bar, 9 Clean and Jerk (52 kg), 9 Toes-to-bar, ..."
+          },
+          "exercises": [
+            {
+              "exercise": "clean-and-jerk",
+              "metrics": {
+                "repetitions": 3,
+                "weight": 52
+              }
+            },
+            {
+              "exercise": "toes-to-bar",
+              "metrics": {
+                "repetitions": 3
+              }
+            },
+            {
+              "exercise": "clean-and-jerk",
+              "metrics": {
+                "repetitions": 6,
+                "weight": 52
+              }
+            },
+            {
+              "exercise": "toes-to-bar",
+              "metrics": {
+                "repetitions": 6
+              }
+            },
+            {
+              "exercise": "clean-and-jerk",
+              "metrics": {
+                "repetitions": 9,
+                "weight": 52
+              }
+            },
+            {
+              "exercise": "toes-to-bar",
+              "metrics": {
+                "repetitions": 9
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "masters",
+        "gender": "female",
+        "minAge": 55,
+        "ageRange": "masters",
+        "variant": {
+          "rounds": null,
+          "time_cap": 420,
+          "descriptions": {
+            "en": "AMRAP (7 min): 3 Clean and Jerk (65 lb), 3 Toes-to-bar, 6 Clean and Jerk (65 lb), 6 Toes-to-bar, 9 Clean and Jerk (65 lb), 9 Toes-to-bar, ...",
+            "fr": "AMRAP (7 min): 3 Clean and Jerk (30 kg), 3 Toes-to-bar, 6 Clean and Jerk (30 kg), 6 Toes-to-bar, 9 Clean and Jerk (30 kg), 9 Toes-to-bar, ..."
+          },
+          "exercises": [
+            {
+              "exercise": "clean-and-jerk",
+              "metrics": {
+                "repetitions": 3,
+                "weight": 30
+              }
+            },
+            {
+              "exercise": "toes-to-bar",
+              "metrics": {
+                "repetitions": 3
+              }
+            },
+            {
+              "exercise": "clean-and-jerk",
+              "metrics": {
+                "repetitions": 6,
+                "weight": 30
+              }
+            },
+            {
+              "exercise": "toes-to-bar",
+              "metrics": {
+                "repetitions": 6
+              }
+            },
+            {
+              "exercise": "clean-and-jerk",
+              "metrics": {
+                "repetitions": 9,
+                "weight": 30
+              }
+            },
+            {
+              "exercise": "toes-to-bar",
+              "metrics": {
+                "repetitions": 9
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "OPEN 13.5",
+    "descriptions": {
+      "en": "AMRAP (4 min) : 15 Thrusters, 15 Chest-to-Bar Pull-Ups - If 90 reps completed under 4 min, extend to 8 min; 180 reps under 8 min, extend to 12 min; 270 reps under 12 min, extend to 16 min, etc",
+      "fr": "AMRAP (4 min) : 15 Thrusters, 15 Chest-to-Bar Pull-Ups - Si 90 répétitions complétées en moins de 4 min, prolonger à 8 min ; 180 répétitions en moins de 8 min, prolonger à 12 min ; 270 répétitions en moins de 12 min, prolonger à 16 min, etc"
+    },
+    "type": "amrap",
+    "category": "the-opens",
+    "team_size": null,
+    "versions": [
+      {
+        "division": "rx",
+        "gender": "male",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "variant": {
+          "rounds": null,
+          "time_cap": 240,
+          "descriptions": {
+            "en": "AMRAP (4 min) : 15 Thrusters (100 lb), 15 Chest-to-Bar Pull-Ups - If 90 reps completed under 4 min, extend to 8 min; 180 reps under 8 min, extend to 12 min; 270 reps under 12 min, extend to 16 min, etc",
+            "fr": "AMRAP (4 min) : 15 Thrusters (45 kg), 15 Chest-to-Bar Pull-Ups - Si 90 répétitions complétées en moins de 4 min, prolonger à 8 min ; 180 répétitions en moins de 8 min, prolonger à 12 min ; 270 répétitions en moins de 12 min, prolonger à 16 min, etc"
+          },
+          "exercises": [
+            {
+              "exercise": "thruster",
+              "metrics": {
+                "repetitions": 15,
+                "weight": 45
+              }
+            },
+            {
+              "exercise": "chest-to-bar-pull-up",
+              "metrics": {
+                "repetitions": 15
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "rx",
+        "gender": "female",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "variant": {
+          "rounds": null,
+          "time_cap": 240,
+          "descriptions": {
+            "en": "AMRAP (4 min) : 15 Thrusters (65 lb), 15 Chest-to-Bar Pull-Ups - If 90 reps completed under 4 min, extend to 8 min; 180 reps under 8 min, extend to 12 min; 270 reps under 12 min, extend to 16 min, etc",
+            "fr": "AMRAP (4 min) : 15 Thrusters (30 kg), 15 Chest-to-Bar Pull-Ups - Si 90 répétitions complétées en moins de 4 min, prolonger à 8 min ; 180 répétitions en moins de 8 min, prolonger à 12 min ; 270 répétitions en moins de 12 min, prolonger à 16 min, etc"
+          },
+          "exercises": [
+            {
+              "exercise": "thruster",
+              "metrics": {
+                "repetitions": 15,
+                "weight": 30
+              }
+            },
+            {
+              "exercise": "chest-to-bar-pull-up",
+              "metrics": {
+                "repetitions": 15
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "masters",
+        "gender": "male",
+        "minAge": 55,
+        "ageRange": "masters",
+        "variant": {
+          "rounds": null,
+          "time_cap": 240,
+          "descriptions": {
+            "en": "AMRAP (4 min) : 15 Thrusters (65 lb), 15 Chin-over-Bar Pull-Ups - If 90 reps completed under 4 min, extend to 8 min; 180 reps under 8 min, extend to 12 min; 270 reps under 12 min, extend to 16 min, etc",
+            "fr": "AMRAP (4 min) : 15 Thrusters (30 kg), 15 Chin-over-Bar Pull-Ups - Si 90 répétitions complétées en moins de 4 min, prolonger à 8 min ; 180 répétitions en moins de 8 min, prolonger à 12 min ; 270 répétitions en moins de 12 min, prolonger à 16 min, etc"
+          },
+          "exercises": [
+            {
+              "exercise": "thruster",
+              "metrics": {
+                "repetitions": 15,
+                "weight": 30
+              }
+            },
+            {
+              "exercise": "chin-over-bar-pull-up",
+              "metrics": {
+                "repetitions": 15
+              }
+            }
+          ]
+        }
+      },
+      {
+        "division": "masters",
+        "gender": "female",
+        "minAge": 55,
+        "ageRange": "masters",
+        "variant": {
+          "rounds": null,
+          "time_cap": 240,
+          "descriptions": {
+            "en": "AMRAP (4 min) : 15 Thrusters (45 lb), 15 Jumping Chest-to-Bar Pull-Ups - If 90 reps completed under 4 min, extend to 8 min; 180 reps under 8 min, extend to 12 min; 270 reps under 12 min, extend to 16 min, etc",
+            "fr": "AMRAP (4 min) : 15 Thrusters (20 kg), 15 Jumping Chest-to-Bar Pull-Ups - Si 90 répétitions complétées en moins de 4 min, prolonger à 8 min ; 180 répétitions en moins de 8 min, prolonger à 12 min ; 270 répétitions en moins de 12 min, prolonger à 16 min, etc"
+          },
+          "exercises": [
+            {
+              "exercise": "thruster",
+              "metrics": {
+                "repetitions": 15,
+                "weight": 20
+              }
+            },
+            {
+              "exercise": "jumping-chest-to-bar-pull-up",
+              "metrics": {
+                "repetitions": 15
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

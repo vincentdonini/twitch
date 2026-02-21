@@ -23,28 +23,41 @@ class WodFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
-        $jsonFilesOpen = [
-            __DIR__ . '/../../../default_data/wod/wods/open_25.json',
-//            __DIR__ . '/../../../default_data/wod/wods/open_15.json',
-//            __DIR__ . '/../../../default_data/wod/wods/open_14.json',
-//            __DIR__ . '/../../../default_data/wod/wods/open_13.json',
-//            __DIR__ . '/../../../default_data/wod/wods/open_12.json',
-//            __DIR__ . '/../../../default_data/wod/wods/open_11.json',
-            __DIR__ . '/../../../default_data/wod/wods/wods.json',
+        $jsonFilesClassicBenchmarks = [
+            __DIR__ . '/../../../default_data/wod/wods/classic-benchmarks/wods.json',
         ];
 
         $jsonFilesGirls = [
-//            __DIR__ . '/../../../default_data/wod/girls.json',
+//            __DIR__ . '/../../../default_data/wod/wods/the-girls/girls.json',
         ];
 
         $jsonFilesHeroes = [
-//            __DIR__ . '/../../../default_data/wod/heroes.json',
+//            __DIR__ . '/../../../default_data/wod/wods/the-heroes/heroes.json',
+        ];
+
+        $jsonFilesOpen = [
+            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_25.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_24.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_23.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_22.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_21.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_20.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_19.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_18.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_17.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_16.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_15.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_14.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_13.json',
+            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_12.json',
+            //            __DIR__ . '/../../../default_data/wod/wods/the-opens/open_11.json',
         ];
 
         $jsonFiles = array_merge(
-            $jsonFilesOpen,
+            $jsonFilesClassicBenchmarks,
             $jsonFilesGirls,
-            $jsonFilesHeroes
+            $jsonFilesHeroes,
+            $jsonFilesOpen,
         );
 
         foreach ($jsonFiles as $jsonFile) {

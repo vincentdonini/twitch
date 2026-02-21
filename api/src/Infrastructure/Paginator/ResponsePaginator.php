@@ -14,19 +14,28 @@ final class ResponsePaginator
         PaginatorValues                $paginatorValues
     ): array {
         if ($paginator instanceof Paginator || $paginator instanceof LightPaginator) {
-            $count = $paginator->count();
+            $totalCount = $paginator->count();
         } else {
-            $count = count($paginator);
+            $totalCount = count($paginator);
         }
 
-        $headers = [
-            'Pagination-Page'  => $paginatorValues->getPage(),
-            'Pagination-Count' => ceil(
-                $count / $paginatorValues->getLimit()
-            ),
-            'Element-Count'    => $count,
-            'Pagination-Limit' => $paginatorValues->getLimit(),
-        ];
+        $limit = $paginatorValues->getLimit();
+
+        if ($limit === -1) {
+            $headers = [
+                'Pagination-Page'  => 1,
+                'Pagination-Count' => $totalCount,
+                'Element-Count'    => $totalCount,
+                'Pagination-Limit' => $totalCount,
+            ];
+        } else {
+            $headers = [
+                'Pagination-Page'  => $paginatorValues->getPage(),
+                'Pagination-Count' => (int) ceil($totalCount / $limit),
+                'Element-Count'    => $totalCount,
+                'Pagination-Limit' => $limit,
+            ];
+        }
 
         if ($paginator instanceof LightPaginator) {
             $lastModified = $paginator->getLastModified();

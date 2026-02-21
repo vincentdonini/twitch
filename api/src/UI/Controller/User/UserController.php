@@ -23,6 +23,7 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/users', name: 'user_')]
@@ -78,16 +79,15 @@ final class UserController extends AbstractController
         ListUsersUseCase    $useCase,
         NormalizerInterface $normalizer,
     ): JsonResponse {
-        $paginatorValues = RequestPaginator::extractValues($request);
+        $paginatorValues = RequestPaginator::extractValues(
+            request: $request
+        );
 
         try {
             $paginator = $useCase->execute(
                 new ListUsersHttp(
-                    page   : $paginatorValues->getPage(),
-                    limit  : $paginatorValues->getLimit(),
-                    filters: [
-                        'filters' => $request->query->all('filters'),
-                    ]
+                    page : $paginatorValues->getPage(),
+                    limit: $paginatorValues->getLimit(),
                 )
             );
         } catch (InvalidArgumentException) {
@@ -138,7 +138,9 @@ final class UserController extends AbstractController
     ): JsonResponse {
         try {
             $user = $useCase->execute(
-                new GetUserByIdHttp($userId)
+                new GetUserByIdHttp(
+                    id: Uuid::fromString($userId),
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(

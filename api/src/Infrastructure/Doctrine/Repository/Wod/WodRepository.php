@@ -100,4 +100,33 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
             $limit,
         );
     }
+
+    public function countWods(): int
+    {
+        return (int) $this->createQueryBuilder('w')
+            ->select('COUNT(w.id)')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
+    public function countByWodCategorySlug(string $wodCategorySlug): int
+    {
+        return (int) $this->createQueryBuilder('w')
+            ->join('w.wodCategory', 'wc')
+            ->select('COUNT(w.id)')
+            ->where('wc.slug = :slug')
+            ->setParameter('slug', $wodCategorySlug)
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
+    public function countByName(string $name): int
+    {
+        return (int) $this->createQueryBuilder('w')
+            ->select('COUNT(w.id)')
+            ->where('w.name LIKE :name')
+            ->setParameter('name', $name . '%')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
 }

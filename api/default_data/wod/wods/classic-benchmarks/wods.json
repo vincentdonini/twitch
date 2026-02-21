@@ -1,0 +1,338 @@
+[
+  {
+    "name": "Donkey Kong",
+    "contents": {
+      "fr": {
+        "title": "21-15-9 : Burpees, Kettlebell Swings, Box Jumps (6 Walking Lunges entre chaque exercise)",
+        "summary": "« Donkey Kong » combine puissance, cardio et endurance. Après chaque exercice — burpees, kettlebell swings et box jumps — **6 walking lunges** renforcent jambes et gainage tout en maintenant le rythme.",
+        "details": "Ce WOD « Donkey Kong » suit le format 21-15-9 : 21 répétitions de burpees, kettlebell swings et box jumps, puis 15, puis 9.  \nEntre chaque exercice, l’athlète réalise **6 walking lunges**, ajoutant un challenge supplémentaire pour les jambes et le core.  \nLes burpees augmentent rapidement la fréquence cardiaque, les kettlebell swings développent la puissance des hanches et des épaules, et les box jumps sollicitent l’explosivité et la coordination.  \nLe but est de terminer toutes les répétitions **le plus rapidement possible** en gardant une technique propre et sécurisée.",
+        "rules": "- Suivre le schéma 21-15-9 pour burpees, kettlebell swings et box jumps.\n- Après chaque exercice, effectuer **6 walking lunges** avant de passer au mouvement suivant.\n- Les burpees doivent être complets, avec extension totale du corps et saut.\n- Les kettlebell swings se réalisent avec les hanches explosant vers le haut, jusqu’aux épaules ou au-dessus de la tête.\n- Les box jumps nécessitent une extension complète des hanches et un atterrissage contrôlé.\n- Les walking lunges doivent toucher le sol avec le genou arrière à chaque répétition.\n- Maintenir une technique propre sur tous les mouvements.\n- Le score est le **temps total pour terminer toutes les répétitions**.\n- **Pas de tiebreak.**",
+        "tips": "- Gère ton rythme pour ne pas te fatiguer trop vite.\n- Utilise les 6 walking lunges comme récupération active et contrôle ta respiration.\n- Priorise la technique sur tous les mouvements pour éviter les blessures.\n- Essaie de garder les séries non cassées ou avec de très courts temps de pause.\n- Prépare tes transitions entre mouvements pour gagner du temps et améliorer ton temps total."
+      },
+      "en": {
+        "title": "21-15-9: Burpees, Kettlebell Swings, Box Jumps (6 Lunges between each exercise)",
+        "summary": "« Donkey Kong » combining power, cardio, and endurance. After each exercise — burpees, kettlebell swings, and box jumps — **6 walking lunges** challenge legs and core while keeping the workout rhythm.",
+        "details": "The 'Donkey Kong' WOD follows the 21-15-9 scheme: 21 reps of burpees, kettlebell swings, and box jumps, then 15, then 9.  \nAfter each exercise, the athlete performs **6 walking lunges**, adding extra challenge for the legs and core and replacing the original stair-climbing element.  \nBurpees quickly elevate the heart rate, kettlebell swings develop hip and shoulder power, and box jumps work explosiveness and coordination.  \nThe goal is to complete all repetitions **as fast as possible** while maintaining proper and safe technique.",
+        "rules": "- Follow the 21-15-9 rep scheme for burpees, kettlebell swings, and box jumps.\n- After each exercise, perform **6 walking lunges** before moving on to the next movement.\n- Burpees must be complete, with full body extension and a jump.\n- Kettlebell swings should use hip drive to reach shoulder height or overhead.\n- Box jumps require full hip extension and a controlled landing.\n- Walking lunges must have the back knee touch the ground on each step.\n- Maintain clean and safe technique on all movements.\n- Score is the **total time to complete all repetitions**.\n- **No tiebreak.**",
+        "tips": "- Manage your pace to avoid early fatigue.\n- Use the 6 walking lunges as active recovery and control your breathing.\n- Prioritize proper technique on all movements to prevent injury.\n- Try to keep sets unbroken or with very short rests.\n- Prepare transitions between movements to save time and improve your total finish time."
+      }
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "team_size": null,
+    "variants": [
+      {
+        "division": "rx",
+        "gender": "male",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": null,
+        "exercises": [
+          {
+            "exercise": "burpee",
+            "metrics": {
+              "repetitions": 21
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "kettlebell-swing",
+            "metrics": {
+              "repetitions": 21,
+              "weight": 24
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "box-jump",
+            "metrics": {
+              "repetitions": 21,
+              "height": 60
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "burpee",
+            "metrics": {
+              "repetitions": 15
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "kettlebell-swing",
+            "metrics": {
+              "repetitions": 15,
+              "weight": 24
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "box-jump",
+            "metrics": {
+              "repetitions": 15,
+              "height": 60
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "burpee",
+            "metrics": {
+              "repetitions": 9
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "kettlebell-swing",
+            "metrics": {
+              "repetitions": 9,
+              "weight": 24
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "box-jump",
+            "metrics": {
+              "repetitions": 9,
+              "height": 60
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          }
+        ]
+      },
+      {
+        "division": "rx",
+        "gender": "female",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": null,
+        "exercises": [
+          {
+            "exercise": "burpee",
+            "metrics": {
+              "repetitions": 21
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "kettlebell-swing",
+            "metrics": {
+              "repetitions": 21,
+              "weight": 16
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "box-jump",
+            "metrics": {
+              "repetitions": 21,
+              "height": 50
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "burpee",
+            "metrics": {
+              "repetitions": 15
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "kettlebell-swing",
+            "metrics": {
+              "repetitions": 15,
+              "weight": 16
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "box-jump",
+            "metrics": {
+              "repetitions": 15,
+              "height": 50
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "burpee",
+            "metrics": {
+              "repetitions": 9
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "kettlebell-swing",
+            "metrics": {
+              "repetitions": 9,
+              "weight": 16
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          },
+          {
+            "exercise": "box-jump",
+            "metrics": {
+              "repetitions": 9,
+              "height": 50
+            }
+          },
+          {
+            "exercise": "lunge",
+            "metrics": {
+              "repetitions": 6
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Burpees Lover",
+    "contents": {
+      "fr": {
+        "title": "For time : 300 Burpees",
+        "summary": "« Burpees Lover » est un WOD 100% cardio composé de **300 burpees for time**. L’objectif est simple : aller le plus vite possible tout en gardant un rythme constant pour éviter de se \"cramer\" trop tôt.",
+        "details": "Ce WOD « Burpees Lover » consiste à réaliser **300 burpees le plus rapidement possible**.  \nIl s’agit d’un défi purement cardio qui teste l’endurance musculaire, la capacité respiratoire et la gestion de l’effort.  \nLes burpees sollicitent l’ensemble du corps : jambes, core, poitrine, épaules et système cardiovasculaire.  \nLe véritable challenge est de trouver un rythme soutenable dès le départ pour tenir sur la durée sans exploser avant la fin.  \nLe but est de compléter les 300 répétitions **le plus vite possible** en maintenant une technique propre et régulière.",
+        "rules": "- Réaliser **300 burpees** au total.\n- Chaque burpee doit inclure : poitrine au sol, extension complète du corps et saut avec les mains au-dessus de la tête.\n- Le score correspond au **temps total pour terminer les 300 répétitions**.\n- L’athlète peut fractionner les répétitions comme il le souhaite.\n- Maintenir une technique propre et sécurisée tout au long du WOD.\n- **Pas de tiebreak.**",
+        "tips": "- Ne pars pas trop vite : adopte un rythme que tu peux tenir sur la durée.\n- Fractionne intelligemment (ex : 10x30, 15x20…) pour éviter l’effondrement.\n- Contrôle ta respiration dès les premières répétitions.\n- Garde un mouvement fluide et économique pour limiter la fatigue.\n- Concentre-toi mentalement sur de petits objectifs intermédiaires pour rester motivé."
+      },
+      "en": {
+        "title": "For time: 300 Burpees",
+        "summary": "“Burpees Lover” is a 100% cardio workout consisting of **300 burpees for time**. The goal is simple: go as fast as possible while keeping a steady pace to avoid burning out too early.",
+        "details": "The “Burpees Lover” WOD consists of completing **300 burpees as fast as possible**.  \nThis is a pure cardio challenge that tests muscular endurance, breathing capacity, and pacing strategy.  \nBurpees engage the entire body: legs, core, chest, shoulders, and cardiovascular system.  \nThe real challenge is finding a sustainable pace from the start so you don’t blow up before the finish.  \nThe goal is to complete all 300 repetitions **as fast as possible** while maintaining proper and consistent technique.",
+        "rules": "- Complete **300 total burpees**.\n- Each burpee must include chest to the floor, full body extension, and a jump with hands overhead.\n- Score is the **total time to complete all 300 repetitions**.\n- The athlete may break the reps as needed.\n- Maintain clean and safe technique throughout the workout.\n- **No tiebreak.**",
+        "tips": "- Do not start too fast; choose a pace you can sustain.\n- Break reps strategically (e.g., 10x30, 15x20) to avoid collapse.\n- Control your breathing from the very first reps.\n- Keep your movement smooth and efficient to limit fatigue.\n- Focus on small milestone targets to stay mentally strong."
+      }
+    },
+    "type": "for-time",
+    "category": "classic-benchmarks",
+    "team_size": null,
+    "variants": [
+      {
+        "division": "rx",
+        "gender": "male",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": null,
+        "exercises": [
+          {
+            "exercise": "burpee",
+            "metrics": {
+              "repetitions":300
+            }
+          }
+        ]
+      },
+      {
+        "division": "rx",
+        "gender": "female",
+        "minAge": 16,
+        "maxAge": 54,
+        "ageRange": "rx",
+        "scaled": false,
+        "rounds": null,
+        "time_cap": null,
+        "exercises": [
+          {
+            "exercise": "burpee",
+            "metrics": {
+              "repetitions": 300
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

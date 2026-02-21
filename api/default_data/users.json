@@ -1,20 +1,20 @@
 [
   {
-    "email": "public@woder.fr",
-    "password": "Woder123!!",
-    "firstName": "Public",
-    "lastName": "API",
-    "roles": [
-      "ROLE_ATHLETE"
-    ]
-  },
-  {
     "email": "admin@woder.fr",
     "password": "Woder123!!",
     "firstName": "Admin",
     "lastName": "API",
     "roles": [
       "ROLE_ADMIN"
+    ]
+  },
+  {
+    "email": "public@woder.fr",
+    "password": "Woder123!!",
+    "firstName": "Public",
+    "lastName": "API",
+    "roles": [
+      "ROLE_ATHLETE"
     ]
   },
   {

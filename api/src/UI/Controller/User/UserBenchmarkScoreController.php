@@ -25,6 +25,7 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/users', name: 'user_benchmark_scores_')]
@@ -62,7 +63,7 @@ final class UserBenchmarkScoreController extends AbstractController
         NormalizerInterface        $normalizer,
         string                     $userId
     ): JsonResponse {
-        $user = $this->userDAL->getById($userId);
+        $user = $this->userDAL->getById(Uuid::fromString($userId));
         if (!$user) {
             throw $this->createNotFoundException('User not found');
         }

@@ -1,20 +1,5 @@
 [
   {
-    "slug": "memorials-tributes-and-holidays",
-    "contents": {
-      "fr": {
-        "title": "Memorials, Tribute & Holidays",
-        "summary": "WODs conçus pour honorer des événements spéciaux, des jours fériés ou rendre hommage à des personnes importantes.",
-        "details": ""
-      },
-      "en": {
-        "title": "Memorials, Tribute & Holidays",
-        "summary": "WODs designed to honor special events, holidays, or pay tribute to important people.",
-        "details": ""
-      }
-    }
-  },
-  {
     "slug": "the-heroes",
     "contents": {
       "fr": {
@@ -30,16 +15,61 @@
     }
   },
   {
+    "slug": "the-girls",
+    "contents": {
+      "fr": {
+        "title": "The Girls",
+        "summary": "WODs benchmarks emblématiques du CrossFit, portant des prénoms féminins comme Fran, Cindy ou Grace. Ils servent de référence pour mesurer la progression et comparer les performances au fil du temps.",
+        "details": "Créés aux débuts du CrossFit, les \"Girls\" sont des entraînements courts à modérés mais intenses, conçus pour être répétés régulièrement afin d’évaluer les progrès. Chaque workout a un format précis (AMRAP, For Time, etc.) et est reconnu mondialement dans la communauté CrossFit."
+      },
+      "en": {
+        "title": "The Girls",
+        "summary": "Iconic benchmark CrossFit workouts named after women, such as Fran, Cindy, or Grace. They are used to track progress and compare performance over time.",
+        "details": "Introduced in the early days of CrossFit, the \"Girls\" are short to moderate, high-intensity benchmark workouts designed to be repeated regularly to measure improvement. Each workout follows a specific format (AMRAP, For Time, etc.) and is widely recognized across the CrossFit community."
+      }
+    }
+  },
+  {
+    "slug": "the-opens",
+    "contents": {
+      "fr": {
+        "title": "The Open Workouts",
+        "summary": "Les WODs officiels du CrossFit Open, la compétition mondiale annuelle ouverte à tous les athlètes. Chaque année, de nouveaux workouts sont publiés et réalisés simultanément dans le monde entier.",
+        "details": "Les workouts du CrossFit Open sont annoncés chaque semaine durant la saison des Open et sont identifiés par l’année et le numéro du workout (ex : 24.1, 24.2…). Ils combinent intensité, stratégie et gestion de l’effort, et servent de première étape qualificative vers les compétitions officielles de la saison CrossFit."
+      },
+      "en": {
+        "title": "The Open Workouts",
+        "summary": "The official CrossFit Open workouts from the annual worldwide competition open to all athletes. Each year, new workouts are released and performed globally at the same time.",
+        "details": "CrossFit Open workouts are announced weekly during the Open season and are identified by the year and workout number (e.g., 24.1, 24.2…). They combine intensity, strategy, and pacing, and serve as the first qualifying stage in the CrossFit Games season."
+      }
+    }
+  },
+  {
     "slug": "classic-benchmarks",
     "contents": {
       "fr": {
         "title": "Classic Benchmarks",
-        "summary": "Les WODs emblématiques de CrossFit, souvent appelés les 'Girls', servant de référence pour mesurer les progrès dans le temps.",
+        "summary": "Les WODs emblématiques de CrossFit, servant de référence pour mesurer les progrès dans le temps.",
         "details": ""
       },
       "en": {
         "title": "Classic Benchmarks",
-        "summary": "The iconic CrossFit WODs, often referred to as the 'Girls', serving as a benchmark for measuring progress over time.",
+        "summary": "The iconic CrossFit WODs, serving as a benchmark for measuring progress over time.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "class-daily",
+    "contents": {
+      "fr": {
+        "title": "Class Daily",
+        "summary": "Les WODs quotidiens proposés en classe, adaptés à un public large et équilibrés entre intensité, technique et récupération.",
+        "details": ""
+      },
+      "en": {
+        "title": "Class Daily",
+        "summary": "The daily WODs offered in class, suitable for a wide audience and balanced between intensity, technique, and recovery.",
         "details": ""
       }
     }
@@ -70,21 +100,6 @@
       "en": {
         "title": "Competition & Qualifier",
         "summary": "WODs used in official competitions or qualification phases such as the Open or the Games.",
-        "details": ""
-      }
-    }
-  },
-  {
-    "slug": "class-daily",
-    "contents": {
-      "fr": {
-        "title": "Class Daily",
-        "summary": "Les WODs quotidiens proposés en classe, adaptés à un public large et équilibrés entre intensité, technique et récupération.",
-        "details": ""
-      },
-      "en": {
-        "title": "Class Daily",
-        "summary": "The daily WODs offered in class, suitable for a wide audience and balanced between intensity, technique, and recovery.",
         "details": ""
       }
     }

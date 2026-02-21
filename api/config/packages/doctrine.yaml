@@ -16,6 +16,12 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
         mappings:
+            DomainAchievement:
+                is_bundle: false
+                type: attribute
+                dir: '%kernel.project_dir%/src/Domain/Achievement/Entity'
+                prefix: 'App\Domain\Achievement\Entity'
+                alias: DomainAchievement
             DomainBenchmark:
                 is_bundle: false
                 type: attribute

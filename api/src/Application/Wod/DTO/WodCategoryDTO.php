@@ -10,6 +10,7 @@ class WodCategoryDTO extends BaseDTO
 {
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
+        FrontGroupsEnum::WOD_CATEGORY_LIST, FrontGroupsEnum::WOD_CATEGORY_DETAIL,
     ])]
     public int $id;
 

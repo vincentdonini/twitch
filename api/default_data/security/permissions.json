@@ -1,4 +1,36 @@
 {
+  "ACHIEVEMENT": [
+    { "code": "PERMISSION_ACHIEVEMENT_LIST", "label": "Lister les achievements" },
+    { "code": "PERMISSION_ACHIEVEMENT_VIEW", "label": "Voir un achievement" },
+    { "code": "PERMISSION_ACHIEVEMENT_MANAGE", "label": "Manager un achievement" },
+    { "code": "PERMISSION_ACHIEVEMENT_CREATE", "label": "Créer un achievement" },
+    { "code": "PERMISSION_ACHIEVEMENT_EDIT", "label": "Modifier un achievement" },
+    { "code": "PERMISSION_ACHIEVEMENT_DELETE", "label": "Supprimer un achievement" },
+    { "code": "PERMISSION_CONTENT_ACHIEVEMENT_LIST", "label": "Lister les contents des achievements" },
+    { "code": "PERMISSION_CONTENT_ACHIEVEMENT_MANAGE", "label": "Manager les contents des achievements" },
+
+    { "code": "PERMISSION_ACHIEVEMENT_GROUP_LIST", "label": "Lister les achievement groups" },
+    { "code": "PERMISSION_ACHIEVEMENT_GROUP_VIEW", "label": "Voir un achievement group" },
+    { "code": "PERMISSION_ACHIEVEMENT_GROUP_MANAGE", "label": "Manager un achievement group" },
+    { "code": "PERMISSION_ACHIEVEMENT_GROUP_CREATE", "label": "Créer un achievement group" },
+    { "code": "PERMISSION_ACHIEVEMENT_GROUP_EDIT", "label": "Modifier un achievement group" },
+    { "code": "PERMISSION_ACHIEVEMENT_GROUP_DELETE", "label": "Supprimer un achievement group" },
+    { "code": "PERMISSION_CONTENT_ACHIEVEMENT_GROUP_LIST", "label": "Lister les contents des achievement groups" },
+    { "code": "PERMISSION_CONTENT_ACHIEVEMENT_GROUP_MANAGE", "label": "Manager les contents des achievement groups" },
+
+    { "code": "PERMISSION_ACHIEVEMENT_CATEGORY_LIST", "label": "Lister les achievement categories" },
+    { "code": "PERMISSION_ACHIEVEMENT_CATEGORY_VIEW", "label": "Voir un achievement category" },
+    { "code": "PERMISSION_ACHIEVEMENT_CATEGORY_CREATE", "label": "Créer un achievement category" },
+    { "code": "PERMISSION_ACHIEVEMENT_CATEGORY_EDIT", "label": "Modifier un achievement category" },
+    { "code": "PERMISSION_ACHIEVEMENT_CATEGORY_DELETE", "label": "Supprimer un achievement category" },
+    { "code": "PERMISSION_CONTENT_ACHIEVEMENT_CATEGORY_LIST", "label": "Lister les contents des achievement categories" },
+    { "code": "PERMISSION_CONTENT_ACHIEVEMENT_CATEGORY_MANAGE", "label": "Manager les contents des achievement categories" },
+    { "code": "PERMISSION_ACHIEVEMENT_CATEGORY_MANAGE", "label": "Manager un achievement category" },
+
+    { "code": "PERMISSION_USER_ACHIEVEMENT_PROGRESS_LIST", "label": "Lister de la progression des achievements d'un utilisateur" },
+    { "code": "PERMISSION_USER_ACHIEVEMENT_PROGRESS_VIEW", "label": "Voir de la progression de l'achievements d'un utilisateur" }
+  ],
+
   "BENCHMARK": [
     { "code": "PERMISSION_BENCHMARK_LIST", "label": "Lister les benchmarks" },
     { "code": "PERMISSION_BENCHMARK_VIEW", "label": "Voir un benchmark" },

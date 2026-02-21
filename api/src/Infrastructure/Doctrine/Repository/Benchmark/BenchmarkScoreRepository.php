@@ -2,15 +2,16 @@
 
 namespace App\Infrastructure\Doctrine\Repository\Benchmark;
 
-use App\Domain\User\Entity\User;
 use App\Domain\Benchmark\Entity\BenchmarkScore;
 use App\Domain\Benchmark\Ports\BenchmarkScoreDALInterface;
+use App\Domain\User\Entity\User;
 use App\Infrastructure\Doctrine\Filters\DoctrineFilterApplier;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
 use App\Infrastructure\Filters\FilterCollection;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -40,6 +41,20 @@ class BenchmarkScoreRepository extends AbstractEntityRepository implements Bench
     public function getById(string $id): ?BenchmarkScore
     {
         return $this->find($id);
+    }
+
+    /* @return BenchmarkScore[] */
+    public function getByUser(
+        User   $user,
+        string $order = 'DESC'
+    ): array {
+        return $this->createQueryBuilder('bs')
+            ->select('bs.performedAt')
+            ->where('bs.user = :user')
+            ->setParameter('user', $user)
+            ->orderBy('bs.performedAt', $order)
+            ->getQuery()
+            ->getResult();
     }
 
     public function listBenchmarkScores(
@@ -94,5 +109,16 @@ class BenchmarkScoreRepository extends AbstractEntityRepository implements Bench
             $page,
             $limit,
         );
+    }
+
+    public function countDistinctByUser(User $user): int
+    {
+        return (int)$this->createQueryBuilder('bs')
+            ->select('COUNT(DISTINCT b.id)')
+            ->join('bs.benchmark', 'b')
+            ->where('bs.user = :user')
+            ->setParameter('user', $user->getId(), UuidType::NAME)
+            ->getQuery()
+            ->getSingleScalarResult();
     }
 }

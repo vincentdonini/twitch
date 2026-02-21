@@ -87,4 +87,12 @@ class BenchmarkRepository extends AbstractEntityRepository implements BenchmarkD
             $limit,
         );
     }
+
+    public function countBenchmarks(): int
+    {
+        return (int)$this->createQueryBuilder('b')
+            ->select('COUNT(b.id)')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
 }

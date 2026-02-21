@@ -6,6 +6,21 @@ final class FrontGroupsEnum
 {
     public const ADMIN = 'front:admin';
 
+    // ACHIEVEMENTS
+    // -----------------------------------------------------------------------------------------------------------------
+    public const ACHIEVEMENT_COMPARE = 'front:achievement:compare';
+    public const ACHIEVEMENT_CREATE = 'front:achievement:create';
+    public const ACHIEVEMENT_MANAGE = 'front:achievement:manage';
+    public const ACHIEVEMENT_LIST = 'front:achievement:list';
+    public const ACHIEVEMENT_DETAIL = 'front:achievement:detail';
+    public const ACHIEVEMENT_GROUP_MANAGE = 'front:achievementGroup:manage';
+    public const ACHIEVEMENT_GROUP_LIST = 'front:achievementGroup:list';
+    public const ACHIEVEMENT_GROUP_DETAIL = 'front:achievementGroup:detail';
+    public const ACHIEVEMENT_CATEGORY_MANAGE = 'front:achievementCategory:manage';
+    public const ACHIEVEMENT_CATEGORY_LIST   = 'front:achievementCategory:list';
+    public const ACHIEVEMENT_CATEGORY_DETAIL = 'front:achievementCategory:detail';
+
+
     // ATHLETES
     // -----------------------------------------------------------------------------------------------------------------
     public const ATHLETE_LIST = 'front:athletes:list';
@@ -24,6 +39,13 @@ final class FrontGroupsEnum
 
     // CONTENT
     // -----------------------------------------------------------------------------------------------------------------
+    public const CONTENT_ACHIEVEMENT_MANAGE = 'front:contentAchievement:manage';
+    public const CONTENT_ACHIEVEMENT_LIST = 'front:contentAchievement:list';
+    public const CONTENT_ACHIEVEMENT_CATEGORY_LIST = 'front:contentAchievementCategory:list';
+    public const CONTENT_ACHIEVEMENT_GROUP_LIST = 'front:contentAchievementGroup:list';
+    public const CONTENT_ACHIEVEMENT_LEVEL_LIST = 'front:contentAchievementLevel:list';
+    public const CONTENT_ACHIEVEMENT_CRITERIA_LIST = 'front:contentAchievementCriteria:list';
+
     public const CONTENT_BENCHMARK_MANAGE = 'front:contentBenchmark:manage';
     public const CONTENT_BENCHMARK_LIST   = 'front:contentBenchmark:list';
 
