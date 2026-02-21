@@ -14,6 +14,7 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class EquipmentRepository extends AbstractEntityRepository implements EquipmentDALInterface
 {
@@ -37,13 +38,9 @@ class EquipmentRepository extends AbstractEntityRepository implements EquipmentD
         return Equipment::class;
     }
 
-    public function getById(string $id): ?Equipment
+    public function getById(Uuid $id): ?Equipment
     {
-        return $this->createQueryBuilder('e')
-            ->where('e.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function listEquipments(

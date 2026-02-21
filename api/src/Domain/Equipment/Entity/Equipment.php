@@ -8,16 +8,16 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use OpenApi\Attributes as OA;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: EquipmentRepository::class)]
 #[ORM\Table(name: 'equipment')]
 class Equipment
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'uuid', unique: true)]
     #[OA\Property(description: "Equipment ID")]
-    private ?int $id = null;
+    private Uuid $id;
 
     #[ORM\Column(type: 'string')]
     #[OA\Property(description: "Equipment slug", example: "dip-bars")]
@@ -26,15 +26,20 @@ class Equipment
     #[ORM\OneToMany(targetEntity: ContentEquipment::class, mappedBy: "equipment", cascade: ["persist", "remove"], orphanRemoval: true)]
     private Collection $contents;
 
-    public function __construct()
-    {
+    public function __construct(
+        string $slug
+    ) {
+        $this->id = Uuid::v7();
+
+        $this->slug = $slug;
+
         $this->contents = new ArrayCollection();
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
-    public function getId(): ?int
+    public function getId(): Uuid
     {
         return $this->id;
     }

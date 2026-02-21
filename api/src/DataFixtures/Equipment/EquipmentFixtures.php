@@ -33,12 +33,13 @@ class EquipmentFixtures extends Fixture
         });
 
         foreach ($data as $item) {
-            $equipment = new Equipment();
-            $equipment->setSlug($item['slug']);
+            $equipment = new Equipment(
+                slug: $item['slug']
+            );
 
             $manager->persist($equipment);
 
-            // Gestion des contenus
+            // Content
             // ---------------------------------------------------------------------------------------------------------
             if (!empty($item['contents']) && is_array($item['contents'])) {
                 foreach ($item['contents'] as $locale => $contentData) {

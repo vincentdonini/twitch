@@ -34,6 +34,7 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/equipments', name: 'equipment_')]
@@ -57,36 +58,57 @@ final readonly class EquipmentController
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
         description: 'Returns a list of equipment available in the system.',
-        summary    : 'List of equipments',
+        summary    : 'List of equipments.',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
             new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // slug
+            // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
-                name       : 'slug',
-                description: 'Filter result by slug.',
+                name       : 'filters[slug][eq]',
+                description: 'Filter by equipment slug (exact match).',
+                schema     : new OAT\Schema(type: 'string'),
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // title
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[title][eq]',
+                description: 'Filter by equipment title (exact match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
             new OAT\Parameter(
-                name       : 'title',
-                description: 'Filter result by title.',
+                name       : 'filters[title][like]',
+                description: 'Filter by equipment title (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // summary
+            // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
-                name       : 'summary',
-                description: 'Filter result by summary.',
+                name       : 'filters[summary][like]',
+                description: 'Filter by equipment summary (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // details
+            // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
-                name       : 'details',
-                description: 'Filter result by details.',
+                name       : 'filters[details][like]',
+                description: 'Filter by equipment details (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
         ],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of equipments',
+                description: 'List of equipments.',
                 headers    : [
                     new OAT\Header(ref: '#/components/headers/Element-Count', header: 'Element-Count'),
                     new OAT\Header(ref: '#/components/headers/Pagination-Page', header: 'Pagination-Page'),
@@ -167,7 +189,7 @@ final readonly class EquipmentController
         path        : '/{equipmentId}',
         name        : 'detail',
         requirements: [
-            'equipmentId' => '\d+',
+            'equipmentId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
@@ -175,7 +197,7 @@ final readonly class EquipmentController
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
         description: 'Returns detailed information for a specific equipment.',
-        summary    : 'Get equipment details',
+        summary    : 'Get equipment details.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
@@ -198,7 +220,9 @@ final readonly class EquipmentController
     ): JsonResponse {
         try {
             $equipment = $useCase->execute(
-                new GetEquipmentByIdHttp($equipmentId)
+                new GetEquipmentByIdHttp(
+                    id: Uuid::fromString($equipmentId)
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(
@@ -231,20 +255,20 @@ final readonly class EquipmentController
         path        : '/{equipmentId}/contents',
         name        : 'contents_list',
         requirements: [
-            'equipmentId' => '\d+',
+            'equipmentId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_EQUIPMENT_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns all localized contents for an equipment',
-        summary    : 'List of all equipment contents',
+        description: 'Returns all localized contents for an equipment.',
+        summary    : 'List of all equipment contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of all equipment contents',
+                description: 'List of all equipment contents.',
                 content    : new OAT\JsonContent(
                     type : 'array',
                     items: new OAT\Items(
@@ -264,7 +288,9 @@ final readonly class EquipmentController
     ): JsonResponse {
         try {
             $equipmentContents = $useCase->execute(
-                new GetEquipmentByIdHttp($equipmentId)
+                new GetEquipmentByIdHttp(
+                    id: Uuid::fromString($equipmentId)
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
@@ -297,7 +323,7 @@ final readonly class EquipmentController
         path        : '/{equipmentId}/contents/{locale}',
         name        : 'content_upsert',
         requirements: [
-            'equipmentId' => '\d+',
+            'equipmentId' => '[0-9a-fA-F\-]+',
             'locale'      => '[a-z]{2}',
         ],
         methods     : ['PUT']
@@ -306,7 +332,7 @@ final readonly class EquipmentController
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
         description: 'Create or update equipment content for a given locale.',
-        summary    : 'Upsert equipment localized content',
+        summary    : 'Upsert equipment localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
@@ -322,11 +348,11 @@ final readonly class EquipmentController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully',
+                description: 'Contents upserted successfully.',
                 headers    : [
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted equipment contents'
+                        description: 'Resource ID of the upserted equipment contents.'
                     ),
                 ]
             ),
@@ -354,22 +380,27 @@ final readonly class EquipmentController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        return new JsonResponse(null, $statusCode);
+        $response = new JsonResponse(null, $statusCode);
+        if ($statusCode === Response::HTTP_NO_CONTENT) {
+            $response->headers->set('X-RESOURCE-ID', $equipmentId);
+        }
+
+        return $response;
     }
 
     #[Route(
         path        : '/{equipmentId}/contents',
         name        : 'contents_upsert_bulk',
         requirements: [
-            'equipmentId' => '\d+',
+            'equipmentId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['PUT']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_EQUIPMENT_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
-        description: 'Create or update multiple localized contents for an equipment',
-        summary    : 'Upsert multiple equipment contents',
+        description: 'Create or update multiple localized contents for an equipment.',
+        summary    : 'Upsert multiple equipment contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
@@ -391,11 +422,11 @@ final readonly class EquipmentController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully',
+                description: 'Contents upserted successfully.',
                 headers    : [
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted contents'
+                        description: 'Resource ID of the upserted contents.'
                     ),
                 ]
             ),
@@ -421,6 +452,11 @@ final readonly class EquipmentController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        return new JsonResponse(null, $statusCode);
+        $response = new JsonResponse(null, $statusCode);
+        if ($statusCode === Response::HTTP_NO_CONTENT) {
+            $response->headers->set('X-RESOURCE-ID', $equipmentId);
+        }
+
+        return $response;
     }
 }

@@ -7,10 +7,11 @@ use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Filters\FilterCollection;
 use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
+use Symfony\Component\Uid\Uuid;
 
 interface EquipmentDALInterface
 {
-    public function getById(string $id): ?Equipment;
+    public function getById(Uuid $id): ?Equipment;
 
     public function listEquipments(
         int               $page = 1,

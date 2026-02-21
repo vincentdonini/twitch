@@ -12,7 +12,6 @@ class GetEquipmentContentsByIdUseCase
     public function __construct(
         private readonly EquipmentDALInterface $equipmentDAL,
     ) {
-
     }
 
     public function execute(GetEquipmentByIdDTOInterface $dto): Collection

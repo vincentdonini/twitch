@@ -4,16 +4,16 @@ namespace App\UI\Adapters\Http\Equipment\Equipment;
 
 
 use App\Domain\Equipment\Equipment\GetEquipmentByIdDTOInterface;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class GetEquipmentByIdHttp implements GetEquipmentByIdDTOInterface
 {
     public function __construct(
-        private string $id,
+        private Uuid $id,
     ) {
-
     }
 
-    public function getId(): string
+    public function getId(): Uuid
     {
         return $this->id;
     }

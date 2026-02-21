@@ -2,12 +2,17 @@
 
 namespace App\Application\Equipment\DTO;
 
-use App\Application\DTO\BaseDTO;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 
-class EquipmentDTO extends BaseDTO
+class EquipmentDTO
 {
+    #[Groups([
+        FrontGroupsEnum::EQUIPMENT_LIST, FrontGroupsEnum::EQUIPMENT_DETAIL,
+    ])]
+    public Uuid $id;
+
     #[Groups([
         FrontGroupsEnum::EQUIPMENT_LIST, FrontGroupsEnum::EQUIPMENT_DETAIL,
     ])]
@@ -29,18 +34,16 @@ class EquipmentDTO extends BaseDTO
     public string $details;
 
     public function __construct(
-        int    $id,
+        Uuid   $id,
         string $slug,
         string $title,
         string $summary,
         string $details
     ) {
-        parent::__construct($id);
-
+        $this->id      = $id;
         $this->slug    = $slug;
         $this->title   = $title;
         $this->summary = $summary;
         $this->details = $details;
     }
 }
-
