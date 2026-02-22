@@ -41,6 +41,7 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/wods', name: 'wod_')]
@@ -60,8 +61,8 @@ final class WodController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_WOD_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns a list of WODs available in the system.',
-        summary    : 'List of WODs',
+        description: 'Return a list of WODs available in the system.',
+        summary    : 'List of WODs.',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
@@ -162,7 +163,7 @@ final class WodController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[division.id][eq]',
-                description: 'Filter by WOD division ID',
+                description: 'Filter by WOD division ID.',
                 required   : false,
                 schema     : new OAT\Schema(type: 'integer')
             ),
@@ -172,7 +173,7 @@ final class WodController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[division.slug][eq]',
-                description: 'Filter by WOD division slug',
+                description: 'Filter by WOD division slug.',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -182,7 +183,7 @@ final class WodController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[gender][eq]',
-                description: 'Filter by gender',
+                description: 'Filter by gender.',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string', enum: ['male', 'female', 'mixed'])
             ),
@@ -192,31 +193,31 @@ final class WodController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[rounds][eq]',
-                description: 'Filter by rounds (exact match, in seconds)',
+                description: 'Filter by rounds (exact match, in seconds).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'integer')
             ),
             new OAT\Parameter(
                 name       : 'filters[rounds][lt]',
-                description: 'Filter by rounds (less than, in seconds)',
+                description: 'Filter by rounds (less than, in seconds).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'integer')
             ),
             new OAT\Parameter(
                 name       : 'filters[rounds][lte]',
-                description: 'Filter by rounds (less than or equal, in seconds)',
+                description: 'Filter by rounds (less than or equal, in seconds).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'integer')
             ),
             new OAT\Parameter(
                 name       : 'filters[rounds][gt]',
-                description: 'Filter by rounds (greater than, in seconds)',
+                description: 'Filter by rounds (greater than, in seconds).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'integer')
             ),
             new OAT\Parameter(
                 name       : 'filters[rounds][gte]',
-                description: 'Filter by rounds (greater than or equal, in seconds)',
+                description: 'Filter by rounds (greater than or equal, in seconds).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'integer')
             ),
@@ -226,31 +227,31 @@ final class WodController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[timeCap][eq]',
-                description: 'Filter by time cap (exact match, in seconds)',
+                description: 'Filter by time cap (exact match, in seconds).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'integer')
             ),
             new OAT\Parameter(
                 name       : 'filters[timeCap][lt]',
-                description: 'Filter by time cap (less than, in seconds)',
+                description: 'Filter by time cap (less than, in seconds).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'integer')
             ),
             new OAT\Parameter(
                 name       : 'filters[timeCap][lte]',
-                description: 'Filter by time cap (less than or equal, in seconds)',
+                description: 'Filter by time cap (less than or equal, in seconds).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'integer')
             ),
             new OAT\Parameter(
                 name       : 'filters[timeCap][gt]',
-                description: 'Filter by time cap (greater than, in seconds)',
+                description: 'Filter by time cap (greater than, in seconds).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'integer')
             ),
             new OAT\Parameter(
                 name       : 'filters[timeCap][gte]',
-                description: 'Filter by time cap (greater than or equal, in seconds)',
+                description: 'Filter by time cap (greater than or equal, in seconds).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'integer')
             ),
@@ -343,11 +344,11 @@ final class WodController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_WOD_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Post(
-        description: 'Creates a new WOD and returns the created resource ID.',
-        summary    : 'Create a WOD',
+        description: 'Create a new WOD and returns the created resource ID.',
+        summary    : 'Create a WOD.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
-            description: 'Created a WOD',
+            description: 'Created a WOD.',
             required   : true,
             content    : new OAT\JsonContent(
                 ref: new Model(
@@ -409,20 +410,20 @@ final class WodController extends AbstractController
         path        : '/{wodId}',
         name        : 'detail',
         requirements: [
-            'wodId' => '\d+',
+            'wodId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_WOD_VIEW)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific WOD.',
-        summary    : 'Get WOD details',
+        description: 'Return detailed information for a specific WOD.',
+        summary    : 'Get WOD details.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'Detail of WOD',
+                description: 'Detail of WOD.',
                 content    : new OAT\JsonContent(
                     ref : new Model(
                         type  : Wod::class,
@@ -441,7 +442,7 @@ final class WodController extends AbstractController
         try {
             $wod = $useCase->execute(
                 new GetWodByIdHttp(
-                    id: $wodId
+                    id: Uuid::fromString($wodId),
                 )
             );
         } catch (EntityNotFoundException) {
@@ -475,11 +476,11 @@ final class WodController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_WOD_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Patch(
-        description: 'Updates an existing WOD with the provided data.',
-        summary    : 'Update a WOD',
+        description: 'Update an existing WOD with the provided data.',
+        summary    : 'Update a WOD.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
-            description: 'Update a WOD',
+            description: 'Update a WOD.',
             required   : true,
             content    : new OAT\JsonContent(
                 ref: new Model(
@@ -497,15 +498,15 @@ final class WodController extends AbstractController
             ),
             new OAT\PathParameter(
                 name       : 'typeId',
-                description: 'Type ID of the WOD',
+                description: 'Type ID of the WOD.',
                 required   : true,
-                schema     : new OAT\Schema(type: 'integer'),
+                schema     : new OAT\Schema(type: 'string', format: 'uuid')
             ),
             new OAT\PathParameter(
                 name       : 'categoryId',
                 description: 'Category ID of the WOD',
                 required   : true,
-                schema     : new OAT\Schema(type: 'integer'),
+                schema     : new OAT\Schema(type: 'string', format: 'uuid')
             ),
             new OAT\PathParameter(
                 name       : 'teamSize',
@@ -521,7 +522,7 @@ final class WodController extends AbstractController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_NO_CONTENT,
-                description: 'WOD updated successfully',
+                description: 'WOD updated successfully.',
             ),
         ]
     )]
@@ -535,7 +536,7 @@ final class WodController extends AbstractController
 
             $useCase->execute(
                 new UpdateWodHttp(
-                    id     : $wodId,
+                    id     : Uuid::fromString($wodId),
                     payload: $payload
                 )
             );
@@ -552,8 +553,8 @@ final class WodController extends AbstractController
         path        : '/{wodId}/division/{wodDivisionId}/leaderboard/{gender}',
         name        : 'leaderboard',
         requirements: [
-            'wodId'         => '\d+',
-            'wodDivisionId' => '\d+',
+            'wodId'         => '[0-9a-fA-F\-]+',
+            'wodDivisionId' => '[0-9a-fA-F\-]+',
             'gender'        => 'male|female|mixed',
         ],
         methods     : ['GET']
@@ -561,15 +562,15 @@ final class WodController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_WOD_SCORE_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns the leaderboard for a specific WOD.',
-        summary    : 'Get WOD leaderboard',
+        description: 'Return the leaderboard for a specific WOD.',
+        summary    : 'Get WOD leaderboard.',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\PathParameter(
                 name       : 'wodId',
                 description: 'WOD ID',
                 required   : true,
-                schema     : new OAT\Schema(type: 'integer')
+                schema     : new OAT\Schema(type: 'string', format: 'uuid')
             ),
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
             new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
@@ -577,14 +578,14 @@ final class WodController extends AbstractController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'Leaderboard for the WOD',
+                description: 'Leaderboard for the WOD.',
             ),
-            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'WOD not found'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'WOD not found.'),
         ]
     )]
     public function leaderboard(
-        int                      $wodId,
-        int                      $wodDivisionId,
+        string                   $wodId,
+        string                   $wodDivisionId,
         string                   $gender,
         Request                  $request,
         GetWodByIdUseCase        $getWodUseCase,
@@ -608,7 +609,7 @@ final class WodController extends AbstractController
         try {
             $wod = $getWodUseCase->execute(
                 new GetWodByIdHttp(
-                    id: $wodId
+                    id: Uuid::fromString($wodId),
                 )
             );
 
@@ -619,8 +620,8 @@ final class WodController extends AbstractController
 
             $paginator = $useCase->execute(
                 new GetWodLeaderboardHttp(
-                    wodId        : $wodId,
-                    wodDivisionId: $wodDivisionId,
+                    wodId        : Uuid::fromString($wodId),
+                    wodDivisionId: Uuid::fromString($wodDivisionId),
                     gender       : $gender,
                     metric       : $metric,
                     page         : $paginatorValues->getPage(),

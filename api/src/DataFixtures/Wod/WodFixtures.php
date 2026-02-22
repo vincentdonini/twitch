@@ -119,9 +119,6 @@ class WodFixtures extends Fixture implements DependentFixtureInterface
                 // -----------------------------------------------------------------------------------------------------
                 foreach ($item['variants'] as $wodVariantData) {
 
-                    $wodVariant = new WodVariant();
-                    $wodVariant->setWod($wod);
-
                     // -------------------------------------------------------------------------------------------------
                     // DIVISION
                     // -------------------------------------------------------------------------------------------------
@@ -133,7 +130,10 @@ class WodFixtures extends Fixture implements DependentFixtureInterface
                         throw new Exception("WodDivision non trouvé : " . $wodVariantData['division']);
                     }
 
-                    $wodVariant->setWodDivision($wodDivision);
+                    $wodVariant = new WodVariant(
+                        wod        : $wod,
+                        wodDivision: $wodDivision,
+                    );
 
                     // -------------------------------------------------------------------------------------------------
                     // SCALED / RX
@@ -182,9 +182,11 @@ class WodFixtures extends Fixture implements DependentFixtureInterface
                             throw new Exception("Exercise non trouvé : " . $exerciseData['exercise']);
                         }
 
-                        $variantExercise = new WodVariantExercise();
-                        $variantExercise->setExercise($exercise);
-                        $variantExercise->setPosition((int)$index + 1);
+                        $variantExercise = new WodVariantExercise(
+                            position  : (int)$index + 1,
+                            wodVariant: $wodVariant,
+                            exercise  : $exercise,
+                        );
 
                         $wodVariant->addWodVariantExercise($variantExercise);
 
@@ -196,10 +198,11 @@ class WodFixtures extends Fixture implements DependentFixtureInterface
                                 continue;
                             }
 
-                            $metric = new WodVariantExerciseMetric();
-                            $metric->setExercise($variantExercise);
-                            $metric->setType($metricSlug);
-                            $metric->setValue((float)$metricValue);
+                            $metric = new WodVariantExerciseMetric(
+                                exercise: $variantExercise,
+                                type    : $metricSlug,
+                                value   : (float)$metricValue
+                            );
 
                             $variantExercise->addMetric($metric);
                         }

@@ -7,12 +7,11 @@ use App\Domain\Wod\Ports\WodTypeDALInterface;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\EntityNotFoundException;
 
-readonly class GetWodTypeContentsByIdUseCase
+final readonly class GetWodTypeContentsByIdUseCase
 {
     public function __construct(
         private WodTypeDALInterface $wodTypeDAL,
     ) {
-
     }
 
     public function execute(GetWodTypeByIdDTOInterface $dto): Collection

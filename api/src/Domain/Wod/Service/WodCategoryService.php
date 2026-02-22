@@ -25,7 +25,7 @@ final readonly class WodCategoryService
         return new WodCategoryDTO(
             id     : $wodCategory->getId(),
             slug   : $wodCategory->getSlug(),
-            title   : $content ? $content->getTitle() : '',
+            title  : $content ? $content->getTitle() : '',
             summary: $content ? $content->getSummary() : '',
             details: $content ? $content->getDetails() : '',
         );

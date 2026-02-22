@@ -3,26 +3,27 @@
 namespace App\UI\Adapters\Http\Wod\WodScore;
 
 use App\Domain\Wod\WodScore\CreateWodScoreDTOInterface;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class CreateWodScoreHttp implements CreateWodScoreDTOInterface
 {
     public function __construct(
         private array $payload,
-        private int   $userId,
+        private Uuid  $userId,
     ) {
     }
 
-    public function getUserId(): int
+    public function getUserId(): Uuid
     {
         return $this->userId;
     }
 
-    public function getWodId(): int
+    public function getWodId(): Uuid
     {
         return $this->payload['wodId'];
     }
 
-    public function getWodVersionId(): int
+    public function getWodVersionId(): Uuid
     {
         return $this->payload['wodVersionId'];
     }

@@ -7,10 +7,11 @@ use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Filters\FilterCollection;
 use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
+use Symfony\Component\Uid\Uuid;
 
 interface WodAgeRangeDALInterface
 {
-    public function getById(string $id): ?WodAgeRange;
+    public function getById(Uuid $id): ?WodAgeRange;
 
     public function getBySlug(string $slug): ?WodAgeRange;
 

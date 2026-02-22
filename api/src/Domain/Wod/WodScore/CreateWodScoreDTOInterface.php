@@ -2,13 +2,15 @@
 
 namespace App\Domain\Wod\WodScore;
 
+use Symfony\Component\Uid\Uuid;
+
 interface CreateWodScoreDTOInterface
 {
-    public function getUserId(): int;
+    public function getUserId(): Uuid;
 
-    public function getWodId(): int;
+    public function getWodId(): Uuid;
 
-    public function getWodVersionId(): int;
+    public function getWodVersionId(): Uuid;
 
     public function getPerformedAt(): string;
 

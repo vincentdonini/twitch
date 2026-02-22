@@ -2,23 +2,19 @@
 
 namespace App\Application\Wod\DTO;
 
-use App\Application\DTO\BaseDTO;
 use App\Application\User\DTO\UserDTO;
-use App\Domain\User\Entity\User;
-use App\Domain\Wod\Entity\Wod;
-use App\Domain\Wod\Entity\WodVersion;
-use App\Domain\Wod\Entity\WodVariant;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use DateTimeImmutable;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 
-class WodScoreDTO extends BaseDTO
+class WodScoreDTO
 {
     #[Groups([
         FrontGroupsEnum::WOD_SCORE_LIST, FrontGroupsEnum::WOD_SCORE_DETAIL,
         FrontGroupsEnum::WOD_LEADERBOARD,
     ])]
-    public int $id;
+    public Uuid $id;
 
     #[Groups([
         FrontGroupsEnum::WOD_SCORE_LIST, FrontGroupsEnum::WOD_SCORE_DETAIL,
@@ -73,7 +69,7 @@ class WodScoreDTO extends BaseDTO
     public bool $private;
 
     public function __construct(
-        int               $id,
+        Uuid              $id,
         UserDTO           $user,
         WodDTO            $wod,
         WodVariantDTO     $variant,
@@ -84,8 +80,7 @@ class WodScoreDTO extends BaseDTO
         ?string           $notes,
         bool              $private,
     ) {
-        parent::__construct($id);
-
+        $this->id          = $id;
         $this->user        = $user;
         $this->variant     = $variant;
         $this->wod         = $wod;

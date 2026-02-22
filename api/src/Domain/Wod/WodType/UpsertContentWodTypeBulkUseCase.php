@@ -10,7 +10,7 @@ use App\UI\Adapters\Http\Wod\WodType\UpsertContentWodTypeBulkHttp;
 use App\UI\Adapters\Http\Wod\WodType\UpsertContentWodTypeHttp;
 use Doctrine\ORM\EntityNotFoundException;
 
-readonly class UpsertContentWodTypeBulkUseCase
+final readonly class UpsertContentWodTypeBulkUseCase
 {
     public function __construct(
         private DatabaseInterface           $database,

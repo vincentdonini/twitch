@@ -6,23 +6,20 @@ use App\Domain\Wod\Entity\WodAgeRange;
 use App\Domain\Wod\Ports\WodAgeRangeDALInterface;
 use Doctrine\ORM\EntityNotFoundException;
 
-class GetWodAgeRangeByIdUseCase
+final readonly class GetWodAgeRangeByIdUseCase
 {
     public function __construct(
-        private readonly WodAgeRangeDALInterface $wodTypeDAL,
-    )
-    {
-
+        private WodAgeRangeDALInterface $wodAgeRangeDAL,
+    ) {
     }
 
     public function execute(GetWodAgeRangeByIdDTOInterface $dto): WodAgeRange
     {
-        $wodType = $this->wodTypeDAL->getById($dto->getId());
-        if(!$wodType instanceof WodAgeRange){
+        $wodAgeRange = $this->wodAgeRangeDAL->getById($dto->getId());
+        if (!$wodAgeRange instanceof WodAgeRange) {
             throw new EntityNotFoundException();
         }
 
-        return $wodType;
+        return $wodAgeRange;
     }
 }
-

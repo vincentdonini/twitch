@@ -2,16 +2,16 @@
 
 namespace App\Application\Wod\DTO;
 
-use App\Application\DTO\BaseDTO;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 
-class WodVariantExerciseMetricDTO extends BaseDTO
+class WodVariantExerciseMetricDTO
 {
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
     ])]
-    public int $id;
+    public Uuid $id;
 
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
@@ -24,12 +24,11 @@ class WodVariantExerciseMetricDTO extends BaseDTO
     public float|int $value;
 
     public function __construct(
-        int       $id,
+        Uuid      $id,
         string    $type,
         float|int $value
     ) {
-        parent::__construct($id);
-
+        $this->id    = $id;
         $this->type  = $type;
         $this->value = $value;
     }

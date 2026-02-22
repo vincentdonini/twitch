@@ -7,10 +7,10 @@ use App\Domain\Wod\Ports\WodScoreDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use InvalidArgumentException;
 
-class ListWodScoresUseCase
+final readonly class ListWodScoresUseCase
 {
     public function __construct(
-        private readonly WodScoreDALInterface $wodScoreDAL,
+        private WodScoreDALInterface $wodScoreDAL,
     ) {
     }
 

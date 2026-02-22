@@ -3,17 +3,18 @@
 namespace App\UI\Adapters\Http\Wod\Wod;
 
 use App\Domain\Wod\Wod\UpdateWodDTOInterface;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class UpdateWodHttp implements UpdateWodDTOInterface
 {
     public function __construct(
-        private int   $id,
+        private Uuid  $id,
         private array $payload,
     ) {
 
     }
 
-    public function getId(): int
+    public function getId(): Uuid
     {
         return $this->id;
     }
@@ -23,12 +24,12 @@ final readonly class UpdateWodHttp implements UpdateWodDTOInterface
         return $this->payload['name'] ?? null;
     }
 
-    public function getTypeId(): ?int
+    public function getTypeId(): ?Uuid
     {
         return $this->payload['typeId'] ?? null;
     }
 
-    public function getCategoryId(): ?int
+    public function getCategoryId(): ?Uuid
     {
         return $this->payload['categoryId'] ?? null;
     }

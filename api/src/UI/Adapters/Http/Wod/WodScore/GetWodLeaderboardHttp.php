@@ -6,26 +6,28 @@ use App\Domain\Wod\Wod\GetWodLeaderboardDTOInterface;
 use App\Infrastructure\Filters\FilterCollection;
 use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class GetWodLeaderboardHttp implements GetWodLeaderboardDTOInterface
 {
     public function __construct(
-        private string            $wodId,
-        private ?string           $wodDivisionId = null,
+        private Uuid              $wodId,
+        private ?Uuid             $wodDivisionId = null,
         private ?string           $gender = null,
         private ?string           $metric = null,
         private ?int              $page = null,
         private ?int              $limit = null,
         private ?FilterCollection $filters = null,
+        private ?SortCollection   $sorts = null,
     ) {
     }
 
-    public function getWodId(): string
+    public function getWodId(): Uuid
     {
         return $this->wodId;
     }
 
-    public function getWodDivisionId(): ?string
+    public function getWodDivisionId(): ?Uuid
     {
         return $this->wodDivisionId;
     }

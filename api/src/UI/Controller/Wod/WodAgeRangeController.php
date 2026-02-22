@@ -27,6 +27,7 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/wod-age-ranges', name: 'wod_age_range_')]
@@ -44,16 +45,16 @@ final readonly class WodAgeRangeController
     )]
     #[IsGranted(ListPermissions::PERMISSION_WOD_AGE_RANGE_LIST)]
     #[OAT\Get(
-        description: 'Returns a list of all WOD age ranges available in the system.',
-        summary    : 'Retrieve all WOD age ranges',
+        description: 'Return a list of all WOD Age ranges available in the system.',
+        summary    : 'List of WOD Age ranges.',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
             new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
         ],
         responses  : [
-            new OAT\Response(response: 200, description: 'List of WOD age ranges'),
-            new OAT\Response(response: 403, description: 'Access denied'),
+            new OAT\Response(response: 200, description: 'List of WOD Age ranges.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -96,19 +97,19 @@ final readonly class WodAgeRangeController
         path        : '/{wodAgeRangeId}',
         name        : 'detail',
         requirements: [
-            'wodAgeRangeId' => '\d+',
+            'wodAgeRangeId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_WOD_AGE_RANGE_VIEW)]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific WOD age range.',
-        summary    : 'Get WOD age range details',
+        description: 'Return detailed information for a specific WOD Age range.',
+        summary    : 'Get WOD Age range details.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'WOD age range details'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD age range not found'),
+            new OAT\Response(response: 200, description: 'WOD Age range details.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Age range not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -119,7 +120,9 @@ final readonly class WodAgeRangeController
     ): JsonResponse {
         try {
             $wodAgeRange = $useCase->execute(
-                new GetWodAgeRangeByIdHttp($wodAgeRangeId)
+                new GetWodAgeRangeByIdHttp(
+                    id: Uuid::fromString($wodAgeRangeId),
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(
@@ -152,19 +155,19 @@ final readonly class WodAgeRangeController
         path        : '/{wodAgeRangeId}/contents',
         name        : 'contents_list',
         requirements: [
-            'wodAgeRangeId' => '\d+',
+            'wodAgeRangeId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_AGE_RANGE_LIST)]
     #[OAT\Get(
-        description: 'Retrieve all localized contents for an WOD age range',
-        summary    : 'Get WOD age range contents',
+        description: 'Retrieve all localized contents for an WOD Age range.',
+        summary    : 'Get WOD Age range contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents retrieved'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD age range not found'),
+            new OAT\Response(response: 200, description: 'Contents retrieved.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Age range not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -175,7 +178,9 @@ final readonly class WodAgeRangeController
     ): JsonResponse {
         try {
             $wodAgeRangeContents = $useCase->execute(
-                new GetWodAgeRangeByIdHttp($wodAgeRangeId)
+                new GetWodAgeRangeByIdHttp(
+                    id: Uuid::fromString($wodAgeRangeId),
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
@@ -208,33 +213,33 @@ final readonly class WodAgeRangeController
         path        : '/{wodAgeRangeId}/contents/{locale}',
         name        : 'content_upsert',
         requirements: [
-            'wodAgeRangeId' => '\d+',
+            'wodAgeRangeId' => '[0-9a-fA-F\-]+',
             'locale'        => '[a-z]{2}',
         ],
         methods     : ['PUT']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_AGE_RANGE_MANAGE)]
     #[OAT\Put(
-        description: 'Create or update exercise content for a given locale.',
-        summary    : 'Upsert exercise localized content',
+        description: 'Create or update WOD Age range content for a given locale.',
+        summary    : 'Upsert WOD Age range localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 required  : ['name', 'summary'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Barbell'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Barre utilisée pour les exercices de force'),
+                    new OAT\Property(property: 'name', type: 'string', example: 'Lorem ipsum'),
+                    new OAT\Property(property: 'summary', type: 'string', example: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'),
                     new OAT\Property(property: 'details', type: 'string', nullable: true),
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Content updated'),
-            new OAT\Response(response: 201, description: 'Content created'),
-            new OAT\Response(response: 400, description: 'Invalid payload'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'Exercise not found'),
+            new OAT\Response(response: 200, description: 'Content updated.'),
+            new OAT\Response(response: 201, description: 'Content created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Age range not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -249,7 +254,7 @@ final readonly class WodAgeRangeController
 
             $useCase->execute(
                 new UpsertContentWodAgeRangeHttp(
-                    id     : $wodAgeRangeId,
+                    id     : Uuid::fromString($wodAgeRangeId),
                     locale : $locale,
                     payload: $payload
                 )
@@ -267,38 +272,38 @@ final readonly class WodAgeRangeController
         path        : '/{wodAgeRangeId}/contents',
         name        : 'contents_upsert_bulk',
         requirements: [
-            'wodAgeRangeId' => '\d+',
+            'wodAgeRangeId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['PUT']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_AGE_RANGE_MANAGE)]
     #[OAT\Put(
-        description: 'Create or update multiple localized contents for an WOD age range',
-        summary    : 'Upsert multiple WOD age range contents',
+        description: 'Create or update multiple localized contents for an WOD Age range.',
+        summary    : 'Upsert multiple WOD Age range contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Barbell",
-                        "summary" => "Barre utilisée pour les exercices de force",
-                        "details" => "Squats, deadlifts...",
+                        "name"    => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
+                        "details" => "",
                     ],
                     "en" => [
-                        "name"    => "Barbell",
-                        "summary" => "Traditional bar used for strength exercises",
-                        "details" => "Squats, deadlifts...",
+                        "name"    => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
+                        "details" => "",
                     ],
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated'),
-            new OAT\Response(response: 201, description: 'Contents created'),
-            new OAT\Response(response: 400, description: 'Invalid payload'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD age range not found'),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Age range not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -312,7 +317,7 @@ final readonly class WodAgeRangeController
 
             $useCase->execute(
                 new UpsertContentWodAgeRangeBulkHttp(
-                    id     : $wodAgeRangeId,
+                    id     : Uuid::fromString($wodAgeRangeId),
                     payload: $payload
                 )
             );

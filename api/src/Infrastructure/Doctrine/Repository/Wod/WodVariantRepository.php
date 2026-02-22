@@ -12,6 +12,7 @@ use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class WodVariantRepository extends AbstractEntityRepository implements WodVariantDALInterface
 {
@@ -35,13 +36,9 @@ class WodVariantRepository extends AbstractEntityRepository implements WodVarian
         return WodVariant::class;
     }
 
-    public function getById(int $id): ?WodVariant
+    public function getById(Uuid $id): ?WodVariant
     {
-        return $this->createQueryBuilder('wv')
-            ->where('wv.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function getByWodIdAndWodDivisionId(int $wodId, int $wodDivisionId): ?WodVariant

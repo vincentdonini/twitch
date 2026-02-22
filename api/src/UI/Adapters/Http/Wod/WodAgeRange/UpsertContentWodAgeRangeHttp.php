@@ -3,18 +3,18 @@
 namespace App\UI\Adapters\Http\Wod\WodAgeRange;
 
 use App\Domain\Wod\WodAgeRange\UpsertContentWodAgeRangeDTOInterface;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class UpsertContentWodAgeRangeHttp implements UpsertContentWodAgeRangeDTOInterface
 {
     public function __construct(
-        private string $id,
+        private Uuid   $id,
         private string $locale,
         private array  $payload,
     ) {
-
     }
 
-    public function getId(): string
+    public function getId(): Uuid
     {
         return $this->id;
     }

@@ -27,6 +27,7 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/wod-divisions', name: 'wod_division_')]
@@ -44,16 +45,16 @@ final readonly class WodDivisionController
     )]
     #[IsGranted(ListPermissions::PERMISSION_WOD_DIVISION_LIST)]
     #[OAT\Get(
-        description: 'Returns a list of all WOD divisions available in the system.',
-        summary    : 'Retrieve all WOD divisions',
+        description: 'Return a list of all WOD Divisions available in the system.',
+        summary    : 'List of WOD Divisions.',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
             new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
         ],
         responses  : [
-            new OAT\Response(response: 200, description: 'List of WOD divisions'),
-            new OAT\Response(response: 403, description: 'Access denied'),
+            new OAT\Response(response: 200, description: 'List of WOD Divisions.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -96,19 +97,19 @@ final readonly class WodDivisionController
         path        : '/{wodDivisionId}',
         name        : 'detail',
         requirements: [
-            'wodDivisionId' => '\d+',
+            'wodDivisionId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_WOD_DIVISION_VIEW)]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific WOD division.',
-        summary    : 'Get WOD division details',
+        description: 'Return detailed information for a specific WOD Division.',
+        summary    : 'Get WOD Division details.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'WOD division details'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD division not found'),
+            new OAT\Response(response: 200, description: 'WOD Division details.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Division not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -119,7 +120,9 @@ final readonly class WodDivisionController
     ): JsonResponse {
         try {
             $wodDivision = $useCase->execute(
-                new GetWodDivisionByIdHttp($wodDivisionId)
+                new GetWodDivisionByIdHttp(
+                    id: Uuid::fromString($wodDivisionId),
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(
@@ -152,19 +155,19 @@ final readonly class WodDivisionController
         path        : '/{wodDivisionId}/contents',
         name        : 'contents_list',
         requirements: [
-            'wodDivisionId' => '\d+',
+            'wodDivisionId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_DIVISION_LIST)]
     #[OAT\Get(
-        description: 'Retrieve all localized contents for an WOD division',
-        summary    : 'Get WOD division contents',
+        description: 'Retrieve all localized contents for an WOD Division.',
+        summary    : 'Get WOD Division contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents retrieved'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD division not found'),
+            new OAT\Response(response: 200, description: 'Contents retrieved.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Division not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -175,7 +178,9 @@ final readonly class WodDivisionController
     ): JsonResponse {
         try {
             $wodTypeContents = $useCase->execute(
-                new GetWodDivisionByIdHttp($wodDivisionId)
+                new GetWodDivisionByIdHttp(
+                    id: Uuid::fromString($wodDivisionId),
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
@@ -208,33 +213,33 @@ final readonly class WodDivisionController
         path        : '/{wodDivisionId}/contents/{locale}',
         name        : 'content_upsert',
         requirements: [
-            'wodDivisionId' => '\d+',
+            'wodDivisionId' => '[0-9a-fA-F\-]+',
             'locale'        => '[a-z]{2}',
         ],
         methods     : ['PUT']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_DIVISION_MANAGE)]
     #[OAT\Put(
-        description: 'Create or update exercise content for a given locale.',
-        summary    : 'Upsert exercise localized content',
+        description: 'Create or update WOD Division content for a given locale.',
+        summary    : 'Upsert WOD Division localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 required  : ['name', 'summary'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Barbell'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Barre utilisée pour les exercices de force'),
+                    new OAT\Property(property: 'name', type: 'string', example: 'Lorem ipsum'),
+                    new OAT\Property(property: 'summary', type: 'string', example: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'),
                     new OAT\Property(property: 'details', type: 'string', nullable: true),
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Content updated'),
-            new OAT\Response(response: 201, description: 'Content created'),
-            new OAT\Response(response: 400, description: 'Invalid payload'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'Exercise not found'),
+            new OAT\Response(response: 200, description: 'Content updated.'),
+            new OAT\Response(response: 201, description: 'Content created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Division not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -249,7 +254,7 @@ final readonly class WodDivisionController
 
             $useCase->execute(
                 new UpsertContentWodDivisionHttp(
-                    id     : $wodDivisionId,
+                    id     : Uuid::fromString($wodDivisionId),
                     locale : $locale,
                     payload: $payload
                 )
@@ -267,38 +272,38 @@ final readonly class WodDivisionController
         path        : '/{wodDivisionId}/contents',
         name        : 'contents_upsert_bulk',
         requirements: [
-            'wodDivisionId' => '\d+',
+            'wodDivisionId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['PUT']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_DIVISION_MANAGE)]
     #[OAT\Put(
-        description: 'Create or update multiple localized contents for an WOD division',
-        summary    : 'Upsert multiple WOD division contents',
+        description: 'Create or update multiple localized contents for an WOD Division.',
+        summary    : 'Upsert multiple WOD Division contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Barbell",
-                        "summary" => "Barre utilisée pour les exercices de force",
-                        "details" => "Squats, deadlifts...",
+                        "name"    => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
+                        "details" => "",
                     ],
                     "en" => [
-                        "name"    => "Barbell",
-                        "summary" => "Traditional bar used for strength exercises",
-                        "details" => "Squats, deadlifts...",
+                        "name"    => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
+                        "details" => "",
                     ],
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated'),
-            new OAT\Response(response: 201, description: 'Contents created'),
-            new OAT\Response(response: 400, description: 'Invalid payload'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD division not found'),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Division not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -312,7 +317,7 @@ final readonly class WodDivisionController
 
             $useCase->execute(
                 new UpsertContentWodDivisionBulkHttp(
-                    id     : $wodDivisionId,
+                    id     : Uuid::fromString($wodDivisionId),
                     payload: $payload
                 )
             );

@@ -7,15 +7,15 @@ use App\Infrastructure\Doctrine\Repository\Wod\WodRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: WodRepository::class)]
 #[ORM\Table(name: 'wod')]
 class Wod
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    private ?int $id = null;
+    #[ORM\Column(type: 'uuid', unique: true)]
+    private Uuid $id;
 
     #[ORM\Column(type: 'string')]
     private string $name;
@@ -46,9 +46,12 @@ class Wod
         WodType     $wodType,
         WodCategory $wodCategory,
     ) {
-        $this->name       = $name;
+        $this->id = Uuid::v7();
+
+        $this->name        = $name;
         $this->wodType     = $wodType;
         $this->wodCategory = $wodCategory;
+
         $this->wodVariants = new ArrayCollection();
         $this->contents    = new ArrayCollection();
     }
@@ -56,8 +59,7 @@ class Wod
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
-
-    public function getId(): ?int
+    public function getId(): Uuid
     {
         return $this->id;
     }

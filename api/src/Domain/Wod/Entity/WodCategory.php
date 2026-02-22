@@ -7,34 +7,36 @@ use App\Infrastructure\Doctrine\Repository\Wod\WodCategoryRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use OpenApi\Attributes as OA;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: WodCategoryRepository::class)]
 #[ORM\Table(name: 'wod_category')]
 class WodCategory
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    #[OA\Property(description: "WOD Category ID")]
-    private ?int $id = null;
+    #[ORM\Column(type: 'uuid', unique: true)]
+    private Uuid $id;
 
     #[ORM\Column(type: 'string')]
-    #[OA\Property(description: "WOD Category slug", example: "for-load")]
     private string $slug;
 
     #[ORM\OneToMany(targetEntity: ContentWodCategory::class, mappedBy: "wodCategory", cascade: ["persist", "remove"], orphanRemoval: true)]
     private Collection $contents;
 
-    public function __construct()
-    {
+    public function __construct(
+        string $slug,
+    ) {
+        $this->id = Uuid::v7();
+
+        $this->slug = $slug;
+
         $this->contents = new ArrayCollection();
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
-    public function getId(): ?int
+    public function getId(): Uuid
     {
         return $this->id;
     }

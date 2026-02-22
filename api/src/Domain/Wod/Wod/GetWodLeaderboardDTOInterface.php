@@ -4,12 +4,13 @@ namespace App\Domain\Wod\Wod;
 
 use App\Infrastructure\Filters\FilterCollection;
 use App\Infrastructure\Sorts\SortCollection;
+use Symfony\Component\Uid\Uuid;
 
 interface GetWodLeaderboardDTOInterface
 {
-    public function getWodId(): string;
+    public function getWodId(): Uuid;
 
-    public function getWodDivisionId(): ?string;
+    public function getWodDivisionId(): ?Uuid;
 
     public function getGender(): ?string;
 

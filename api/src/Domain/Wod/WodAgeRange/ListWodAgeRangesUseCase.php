@@ -6,10 +6,10 @@ use App\Domain\Wod\Ports\WodAgeRangeDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use InvalidArgumentException;
 
-class ListWodAgeRangesUseCase
+final readonly class ListWodAgeRangesUseCase
 {
     public function __construct(
-        private readonly WodAgeRangeDALInterface $wodTypeDAL,
+        private WodAgeRangeDALInterface $wodTypeDAL,
     ) {
     }
 

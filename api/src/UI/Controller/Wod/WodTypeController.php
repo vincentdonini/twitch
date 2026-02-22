@@ -27,6 +27,7 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/wod-types', name: 'wod_type_')]
@@ -44,36 +45,57 @@ final readonly class WodTypeController
     )]
     #[IsGranted(ListPermissions::PERMISSION_WOD_TYPE_LIST)]
     #[OAT\Get(
-        description: 'Returns a list of all WOD types available in the system.',
-        summary    : 'Retrieve all WOD types',
+        description: 'Returns a list of all WOD Types available in the system.',
+        summary    : 'List of WOD Types.',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
             new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // slug
+            // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
-                name       : 'slug',
-                description: 'Filter result by slug.',
+                name       : 'filters[slug][eq]',
+                description: 'Filter by WOD Type slug (exact match).',
+                schema     : new OAT\Schema(type: 'string'),
+            ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // title
+            // ---------------------------------------------------------------------------------------------------------
+            new OAT\Parameter(
+                name       : 'filters[title][eq]',
+                description: 'Filter by WOD Type title (exact match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
             new OAT\Parameter(
-                name       : 'title',
-                description: 'Filter result by title.',
+                name       : 'filters[title][like]',
+                description: 'Filter by WOD Type title (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // summary
+            // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
-                name       : 'summary',
-                description: 'Filter result by summary.',
+                name       : 'filters[summary][like]',
+                description: 'Filter by WOD Type summary (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
+
+            // ---------------------------------------------------------------------------------------------------------
+            // details
+            // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
-                name       : 'details',
-                description: 'Filter result by details.',
+                name       : 'filters[details][like]',
+                description: 'Filter by WOD Type details (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
         ],
         responses  : [
-            new OAT\Response(response: 200, description: 'List of WOD types'),
-            new OAT\Response(response: 403, description: 'Access denied'),
+            new OAT\Response(response: 200, description: 'List of WOD Types.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -116,19 +138,19 @@ final readonly class WodTypeController
         path        : '/{wodTypeId}',
         name        : 'detail',
         requirements: [
-            'wodTypeId' => '\d+',
+            'wodTypeId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_WOD_TYPE_VIEW)]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific WOD type.',
-        summary    : 'Get WOD type details',
+        description: 'Returns detailed information for a specific WOD Type.',
+        summary    : 'Get WOD Type details.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'WOD type details'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD type not found'),
+            new OAT\Response(response: 200, description: 'WOD Type details.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Type not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -139,7 +161,9 @@ final readonly class WodTypeController
     ): JsonResponse {
         try {
             $wodType = $useCase->execute(
-                new GetWodTypeByIdHttp($wodTypeId)
+                new GetWodTypeByIdHttp(
+                    id: Uuid::fromString($wodTypeId),
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(
@@ -172,19 +196,19 @@ final readonly class WodTypeController
         path        : '/{wodTypeId}/contents',
         name        : 'contents_list',
         requirements: [
-            'wodTypeId' => '\d+',
+            'wodTypeId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_TYPE_LIST)]
     #[OAT\Get(
-        description: 'Retrieve all localized contents for an WOD type',
-        summary    : 'Get WOD type contents',
+        description: 'Retrieve all localized contents for an WOD Type.',
+        summary    : 'Get WOD Type contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents retrieved'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD type not found'),
+            new OAT\Response(response: 200, description: 'Contents retrieved.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Type not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -195,7 +219,9 @@ final readonly class WodTypeController
     ): JsonResponse {
         try {
             $wodTypeContents = $useCase->execute(
-                new GetWodTypeByIdHttp($wodTypeId)
+                new GetWodTypeByIdHttp(
+                    id: Uuid::fromString($wodTypeId),
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
@@ -228,7 +254,7 @@ final readonly class WodTypeController
         path        : '/{wodTypeId}/contents/{locale}',
         name        : 'content_upsert',
         requirements: [
-            'wodTypeId' => '\d+',
+            'wodTypeId' => '[0-9a-fA-F\-]+',
             'locale'    => '[a-z]{2}',
         ],
         methods     : ['PUT']
@@ -236,25 +262,25 @@ final readonly class WodTypeController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_TYPE_MANAGE)]
     #[OAT\Put(
         description: 'Create or update exercise content for a given locale.',
-        summary    : 'Upsert exercise localized content',
+        summary    : 'Upsert exercise localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 required  : ['name', 'summary'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Barbell'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Barre utilisée pour les exercices de force'),
+                    new OAT\Property(property: 'name', type: 'string', example: 'Lorem ipsum'),
+                    new OAT\Property(property: 'summary', type: 'string', example: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'),
                     new OAT\Property(property: 'details', type: 'string', nullable: true),
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Content updated'),
-            new OAT\Response(response: 201, description: 'Content created'),
-            new OAT\Response(response: 400, description: 'Invalid payload'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'Exercise not found'),
+            new OAT\Response(response: 200, description: 'Content updated.'),
+            new OAT\Response(response: 201, description: 'Content created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Type not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -269,7 +295,7 @@ final readonly class WodTypeController
 
             $useCase->execute(
                 new UpsertContentWodTypeHttp(
-                    id     : $wodTypeId,
+                    id     : Uuid::fromString($wodTypeId),
                     locale : $locale,
                     payload: $payload
                 )
@@ -287,38 +313,38 @@ final readonly class WodTypeController
         path        : '/{wodTypeId}/contents',
         name        : 'contents_upsert_bulk',
         requirements: [
-            'wodTypeId' => '\d+',
+            'wodTypeId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['PUT']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_TYPE_MANAGE)]
     #[OAT\Put(
-        description: 'Create or update multiple localized contents for an WOD type',
-        summary    : 'Upsert multiple WOD type contents',
+        description: 'Create or update multiple localized contents for an WOD Type.',
+        summary    : 'Upsert multiple WOD Type contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Barbell",
-                        "summary" => "Barre utilisée pour les exercices de force",
-                        "details" => "Squats, deadlifts...",
+                        "name"    => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
+                        "details" => "",
                     ],
                     "en" => [
-                        "name"    => "Barbell",
-                        "summary" => "Traditional bar used for strength exercises",
-                        "details" => "Squats, deadlifts...",
+                        "name"    => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
+                        "details" => "",
                     ],
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated'),
-            new OAT\Response(response: 201, description: 'Contents created'),
-            new OAT\Response(response: 400, description: 'Invalid payload'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD type not found'),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Type not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -332,7 +358,7 @@ final readonly class WodTypeController
 
             $useCase->execute(
                 new UpsertContentWodTypeBulkHttp(
-                    id     : $wodTypeId,
+                    id     : Uuid::fromString($wodTypeId),
                     payload: $payload
                 )
             );

@@ -12,6 +12,7 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class WodDivisionRepository extends AbstractEntityRepository implements WodDivisionDALInterface
 {
@@ -35,13 +36,9 @@ class WodDivisionRepository extends AbstractEntityRepository implements WodDivis
         return WodDivision::class;
     }
 
-    public function getById(string $id): ?WodDivision
+    public function getById(Uuid $id): ?WodDivision
     {
-        return $this->createQueryBuilder('wd')
-            ->where('wd.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function getBySLug(string $slug): ?WodDivision

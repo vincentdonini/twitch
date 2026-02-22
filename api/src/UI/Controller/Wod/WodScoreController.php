@@ -2,13 +2,11 @@
 
 namespace App\UI\Controller\Wod;
 
-use App\Domain\Equipment\Sort\EquipmentSortMapping;
 use App\Domain\User\Entity\User;
 use App\Domain\Wod\Entity\WodScore;
 use App\Domain\Wod\Filters\WodScoreFilterMapping;
 use App\Domain\Wod\Filters\WodScoreFilterRules;
 use App\Domain\Wod\Service\WodScoreService;
-use App\Domain\Wod\Sort\WodScoreSortMapping;
 use App\Domain\Wod\WodScore\CreateWodScoreUseCase;
 use App\Domain\Wod\WodScore\GetWodScoreByIdUseCase;
 use App\Domain\Wod\WodScore\ListWodScoresUseCase;
@@ -17,7 +15,6 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Paginator\ResponsePaginator;
 use App\Infrastructure\Security\Voters\ListPermissions;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
-use App\Infrastructure\Sorts\RequestSort;
 use App\UI\Adapters\Http\Wod\WodScore\CreateWodScoreHttp;
 use App\UI\Adapters\Http\Wod\WodScore\GetWodScoreByIdHttp;
 use App\UI\Adapters\Http\Wod\WodScore\ListWodScoresHttp;
@@ -34,6 +31,7 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/wod-scores', name: 'wod_score_')]
@@ -51,8 +49,8 @@ final class WodScoreController extends AbstractController
     )]
     #[IsGranted(ListPermissions::PERMISSION_WOD_SCORE_LIST)]
     #[OAT\Get(
-        description: 'Returns a list of all WOD scores available in the system.',
-        summary    : 'Retrieve all WOD scores',
+        description: 'Return a list of all WOD Scores available in the system.',
+        summary    : 'Retrieve all WOD Scores.',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
@@ -63,31 +61,31 @@ final class WodScoreController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[user.id][eq]',
-                description: 'Filter by user ID (exact match)',
+                description: 'Filter by user ID (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[user.firstName][eq]',
-                description: 'Filter by user firstName (exact match)',
+                description: 'Filter by user firstName (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[user.firstName][like]',
-                description: 'Filter by user firstName (partial match)',
+                description: 'Filter by user firstName (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[user.lastName][eq]',
-                description: 'Filter by user lastName (exact match)',
+                description: 'Filter by user lastName (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[user.lastName][like]',
-                description: 'Filter by user firstName (partial match)',
+                description: 'Filter by user firstName (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -97,26 +95,26 @@ final class WodScoreController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[wod.id][eq]',
-                description: 'Filter by WOD ID (exact match)',
+                description: 'Filter by WOD ID (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[wod.name][eq]',
-                description: 'Filter by WOD name (exact match)',
+                description: 'Filter by WOD name (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[wod.name][like]',
-                description: 'Filter by WOD name (partial match)',
+                description: 'Filter by WOD name (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
         ],
         responses  : [
-            new OAT\Response(response: 200, description: 'List of WOD scores'),
-            new OAT\Response(response: 403, description: 'Access denied'),
+            new OAT\Response(response: 200, description: 'List of WOD Scores.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -183,11 +181,11 @@ final class WodScoreController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_WOD_SCORE_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Post(
-        description: 'Creates a new WOD score and returns the created resource ID.',
-        summary    : 'Create a WOD',
+        description: 'Create a new WOD Score and returns the created resource ID.',
+        summary    : 'Create a WOD Score.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
-            description: 'Created a WOD score',
+            description: 'Created a WOD Score.',
             required   : true,
             content    : new OAT\JsonContent(
                 ref: new Model(
@@ -199,11 +197,11 @@ final class WodScoreController extends AbstractController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_CREATED,
-                description: 'WOD score created successfully',
+                description: 'WOD Score created successfully.',
                 headers    : [
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
-                        description: 'ID of WOD score created',
+                        description: 'ID of WOD Score created.',
                         schema     : new OAT\Schema(type: 'integer')
                     ),
                 ],
@@ -256,19 +254,19 @@ final class WodScoreController extends AbstractController
         path        : '/{wodScoreId}',
         name        : 'detail',
         requirements: [
-            'wodScoreId' => '\d+',
+            'wodScoreId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_WOD_SCORE_VIEW)]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific WOD score.',
-        summary    : 'Get WOD score details',
+        description: 'Return detailed information for a specific WOD Score.',
+        summary    : 'Get WOD Score details.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'WOD score details'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD score not found'),
+            new OAT\Response(response: 200, description: 'WOD Score details.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Score not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -289,7 +287,7 @@ final class WodScoreController extends AbstractController
         try {
             $wodScore = $useCase->execute(
                 new GetWodScoreByIdHttp(
-                    id: $wodScoreId
+                    id: Uuid::fromString($wodScoreId),
                 )
             );
 

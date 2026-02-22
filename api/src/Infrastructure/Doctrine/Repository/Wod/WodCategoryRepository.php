@@ -12,6 +12,7 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class WodCategoryRepository extends AbstractEntityRepository implements WodCategoryDALInterface
 {
@@ -35,13 +36,9 @@ class WodCategoryRepository extends AbstractEntityRepository implements WodCateg
         return WodCategory::class;
     }
 
-    public function getById(string $id): ?WodCategory
+    public function getById(Uuid $id): ?WodCategory
     {
-        return $this->createQueryBuilder('wc')
-            ->where('wc.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function listWodCategories(

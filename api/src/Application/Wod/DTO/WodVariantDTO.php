@@ -2,12 +2,12 @@
 
 namespace App\Application\Wod\DTO;
 
-use App\Application\DTO\BaseDTO;
 use App\Domain\Wod\Enum\GenderEnum;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 
-class WodVariantDTO extends BaseDTO
+class WodVariantDTO
 {
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
@@ -15,7 +15,7 @@ class WodVariantDTO extends BaseDTO
         FrontGroupsEnum::WOD_SCORE_LIST, FrontGroupsEnum::WOD_SCORE_DETAIL,
         FrontGroupsEnum::WOD_LEADERBOARD,
     ])]
-    public int $id;
+    public Uuid $id;
 
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
@@ -64,7 +64,7 @@ class WodVariantDTO extends BaseDTO
     public array $exercises;
 
     public function __construct(
-        int             $id,
+        Uuid            $id,
         WodDivisionDTO  $division,
         GenderEnum      $gender,
         ?WodAgeRangeDTO $ageRange,
@@ -72,8 +72,7 @@ class WodVariantDTO extends BaseDTO
         ?int            $timeCap,
         array           $exercises
     ) {
-        parent::__construct($id);
-
+        $this->id       = $id;
         $this->division = $division;
         $this->gender   = $gender;
         $this->ageRange = $ageRange;

@@ -33,8 +33,9 @@ class WodTypeFixtures extends Fixture
             // ---------------------------------------------------------------------------------------------------------
             // WOD TYPE
             // ---------------------------------------------------------------------------------------------------------
-            $wodType = new WodType();
-            $wodType->setSlug($item['slug']);
+            $wodType = new WodType(
+                slug: $item['slug'],
+            );
             $wodType->setAllowedMetrics($item['allowedMetrics']);
 
             // Contents

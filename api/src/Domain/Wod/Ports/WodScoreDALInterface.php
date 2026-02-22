@@ -12,7 +12,7 @@ use Symfony\Component\Uid\Uuid;
 
 interface WodScoreDALInterface
 {
-    public function getById(string $id): ?WodScore;
+    public function getById(Uuid $id): ?WodScore;
 
     /* @return WodScore[] */
     public function getByUser(User $user): array;
@@ -25,8 +25,8 @@ interface WodScoreDALInterface
     ): LightPaginator;
 
     public function getLeaderboard(
-        string              $wodId,
-        string              $wodDivisionId,
+        Uuid                $wodId,
+        Uuid                $wodDivisionId,
         string              $gender,
         LeaderboardOrdering $ordering,
         int                 $page = 1,

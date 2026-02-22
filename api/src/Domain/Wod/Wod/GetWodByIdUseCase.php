@@ -6,19 +6,17 @@ use App\Domain\Wod\Entity\Wod;
 use App\Domain\Wod\Ports\WodDALInterface;
 use Doctrine\ORM\EntityNotFoundException;
 
-class GetWodByIdUseCase
+final readonly class GetWodByIdUseCase
 {
     public function __construct(
-        private readonly WodDALInterface $wodDAL,
-    )
-    {
-
+        private WodDALInterface $wodDAL,
+    ) {
     }
 
     public function execute(GetWodByIdDTOInterface $dto): Wod
     {
         $wod = $this->wodDAL->getById($dto->getId());
-        if(!$wod instanceof Wod){
+        if (!$wod instanceof Wod) {
             throw new EntityNotFoundException();
         }
 

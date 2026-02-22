@@ -2,9 +2,11 @@
 
 namespace App\Domain\Wod\WodType;
 
+use Symfony\Component\Uid\Uuid;
+
 interface UpsertContentWodTypeDTOInterface
 {
-    public function getId(): string;
+    public function getId(): Uuid;
 
     public function getLocale(): string;
 

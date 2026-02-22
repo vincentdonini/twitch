@@ -7,12 +7,11 @@ use App\Domain\Wod\Ports\WodAgeRangeDALInterface;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\EntityNotFoundException;
 
-readonly class GetWodAgeRangeContentsByIdUseCase
+final readonly class GetWodAgeRangeContentsByIdUseCase
 {
     public function __construct(
         private WodAgeRangeDALInterface $wodAgeRangeDAL,
     ) {
-
     }
 
     public function execute(GetWodAgeRangeByIdDTOInterface $dto): Collection

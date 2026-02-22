@@ -12,6 +12,7 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class WodAgeRangeRepository extends AbstractEntityRepository implements WodAgeRangeDALInterface
 {
@@ -35,13 +36,9 @@ class WodAgeRangeRepository extends AbstractEntityRepository implements WodAgeRa
         return WodAgeRange::class;
     }
 
-    public function getById(string $id): ?WodAgeRange
+    public function getById(Uuid $id): ?WodAgeRange
     {
-        return $this->createQueryBuilder('war')
-            ->where('war.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function getBySlug(string $slug): ?WodAgeRange

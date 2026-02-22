@@ -7,10 +7,11 @@ use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Filters\FilterCollection;
 use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
+use Symfony\Component\Uid\Uuid;
 
 interface WodTypeDALInterface
 {
-    public function getById(string $id): ?WodType;
+    public function getById(Uuid $id): ?WodType;
 
     public function listWodTypes(
         int               $page = 1,

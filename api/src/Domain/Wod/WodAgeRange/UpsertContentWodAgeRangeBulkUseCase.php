@@ -10,7 +10,7 @@ use App\UI\Adapters\Http\Wod\WodAgeRange\UpsertContentWodAgeRangeBulkHttp;
 use App\UI\Adapters\Http\Wod\WodAgeRange\UpsertContentWodAgeRangeHttp;
 use Doctrine\ORM\EntityNotFoundException;
 
-readonly class UpsertContentWodAgeRangeBulkUseCase
+final readonly class UpsertContentWodAgeRangeBulkUseCase
 {
     public function __construct(
         private DatabaseInterface               $database,

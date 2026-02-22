@@ -7,20 +7,17 @@ use App\Infrastructure\Doctrine\Repository\Wod\WodDivisionRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use OpenApi\Attributes as OA;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: WodDivisionRepository::class)]
 #[ORM\Table(name: 'wod_division')]
 class WodDivision
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    #[OA\Property(description: "WOD division ID")]
-    private ?int $id = null;
+    #[ORM\Column(type: 'uuid', unique: true)]
+    private Uuid $id;
 
     #[ORM\Column(type: 'string')]
-    #[OA\Property(description: "WOD division slug", example: "rx")]
     private string $slug;
 
     #[ORM\OneToMany(targetEntity: WodVariant::class, mappedBy: 'wodDivision')]
@@ -29,8 +26,13 @@ class WodDivision
     #[ORM\OneToMany(targetEntity: ContentWodDivision::class, mappedBy: "wodDivision", cascade: ["persist", "remove"], orphanRemoval: true)]
     private Collection $contents;
 
-    public function __construct()
-    {
+    public function __construct(
+        string $slug,
+    ) {
+        $this->id = Uuid::v7();
+
+        $this->slug = $slug;
+
         $this->wodVariants = new ArrayCollection();
         $this->contents    = new ArrayCollection();
     }
@@ -38,7 +40,7 @@ class WodDivision
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
-    public function getId(): ?int
+    public function getId(): Uuid
     {
         return $this->id;
     }

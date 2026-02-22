@@ -7,25 +7,23 @@ use App\Infrastructure\Doctrine\Repository\Wod\WodVariantExerciseRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: WodVariantExerciseRepository::class)]
 #[ORM\Table(name: 'wod_variant_exercise')]
 class WodVariantExercise
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    #[Groups(['wod:list', 'wod:detail', 'wodVariantExercise:list', 'wodVariantExercise:detail'])]
-    private ?int $id = null;
+    #[ORM\Column(type: 'uuid', unique: true)]
+    private Uuid $id;
 
     #[ORM\Column(type: 'integer')]
     private int $position;
 
     #[ORM\ManyToOne(
         targetEntity: WodVariant::class,
-        fetch: 'EAGER',
-        inversedBy: 'wodVariantExercises'
+        fetch       : 'EAGER',
+        inversedBy  : 'wodVariantExercises'
     )]
     #[ORM\JoinColumn(nullable: false)]
     private WodVariant $wodVariant;
@@ -42,15 +40,24 @@ class WodVariantExercise
     )]
     private Collection $metrics;
 
-    public function __construct()
-    {
+    public function __construct(
+        int        $position,
+        WodVariant $wodVariant,
+        Exercise   $exercise
+    ) {
+        $this->id = Uuid::v7();
+
+        $this->position   = $position;
+        $this->wodVariant = $wodVariant;
+        $this->exercise   = $exercise;
+
         $this->metrics = new ArrayCollection();
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
-    public function getId(): ?int
+    public function getId(): Uuid
     {
         return $this->id;
     }

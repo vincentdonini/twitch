@@ -2,17 +2,17 @@
 
 namespace App\Application\Wod\DTO;
 
-use App\Application\DTO\BaseDTO;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 
-class WodCategoryDTO extends BaseDTO
+class WodCategoryDTO
 {
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
         FrontGroupsEnum::WOD_CATEGORY_LIST, FrontGroupsEnum::WOD_CATEGORY_DETAIL,
     ])]
-    public int $id;
+    public Uuid $id;
 
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
@@ -39,14 +39,13 @@ class WodCategoryDTO extends BaseDTO
     public string $details;
 
     public function __construct(
-        int    $id,
+        Uuid   $id,
         string $slug,
         string $title,
         string $summary,
         string $details
     ) {
-        parent::__construct($id);
-
+        $this->id      = $id;
         $this->slug    = $slug;
         $this->title   = $title;
         $this->summary = $summary;

@@ -7,15 +7,15 @@ use App\Infrastructure\Doctrine\Repository\Wod\WodScoreRepository;
 use DateTimeImmutable;
 use Doctrine\ORM\Mapping as ORM;
 use DomainException;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: WodScoreRepository::class)]
 #[ORM\Table(name: 'wod_score')]
 class WodScore
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    private ?int $id = null;
+    #[ORM\Column(type: 'uuid', unique: true)]
+    private Uuid $id;
 
     #[ORM\ManyToOne(targetEntity: User::class)]
     #[ORM\JoinColumn(nullable: false, onDelete: 'CASCADE')]
@@ -54,6 +54,8 @@ class WodScore
         DateTimeImmutable $performedAt,
         bool              $private = false,
     ) {
+        $this->id = Uuid::v7();
+
         $this->user        = $user;
         $this->wod         = $wod;
         $this->wodVariant  = $wodVariant;
@@ -61,7 +63,10 @@ class WodScore
         $this->private     = $private;
     }
 
-    public function getId(): ?int
+    // -----------------------------------------------------------------------------------------------------------------
+    // GETTERS / SETTERS
+    // -----------------------------------------------------------------------------------------------------------------
+    public function getId(): Uuid
     {
         return $this->id;
     }

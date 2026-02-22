@@ -3,18 +3,18 @@
 namespace App\UI\Adapters\Http\Wod\WodDivision;
 
 use App\Domain\Wod\WodDivision\UpsertContentWodDivisionDTOInterface;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class UpsertContentWodDivisionHttp implements UpsertContentWodDivisionDTOInterface
 {
     public function __construct(
-        private string $id,
+        private Uuid   $id,
         private string $locale,
         private array  $payload,
     ) {
-
     }
 
-    public function getId(): string
+    public function getId(): Uuid
     {
         return $this->id;
     }

@@ -39,13 +39,9 @@ class WodScoreRepository extends AbstractEntityRepository implements WodScoreDAL
         return WodScore::class;
     }
 
-    public function getById(string $id): ?WodScore
+    public function getById(Uuid $id): ?WodScore
     {
-        return $this->createQueryBuilder('ws')
-            ->where('ws.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function getByUser(
@@ -119,8 +115,8 @@ class WodScoreRepository extends AbstractEntityRepository implements WodScoreDAL
     }
 
     public function getLeaderboard(
-        string              $wodId,
-        string              $wodDivisionId,
+        Uuid                $wodId,
+        Uuid                $wodDivisionId,
         string              $gender,
         LeaderboardOrdering $ordering,
         int                 $page = 1,
@@ -131,7 +127,7 @@ class WodScoreRepository extends AbstractEntityRepository implements WodScoreDAL
         $qb = $this->createQueryBuilder('ws')
             ->innerJoin('ws.wod', 'w')
             ->where('w.id = :wodId')
-            ->setParameter('wodId', $wodId);
+            ->setParameter('wodId', $wodId, UuidType::NAME);
 
         // Visibility rules
         // -------------------------------------------------------------------------------------------------------------
@@ -150,14 +146,8 @@ class WodScoreRepository extends AbstractEntityRepository implements WodScoreDAL
             ->join('wv.wodDivision', 'wd')
             ->andWhere('wd.id = :wodDivisionId')
             ->andWhere('wv.gender = :gender')
-            ->setParameter('wodDivisionId', $wodDivisionId)
+            ->setParameter('wodDivisionId', $wodDivisionId, UuidType::NAME)
             ->setParameter('gender', $gender);
-
-        // Filters
-        // -------------------------------------------------------------------------------------------------------------
-//        if (!$filters->isEmpty()) {
-//            (new DoctrineFilterApplier())->apply($qb, 'ws', $filters);
-//        }
 
         // Sort
         // -------------------------------------------------------------------------------------------------------------

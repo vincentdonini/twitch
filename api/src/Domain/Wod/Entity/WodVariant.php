@@ -7,17 +7,15 @@ use App\Infrastructure\Doctrine\Repository\Wod\WodVariantRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: WodVariantRepository::class)]
 #[ORM\Table(name: 'wod_variant')]
 class WodVariant
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    #[Groups(['wod:list', 'wod:detail'])]
-    private ?int $id = null;
+    #[ORM\Column(type: 'uuid', unique: true)]
+    private Uuid $id;
 
     // -----------------------------------------------------------------------------------------------------------------
     // WOD
@@ -31,7 +29,6 @@ class WodVariant
     // -----------------------------------------------------------------------------------------------------------------
     #[ORM\ManyToOne(targetEntity: WodDivision::class, inversedBy: 'variants')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Groups(['wod:list', 'wod:detail'])]
     private WodDivision $wodDivision;
 
     // -----------------------------------------------------------------------------------------------------------------
@@ -39,21 +36,18 @@ class WodVariant
     // -----------------------------------------------------------------------------------------------------------------
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: true)]
-    #[Groups(['wod:list', 'wod:detail'])]
     private ?WodAgeRange $wodAgeRange = null;
 
     // -----------------------------------------------------------------------------------------------------------------
     // GENDER
     // -----------------------------------------------------------------------------------------------------------------
     #[ORM\Column(type: 'string', length: 10, enumType: GenderEnum::class, nullable: true)]
-    #[Groups(['wod:list', 'wod:detail'])]
     private ?GenderEnum $gender = null;
 
     // -----------------------------------------------------------------------------------------------------------------
     // SCALED / RX
     // -----------------------------------------------------------------------------------------------------------------
     #[ORM\Column(type: 'boolean')]
-    #[Groups(['wod:list', 'wod:detail'])]
     private bool $isScaled = false;
 
     #[ORM\Column(type: 'integer', nullable: true)]
@@ -71,15 +65,22 @@ class WodVariant
     #[ORM\OrderBy(['position' => 'ASC'])]
     private Collection $wodVariantExercises;
 
-    public function __construct()
-    {
+    public function __construct(
+        Wod         $wod,
+        WodDivision $wodDivision,
+    ) {
+        $this->id = Uuid::v7();
+
+        $this->wod         = $wod;
+        $this->wodDivision = $wodDivision;
+
         $this->wodVariantExercises = new ArrayCollection();
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
-    public function getId(): ?int
+    public function getId(): Uuid
     {
         return $this->id;
     }

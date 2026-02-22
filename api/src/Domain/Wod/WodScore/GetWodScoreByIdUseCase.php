@@ -6,12 +6,11 @@ use App\Domain\Wod\Entity\WodScore;
 use App\Domain\Wod\Ports\WodScoreDALInterface;
 use Doctrine\ORM\EntityNotFoundException;
 
-class GetWodScoreByIdUseCase
+final readonly class GetWodScoreByIdUseCase
 {
     public function __construct(
-        private readonly WodScoreDALInterface $wodScoreDAL,
+        private WodScoreDALInterface $wodScoreDAL,
     ) {
-
     }
 
     public function execute(GetWodScoreByIdDTOInterface $dto): WodScore

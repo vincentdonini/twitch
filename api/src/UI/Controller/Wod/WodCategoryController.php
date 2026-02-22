@@ -27,6 +27,7 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/wod-categories', name: 'wod_category_')]
@@ -45,15 +46,15 @@ final readonly class WodCategoryController
     #[IsGranted(ListPermissions::PERMISSION_WOD_CATEGORY_LIST)]
     #[OAT\Get(
         description: 'Returns a list of all WOD categories available in the system.',
-        summary    : 'Retrieve all WOD categories',
+        summary    : 'List of WOD categories',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
             new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
         ],
         responses  : [
-            new OAT\Response(response: 200, description: 'List of WOD categories'),
-            new OAT\Response(response: 403, description: 'Access denied'),
+            new OAT\Response(response: 200, description: 'List of WOD categories.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -67,8 +68,8 @@ final readonly class WodCategoryController
         try {
             $paginator = $useCase->execute(
                 new ListWodCategoriesHttp(
-                    page   : $paginatorValues->getPage(),
-                    limit  : $paginatorValues->getLimit(),
+                    page : $paginatorValues->getPage(),
+                    limit: $paginatorValues->getLimit(),
                 )
             );
         } catch (InvalidArgumentException) {
@@ -98,19 +99,19 @@ final readonly class WodCategoryController
         path        : '/{wodCategoryId}',
         name        : 'detail',
         requirements: [
-            'wodCategoryId' => '\d+',
+            'wodCategoryId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_WOD_CATEGORY_VIEW)]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific WOD category.',
-        summary    : 'Get WOD category details',
+        description: 'Returns detailed information for a specific WOD Category.',
+        summary    : 'Get WOD Category details.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'WOD category details'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD category not found'),
+            new OAT\Response(response: 200, description: 'WOD Category details.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Category not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -121,7 +122,9 @@ final readonly class WodCategoryController
     ): JsonResponse {
         try {
             $wodCategory = $useCase->execute(
-                new GetWodCategoryByIdHttp($wodCategoryId)
+                new GetWodCategoryByIdHttp(
+                    id: Uuid::fromString($wodCategoryId),
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(
@@ -154,19 +157,19 @@ final readonly class WodCategoryController
         path        : '/{wodCategoryId}/contents',
         name        : 'contents_list',
         requirements: [
-            'wodCategoryId' => '\d+',
+            'wodCategoryId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_CATEGORY_LIST)]
     #[OAT\Get(
-        description: 'Retrieve all localized contents for an WOD category',
-        summary    : 'Get WOD category contents',
+        description: 'Retrieve all localized contents for an WOD Category.',
+        summary    : 'Get WOD Category contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents retrieved'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD category not found'),
+            new OAT\Response(response: 200, description: 'Contents retrieved.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Category not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -177,7 +180,9 @@ final readonly class WodCategoryController
     ): JsonResponse {
         try {
             $wodCategoryContents = $useCase->execute(
-                new GetWodCategoryByIdHttp($wodCategoryId)
+                new GetWodCategoryByIdHttp(
+                    id: Uuid::fromString($wodCategoryId),
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
@@ -210,7 +215,7 @@ final readonly class WodCategoryController
         path        : '/{wodCategoryId}/contents/{locale}',
         name        : 'content_upsert',
         requirements: [
-            'wodCategoryId' => '\d+',
+            'wodCategoryId' => '[0-9a-fA-F\-]+',
             'locale'        => '[a-z]{2}',
         ],
         methods     : ['PUT']
@@ -218,25 +223,25 @@ final readonly class WodCategoryController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_CATEGORY_MANAGE)]
     #[OAT\Put(
         description: 'Create or update exercise content for a given locale.',
-        summary    : 'Upsert exercise localized content',
+        summary    : 'Upsert exercise localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 required  : ['name', 'summary'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Barbell'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Barre utilisée pour les exercices de force'),
+                    new OAT\Property(property: 'name', type: 'string', example: 'Lorem ipsum'),
+                    new OAT\Property(property: 'summary', type: 'string', example: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'),
                     new OAT\Property(property: 'details', type: 'string', nullable: true),
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Content updated'),
-            new OAT\Response(response: 201, description: 'Content created'),
-            new OAT\Response(response: 400, description: 'Invalid payload'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'Exercise not found'),
+            new OAT\Response(response: 200, description: 'Content updated.'),
+            new OAT\Response(response: 201, description: 'Content created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Category not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -251,7 +256,7 @@ final readonly class WodCategoryController
 
             $useCase->execute(
                 new UpsertContentWodCategoryHttp(
-                    id     : $wodCategoryId,
+                    id     : Uuid::fromString($wodCategoryId),
                     locale : $locale,
                     payload: $payload
                 )
@@ -269,38 +274,38 @@ final readonly class WodCategoryController
         path        : '/{wodCategoryId}/contents',
         name        : 'contents_upsert_bulk',
         requirements: [
-            'wodId' => '\d+',
+            'wodId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['PUT']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_CATEGORY_MANAGE)]
     #[OAT\Put(
-        description: 'Create or update multiple localized contents for an WOD category',
-        summary    : 'Upsert multiple WOD category contents',
+        description: 'Create or update multiple localized contents for an WOD Category.',
+        summary    : 'Upsert multiple WOD Category contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Barbell",
-                        "summary" => "Barre utilisée pour les exercices de force",
-                        "details" => "Squats, deadlifts...",
+                        "name"    => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
+                        "details" => "",
                     ],
                     "en" => [
-                        "name"    => "Barbell",
-                        "summary" => "Traditional bar used for strength exercises",
-                        "details" => "Squats, deadlifts...",
+                        "name"    => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
+                        "details" => "",
                     ],
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated'),
-            new OAT\Response(response: 201, description: 'Contents created'),
-            new OAT\Response(response: 400, description: 'Invalid payload'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'WOD category not found'),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'WOD Category not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -314,7 +319,7 @@ final readonly class WodCategoryController
 
             $useCase->execute(
                 new UpsertContentWodCategoryBulkHttp(
-                    id     : $wodCategoryId,
+                    id     : Uuid::fromString($wodCategoryId),
                     payload: $payload
                 )
             );

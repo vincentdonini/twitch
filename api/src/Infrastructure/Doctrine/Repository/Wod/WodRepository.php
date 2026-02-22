@@ -14,6 +14,7 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class WodRepository extends AbstractEntityRepository implements WodDALInterface
 {
@@ -37,13 +38,9 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
         return Wod::class;
     }
 
-    public function getById(string $id): ?Wod
+    public function getById(Uuid $id): ?Wod
     {
-        return $this->createQueryBuilder('w')
-            ->where('w.id = :id')
-            ->setParameter('id', $id)
-            ->getQuery()
-            ->getOneOrNullResult();
+        return $this->find($id);
     }
 
     public function getByName(string $name): ?Wod

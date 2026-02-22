@@ -6,10 +6,10 @@ use App\Domain\Wod\Ports\WodDivisionDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use InvalidArgumentException;
 
-class ListWodDivisionsUseCase
+final readonly class ListWodDivisionsUseCase
 {
     public function __construct(
-        private readonly WodDivisionDALInterface $wodDivisionDAL,
+        private WodDivisionDALInterface $wodDivisionDAL,
     ) {
     }
 

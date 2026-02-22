@@ -8,11 +8,11 @@ use App\Domain\Wod\Ports\WodDALInterface;
 use App\Domain\Wod\Ports\WodScoreDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 
-class GetWodLeaderboardUseCase
+final readonly class GetWodLeaderboardUseCase
 {
     public function __construct(
-        private readonly WodDALInterface      $wodDAL,
-        private readonly WodScoreDALInterface $wodScoreDAL,
+        private WodDALInterface      $wodDAL,
+        private WodScoreDALInterface $wodScoreDAL,
     ) {
     }
 
