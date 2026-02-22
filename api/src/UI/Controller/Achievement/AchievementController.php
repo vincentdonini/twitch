@@ -71,7 +71,7 @@ final class AchievementController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[code][eq]',
-                description: 'Filter by achievement code (exact match).',
+                description: 'Filter by Achievement code (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -178,7 +178,7 @@ final class AchievementController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_ACHIEVEMENT_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Post(
-        description: 'Create a new achievement and returns the created resource ID.',
+        description: 'Create a new Achievement and returns the created resource ID.',
         summary    : 'Create an achievement.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
@@ -198,7 +198,7 @@ final class AchievementController extends AbstractController
                 headers    : [
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
-                        description: 'ID of achievement created.',
+                        description: 'ID of Achievement created.',
                         schema     : new OAT\Schema(type: 'integer')
                     ),
                 ],
@@ -252,7 +252,7 @@ final class AchievementController extends AbstractController
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
         description: 'Returns detailed information for a specific achievement.',
-        summary    : 'Get achievement details.',
+        summary    : 'Get Achievement details.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
@@ -310,7 +310,7 @@ final class AchievementController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_ACHIEVEMENT_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Patch(
-        description: 'Update an existing achievement with the provided data.',
+        description: 'Update an existing Achievement with the provided data.',
         summary    : 'Update an achievement.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
@@ -388,7 +388,7 @@ final class AchievementController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_LIST)]
     #[OAT\Get(
         description: 'Retrieve all localized contents for an achievement.',
-        summary    : 'Get achievement contents.',
+        summary    : 'Get Achievement contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(response: 200, description: 'Contents retrieved.'),
@@ -404,7 +404,9 @@ final class AchievementController extends AbstractController
     ): JsonResponse {
         try {
             $achievementContents = $useCase->execute(
-                new GetAchievementByIdHttp($achievementId)
+                new GetAchievementByIdHttp(
+                    id: Uuid::fromString($achievementId)
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
@@ -443,16 +445,24 @@ final class AchievementController extends AbstractController
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_MANAGE)]
     #[OAT\Put(
-        description: 'Create or update achievement content for a given locale.',
+        description: 'Create or update Achievement content for a given locale.',
         summary    : 'Upsert exercise localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
-                required  : ['name', 'summary'],
+                required  : ['title', 'description'],
                 properties: [
-                    new OAT\Property(property: 'title', type: 'string', example: 'First WOD'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Unlock this achievement by completing your very first WOD.'),
+                    new OAT\Property(
+                        property: 'title',
+                        type    : 'string',
+                        example : 'Lorem ipsum'
+                    ),
+                    new OAT\Property(
+                        property: 'description',
+                        type    : 'string',
+                        example : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'
+                    ),
                 ]
             )
         ),
@@ -499,19 +509,19 @@ final class AchievementController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_MANAGE)]
     #[OAT\Put(
         description: 'Create or update multiple localized contents for an achievement.',
-        summary    : 'Upsert multiple achievement contents.',
+        summary    : 'Upsert multiple Achievement contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "title"       => "Premier WOD",
-                        "description" => "Débloque ce succès en terminant ton tout premier WOD.",
+                        "title"       => "Lorem ipsum",
+                        "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                     ],
                     "en" => [
-                        "title"       => "First WOD",
-                        "description" => "Unlock this achievement by completing your very first WOD.",
+                        "title"       => "Lorem ipsum",
+                        "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
                     ],
                 ]
             )

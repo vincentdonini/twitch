@@ -57,8 +57,8 @@ final readonly class MuscleAreaController
     #[IsGranted(ListPermissions::PERMISSION_MUSCLE_AREA_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns a list of muscle areas available in the system.',
-        summary    : 'List of muscle areas.',
+        description: 'Returns a list of Muscle areas available in the system.',
+        summary    : 'List of Muscle areas.',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
@@ -69,7 +69,7 @@ final readonly class MuscleAreaController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[slug][eq]',
-                description: 'Filter by muscle area slug (exact match)',
+                description: 'Filter by Muscle area slug (exact match)',
                 schema     : new OAT\Schema(type: 'string'),
             ),
 
@@ -78,12 +78,12 @@ final readonly class MuscleAreaController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[title][eq]',
-                description: 'Filter by muscle area title (exact match).',
+                description: 'Filter by Muscle area title (exact match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
             new OAT\Parameter(
                 name       : 'filters[title][like]',
-                description: 'Filter by muscle area title (partial match).',
+                description: 'Filter by Muscle area title (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
 
@@ -92,7 +92,7 @@ final readonly class MuscleAreaController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[summary][like]',
-                description: 'Filter by muscle area summary (partial match).',
+                description: 'Filter by Muscle area summary (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
 
@@ -101,14 +101,14 @@ final readonly class MuscleAreaController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[details][like]',
-                description: 'Filter by muscle area details (partial match).',
+                description: 'Filter by Muscle area details (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
         ],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of muscle areas',
+                description: 'List of Muscle areas',
                 headers    : [
                     new OAT\Header(ref: '#/components/headers/Element-Count', header: 'Element-Count'),
                     new OAT\Header(ref: '#/components/headers/Pagination-Page', header: 'Pagination-Page'),
@@ -195,8 +195,8 @@ final readonly class MuscleAreaController
     )]
     #[IsGranted(ListPermissions::PERMISSION_MUSCLE_AREA_VIEW)]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific muscle area.',
-        summary    : 'Get muscle area details.',
+        description: 'Returns detailed information for a specific Muscle area.',
+        summary    : 'Get Muscle area details.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(response: 200, description: 'Muscle area details.'),
@@ -249,8 +249,8 @@ final readonly class MuscleAreaController
     )]
     #[IsGranted(ListPermissions::PERMISSION_MUSCLE_GROUP_LIST)]
     #[OAT\Get(
-        description: 'Returns groups for a specific muscle area.',
-        summary    : 'Get muscle area groups.',
+        description: 'Returns groups for a specific Muscle area.',
+        summary    : 'Get Muscle area groups.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(response: 200, description: 'Muscle area groups.'),
@@ -305,13 +305,13 @@ final readonly class MuscleAreaController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_MUSCLE_AREA_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns all localized contents for an muscle area.',
-        summary    : 'List of all muscle area contents.',
+        description: 'Returns all localized contents for an Muscle area.',
+        summary    : 'List of all Muscle area contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of all muscle area contents.',
+                description: 'List of all Muscle area contents.',
                 content    : new OAT\JsonContent(
                     type : 'array',
                     items: new OAT\Items(
@@ -374,31 +374,38 @@ final readonly class MuscleAreaController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_MUSCLE_AREA_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
-        description: 'Create or update muscle area content for a given locale.',
-        summary    : 'Upsert muscle area localized content.',
+        description: 'Create or update Muscle area content for a given locale.',
+        summary    : 'Upsert Muscle area localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
-                required  : ['name', 'summary'],
+                required  : ['title', 'summary'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Lorem ipsum'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'),
-                    new OAT\Property(property: 'details', type: 'string', nullable: true),
+                    new OAT\Property(
+                        property: 'title',
+                        type    : 'string',
+                        example : 'Lorem ipsum'
+                    ),
+                    new OAT\Property(
+                        property: 'summary',
+                        type    : 'string',
+                        example : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'
+                    ),
+                    new OAT\Property(
+                        property: 'details',
+                        type    : 'string',
+                        nullable: true
+                    ),
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(
-                response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully.',
-                headers    : [
-                    new OAT\Header(
-                        header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted muscle area contents.'
-                    ),
-                ]
-            ),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Muscle area not found.'),
         ]
     )]
     public function upsertContent(
@@ -412,7 +419,7 @@ final readonly class MuscleAreaController
 
             $useCase->execute(
                 new UpsertContentMuscleAreaHttp(
-                    id     : $muscleAreaId,
+                    id     : Uuid::fromString($muscleAreaId),
                     locale : $locale,
                     payload: $payload
                 )
@@ -423,12 +430,7 @@ final readonly class MuscleAreaController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        $response = new JsonResponse(null, $statusCode);
-        if ($statusCode === Response::HTTP_NO_CONTENT) {
-            $response->headers->set('X-RESOURCE-ID', $muscleAreaId);
-        }
-
-        return $response;
+        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -442,37 +444,32 @@ final readonly class MuscleAreaController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_MUSCLE_AREA_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
-        description: 'Create or update multiple localized contents for an muscle area.',
-        summary    : 'Upsert multiple muscle area contents.',
+        description: 'Create or update multiple localized contents for an Muscle area.',
+        summary    : 'Upsert multiple Muscle area contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Lorem ipsum",
-                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "title"   => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "details" => null,
                     ],
                     "en" => [
-                        "name"    => "Lorem ipsum",
+                        "title"   => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "details" => null,
                     ],
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(
-                response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully.',
-                headers    : [
-                    new OAT\Header(
-                        header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted contents.'
-                    ),
-                ]
-            ),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Muscle area not found.'),
         ]
     )]
     public function upsertContentsBulk(
@@ -485,7 +482,7 @@ final readonly class MuscleAreaController
 
             $useCase->execute(
                 new UpsertContentMuscleAreaBulkHttp(
-                    id     : $muscleAreaId,
+                    id     : Uuid::fromString($muscleAreaId),
                     payload: $payload
                 )
             );
@@ -495,11 +492,6 @@ final readonly class MuscleAreaController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        $response = new JsonResponse(null, $statusCode);
-        if ($statusCode === Response::HTTP_NO_CONTENT) {
-            $response->headers->set('X-RESOURCE-ID', $muscleAreaId);
-        }
-
-        return $response;
+        return new JsonResponse(null, $statusCode);
     }
 }

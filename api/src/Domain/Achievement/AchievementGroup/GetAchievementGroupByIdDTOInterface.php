@@ -2,7 +2,9 @@
 
 namespace App\Domain\Achievement\AchievementGroup;
 
+use Symfony\Component\Uid\Uuid;
+
 interface GetAchievementGroupByIdDTOInterface
 {
-    public function getId(): string;
+    public function getId(): Uuid;
 }

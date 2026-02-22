@@ -2,9 +2,11 @@
 
 namespace App\Domain\Exercise\ExerciseCategory;
 
+use Symfony\Component\Uid\Uuid;
+
 interface UpsertContentExerciseCategoryBulkDTOInterface
 {
-    public function getId(): string;
+    public function getId(): Uuid;
 
     public function getContents(): array;
 }

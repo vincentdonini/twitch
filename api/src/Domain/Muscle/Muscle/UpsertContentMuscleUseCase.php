@@ -10,7 +10,7 @@ use App\Domain\Muscle\Ports\MuscleDALInterface;
 use App\UI\Adapters\Http\Muscle\Muscle\UpsertContentMuscleHttp;
 use Doctrine\ORM\EntityNotFoundException;
 
-readonly class UpsertContentMuscleUseCase
+final readonly class UpsertContentMuscleUseCase
 {
     public function __construct(
         private DatabaseInterface  $database,
@@ -70,4 +70,3 @@ readonly class UpsertContentMuscleUseCase
         return true;
     }
 }
-

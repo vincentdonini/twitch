@@ -2,9 +2,11 @@
 
 namespace App\Domain\Muscle\Muscle;
 
+use Symfony\Component\Uid\Uuid;
+
 interface UpsertContentMuscleDTOInterface
 {
-    public function getId(): string;
+    public function getId(): Uuid;
 
     public function getLocale(): string;
 

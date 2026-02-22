@@ -332,23 +332,30 @@ final readonly class ExerciseController
             content : new OAT\JsonContent(
                 required  : ['name', 'summary'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Lorem ipsum'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'),
-                    new OAT\Property(property: 'details', type: 'string', nullable: true),
+                    new OAT\Property(
+                        property: 'name',
+                        type    : 'string',
+                        example : 'Lorem ipsum'
+                    ),
+                    new OAT\Property(
+                        property: 'summary',
+                        type    : 'string',
+                        example : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'
+                    ),
+                    new OAT\Property(
+                        property: 'details',
+                        type    : 'string',
+                        nullable: true
+                    ),
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(
-                response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully.',
-                headers    : [
-                    new OAT\Header(
-                        header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted exercise contents.'
-                    ),
-                ]
-            ),
+            new OAT\Response(response: 200, description: 'Content updated.'),
+            new OAT\Response(response: 201, description: 'Content created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Exercise not found.'),
         ]
     )]
     public function upsertContent(
@@ -373,12 +380,7 @@ final readonly class ExerciseController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        $response = new JsonResponse(null, $statusCode);
-        if ($statusCode === Response::HTTP_NO_CONTENT) {
-            $response->headers->set('X-RESOURCE-ID', $exerciseId);
-        }
-
-        return $response;
+        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -401,28 +403,23 @@ final readonly class ExerciseController
                 example: [
                     "fr" => [
                         "name"    => "Lorem ipsum",
-                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "details" => null,
                     ],
                     "en" => [
                         "name"    => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "details" => null,
                     ],
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(
-                response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully.',
-                headers    : [
-                    new OAT\Header(
-                        header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted contents.'
-                    ),
-                ]
-            ),
+            new OAT\Response(response: 200, description: 'Content updated.'),
+            new OAT\Response(response: 201, description: 'Content created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Exercise not found.'),
         ]
     )]
     public function upsertContentsBulk(
@@ -445,11 +442,6 @@ final readonly class ExerciseController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        $response = new JsonResponse(null, $statusCode);
-        if ($statusCode === Response::HTTP_NO_CONTENT) {
-            $response->headers->set('X-RESOURCE-ID', $exerciseId);
-        }
-
-        return $response;
+        return new JsonResponse(null, $statusCode);
     }
 }

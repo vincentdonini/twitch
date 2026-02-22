@@ -58,8 +58,8 @@ final readonly class MuscleGroupController
     #[IsGranted(ListPermissions::PERMISSION_MUSCLE_GROUP_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns a list of muscle groups available in the system.',
-        summary    : 'List of muscle groups',
+        description: 'Returns a list of Muscle groups available in the system.',
+        summary    : 'List of Muscle groups',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
@@ -70,7 +70,7 @@ final readonly class MuscleGroupController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[slug][eq]',
-                description: 'Filter by muscle group slug (exact match)',
+                description: 'Filter by Muscle group slug (exact match)',
                 schema     : new OAT\Schema(type: 'string'),
             ),
 
@@ -79,12 +79,12 @@ final readonly class MuscleGroupController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[title][eq]',
-                description: 'Filter by muscle group title (exact match).',
+                description: 'Filter by Muscle group title (exact match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
             new OAT\Parameter(
                 name       : 'filters[title][like]',
-                description: 'Filter by muscle group title (partial match).',
+                description: 'Filter by Muscle group title (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
 
@@ -93,7 +93,7 @@ final readonly class MuscleGroupController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[summary][like]',
-                description: 'Filter by muscle group summary (partial match).',
+                description: 'Filter by Muscle group summary (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
 
@@ -102,14 +102,14 @@ final readonly class MuscleGroupController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[details][like]',
-                description: 'Filter by muscle group details (partial match).',
+                description: 'Filter by Muscle group details (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
         ],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of muscle groups',
+                description: 'List of Muscle groups',
                 headers    : [
                     new OAT\Header(ref: '#/components/headers/Element-Count', header: 'Element-Count'),
                     new OAT\Header(ref: '#/components/headers/Pagination-Page', header: 'Pagination-Page'),
@@ -193,8 +193,8 @@ final readonly class MuscleGroupController
     )]
     #[IsGranted(ListPermissions::PERMISSION_MUSCLE_GROUP_VIEW)]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific muscle group.',
-        summary    : 'Get muscle group details',
+        description: 'Returns detailed information for a specific Muscle group.',
+        summary    : 'Get Muscle group details',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(response: 200, description: 'Muscle group details'),
@@ -247,8 +247,8 @@ final readonly class MuscleGroupController
     )]
     #[IsGranted(ListPermissions::PERMISSION_MUSCLE_GROUP_LIST)]
     #[OAT\Get(
-        description: 'Returns muscles for a specific muscle group.',
-        summary    : 'Get muscle group muscles.',
+        description: 'Returns muscles for a specific Muscle group.',
+        summary    : 'Get Muscle group muscles.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(response: 200, description: 'Muscle group muscles.'),
@@ -303,13 +303,13 @@ final readonly class MuscleGroupController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_MUSCLE_GROUP_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns all localized contents for an muscle group.',
-        summary    : 'List of all muscle group contents.',
+        description: 'Returns all localized contents for an Muscle group.',
+        summary    : 'List of all Muscle group contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of all muscle group contents',
+                description: 'List of all Muscle group contents',
                 content    : new OAT\JsonContent(
                     type : 'array',
                     items: new OAT\Items(
@@ -372,31 +372,38 @@ final readonly class MuscleGroupController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_MUSCLE_GROUP_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
-        description: 'Create or update muscle group content for a given locale.',
-        summary    : 'Upsert muscle group localized content.',
+        description: 'Create or update Muscle group content for a given locale.',
+        summary    : 'Upsert Muscle group localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
-                required  : ['name', 'summary'],
+                required  : ['title', 'summary'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Lorem ipsum'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'),
-                    new OAT\Property(property: 'details', type: 'string', nullable: true),
+                    new OAT\Property(
+                        property: 'title',
+                        type    : 'string',
+                        example : 'Lorem ipsum'
+                    ),
+                    new OAT\Property(
+                        property: 'summary',
+                        type    : 'string',
+                        example : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'
+                    ),
+                    new OAT\Property(
+                        property: 'details',
+                        type    : 'string',
+                        nullable: true
+                    ),
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(
-                response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully.',
-                headers    : [
-                    new OAT\Header(
-                        header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted muscle group contents.'
-                    ),
-                ]
-            ),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Muscle group not found.'),
         ]
     )]
     public function upsertContent(
@@ -410,7 +417,7 @@ final readonly class MuscleGroupController
 
             $useCase->execute(
                 new UpsertContentMuscleGroupHttp(
-                    id     : $muscleGroupId,
+                    id     : Uuid::fromString($muscleGroupId),
                     locale : $locale,
                     payload: $payload
                 )
@@ -421,12 +428,7 @@ final readonly class MuscleGroupController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        $response = new JsonResponse(null, $statusCode);
-        if ($statusCode === Response::HTTP_NO_CONTENT) {
-            $response->headers->set('X-RESOURCE-ID', $muscleGroupId);
-        }
-
-        return $response;
+        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -440,37 +442,32 @@ final readonly class MuscleGroupController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_MUSCLE_GROUP_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
-        description: 'Create or update multiple localized contents for an muscle group.',
-        summary    : 'Upsert multiple muscle group contents.',
+        description: 'Create or update multiple localized contents for an Muscle group.',
+        summary    : 'Upsert multiple Muscle group contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Lorem ipsum",
-                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "title"   => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "details" => null,
                     ],
                     "en" => [
-                        "name"    => "Lorem ipsum",
+                        "title"   => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "details" => null,
                     ],
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(
-                response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully',
-                headers    : [
-                    new OAT\Header(
-                        header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted contents.'
-                    ),
-                ]
-            ),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Muscle group not found.'),
         ]
     )]
     public function upsertContentsBulk(
@@ -483,7 +480,7 @@ final readonly class MuscleGroupController
 
             $useCase->execute(
                 new UpsertContentMuscleGroupBulkHttp(
-                    id     : $muscleGroupId,
+                    id     : Uuid::fromString($muscleGroupId),
                     payload: $payload
                 )
             );
@@ -493,11 +490,6 @@ final readonly class MuscleGroupController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        $response = new JsonResponse(null, $statusCode);
-        if ($statusCode === Response::HTTP_NO_CONTENT) {
-            $response->headers->set('X-RESOURCE-ID', $muscleGroupId);
-        }
-
-        return $response;
+        return new JsonResponse(null, $statusCode);
     }
 }

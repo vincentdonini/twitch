@@ -71,7 +71,7 @@ final class AchievementGroupController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[code][eq]',
-                description: 'Filter by achievement group code (exact match).',
+                description: 'Filter by Achievement group code (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -174,7 +174,7 @@ final class AchievementGroupController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_ACHIEVEMENT_GROUP_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Post(
-        description: 'Create a new achievement group and returns the created resource ID.',
+        description: 'Create a new Achievement group and returns the created resource ID.',
         summary    : 'Create an achievement group.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
@@ -194,7 +194,7 @@ final class AchievementGroupController extends AbstractController
                 headers    : [
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
-                        description: 'ID of achievement group created.',
+                        description: 'ID of Achievement group created.',
                         schema     : new OAT\Schema(type: 'integer')
                     ),
                 ],
@@ -248,7 +248,7 @@ final class AchievementGroupController extends AbstractController
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
         description: 'Returns detailed information for a specific achievement group.',
-        summary    : 'Get achievement group details.',
+        summary    : 'Get Achievement group details.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
@@ -306,7 +306,7 @@ final class AchievementGroupController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_ACHIEVEMENT_GROUP_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Patch(
-        description: 'Update an existing achievement group with the provided data.',
+        description: 'Update an existing Achievement group with the provided data.',
         summary    : 'Update an achievement.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
@@ -384,7 +384,7 @@ final class AchievementGroupController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_GROUP_LIST)]
     #[OAT\Get(
         description: 'Retrieve all localized contents for an achievement group.',
-        summary    : 'Get achievement group contents.',
+        summary    : 'Get Achievement group contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(response: 200, description: 'Contents retrieved'),
@@ -400,7 +400,9 @@ final class AchievementGroupController extends AbstractController
     ): JsonResponse {
         try {
             $achievementContents = $useCase->execute(
-                new GetAchievementGroupByIdHttp($achievementGroupId)
+                new GetAchievementGroupByIdHttp(
+                    id: Uuid::fromString($achievementGroupId)
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
@@ -439,16 +441,24 @@ final class AchievementGroupController extends AbstractController
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_MANAGE)]
     #[OAT\Put(
-        description: 'Create or update achievement group content for a given locale.',
+        description: 'Create or update Achievement group content for a given locale.',
         summary    : 'Upsert achievementGroup localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
-                required  : ['name', 'summary'],
+                required  : ['title', 'description'],
                 properties: [
-                    new OAT\Property(property: 'title', type: 'string', example: 'General'),
-                    new OAT\Property(property: 'description', type: 'string', example: 'Unlock these achievements by completing your first WODs, recording your first PRs, and participating in your first fitness activities. A great way to start your journey!'),
+                    new OAT\Property(
+                        property: 'title',
+                        type    : 'string',
+                        example : 'Lorem ipsum'
+                    ),
+                    new OAT\Property(
+                        property: 'description',
+                        type    : 'string',
+                        example : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'
+                    ),
                 ]
             )
         ),
@@ -489,25 +499,27 @@ final class AchievementGroupController extends AbstractController
     #[Route(
         path        : '/{achievementGroupId}/contents',
         name        : 'contents_upsert_bulk',
-        requirements: ['wodId' => '\d+'],
+        requirements: [
+            'achievementGroupId' => '[0-9a-fA-F\-]+',
+        ],
         methods     : ['PUT']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_MANAGE)]
     #[OAT\Put(
         description: 'Create or update multiple localized contents for an achievement group.',
-        summary    : 'Upsert multiple achievement group contents.',
+        summary    : 'Upsert multiple Achievement group contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "title"       => "Général",
-                        "description" => "Débloque ces succès en accomplissant tes premiers WODs, en enregistrant tes premiers PRs, et en participant à tes premières activités sportives. Parfait pour poser les bases de ton parcours !",
+                        "title"       => "Lorem ipsum",
+                        "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                     ],
                     "en" => [
-                        "title"       => "General",
-                        "description" => "Unlock these achievements by completing your first WODs, recording your first PRs, and participating in your first fitness activities. A great way to start your journey!",
+                        "title"       => "Lorem ipsum",
+                        "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
                     ],
                 ]
             )
@@ -517,7 +529,7 @@ final class AchievementGroupController extends AbstractController
             new OAT\Response(response: 201, description: 'Contents created.'),
             new OAT\Response(response: 400, description: 'Invalid payload.'),
             new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Achievement group not found'),
+            new OAT\Response(response: 404, description: 'Achievement group not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]

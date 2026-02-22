@@ -57,7 +57,7 @@ final readonly class EquipmentController
     #[IsGranted(ListPermissions::PERMISSION_EQUIPMENT_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns a list of equipment available in the system.',
+        description: 'Returns a list of Equipment available in the system.',
         summary    : 'List of equipments.',
         security   : [['bearerAuth' => []]],
         parameters : [
@@ -69,7 +69,7 @@ final readonly class EquipmentController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[slug][eq]',
-                description: 'Filter by equipment slug (exact match).',
+                description: 'Filter by Equipment slug (exact match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
 
@@ -78,12 +78,12 @@ final readonly class EquipmentController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[title][eq]',
-                description: 'Filter by equipment title (exact match).',
+                description: 'Filter by Equipment title (exact match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
             new OAT\Parameter(
                 name       : 'filters[title][like]',
-                description: 'Filter by equipment title (partial match).',
+                description: 'Filter by Equipment title (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
 
@@ -92,7 +92,7 @@ final readonly class EquipmentController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[summary][like]',
-                description: 'Filter by equipment summary (partial match).',
+                description: 'Filter by Equipment summary (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
 
@@ -101,7 +101,7 @@ final readonly class EquipmentController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[details][like]',
-                description: 'Filter by equipment details (partial match).',
+                description: 'Filter by Equipment details (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
         ],
@@ -197,7 +197,7 @@ final readonly class EquipmentController
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
         description: 'Returns detailed information for a specific equipment.',
-        summary    : 'Get equipment details.',
+        summary    : 'Get Equipment details.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
@@ -263,12 +263,12 @@ final readonly class EquipmentController
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
         description: 'Returns all localized contents for an equipment.',
-        summary    : 'List of all equipment contents.',
+        summary    : 'List of all Equipment contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of all equipment contents.',
+                description: 'List of all Equipment contents.',
                 content    : new OAT\JsonContent(
                     type : 'array',
                     items: new OAT\Items(
@@ -331,31 +331,38 @@ final readonly class EquipmentController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_EQUIPMENT_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
-        description: 'Create or update equipment content for a given locale.',
-        summary    : 'Upsert equipment localized content.',
+        description: 'Create or update Equipment content for a given locale.',
+        summary    : 'Upsert Equipment localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 required  : ['name', 'summary'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Lorem ipsum'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'),
-                    new OAT\Property(property: 'details', type: 'string', nullable: true),
+                    new OAT\Property(
+                        property: 'name',
+                        type    : 'string',
+                        example : 'Lorem ipsum'
+                    ),
+                    new OAT\Property(
+                        property: 'summary',
+                        type    : 'string',
+                        example : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'
+                    ),
+                    new OAT\Property(
+                        property: 'details',
+                        type    : 'string',
+                        nullable: true
+                    ),
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(
-                response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully.',
-                headers    : [
-                    new OAT\Header(
-                        header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted equipment contents.'
-                    ),
-                ]
-            ),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Equipment not found.'),
         ]
     )]
     public function upsertContent(
@@ -369,7 +376,7 @@ final readonly class EquipmentController
 
             $useCase->execute(
                 new UpsertContentEquipmentHttp(
-                    id     : $equipmentId,
+                    id     : Uuid::fromString($equipmentId),
                     locale : $locale,
                     payload: $payload
                 )
@@ -380,12 +387,7 @@ final readonly class EquipmentController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        $response = new JsonResponse(null, $statusCode);
-        if ($statusCode === Response::HTTP_NO_CONTENT) {
-            $response->headers->set('X-RESOURCE-ID', $equipmentId);
-        }
-
-        return $response;
+        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -400,7 +402,7 @@ final readonly class EquipmentController
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
         description: 'Create or update multiple localized contents for an equipment.',
-        summary    : 'Upsert multiple equipment contents.',
+        summary    : 'Upsert multiple Equipment contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
@@ -408,28 +410,23 @@ final readonly class EquipmentController
                 example: [
                     "fr" => [
                         "name"    => "Lorem ipsum",
-                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "details" => null,
                     ],
                     "en" => [
                         "name"    => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "details" => null,
                     ],
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(
-                response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully.',
-                headers    : [
-                    new OAT\Header(
-                        header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted contents.'
-                    ),
-                ]
-            ),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Equipment not found.'),
         ]
     )]
     public function upsertContentsBulk(
@@ -442,7 +439,7 @@ final readonly class EquipmentController
 
             $useCase->execute(
                 new UpsertContentEquipmentBulkHttp(
-                    id     : $equipmentId,
+                    id     : Uuid::fromString($equipmentId),
                     payload: $payload
                 )
             );
@@ -452,11 +449,6 @@ final readonly class EquipmentController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        $response = new JsonResponse(null, $statusCode);
-        if ($statusCode === Response::HTTP_NO_CONTENT) {
-            $response->headers->set('X-RESOURCE-ID', $equipmentId);
-        }
-
-        return $response;
+        return new JsonResponse(null, $statusCode);
     }
 }

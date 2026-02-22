@@ -45,15 +45,15 @@ final readonly class WodCategoryController
     )]
     #[IsGranted(ListPermissions::PERMISSION_WOD_CATEGORY_LIST)]
     #[OAT\Get(
-        description: 'Returns a list of all WOD categories available in the system.',
-        summary    : 'List of WOD categories',
+        description: 'Returns a list of all WOD Categories available in the system.',
+        summary    : 'List of WOD Categories',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
             new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
         ],
         responses  : [
-            new OAT\Response(response: 200, description: 'List of WOD categories.'),
+            new OAT\Response(response: 200, description: 'List of WOD Categories.'),
             new OAT\Response(response: 403, description: 'Access denied.'),
         ]
     )]
@@ -230,9 +230,21 @@ final readonly class WodCategoryController
             content : new OAT\JsonContent(
                 required  : ['name', 'summary'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Lorem ipsum'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'),
-                    new OAT\Property(property: 'details', type: 'string', nullable: true),
+                    new OAT\Property(
+                        property: 'name',
+                        type    : 'string',
+                        example : 'Lorem ipsum'
+                    ),
+                    new OAT\Property(
+                        property: 'summary',
+                        type    : 'string',
+                        example : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'
+                    ),
+                    new OAT\Property(
+                        property: 'details',
+                        type    : 'string',
+                        nullable: true
+                    ),
                 ]
             )
         ),
@@ -274,7 +286,7 @@ final readonly class WodCategoryController
         path        : '/{wodCategoryId}/contents',
         name        : 'contents_upsert_bulk',
         requirements: [
-            'wodId' => '[0-9a-fA-F\-]+',
+            'wodCategoryId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['PUT']
     )]
@@ -289,13 +301,13 @@ final readonly class WodCategoryController
                 example: [
                     "fr" => [
                         "name"    => "Lorem ipsum",
-                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "details" => null,
                     ],
                     "en" => [
                         "name"    => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "details" => null,
                     ],
                 ]
             )

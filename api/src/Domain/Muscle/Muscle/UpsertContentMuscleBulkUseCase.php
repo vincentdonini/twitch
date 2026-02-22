@@ -10,7 +10,7 @@ use App\UI\Adapters\Http\Muscle\Muscle\UpsertContentMuscleBulkHttp;
 use App\UI\Adapters\Http\Muscle\Muscle\UpsertContentMuscleHttp;
 use Doctrine\ORM\EntityNotFoundException;
 
-readonly class UpsertContentMuscleBulkUseCase
+final readonly class UpsertContentMuscleBulkUseCase
 {
     public function __construct(
         private DatabaseInterface          $database,

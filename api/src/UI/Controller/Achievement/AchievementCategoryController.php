@@ -390,7 +390,9 @@ final class AchievementCategoryController extends AbstractController
     ): JsonResponse {
         try {
             $achievementContents = $useCase->execute(
-                new GetAchievementCategoryByIdHttp($achievementCategoryId)
+                new GetAchievementCategoryByIdHttp(
+                    id: Uuid::fromString($achievementCategoryId),
+                )
             );
         } catch (EntityNotFoundException) {
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
@@ -430,25 +432,32 @@ final class AchievementCategoryController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_MANAGE)]
     #[OAT\Put(
         description: 'Create or update achievement category content for a given locale.',
-        summary    : 'Upsert achievement category localized content',
+        summary    : 'Upsert achievement category localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
-                required  : ['name', 'summary'],
+                required  : ['title', 'description'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Barbell'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Barre utilisée pour les exercices de force'),
-                    new OAT\Property(property: 'details', type: 'string', nullable: true),
+                    new OAT\Property(
+                        property: 'title',
+                        type    : 'string',
+                        example : 'Lorem ipsum'
+                    ),
+                    new OAT\Property(
+                        property: 'description',
+                        type    : 'string',
+                        example : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'
+                    ),
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Content updated'),
-            new OAT\Response(response: 201, description: 'Content created'),
-            new OAT\Response(response: 400, description: 'Invalid payload'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'Exercise not found'),
+            new OAT\Response(response: 200, description: 'Content updated.'),
+            new OAT\Response(response: 201, description: 'Content created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Achievement category not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -485,32 +494,30 @@ final class AchievementCategoryController extends AbstractController
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_MANAGE)]
     #[OAT\Put(
-        description: 'Create or update multiple localized contents for an achievement category',
-        summary    : 'Upsert multiple achievement category contents',
+        description: 'Create or update multiple localized contents for an Achievement category.',
+        summary    : 'Upsert multiple Achievement category contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Barbell",
-                        "summary" => "Barre utilisée pour les exercices de force",
-                        "details" => "Squats, deadlifts...",
+                        "title"       => "Lorem ipsum",
+                        "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                     ],
                     "en" => [
-                        "name"    => "Barbell",
-                        "summary" => "Traditional bar used for strength exercises",
-                        "details" => "Squats, deadlifts...",
+                        "title"       => "Lorem ipsum",
+                        "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
                     ],
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated'),
-            new OAT\Response(response: 201, description: 'Contents created'),
-            new OAT\Response(response: 400, description: 'Invalid payload'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'achievement not found'),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Achievement category not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]

@@ -53,8 +53,8 @@ final readonly class MuscleController
     #[IsGranted(ListPermissions::PERMISSION_MUSCLE_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns a list of muscles available in the system.',
-        summary    : 'List of muscles.',
+        description: 'Returns a list of Muscles available in the system.',
+        summary    : 'List of Muscles.',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
@@ -65,7 +65,7 @@ final readonly class MuscleController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[slug][eq]',
-                description: 'Filter by muscle slug (exact match)',
+                description: 'Filter by Muscle slug (exact match)',
                 schema     : new OAT\Schema(type: 'string'),
             ),
 
@@ -74,12 +74,12 @@ final readonly class MuscleController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[title][eq]',
-                description: 'Filter by muscle title (exact match).',
+                description: 'Filter by Muscle title (exact match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
             new OAT\Parameter(
                 name       : 'filters[title][like]',
-                description: 'Filter by muscle title (partial match).',
+                description: 'Filter by Muscle title (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
 
@@ -88,7 +88,7 @@ final readonly class MuscleController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[summary][like]',
-                description: 'Filter by muscle summary (partial match).',
+                description: 'Filter by Muscle summary (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
 
@@ -97,7 +97,7 @@ final readonly class MuscleController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[details][like]',
-                description: 'Filter by muscle details (partial match).',
+                description: 'Filter by Muscle details (partial match).',
                 schema     : new OAT\Schema(type: 'string'),
             ),
         ],
@@ -188,8 +188,8 @@ final readonly class MuscleController
     )]
     #[IsGranted(ListPermissions::PERMISSION_MUSCLE_VIEW)]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific muscle.',
-        summary    : 'Get muscle details.',
+        description: 'Returns detailed information for a specific Muscle.',
+        summary    : 'Get Muscle details.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(response: 200, description: 'Muscle details.'),
@@ -247,13 +247,13 @@ final readonly class MuscleController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_MUSCLE_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns all localized contents for an muscle.',
-        summary    : 'List of all muscle contents.',
+        description: 'Returns all localized contents for an Muscle.',
+        summary    : 'List of all Muscle contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of all muscle contents.',
+                description: 'List of all Muscle contents.',
                 content    : new OAT\JsonContent(
                     type : 'array',
                     items: new OAT\Items(
@@ -316,31 +316,38 @@ final readonly class MuscleController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_MUSCLE_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
-        description: 'Create or update muscle content for a given locale.',
-        summary    : 'Upsert muscle localized content.',
+        description: 'Create or update Muscle content for a given locale.',
+        summary    : 'Upsert Muscle localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
-                required  : ['name', 'summary'],
+                required  : ['title', 'summary'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Lorem ipsum'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'),
-                    new OAT\Property(property: 'details', type: 'string', nullable: true),
+                    new OAT\Property(
+                        property: 'title',
+                        type    : 'string',
+                        example : 'Lorem ipsum'
+                    ),
+                    new OAT\Property(
+                        property: 'summary',
+                        type    : 'string',
+                        example : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'
+                    ),
+                    new OAT\Property(
+                        property: 'details',
+                        type    : 'string',
+                        nullable: true
+                    ),
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(
-                response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully.',
-                headers    : [
-                    new OAT\Header(
-                        header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted muscle contents.'
-                    ),
-                ]
-            ),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Muscle not found.'),
         ]
     )]
     public function upsertContent(
@@ -354,7 +361,7 @@ final readonly class MuscleController
 
             $useCase->execute(
                 new UpsertContentMuscleHttp(
-                    id     : $muscleId,
+                    id     : Uuid::fromString($muscleId),
                     locale : $locale,
                     payload: $payload
                 )
@@ -365,56 +372,46 @@ final readonly class MuscleController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        $response = new JsonResponse(null, $statusCode);
-        if ($statusCode === Response::HTTP_NO_CONTENT) {
-            $response->headers->set('X-RESOURCE-ID', $muscleId);
-        }
-
-        return $response;
+        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
         path        : '/{muscleId}/contents',
         name        : 'contents_upsert_bulk',
         requirements: [
-            'muscleId' => '\d+',
+            'muscleId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['PUT']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_MUSCLE_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
-        description: 'Create or update multiple localized contents for an muscle.',
-        summary    : 'Upsert multiple muscle contents.',
+        description: 'Create or update multiple localized contents for an Muscle.',
+        summary    : 'Upsert multiple Muscle contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Lorem ipsum",
-                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "title"   => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "details" => null,
                     ],
                     "en" => [
-                        "name"    => "Lorem ipsum",
+                        "title"   => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "details" => null,
                     ],
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(
-                response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully.',
-                headers    : [
-                    new OAT\Header(
-                        header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted contents.'
-                    ),
-                ]
-            ),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Muscle not found.'),
         ]
     )]
     public function upsertContentsBulk(
@@ -427,7 +424,7 @@ final readonly class MuscleController
 
             $useCase->execute(
                 new UpsertContentMuscleBulkHttp(
-                    id     : $muscleId,
+                    id     : Uuid::fromString($muscleId),
                     payload: $payload
                 )
             );
@@ -437,11 +434,6 @@ final readonly class MuscleController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        $response = new JsonResponse(null, $statusCode);
-        if ($statusCode === Response::HTTP_NO_CONTENT) {
-            $response->headers->set('X-RESOURCE-ID', $muscleId);
-        }
-
-        return $response;
+        return new JsonResponse(null, $statusCode);
     }
 }

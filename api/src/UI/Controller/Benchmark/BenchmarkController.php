@@ -71,7 +71,7 @@ final class BenchmarkController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[slug][eq]',
-                description: 'Filter by benchmark slug (exact match)',
+                description: 'Filter by Benchmark slug (exact match)',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -81,13 +81,13 @@ final class BenchmarkController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[name][eq]',
-                description: 'Filter by benchmark name (exact match)',
+                description: 'Filter by Benchmark name (exact match)',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[name][like]',
-                description: 'Filter by benchmark name (partial match)',
+                description: 'Filter by Benchmark name (partial match)',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -97,7 +97,7 @@ final class BenchmarkController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[type][eq]',
-                description: 'Filter by benchmark type (exact match)',
+                description: 'Filter by Benchmark type (exact match)',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -210,7 +210,7 @@ final class BenchmarkController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_BENCHMARK_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Post(
-        description: 'Creates a new benchmark and returns the created resource ID.',
+        description: 'Creates a new Benchmark and returns the created resource ID.',
         summary    : 'Create a benchmark',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
@@ -230,7 +230,7 @@ final class BenchmarkController extends AbstractController
                 headers    : [
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
-                        description: 'ID of benchmark created',
+                        description: 'ID of Benchmark created',
                         schema     : new OAT\Schema(type: 'integer')
                     ),
                 ],
@@ -284,7 +284,7 @@ final class BenchmarkController extends AbstractController
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
         description: 'Returns detailed information for a specific benchmark.',
-        summary    : 'Get benchmark details',
+        summary    : 'Get Benchmark details',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
@@ -342,7 +342,7 @@ final class BenchmarkController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_BENCHMARK_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Patch(
-        description: 'Updates an existing benchmark with the provided data.',
+        description: 'Updates an existing Benchmark with the provided data.',
         summary    : 'Update a benchmark',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
@@ -413,14 +413,14 @@ final class BenchmarkController extends AbstractController
         path        : '/{benchmarkId}/contents',
         name        : 'contents_list',
         requirements: [
-            'benchmarkId' => '[0-9a-fA-F\-]+'
+            'benchmarkId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_BENCHMARK_LIST)]
     #[OAT\Get(
         description: 'Retrieve all localized contents for an benchmark',
-        summary    : 'Get benchmark contents',
+        summary    : 'Get Benchmark contents',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(response: 200, description: 'Contents retrieved'),
@@ -478,26 +478,48 @@ final class BenchmarkController extends AbstractController
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_BENCHMARK_MANAGE)]
     #[OAT\Put(
-        description: 'Create or update benchmark content for a given locale.',
+        description: 'Create or update Benchmark content for a given locale.',
         summary    : 'Upsert exercise localized content',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
-                required  : ['name', 'summary'],
+                required  : ['title', 'summary', 'details', 'rules', 'tips'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Barbell'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Barre utilisée pour les exercices de force'),
-                    new OAT\Property(property: 'details', type: 'string', nullable: true),
+                    new OAT\Property(
+                        property: 'title',
+                        type    : 'string',
+                        example : 'Lorem ipsum'
+                    ),
+                    new OAT\Property(
+                        property: 'summary',
+                        type    : 'string',
+                        example : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'
+                    ),
+                    new OAT\Property(
+                        property: 'details',
+                        type    : 'string',
+                        nullable: true
+                    ),
+                    new OAT\Property(
+                        property: 'rules',
+                        type    : 'string',
+                        nullable: true
+                    ),
+                    new OAT\Property(
+                        property: 'tips',
+                        type    : 'string',
+                        nullable: true
+                    ),
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Content updated'),
-            new OAT\Response(response: 201, description: 'Content created'),
-            new OAT\Response(response: 400, description: 'Invalid payload'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'Exercise not found'),
+            new OAT\Response(response: 200, description: 'Content updated.'),
+            new OAT\Response(response: 201, description: 'Content created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Benchmark not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -512,7 +534,7 @@ final class BenchmarkController extends AbstractController
 
             $useCase->execute(
                 new UpsertContentBenchmarkHttp(
-                    id     : $benchmarkId,
+                    id     : Uuid::fromString($benchmarkId),
                     locale : $locale,
                     payload: $payload
                 )
@@ -529,37 +551,43 @@ final class BenchmarkController extends AbstractController
     #[Route(
         path        : '/{benchmarkId}/contents',
         name        : 'contents_upsert_bulk',
-        requirements: ['wodId' => '\d+'],
+        requirements: [
+            'benchmarkId' => '[0-9a-fA-F\-]+',
+        ],
         methods     : ['PUT']
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_BENCHMARK_MANAGE)]
     #[OAT\Put(
         description: 'Create or update multiple localized contents for an benchmark',
-        summary    : 'Upsert multiple benchmark contents',
+        summary    : 'Upsert multiple Benchmark contents',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Barbell",
-                        "summary" => "Barre utilisée pour les exercices de force",
-                        "details" => "Squats, deadlifts...",
+                        "title"   => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "details" => null,
+                        "rules"   => null,
+                        "tips"    => null,
                     ],
                     "en" => [
-                        "name"    => "Barbell",
-                        "summary" => "Traditional bar used for strength exercises",
-                        "details" => "Squats, deadlifts...",
+                        "title"   => "Lorem ipsum",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "details" => null,
+                        "rules"   => null,
+                        "tips"    => null,
                     ],
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated'),
-            new OAT\Response(response: 201, description: 'Contents created'),
-            new OAT\Response(response: 400, description: 'Invalid payload'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'benchmark not found'),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Benchmark not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -573,7 +601,7 @@ final class BenchmarkController extends AbstractController
 
             $useCase->execute(
                 new UpsertContentBenchmarkBulkHttp(
-                    id     : $benchmarkId,
+                    id     : Uuid::fromString($benchmarkId),
                     payload: $payload
                 )
             );

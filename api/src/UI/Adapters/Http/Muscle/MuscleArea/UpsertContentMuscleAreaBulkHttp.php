@@ -3,16 +3,17 @@
 namespace App\UI\Adapters\Http\Muscle\MuscleArea;
 
 use App\Domain\Muscle\MuscleArea\UpsertContentMuscleAreaBulkDTOInterface;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class UpsertContentMuscleAreaBulkHttp implements UpsertContentMuscleAreaBulkDTOInterface
 {
     public function __construct(
-        private string $id,
-        private array  $payload,
+        private Uuid  $id,
+        private array $payload,
     ) {
     }
 
-    public function getId(): string
+    public function getId(): Uuid
     {
         return $this->id;
     }

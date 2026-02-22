@@ -65,7 +65,7 @@ final readonly class ExerciseCategoryController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[slug][eq]',
-                description: 'Filter by exercise category slug (exact match)',
+                description: 'Filter by Exercise category slug (exact match)',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -75,13 +75,13 @@ final readonly class ExerciseCategoryController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[name][eq]',
-                description: 'Filter by exercise category name (exact match)',
+                description: 'Filter by Exercise category name (exact match)',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[name][like]',
-                description: 'Filter by exercise category name (partial match)',
+                description: 'Filter by Exercise category name (partial match)',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -91,7 +91,7 @@ final readonly class ExerciseCategoryController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[summary][like]',
-                description: 'Filter by exercise category summary (partial match).',
+                description: 'Filter by Exercise category summary (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -101,7 +101,7 @@ final readonly class ExerciseCategoryController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[details][like]',
-                description: 'Filter by exercise category details (partial match).',
+                description: 'Filter by Exercise category details (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -193,8 +193,8 @@ final readonly class ExerciseCategoryController
     )]
     #[IsGranted(ListPermissions::PERMISSION_EXERCISE_CATEGORY_VIEW)]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific exercise category.',
-        summary    : 'Get exercise category details.',
+        description: 'Returns detailed information for a specific Exercise category.',
+        summary    : 'Get Exercise category details.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(response: 200, description: 'Exercise category details.'),
@@ -252,13 +252,13 @@ final readonly class ExerciseCategoryController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_EXERCISE_CATEGORY_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns all localized contents for an exercise category.',
-        summary    : 'List of all exercise category contents.',
+        description: 'Returns all localized contents for an Exercise category.',
+        summary    : 'List of all Exercise category contents.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of all exercise category contents.',
+                description: 'List of all Exercise category contents.',
                 content    : new OAT\JsonContent(
                     type : 'array',
                     items: new OAT\Items(
@@ -321,31 +321,38 @@ final readonly class ExerciseCategoryController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_EXERCISE_CATEGORY_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
-        description: 'Create or update exercise category content for a given locale.',
-        summary    : 'Upsert exercise category localized content.',
+        description: 'Create or update Exercise category content for a given locale.',
+        summary    : 'Upsert Exercise category localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
                 required  : ['name', 'summary'],
                 properties: [
-                    new OAT\Property(property: 'name', type: 'string', example: 'Lorem ipsum'),
-                    new OAT\Property(property: 'summary', type: 'string', example: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'),
-                    new OAT\Property(property: 'details', type: 'string', nullable: true),
+                    new OAT\Property(
+                        property: 'name',
+                        type    : 'string',
+                        example : 'Lorem ipsum'
+                    ),
+                    new OAT\Property(
+                        property: 'summary',
+                        type    : 'string',
+                        example : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.'
+                    ),
+                    new OAT\Property(
+                        property: 'details',
+                        type    : 'string',
+                        nullable: true
+                    ),
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(
-                response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully.',
-                headers    : [
-                    new OAT\Header(
-                        header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted exercise category contents.'
-                    ),
-                ]
-            ),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Exercise category not found.'),
         ]
     )]
     public function upsertContent(
@@ -359,7 +366,7 @@ final readonly class ExerciseCategoryController
 
             $useCase->execute(
                 new UpsertContentExerciseCategoryHttp(
-                    id     : $exerciseCategoryId,
+                    id     : Uuid::fromString($exerciseCategoryId),
                     locale : $locale,
                     payload: $payload
                 )
@@ -370,12 +377,7 @@ final readonly class ExerciseCategoryController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        $response = new JsonResponse(null, $statusCode);
-        if ($statusCode === Response::HTTP_NO_CONTENT) {
-            $response->headers->set('X-RESOURCE-ID', $exerciseCategoryId);
-        }
-
-        return $response;
+        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -389,8 +391,8 @@ final readonly class ExerciseCategoryController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_EXERCISE_CATEGORY_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Put(
-        description: 'Create or update multiple localized contents for an exercise category.',
-        summary    : 'Upsert multiple exercise category contents.',
+        description: 'Create or update multiple localized contents for an Exercise category.',
+        summary    : 'Upsert multiple Exercise category contents.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
@@ -398,28 +400,23 @@ final readonly class ExerciseCategoryController
                 example: [
                     "fr" => [
                         "name"    => "Lorem ipsum",
-                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        "details" => null,
                     ],
                     "en" => [
                         "name"    => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
-                        "details" => "",
+                        "details" => null,
                     ],
                 ]
             )
         ),
         responses  : [
-            new OAT\Response(
-                response   : Response::HTTP_CREATED,
-                description: 'Contents upserted successfully.',
-                headers    : [
-                    new OAT\Header(
-                        header     : 'X-RESOURCE-ID',
-                        description: 'Resource ID of the upserted contents.'
-                    ),
-                ]
-            ),
+            new OAT\Response(response: 200, description: 'Contents updated.'),
+            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 400, description: 'Invalid payload.'),
+            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(response: 404, description: 'Exercise category not found.'),
         ]
     )]
     public function upsertContentsBulk(
@@ -432,7 +429,7 @@ final readonly class ExerciseCategoryController
 
             $useCase->execute(
                 new UpsertContentExerciseCategoryBulkHttp(
-                    id     : $exerciseCategoryId,
+                    id     : Uuid::fromString($exerciseCategoryId),
                     payload: $payload
                 )
             );
@@ -442,11 +439,6 @@ final readonly class ExerciseCategoryController
             $statusCode = Response::HTTP_NOT_FOUND;
         }
 
-        $response = new JsonResponse(null, $statusCode);
-        if ($statusCode === Response::HTTP_NO_CONTENT) {
-            $response->headers->set('X-RESOURCE-ID', $exerciseCategoryId);
-        }
-
-        return $response;
+        return new JsonResponse(null, $statusCode);
     }
 }
