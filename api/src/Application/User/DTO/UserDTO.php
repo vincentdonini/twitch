@@ -15,12 +15,14 @@ class UserDTO
         FrontGroupsEnum::WOD_LEADERBOARD,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
         FrontGroupsEnum::ATHLETE_LIST,
+        FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_LIST_ADMIN,
     ])]
     public Uuid $id;
 
     #[Groups([
         FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::USER_LIST, FrontGroupsEnum::USER_DETAIL,
+        FrontGroupsEnum::PLACE_LIST_ADMIN,
     ])]
     public string $email;
 
@@ -31,6 +33,7 @@ class UserDTO
         FrontGroupsEnum::WOD_LEADERBOARD,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
         FrontGroupsEnum::ATHLETE_LIST,
+        FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_LIST_ADMIN,
     ])]
     public string $firstName;
 
@@ -41,12 +44,14 @@ class UserDTO
         FrontGroupsEnum::WOD_LEADERBOARD,
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
         FrontGroupsEnum::ATHLETE_LIST,
+        FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_LIST_ADMIN,
     ])]
     public string $lastName;
 
     #[Groups([
         FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::ATHLETE_LIST,
+        FrontGroupsEnum::PLACE_LIST_ADMIN,
     ])]
     public array $roles;
 
