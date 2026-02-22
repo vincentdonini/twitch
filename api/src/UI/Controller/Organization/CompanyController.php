@@ -4,15 +4,15 @@ namespace App\UI\Controller\Organization;
 
 use App\Domain\Core\Exceptions\AlreadyExistException;
 use App\Domain\Core\Exceptions\EntityNotFoundException;
+use App\Domain\Organization\Company\CreateCompanyUseCase;
+use App\Domain\Organization\Company\GetCompanyByIdUseCase;
+use App\Domain\Organization\Company\ListCompanyUseCase;
+use App\Domain\Organization\Company\UpdateCompanyUseCase;
 use App\Domain\Organization\Entity\Company;
 use App\Domain\Organization\Filters\CompanyFilterMapping;
 use App\Domain\Organization\Filters\CompanyFilterRules;
 use App\Domain\Organization\Service\CompanyService;
 use App\Domain\Organization\Sort\CompanySortMapping;
-use App\Domain\Organization\Company\CreateCompanyUseCase;
-use App\Domain\Organization\Company\GetCompanyByIdUseCase;
-use App\Domain\Organization\Company\ListCompanyUseCase;
-use App\Domain\Organization\Company\UpdateCompanyUseCase;
 use App\Infrastructure\Filters\RequestFilters;
 use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Paginator\ResponsePaginator;
@@ -54,8 +54,8 @@ final class CompanyController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_COMPANY_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns a list of companies available in the system.',
-        summary    : 'List of companies',
+        description: 'Return a list of companies available in the system.',
+        summary    : 'List of companies.',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
@@ -66,7 +66,7 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[slug][eq]',
-                description: 'Filter by company slug (exact match)',
+                description: 'Filter by company slug (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -76,13 +76,13 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[name][eq]',
-                description: 'Filter by company name (exact match)',
+                description: 'Filter by company name (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[name][like]',
-                description: 'Filter by company name (partial match)',
+                description: 'Filter by company name (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -92,13 +92,13 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[legalName][eq]',
-                description: 'Filter by company legalName (exact match)',
+                description: 'Filter by company legalName (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[legalName][like]',
-                description: 'Filter by company legalName (partial match)',
+                description: 'Filter by company legalName (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -108,7 +108,7 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[siren][eq]',
-                description: 'Filter by company siren (exact match)',
+                description: 'Filter by company siren (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -118,7 +118,7 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[activityCode][eq]',
-                description: 'Filter by company activityCode (exact match)',
+                description: 'Filter by company activityCode (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -128,7 +128,7 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[vatNumber][eq]',
-                description: 'Filter by company vatNumber (exact match)',
+                description: 'Filter by company vatNumber (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -138,7 +138,7 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[legalForm][eq]',
-                description: 'Filter by company legalForm (exact match)',
+                description: 'Filter by company legalForm (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -148,7 +148,7 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[address][like]',
-                description: 'Filter by company address (partial match)',
+                description: 'Filter by company address (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -158,7 +158,7 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[postalCode][eq]',
-                description: 'Filter by company postalCode (exact match)',
+                description: 'Filter by company postalCode (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -168,19 +168,19 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[city.slug][eq]',
-                description: 'Filter by company city (exact match)',
+                description: 'Filter by company city (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[city.name][eq]',
-                description: 'Filter by company city (exact match)',
+                description: 'Filter by company city (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[city.name][like]',
-                description: 'Filter by company city (partial match)',
+                description: 'Filter by company city (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -190,25 +190,25 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[department.code][eq]',
-                description: 'Filter by company department code (exact match)',
+                description: 'Filter by company department code (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[department.slug][eq]',
-                description: 'Filter by company department slug (exact match)',
+                description: 'Filter by company department slug (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[department.name][eq]',
-                description: 'Filter by company department name (exact match)',
+                description: 'Filter by company department name (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[department.name][like]',
-                description: 'Filter by company department name (partial match)',
+                description: 'Filter by company department name (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -218,25 +218,25 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[region.code][eq]',
-                description: 'Filter by company region code (exact match)',
+                description: 'Filter by company region code (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[region.slug][eq]',
-                description: 'Filter by company region slug (exact match)',
+                description: 'Filter by company region slug (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[region.name][eq]',
-                description: 'Filter by company region name (exact match)',
+                description: 'Filter by company region name (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[region.name][like]',
-                description: 'Filter by company region name (partial match)',
+                description: 'Filter by company region name (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -246,25 +246,25 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[country.slug][eq]',
-                description: 'Filter by company country slug (exact match)',
+                description: 'Filter by company country slug (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[country.name][like]',
-                description: 'Filter by company country slug (partial match)',
+                description: 'Filter by company country slug (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[country.name][eq]',
-                description: 'Filter by company country name (exact match)',
+                description: 'Filter by company country name (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[country.name][like]',
-                description: 'Filter by company country name (partial match)',
+                description: 'Filter by company country name (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -274,7 +274,7 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[phone][eq]',
-                description: 'Filter by company phone (exact match)',
+                description: 'Filter by company phone (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -284,7 +284,7 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[email][eq]',
-                description: 'Filter by company email (exact match)',
+                description: 'Filter by company email (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -294,7 +294,7 @@ final class CompanyController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[status][eq]',
-                description: 'Filter by company status (exact match)',
+                description: 'Filter by company status (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -302,7 +302,7 @@ final class CompanyController extends AbstractController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of companies',
+                description: 'List of companies.',
                 headers    : [
                     new OAT\Header(ref: '#/components/headers/Element-Count', header: 'Element-Count'),
                     new OAT\Header(ref: '#/components/headers/Pagination-Page', header: 'Pagination-Page'),
@@ -399,8 +399,8 @@ final class CompanyController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_COMPANY_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Post(
-        description: 'Creates a new company and returns the created resource ID.',
-        summary    : 'Create a company',
+        description: 'Create a new company and return the created resource ID.',
+        summary    : 'Create a company.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             description: 'Created a company',
@@ -415,11 +415,11 @@ final class CompanyController extends AbstractController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_CREATED,
-                description: 'Company created successfully',
+                description: 'Company created successfully.',
                 headers    : [
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
-                        description: 'ID of company created',
+                        description: 'ID of company created.',
                         schema     : new OAT\Schema(type: 'integer')
                     ),
                 ],
@@ -452,7 +452,7 @@ final class CompanyController extends AbstractController
                     ]
                 ),
                 status : Response::HTTP_CREATED,
-                headers: ['X-RESOURCE-ID' => (string)$company->getId()]
+                headers: ['X-RESOURCE-ID' => $company->getId()]
             );
         } catch (InvalidArgumentException) {
             $statusCode = Response::HTTP_BAD_REQUEST;
@@ -474,13 +474,13 @@ final class CompanyController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_COMPANY_VIEW)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific company.',
-        summary    : 'Get company details',
+        description: 'Return detailed information for a specific company.',
+        summary    : 'Get company details.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'Detail of company',
+                description: 'Detail of company.',
                 content    : new OAT\JsonContent(
                     ref : new Model(
                         type  : Company::class,
@@ -537,11 +537,11 @@ final class CompanyController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_COMPANY_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Patch(
-        description: 'Updates an existing company with the provided data.',
-        summary    : 'Update a company',
+        description: 'Update an existing company with the provided data.',
+        summary    : 'Update a company.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
-            description: 'Update a company',
+            description: 'Update a company.',
             required   : true,
             content    : new OAT\JsonContent(
                 ref: new Model(
@@ -553,7 +553,7 @@ final class CompanyController extends AbstractController
         parameters : [
             new OAT\PathParameter(
                 name       : 'name',
-                description: 'name of the company',
+                description: 'Name of the company.',
                 required   : true,
                 schema     : new OAT\Schema(type: 'string'),
             ),
@@ -561,7 +561,7 @@ final class CompanyController extends AbstractController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_NO_CONTENT,
-                description: 'Company updated successfully',
+                description: 'Company updated successfully.',
             ),
         ]
     )]

@@ -60,8 +60,8 @@ final class PlaceController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_PLACE_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns a list of places available in the system.',
-        summary    : 'List of places',
+        description: 'Return a list of places available in the system.',
+        summary    : 'List of places.',
         security   : [['bearerAuth' => []]],
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
@@ -72,7 +72,7 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[company.id][eq]',
-                description: 'Filter by company ID (exact match)',
+                description: 'Filter by company ID (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'integer')
             ),
@@ -84,25 +84,25 @@ final class PlaceController extends AbstractController
             ),
             new OAT\Parameter(
                 name       : 'filters[company.name][eq]',
-                description: 'Filter by company name (exact match)',
+                description: 'Filter by company name (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[company.name][like]',
-                description: 'Filter by company name (partial match)',
+                description: 'Filter by company name (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[company.legalName][eq]',
-                description: 'Filter by company legalName (exact match)',
+                description: 'Filter by company legalName (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[company.legalName][like]',
-                description: 'Filter by company legalName (partial match)',
+                description: 'Filter by company legalName (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -112,7 +112,7 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[slug][eq]',
-                description: 'Filter by place slug (exact match)',
+                description: 'Filter by place slug (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -122,13 +122,13 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[name][eq]',
-                description: 'Filter by place name (exact match)',
+                description: 'Filter by place name (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[name][like]',
-                description: 'Filter by place name (partial match)',
+                description: 'Filter by place name (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -138,13 +138,13 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[legalName][eq]',
-                description: 'Filter by place legalName (exact match)',
+                description: 'Filter by place legalName (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[legalName][like]',
-                description: 'Filter by place legalName (partial match)',
+                description: 'Filter by place legalName (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -154,7 +154,7 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[siret][eq]',
-                description: 'Filter by place siret (exact match)',
+                description: 'Filter by place siret (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -164,7 +164,7 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[address][like]',
-                description: 'Filter by place address (partial match)',
+                description: 'Filter by place address (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -174,7 +174,7 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[postalCode][eq]',
-                description: 'Filter by place postalCode (exact match)',
+                description: 'Filter by place postalCode (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -184,19 +184,19 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[city.slug][eq]',
-                description: 'Filter by place city (exact match)',
+                description: 'Filter by place city (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[city.name][eq]',
-                description: 'Filter by place city (exact match)',
+                description: 'Filter by place city (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[city.name][like]',
-                description: 'Filter by place city (partial match)',
+                description: 'Filter by place city (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -206,25 +206,25 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[department.code][eq]',
-                description: 'Filter by place department code (exact match)',
+                description: 'Filter by place department code (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[department.slug][eq]',
-                description: 'Filter by place department slug (exact match)',
+                description: 'Filter by place department slug (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[department.name][eq]',
-                description: 'Filter by place department name (exact match)',
+                description: 'Filter by place department name (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[department.name][like]',
-                description: 'Filter by place department name (partial match)',
+                description: 'Filter by place department name (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -234,25 +234,25 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[region.code][eq]',
-                description: 'Filter by place region code (exact match)',
+                description: 'Filter by place region code (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[region.slug][eq]',
-                description: 'Filter by place region slug (exact match)',
+                description: 'Filter by place region slug (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[region.name][eq]',
-                description: 'Filter by place region name (exact match)',
+                description: 'Filter by place region name (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[region.name][like]',
-                description: 'Filter by place region name (partial match)',
+                description: 'Filter by place region name (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -262,25 +262,25 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[country.slug][eq]',
-                description: 'Filter by place country slug (exact match)',
+                description: 'Filter by place country slug (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[country.name][like]',
-                description: 'Filter by place country slug (partial match)',
+                description: 'Filter by place country slug (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[country.name][eq]',
-                description: 'Filter by place country name (exact match)',
+                description: 'Filter by place country name (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
                 name       : 'filters[country.name][like]',
-                description: 'Filter by place country name (partial match)',
+                description: 'Filter by place country name (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -290,7 +290,7 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[phone][eq]',
-                description: 'Filter by place phone (exact match)',
+                description: 'Filter by place phone (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -300,7 +300,7 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[email][eq]',
-                description: 'Filter by place email (exact match)',
+                description: 'Filter by place email (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -310,7 +310,7 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[website][like]',
-                description: 'Filter by place website (partial match)',
+                description: 'Filter by place website (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -320,7 +320,7 @@ final class PlaceController extends AbstractController
             // ---------------------------------------------------------------------------------------------------------
             new OAT\Parameter(
                 name       : 'filters[status][eq]',
-                description: 'Filter by place status (exact match)',
+                description: 'Filter by place status (exact match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -422,8 +422,8 @@ final class PlaceController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_PLACE_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Post(
-        description: 'Creates a new place and returns the created resource ID.',
-        summary    : 'Create a place',
+        description: 'Create a new place and returns the created resource ID.',
+        summary    : 'Create a place.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             description: 'Created a place',
@@ -438,11 +438,11 @@ final class PlaceController extends AbstractController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_CREATED,
-                description: 'Place created successfully',
+                description: 'Place created successfully.',
                 headers    : [
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
-                        description: 'ID of place created',
+                        description: 'ID of place created.',
                         schema     : new OAT\Schema(type: 'integer')
                     ),
                 ],
@@ -473,7 +473,7 @@ final class PlaceController extends AbstractController
                     context: ['groups' => [FrontGroupsEnum::PLACE_MANAGE]]
                 ),
                 status : Response::HTTP_CREATED,
-                headers: ['X-RESOURCE-ID' => (string)$place->getId()]
+                headers: ['X-RESOURCE-ID' => $place->getId()]
             );
         } catch (InvalidArgumentException) {
             $statusCode = Response::HTTP_BAD_REQUEST;
@@ -495,8 +495,8 @@ final class PlaceController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_PLACE_VIEW)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific place.',
-        summary    : 'Get place details',
+        description: 'Return detailed information for a specific place.',
+        summary    : 'Get place details.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
@@ -558,11 +558,11 @@ final class PlaceController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_PLACE_MANAGE)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Patch(
-        description: 'Updates an existing place with the provided data.',
-        summary    : 'Update a place',
+        description: 'Update an existing place with the provided data.',
+        summary    : 'Update a place.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
-            description: 'Update a place',
+            description: 'Update a place.',
             required   : true,
             content    : new OAT\JsonContent(
                 ref: new Model(
@@ -574,7 +574,7 @@ final class PlaceController extends AbstractController
         parameters : [
             new OAT\PathParameter(
                 name       : 'legalName',
-                description: 'Legal name of the place',
+                description: 'Legal name of the place.',
                 required   : true,
                 schema     : new OAT\Schema(type: 'string'),
             ),
@@ -582,7 +582,7 @@ final class PlaceController extends AbstractController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_NO_CONTENT,
-                description: 'Place updated successfully',
+                description: 'Place updated successfully.',
             ),
         ]
     )]
@@ -622,13 +622,13 @@ final class PlaceController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_PLACE_VIEW)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
-        description: 'Returns the list of athletes for a specific place.',
-        summary    : 'List place athletes',
+        description: 'Return the list of athletes for a specific place.',
+        summary    : 'List place athletes.',
         security   : [['bearerAuth' => []]],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of athletes',
+                description: 'List of athletes.',
                 content    : new OAT\JsonContent(
                     type : 'array',
                     items: new OAT\Items(
@@ -641,7 +641,7 @@ final class PlaceController extends AbstractController
             ),
             new OAT\Response(
                 response   : Response::HTTP_NOT_FOUND,
-                description: 'Place not found'
+                description: 'Place not found.'
             ),
         ],
     )]
@@ -695,7 +695,7 @@ final class PlaceController extends AbstractController
     #[Security(name: 'bearerAuth')]
     #[OAT\Post(
         description: 'Import users from a CSV and attach them to a place.',
-        summary    : 'Import users for a place',
+        summary    : 'Import users for a place.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             description: 'CSV upload',
@@ -707,7 +707,7 @@ final class PlaceController extends AbstractController
                     properties: [
                         new OAT\Property(
                             property   : 'file',
-                            description: 'CSV file containing users',
+                            description: 'CSV file containing users.',
                             type       : 'string',
                             format     : 'binary'
                         ),
@@ -719,7 +719,7 @@ final class PlaceController extends AbstractController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'Detail of WOD',
+                description: 'Represent the result of importing users for a place, including created, existing, attached users and any errors.',
                 content    : new OAT\JsonContent(
                     ref : new Model(
                         type: ImportUsersForPlaceResult::class,
@@ -729,11 +729,11 @@ final class PlaceController extends AbstractController
             ),
             new OAT\Response(
                 response   : Response::HTTP_BAD_REQUEST,
-                description: 'Bad request'
+                description: 'Bad request.'
             ),
             new OAT\Response(
                 response   : Response::HTTP_NOT_FOUND,
-                description: 'Place not found'
+                description: 'Place not found.'
             ),
         ]
     )]
