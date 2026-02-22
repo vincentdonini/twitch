@@ -588,7 +588,6 @@ final class WodController extends AbstractController
         string                   $wodDivisionId,
         string                   $gender,
         Request                  $request,
-        GetWodByIdUseCase        $getWodUseCase,
         GetWodLeaderboardUseCase $useCase,
         NormalizerInterface      $normalizer,
     ): JsonResponse {
@@ -607,23 +606,11 @@ final class WodController extends AbstractController
         );
 
         try {
-            $wod = $getWodUseCase->execute(
-                new GetWodByIdHttp(
-                    id: Uuid::fromString($wodId),
-                )
-            );
-
-            $allowedMetrics = $wod->getWodType()->getAllowedMetrics();
-
-            // REFACTO THAT.... PLZ
-            $metric = $allowedMetrics[0];
-
             $paginator = $useCase->execute(
                 new GetWodLeaderboardHttp(
                     wodId        : Uuid::fromString($wodId),
                     wodDivisionId: Uuid::fromString($wodDivisionId),
                     gender       : $gender,
-                    metric       : $metric,
                     page         : $paginatorValues->getPage(),
                     limit        : $paginatorValues->getLimit(),
                     filters      : $filters,

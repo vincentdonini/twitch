@@ -14,8 +14,6 @@ interface GetWodLeaderboardDTOInterface
 
     public function getGender(): ?string;
 
-    public function getMetric(): ?string;
-
     public function getPage(): int;
 
     public function getLimit(): int;

@@ -14,7 +14,6 @@ final readonly class GetWodLeaderboardHttp implements GetWodLeaderboardDTOInterf
         private Uuid              $wodId,
         private ?Uuid             $wodDivisionId = null,
         private ?string           $gender = null,
-        private ?string           $metric = null,
         private ?int              $page = null,
         private ?int              $limit = null,
         private ?FilterCollection $filters = null,
@@ -36,12 +35,6 @@ final readonly class GetWodLeaderboardHttp implements GetWodLeaderboardDTOInterf
     {
         return $this->gender;
     }
-
-    public function getMetric(): ?string
-    {
-        return $this->metric;
-    }
-
 
     public function getPage(): int
     {

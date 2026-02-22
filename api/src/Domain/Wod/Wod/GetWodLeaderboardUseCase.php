@@ -34,4 +34,3 @@ final readonly class GetWodLeaderboardUseCase
         );
     }
 }
-
