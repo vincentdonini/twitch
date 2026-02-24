@@ -46,11 +46,13 @@ class Benchmark
         string   $name,
         TypeEnum $type,
     ) {
-        $this->id       = Uuid::v7();
+        $this->id = Uuid::v7();
+
         $this->exercise = $exercise;
         $this->slug     = $slug;
         $this->name     = $name;
         $this->type     = $type;
+
         $this->contents = new ArrayCollection();
     }
 

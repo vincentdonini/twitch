@@ -9,7 +9,6 @@ use App\Infrastructure\Doctrine\Repository\Exercise\ExerciseRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use OpenApi\Attributes as OA;
 use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: ExerciseRepository::class)]
@@ -18,7 +17,6 @@ class Exercise
 {
     #[ORM\Id]
     #[ORM\Column(type: 'uuid', unique: true)]
-    #[OA\Property(description: "Exercise ID")]
     private Uuid $id;
 
     #[ORM\Column(type: 'string')]

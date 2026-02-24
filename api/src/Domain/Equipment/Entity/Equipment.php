@@ -16,7 +16,6 @@ class Equipment
 {
     #[ORM\Id]
     #[ORM\Column(type: 'uuid', unique: true)]
-    #[OA\Property(description: "Equipment ID")]
     private Uuid $id;
 
     #[ORM\Column(type: 'string')]
