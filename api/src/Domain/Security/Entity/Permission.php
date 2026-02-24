@@ -6,28 +6,23 @@ use App\Infrastructure\Doctrine\Repository\Security\PermissionRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use OpenApi\Attributes as OA;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: PermissionRepository::class)]
 #[ORM\Table(name: 'permission')]
 class Permission
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    #[OA\Property(description: "Permission ID")]
-    private ?int $id = null;
+    #[ORM\Column(type: 'uuid', unique: true)]
+    private Uuid $id;
 
     #[ORM\Column(type: 'string', unique: true)]
-    #[OA\Property(description: "Permission code", example: "EQUIPMENT_LIST")]
     private string $code;
 
     #[ORM\Column(type: 'string')]
-    #[OA\Property(description: "Permission label", example: "List equipments")]
     private string $label;
 
     #[ORM\Column(type: 'string', nullable: true)]
-    #[OA\Property(description: "Permission resource", example: "equipment")]
     private ?string $resource = null;
 
     #[ORM\ManyToMany(targetEntity: Role::class, mappedBy: 'permissions')]
@@ -37,16 +32,18 @@ class Permission
         string $code,
         string $label,
     ) {
+        $this->id = Uuid::v7();
 
         $this->code  = $code;
         $this->label = $label;
+
         $this->roles = new ArrayCollection();
     }
 
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
-    public function getId(): ?int
+    public function getId(): Uuid
     {
         return $this->id;
     }
@@ -84,8 +81,28 @@ class Permission
         return $this;
     }
 
+    // -----------------------------------------------------------------------------------------------------------------
+    // ROLES
+    // -----------------------------------------------------------------------------------------------------------------
     public function getRoles(): Collection
     {
         return $this->roles;
+    }
+
+    public function addRole(Role $role): self
+    {
+        if (!$this->roles->contains($role)) {
+            $this->roles[] = $role;
+            $role->addPermission($this);
+        }
+        return $this;
+    }
+
+    public function removeRole(Role $role): self
+    {
+        if ($this->roles->contains($role)) {
+            $this->roles->removeElement($role);
+        }
+        return $this;
     }
 }

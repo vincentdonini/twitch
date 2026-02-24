@@ -7,24 +7,20 @@ use App\Infrastructure\Doctrine\Repository\Security\RoleRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use OpenApi\Attributes as OA;
+use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: RoleRepository::class)]
 #[ORM\Table(name: 'role')]
 class Role
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    #[OA\Property(description: "Role ID")]
-    private ?int $id = null;
+    #[ORM\Column(type: 'uuid', unique: true)]
+    private Uuid $id;
 
     #[ORM\Column(type: 'string', unique: true)]
-    #[OA\Property(description: "Role code", example: "ROLE_ADMIN")]
     private string $code;
 
     #[ORM\Column(type: 'string')]
-    #[OA\Property(description: "Role label", example: "Administrator")]
     private string $label;
 
     #[ORM\ManyToMany(targetEntity: Permission::class, inversedBy: 'roles')]
@@ -38,8 +34,11 @@ class Role
         string $code,
         string $label,
     ) {
-        $this->code        = $code;
-        $this->label       = $label;
+        $this->id = Uuid::v7();
+
+        $this->code  = $code;
+        $this->label = $label;
+
         $this->permissions = new ArrayCollection();
         $this->users       = new ArrayCollection();
     }
@@ -47,7 +46,7 @@ class Role
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
-    public function getId(): ?int
+    public function getId(): Uuid
     {
         return $this->id;
     }
@@ -74,6 +73,9 @@ class Role
         return $this;
     }
 
+    // -----------------------------------------------------------------------------------------------------------------
+    // PERMISSIONS
+    // -----------------------------------------------------------------------------------------------------------------
     public function getPermissions(): Collection
     {
         return $this->permissions;
@@ -103,6 +105,9 @@ class Role
         return false;
     }
 
+    // -----------------------------------------------------------------------------------------------------------------
+    // USERS
+    // -----------------------------------------------------------------------------------------------------------------
     public function getUsers(): Collection
     {
         return $this->users;
