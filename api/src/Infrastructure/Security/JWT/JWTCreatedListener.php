@@ -20,9 +20,6 @@ class JWTCreatedListener
         // ROLES
         $payload['roles'] = $user->getRoles();
 
-        // PERMISSIONS
-        $payload['permissions'] = $user->getPermissions();
-
         $event->setData($payload);
     }
 }
