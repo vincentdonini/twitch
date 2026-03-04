@@ -20,7 +20,7 @@ use App\Infrastructure\Sorts\RequestSort;
 use App\UI\Adapters\Http\Benchmark\BenchmarkScore\CreateBenchmarkScoreHttp;
 use App\UI\Adapters\Http\Benchmark\BenchmarkScore\GetBenchmarkScoreByIdHttp;
 use App\UI\Adapters\Http\Benchmark\BenchmarkScore\ListBenchmarkScoresHttp;
-use Doctrine\ORM\EntityNotFoundException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 use InvalidArgumentException;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
@@ -145,22 +145,18 @@ final class BenchmarkScoreController extends AbstractController
         $sorts = RequestSort::extractValues(
             request    : $request,
             fieldMap   : BenchmarkScoreSortMapping::FIELD_MAP,
-            defaultSort: 'name'
+            defaultSort: 'performedAt'
         );
 
-        try {
-            $paginator = $useCase->execute(
-                new ListBenchmarkScoresHttp(
-                    page   : $paginatorValues->getPage(),
-                    limit  : $paginatorValues->getLimit(),
-                    filters: $filters,
-                    sorts  : $sorts,
-                ),
-                user: null,
-            );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
-        }
+        $paginator = $useCase->execute(
+            new ListBenchmarkScoresHttp(
+                page   : $paginatorValues->getPage(),
+                limit  : $paginatorValues->getLimit(),
+                filters: $filters,
+                sorts  : $sorts,
+            ),
+            user: null,
+        );
 
         $dtoItems = $this->benchmarkScoreService->transformCollectionToDTO(
             benchmarkScores: $paginator->getItems(),
@@ -327,7 +323,7 @@ final class BenchmarkScoreController extends AbstractController
                 format : 'json',
                 context: [
                     'groups' => [
-                        FrontGroupsEnum::BENCHMARK_SCORE_LIST,
+                        FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
                     ],
                 ]
             ),

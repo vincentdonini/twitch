@@ -3,28 +3,34 @@
 namespace App\UI\Adapters\Http\Benchmark\BenchmarkScore;
 
 use App\Domain\Benchmark\BenchmarkScore\CreateBenchmarkScoreDTOInterface;
+use App\UI\Adapters\Http\Common\HttpPayloadParser;
+use DateTimeImmutable;
+use InvalidArgumentException;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class CreateBenchmarkScoreHttp implements CreateBenchmarkScoreDTOInterface
 {
+    use HttpPayloadParser;
+
     public function __construct(
         private array $payload,
-        private int   $userId,
+        private Uuid  $userId,
     ) {
     }
 
-    public function getUserId(): int
+    public function getUserId(): Uuid
     {
         return $this->userId;
     }
 
-    public function getBenchmarkId(): int
+    public function getBenchmarkId(): Uuid
     {
-        return $this->payload['benchmarkId'];
+        return $this->parseUuid('benchmarkId') ?? throw new InvalidArgumentException('benchmarkId is required');
     }
 
-    public function getPerformedAt(): string
+    public function getPerformedAt(): DateTimeImmutable
     {
-        return $this->payload['performedAt'];
+        return $this->parseDateTimeImmutable('performed_at', 'Y-m-d') ?? throw new InvalidArgumentException('performed_at is required');
     }
 
     public function getTime(): ?int
@@ -42,13 +48,13 @@ final readonly class CreateBenchmarkScoreHttp implements CreateBenchmarkScoreDTO
         return $this->payload['weight'] ?? null;
     }
 
-    public function getNote(): ?string
+    public function getNotes(): ?string
     {
         return $this->payload['notes'] ?? null;
     }
 
     public function isPrivate(): bool
     {
-        return $this->payload['private'];
+        return $this->parseBoolean('private') ?? false;
     }
 }

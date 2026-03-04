@@ -2,7 +2,6 @@
 
 namespace App\Domain\Benchmark\Benchmark;
 
-use App\Domain\Benchmark\Enum\TypeEnum;
 use App\Domain\Core\Exceptions\AlreadyExistException;
 use App\Domain\Core\Exceptions\InvalidPayloadException;
 use App\Domain\Core\Ports\DatabaseInterface;
@@ -32,16 +31,11 @@ final readonly class CreateBenchmarkUseCase
 
         $exercise = $this->exerciseDAL->getById($dto->getExerciseId());
 
-        $typeEnum = TypeEnum::tryFrom($dto->getType());
-        if (!$typeEnum) {
-            throw new InvalidPayloadException();
-        }
-
         $benchmark = new Benchmark(
             exercise: $exercise,
             slug    : StringHelper::slugify($dto->getName()),
             name    : $dto->getName(),
-            type    : $typeEnum,
+            type    : $dto->getType(),
         );
 
         $this->database->preSave($benchmark);

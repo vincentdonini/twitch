@@ -2,15 +2,18 @@
 
 namespace App\Domain\Benchmark\Benchmark;
 
+use App\Domain\Benchmark\Enum\TypeEnum;
+use Symfony\Component\Uid\Uuid;
+
 interface UpdateBenchmarkDTOInterface
 {
-    public function getId(): int;
+    public function getId(): Uuid;
 
-    public function getExerciseId(): ?int;
+    public function getExerciseId(): ?Uuid;
 
     public function getName(): ?string;
 
-    public function getType(): ?string;
+    public function getType(): ?TypeEnum;
 
     public function getValue(): ?string;
 

@@ -4,7 +4,9 @@ namespace App\UI\Adapters\Http\Common;
 
 use BackedEnum;
 use DateTimeImmutable;
+use Exception;
 use InvalidArgumentException;
+use Symfony\Component\Uid\Uuid;
 
 trait HttpPayloadParser
 {
@@ -64,6 +66,34 @@ trait HttpPayloadParser
         return $enum;
     }
 
+    protected function parseUuid(string $field): ?Uuid
+    {
+        if (!array_key_exists($field, $this->payload)) {
+            return null;
+        }
+
+        $value = $this->payload[$field];
+
+        if ($value === null) {
+            return null;
+        }
+
+        if (!is_string($value)) {
+            throw new InvalidArgumentException(
+                sprintf('Invalid UUID type for "%s": expected string, got "%s".', $field, gettype($value))
+            );
+        }
+
+        try {
+            return Uuid::fromString($value);
+        } catch (Exception $e) {
+            throw new InvalidArgumentException(
+                sprintf('Invalid UUID value for "%s": "%s".', $field, $value),
+                previous: $e
+            );
+        }
+    }
+
     protected function parseDateTimeImmutable(string $field, ?string $format = null): ?DateTimeImmutable
     {
         if (!isset($this->payload[$field])) {
@@ -107,7 +137,7 @@ trait HttpPayloadParser
             }
 
             return new DateTimeImmutable($rawValue);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             throw new InvalidArgumentException(
                 sprintf('Invalid datetime value for "%s": "%s".', $field, $rawValue),
                 previous: $e

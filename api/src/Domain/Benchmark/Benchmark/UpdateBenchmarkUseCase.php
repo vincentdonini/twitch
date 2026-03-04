@@ -24,7 +24,7 @@ final readonly class UpdateBenchmarkUseCase
     public function execute(
         UpdateBenchmarkDTOInterface $dto
     ): Benchmark {
-        $benchmark = $this->benchmarkDAL->getById($dto->getId());
+        $benchmark = $this->benchmarkDAL->getById(Uuid::fromString($dto->getId()));
         if (!$benchmark instanceof Benchmark) {
             throw new EntityNotFoundException();
         }
@@ -42,10 +42,6 @@ final readonly class UpdateBenchmarkUseCase
         }
 
         if (!empty($dto->getType())) {
-            if (!$this->validateDuplicateField($dto->getType(), $benchmark->getId())) {
-                throw new AlreadyExistException();
-            }
-
             $typeEnum = TypeEnum::tryFrom($dto->getType());
             if (!$typeEnum) {
                 throw new InvalidPayloadException();
@@ -54,9 +50,6 @@ final readonly class UpdateBenchmarkUseCase
         }
 
         if (!empty($dto->getValue())) {
-            if (!$this->validateDuplicateField($dto->getValue(), $benchmark->getId())) {
-                throw new AlreadyExistException();
-            }
             $benchmark->setValue($dto->getValue());
         }
 

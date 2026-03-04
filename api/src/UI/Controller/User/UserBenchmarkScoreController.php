@@ -10,11 +10,11 @@ use App\Domain\Benchmark\Sort\BenchmarkScoreSortMapping;
 use App\Domain\User\Ports\UserDALInterface;
 use App\Infrastructure\Filters\RequestFilters;
 use App\Infrastructure\Paginator\RequestPaginator;
+use App\Infrastructure\Paginator\ResponsePaginator;
 use App\Infrastructure\Security\Voters\ListPermissions;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use App\Infrastructure\Sorts\RequestSort;
 use App\UI\Adapters\Http\Benchmark\BenchmarkScore\ListBenchmarkScoresHttp;
-use InvalidArgumentException;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -39,7 +39,7 @@ final class UserBenchmarkScoreController extends AbstractController
 
     #[Route(
         path        : '/{userId}/benchmark-scores',
-        name        : 'detail',
+        name        : 'list',
         requirements: [
             'userId' => '[0-9a-fA-F\-]+',
         ],
@@ -47,11 +47,11 @@ final class UserBenchmarkScoreController extends AbstractController
     )]
     #[IsGranted(ListPermissions::PERMISSION_BENCHMARK_SCORE_LIST)]
     #[OAT\Get(
-        description: 'Returns detailed information for a specific user.',
-        summary    : 'Get user details',
+        description: 'Returns a paginated list of benchmark scores for a specific user.',
+        summary    : 'Get benchmark scores for a user',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'User details'),
+            new OAT\Response(response: 200, description: 'List of benchmark scores'),
             new OAT\Response(response: 403, description: 'Access denied'),
             new OAT\Response(response: 404, description: 'User not found'),
         ]
@@ -82,22 +82,18 @@ final class UserBenchmarkScoreController extends AbstractController
         $sorts = RequestSort::extractValues(
             request    : $request,
             fieldMap   : BenchmarkScoreSortMapping::FIELD_MAP,
-            defaultSort: 'name'
+            defaultSort: 'performedAt'
         );
 
-        try {
-            $paginator = $useCase->execute(
-                new ListBenchmarkScoresHttp(
-                    page   : $paginatorValues->getPage(),
-                    limit  : $paginatorValues->getLimit(),
-                    filters: $filters,
-                    sorts  : $sorts,
-                ),
-                user: $user
-            );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
-        }
+        $paginator = $useCase->execute(
+            new ListBenchmarkScoresHttp(
+                page   : $paginatorValues->getPage(),
+                limit  : $paginatorValues->getLimit(),
+                filters: $filters,
+                sorts  : $sorts,
+            ),
+            user: $user
+        );
 
         $dtoItems = $this->benchmarkScoreService->transformCollectionToDTO(
             benchmarkScores: $paginator->getItems(),
@@ -105,16 +101,20 @@ final class UserBenchmarkScoreController extends AbstractController
         );
 
         return new JsonResponse(
-            data  : $normalizer->normalize(
+            data   : $normalizer->normalize(
                 object : $dtoItems,
                 format : 'json',
                 context: [
                     'groups' => [
-                        FrontGroupsEnum::USER_ME,
+                        FrontGroupsEnum::BENCHMARK_SCORE_LIST,
                     ],
                 ]
             ),
-            status: Response::HTTP_OK,
+            status : Response::HTTP_OK,
+            headers: ResponsePaginator::buildPaginationHeaders(
+                paginator      : $paginator,
+                paginatorValues: $paginatorValues
+            )
         );
     }
 
@@ -129,9 +129,8 @@ final class UserBenchmarkScoreController extends AbstractController
         summary    : 'Get benchmark scores for current user',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'User profile'),
+            new OAT\Response(response: 200, description: 'List of benchmark scores'),
             new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'User not found'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -154,22 +153,18 @@ final class UserBenchmarkScoreController extends AbstractController
         $sorts = RequestSort::extractValues(
             request    : $request,
             fieldMap   : BenchmarkScoreSortMapping::FIELD_MAP,
-            defaultSort: 'name'
+            defaultSort: 'performedAt'
         );
 
-        try {
-            $paginator = $useCase->execute(
-                new ListBenchmarkScoresHttp(
-                    page   : $paginatorValues->getPage(),
-                    limit  : $paginatorValues->getLimit(),
-                    filters: $filters,
-                    sorts  : $sorts,
-                ),
-                user: $this->getUser()
-            );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
-        }
+        $paginator = $useCase->execute(
+            new ListBenchmarkScoresHttp(
+                page   : $paginatorValues->getPage(),
+                limit  : $paginatorValues->getLimit(),
+                filters: $filters,
+                sorts  : $sorts,
+            ),
+            user: $this->getUser()
+        );
 
         $dtoItems = $this->benchmarkScoreService->transformCollectionToDTO(
             benchmarkScores: $paginator->getItems(),
@@ -177,16 +172,20 @@ final class UserBenchmarkScoreController extends AbstractController
         );
 
         return new JsonResponse(
-            data  : $normalizer->normalize(
+            data   : $normalizer->normalize(
                 object : $dtoItems,
                 format : 'json',
                 context: [
                     'groups' => [
-                        FrontGroupsEnum::USER_ME,
+                        FrontGroupsEnum::BENCHMARK_SCORE_LIST,
                     ],
                 ]
             ),
-            status: Response::HTTP_OK,
+            status : Response::HTTP_OK,
+            headers: ResponsePaginator::buildPaginationHeaders(
+                paginator      : $paginator,
+                paginatorValues: $paginatorValues
+            )
         );
     }
 }

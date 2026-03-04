@@ -2,13 +2,16 @@
 
 namespace App\Domain\Benchmark\BenchmarkScore;
 
+use DateTimeImmutable;
+use Symfony\Component\Uid\Uuid;
+
 interface CreateBenchmarkScoreDTOInterface
 {
-    public function getUserId(): int;
+    public function getUserId(): Uuid;
 
-    public function getBenchmarkId(): int;
+    public function getBenchmarkId(): Uuid;
 
-    public function getPerformedAt(): string;
+    public function getPerformedAt(): DateTimeImmutable;
 
     public function getTime(): ?int;
 
@@ -16,7 +19,7 @@ interface CreateBenchmarkScoreDTOInterface
 
     public function getWeight(): ?int;
 
-    public function getNote(): ?string;
+    public function getNotes(): ?string;
 
     public function isPrivate(): bool;
 }

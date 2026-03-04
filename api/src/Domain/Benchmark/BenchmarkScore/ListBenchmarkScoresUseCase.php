@@ -7,7 +7,7 @@ use App\Domain\Benchmark\Ports\BenchmarkScoreDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use InvalidArgumentException;
 
-readonly class ListBenchmarkScoresUseCase
+final readonly class ListBenchmarkScoresUseCase
 {
     public function __construct(
         private BenchmarkScoreDALInterface $benchmarkScoreDAL,

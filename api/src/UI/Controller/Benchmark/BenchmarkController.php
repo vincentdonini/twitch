@@ -166,18 +166,14 @@ final class BenchmarkController extends AbstractController
             defaultSort: 'name'
         );
 
-        try {
-            $paginator = $useCase->execute(
-                new ListBenchmarksHttp(
-                    page   : $paginatorValues->getPage(),
-                    limit  : $paginatorValues->getLimit(),
-                    filters: $filters,
-                    sorts  : $sorts,
-                )
-            );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
-        }
+        $paginator = $useCase->execute(
+            new ListBenchmarksHttp(
+                page   : $paginatorValues->getPage(),
+                limit  : $paginatorValues->getLimit(),
+                filters: $filters,
+                sorts  : $sorts,
+            )
+        );
 
         $dtoItems = $this->benchmarkService->transformCollectionToDTO(
             benchmarks: $paginator->getItems(),
@@ -231,7 +227,7 @@ final class BenchmarkController extends AbstractController
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
                         description: 'ID of Benchmark created',
-                        schema     : new OAT\Schema(type: 'integer')
+                        schema     : new OAT\Schema(type: 'string')
                     ),
                 ],
                 content    : new OAT\JsonContent(
@@ -349,37 +345,21 @@ final class BenchmarkController extends AbstractController
             description: 'Update a benchmark',
             required   : true,
             content    : new OAT\JsonContent(
-                ref: new Model(
-                    type  : Benchmark::class,
-                    groups: [FrontGroupsEnum::BENCHMARK_LIST]
-                ),
+                properties: [
+                    new OAT\Property(property: 'name', type: 'string', nullable: true),
+                    new OAT\Property(property: 'type', type: 'string', nullable: true),
+                    new OAT\Property(property: 'exerciseId', type: 'integer', nullable: true),
+                    new OAT\Property(property: 'value', type: 'number', nullable: true),
+                ],
             ),
         ),
-        parameters : [
-            new OAT\PathParameter(
-                name       : 'name',
-                description: 'Name of the benchmark',
-                required   : true,
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-            new OAT\PathParameter(
-                name       : 'type',
-                description: 'Type of the benchmark',
-                required   : true,
-                schema     : new OAT\Schema(type: 'integer'),
-            ),
-            new OAT\PathParameter(
-                name       : 'exerciseId',
-                description: 'Exercise ID of the benchmark',
-                required   : true,
-                schema     : new OAT\Schema(type: 'integer'),
-            ),
-        ],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_NO_CONTENT,
                 description: 'Benchmark updated successfully',
             ),
+            new OAT\Response(response: Response::HTTP_CONFLICT, description: 'Benchmark name already exists'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'Benchmark not found'),
         ]
     )]
     public function patch(
@@ -392,7 +372,7 @@ final class BenchmarkController extends AbstractController
 
             $useCase->execute(
                 new UpdateBenchmarkHttp(
-                    id     : $benchmarkId,
+                    id     : Uuid::fromString($benchmarkId),
                     payload: $payload
                 )
             );
@@ -400,6 +380,8 @@ final class BenchmarkController extends AbstractController
             $statusCode = Response::HTTP_NO_CONTENT;
         } catch (EntityNotFoundException) {
             $statusCode = Response::HTTP_NOT_FOUND;
+        } catch (AlreadyExistException) {
+            $statusCode = Response::HTTP_CONFLICT;
         }
 
         return new JsonResponse(null, $statusCode);
@@ -435,7 +417,7 @@ final class BenchmarkController extends AbstractController
         GetBenchmarkContentsByIdUseCase $useCase
     ): JsonResponse {
         try {
-            $wodCategoryContents = $useCase->execute(
+            $benchmarkContents = $useCase->execute(
                 new GetBenchmarkByIdHttp(
                     id: Uuid::fromString($benchmarkId)
                 )
@@ -445,7 +427,7 @@ final class BenchmarkController extends AbstractController
         }
 
         $contentsArray = [];
-        foreach ($wodCategoryContents as $content) {
+        foreach ($benchmarkContents as $content) {
             $contentsArray[$content->getLocale()] = [
                 'title'   => $content->getTitle(),
                 'summary' => $content->getSummary(),
@@ -479,7 +461,7 @@ final class BenchmarkController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_BENCHMARK_MANAGE)]
     #[OAT\Put(
         description: 'Create or update Benchmark content for a given locale.',
-        summary    : 'Upsert exercise localized content',
+        summary    : 'Upsert benchmark localized content',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
@@ -515,8 +497,7 @@ final class BenchmarkController extends AbstractController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Content updated.'),
-            new OAT\Response(response: 201, description: 'Content created.'),
+            new OAT\Response(response: 204, description: 'Content saved.'),
             new OAT\Response(response: 400, description: 'Invalid payload.'),
             new OAT\Response(response: 403, description: 'Access denied.'),
             new OAT\Response(response: 404, description: 'Benchmark not found.'),
@@ -583,8 +564,7 @@ final class BenchmarkController extends AbstractController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated.'),
-            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 204, description: 'Contents saved.'),
             new OAT\Response(response: 400, description: 'Invalid payload.'),
             new OAT\Response(response: 403, description: 'Access denied.'),
             new OAT\Response(response: 404, description: 'Benchmark not found.'),
