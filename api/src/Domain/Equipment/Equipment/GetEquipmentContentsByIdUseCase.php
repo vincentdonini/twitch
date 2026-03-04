@@ -2,15 +2,15 @@
 
 namespace App\Domain\Equipment\Equipment;
 
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 use App\Domain\Equipment\Entity\Equipment;
 use App\Domain\Equipment\Ports\EquipmentDALInterface;
 use Doctrine\Common\Collections\Collection;
-use Doctrine\ORM\EntityNotFoundException;
 
-class GetEquipmentContentsByIdUseCase
+final readonly class GetEquipmentContentsByIdUseCase
 {
     public function __construct(
-        private readonly EquipmentDALInterface $equipmentDAL,
+        private EquipmentDALInterface $equipmentDAL,
     ) {
     }
 

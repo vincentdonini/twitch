@@ -22,8 +22,7 @@ use App\UI\Adapters\Http\Equipment\Equipment\GetEquipmentByIdHttp;
 use App\UI\Adapters\Http\Equipment\Equipment\ListEquipmentsHttp;
 use App\UI\Adapters\Http\Equipment\Equipment\UpsertContentEquipmentBulkHttp;
 use App\UI\Adapters\Http\Equipment\Equipment\UpsertContentEquipmentHttp;
-use Doctrine\ORM\EntityNotFoundException;
-use InvalidArgumentException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -149,18 +148,14 @@ final readonly class EquipmentController
             defaultSort: 'slug'
         );
 
-        try {
-            $paginator = $useCase->execute(
-                new ListEquipmentsHttp(
-                    page   : $paginatorValues->getPage(),
-                    limit  : $paginatorValues->getLimit(),
-                    filters: $filters,
-                    sorts  : $sorts,
-                )
-            );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
-        }
+        $paginator = $useCase->execute(
+            new ListEquipmentsHttp(
+                page   : $paginatorValues->getPage(),
+                limit  : $paginatorValues->getLimit(),
+                filters: $filters,
+                sorts  : $sorts,
+            )
+        );
 
         $dtoItems = $this->equipmentService->transformCollectionToDTO(
             equipments: $paginator->getItems(),
@@ -202,7 +197,7 @@ final readonly class EquipmentController
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'Detail of WOD',
+                description: 'Detail of Equipment',
                 content    : new OAT\JsonContent(
                     ref : new Model(
                         type  : Equipment::class,
@@ -239,7 +234,7 @@ final readonly class EquipmentController
                 format : 'json',
                 context: [
                     'groups' => [
-                        FrontGroupsEnum::EQUIPMENT_LIST,
+                        FrontGroupsEnum::EQUIPMENT_DETAIL,
                     ],
                 ]
             ),
@@ -337,10 +332,10 @@ final readonly class EquipmentController
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
-                required  : ['name', 'summary'],
+                required  : ['title', 'summary'],
                 properties: [
                     new OAT\Property(
-                        property: 'name',
+                        property: 'title',
                         type    : 'string',
                         example : 'Lorem ipsum'
                     ),
@@ -358,8 +353,7 @@ final readonly class EquipmentController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated.'),
-            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 204, description: 'Content saved.'),
             new OAT\Response(response: 400, description: 'Invalid payload.'),
             new OAT\Response(response: 403, description: 'Access denied.'),
             new OAT\Response(response: 404, description: 'Equipment not found.'),
@@ -409,12 +403,12 @@ final readonly class EquipmentController
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Lorem ipsum",
+                        "title"   => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                         "details" => null,
                     ],
                     "en" => [
-                        "name"    => "Lorem ipsum",
+                        "title"   => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
                         "details" => null,
                     ],
@@ -422,8 +416,7 @@ final readonly class EquipmentController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated.'),
-            new OAT\Response(response: 201, description: 'Contents created.'),
+            new OAT\Response(response: 204, description: 'Contents saved.'),
             new OAT\Response(response: 400, description: 'Invalid payload.'),
             new OAT\Response(response: 403, description: 'Access denied.'),
             new OAT\Response(response: 404, description: 'Equipment not found.'),

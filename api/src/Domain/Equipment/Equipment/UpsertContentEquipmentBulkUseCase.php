@@ -2,23 +2,21 @@
 
 namespace App\Domain\Equipment\Equipment;
 
+use App\Domain\Content\Entity\ContentEquipment;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 use App\Domain\Core\Exceptions\InvalidPayloadException;
 use App\Domain\Core\Ports\DatabaseInterface;
 use App\Domain\Equipment\Entity\Equipment;
 use App\Domain\Equipment\Ports\EquipmentDALInterface;
-use App\UI\Adapters\Http\Equipment\Equipment\UpsertContentEquipmentBulkHttp;
-use App\UI\Adapters\Http\Equipment\Equipment\UpsertContentEquipmentHttp;
-use Doctrine\ORM\EntityNotFoundException;
 
-readonly class UpsertContentEquipmentBulkUseCase
+final readonly class UpsertContentEquipmentBulkUseCase
 {
     public function __construct(
-        private DatabaseInterface             $database,
-        private EquipmentDALInterface         $equipmentDAL,
-        private UpsertContentEquipmentUseCase $upsertContentEquipmentUseCase,
+        private DatabaseInterface     $database,
+        private EquipmentDALInterface $equipmentDAL,
     ) {}
 
-    public function execute(UpsertContentEquipmentBulkHttp $dto): void
+    public function execute(UpsertContentEquipmentBulkDTOInterface $dto): void
     {
         $equipment = $this->equipmentDAL->getById($dto->getId());
         if (!$equipment instanceof Equipment) {
@@ -31,15 +29,29 @@ readonly class UpsertContentEquipmentBulkUseCase
 
         try {
             foreach ($dto->getContents() as $locale => $contentData) {
-                $this->upsertContentEquipmentUseCase->execute(
-                    new UpsertContentEquipmentHttp(
-                        id     : $dto->getId(),
-                        locale : $locale,
-                        payload: $contentData
-                    )
-                );
+                $contentEquipment = $equipment->getContentByLocale($locale);
+
+                if (!$contentEquipment) {
+                    $contentEquipment = new ContentEquipment(
+                        equipment: $equipment,
+                        locale   : $locale,
+                        title    : $contentData['title'] ?? '',
+                        summary  : $contentData['summary'] ?? '',
+                        details  : $contentData['details'] ?? null,
+                    );
+                    $equipment->addContent($contentEquipment);
+                } else {
+                    $contentEquipment->setTitle($contentData['title'] ?? '');
+                    $contentEquipment->setSummary($contentData['summary'] ?? '');
+                    if (array_key_exists('details', $contentData)) {
+                        $contentEquipment->setDetails($contentData['details']);
+                    }
+                }
+
+                $this->database->preSave($contentEquipment);
             }
 
+            $this->database->save();
             $this->database->commit();
         } catch (\Throwable $e) {
             $this->database->rollback();

@@ -2,9 +2,11 @@
 
 namespace App\Domain\Equipment\Equipment;
 
+use Symfony\Component\Uid\Uuid;
+
 interface UpsertContentEquipmentDTOInterface
 {
-    public function getId(): string;
+    public function getId(): Uuid;
 
     public function getLocale(): string;
 

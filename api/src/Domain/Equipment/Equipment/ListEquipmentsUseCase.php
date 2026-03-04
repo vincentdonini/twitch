@@ -6,7 +6,7 @@ use App\Domain\Equipment\Ports\EquipmentDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use InvalidArgumentException;
 
-readonly class ListEquipmentsUseCase
+final readonly class ListEquipmentsUseCase
 {
     public function __construct(
         private EquipmentDALInterface $equipmentDAL,

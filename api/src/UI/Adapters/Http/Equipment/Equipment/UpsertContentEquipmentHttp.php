@@ -3,18 +3,19 @@
 namespace App\UI\Adapters\Http\Equipment\Equipment;
 
 use App\Domain\Equipment\Equipment\UpsertContentEquipmentDTOInterface;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class UpsertContentEquipmentHttp implements UpsertContentEquipmentDTOInterface
 {
     public function __construct(
-        private string $id,
+        private Uuid   $id,
         private string $locale,
         private array  $payload,
     ) {
 
     }
 
-    public function getId(): string
+    public function getId(): Uuid
     {
         return $this->id;
     }
