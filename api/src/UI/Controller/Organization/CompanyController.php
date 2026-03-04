@@ -2,9 +2,6 @@
 
 namespace App\UI\Controller\Organization;
 
-use App\Domain\Core\Exceptions\AlreadyExistException;
-use App\Domain\Core\Exceptions\EntityNotFoundException;
-use App\Domain\Core\Exceptions\InvalidPayloadException;
 use App\Domain\Organization\Company\CreateCompanyUseCase;
 use App\Domain\Organization\Company\GetCompanyByIdUseCase;
 use App\Domain\Organization\Company\ListCompanyUseCase;
@@ -24,7 +21,7 @@ use App\UI\Adapters\Http\Organization\Company\CreateCompanyHttp;
 use App\UI\Adapters\Http\Organization\Company\GetCompanyByIdHttp;
 use App\UI\Adapters\Http\Organization\Company\ListCompaniesHttp;
 use App\UI\Adapters\Http\Organization\Company\UpdateCompanyHttp;
-use InvalidArgumentException;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -42,6 +39,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/companies', name: 'company_')]
 final class CompanyController extends AbstractController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private readonly CompanyService $companyService,
     ) {
@@ -355,8 +354,8 @@ final class CompanyController extends AbstractController
                     sorts  : $sorts,
                 )
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->companyService->transformCollectionToDTO(
@@ -449,13 +448,9 @@ final class CompanyController extends AbstractController
                 status : Response::HTTP_CREATED,
                 headers: ['X-RESOURCE-ID' => $company->getId()]
             );
-        } catch (InvalidPayloadException) {
-            $statusCode = Response::HTTP_BAD_REQUEST;
-        } catch (AlreadyExistException) {
-            $statusCode = Response::HTTP_CONFLICT;
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -497,11 +492,8 @@ final class CompanyController extends AbstractController
                     id: Uuid::fromString($companyId),
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->companyService->transformToDTO($company);
@@ -575,13 +567,9 @@ final class CompanyController extends AbstractController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (InvalidPayloadException) {
-            $statusCode = Response::HTTP_BAD_REQUEST;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 }

@@ -22,8 +22,7 @@ use App\UI\Adapters\Http\Exercise\Exercise\UpsertContentExerciseHttp;
 use App\UI\Adapters\Http\Exercise\Exercise\GetExerciseByIdHttp;
 use App\UI\Adapters\Http\Exercise\Exercise\ListExercisesHttp;
 use App\UI\Adapters\Http\Exercise\Exercise\UpsertContentExerciseBulkHttp;
-use Doctrine\ORM\EntityNotFoundException;
-use InvalidArgumentException;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -40,6 +39,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/exercises', name: 'exercise_')]
 final readonly class ExerciseController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private ExerciseService $exerciseService,
     ) {
@@ -159,8 +160,8 @@ final readonly class ExerciseController
                     sorts  : $sorts,
                 )
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->exerciseService->transformCollectionToDTO(
@@ -217,11 +218,8 @@ final readonly class ExerciseController
                     id: Uuid::fromString($exerciseId)
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->exerciseService->transformToDTO($exercise);
@@ -285,8 +283,8 @@ final readonly class ExerciseController
                     id: Uuid::fromString($exerciseId)
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(null, Response::HTTP_NOT_FOUND);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $contentsArray = [];
@@ -375,12 +373,10 @@ final readonly class ExerciseController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -437,11 +433,9 @@ final readonly class ExerciseController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 }

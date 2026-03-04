@@ -5,8 +5,6 @@ namespace App\UI\Controller\Achievement;
 use App\Domain\Achievement\AchievementGroup\GetAchievementGroupContentsByIdUseCase;
 use App\Domain\Achievement\AchievementGroup\UpsertContentAchievementGroupBulkUseCase;
 use App\Domain\Achievement\AchievementGroup\UpsertContentAchievementGroupUseCase;
-use App\Domain\Core\Exceptions\AlreadyExistException;
-use App\Domain\Core\Exceptions\EntityNotFoundException;
 use App\Domain\Achievement\Entity\AchievementGroup;
 use App\Domain\Achievement\Filters\AchievementGroupFilterMapping;
 use App\Domain\Achievement\Filters\AchievementGroupFilterRules;
@@ -28,7 +26,7 @@ use App\UI\Adapters\Http\Achievement\AchievementGroup\ListAchievementGroupsHttp;
 use App\UI\Adapters\Http\Achievement\AchievementGroup\UpdateAchievementGroupHttp;
 use App\UI\Adapters\Http\Achievement\AchievementGroup\UpsertContentAchievementGroupBulkHttp;
 use App\UI\Adapters\Http\Achievement\AchievementGroup\UpsertContentAchievementGroupHttp;
-use InvalidArgumentException;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -46,6 +44,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/achievement-groups', name: 'achievement_group_')]
 final class AchievementGroupController extends AbstractController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private readonly AchievementGroupService $achievementGroupService,
     ) {
@@ -139,8 +139,8 @@ final class AchievementGroupController extends AbstractController
                     sorts  : $sorts,
                 )
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->achievementGroupService->transformCollectionToDTO(
@@ -227,13 +227,9 @@ final class AchievementGroupController extends AbstractController
                 status : Response::HTTP_CREATED,
                 headers: ['X-RESOURCE-ID' => $achievementGroup->getId()->toRfc4122()]
             );
-        } catch (InvalidArgumentException) {
-            $statusCode = Response::HTTP_BAD_REQUEST;
-        } catch (AlreadyExistException) {
-            $statusCode = Response::HTTP_CONFLICT;
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -275,11 +271,8 @@ final class AchievementGroupController extends AbstractController
                     id: Uuid::fromString($achievementGroupId),
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->achievementGroupService->transformToDTO($achievementGroup);
@@ -361,12 +354,10 @@ final class AchievementGroupController extends AbstractController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     // -----------------------------------------------------------------------------------------------------------------
@@ -404,8 +395,8 @@ final class AchievementGroupController extends AbstractController
                     id: Uuid::fromString($achievementGroupId)
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(null, Response::HTTP_NOT_FOUND);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $contentsArray = [];
@@ -488,12 +479,10 @@ final class AchievementGroupController extends AbstractController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -548,11 +537,9 @@ final class AchievementGroupController extends AbstractController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 }

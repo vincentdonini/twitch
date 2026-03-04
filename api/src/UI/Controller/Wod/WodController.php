@@ -2,9 +2,6 @@
 
 namespace App\UI\Controller\Wod;
 
-use App\Domain\Core\Exceptions\AlreadyExistException;
-use App\Domain\Core\Exceptions\EntityNotFoundException;
-use App\Domain\Core\Exceptions\InvalidPayloadException;
 use App\Domain\User\Entity\User;
 use App\Domain\Wod\Entity\Wod;
 use App\Domain\Wod\Filters\WodFilterMapping;
@@ -30,7 +27,7 @@ use App\UI\Adapters\Http\Wod\Wod\GetWodByIdHttp;
 use App\UI\Adapters\Http\Wod\Wod\ListWodsHttp;
 use App\UI\Adapters\Http\Wod\Wod\UpdateWodHttp;
 use App\UI\Adapters\Http\Wod\WodScore\GetWodLeaderboardHttp;
-use InvalidArgumentException;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -48,6 +45,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/wods', name: 'wod_')]
 final class WodController extends AbstractController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private readonly WodService      $wodService,
         private readonly WodScoreService $wodScoreService,
@@ -310,8 +309,8 @@ final class WodController extends AbstractController
                     sorts  : $sorts,
                 )
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->wodService->transformCollectionToDTO(
@@ -398,13 +397,9 @@ final class WodController extends AbstractController
                 status : Response::HTTP_CREATED,
                 headers: ['X-RESOURCE-ID' => $wod->getId()]
             );
-        } catch (InvalidPayloadException) {
-            $statusCode = Response::HTTP_BAD_REQUEST;
-        } catch (AlreadyExistException) {
-            $statusCode = Response::HTTP_CONFLICT;
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -446,11 +441,8 @@ final class WodController extends AbstractController
                     id: Uuid::fromString($wodId),
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->wodService->transformToDTO($wod);
@@ -542,12 +534,10 @@ final class WodController extends AbstractController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -618,8 +608,8 @@ final class WodController extends AbstractController
                 ),
                 currentUser: $currentUser,
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(null, Response::HTTP_NOT_FOUND);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->wodScoreService->transformCollectionToDTO(

@@ -4,6 +4,7 @@ namespace App\UI\Adapters\Http\Common;
 
 use App\Domain\Core\Exceptions\AlreadyExistException;
 use App\Domain\Core\Exceptions\EntityNotFoundException;
+use App\Domain\Core\Exceptions\InvalidPayloadException;
 use DomainException;
 use InvalidArgumentException;
 use LogicException;
@@ -15,9 +16,10 @@ trait ApiExceptionHandler
 {
     protected function handleException(\Throwable $e): JsonResponse
     {
-        $isDev = $this->getParameter('kernel.environment') === 'dev';
+        $isDev = ($_SERVER['APP_ENV'] ?? 'prod') === 'dev';
 
         $httpStatusMap = [
+            InvalidPayloadException::class  => Response::HTTP_BAD_REQUEST,
             InvalidArgumentException::class => Response::HTTP_BAD_REQUEST,
             DomainException::class          => Response::HTTP_UNPROCESSABLE_ENTITY,
             LogicException::class           => Response::HTTP_BAD_REQUEST,

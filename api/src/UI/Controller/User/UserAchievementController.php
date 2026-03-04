@@ -11,7 +11,7 @@ use App\Infrastructure\Security\Voters\ListPermissions;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use App\UI\Adapters\Http\Achievement\UserAchievementProgress\CompareUserAchievementsHttp;
 use App\UI\Adapters\Http\Achievement\UserAchievementProgress\ListUserAchievementProgressesHttp;
-use InvalidArgumentException;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -28,6 +28,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/users', name: 'user_achievements_')]
 final class UserAchievementController extends AbstractController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private readonly UserAchievementProgressService $userAchievementProgressService,
         private readonly UserDALInterface               $userDAL,
@@ -81,8 +83,8 @@ final class UserAchievementController extends AbstractController
                 ),
                 user: $user
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->userAchievementProgressService->transformCollectionToDTO(
@@ -141,8 +143,8 @@ final class UserAchievementController extends AbstractController
                 ),
                 user: $this->getUser()
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->userAchievementProgressService->transformCollectionToDTO(
@@ -213,8 +215,8 @@ final class UserAchievementController extends AbstractController
                     otherId: Uuid::fromString($otherId),
                 ),
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         return new JsonResponse(

@@ -15,6 +15,7 @@ use App\Infrastructure\Security\Voters\ListPermissions;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use App\Infrastructure\Sorts\RequestSort;
 use App\UI\Adapters\Http\Benchmark\BenchmarkScore\ListBenchmarkScoresHttp;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -31,6 +32,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/users', name: 'user_benchmark_scores_')]
 final class UserBenchmarkScoreController extends AbstractController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private readonly BenchmarkScoreService $benchmarkScoreService,
         private readonly UserDALInterface      $userDAL,

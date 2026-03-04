@@ -2,9 +2,6 @@
 
 namespace App\UI\Controller\Organization;
 
-use App\Domain\Core\Exceptions\AlreadyExistException;
-use App\Domain\Core\Exceptions\EntityNotFoundException;
-use App\Domain\Core\Exceptions\InvalidPayloadException;
 use App\Domain\Organization\Entity\Place;
 use App\Domain\Organization\Filters\PlaceFilterMapping;
 use App\Domain\Organization\Filters\PlaceFilterRules;
@@ -28,7 +25,7 @@ use App\UI\Adapters\Http\Organization\Place\GetPlaceByIdHttp;
 use App\UI\Adapters\Http\Organization\Place\ImportUsersForPlaceHttp;
 use App\UI\Adapters\Http\Organization\Place\ListPlacesHttp;
 use App\UI\Adapters\Http\Organization\Place\UpdatePlaceHttp;
-use InvalidArgumentException;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -46,6 +43,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/places', name: 'place_')]
 final class PlaceController extends AbstractController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private readonly PlaceService $placeService,
         private readonly UserService  $userService,
@@ -377,8 +376,8 @@ final class PlaceController extends AbstractController
                     sorts  : $sorts,
                 )
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->placeService->transformCollectionToDTO(
@@ -469,13 +468,9 @@ final class PlaceController extends AbstractController
                 status : Response::HTTP_CREATED,
                 headers: ['X-RESOURCE-ID' => $place->getId()]
             );
-        } catch (InvalidPayloadException) {
-            $statusCode = Response::HTTP_BAD_REQUEST;
-        } catch (AlreadyExistException) {
-            $statusCode = Response::HTTP_CONFLICT;
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -517,11 +512,8 @@ final class PlaceController extends AbstractController
                     id: Uuid::fromString($placeId),
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->placeService->transformToDTO($place);
@@ -595,14 +587,10 @@ final class PlaceController extends AbstractController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (InvalidPayloadException) {
-            $statusCode = Response::HTTP_BAD_REQUEST;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -650,11 +638,8 @@ final class PlaceController extends AbstractController
                     id: Uuid::fromString($placeId),
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->userService->transformCollectionToDTO($place->getUsers()->toArray());
@@ -747,11 +732,8 @@ final class PlaceController extends AbstractController
                     csvPath: $file->getRealPath()
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         return new JsonResponse(

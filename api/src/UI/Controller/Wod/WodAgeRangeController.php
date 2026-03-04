@@ -16,8 +16,7 @@ use App\UI\Adapters\Http\Wod\WodAgeRange\GetWodAgeRangeByIdHttp;
 use App\UI\Adapters\Http\Wod\WodAgeRange\ListWodAgeRangesHttp;
 use App\UI\Adapters\Http\Wod\WodAgeRange\UpsertContentWodAgeRangeBulkHttp;
 use App\UI\Adapters\Http\Wod\WodAgeRange\UpsertContentWodAgeRangeHttp;
-use App\Domain\Core\Exceptions\EntityNotFoundException;
-use InvalidArgumentException;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -33,6 +32,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/wod-age-ranges', name: 'wod_age_range_')]
 final readonly class WodAgeRangeController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private WodAgeRangeService $wodAgeRangeService,
     ) {
@@ -72,8 +73,8 @@ final readonly class WodAgeRangeController
                     limit: $paginatorValues->getLimit(),
                 )
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->wodAgeRangeService->transformCollectionToDTO($paginator->getItems());
@@ -124,11 +125,8 @@ final readonly class WodAgeRangeController
                     id: Uuid::fromString($wodAgeRangeId),
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->wodAgeRangeService->transformToDTO($wodAgeRange);
@@ -182,8 +180,8 @@ final readonly class WodAgeRangeController
                     id: Uuid::fromString($wodAgeRangeId),
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(null, Response::HTTP_NOT_FOUND);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $contentsArray = [];
@@ -272,12 +270,10 @@ final readonly class WodAgeRangeController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -334,11 +330,9 @@ final readonly class WodAgeRangeController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 }

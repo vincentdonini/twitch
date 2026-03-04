@@ -16,8 +16,7 @@ use App\UI\Adapters\Http\Wod\WodCategory\GetWodCategoryByIdHttp;
 use App\UI\Adapters\Http\Wod\WodCategory\ListWodCategoriesHttp;
 use App\UI\Adapters\Http\Wod\WodCategory\UpsertContentWodCategoryBulkHttp;
 use App\UI\Adapters\Http\Wod\WodCategory\UpsertContentWodCategoryHttp;
-use App\Domain\Core\Exceptions\EntityNotFoundException;
-use InvalidArgumentException;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -33,6 +32,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/wod-categories', name: 'wod_category_')]
 final readonly class WodCategoryController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private WodCategoryService $wodCategoryService,
     ) {
@@ -72,8 +73,8 @@ final readonly class WodCategoryController
                     limit: $paginatorValues->getLimit(),
                 )
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->wodCategoryService->transformCollectionToDTO(
@@ -126,11 +127,8 @@ final readonly class WodCategoryController
                     id: Uuid::fromString($wodCategoryId),
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->wodCategoryService->transformToDTO($wodCategory);
@@ -184,8 +182,8 @@ final readonly class WodCategoryController
                     id: Uuid::fromString($wodCategoryId),
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(null, Response::HTTP_NOT_FOUND);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $contentsArray = [];
@@ -274,12 +272,10 @@ final readonly class WodCategoryController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -336,11 +332,9 @@ final readonly class WodCategoryController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 }

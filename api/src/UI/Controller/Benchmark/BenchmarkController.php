@@ -5,8 +5,6 @@ namespace App\UI\Controller\Benchmark;
 use App\Domain\Benchmark\Benchmark\GetBenchmarkContentsByIdUseCase;
 use App\Domain\Benchmark\Benchmark\UpsertContentBenchmarkBulkUseCase;
 use App\Domain\Benchmark\Benchmark\UpsertContentBenchmarkUseCase;
-use App\Domain\Core\Exceptions\AlreadyExistException;
-use App\Domain\Core\Exceptions\EntityNotFoundException;
 use App\Domain\Benchmark\Entity\Benchmark;
 use App\Domain\Benchmark\Filters\BenchmarkFilterMapping;
 use App\Domain\Benchmark\Filters\BenchmarkFilterRules;
@@ -28,7 +26,7 @@ use App\UI\Adapters\Http\Benchmark\Benchmark\ListBenchmarksHttp;
 use App\UI\Adapters\Http\Benchmark\Benchmark\UpdateBenchmarkHttp;
 use App\UI\Adapters\Http\Benchmark\Benchmark\UpsertContentBenchmarkBulkHttp;
 use App\UI\Adapters\Http\Benchmark\Benchmark\UpsertContentBenchmarkHttp;
-use InvalidArgumentException;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -46,6 +44,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/benchmarks', name: 'benchmark_')]
 final class BenchmarkController extends AbstractController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private readonly BenchmarkService $benchmarkService,
     ) {
@@ -259,13 +259,9 @@ final class BenchmarkController extends AbstractController
                 status : Response::HTTP_CREATED,
                 headers: ['X-RESOURCE-ID' => $benchmark->getId()]
             );
-        } catch (InvalidArgumentException) {
-            $statusCode = Response::HTTP_BAD_REQUEST;
-        } catch (AlreadyExistException) {
-            $statusCode = Response::HTTP_CONFLICT;
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -307,11 +303,8 @@ final class BenchmarkController extends AbstractController
                     id: Uuid::fromString($benchmarkId),
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->benchmarkService->transformToDTO($benchmark);
@@ -377,14 +370,10 @@ final class BenchmarkController extends AbstractController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
-        } catch (AlreadyExistException) {
-            $statusCode = Response::HTTP_CONFLICT;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     // -----------------------------------------------------------------------------------------------------------------
@@ -422,8 +411,8 @@ final class BenchmarkController extends AbstractController
                     id: Uuid::fromString($benchmarkId)
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(null, Response::HTTP_NOT_FOUND);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $contentsArray = [];
@@ -521,12 +510,10 @@ final class BenchmarkController extends AbstractController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -586,11 +573,9 @@ final class BenchmarkController extends AbstractController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 }

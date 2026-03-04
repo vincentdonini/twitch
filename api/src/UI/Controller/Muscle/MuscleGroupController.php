@@ -20,13 +20,12 @@ use App\Infrastructure\Paginator\ResponsePaginator;
 use App\Infrastructure\Security\Voters\ListPermissions;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use App\Infrastructure\Sorts\RequestSort;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use App\UI\Adapters\Http\Muscle\MuscleGroup\GetMuscleGroupByIdHttp;
 use App\UI\Adapters\Http\Muscle\MuscleGroup\GetMusclesByMuscleGroupIdHttp;
 use App\UI\Adapters\Http\Muscle\MuscleGroup\ListMuscleGroupsHttp;
 use App\UI\Adapters\Http\Muscle\MuscleGroup\UpsertContentMuscleGroupBulkHttp;
 use App\UI\Adapters\Http\Muscle\MuscleGroup\UpsertContentMuscleGroupHttp;
-use Doctrine\ORM\EntityNotFoundException;
-use InvalidArgumentException;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -43,6 +42,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/muscle-groups', name: 'muscle_groups_')]
 final readonly class MuscleGroupController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private MuscleGroupService $muscleGroupService,
         private MuscleService      $muscleService,
@@ -158,8 +159,8 @@ final readonly class MuscleGroupController
                     sorts  : $sorts,
                 )
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->muscleGroupService->transformCollectionToDTO(
@@ -213,11 +214,8 @@ final readonly class MuscleGroupController
                     id: Uuid::fromString($muscleGroupId)
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->muscleGroupService->transformToDTO($muscleGroup);
@@ -267,8 +265,8 @@ final readonly class MuscleGroupController
                     muscleGroupId: Uuid::fromString($muscleGroupId)
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(null, Response::HTTP_NOT_FOUND);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->muscleService->transformCollectionToDTO($result);
@@ -332,8 +330,8 @@ final readonly class MuscleGroupController
                     id: Uuid::fromString($muscleGroupId)
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(null, Response::HTTP_NOT_FOUND);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $contentsArray = [];
@@ -422,12 +420,10 @@ final readonly class MuscleGroupController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -484,11 +480,9 @@ final readonly class MuscleGroupController
                 )
             );
 
-            $statusCode = Response::HTTP_NO_CONTENT;
-        } catch (EntityNotFoundException) {
-            $statusCode = Response::HTTP_NOT_FOUND;
+            return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 }

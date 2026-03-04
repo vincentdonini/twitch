@@ -10,10 +10,9 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Paginator\ResponsePaginator;
 use App\Infrastructure\Security\Voters\ListPermissions;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use App\UI\Adapters\Http\Security\Permission\GetPermissionByIdHttp;
 use App\UI\Adapters\Http\Security\Permission\ListPermissionHttp;
-use Doctrine\ORM\EntityNotFoundException;
-use InvalidArgumentException;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -33,6 +32,8 @@ use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 #[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final readonly class PermissionController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private PermissionService $permissionService,
     ) {
@@ -91,8 +92,8 @@ final readonly class PermissionController
                     limit: $paginatorValues->getLimit(),
                 )
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->permissionService->transformCollectionToDTO(
@@ -154,11 +155,8 @@ final readonly class PermissionController
             $permission = $useCase->execute(
                 new GetPermissionByIdHttp($permissionId)
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->permissionService->transformToDTO($permission);

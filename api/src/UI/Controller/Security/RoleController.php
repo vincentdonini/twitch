@@ -13,11 +13,10 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Paginator\ResponsePaginator;
 use App\Infrastructure\Security\Voters\ListPermissions;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use App\UI\Adapters\Http\Security\Role\GetRoleByIdHttp;
 use App\UI\Adapters\Http\Security\Role\listPermissionsByRoleHttp;
 use App\UI\Adapters\Http\Security\Role\ListRolesHttp;
-use Doctrine\ORM\EntityNotFoundException;
-use InvalidArgumentException;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -37,6 +36,8 @@ use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 #[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final readonly class RoleController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private RoleService       $roleService,
         private PermissionService $permissionService,
@@ -96,8 +97,8 @@ final readonly class RoleController
                     limit: $paginatorValues->getLimit(),
                 )
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->roleService->transformCollectionToDTO(
@@ -159,11 +160,8 @@ final readonly class RoleController
             $role = $useCase->execute(
                 new GetRoleByIdHttp($roleId)
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->roleService->transformToDTO($role);
@@ -230,13 +228,8 @@ final readonly class RoleController
                     limit: $paginatorValues->getLimit(),
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->permissionService->transformCollectionToDTO(

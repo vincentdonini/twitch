@@ -18,8 +18,7 @@ use App\Infrastructure\Serialization\FrontGroupsEnum;
 use App\UI\Adapters\Http\Wod\WodScore\CreateWodScoreHttp;
 use App\UI\Adapters\Http\Wod\WodScore\GetWodScoreByIdHttp;
 use App\UI\Adapters\Http\Wod\WodScore\ListWodScoresHttp;
-use App\Domain\Core\Exceptions\EntityNotFoundException;
-use App\Domain\Core\Exceptions\InvalidPayloadException;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use InvalidArgumentException;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
@@ -38,6 +37,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/wod-scores', name: 'wod_score_')]
 final class WodScoreController extends AbstractController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private readonly WodScoreService $wodScoreService,
     ) {
@@ -147,8 +148,8 @@ final class WodScoreController extends AbstractController
                 ),
                 $currentUser
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->wodScoreService->transformCollectionToDTO(
@@ -244,11 +245,9 @@ final class WodScoreController extends AbstractController
                 status : Response::HTTP_CREATED,
                 headers: ['X-RESOURCE-ID' => $wodScore->getId()]
             );
-        } catch (InvalidPayloadException) {
-            $statusCode = Response::HTTP_BAD_REQUEST;
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -301,11 +300,8 @@ final class WodScoreController extends AbstractController
                     status: Response::HTTP_FORBIDDEN
                 );
             }
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->wodScoreService->transformToDTO($wodScore);

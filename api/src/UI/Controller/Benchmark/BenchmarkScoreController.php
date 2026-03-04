@@ -20,7 +20,7 @@ use App\Infrastructure\Sorts\RequestSort;
 use App\UI\Adapters\Http\Benchmark\BenchmarkScore\CreateBenchmarkScoreHttp;
 use App\UI\Adapters\Http\Benchmark\BenchmarkScore\GetBenchmarkScoreByIdHttp;
 use App\UI\Adapters\Http\Benchmark\BenchmarkScore\ListBenchmarkScoresHttp;
-use App\Domain\Core\Exceptions\EntityNotFoundException;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use InvalidArgumentException;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
@@ -39,6 +39,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route('/benchmark-scores', name: 'benchmark_score_')]
 final class BenchmarkScoreController extends AbstractController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private readonly BenchmarkScoreService $benchmarkScoreService,
     ) {
@@ -251,11 +253,9 @@ final class BenchmarkScoreController extends AbstractController
                 status : Response::HTTP_CREATED,
                 headers: ['X-RESOURCE-ID' => $benchmarkScore->getId()]
             );
-        } catch (InvalidArgumentException) {
-            $statusCode = Response::HTTP_BAD_REQUEST;
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
-
-        return new JsonResponse(null, $statusCode);
     }
 
     #[Route(
@@ -308,11 +308,8 @@ final class BenchmarkScoreController extends AbstractController
                     status: Response::HTTP_FORBIDDEN
                 );
             }
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->benchmarkScoreService->transformToDTO($benchmarkScore);

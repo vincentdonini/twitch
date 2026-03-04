@@ -9,10 +9,9 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Paginator\ResponsePaginator;
 use App\Infrastructure\Security\Voters\ListPermissions;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
 use App\UI\Adapters\Http\User\User\GetUserByIdHttp;
 use App\UI\Adapters\Http\User\User\ListUsersHttp;
-use Doctrine\ORM\EntityNotFoundException;
-use InvalidArgumentException;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -29,6 +28,8 @@ use Symfony\Component\Uid\Uuid;
 #[Route(path: '/users', name: 'user_')]
 final class UserController extends AbstractController
 {
+    use ApiExceptionHandler;
+
     public function __construct(
         private readonly UserService $userService,
     ) {
@@ -90,8 +91,8 @@ final class UserController extends AbstractController
                     limit: $paginatorValues->getLimit(),
                 )
             );
-        } catch (InvalidArgumentException) {
-            throw new InvalidArgumentException();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItems = $this->userService->transformCollectionToDTO($paginator->getItems());
@@ -142,11 +143,8 @@ final class UserController extends AbstractController
                     id: Uuid::fromString($userId),
                 )
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(
-                data  : null,
-                status: Response::HTTP_NOT_FOUND
-            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->userService->transformToDTO($user);
@@ -196,8 +194,8 @@ final class UserController extends AbstractController
             $user = $useCase->execute(
                 new GetUserByIdHttp($authenticatedUser->getId())
             );
-        } catch (EntityNotFoundException) {
-            return new JsonResponse(null, Response::HTTP_NOT_FOUND);
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
         $dtoItem = $this->userService->transformToDTO($user);
