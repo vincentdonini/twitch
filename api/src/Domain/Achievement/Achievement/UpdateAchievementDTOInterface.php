@@ -10,7 +10,7 @@ interface UpdateAchievementDTOInterface
 
     public function getCode(): ?string;
 
-    public function getPosition(): ?string;
+    public function getPosition(): ?int;
 
     public function getAchievementGroupId(): ?Uuid;
 

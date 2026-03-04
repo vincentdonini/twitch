@@ -220,12 +220,12 @@ final class AchievementGroupController extends AbstractController
 
             return new JsonResponse(
                 data   : $normalizer->normalize(
-                    object : $achievementGroup,
+                    object : $this->achievementGroupService->transformToDTO($achievementGroup),
                     format : 'json',
-                    context: ['groups' => [FrontGroupsEnum::ACHIEVEMENT_MANAGE]]
+                    context: ['groups' => [FrontGroupsEnum::ACHIEVEMENT_GROUP_MANAGE]]
                 ),
                 status : Response::HTTP_CREATED,
-                headers: ['X-RESOURCE-ID' => $achievementGroup->getId()]
+                headers: ['X-RESOURCE-ID' => $achievementGroup->getId()->toRfc4122()]
             );
         } catch (InvalidArgumentException) {
             $statusCode = Response::HTTP_BAD_REQUEST;
@@ -439,7 +439,7 @@ final class AchievementGroupController extends AbstractController
         ],
         methods     : ['PUT']
     )]
-    #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_MANAGE)]
+    #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_GROUP_MANAGE)]
     #[OAT\Put(
         description: 'Create or update Achievement group content for a given locale.',
         summary    : 'Upsert achievementGroup localized content.',
@@ -504,7 +504,7 @@ final class AchievementGroupController extends AbstractController
         ],
         methods     : ['PUT']
     )]
-    #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_MANAGE)]
+    #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_GROUP_MANAGE)]
     #[OAT\Put(
         description: 'Create or update multiple localized contents for an achievement group.',
         summary    : 'Upsert multiple Achievement group contents.',

@@ -27,7 +27,7 @@ final readonly class UpdateAchievementGroupUseCase
             throw new EntityNotFoundException();
         }
 
-        if (!empty($dto->getAchievementCategoryId())) {
+        if ($dto->getAchievementCategoryId() !== null) {
             $achievementCategory = $this->achievementCategoryDAL->getById($dto->getAchievementCategoryId());
             $achievementGroup->setAchievementCategory($achievementCategory);
         }
@@ -57,6 +57,6 @@ final readonly class UpdateAchievementGroupUseCase
             return true;
         }
 
-        return $existingAchievementGroup->getId() === $currentAchievementGroupId;
+        return $existingAchievementGroup->getId()->equals($currentAchievementGroupId);
     }
 }

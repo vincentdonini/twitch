@@ -13,8 +13,6 @@ final readonly class AchievementGroupService
 {
     use LocaleTrait;
 
-    private array $filterMapping;
-
     public function __construct(
         private RequestStack $requestStack,
     ) {

@@ -3,6 +3,7 @@
 namespace App\Domain\Achievement\Achievement;
 
 use App\Domain\Achievement\Enum\AchievementSourceEnum;
+use Symfony\Component\Uid\Uuid;
 
 interface CreateAchievementDTOInterface
 {
@@ -12,5 +13,5 @@ interface CreateAchievementDTOInterface
 
     public function getSource(): ?AchievementSourceEnum;
 
-    public function getAchievementGroupId(): ?string;
+    public function getAchievementGroupId(): ?Uuid;
 }

@@ -123,8 +123,8 @@ final class AchievementCategoryController extends AbstractController
         try {
             $paginator = $useCase->execute(
                 new ListAchievementCategoriesHttp(
-                    page   : null,
-                    limit  : null,
+                    page   : $paginatorValues->getPage(),
+                    limit  : $paginatorValues->getLimit(),
                     filters: $filters,
                     sorts  : $sorts,
                 )
@@ -210,12 +210,12 @@ final class AchievementCategoryController extends AbstractController
 
             return new JsonResponse(
                 data   : $normalizer->normalize(
-                    object : $achievementCategory,
+                    object : $this->achievementCategoryService->transformToDTO($achievementCategory),
                     format : 'json',
-                    context: ['groups' => [FrontGroupsEnum::ACHIEVEMENT_MANAGE]]
+                    context: ['groups' => [FrontGroupsEnum::ACHIEVEMENT_CATEGORY_MANAGE]]
                 ),
                 status : Response::HTTP_CREATED,
-                headers: ['X-RESOURCE-ID' => $achievementCategory->getId()]
+                headers: ['X-RESOURCE-ID' => $achievementCategory->getId()->toRfc4122()]
             );
         } catch (InvalidArgumentException) {
             $statusCode = Response::HTTP_BAD_REQUEST;
@@ -429,7 +429,7 @@ final class AchievementCategoryController extends AbstractController
         ],
         methods     : ['PUT']
     )]
-    #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_MANAGE)]
+    #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_CATEGORY_MANAGE)]
     #[OAT\Put(
         description: 'Create or update achievement category content for a given locale.',
         summary    : 'Upsert achievement category localized content.',
@@ -492,7 +492,7 @@ final class AchievementCategoryController extends AbstractController
         requirements: ['wodId' => '\d+'],
         methods     : ['PUT']
     )]
-    #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_MANAGE)]
+    #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_CATEGORY_MANAGE)]
     #[OAT\Put(
         description: 'Create or update multiple localized contents for an Achievement category.',
         summary    : 'Upsert multiple Achievement category contents.',

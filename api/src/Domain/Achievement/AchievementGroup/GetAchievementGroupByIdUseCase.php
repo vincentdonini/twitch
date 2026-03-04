@@ -4,7 +4,7 @@ namespace App\Domain\Achievement\AchievementGroup;
 
 use App\Domain\Achievement\Entity\AchievementGroup;
 use App\Domain\Achievement\Ports\AchievementGroupDALInterface;
-use Doctrine\ORM\EntityNotFoundException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 
 final readonly class GetAchievementGroupByIdUseCase
 {

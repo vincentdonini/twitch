@@ -5,6 +5,7 @@ namespace App\UI\Adapters\Http\Achievement\Achievement;
 use App\Domain\Achievement\Achievement\CreateAchievementDTOInterface;
 use App\Domain\Achievement\Enum\AchievementSourceEnum;
 use InvalidArgumentException;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class CreateAchievementHttp implements CreateAchievementDTOInterface
 {
@@ -36,8 +37,10 @@ final readonly class CreateAchievementHttp implements CreateAchievementDTOInterf
             ?? throw new InvalidArgumentException(sprintf('Invalid source "%s".', $source));
     }
 
-    public function getAchievementGroupId(): ?string
+    public function getAchievementGroupId(): ?Uuid
     {
-        return $this->payload['achievementGroupId'] ?? null;
+        return isset($this->payload['achievementGroupId'])
+            ? Uuid::fromString($this->payload['achievementGroupId'])
+            : null;
     }
 }

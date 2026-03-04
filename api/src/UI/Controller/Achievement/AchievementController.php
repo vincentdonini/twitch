@@ -224,12 +224,12 @@ final class AchievementController extends AbstractController
 
             return new JsonResponse(
                 data   : $normalizer->normalize(
-                    object : $achievement,
+                    object : $this->achievementService->transformToDTO($achievement),
                     format : 'json',
                     context: ['groups' => [FrontGroupsEnum::ACHIEVEMENT_MANAGE]]
                 ),
                 status : Response::HTTP_CREATED,
-                headers: ['X-RESOURCE-ID' => $achievement->getId()]
+                headers: ['X-RESOURCE-ID' => $achievement->getId()->toRfc4122()]
             );
         } catch (InvalidArgumentException) {
             $statusCode = Response::HTTP_BAD_REQUEST;

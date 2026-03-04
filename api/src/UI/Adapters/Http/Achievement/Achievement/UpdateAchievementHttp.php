@@ -24,14 +24,16 @@ final readonly class UpdateAchievementHttp implements UpdateAchievementDTOInterf
         return $this->payload['code'] ?? null;
     }
 
-    public function getPosition(): ?string
+    public function getPosition(): ?int
     {
-        return $this->payload['position'] ?? null;
+        return isset($this->payload['position']) ? (int) $this->payload['position'] : null;
     }
 
     public function getAchievementGroupId(): ?Uuid
     {
-        return $this->payload['achievementGroupId'] ?? null;
+        return isset($this->payload['achievementGroupId'])
+            ? Uuid::fromString($this->payload['achievementGroupId'])
+            : null;
     }
 
     public function getContents(): array

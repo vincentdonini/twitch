@@ -10,9 +10,9 @@ interface UpdateAchievementGroupDTOInterface
 
     public function getCode(): ?string;
 
-    public function getPosition(): ?string;
+    public function getPosition(): ?int;
 
-    public function getAchievementCategoryId(): ?string;
+    public function getAchievementCategoryId(): ?Uuid;
 
     public function getContents(): array;
 }

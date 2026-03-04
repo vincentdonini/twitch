@@ -24,14 +24,16 @@ final readonly class UpdateAchievementGroupHttp implements UpdateAchievementGrou
         return $this->payload['code'] ?? null;
     }
 
-    public function getPosition(): ?string
+    public function getPosition(): ?int
     {
-        return $this->payload['position'] ?? null;
+        return isset($this->payload['position']) ? (int) $this->payload['position'] : null;
     }
 
-    public function getAchievementCategoryId(): ?string
+    public function getAchievementCategoryId(): ?Uuid
     {
-        return $this->payload['achievementCategoryId'] ?? null;
+        return isset($this->payload['achievementCategoryId'])
+            ? Uuid::fromString($this->payload['achievementCategoryId'])
+            : null;
     }
 
     public function getContents(): array

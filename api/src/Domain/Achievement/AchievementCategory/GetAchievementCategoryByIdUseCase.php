@@ -4,7 +4,7 @@ namespace App\Domain\Achievement\AchievementCategory;
 
 use App\Domain\Achievement\Entity\AchievementCategory;
 use App\Domain\Achievement\Ports\AchievementCategoryDALInterface;
-use Doctrine\ORM\EntityNotFoundException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 
 final readonly class GetAchievementCategoryByIdUseCase
 {

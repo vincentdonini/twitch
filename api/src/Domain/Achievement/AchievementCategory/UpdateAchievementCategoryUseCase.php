@@ -50,6 +50,6 @@ final readonly class UpdateAchievementCategoryUseCase
             return true;
         }
 
-        return $existingAchievementCategory->getId() === $currentAchievementCategoryId;
+        return $existingAchievementCategory->getId()->equals($currentAchievementCategoryId);
     }
 }

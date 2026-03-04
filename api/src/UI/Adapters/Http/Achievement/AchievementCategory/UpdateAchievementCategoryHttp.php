@@ -24,9 +24,9 @@ final readonly class UpdateAchievementCategoryHttp implements UpdateAchievementC
         return $this->payload['code'] ?? null;
     }
 
-    public function getPosition(): ?string
+    public function getPosition(): ?int
     {
-        return $this->payload['position'] ?? null;
+        return isset($this->payload['position']) ? (int) $this->payload['position'] : null;
     }
 
     public function getContents(): array
