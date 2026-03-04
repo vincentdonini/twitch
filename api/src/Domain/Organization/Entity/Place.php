@@ -342,4 +342,18 @@ class Place
         }
         return $this;
     }
+
+    // -----------------------------------------------------------------------------------------------------------------
+
+    public function isOwner(User $user): bool
+    {
+        return $this->company->getOwners()->exists(
+            fn($key, User $owner) => $owner->getId()->equals($user->getId())
+        );
+    }
+
+    public function isCoach(User $user): bool
+    {
+        return $this->users->contains($user) && in_array('ROLE_COACH', $user->getRoles(), true);
+    }
 }

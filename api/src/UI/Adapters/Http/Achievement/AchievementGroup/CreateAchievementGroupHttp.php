@@ -3,6 +3,7 @@
 namespace App\UI\Adapters\Http\Achievement\AchievementGroup;
 
 use App\Domain\Achievement\AchievementGroup\CreateAchievementGroupDTOInterface;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class CreateAchievementGroupHttp implements CreateAchievementGroupDTOInterface
 {
@@ -22,8 +23,10 @@ final readonly class CreateAchievementGroupHttp implements CreateAchievementGrou
         return $this->payload['position'] ?? null;
     }
 
-    public function getAchievementCategoryId(): ?string
+    public function getAchievementCategoryId(): ?Uuid
     {
-        return $this->payload['achievementCategoryId'] ?? null;
+        return isset($this->payload['achievementCategoryId'])
+            ? Uuid::fromString($this->payload['achievementCategoryId'])
+            : null;
     }
 }

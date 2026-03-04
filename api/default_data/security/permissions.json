@@ -107,6 +107,25 @@
     { "code": "PERMISSION_CONTENT_MUSCLE_GROUP_MANAGE", "label": "Manager les contents des groupes musculaires" }
   ],
 
+  "FORMULA": [
+    { "code": "PERMISSION_FORMULA_LIST", "label": "Lister les formules" },
+    { "code": "PERMISSION_FORMULA_VIEW", "label": "Voir une formule" },
+    { "code": "PERMISSION_FORMULA_MANAGE", "label": "Manager une formule" },
+    { "code": "PERMISSION_FORMULA_CREATE", "label": "Créer une formule" },
+    { "code": "PERMISSION_FORMULA_EDIT", "label": "Modifier une formule" },
+    { "code": "PERMISSION_FORMULA_DELETE", "label": "Supprimer une formule" }
+  ],
+
+  "SUBSCRIPTION": [
+    { "code": "PERMISSION_SUBSCRIPTION_LIST", "label": "Lister les abonnements" },
+    { "code": "PERMISSION_SUBSCRIPTION_VIEW", "label": "Voir un abonnement" },
+    { "code": "PERMISSION_SUBSCRIPTION_MANAGE", "label": "Manager un abonnement" },
+    { "code": "PERMISSION_SUBSCRIPTION_CREATE", "label": "Créer un abonnement" },
+    { "code": "PERMISSION_SUBSCRIPTION_CREATE_FOR_USER", "label": "Créer un abonnement pour un autre utilisateur" },
+    { "code": "PERMISSION_SUBSCRIPTION_EDIT", "label": "Modifier un abonnement" },
+    { "code": "PERMISSION_SUBSCRIPTION_DELETE", "label": "Supprimer un abonnement" }
+  ],
+
   "ORGANIZATION": [
     { "code": "PERMISSION_COMPANY_LIST", "label": "Lister les companies" },
     { "code": "PERMISSION_COMPANY_VIEW", "label": "Voir une company" },

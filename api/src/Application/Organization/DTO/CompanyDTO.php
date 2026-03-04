@@ -18,7 +18,8 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
+        FrontGroupsEnum::FORMULA_LIST, FrontGroupsEnum::FORMULA_DETAIL,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public Uuid $id;
 
@@ -26,7 +27,8 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
+        FrontGroupsEnum::FORMULA_LIST, FrontGroupsEnum::FORMULA_DETAIL,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public string $slug;
 
@@ -34,37 +36,33 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
+        FrontGroupsEnum::FORMULA_LIST, FrontGroupsEnum::FORMULA_DETAIL,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public string $name;
 
     #[Groups([
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
     ])]
     public string $legalName;
 
     #[Groups([
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
     ])]
     public ?string $siren;
 
     #[Groups([
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
     ])]
     public ?string $vatNumber;
 
     #[Groups([
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
     ])]
     public ?string $legalForm;
 
     #[Groups([
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
     ])]
     public ?string $activityCode;
 
@@ -72,7 +70,7 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public string $address;
 
@@ -80,7 +78,7 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public ?string $address2;
 
@@ -88,7 +86,7 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public string $postalCode;
 
@@ -96,7 +94,7 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public City $city;
 
@@ -104,7 +102,7 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public Department $department;
 
@@ -112,7 +110,7 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public Region $region;
 
@@ -120,7 +118,7 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public Country $country;
 
@@ -128,7 +126,7 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public CompanyStatusEnum $status;
 
@@ -136,7 +134,6 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
     ])]
     public ?DateTimeImmutable $registrationDate;
 
@@ -144,7 +141,6 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
     ])]
     public DateTimeImmutable $createdAt;
 
@@ -152,7 +148,6 @@ class CompanyDTO
         FrontGroupsEnum::COMPANY_LIST_PUBLIC, FrontGroupsEnum::COMPANY_DETAIL_PUBLIC,
         FrontGroupsEnum::COMPANY_LIST_ADMIN, FrontGroupsEnum::COMPANY_DETAIL_ADMIN,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_DETAIL_PUBLIC,
-        FrontGroupsEnum::PLACE_LIST_ADMIN, FrontGroupsEnum::PLACE_DETAIL_ADMIN,
     ])]
     public ?DateTimeImmutable $updatedAt;
 

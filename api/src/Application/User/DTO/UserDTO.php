@@ -16,6 +16,7 @@ class UserDTO
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
         FrontGroupsEnum::ATHLETE_LIST,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_LIST_ADMIN,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public Uuid $id;
 
@@ -34,6 +35,7 @@ class UserDTO
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
         FrontGroupsEnum::ATHLETE_LIST,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_LIST_ADMIN,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public string $firstName;
 
@@ -45,6 +47,7 @@ class UserDTO
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
         FrontGroupsEnum::ATHLETE_LIST,
         FrontGroupsEnum::PLACE_LIST_PUBLIC, FrontGroupsEnum::PLACE_LIST_ADMIN,
+        FrontGroupsEnum::SUBSCRIPTION_LIST, FrontGroupsEnum::SUBSCRIPTION_DETAIL,
     ])]
     public string $lastName;
 

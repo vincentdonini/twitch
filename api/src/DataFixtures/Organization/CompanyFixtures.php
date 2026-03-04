@@ -103,7 +103,7 @@ class CompanyFixtures extends Fixture implements DependentFixtureInterface
                             lastName : $names[1] ?? ''
                         );
 
-                        $user->setPassword($this->passwordHasher->hashPassword($user, 'ChangeMe123!'));
+                        $user->setPassword($this->passwordHasher->hashPassword($user, 'Woder123!!'));
 
                         $role = $roleRepo->findOneBy(['code' => 'ROLE_OWNER']);
                         if ($role) {
@@ -173,7 +173,7 @@ class CompanyFixtures extends Fixture implements DependentFixtureInterface
                 );
 
                 // Mot de passe
-                $user->setPassword($this->passwordHasher->hashPassword($user, 'ChangeMe123!'));
+                $user->setPassword($this->passwordHasher->hashPassword($user, 'Woder123!!'));
 
                 // Assignation du rôle
                 $role = $roleRepo->findOneBy(['code' => 'ROLE_' . strtoupper($staffData['role'])]);

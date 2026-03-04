@@ -6,6 +6,7 @@ use App\Domain\Organization\Entity\Company;
 use App\Domain\Organization\Entity\Place;
 use App\Domain\Security\Entity\Role;
 use App\Infrastructure\Doctrine\Repository\User\UserRepository;
+use DateTimeImmutable;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -44,6 +45,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[OA\Property(description: "User lastname", example: "DOE")]
     private string $lastName;
 
+    #[ORM\Column(type: 'date_immutable', nullable: true)]
+    #[OA\Property(description: "User birth date", example: "1995-06-15")]
+    private ?DateTimeImmutable $birthDate = null;
+
     #[ORM\ManyToMany(targetEntity: Company::class, inversedBy: 'owners')]
     #[ORM\JoinTable(name: 'user_has_company')]
     private Collection $companies;
@@ -56,15 +61,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\JoinTable(name: 'user_role')]
     private Collection $roles;
 
-    /**
-     * Constructeur avec toutes les propriétés obligatoires pour créer un User
-     */
     public function __construct(
         string $email,
         string $firstName,
         string $lastName
     ) {
-        $this->id        = Uuid::v7();
+        $this->id = Uuid::v7();
+
         $this->email     = $email;
         $this->firstName = $firstName;
         $this->lastName  = $lastName;
@@ -77,6 +80,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     // -----------------------------------------------------------------------------------------------------------------
     // GETTERS / SETTERS
     // -----------------------------------------------------------------------------------------------------------------
+
     public function getId(): ?Uuid
     {
         return $this->id;
@@ -115,6 +119,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
+    public function getBirthDate(): ?DateTimeImmutable
+    {
+        return $this->birthDate;
+    }
+
+    public function setBirthDate(?DateTimeImmutable $birthDate): self
+    {
+        $this->birthDate = $birthDate;
+        return $this;
+    }
+
     public function getPassword(): ?string
     {
         return $this->password;
@@ -139,6 +154,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     // -----------------------------------------------------------------------------------------------------------------
     // Roles
     // -----------------------------------------------------------------------------------------------------------------
+
     public function addRole(Role $role): self
     {
         if (!$this->roles->contains($role)) {
@@ -171,6 +187,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     // -----------------------------------------------------------------------------------------------------------------
     // Permissions
     // -----------------------------------------------------------------------------------------------------------------
+
     public function getPermissions(): array
     {
         $permissions = [];
@@ -190,6 +207,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     // -----------------------------------------------------------------------------------------------------------------
     // Companies
     // -----------------------------------------------------------------------------------------------------------------
+
     public function getCompanies(): Collection
     {
         return $this->companies;
@@ -215,6 +233,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     // -----------------------------------------------------------------------------------------------------------------
     // Places
     // -----------------------------------------------------------------------------------------------------------------
+
     public function getPlaces(): Collection
     {
         return $this->places;
@@ -235,5 +254,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             $place->removeUser($this);
         }
         return $this;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    // Business
+    // -----------------------------------------------------------------------------------------------------------------
+
+    public function getAge(): ?int
+    {
+        return $this->birthDate?->diff(new DateTimeImmutable())->y;
     }
 }

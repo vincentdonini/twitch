@@ -109,6 +109,20 @@ final class FrontGroupsEnum
     public const EXERCISE_CATEGORY_DETAIL = 'front:exerciseCategory:detail';
 
 
+    // FORMULA
+    // -----------------------------------------------------------------------------------------------------------------
+    public const FORMULA_MANAGE = 'front:formula:manage';
+    public const FORMULA_LIST   = 'front:formula:list';
+    public const FORMULA_DETAIL = 'front:formula:detail';
+
+
+    // SUBSCRIPTION
+    // -----------------------------------------------------------------------------------------------------------------
+    public const SUBSCRIPTION_MANAGE = 'front:subscription:manage';
+    public const SUBSCRIPTION_LIST   = 'front:subscription:list';
+    public const SUBSCRIPTION_DETAIL = 'front:subscription:detail';
+
+
     // MUSCLE
     // -----------------------------------------------------------------------------------------------------------------
     public const MUSCLE_MANAGE = 'front:muscle:manage';

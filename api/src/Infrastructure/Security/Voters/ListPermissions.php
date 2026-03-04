@@ -112,6 +112,27 @@ final class ListPermissions
     public const PERMISSION_CONTENT_EXERCISE_CATEGORY_DELETE = 'PERMISSION_CONTENT_EXERCISE_CATEGORY_DELETE';
 
 
+    // FORMULA
+    // -----------------------------------------------------------------------------------------------------------------
+    public const PERMISSION_FORMULA_LIST = 'PERMISSION_FORMULA_LIST';
+    public const PERMISSION_FORMULA_VIEW = 'PERMISSION_FORMULA_VIEW';
+    public const PERMISSION_FORMULA_MANAGE = 'PERMISSION_FORMULA_MANAGE';
+    public const PERMISSION_FORMULA_CREATE = 'PERMISSION_FORMULA_CREATE';
+    public const PERMISSION_FORMULA_EDIT = 'PERMISSION_FORMULA_EDIT';
+    public const PERMISSION_FORMULA_DELETE = 'PERMISSION_FORMULA_DELETE';
+
+
+    // SUBSCRIPTION
+    // -----------------------------------------------------------------------------------------------------------------
+    public const PERMISSION_SUBSCRIPTION_LIST = 'PERMISSION_SUBSCRIPTION_LIST';
+    public const PERMISSION_SUBSCRIPTION_VIEW = 'PERMISSION_SUBSCRIPTION_VIEW';
+    public const PERMISSION_SUBSCRIPTION_MANAGE = 'PERMISSION_SUBSCRIPTION_MANAGE';
+    public const PERMISSION_SUBSCRIPTION_CREATE_FOR_USER = 'PERMISSION_SUBSCRIPTION_CREATE_FOR_USER';
+    public const PERMISSION_SUBSCRIPTION_CREATE = 'PERMISSION_SUBSCRIPTION_CREATE';
+    public const PERMISSION_SUBSCRIPTION_EDIT = 'PERMISSION_SUBSCRIPTION_EDIT';
+    public const PERMISSION_SUBSCRIPTION_DELETE = 'PERMISSION_SUBSCRIPTION_DELETE';
+
+
     // MUSCLE
     // -----------------------------------------------------------------------------------------------------------------
     public const PERMISSION_MUSCLE_LIST = 'PERMISSION_MUSCLE_LIST';
