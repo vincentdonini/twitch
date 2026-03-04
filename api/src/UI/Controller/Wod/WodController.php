@@ -4,6 +4,7 @@ namespace App\UI\Controller\Wod;
 
 use App\Domain\Core\Exceptions\AlreadyExistException;
 use App\Domain\Core\Exceptions\EntityNotFoundException;
+use App\Domain\Core\Exceptions\InvalidPayloadException;
 use App\Domain\User\Entity\User;
 use App\Domain\Wod\Entity\Wod;
 use App\Domain\Wod\Filters\WodFilterMapping;
@@ -397,7 +398,7 @@ final class WodController extends AbstractController
                 status : Response::HTTP_CREATED,
                 headers: ['X-RESOURCE-ID' => $wod->getId()]
             );
-        } catch (InvalidArgumentException) {
+        } catch (InvalidPayloadException) {
             $statusCode = Response::HTTP_BAD_REQUEST;
         } catch (AlreadyExistException) {
             $statusCode = Response::HTTP_CONFLICT;
@@ -602,7 +603,7 @@ final class WodController extends AbstractController
             request         : $request,
             fieldMapping    : WodScoreFilterMapping::FIELD_MAP,
             allowedOperators: WodScoreFilterRules::ALLOWED_OPERATORS,
-            allowedFields   : WodFilterRules::PUBLIC_FIELDS,
+            allowedFields   : WodScoreFilterRules::PUBLIC_FIELDS,
         );
 
         try {

@@ -16,7 +16,7 @@ use App\UI\Adapters\Http\Wod\WodType\GetWodTypeByIdHttp;
 use App\UI\Adapters\Http\Wod\WodType\ListWodTypesHttp;
 use App\UI\Adapters\Http\Wod\WodType\UpsertContentWodTypeBulkHttp;
 use App\UI\Adapters\Http\Wod\WodType\UpsertContentWodTypeHttp;
-use Doctrine\ORM\EntityNotFoundException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 use InvalidArgumentException;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -180,7 +180,7 @@ final readonly class WodTypeController
                 format : 'json',
                 context: [
                     'groups' => [
-                        FrontGroupsEnum::WOD_TYPE_LIST,
+                        FrontGroupsEnum::WOD_TYPE_DETAIL,
                     ],
                 ]
             ),
@@ -267,10 +267,10 @@ final readonly class WodTypeController
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
-                required  : ['name', 'summary'],
+                required  : ['title', 'summary'],
                 properties: [
                     new OAT\Property(
-                        property: 'name',
+                        property: 'title',
                         type    : 'string',
                         example : 'Lorem ipsum'
                     ),
@@ -339,12 +339,12 @@ final readonly class WodTypeController
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Lorem ipsum",
+                        "title"   => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                         "details" => null,
                     ],
                     "en" => [
-                        "name"    => "Lorem ipsum",
+                        "title"   => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
                         "details" => null,
                     ],

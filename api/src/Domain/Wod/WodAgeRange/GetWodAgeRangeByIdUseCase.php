@@ -4,7 +4,7 @@ namespace App\Domain\Wod\WodAgeRange;
 
 use App\Domain\Wod\Entity\WodAgeRange;
 use App\Domain\Wod\Ports\WodAgeRangeDALInterface;
-use Doctrine\ORM\EntityNotFoundException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 
 final readonly class GetWodAgeRangeByIdUseCase
 {

@@ -3,6 +3,8 @@
 namespace App\Domain\Wod\Wod;
 
 use App\Domain\User\Entity\User;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
+use App\Domain\Wod\Entity\Wod;
 use App\Domain\Wod\Leaderboard\LeaderboardOrdering;
 use App\Domain\Wod\Ports\WodDALInterface;
 use App\Domain\Wod\Ports\WodScoreDALInterface;
@@ -21,6 +23,9 @@ final readonly class GetWodLeaderboardUseCase
         ?User                         $currentUser
     ): LightPaginator {
         $wod = $this->wodDAL->getById($dto->getWodId());
+        if (!$wod instanceof Wod) {
+            throw new EntityNotFoundException();
+        }
 
         return $this->wodScoreDAL->getLeaderboard(
             wodId        : $dto->getWodId(),

@@ -4,7 +4,7 @@ namespace App\Domain\Wod\WodDivision;
 
 use App\Domain\Wod\Entity\WodDivision;
 use App\Domain\Wod\Ports\WodDivisionDALInterface;
-use Doctrine\ORM\EntityNotFoundException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 
 final readonly class GetWodDivisionByIdUseCase
 {

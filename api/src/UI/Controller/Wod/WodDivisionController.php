@@ -16,7 +16,7 @@ use App\UI\Adapters\Http\Wod\WodDivision\GetWodDivisionByIdHttp;
 use App\UI\Adapters\Http\Wod\WodDivision\ListWodDivisionsHttp;
 use App\UI\Adapters\Http\Wod\WodDivision\UpsertContentWodDivisionBulkHttp;
 use App\UI\Adapters\Http\Wod\WodDivision\UpsertContentWodDivisionHttp;
-use Doctrine\ORM\EntityNotFoundException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 use InvalidArgumentException;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -139,7 +139,7 @@ final readonly class WodDivisionController
                 format : 'json',
                 context: [
                     'groups' => [
-                        FrontGroupsEnum::WOD_DIVISION_LIST,
+                        FrontGroupsEnum::WOD_DIVISION_DETAIL,
                     ],
                 ]
             ),
@@ -226,10 +226,10 @@ final readonly class WodDivisionController
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
-                required  : ['name', 'summary'],
+                required  : ['title', 'summary'],
                 properties: [
                     new OAT\Property(
-                        property: 'name',
+                        property: 'title',
                         type    : 'string',
                         example : 'Lorem ipsum'
                     ),
@@ -298,12 +298,12 @@ final readonly class WodDivisionController
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Lorem ipsum",
+                        "title"   => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                         "details" => null,
                     ],
                     "en" => [
-                        "name"    => "Lorem ipsum",
+                        "title"   => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
                         "details" => null,
                     ],

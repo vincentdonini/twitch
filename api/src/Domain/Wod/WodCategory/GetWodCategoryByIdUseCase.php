@@ -4,7 +4,7 @@ namespace App\Domain\Wod\WodCategory;
 
 use App\Domain\Wod\Entity\WodCategory;
 use App\Domain\Wod\Ports\WodCategoryDALInterface;
-use Doctrine\ORM\EntityNotFoundException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 
 class GetWodCategoryByIdUseCase
 {

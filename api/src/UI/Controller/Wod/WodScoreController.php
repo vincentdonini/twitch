@@ -18,7 +18,8 @@ use App\Infrastructure\Serialization\FrontGroupsEnum;
 use App\UI\Adapters\Http\Wod\WodScore\CreateWodScoreHttp;
 use App\UI\Adapters\Http\Wod\WodScore\GetWodScoreByIdHttp;
 use App\UI\Adapters\Http\Wod\WodScore\ListWodScoresHttp;
-use Doctrine\ORM\EntityNotFoundException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
+use App\Domain\Core\Exceptions\InvalidPayloadException;
 use InvalidArgumentException;
 use Nelmio\ApiDocBundle\Attribute\Model;
 use Nelmio\ApiDocBundle\Attribute\Security;
@@ -85,7 +86,7 @@ final class WodScoreController extends AbstractController
             ),
             new OAT\Parameter(
                 name       : 'filters[user.lastName][like]',
-                description: 'Filter by user firstName (partial match).',
+                description: 'Filter by user lastName (partial match).',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -243,7 +244,7 @@ final class WodScoreController extends AbstractController
                 status : Response::HTTP_CREATED,
                 headers: ['X-RESOURCE-ID' => $wodScore->getId()]
             );
-        } catch (InvalidArgumentException) {
+        } catch (InvalidPayloadException) {
             $statusCode = Response::HTTP_BAD_REQUEST;
         }
 
@@ -315,7 +316,7 @@ final class WodScoreController extends AbstractController
                 format : 'json',
                 context: [
                     'groups' => [
-                        FrontGroupsEnum::WOD_SCORE_LIST,
+                        FrontGroupsEnum::WOD_SCORE_DETAIL,
                     ],
                 ]
             ),

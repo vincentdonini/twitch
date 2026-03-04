@@ -4,7 +4,7 @@ namespace App\Domain\Wod\Wod;
 
 use App\Domain\Wod\Entity\Wod;
 use App\Domain\Wod\Ports\WodDALInterface;
-use Doctrine\ORM\EntityNotFoundException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 
 final readonly class GetWodByIdUseCase
 {

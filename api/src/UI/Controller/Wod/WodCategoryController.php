@@ -16,7 +16,7 @@ use App\UI\Adapters\Http\Wod\WodCategory\GetWodCategoryByIdHttp;
 use App\UI\Adapters\Http\Wod\WodCategory\ListWodCategoriesHttp;
 use App\UI\Adapters\Http\Wod\WodCategory\UpsertContentWodCategoryBulkHttp;
 use App\UI\Adapters\Http\Wod\WodCategory\UpsertContentWodCategoryHttp;
-use Doctrine\ORM\EntityNotFoundException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 use InvalidArgumentException;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
@@ -141,7 +141,7 @@ final readonly class WodCategoryController
                 format : 'json',
                 context: [
                     'groups' => [
-                        FrontGroupsEnum::WOD_CATEGORY_LIST,
+                        FrontGroupsEnum::WOD_CATEGORY_DETAIL,
                     ],
                 ]
             ),
@@ -228,10 +228,10 @@ final readonly class WodCategoryController
         requestBody: new OAT\RequestBody(
             required: true,
             content : new OAT\JsonContent(
-                required  : ['name', 'summary'],
+                required  : ['title', 'summary'],
                 properties: [
                     new OAT\Property(
-                        property: 'name',
+                        property: 'title',
                         type    : 'string',
                         example : 'Lorem ipsum'
                     ),
@@ -300,12 +300,12 @@ final readonly class WodCategoryController
             content : new OAT\JsonContent(
                 example: [
                     "fr" => [
-                        "name"    => "Lorem ipsum",
+                        "title"   => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                         "details" => null,
                     ],
                     "en" => [
-                        "name"    => "Lorem ipsum",
+                        "title"   => "Lorem ipsum",
                         "summary" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, in nec purus fringilla.",
                         "details" => null,
                     ],

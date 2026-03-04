@@ -4,7 +4,7 @@ namespace App\Domain\Wod\WodScore;
 
 use App\Domain\Wod\Entity\WodScore;
 use App\Domain\Wod\Ports\WodScoreDALInterface;
-use Doctrine\ORM\EntityNotFoundException;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 
 final readonly class GetWodScoreByIdUseCase
 {
