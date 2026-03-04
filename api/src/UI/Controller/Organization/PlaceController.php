@@ -267,12 +267,6 @@ final class PlaceController extends AbstractController
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
-                name       : 'filters[country.name][like]',
-                description: 'Filter by place country slug (partial match).',
-                required   : false,
-                schema     : new OAT\Schema(type: 'string')
-            ),
-            new OAT\Parameter(
                 name       : 'filters[country.name][eq]',
                 description: 'Filter by place country name (exact match).',
                 required   : false,
@@ -475,7 +469,7 @@ final class PlaceController extends AbstractController
                 status : Response::HTTP_CREATED,
                 headers: ['X-RESOURCE-ID' => $place->getId()]
             );
-        } catch (InvalidArgumentException) {
+        } catch (InvalidPayloadException) {
             $statusCode = Response::HTTP_BAD_REQUEST;
         } catch (AlreadyExistException) {
             $statusCode = Response::HTTP_CONFLICT;
@@ -665,18 +659,12 @@ final class PlaceController extends AbstractController
 
         $dtoItems = $this->userService->transformCollectionToDTO($place->getUsers()->toArray());
 
-        $groups = ['PUBLIC', FrontGroupsEnum::PLACE_LIST_PUBLIC];
-
-        if ($this->isGranted('ROLE_ADMIN')) {
-            $groups = ['ADMIN', FrontGroupsEnum::PLACE_LIST_ADMIN];
-        }
-
         return new JsonResponse(
             data  : $normalizer->normalize(
                 object : $dtoItems,
                 format : 'json',
                 context: [
-                    'groups' => $groups,
+                    'groups' => [FrontGroupsEnum::ATHLETE_LIST],
                 ]
             ),
             status: Response::HTTP_OK
@@ -771,7 +759,7 @@ final class PlaceController extends AbstractController
                 object: $result,
                 format: 'json'
             ),
-            status: Response::HTTP_CREATED,
+            status: Response::HTTP_OK,
         );
     }
 }

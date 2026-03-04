@@ -58,7 +58,7 @@ final readonly class UpdatePlaceUseCase
         }
 
         if (!empty($dto->getSiret())) {
-            if (!$this->validateDuplicate('siren', $dto->getSiret(), $place)) {
+            if (!$this->validateDuplicate('siret', $dto->getSiret(), $place)) {
                 throw new AlreadyExistException();
             }
 
@@ -70,7 +70,7 @@ final readonly class UpdatePlaceUseCase
         }
 
         if (!empty($dto->getAddress2())) {
-            $place->setAddress($dto->getAddress2());
+            $place->setAddress2($dto->getAddress2());
         }
 
         $targetCity = $place->getCity();

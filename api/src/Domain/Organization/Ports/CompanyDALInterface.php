@@ -7,10 +7,11 @@ use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Filters\FilterCollection;
 use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
+use Symfony\Component\Uid\Uuid;
 
 interface CompanyDALInterface
 {
-    public function getById(string $id): ?Company;
+    public function getById(Uuid $id): ?Company;
 
     public function listCompanies(
         int               $page = 1,

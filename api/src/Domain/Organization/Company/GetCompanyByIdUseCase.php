@@ -2,9 +2,9 @@
 
 namespace App\Domain\Organization\Company;
 
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 use App\Domain\Organization\Entity\Company;
 use App\Domain\Organization\Ports\CompanyDALInterface;
-use Doctrine\ORM\EntityNotFoundException;
 
 class GetCompanyByIdUseCase
 {

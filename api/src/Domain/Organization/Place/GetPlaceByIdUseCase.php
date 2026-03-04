@@ -2,9 +2,9 @@
 
 namespace App\Domain\Organization\Place;
 
+use App\Domain\Core\Exceptions\EntityNotFoundException;
 use App\Domain\Organization\Entity\Place;
 use App\Domain\Organization\Ports\PlaceDALInterface;
-use Doctrine\ORM\EntityNotFoundException;
 
 readonly class GetPlaceByIdUseCase
 {

@@ -4,6 +4,7 @@ namespace App\UI\Controller\Organization;
 
 use App\Domain\Core\Exceptions\AlreadyExistException;
 use App\Domain\Core\Exceptions\EntityNotFoundException;
+use App\Domain\Core\Exceptions\InvalidPayloadException;
 use App\Domain\Organization\Company\CreateCompanyUseCase;
 use App\Domain\Organization\Company\GetCompanyByIdUseCase;
 use App\Domain\Organization\Company\ListCompanyUseCase;
@@ -251,12 +252,6 @@ final class CompanyController extends AbstractController
                 schema     : new OAT\Schema(type: 'string')
             ),
             new OAT\Parameter(
-                name       : 'filters[country.name][like]',
-                description: 'Filter by company country slug (partial match).',
-                required   : false,
-                schema     : new OAT\Schema(type: 'string')
-            ),
-            new OAT\Parameter(
                 name       : 'filters[country.name][eq]',
                 description: 'Filter by company country name (exact match).',
                 required   : false,
@@ -454,7 +449,7 @@ final class CompanyController extends AbstractController
                 status : Response::HTTP_CREATED,
                 headers: ['X-RESOURCE-ID' => $company->getId()]
             );
-        } catch (InvalidArgumentException) {
+        } catch (InvalidPayloadException) {
             $statusCode = Response::HTTP_BAD_REQUEST;
         } catch (AlreadyExistException) {
             $statusCode = Response::HTTP_CONFLICT;
@@ -581,6 +576,8 @@ final class CompanyController extends AbstractController
             );
 
             $statusCode = Response::HTTP_NO_CONTENT;
+        } catch (InvalidPayloadException) {
+            $statusCode = Response::HTTP_BAD_REQUEST;
         } catch (EntityNotFoundException) {
             $statusCode = Response::HTTP_NOT_FOUND;
         }

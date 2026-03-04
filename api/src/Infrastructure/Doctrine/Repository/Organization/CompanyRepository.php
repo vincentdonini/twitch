@@ -14,6 +14,7 @@ use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Uid\Uuid;
 
 class CompanyRepository extends AbstractEntityRepository implements CompanyDALInterface
 {
@@ -37,7 +38,7 @@ class CompanyRepository extends AbstractEntityRepository implements CompanyDALIn
         return Company::class;
     }
 
-    public function getById(string $id): ?Company
+    public function getById(Uuid $id): ?Company
     {
         return $this->find($id);
     }
