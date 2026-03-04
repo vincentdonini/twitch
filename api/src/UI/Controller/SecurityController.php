@@ -9,10 +9,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
+#[AsController]
 #[Route(path: '/auth', name: 'auth_')]
 class SecurityController extends AbstractController
 {
@@ -23,7 +25,7 @@ class SecurityController extends AbstractController
     }
 
     #[Route(
-        path   : 'register',
+        path   : '/register',
         name   : 'create',
         methods: ['POST']
     )]
@@ -34,6 +36,8 @@ class SecurityController extends AbstractController
                 properties: [
                     new OA\Property(property: 'email', type: 'string', example: 'user@example.com'),
                     new OA\Property(property: 'password', type: 'string', example: 'password123'),
+                    new OA\Property(property: 'firstName', type: 'string', example: 'John'),
+                    new OA\Property(property: 'lastName', type: 'string', example: 'Doe'),
                 ]
             )
         ),
@@ -46,18 +50,15 @@ class SecurityController extends AbstractController
     {
         $data = json_decode($request->getContent(), true);
 
-        if (!isset($data['email'], $data['password'])) {
+        if (!isset($data['email'], $data['password'], $data['firstName'], $data['lastName'])) {
             return new JsonResponse([
-                'error' => 'Email and password are required',
+                'error' => 'Email, password, firstName and lastName are required',
             ], Response::HTTP_BAD_REQUEST);
         }
 
-        $user = new User();
-        $user->setEmail($data['email']);
-        $user->setRoles(['ROLE_USER']);
+        $user = new User($data['email'], $data['firstName'], $data['lastName']);
         $user->setPassword($this->passwordHasher->hashPassword($user, $data['password']));
 
-        // Validation
         $errors = $validator->validate($user);
         if (count($errors) > 0) {
             return new JsonResponse([
