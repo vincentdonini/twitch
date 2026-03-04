@@ -23,7 +23,7 @@ class ExerciseCategory
     #[OA\Property(description: "Exercise category slug", example: "warm-up")]
     private string $slug;
 
-    #[ORM\OneToMany(targetEntity: ContentExerciseCategory::class, mappedBy: "movementCategory", cascade: ["persist", "remove"], orphanRemoval: true)]
+    #[ORM\OneToMany(targetEntity: ContentExerciseCategory::class, mappedBy: "exerciseCategory", cascade: ["persist", "remove"], orphanRemoval: true)]
     private Collection $contents;
 
     public function __construct(

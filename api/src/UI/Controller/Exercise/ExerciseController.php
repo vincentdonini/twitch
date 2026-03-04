@@ -369,7 +369,7 @@ final readonly class ExerciseController
 
             $useCase->execute(
                 new UpsertContentExerciseHttp(
-                    id     : $exerciseId,
+                    id     : Uuid::fromString($exerciseId),
                     locale : $locale,
                     payload: $payload
                 )
@@ -432,7 +432,7 @@ final readonly class ExerciseController
 
             $useCase->execute(
                 new UpsertContentExerciseBulkHttp(
-                    id     : $exerciseId,
+                    id     : Uuid::fromString($exerciseId),
                     payload: $payload
                 )
             );

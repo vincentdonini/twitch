@@ -2,9 +2,11 @@
 
 namespace App\Domain\Exercise\Exercise;
 
+use Symfony\Component\Uid\Uuid;
+
 interface UpsertContentExerciseDTOInterface
 {
-    public function getId(): string;
+    public function getId(): Uuid;
 
     public function getLocale(): string;
 
@@ -14,4 +16,3 @@ interface UpsertContentExerciseDTOInterface
 
     public function getDetails(): ?string;
 }
-

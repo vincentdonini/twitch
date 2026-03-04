@@ -10,7 +10,7 @@ use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
 use App\Infrastructure\Filters\FilterCollection;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-class ExerciseCategoryService
+final class ExerciseCategoryService
 {
     use LocaleTrait;
 

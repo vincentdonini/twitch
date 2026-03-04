@@ -384,7 +384,7 @@ final readonly class ExerciseCategoryController
         path        : '/{exerciseCategoryId}/contents',
         name        : 'contents_upsert_bulk',
         requirements: [
-            'exerciseId' => '[0-9a-fA-F\-]+',
+            'exerciseCategoryId' => '[0-9a-fA-F\-]+',
         ],
         methods     : ['PUT']
     )]

@@ -7,12 +7,11 @@ use App\Domain\Exercise\Ports\ExerciseDALInterface;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\EntityNotFoundException;
 
-class GetExerciseContentsByIdUseCase
+readonly class GetExerciseContentsByIdUseCase
 {
     public function __construct(
-        private readonly ExerciseDALInterface $exerciseDAL,
+        private ExerciseDALInterface $exerciseDAL,
     ) {
-
     }
 
     public function execute(GetExerciseByIdDTOInterface $dto): Collection

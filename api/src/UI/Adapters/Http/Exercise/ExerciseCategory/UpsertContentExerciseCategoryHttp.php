@@ -3,18 +3,18 @@
 namespace App\UI\Adapters\Http\Exercise\ExerciseCategory;
 
 use App\Domain\Exercise\ExerciseCategory\UpsertContentExerciseCategoryDTOInterface;
+use Symfony\Component\Uid\Uuid;
 
 final readonly class UpsertContentExerciseCategoryHttp implements UpsertContentExerciseCategoryDTOInterface
 {
     public function __construct(
-        private string $id,
+        private Uuid   $id,
         private string $locale,
         private array  $payload,
     ) {
-
     }
 
-    public function getId(): string
+    public function getId(): Uuid
     {
         return $this->id;
     }

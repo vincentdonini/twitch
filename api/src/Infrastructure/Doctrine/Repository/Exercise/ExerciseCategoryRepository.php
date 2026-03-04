@@ -21,9 +21,9 @@ class ExerciseCategoryRepository extends AbstractEntityRepository implements Exe
     use LocaleTrait;
 
     public function __construct(
-        private readonly string       $locale,
         protected ManagerRegistry     $registry,
         private readonly RequestStack $requestStack,
+        private readonly string       $locale,
     ) {
         parent::__construct($registry);
     }
@@ -44,10 +44,10 @@ class ExerciseCategoryRepository extends AbstractEntityRepository implements Exe
     }
 
     public function listExerciseCategories(
-        int              $page = 1,
-        int              $limit = RequestPaginator::DEFAULT_LIMIT,
-        FilterCollection $filters = null,
-        SortCollection   $sorts = null,
+        int               $page = 1,
+        int               $limit = RequestPaginator::DEFAULT_LIMIT,
+        ?FilterCollection $filters = null,
+        ?SortCollection   $sorts = null,
     ): LightPaginator {
         $qb = $this->createQueryBuilder('ec');
 
