@@ -3,6 +3,7 @@
 namespace App\Domain\Muscle\MuscleArea;
 
 use App\Domain\Muscle\Entity\MuscleArea;
+use App\Domain\Muscle\Entity\MuscleGroup;
 use App\Domain\Muscle\Ports\MuscleAreaDALInterface;
 use App\Domain\Muscle\Ports\MuscleGroupDALInterface;
 use Doctrine\ORM\EntityNotFoundException;
@@ -15,7 +16,7 @@ class GetMuscleGroupsByMuscleAreaIdUseCase
     ) {
     }
 
-    /** @return MuscleArea[] */
+    /** @return MuscleGroup[] */
     public function execute(GetMuscleGroupsByMuscleAreaIdDTOInterface $dto): array
     {
         $muscleArea = $this->muscleAreaDAL->getById($dto->getMuscleAreaId());

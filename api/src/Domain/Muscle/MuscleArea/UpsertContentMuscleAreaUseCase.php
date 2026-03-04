@@ -62,8 +62,8 @@ readonly class UpsertContentMuscleAreaUseCase
     {
         if (
             !$dto->getLocale() ||
-            !$dto->getName() ||
-            !$dto->getTitle()
+            !$dto->getTitle() ||
+            !$dto->getSummary()
         ) {
             return false;
         }

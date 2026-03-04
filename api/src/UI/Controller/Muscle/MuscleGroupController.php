@@ -37,7 +37,6 @@ use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Uid\Uuid;
 
 #[AsController]
@@ -131,7 +130,7 @@ final readonly class MuscleGroupController
     public function list(
         Request                 $request,
         ListMuscleGroupsUseCase $useCase,
-        SerializerInterface     $normalizer,
+        NormalizerInterface     $normalizer,
     ): JsonResponse {
         $paginatorValues = RequestPaginator::extractValues(
             request: $request
@@ -205,7 +204,7 @@ final readonly class MuscleGroupController
     #[Security(name: 'bearerAuth')]
     public function detail(
         GetMuscleGroupByIdUseCase $useCase,
-        SerializerInterface       $normalizer,
+        NormalizerInterface       $normalizer,
         string                    $muscleGroupId
     ): JsonResponse {
         try {

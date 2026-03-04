@@ -282,7 +282,7 @@ final readonly class MuscleAreaController
                 format : 'json',
                 context: [
                     'groups' => [
-                        FrontGroupsEnum::MUSCLE_AREA_LIST,
+                        FrontGroupsEnum::MUSCLE_GROUP_LIST,
                     ],
                 ]
             ),

@@ -19,4 +19,7 @@ interface MuscleDALInterface
         ?FilterCollection $filters = null,
         ?SortCollection   $sorts = null
     ): LightPaginator;
+
+    /** @return Muscle[] */
+    public function getByMuscleGroupId(Uuid $muscleGroupId): array;
 }
