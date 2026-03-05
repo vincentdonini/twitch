@@ -43,6 +43,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/wods', name: 'wod_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final class WodController extends AbstractController
 {
     use ApiExceptionHandler;
@@ -353,25 +357,25 @@ final class WodController extends AbstractController
             content    : new OAT\JsonContent(
                 ref: new Model(
                     type  : Wod::class,
-                    groups: [FrontGroupsEnum::WOD_LIST]
+                    groups: [FrontGroupsEnum::WOD_MANAGE]
                 )
             )
         ),
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_CREATED,
-                description: 'WOD created successfully',
+                description: 'WOD created successfully.',
                 headers    : [
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
-                        description: 'ID of WOD created',
-                        schema     : new OAT\Schema(type: 'integer')
+                        description: 'ID of WOD created.',
+                        schema     : new OAT\Schema(type: 'string')
                     ),
                 ],
                 content    : new OAT\JsonContent(
                     ref: new Model(
                         type  : Wod::class,
-                        groups: [FrontGroupsEnum::WOD_LIST]
+                        groups: [FrontGroupsEnum::WOD_MANAGE]
                     )
                 )
             ),
@@ -395,7 +399,7 @@ final class WodController extends AbstractController
                     context: ['groups' => [FrontGroupsEnum::WOD_MANAGE]]
                 ),
                 status : Response::HTTP_CREATED,
-                headers: ['X-RESOURCE-ID' => $wod->getId()]
+                headers: ['X-RESOURCE-ID' => $wod->getId()->toRfc4122()]
             );
         } catch (\Throwable $e) {
             return $this->handleException($e);
@@ -478,38 +482,16 @@ final class WodController extends AbstractController
             content    : new OAT\JsonContent(
                 ref: new Model(
                     type  : Wod::class,
-                    groups: [FrontGroupsEnum::WOD_LIST]
+                    groups: [FrontGroupsEnum::WOD_MANAGE]
                 ),
             ),
         ),
         parameters : [
             new OAT\PathParameter(
-                name       : 'name',
-                description: 'Name of the WOD',
-                required   : true,
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-            new OAT\PathParameter(
-                name       : 'typeId',
-                description: 'Type ID of the WOD.',
+                name       : 'wodId',
+                description: 'UUID of the WOD to update.',
                 required   : true,
                 schema     : new OAT\Schema(type: 'string', format: 'uuid')
-            ),
-            new OAT\PathParameter(
-                name       : 'categoryId',
-                description: 'Category ID of the WOD',
-                required   : true,
-                schema     : new OAT\Schema(type: 'string', format: 'uuid')
-            ),
-            new OAT\PathParameter(
-                name       : 'teamSize',
-                description: 'Team size of the WOD',
-                schema     : new OAT\Schema(type: 'integer'),
-            ),
-            new OAT\PathParameter(
-                name       : 'descriptions',
-                description: 'Descriptions of the WOD',
-                schema     : new OAT\Schema(type: 'string'),
             ),
         ],
         responses  : [
@@ -559,9 +541,21 @@ final class WodController extends AbstractController
         parameters : [
             new OAT\PathParameter(
                 name       : 'wodId',
-                description: 'WOD ID',
+                description: 'UUID of the WOD.',
                 required   : true,
                 schema     : new OAT\Schema(type: 'string', format: 'uuid')
+            ),
+            new OAT\PathParameter(
+                name       : 'wodDivisionId',
+                description: 'UUID of the WOD division.',
+                required   : true,
+                schema     : new OAT\Schema(type: 'string', format: 'uuid')
+            ),
+            new OAT\PathParameter(
+                name       : 'gender',
+                description: 'Gender filter for the leaderboard.',
+                required   : true,
+                schema     : new OAT\Schema(type: 'string', enum: ['male', 'female', 'mixed'])
             ),
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
             new OAT\Parameter('#/components/parameters/QueryRequestLimit'),

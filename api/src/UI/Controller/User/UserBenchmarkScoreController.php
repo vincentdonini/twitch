@@ -30,6 +30,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/users', name: 'user_benchmark_scores_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final class UserBenchmarkScoreController extends AbstractController
 {
     use ApiExceptionHandler;
@@ -54,9 +58,16 @@ final class UserBenchmarkScoreController extends AbstractController
         summary    : 'Get benchmark scores for a user',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'List of benchmark scores'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'User not found'),
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'List of benchmark scores.',
+                headers    : [
+                    new OAT\Header(ref: '#/components/headers/Element-Count', header: 'Element-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Page', header: 'Pagination-Page'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Count', header: 'Pagination-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Limit', header: 'Pagination-Limit'),
+                ],
+            ),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -132,8 +143,16 @@ final class UserBenchmarkScoreController extends AbstractController
         summary    : 'Get benchmark scores for current user',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'List of benchmark scores'),
-            new OAT\Response(response: 403, description: 'Access denied'),
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'List of benchmark scores.',
+                headers    : [
+                    new OAT\Header(ref: '#/components/headers/Element-Count', header: 'Element-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Page', header: 'Pagination-Page'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Count', header: 'Pagination-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Limit', header: 'Pagination-Limit'),
+                ],
+            ),
         ]
     )]
     #[Security(name: 'bearerAuth')]

@@ -37,6 +37,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/muscles', name: 'muscle_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final readonly class MuscleController
 {
     use ApiExceptionHandler;
@@ -193,9 +197,17 @@ final readonly class MuscleController
         summary    : 'Get Muscle details.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'Muscle details.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Muscle not found.'),
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'Muscle details.',
+                content    : new OAT\JsonContent(
+                    ref : new Model(
+                        type  : Muscle::class,
+                        groups: [FrontGroupsEnum::MUSCLE_DETAIL]
+                    ),
+                    type: 'object'
+                )
+            ),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -341,11 +353,9 @@ final readonly class MuscleController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated.'),
-            new OAT\Response(response: 201, description: 'Contents created.'),
-            new OAT\Response(response: 400, description: 'Invalid payload.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Muscle not found.'),
+            new OAT\Response(response: Response::HTTP_NO_CONTENT, description: 'Content saved.'),
+            new OAT\Response(response: Response::HTTP_BAD_REQUEST, description: 'Invalid payload.'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'Muscle not found.'),
         ]
     )]
     public function upsertContent(
@@ -403,11 +413,9 @@ final readonly class MuscleController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated.'),
-            new OAT\Response(response: 201, description: 'Contents created.'),
-            new OAT\Response(response: 400, description: 'Invalid payload.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Muscle not found.'),
+            new OAT\Response(response: Response::HTTP_NO_CONTENT, description: 'Contents saved.'),
+            new OAT\Response(response: Response::HTTP_BAD_REQUEST, description: 'Invalid payload.'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'Muscle not found.'),
         ]
     )]
     public function upsertContentsBulk(

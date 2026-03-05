@@ -4,7 +4,8 @@ namespace App\UI\Controller;
 
 use App\Domain\User\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
-use OpenApi\Attributes as OA;
+use Nelmio\ApiDocBundle\Attribute\Security;
+use OpenApi\Attributes as OAT;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,6 +17,10 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 #[AsController]
 #[Route(path: '/auth', name: 'auth_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 class SecurityController extends AbstractController
 {
     public function __construct(
@@ -29,21 +34,34 @@ class SecurityController extends AbstractController
         name   : 'create',
         methods: ['POST']
     )]
-    #[OA\Post(
-        summary    : 'User registration',
-        requestBody: new OA\RequestBody(
-            content: new OA\JsonContent(
+    #[Security(name: null)]
+    #[OAT\Post(
+        description: 'Register a new user account.',
+        summary    : 'User registration.',
+        security   : [],
+        requestBody: new OAT\RequestBody(
+            required: true,
+            content : new OAT\JsonContent(
+                required  : ['email', 'password', 'firstName', 'lastName'],
                 properties: [
-                    new OA\Property(property: 'email', type: 'string', example: 'user@example.com'),
-                    new OA\Property(property: 'password', type: 'string', example: 'password123'),
-                    new OA\Property(property: 'firstName', type: 'string', example: 'John'),
-                    new OA\Property(property: 'lastName', type: 'string', example: 'Doe'),
+                    new OAT\Property(property: 'email', type: 'string', format: 'email', example: 'user@example.com'),
+                    new OAT\Property(property: 'password', type: 'string', example: 'password123'),
+                    new OAT\Property(property: 'firstName', type: 'string', example: 'John'),
+                    new OAT\Property(property: 'lastName', type: 'string', example: 'Doe'),
                 ]
             )
         ),
         responses  : [
-            new OA\Response(response: 201, description: 'User created'),
-            new OA\Response(response: 400, description: 'Invalid data'),
+            new OAT\Response(
+                response   : Response::HTTP_CREATED,
+                description: 'User created successfully.',
+                content    : new OAT\JsonContent(
+                    properties: [
+                        new OAT\Property(property: 'message', type: 'string', example: 'User created'),
+                    ],
+                    type: 'object'
+                )
+            ),
         ]
     )]
     public function register(Request $request, ValidatorInterface $validator): JsonResponse

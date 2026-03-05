@@ -37,6 +37,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/companies', name: 'company_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final class CompanyController extends AbstractController
 {
     use ApiExceptionHandler;
@@ -397,12 +401,12 @@ final class CompanyController extends AbstractController
         summary    : 'Create a company.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
-            description: 'Created a company',
+            description: 'Create a company.',
             required   : true,
             content    : new OAT\JsonContent(
                 ref: new Model(
                     type  : Company::class,
-                    groups: [FrontGroupsEnum::COMPANY_LIST_PUBLIC]
+                    groups: [FrontGroupsEnum::COMPANY_MANAGE]
                 )
             )
         ),
@@ -414,13 +418,13 @@ final class CompanyController extends AbstractController
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
                         description: 'ID of company created.',
-                        schema     : new OAT\Schema(type: 'integer')
+                        schema     : new OAT\Schema(type: 'string')
                     ),
                 ],
                 content    : new OAT\JsonContent(
                     ref: new Model(
                         type  : Company::class,
-                        groups: [FrontGroupsEnum::COMPANY_LIST_PUBLIC]
+                        groups: [FrontGroupsEnum::COMPANY_MANAGE]
                     )
                 )
             ),
@@ -446,7 +450,7 @@ final class CompanyController extends AbstractController
                     ]
                 ),
                 status : Response::HTTP_CREATED,
-                headers: ['X-RESOURCE-ID' => $company->getId()]
+                headers: ['X-RESOURCE-ID' => $company->getId()->toRfc4122()]
             );
         } catch (\Throwable $e) {
             return $this->handleException($e);
@@ -533,18 +537,10 @@ final class CompanyController extends AbstractController
             content    : new OAT\JsonContent(
                 ref: new Model(
                     type  : Company::class,
-                    groups: [FrontGroupsEnum::COMPANY_LIST_PUBLIC]
+                    groups: [FrontGroupsEnum::COMPANY_MANAGE]
                 ),
             ),
         ),
-        parameters : [
-            new OAT\PathParameter(
-                name       : 'name',
-                description: 'Name of the company.',
-                required   : true,
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-        ],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_NO_CONTENT,

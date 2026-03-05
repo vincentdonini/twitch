@@ -26,6 +26,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/users', name: 'user_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final class UserController extends AbstractController
 {
     use ApiExceptionHandler;
@@ -48,30 +52,18 @@ final class UserController extends AbstractController
         parameters : [
             new OAT\Parameter('#/components/parameters/QueryRequestPage'),
             new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
-            new OAT\Parameter(
-                name       : 'slug',
-                description: 'Filter result by slug.',
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-            new OAT\Parameter(
-                name       : 'title',
-                description: 'Filter result by title.',
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-            new OAT\Parameter(
-                name       : 'summary',
-                description: 'Filter result by summary.',
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-            new OAT\Parameter(
-                name       : 'details',
-                description: 'Filter result by details.',
-                schema     : new OAT\Schema(type: 'string'),
-            ),
         ],
         responses  : [
-            new OAT\Response(response: 200, description: 'List of users'),
-            new OAT\Response(response: 403, description: 'Access denied'),
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'List of users.',
+                headers    : [
+                    new OAT\Header(ref: '#/components/headers/Element-Count', header: 'Element-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Page', header: 'Pagination-Page'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Count', header: 'Pagination-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Limit', header: 'Pagination-Limit'),
+                ],
+            ),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -126,9 +118,7 @@ final class UserController extends AbstractController
         summary    : 'Get user details',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'User details'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'User not found'),
+            new OAT\Response(response: Response::HTTP_OK, description: 'User details.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -174,9 +164,7 @@ final class UserController extends AbstractController
         summary    : 'Get current user profile',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'User profile'),
-            new OAT\Response(response: 403, description: 'Access denied'),
-            new OAT\Response(response: 404, description: 'User not found'),
+            new OAT\Response(response: Response::HTTP_OK, description: 'Current user profile.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]

@@ -42,6 +42,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/benchmarks', name: 'benchmark_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final class BenchmarkController extends AbstractController
 {
     use ApiExceptionHandler;
@@ -215,25 +219,25 @@ final class BenchmarkController extends AbstractController
             content    : new OAT\JsonContent(
                 ref: new Model(
                     type  : Benchmark::class,
-                    groups: [FrontGroupsEnum::BENCHMARK_LIST]
+                    groups: [FrontGroupsEnum::BENCHMARK_MANAGE]
                 )
             )
         ),
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_CREATED,
-                description: 'Benchmark created successfully',
+                description: 'Benchmark created successfully.',
                 headers    : [
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
-                        description: 'ID of Benchmark created',
+                        description: 'ID of Benchmark created.',
                         schema     : new OAT\Schema(type: 'string')
                     ),
                 ],
                 content    : new OAT\JsonContent(
                     ref: new Model(
                         type  : Benchmark::class,
-                        groups: [FrontGroupsEnum::BENCHMARK_LIST]
+                        groups: [FrontGroupsEnum::BENCHMARK_MANAGE]
                     )
                 )
             ),
@@ -257,7 +261,7 @@ final class BenchmarkController extends AbstractController
                     context: ['groups' => [FrontGroupsEnum::BENCHMARK_MANAGE]]
                 ),
                 status : Response::HTTP_CREATED,
-                headers: ['X-RESOURCE-ID' => $benchmark->getId()]
+                headers: ['X-RESOURCE-ID' => $benchmark->getId()->toRfc4122()]
             );
         } catch (\Throwable $e) {
             return $this->handleException($e);

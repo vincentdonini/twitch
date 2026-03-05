@@ -30,6 +30,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/wod-types', name: 'wod_type_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final readonly class WodTypeController
 {
     use ApiExceptionHandler;
@@ -259,8 +263,8 @@ final readonly class WodTypeController
     )]
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_WOD_TYPE_MANAGE)]
     #[OAT\Put(
-        description: 'Create or update exercise content for a given locale.',
-        summary    : 'Upsert exercise localized content.',
+        description: 'Create or update WOD Type content for a given locale.',
+        summary    : 'Upsert WOD Type localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
@@ -286,11 +290,9 @@ final readonly class WodTypeController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Content updated.'),
-            new OAT\Response(response: 201, description: 'Content created.'),
-            new OAT\Response(response: 400, description: 'Invalid payload.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'WOD Type not found.'),
+            new OAT\Response(response: Response::HTTP_NO_CONTENT, description: 'Content saved.'),
+            new OAT\Response(response: Response::HTTP_BAD_REQUEST, description: 'Invalid payload.'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'WOD Type not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -348,11 +350,9 @@ final readonly class WodTypeController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated.'),
-            new OAT\Response(response: 201, description: 'Contents created.'),
-            new OAT\Response(response: 400, description: 'Invalid payload.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'WOD Type not found.'),
+            new OAT\Response(response: Response::HTTP_NO_CONTENT, description: 'Contents saved.'),
+            new OAT\Response(response: Response::HTTP_BAD_REQUEST, description: 'Invalid payload.'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'WOD Type not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]

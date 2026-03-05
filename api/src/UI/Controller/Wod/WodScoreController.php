@@ -35,6 +35,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/wod-scores', name: 'wod_score_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final class WodScoreController extends AbstractController
 {
     use ApiExceptionHandler;
@@ -115,8 +119,25 @@ final class WodScoreController extends AbstractController
             ),
         ],
         responses  : [
-            new OAT\Response(response: 200, description: 'List of WOD Scores.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'List of WOD Scores.',
+                headers    : [
+                    new OAT\Header(ref: '#/components/headers/Element-Count', header: 'Element-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Page', header: 'Pagination-Page'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Count', header: 'Pagination-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Limit', header: 'Pagination-Limit'),
+                ],
+                content    : new OAT\JsonContent(
+                    type : 'array',
+                    items: new OAT\Items(
+                        ref: new Model(
+                            type  : WodScore::class,
+                            groups: [FrontGroupsEnum::WOD_SCORE_LIST]
+                        )
+                    )
+                )
+            ),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -243,7 +264,7 @@ final class WodScoreController extends AbstractController
                     context: ['groups' => [FrontGroupsEnum::WOD_SCORE_MANAGE]]
                 ),
                 status : Response::HTTP_CREATED,
-                headers: ['X-RESOURCE-ID' => $wodScore->getId()]
+                headers: ['X-RESOURCE-ID' => $wodScore->getId()->toRfc4122()]
             );
         } catch (\Throwable $e) {
             return $this->handleException($e);
@@ -264,9 +285,17 @@ final class WodScoreController extends AbstractController
         summary    : 'Get WOD Score details.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'WOD Score details.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'WOD Score not found.'),
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'WOD Score details.',
+                content    : new OAT\JsonContent(
+                    ref : new Model(
+                        type  : WodScore::class,
+                        groups: [FrontGroupsEnum::WOD_SCORE_DETAIL]
+                    ),
+                    type: 'object'
+                )
+            ),
         ]
     )]
     #[Security(name: 'bearerAuth')]

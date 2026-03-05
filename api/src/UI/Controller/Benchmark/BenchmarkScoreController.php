@@ -37,6 +37,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route('/benchmark-scores', name: 'benchmark_score_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final class BenchmarkScoreController extends AbstractController
 {
     use ApiExceptionHandler;
@@ -89,7 +93,7 @@ final class BenchmarkScoreController extends AbstractController
             ),
             new OAT\Parameter(
                 name       : 'filters[user.lastName][like]',
-                description: 'Filter by user firstName (partial match)',
+                description: 'Filter by user lastName (partial match)',
                 required   : false,
                 schema     : new OAT\Schema(type: 'string')
             ),
@@ -212,7 +216,7 @@ final class BenchmarkScoreController extends AbstractController
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
                         description: 'ID of benchmark score created',
-                        schema     : new OAT\Schema(type: 'integer')
+                        schema     : new OAT\Schema(type: 'string')
                     ),
                 ],
                 content    : new OAT\JsonContent(
@@ -251,7 +255,7 @@ final class BenchmarkScoreController extends AbstractController
                     context: ['groups' => [FrontGroupsEnum::BENCHMARK_SCORE_MANAGE]]
                 ),
                 status : Response::HTTP_CREATED,
-                headers: ['X-RESOURCE-ID' => $benchmarkScore->getId()]
+                headers: ['X-RESOURCE-ID' => $benchmarkScore->getId()->toRfc4122()]
             );
         } catch (\Throwable $e) {
             return $this->handleException($e);

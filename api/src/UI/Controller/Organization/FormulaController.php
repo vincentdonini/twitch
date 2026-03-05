@@ -2,6 +2,7 @@
 
 namespace App\UI\Controller\Organization;
 
+use App\Domain\Organization\Entity\Formula;
 use App\Domain\Organization\Formula\CreateFormulaUseCase;
 use App\Domain\Organization\Formula\DeleteFormulaUseCase;
 use App\Domain\Organization\Formula\GetFormulaByIdByPlaceIdUseCase;
@@ -18,6 +19,8 @@ use App\UI\Adapters\Http\Organization\Formula\DeleteFormulaHttp;
 use App\UI\Adapters\Http\Organization\Formula\GetFormulaByIdByPlaceIdHttp;
 use App\UI\Adapters\Http\Organization\Formula\ListFormulasByPlaceIdHttp;
 use App\UI\Adapters\Http\Organization\Formula\UpdateFormulaHttp;
+use Nelmio\ApiDocBundle\Attribute\Model;
+use Nelmio\ApiDocBundle\Attribute\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -27,6 +30,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Uid\Uuid;
+use OpenApi\Attributes as OAT;
 
 #[AsController]
 #[Route(
@@ -36,6 +40,10 @@ use Symfony\Component\Uid\Uuid;
         'placeId' => '[0-9a-fA-F\-]+',
     ],
 )]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final class FormulaController extends AbstractController
 {
     use ApiExceptionHandler;
@@ -51,6 +59,43 @@ final class FormulaController extends AbstractController
         methods: ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_FORMULA_LIST)]
+    #[Security(name: 'bearerAuth')]
+    #[OAT\Get(
+        description: 'Returns a list of formulas for a specific place.',
+        summary    : 'List formulas of a place.',
+        security   : [['bearerAuth' => []]],
+        parameters : [
+            new OAT\PathParameter(
+                name       : 'placeId',
+                description: 'UUID of the place.',
+                required   : true,
+                schema     : new OAT\Schema(type: 'string', format: 'uuid')
+            ),
+            new OAT\Parameter('#/components/parameters/QueryRequestPage'),
+            new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
+        ],
+        responses  : [
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'List of formula.',
+                headers    : [
+                    new OAT\Header(ref: '#/components/headers/Element-Count', header: 'Element-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Page', header: 'Pagination-Page'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Count', header: 'Pagination-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Limit', header: 'Pagination-Limit'),
+                ],
+                content    : new OAT\JsonContent(
+                    type : 'array',
+                    items: new OAT\Items(
+                        ref: new Model(
+                            type  : Formula::class,
+                            groups: [FrontGroupsEnum::FORMULA_LIST]
+                        )
+                    )
+                )
+            ),
+        ]
+    )]
     public function list(
         Request                      $request,
         ListFormulasByPlaceIdUseCase $useCase,
@@ -102,6 +147,39 @@ final class FormulaController extends AbstractController
         methods     : ['GET']
     )]
     #[IsGranted(ListPermissions::PERMISSION_FORMULA_VIEW)]
+    #[Security(name: 'bearerAuth')]
+    #[OAT\Get(
+        description: 'Returns detailed information for a specific formula of a place.',
+        summary    : 'Get formula details.',
+        security   : [['bearerAuth' => []]],
+        parameters : [
+            new OAT\PathParameter(
+                name       : 'placeId',
+                description: 'UUID of the place.',
+                required   : true,
+                schema     : new OAT\Schema(type: 'string', format: 'uuid')
+            ),
+            new OAT\PathParameter(
+                name       : 'formulaId',
+                description: 'UUID of the formula.',
+                required   : true,
+                schema     : new OAT\Schema(type: 'string', format: 'uuid')
+            ),
+        ],
+        responses  : [
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'Detail of formula.',
+                content    : new OAT\JsonContent(
+                    ref : new Model(
+                        type  : Formula::class,
+                        groups: [FrontGroupsEnum::FORMULA_DETAIL]
+                    ),
+                    type: 'object'
+                )
+            ),
+        ],
+    )]
     public function detail(
         GetFormulaByIdByPlaceIdUseCase $useCase,
         NormalizerInterface            $normalizer,
@@ -139,6 +217,49 @@ final class FormulaController extends AbstractController
         methods: ['POST']
     )]
     #[IsGranted(ListPermissions::PERMISSION_FORMULA_MANAGE)]
+    #[Security(name: 'bearerAuth')]
+    #[OAT\Post(
+        description: 'Create a new formula for a place and return the created resource ID.',
+        summary    : 'Create a formula.',
+        security   : [['bearerAuth' => []]],
+        requestBody: new OAT\RequestBody(
+            description: 'Created a formula.',
+            required   : true,
+            content    : new OAT\JsonContent(
+                ref: new Model(
+                    type  : Formula::class,
+                    groups: [FrontGroupsEnum::FORMULA_MANAGE]
+                )
+            )
+        ),
+        parameters : [
+            new OAT\PathParameter(
+                name       : 'placeId',
+                description: 'UUID of the place.',
+                required   : true,
+                schema     : new OAT\Schema(type: 'string', format: 'uuid')
+            ),
+        ],
+        responses  : [
+            new OAT\Response(
+                response   : Response::HTTP_CREATED,
+                description: 'Formula created successfully.',
+                headers    : [
+                    new OAT\Header(
+                        header     : 'X-RESOURCE-ID',
+                        description: 'ID of Formula created.',
+                        schema     : new OAT\Schema(type: 'string')
+                    ),
+                ],
+                content    : new OAT\JsonContent(
+                    ref: new Model(
+                        type  : Formula::class,
+                        groups: [FrontGroupsEnum::FORMULA_MANAGE]
+                    )
+                )
+            ),
+        ]
+    )]
     public function create(
         CreateFormulaUseCase $useCase,
         Request              $request,
@@ -180,6 +301,42 @@ final class FormulaController extends AbstractController
         methods     : ['PATCH']
     )]
     #[IsGranted(ListPermissions::PERMISSION_FORMULA_MANAGE)]
+    #[Security(name: 'bearerAuth')]
+    #[OAT\Patch(
+        description: 'Update an existing formula for a place with the provided data.',
+        summary    : 'Update a formula.',
+        security   : [['bearerAuth' => []]],
+        requestBody: new OAT\RequestBody(
+            description: 'Update a formula.',
+            required   : true,
+            content    : new OAT\JsonContent(
+                ref: new Model(
+                    type  : Formula::class,
+                    groups: [FrontGroupsEnum::FORMULA_MANAGE]
+                )
+            )
+        ),
+        parameters : [
+            new OAT\PathParameter(
+                name       : 'placeId',
+                description: 'UUID of the place.',
+                required   : true,
+                schema     : new OAT\Schema(type: 'string', format: 'uuid')
+            ),
+            new OAT\PathParameter(
+                name       : 'formulaId',
+                description: 'UUID of the formula.',
+                required   : true,
+                schema     : new OAT\Schema(type: 'string', format: 'uuid')
+            ),
+        ],
+        responses  : [
+            new OAT\Response(
+                response   : Response::HTTP_NO_CONTENT,
+                description: 'Formula updated successfully.',
+            ),
+        ]
+    )]
     public function update(
         UpdateFormulaUseCase $useCase,
         Request              $request,
@@ -212,6 +369,32 @@ final class FormulaController extends AbstractController
         methods     : ['DELETE']
     )]
     #[IsGranted(ListPermissions::PERMISSION_FORMULA_MANAGE)]
+    #[Security(name: 'bearerAuth')]
+    #[OAT\Delete(
+        description: 'Permanently delete a formula from a place.',
+        summary    : 'Delete a formula.',
+        security   : [['bearerAuth' => []]],
+        parameters : [
+            new OAT\PathParameter(
+                name       : 'placeId',
+                description: 'UUID of the place.',
+                required   : true,
+                schema     : new OAT\Schema(type: 'string', format: 'uuid')
+            ),
+            new OAT\PathParameter(
+                name       : 'formulaId',
+                description: 'UUID of the formula.',
+                required   : true,
+                schema     : new OAT\Schema(type: 'string', format: 'uuid')
+            ),
+        ],
+        responses  : [
+            new OAT\Response(
+                response   : Response::HTTP_NO_CONTENT,
+                description: 'Formula deleted successfully.',
+            ),
+        ]
+    )]
     public function delete(
         DeleteFormulaUseCase $useCase,
         string               $placeId,

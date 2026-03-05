@@ -436,7 +436,7 @@ final class PlaceController extends AbstractController
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
                         description: 'ID of place created.',
-                        schema     : new OAT\Schema(type: 'integer')
+                        schema     : new OAT\Schema(type: 'string')
                     ),
                 ],
                 content    : new OAT\JsonContent(
@@ -466,7 +466,7 @@ final class PlaceController extends AbstractController
                     context: ['groups' => [FrontGroupsEnum::PLACE_MANAGE]]
                 ),
                 status : Response::HTTP_CREATED,
-                headers: ['X-RESOURCE-ID' => $place->getId()]
+                headers: ['X-RESOURCE-ID' => $place->getId()->toRfc4122()]
             );
         } catch (\Throwable $e) {
             return $this->handleException($e);

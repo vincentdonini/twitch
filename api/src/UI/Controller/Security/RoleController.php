@@ -192,12 +192,22 @@ final readonly class RoleController
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
         description: 'Returns permissions for a specific role.',
-        summary    : 'Get role permissions',
+        summary    : 'Get role permissions.',
         security   : [['bearerAuth' => []]],
+        parameters : [
+            new OAT\Parameter('#/components/parameters/QueryRequestPage'),
+            new OAT\Parameter('#/components/parameters/QueryRequestLimit'),
+        ],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_OK,
-                description: 'List of permissions for role',
+                description: 'List of permissions for role.',
+                headers    : [
+                    new OAT\Header(ref: '#/components/headers/Element-Count', header: 'Element-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Page', header: 'Pagination-Page'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Count', header: 'Pagination-Count'),
+                    new OAT\Header(ref: '#/components/headers/Pagination-Limit', header: 'Pagination-Limit'),
+                ],
                 content    : new OAT\JsonContent(
                     type : 'array',
                     items: new OAT\Items(

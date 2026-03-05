@@ -26,6 +26,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/users', name: 'user_achievements_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final class UserAchievementController extends AbstractController
 {
     use ApiExceptionHandler;
@@ -47,12 +51,12 @@ final class UserAchievementController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_USER_ACHIEVEMENT_PROGRESS_LIST)]
     #[OAT\Get(
         description: 'Returns achievements for a specific user.',
-        summary    : 'Get user details.',
+        summary    : 'Get user achievements.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'User details.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'User not found.'),
+            new OAT\Response(response: Response::HTTP_OK, description: 'User achievements.'),
+            new OAT\Response(response: Response::HTTP_FORBIDDEN, description: 'Access denied.'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'User not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]

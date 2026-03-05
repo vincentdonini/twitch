@@ -40,6 +40,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/muscle-groups', name: 'muscle_groups_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final readonly class MuscleGroupController
 {
     use ApiExceptionHandler;
@@ -197,9 +201,17 @@ final readonly class MuscleGroupController
         summary    : 'Get Muscle group details',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'Muscle group details'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Muscle group not found.'),
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'Muscle group details.',
+                content    : new OAT\JsonContent(
+                    ref : new Model(
+                        type  : MuscleGroup::class,
+                        groups: [FrontGroupsEnum::MUSCLE_GROUP_DETAIL]
+                    ),
+                    type: 'object'
+                )
+            ),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -248,9 +260,19 @@ final readonly class MuscleGroupController
         summary    : 'Get Muscle group muscles.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'Muscle group muscles.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Muscle group not found.'),
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'Muscle group muscles.',
+                content    : new OAT\JsonContent(
+                    type : 'array',
+                    items: new OAT\Items(
+                        ref: new Model(
+                            type  : MuscleGroup::class,
+                            groups: [FrontGroupsEnum::MUSCLE_LIST]
+                        )
+                    )
+                )
+            ),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -396,11 +418,9 @@ final readonly class MuscleGroupController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated.'),
-            new OAT\Response(response: 201, description: 'Contents created.'),
-            new OAT\Response(response: 400, description: 'Invalid payload.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Muscle group not found.'),
+            new OAT\Response(response: Response::HTTP_NO_CONTENT, description: 'Content saved.'),
+            new OAT\Response(response: Response::HTTP_BAD_REQUEST, description: 'Invalid payload.'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'Muscle group not found.'),
         ]
     )]
     public function upsertContent(
@@ -458,11 +478,9 @@ final readonly class MuscleGroupController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated.'),
-            new OAT\Response(response: 201, description: 'Contents created.'),
-            new OAT\Response(response: 400, description: 'Invalid payload.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Muscle group not found.'),
+            new OAT\Response(response: Response::HTTP_NO_CONTENT, description: 'Contents saved.'),
+            new OAT\Response(response: Response::HTTP_BAD_REQUEST, description: 'Invalid payload.'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'Muscle group not found.'),
         ]
     )]
     public function upsertContentsBulk(

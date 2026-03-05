@@ -37,6 +37,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/exercises', name: 'exercise_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final readonly class ExerciseController
 {
     use ApiExceptionHandler;
@@ -202,9 +206,17 @@ final readonly class ExerciseController
         summary    : 'Get exercise details.',
         security   : [['bearerAuth' => []]],
         responses  : [
-            new OAT\Response(response: 200, description: 'Exercise details.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Exercise not found.'),
+            new OAT\Response(
+                response   : Response::HTTP_OK,
+                description: 'Exercise details.',
+                content    : new OAT\JsonContent(
+                    ref : new Model(
+                        type  : Exercise::class,
+                        groups: [FrontGroupsEnum::EXERCISE_DETAIL]
+                    ),
+                    type: 'object'
+                )
+            ),
         ]
     )]
     public function detail(
@@ -230,7 +242,7 @@ final readonly class ExerciseController
                 format : 'json',
                 context: [
                     'groups' => [
-                        FrontGroupsEnum::EXERCISE_LIST,
+                        FrontGroupsEnum::EXERCISE_DETAIL,
                     ],
                 ]
             ),
@@ -349,11 +361,9 @@ final readonly class ExerciseController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Content updated.'),
-            new OAT\Response(response: 201, description: 'Content created.'),
-            new OAT\Response(response: 400, description: 'Invalid payload.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Exercise not found.'),
+            new OAT\Response(response: Response::HTTP_NO_CONTENT, description: 'Content saved.'),
+            new OAT\Response(response: Response::HTTP_BAD_REQUEST, description: 'Invalid payload.'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'Exercise not found.'),
         ]
     )]
     public function upsertContent(
@@ -411,11 +421,9 @@ final readonly class ExerciseController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Content updated.'),
-            new OAT\Response(response: 201, description: 'Content created.'),
-            new OAT\Response(response: 400, description: 'Invalid payload.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Exercise not found.'),
+            new OAT\Response(response: Response::HTTP_NO_CONTENT, description: 'Contents saved.'),
+            new OAT\Response(response: Response::HTTP_BAD_REQUEST, description: 'Invalid payload.'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'Exercise not found.'),
         ]
     )]
     public function upsertContentsBulk(

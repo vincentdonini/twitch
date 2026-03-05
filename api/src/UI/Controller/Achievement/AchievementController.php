@@ -42,6 +42,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[AsController]
 #[Route(path: '/achievements', name: 'achievement_')]
+#[OAT\Response(ref: '#/components/responses/BadRequest', response: Response::HTTP_BAD_REQUEST)]
+#[OAT\Response(ref: '#/components/responses/Unauthorized', response: Response::HTTP_UNAUTHORIZED)]
+#[OAT\Response(ref: '#/components/responses/Forbidden', response: Response::HTTP_FORBIDDEN)]
+#[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 final class AchievementController extends AbstractController
 {
     use ApiExceptionHandler;
@@ -182,12 +186,12 @@ final class AchievementController extends AbstractController
         summary    : 'Create an achievement.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
-            description: 'Created a achievement.',
+            description: 'Created an achievement.',
             required   : true,
             content    : new OAT\JsonContent(
                 ref: new Model(
                     type  : Achievement::class,
-                    groups: [FrontGroupsEnum::ACHIEVEMENT_LIST]
+                    groups: [FrontGroupsEnum::ACHIEVEMENT_MANAGE]
                 )
             )
         ),
@@ -199,13 +203,13 @@ final class AchievementController extends AbstractController
                     new OAT\Header(
                         header     : 'X-RESOURCE-ID',
                         description: 'ID of Achievement created.',
-                        schema     : new OAT\Schema(type: 'integer')
+                        schema     : new OAT\Schema(type: 'string')
                     ),
                 ],
                 content    : new OAT\JsonContent(
                     ref: new Model(
                         type  : Achievement::class,
-                        groups: [FrontGroupsEnum::ACHIEVEMENT_LIST]
+                        groups: [FrontGroupsEnum::ACHIEVEMENT_MANAGE]
                     )
                 )
             ),
@@ -312,30 +316,10 @@ final class AchievementController extends AbstractController
             content    : new OAT\JsonContent(
                 ref: new Model(
                     type  : Achievement::class,
-                    groups: [FrontGroupsEnum::ACHIEVEMENT_LIST]
+                    groups: [FrontGroupsEnum::ACHIEVEMENT_MANAGE]
                 ),
             ),
         ),
-        parameters : [
-            new OAT\PathParameter(
-                name       : 'code',
-                description: 'Code of the achievement.',
-                required   : true,
-                schema     : new OAT\Schema(type: 'string'),
-            ),
-            new OAT\PathParameter(
-                name       : 'position',
-                description: 'Position of the achievement.',
-                required   : true,
-                schema     : new OAT\Schema(type: 'integer'),
-            ),
-            new OAT\PathParameter(
-                name       : 'achievementGroupId',
-                description: 'Achievement group ID of the achievement.',
-                required   : true,
-                schema     : new OAT\Schema(type: 'integer'),
-            ),
-        ],
         responses  : [
             new OAT\Response(
                 response   : Response::HTTP_NO_CONTENT,
@@ -437,7 +421,7 @@ final class AchievementController extends AbstractController
     #[IsGranted(ListPermissions::PERMISSION_CONTENT_ACHIEVEMENT_MANAGE)]
     #[OAT\Put(
         description: 'Create or update Achievement content for a given locale.',
-        summary    : 'Upsert exercise localized content.',
+        summary    : 'Upsert achievement localized content.',
         security   : [['bearerAuth' => []]],
         requestBody: new OAT\RequestBody(
             required: true,
@@ -458,11 +442,9 @@ final class AchievementController extends AbstractController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Content updated.'),
-            new OAT\Response(response: 201, description: 'Content created.'),
-            new OAT\Response(response: 400, description: 'Invalid payload.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Achievement not found.'),
+            new OAT\Response(response: Response::HTTP_NO_CONTENT, description: 'Content saved.'),
+            new OAT\Response(response: Response::HTTP_BAD_REQUEST, description: 'Invalid payload.'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'Achievement not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]
@@ -516,11 +498,9 @@ final class AchievementController extends AbstractController
             )
         ),
         responses  : [
-            new OAT\Response(response: 200, description: 'Contents updated.'),
-            new OAT\Response(response: 201, description: 'Contents created.'),
-            new OAT\Response(response: 400, description: 'Invalid payload.'),
-            new OAT\Response(response: 403, description: 'Access denied.'),
-            new OAT\Response(response: 404, description: 'Achievement not found.'),
+            new OAT\Response(response: Response::HTTP_NO_CONTENT, description: 'Contents saved.'),
+            new OAT\Response(response: Response::HTTP_BAD_REQUEST, description: 'Invalid payload.'),
+            new OAT\Response(response: Response::HTTP_NOT_FOUND, description: 'Achievement not found.'),
         ]
     )]
     #[Security(name: 'bearerAuth')]

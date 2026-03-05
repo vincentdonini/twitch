@@ -69,7 +69,7 @@ final readonly class PermissionController
                     items: new OAT\Items(
                         ref: new Model(
                             type  : Permission::class,
-                            groups: [FrontGroupsEnum::ROLE_LIST]
+                            groups: [FrontGroupsEnum::PERMISSION_LIST]
                         )
                     )
                 )
@@ -139,7 +139,7 @@ final readonly class PermissionController
                 content    : new OAT\JsonContent(
                     ref : new Model(
                         type  : Permission::class,
-                        groups: [FrontGroupsEnum::ROLE_DETAIL]
+                        groups: [FrontGroupsEnum::PERMISSION_DETAIL]
                     ),
                     type: 'object'
                 )
