@@ -11,10 +11,10 @@ final class WodFilterMapping
         'type.slug'     => 'wodType.slug',
         'category.id'   => 'wodCategory.id',
         'category.slug' => 'wodCategory.slug',
-        'division.id'   => 'wodVersions.wodDivision.id',
-        'division.slug' => 'wodVersions.wodDivision.slug',
-        'gender'        => 'wodVersions.gender',
-        'rounds'        => 'wodVersions.wodVariants.rounds',
-        'timeCap'       => 'wodVersions.wodVariants.timeCap',
+        'division.id'   => 'wodVariants.wodDivision.id',
+        'division.slug' => 'wodVariants.wodDivision.slug',
+        'gender'        => 'wodVariants.gender',
+        'rounds'        => 'wodVariants.rounds',
+        'timeCap'       => 'wodVariants.timeCap',
     ];
 }

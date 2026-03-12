@@ -86,13 +86,17 @@ final class DoctrineFilterApplier
                 ->andWhere("$dqlField >= :$paramBase")
                 ->setParameter($paramBase, $value) : null,
 
-            Operator::IN       => !$isUuid ? $qb
+            Operator::IN       => $qb
                 ->andWhere("$dqlField IN (:$paramBase)")
-                ->setParameter($paramBase, (array)$value) : null,
+                ->setParameter($paramBase, $isUuid
+                    ? array_map(fn($v) => Uuid::fromString(trim($v))->toBinary(), (array)$value)
+                    : (array)$value),
 
-            Operator::NOT_IN   => !$isUuid ? $qb
+            Operator::NOT_IN   => $qb
                 ->andWhere("$dqlField NOT IN (:$paramBase)")
-                ->setParameter($paramBase, (array)$value) : null,
+                ->setParameter($paramBase, $isUuid
+                    ? array_map(fn($v) => Uuid::fromString(trim($v))->toBinary(), (array)$value)
+                    : (array)$value),
 
             Operator::BETWEEN  => $this->applyBetween(
                 $qb,

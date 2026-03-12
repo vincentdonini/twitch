@@ -38,11 +38,14 @@ final class RequestFilters
             }
 
             foreach ($conditions as $operatorStr => $value) {
-                $operatorStr = strtolower($operatorStr);
-
-                try {
-                    $operatorEnum = Operator::from($operatorStr);
-                } catch (ValueError) {
+                $operatorEnum = null;
+                foreach (Operator::cases() as $op) {
+                    if (strtolower($op->value) === strtolower($operatorStr)) {
+                        $operatorEnum = $op;
+                        break;
+                    }
+                }
+                if ($operatorEnum === null) {
                     throw new InvalidArgumentException("Unknown operator '$operatorStr' for field '$field'");
                 }
 
