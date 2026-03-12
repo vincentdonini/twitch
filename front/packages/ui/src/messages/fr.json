@@ -1,0 +1,24 @@
+{
+  "pagination": {
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "theme_toogle": {
+    "dark_mode": "Mode sombre",
+    "light_mode": "Mode clair"
+  },
+  "login": {
+    "title": "Connectez-vous à votre compte",
+    "subtitle": "Entrez votre email ci-dessous pour vous connecter",
+    "email": "Email",
+    "password": "Mot de passe",
+    "signing_in": "Connexion en cours…",
+    "sign_in": "Se connecter"
+  },
+  "search": {
+    "placeholder": "Que cherchez-vous ?",
+    "no_results": "Aucun résultat trouvé.",
+    "trigger": "Rechercher…",
+    "title": "Recherche"
+  }
+}

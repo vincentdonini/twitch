@@ -1,43 +1,24 @@
 {
   "name": "front",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^7.0.2",
-    "@mui/material": "^7.0.2",
-    "@reduxjs/toolkit": "^2.6.1",
-    "axios": "^1.8.4",
-    "next": "15.2.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0",
-    "react-powerglitch": "^1.1.0",
-    "react-redux": "^9.2.0",
-    "react-use-audio-player": "^4.0.2",
-    "redux-persist": "^6.0.0",
-    "sass": "^1.86.0",
-    "tmi.js": "^1.8.5",
-    "uuid": "^11.1.0"
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "turbo format",
+    "typecheck": "turbo typecheck"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@types/tmi.js": "^1.8.6",
-    "eslint": "^9",
-    "eslint-config-next": "15.2.1",
-    "socket.io-client": "^4.8.1",
-    "tailwindcss": "^4",
-    "typescript": "5.8.2"
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "turbo": "^2.8.8",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "pnpm@9.0.6",
+  "engines": {
+    "node": ">=20"
   }
 }

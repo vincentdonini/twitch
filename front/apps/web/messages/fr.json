@@ -1,0 +1,335 @@
+{
+  "landing": {
+    "blog": {
+      "badge": "Blog",
+      "title": "Conseils d'entraînement & insights WOD",
+      "description": "Nous préparons des articles sur l'entraînement CrossFit, le suivi des performances et les stratégies de séances pour aider les athlètes à progresser.",
+      "coming_soon_badge": "Bientôt disponible",
+      "coming_soon_title": "Le blog WODer arrive",
+      "coming_soon_description": "Vous trouverez bientôt des guides d'entraînement, des stratégies WOD, des conseils de performance et des ressources pour les athlètes et les salles CrossFit."
+    },
+    "hero": {
+      "badge": "Explorez des centaines de WODs gratuitement",
+      "title": "Entraînez-vous plus dur avec de <gradient>meilleurs WODs</gradient> et suivez vos progrès",
+      "description": "Découvrez une puissante bibliothèque de WODs en accès libre. Filtrez les entraînements par exercice, équipement, muscles ou niveau. Créez un compte pour suivre vos performances, rivaliser sur les classements, relever des défis et rester motivé.",
+      "cta_primary": "Commencer à suivre mes progrès",
+      "cta_secondary": "Parcourir la bibliothèque de WODs"
+    }
+  },
+  "common": {
+    "all_rights_reserved": "Tous droits réservés.",
+    "badge_resources": "Ressources",
+    "cookie_policy": "Utilisation des cookies",
+    "contact": "Contact",
+    "exercises": "Exercises",
+    "exercise_categories": "Categories d'exercise",
+    "equipments": "Equipements",
+    "home": "Accueil",
+    "legal": "Mentions légales",
+    "learn_more": "En savoir plus",
+    "muscles": "Muscles",
+    "muscle_areas": "Zones musculaires",
+    "muscle_groups": "Groupes musculaires",
+    "privacy_policy": "Engagement de confidentialité",
+    "retry": "Réessayer",
+    "resources": "Ressources",
+    "term_of_service": "Conditions d'utilisation",
+    "wods": "WODs"
+  },
+  "errors": {
+    "not_found_title": "Page introuvable",
+    "not_found_description": "La page que vous cherchez n'existe pas ou a été déplacée.",
+    "back_home": "Retour à l'accueil",
+    "error_title": "Une erreur est survenue",
+    "error_description": "Une erreur inattendue s'est produite. Veuillez réessayer.",
+    "try_again": "Réessayer"
+  },
+  "muscles": {
+    "back": "Retour aux muscles",
+    "description": "Découvrez les muscles impliqués dans chaque mouvement et comprenez comment ils soutiennent la force, la stabilité et les performances.",
+    "error_title": "Impossible de charger les muscles",
+    "error_description": "Nous n'avons pas pu charger les données musculaires. Veuillez réessayer.",
+    "metadata": {
+      "description": "Découvrez les muscles impliqués dans chaque mouvement et comprenez comment ils soutiennent la force, la stabilité et les performances.",
+      "title": "Muscles"
+    },
+    "section_group": "Groupe",
+    "section_area": "Zone",
+    "title": "Muscles"
+  },
+  "muscleAreas": {
+    "back": "Retour aux zones musculaires",
+    "description": "Découvrez toutes les zones musculaires et les meilleurs exercices pour les cibler. Construisez des entraînements efficaces, améliorez votre endurance et boostez vos résultats.",
+    "error_title": "Impossible de charger les zones musculaires",
+    "error_description": "Nous n'avons pas pu charger les données des zones musculaires. Veuillez réessayer.",
+    "metadata": {
+      "description": "Découvrez toutes les zones musculaires et les meilleurs exercices pour les cibler. Construisez des entraînements efficaces, améliorez votre endurance et boostez vos résultats.",
+      "title": "Zones musculaires"
+    },
+    "title": "Zones musculaires"
+  },
+  "muscleGroups": {
+    "back": "Retour aux groupes musculaires",
+    "description": "Un guide complet des principaux groupes musculaires du corps avec des exercices et des conseils d'entraînement pour développer la force et améliorer vos séances.",
+    "error_title": "Impossible de charger les groupes musculaires",
+    "error_description": "Nous n'avons pas pu charger les données des groupes musculaires. Veuillez réessayer.",
+    "metadata": {
+      "description": "Un guide complet des principaux groupes musculaires du corps avec des exercices et des conseils d'entraînement pour développer la force et améliorer vos séances.",
+      "title": "Groupes musculaires"
+    },
+    "title": "Groupes musculaires"
+  },
+  "exercises": {
+    "back": "Retour aux exercices",
+    "description": "Découvrez une variété d'exercices, apprenez à les exécuter correctement et améliorez votre force, votre mobilité et vos performances.",
+    "error_title": "Impossible de charger les exercices",
+    "error_description": "Nous n'avons pas pu charger les données des exercices. Veuillez réessayer.",
+    "metadata": {
+      "description": "Découvrez une variété d'exercices, apprenez à les exécuter correctement et améliorez votre force, votre mobilité et vos performances.",
+      "title": "Exercices"
+    },
+    "title": "Exercices"
+  },
+  "equipments": {
+    "back": "Retour aux équipements",
+    "description": "Explorez les équipements utilisés à l'entraînement et découvrez les outils qui améliorent la force, les performances et l'efficacité des séances.",
+    "error_title": "Impossible de charger les équipements",
+    "error_description": "Nous n'avons pas pu charger les données des équipements. Veuillez réessayer.",
+    "metadata": {
+      "description": "Explorez les équipements utilisés à l'entraînement et découvrez les outils qui améliorent la force, les performances et l'efficacité des séances.",
+      "title": "Équipements"
+    },
+    "title": "Équipements"
+  },
+  "terms": {
+    "metadata": {
+      "title": "Conditions d'utilisation",
+      "description": "Lisez les conditions générales régissant votre utilisation de notre Service."
+    },
+    "title": "Conditions d'utilisation",
+    "last_updated": "Dernière mise à jour : {date}",
+    "intro": "Bienvenue sur <strong>{appName}</strong>, opéré par <strong>{company}</strong> (« nous »). En accédant ou en utilisant notre application mobile, site web ou services (collectivement, le « Service »), vous acceptez d'être lié par ces Conditions d'utilisation.",
+    "s1_title": "1. Utilisation du Service",
+    "s1_body": "Vous acceptez d'utiliser le Service uniquement à des fins légales et conformément à ces Conditions.",
+    "s1_prohibition": "Vous ne devez pas :",
+    "s1_items": [
+      "Utiliser le Service d'une manière qui viole les lois ou réglementations applicables",
+      "Tenter d'obtenir un accès non autorisé au Service ou aux systèmes associés",
+      "Interférer avec le bon fonctionnement de l'application",
+      "Télécharger du contenu nuisible, abusif ou inapproprié"
+    ],
+    "s1_termination": "Nous nous réservons le droit de suspendre ou de résilier l'accès en cas de violation de ces conditions.",
+    "s2_title": "2. Comptes utilisateurs",
+    "s2_body": "Pour utiliser certaines fonctionnalités du Service, vous devrez peut-être créer un compte.",
+    "s2_agree": "Vous acceptez de :",
+    "s2_items": [
+      "Fournir des informations exactes et complètes",
+      "Maintenir la confidentialité de vos identifiants de connexion",
+      "Nous notifier immédiatement de toute utilisation non autorisée de votre compte"
+    ],
+    "s2_responsibility": "Vous êtes responsable de toutes les activités effectuées sous votre compte.",
+    "s3_title": "3. Avertissement médical",
+    "s3_body1": "Le Service peut fournir des informations relatives au fitness, à l'entraînement ou à la santé.",
+    "s3_body2": "Ces informations sont fournies <strong>à titre informatif uniquement</strong> et <strong>ne constituent pas un avis médical</strong>.",
+    "s3_body3": "Avant de commencer tout programme d'exercice, vous devriez consulter un professionnel de santé qualifié, surtout si vous avez des conditions médicales.",
+    "s3_body4": "L'utilisation des exercices et plans d'entraînement fournis dans l'application est <strong>à vos propres risques</strong>.",
+    "s4_title": "4. Propriété intellectuelle",
+    "s4_body1": "Tout le contenu du Service, y compris mais sans s'y limiter le texte, les graphiques, logos, vidéos, programmes d'entraînement et logiciels, est la propriété de <strong>{company}</strong> ou de ses concédants et est protégé par les lois sur la propriété intellectuelle.",
+    "s4_body2": "Vous ne pouvez pas reproduire, distribuer ou modifier une partie du Service sans autorisation écrite préalable.",
+    "s5_title": "5. Abonnements et paiements",
+    "s5_body1": "Certaines fonctionnalités du Service peuvent nécessiter un <strong>abonnement payant</strong>.",
+    "s5_body2": "Si vous souscrivez un abonnement :",
+    "s5_payment_item": "Les paiements seront traités via {payment}",
+    "s5_items": [
+      "Les abonnements peuvent se renouveler automatiquement sauf annulation avant la date de renouvellement",
+      "Les politiques de remboursement sont régies par la plateforme utilisée pour l'achat"
+    ],
+    "s6_title": "6. Limitation de responsabilité",
+    "s6_intro": "Dans la mesure maximale permise par la loi, <strong>{company}</strong> ne sera pas responsable de :",
+    "s6_items": [
+      "Les blessures résultant de l'utilisation des entraînements ou plans d'entraînement",
+      "Les interruptions ou indisponibilités du Service",
+      "La perte de données",
+      "Les dommages indirects ou consécutifs"
+    ],
+    "s6_risk": "Votre utilisation du Service est à vos propres risques.",
+    "s7_title": "7. Résiliation",
+    "s7_intro": "Nous pouvons suspendre ou résilier votre accès au Service à tout moment si :",
+    "s7_items": [
+      "Vous violez ces Conditions",
+      "Nous interrompons le Service",
+      "Requis par la loi"
+    ],
+    "s7_stop": "Vous pouvez cesser d'utiliser le Service à tout moment.",
+    "s8_title": "8. Modifications des Conditions",
+    "s8_body1": "Nous pouvons mettre à jour ces Conditions de temps en temps.",
+    "s8_body2": "Si nous apportons des modifications importantes, nous en informerons les utilisateurs en :",
+    "s8_items": [
+      "Mettant à jour la date de « Dernière mise à jour »",
+      "Affichant un avis dans l'application"
+    ],
+    "s8_body3": "L'utilisation continue du Service après les modifications constitue une acceptation des Conditions mises à jour.",
+    "s9_title": "9. Nous contacter",
+    "s9_intro": "Si vous avez des questions concernant ces Conditions, vous pouvez nous contacter à :",
+    "s9_email": "E-mail",
+    "s9_company": "Société",
+    "s9_address": "Adresse"
+  },
+  "cookies": {
+    "metadata": {
+      "title": "Politique de cookies",
+      "description": "Découvrez comment nous utilisons les cookies et technologies similaires sur notre Service."
+    },
+    "title": "Politique de cookies",
+    "last_updated": "Dernière mise à jour : {date}",
+    "intro": "Cette politique de cookies explique comment <strong>{company}</strong> (« nous ») utilise les cookies et technologies similaires lorsque vous utilisez <strong>{appName}</strong> (le « Service »).",
+    "consent": "En continuant à utiliser notre Service, vous acceptez l'utilisation des cookies conformément à cette politique.",
+    "s1_title": "1. Qu'est-ce qu'un cookie",
+    "s1_body": "Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez un site web ou utilisez une application. Ils améliorent l'expérience utilisateur en mémorisant vos préférences et en activant certaines fonctionnalités.",
+    "s2_title": "2. Comment nous utilisons les cookies",
+    "s2_intro": "Nous utilisons les cookies à plusieurs fins, notamment :",
+    "s2_items": [
+      "Assurer le bon fonctionnement du Service",
+      "Mémoriser les préférences utilisateur",
+      "Améliorer les performances et l'expérience utilisateur",
+      "Analyser l'utilisation et le trafic"
+    ],
+    "s3_title": "3. Types de cookies utilisés",
+    "s3_essential_title": "Cookies essentiels",
+    "s3_essential_body": "Ces cookies sont nécessaires au bon fonctionnement du Service. Ils permettent des fonctionnalités de base telles que les sessions de connexion et la sécurité.",
+    "s3_analytics_title": "Cookies analytiques",
+    "s3_analytics_body": "Ces cookies nous aident à comprendre comment les utilisateurs interagissent avec le Service, nous permettant d'améliorer les fonctionnalités et les performances.",
+    "s3_preference_title": "Cookies de préférence",
+    "s3_preference_body": "Ces cookies mémorisent vos paramètres et préférences pour offrir une expérience plus personnalisée.",
+    "s3_third_title": "Cookies tiers",
+    "s3_third_body": "Certains cookies peuvent être définis par des services tiers intégrés à notre Service, tels que des fournisseurs d'analyse ou des plateformes de paiement.",
+    "s4_title": "4. Gestion des cookies",
+    "s4_body1": "Vous pouvez contrôler ou désactiver les cookies via les paramètres de votre navigateur. Notez que la désactivation de certains cookies peut affecter le fonctionnement du Service.",
+    "s4_body2": "La plupart des navigateurs vous permettent de :",
+    "s4_items": [
+      "Consulter les cookies stockés",
+      "Supprimer des cookies",
+      "Bloquer les cookies de sites spécifiques",
+      "Bloquer tous les cookies"
+    ],
+    "s5_title": "5. Modifications de cette politique",
+    "s5_body1": "Nous pouvons mettre à jour cette politique de cookies de temps en temps. Lorsque des modifications sont apportées, la date de « Dernière mise à jour » sera révisée.",
+    "s5_body2": "Nous encourageons les utilisateurs à consulter régulièrement cette page.",
+    "s6_title": "6. Nous contacter",
+    "s6_intro": "Si vous avez des questions concernant cette politique de cookies, veuillez nous contacter :",
+    "s6_email": "E-mail",
+    "s6_company": "Société",
+    "s6_address": "Adresse"
+  },
+  "privacy": {
+    "metadata": {
+      "title": "Politique de confidentialité",
+      "description": "Découvrez comment nous collectons, utilisons et protégeons vos données personnelles."
+    },
+    "title": "Politique de confidentialité",
+    "last_updated": "Dernière mise à jour : {date}",
+    "intro": "Cette politique de confidentialité décrit comment <strong>{company}</strong> (« nous ») collecte, utilise et protège vos données personnelles lorsque vous utilisez <strong>{appName}</strong> (le « Service »).",
+    "consent": "En utilisant le Service, vous acceptez la collecte et l'utilisation de vos informations conformément à cette politique de confidentialité.",
+    "s1_title": "1. Informations que nous collectons",
+    "s1_personal_title": "Informations personnelles",
+    "s1_personal_intro": "Nous pouvons collecter les informations personnelles que vous fournissez volontairement, notamment :",
+    "s1_personal_items": [
+      "Nom",
+      "Adresse e-mail",
+      "Identifiants de connexion",
+      "Informations de profil"
+    ],
+    "s1_usage_title": "Données d'utilisation",
+    "s1_usage_intro": "Nous pouvons collecter automatiquement certaines informations sur la façon dont le Service est consulté et utilisé, notamment :",
+    "s1_usage_items": [
+      "Type d'appareil",
+      "Système d'exploitation",
+      "Adresse IP",
+      "Statistiques d'utilisation de l'application"
+    ],
+    "s1_fitness_title": "Données de fitness ou d'activité",
+    "s1_fitness_body": "Si vous utilisez les fonctionnalités de suivi fitness, nous pouvons collecter des informations relatives à vos séances d'entraînement et à votre progression dans l'application.",
+    "s2_title": "2. Comment nous utilisons vos informations",
+    "s2_intro": "Nous utilisons les données collectées pour :",
+    "s2_items": [
+      "Fournir et maintenir le Service",
+      "Gérer votre compte utilisateur",
+      "Améliorer les performances et les fonctionnalités de l'application",
+      "Communiquer avec les utilisateurs",
+      "Assurer la sécurité et prévenir la fraude"
+    ],
+    "s3_title": "3. Partage des informations",
+    "s3_intro": "Nous ne vendons pas vos données personnelles. Cependant, nous pouvons partager des informations dans les cas suivants :",
+    "s3_items": [
+      "Avec des prestataires de services qui aident à faire fonctionner le Service",
+      "Pour respecter des obligations légales",
+      "Pour protéger les droits et la sécurité de nos utilisateurs ou de la société"
+    ],
+    "s4_title": "4. Stockage et sécurité des données",
+    "s4_body1": "Nous prenons des mesures techniques et organisationnelles raisonnables pour protéger vos données personnelles contre tout accès non autorisé, perte ou utilisation abusive.",
+    "s4_body2": "Cependant, aucune méthode de transmission sur Internet ou de stockage électronique n'est totalement sécurisée.",
+    "s5_title": "5. Conservation des données",
+    "s5_body": "Nous conservons les données personnelles uniquement le temps nécessaire pour atteindre les objectifs décrits dans cette politique, sauf si une durée plus longue est requise par la loi.",
+    "s6_title": "6. Vos droits",
+    "s6_intro": "Selon votre lieu de résidence, vous pouvez disposer de droits concernant vos données personnelles, notamment :",
+    "s6_items": [
+      "Le droit d'accéder à vos données",
+      "Le droit de corriger des informations inexactes",
+      "Le droit de demander la suppression de vos données",
+      "Le droit de limiter ou de vous opposer au traitement de vos données"
+    ],
+    "s6_contact": "Pour exercer ces droits, veuillez nous contacter en utilisant les informations ci-dessous.",
+    "s7_title": "7. Vie privée des mineurs",
+    "s7_body1": "Le Service n'est pas destiné aux personnes de moins de <strong>{minAge}</strong> ans. Nous ne collectons pas sciemment de données personnelles auprès d'enfants.",
+    "s7_body2": "Si nous apprenons qu'un enfant nous a fourni des données personnelles, nous prendrons les mesures nécessaires pour les supprimer.",
+    "s8_title": "8. Modifications de cette politique",
+    "s8_body1": "Nous pouvons mettre à jour cette politique de confidentialité de temps en temps. Lorsque des modifications surviennent, nous mettrons à jour la date de « Dernière mise à jour ».",
+    "s8_body2": "Nous encourageons les utilisateurs à consulter régulièrement cette page.",
+    "s9_title": "9. Nous contacter",
+    "s9_intro": "Si vous avez des questions concernant cette politique de confidentialité, veuillez nous contacter :",
+    "s9_email": "E-mail",
+    "s9_company": "Société",
+    "s9_address": "Adresse"
+  },
+  "wods": {
+    "back": "Retour aux WODs",
+    "category": "Catégorie",
+    "categories": "Catégories",
+    "type": "Type",
+    "types": "Types",
+    "division": "Division",
+    "divisions": "Divisions",
+    "description": "Découvrez les muscles impliqués dans chaque mouvement et comprenez comment ils soutiennent la force, la stabilité et les performances.",
+    "error_title": "Impossible de charger les WODs",
+    "error_description": "Nous n'avons pas pu charger les données WOD. Veuillez réessayer.",
+    "metadata": {
+      "description": "Découvrez les muscles impliqués dans chaque mouvement et comprenez comment ils soutiennent la force, la stabilité et les performances.",
+      "title": "WODs"
+    },
+    "title": "WODs",
+    "sort_name_asc": "Nom (A → Z)",
+    "sort_name_desc": "Nom (Z → A)",
+    "filters": "Filtres",
+    "active_filters": "Filtres actifs :",
+    "clear_all": "Tout effacer",
+    "search_placeholder": "Rechercher des WODs…",
+    "no_results": "Aucun WOD ne correspond à vos filtres.",
+    "workout_count": "{count, plural, one {# WOD} other {# WODs}}",
+    "view_wod": "Voir le WOD",
+    "wod": "WOD",
+    "wods": "WOD",
+    "details": "Détails",
+    "rules": "Règles",
+    "tips": "Conseils & coaching",
+    "variants": "Variantes",
+    "rounds": "{count, plural, one {# round} other {# rounds}}",
+    "time_cap": "Time cap : {value}s",
+    "gender_male": "Hommes",
+    "gender_female": "Femmes",
+    "gender_mixed": "Mixte",
+    "metric_repetitions": "{value} reps",
+    "metric_time": "{value}s",
+    "metric_distance": "{value}m",
+    "metric_calories": "{value} cal"
+  }
+}

@@ -14,6 +14,9 @@
 # Docker
 /docker/nginx/ssl/*
 
+# Backups
+/frontBAK/
+
 # Sensitive configuration files
 /.env
 /.env.local

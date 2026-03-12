@@ -1,0 +1,114 @@
+"use client"
+
+import React from "react"
+import { useTranslations } from "next-intl"
+import { ChevronDown, Search } from "lucide-react"
+import { Button } from "@workspace/ui/components/button"
+import { Card, CardContent } from "@workspace/ui/components/card"
+import { Checkbox } from "@workspace/ui/components/checkbox"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@workspace/ui/components/collapsible"
+import { Input } from "@workspace/ui/components/input"
+import { Skeleton } from "@workspace/ui/components/skeleton"
+import { Stack } from "@workspace/ui/components/stack"
+import type { OptionState, SidebarFilterGroup } from "../_lib/filters"
+
+// ---------------------------------------------------------------------------
+// FiltersSidebar
+// ---------------------------------------------------------------------------
+
+export function FiltersSidebar({ filterGroups, searchQuery, onSearchChange }: {
+  filterGroups: SidebarFilterGroup[]
+  searchQuery: string
+  onSearchChange: (q: string) => void
+}) {
+  const t = useTranslations("wods")
+  return (
+    <Card className="shadow-none border-0 sm:border-1">
+      <CardContent>
+        <Stack gap={6} divider>
+          <div>
+            <h4 className="text-lg font-medium">{t("filters")}</h4>
+            <div className="relative mt-4">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                placeholder={t("search_placeholder")}
+                value={searchQuery}
+                onChange={e => onSearchChange(e.target.value)}
+                className="pl-9"
+              />
+            </div>
+          </div>
+          {filterGroups.map(group => (
+            <FilterGroup key={group.id} title={group.title} isLoading={group.isLoading}>
+              {group.options.map(option => (
+                <TriStateCheckbox
+                  key={option.id}
+                  label={option.label}
+                  state={group.getState(option.id)}
+                  onToggle={() => group.onToggle(option.id)}
+                />
+              ))}
+            </FilterGroup>
+          ))}
+        </Stack>
+      </CardContent>
+    </Card>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// FilterGroup
+// ---------------------------------------------------------------------------
+
+function FilterGroup({ title, isLoading, children }: {
+  title: string
+  isLoading: boolean
+  children: React.ReactNode
+}) {
+  return (
+    <Collapsible defaultOpen>
+      <div className="flex items-center justify-between">
+        <h4 className="text-lg font-medium">{title}</h4>
+        <CollapsibleTrigger asChild>
+          <Button variant="ghost" size="icon">
+            <ChevronDown className="h-5 w-5" />
+          </Button>
+        </CollapsibleTrigger>
+      </div>
+      <CollapsibleContent className="space-y-3 pt-4">
+        {isLoading
+          ? Array.from({ length: 3 }).map((_, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <Skeleton className="size-4 rounded-[4px]" />
+                <Skeleton className="h-4 w-full rounded" />
+              </div>
+            ))
+          : children
+        }
+      </CollapsibleContent>
+    </Collapsible>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// TriStateCheckbox
+// ---------------------------------------------------------------------------
+
+function TriStateCheckbox({ label, state, onToggle }: {
+  label: string
+  state: OptionState
+  onToggle: () => void
+}) {
+  const id = `filter-${label}`
+  return (
+    <div className="flex items-center gap-3">
+      <Checkbox id={id} state={state} onToggle={onToggle} />
+      <label
+        htmlFor={id}
+        className={`cursor-pointer text-sm font-medium ${state === "exclude" ? "text-destructive line-through" : ""}`}
+      >
+        {label}
+      </label>
+    </div>
+  )
+}
