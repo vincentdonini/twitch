@@ -4,10 +4,10 @@ services:
         volumes:
             - ./docker/nginx/api.conf:/etc/nginx/conf.d/api.conf
             - ./docker/nginx/front.conf:/etc/nginx/conf.d/front.conf
+            - ./docker/nginx/admin.conf:/etc/nginx/conf.d/admin.conf
             - ./docker/nginx/websocket.conf:/etc/nginx/conf.d/websocket.conf
             - ./docker/nginx/ssl:/etc/nginx/ssl
             - ./api/public:/app/public
-            - ./front/build:/react/build
         ports:
             - "80:80"
             - "443:443"
@@ -16,7 +16,9 @@ services:
         depends_on:
             - api
             - react
-    
+            - admin
+        restart: unless-stopped
+
     api:
         build:
             context: ./docker/php
@@ -26,6 +28,7 @@ services:
             - app-network
         depends_on:
             - db
+        restart: unless-stopped
 
     db:
         image: percona/percona-server:8.0
@@ -40,18 +43,27 @@ services:
             - percona-data:/var/lib/mysql
         networks:
             - app-network
-    
+        restart: unless-stopped
+
     react:
         build:
-            context: ./docker/node
+            context: .
+            dockerfile: ./docker/node-front/Dockerfile
         volumes:
             - ./front:/app
+            - /app/node_modules
+            - /app/apps/web/node_modules
+            - /app/packages/ui/node_modules
+            - /app/packages/api/node_modules
+            - /app/packages/eslint-config/node_modules
+            - /app/packages/typescript-config/node_modules
         networks:
             - app-network
-        command: ["sh", "-c", "yarn install && yarn dev --port 3000"]
+        command: ["pnpm", "--filter", "web", "dev"]
         depends_on:
             - api
-    
+        restart: on-failure
+
     websocket:
         build:
             context: ./docker/node
@@ -63,6 +75,26 @@ services:
         depends_on:
             - api
             - react
+        restart: unless-stopped
+
+    admin:
+        build:
+            context: .
+            dockerfile: ./docker/node-front/Dockerfile
+        volumes:
+            - ./front:/app
+            - /app/node_modules
+            - /app/apps/admin/node_modules
+            - /app/packages/ui/node_modules
+            - /app/packages/api/node_modules
+            - /app/packages/eslint-config/node_modules
+            - /app/packages/typescript-config/node_modules
+        networks:
+            - app-network
+        command: ["pnpm", "--filter", "admin", "dev"]
+        depends_on:
+            - api
+        restart: on-failure
 
 networks:
     app-network:
