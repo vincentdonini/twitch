@@ -3,6 +3,7 @@
 namespace App\Infrastructure\Security\Voters\Permission;
 
 use App\Domain\User\Entity\User;
+use App\Infrastructure\Security\ApiKey\PublicApiUser;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\Voter;
 
@@ -19,6 +20,10 @@ class PermissionVoter extends Voter
         TokenInterface $token
     ): bool {
         $user = $token->getUser();
+
+        if ($user instanceof PublicApiUser) {
+            return in_array($attribute, PublicApiUser::PUBLIC_PERMISSIONS, true);
+        }
 
         if (!$user instanceof User) {
             return false;

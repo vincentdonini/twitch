@@ -26,6 +26,10 @@ services:
             - '../src/Kernel.php'
             - '../src/**/Entity/'
             
+    App\Infrastructure\Security\ApiKey\ApiKeyAuthenticator:
+        arguments:
+            $publicApiKey: '%env(API_PUBLIC_KEY)%'
+
     App\Infrastructure\Security\JWT\JWTCreatedListener:
         tags:
             - { name: kernel.event_listener, event: lexik_jwt_authentication.on_jwt_created, method: onJWTCreated }

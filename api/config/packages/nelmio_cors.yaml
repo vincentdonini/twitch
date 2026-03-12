@@ -1,13 +1,14 @@
 nelmio_cors:
     defaults:
-        allow_origin: ['https://front.twitch.woder.local']
-        allow_methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE']
-        allow_headers: ['Content-Type', 'Authorization']
-        expose_headers: []
+        allow_origin: ['https://front.twitch.woder.local', 'https://admin.twitch.woder.local']
+        allow_methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE', 'PATCH']
+        allow_headers: ['Content-Type', 'Authorization', 'X-API-Key']
+        expose_headers: ['Element-Count', 'Pagination-Page', 'Pagination-Count', 'Pagination-Limit']
         max_age: 3600
         hosts: []
     paths:
-        '^/':  # Applique CORS à toutes les routes
-            allow_origin: ['https://front.twitch.woder.local']
-            allow_methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE']
-            allow_headers: ['Content-Type', 'Authorization']
+        '^/':
+            allow_origin: ['https://front.twitch.woder.local', 'https://admin.twitch.woder.local']
+            allow_methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE', 'PATCH']
+            allow_headers: ['Content-Type', 'Authorization', 'X-API-Key']
+            expose_headers: ['Element-Count', 'Pagination-Page', 'Pagination-Count', 'Pagination-Limit']

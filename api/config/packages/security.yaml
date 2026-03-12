@@ -34,6 +34,8 @@ security:
             stateless: true
             entry_point: jwt
             jwt: ~
+            custom_authenticators:
+                - App\Infrastructure\Security\ApiKey\ApiKeyAuthenticator
     
     access_control:
         # Routes publiques
