@@ -116,9 +116,9 @@ function WodsPageContent() {
   for (const [groupId, state] of Object.entries(filterStates)) {
     const base = FILTER_BASE[groupId]
     if (!base) continue
-    if (state.include.length === 1) apiParams[`${base}[eq]`]    = state.include[0]
+    if (state.include.length === 1) apiParams[`${base}[eq]`]    = state.include[0]!
     if (state.include.length > 1)   apiParams[`${base}[in]`]    = state.include
-    if (state.exclude.length === 1) apiParams[`${base}[neq]`]   = state.exclude[0]
+    if (state.exclude.length === 1) apiParams[`${base}[neq]`]   = state.exclude[0]!
     if (state.exclude.length > 1)   apiParams[`${base}[notIn]`] = state.exclude
   }
 
@@ -247,7 +247,7 @@ function WodsPageContent() {
                     className="h-auto cursor-pointer !p-1 text-inherit"
                     onClick={() => {
                       if (f.key === "search") { clearFilterGroup("search"); return }
-                      const [groupId, optionId] = f.key.split(":")
+                      const [groupId, optionId] = f.key.split(":") as [string, string]
                       toggleFilter(groupId, optionId)
                     }}
                   >
