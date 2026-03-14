@@ -16,16 +16,14 @@ import {
   DropdownMenuTrigger,
 } from "@workspace/ui/components/dropdown-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@workspace/ui/components/sheet"
-import { ArrowRight, Ban, ChevronDown, Funnel, SlidersHorizontal, X } from "lucide-react"
+import { Ban, ChevronDown, Funnel, SlidersHorizontal, X } from "lucide-react"
 import { useGetWodCategories, useGetWodDivisions, useGetWods, useGetWodTypes } from "@workspace/api"
 import { useDebounce } from "@workspace/ui/hooks/use-debounce"
 import { WodCard } from "./_components/wod-card"
 import { FiltersSidebar } from "./_components/filters-sidebar"
 import {
   LIMIT,
-  DEFAULT_SORT,
   FILTER_BASE,
-  FILTER_GROUPS,
   sortOptions,
   parseUrl,
   buildUrl,
@@ -131,7 +129,7 @@ function WodsPageContent() {
       isLoading: isLoadingWodCategories,
       options: wodCategories?.map(c => ({ id: c.id, label: c.title })) ?? [],
       getState: (id) => filterStates.category?.include.includes(id) ? "include"
-                      : filterStates.category?.exclude.includes(id) ? "exclude" : "none",
+        : filterStates.category?.exclude.includes(id) ? "exclude" : "none",
       onToggle: (id) => toggleFilter("category", id),
     },
     {
@@ -140,7 +138,7 @@ function WodsPageContent() {
       isLoading: isLoadingWodTypes,
       options: wodTypes?.map(tp => ({ id: tp.id, label: tp.title })) ?? [],
       getState: (id) => filterStates.type?.include.includes(id) ? "include"
-                      : filterStates.type?.exclude.includes(id) ? "exclude" : "none",
+        : filterStates.type?.exclude.includes(id) ? "exclude" : "none",
       onToggle: (id) => toggleFilter("type", id),
     },
     {
@@ -149,7 +147,7 @@ function WodsPageContent() {
       isLoading: isLoadingWodDivisions,
       options: wodDivisions?.map(d => ({ id: d.id, label: d.title })) ?? [],
       getState: (id) => filterStates.division?.include.includes(id) ? "include"
-                      : filterStates.division?.exclude.includes(id) ? "exclude" : "none",
+        : filterStates.division?.exclude.includes(id) ? "exclude" : "none",
       onToggle: (id) => toggleFilter("division", id),
     },
   ]
