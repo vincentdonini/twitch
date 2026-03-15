@@ -1,12 +1,13 @@
 export const DEFAULT_SORT = "name"
 export const LIMIT = 6
 
-export const FILTER_GROUPS = ["category", "type", "division"] as const
+export const FILTER_GROUPS = ["category", "type", "division", "exercise"] as const
 
 export const FILTER_BASE: Record<string, string> = {
   category: "filters[category.id]",
   type:     "filters[type.id]",
   division: "filters[division.id]",
+  exercise: "filters[exercise.id]",
 }
 
 export type SortOptionKey = "sort_name_asc" | "sort_name_desc"
@@ -38,6 +39,10 @@ export type SidebarFilterGroup = {
   options: SidebarFilterOption[]
   getState: (optionId: string) => OptionState
   onToggle: (optionId: string) => void
+  searchable?: boolean
+  selectedIds?: { include: string[]; exclude: string[] }
+  labelCache?: Record<string, string>
+  onLabelsDiscovered?: (labels: Record<string, string>) => void
 }
 
 // ---------------------------------------------------------------------------

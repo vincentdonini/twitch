@@ -16,5 +16,6 @@ final class WodFilterMapping
         'gender'        => 'wodVariants.gender',
         'rounds'        => 'wodVariants.rounds',
         'timeCap'       => 'wodVariants.timeCap',
+        'exercise.id'   => 'wodVariants.wodVariantExercises.exercise.id',
     ];
 }

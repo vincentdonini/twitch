@@ -1,8 +1,10 @@
 "use client"
 
-import React from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { useTranslations } from "next-intl"
 import { ChevronDown, Search } from "lucide-react"
+import { useGetExercises } from "@workspace/api"
+import { useDebounce } from "@workspace/ui/hooks/use-debounce"
 import { Button } from "@workspace/ui/components/button"
 import { Card, CardContent } from "@workspace/ui/components/card"
 import { Checkbox } from "@workspace/ui/components/checkbox"
@@ -38,15 +40,24 @@ export function FiltersSidebar({ filterGroups, searchQuery, onSearchChange }: {
           </div>
           {filterGroups.map(group => (
             <FilterGroup key={group.id} title={group.title} isLoading={group.isLoading}>
-              {group.options.map(option => (
-                <TriStateCheckbox
-                  key={option.id}
-                  label={option.label}
-                  count={option.count}
-                  state={group.getState(option.id)}
-                  onToggle={() => group.onToggle(option.id)}
+              {group.searchable ? (
+                <ExerciseSearchFilter
+                  selectedIds={group.selectedIds ?? { include: [], exclude: [] }}
+                  getState={group.getState}
+                  onToggle={group.onToggle}
+                  onLabelsDiscovered={group.onLabelsDiscovered}
                 />
-              ))}
+              ) : (
+                group.options.map(option => (
+                  <TriStateCheckbox
+                    key={option.id}
+                    label={option.label}
+                    count={option.count}
+                    state={group.getState(option.id)}
+                    onToggle={() => group.onToggle(option.id)}
+                  />
+                ))
+              )}
             </FilterGroup>
           ))}
         </Stack>
@@ -85,6 +96,111 @@ function FilterGroup({ title, isLoading, children }: {
   )
 }
 
+
+// ---------------------------------------------------------------------------
+// ExerciseSearchFilter
+// ---------------------------------------------------------------------------
+
+function ExerciseSearchFilter({ selectedIds, getState, onToggle, onLabelsDiscovered }: {
+  selectedIds: { include: string[]; exclude: string[] }
+  getState: (id: string) => OptionState
+  onToggle: (id: string) => void
+  onLabelsDiscovered?: (labels: Record<string, string>) => void
+}) {
+  const t = useTranslations("wods")
+  const [search, setSearch] = useState("")
+  const debouncedSearch = useDebounce(search)
+  const labelMap = useRef<Record<string, string>>({})
+  const countMap = useRef<Record<string, number>>({})
+
+  const { data: results, isLoading: isSearching } = useGetExercises(
+    debouncedSearch
+      ? { "filters[title][like]": debouncedSearch, limit: "15" }
+      : { limit: "1" }
+  )
+
+  useEffect(() => {
+    if (!results?.length) return
+    const discovered: Record<string, string> = {}
+    results.forEach(e => {
+      labelMap.current[e.id] = e.title
+      countMap.current[e.id] = e.wodCount
+      discovered[e.id] = e.title
+    })
+    onLabelsDiscovered?.(discovered)
+  }, [results]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const allSelectedIds    = [...new Set([...selectedIds.include, ...selectedIds.exclude])]
+  const searchResults     = debouncedSearch ? (results ?? []) : []
+  const unselectedResults = searchResults.filter(e => getState(e.id) === "none")
+
+  return (
+    <div className="space-y-3">
+
+      {/* Exercises already selected (include / exclude) */}
+      {allSelectedIds.length > 0 && (
+        <>
+          <div className="space-y-2">
+            {allSelectedIds.map(id => (
+              <TriStateCheckbox
+                key={id}
+                label={labelMap.current[id] ?? `${id.substring(0, 8)}…`}
+                count={countMap.current[id]}
+                state={getState(id)}
+                onToggle={() => onToggle(id)}
+              />
+            ))}
+          </div>
+          <div className="border-t" />
+        </>
+      )}
+
+      {/* Search input */}
+      <div className="relative">
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+        <Input
+          placeholder={t("exercise_search_placeholder")}
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          className="pl-9"
+        />
+      </div>
+
+      {/* Loading skeletons */}
+      {isSearching && debouncedSearch && (
+        <div className="space-y-2">
+          {Array.from({ length: 3 }).map((_, i) => (
+            <div key={i} className="flex items-center gap-3">
+              <Skeleton className="size-4 rounded-[4px]" />
+              <Skeleton className="h-4 w-full rounded" />
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Search results (only unselected — selected ones are shown above) */}
+      {!isSearching && unselectedResults.map(e => (
+        <TriStateCheckbox
+          key={e.id}
+          label={e.title}
+          count={e.wodCount}
+          state="none"
+          onToggle={() => onToggle(e.id)}
+        />
+      ))}
+
+      {/* No results */}
+      {!isSearching && debouncedSearch && searchResults.length === 0 && (
+        <p className="text-muted-foreground text-xs">{t("exercise_no_results")}</p>
+      )}
+
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// TriStateCheckbox
+// ---------------------------------------------------------------------------
 
 function TriStateCheckbox({ label, count, state, onToggle }: {
   label: string

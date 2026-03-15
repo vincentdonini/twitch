@@ -27,7 +27,7 @@ final class ExerciseService
         ];
     }
 
-    public function transformToDTO(Exercise $exercise, FilterCollection $filters = null): ?ExerciseDTO
+    public function transformToDTO(Exercise $exercise, FilterCollection $filters = null, int $wodCount = 0): ?ExerciseDTO
     {
         $content = $exercise->getContentByLocale($this->getLocale());
         if (!$this->EntityFieldFilter->match($exercise, $filters, $this->filterMapping)) {
@@ -35,19 +35,20 @@ final class ExerciseService
         }
 
         return new ExerciseDTO(
-            id     : $exercise->getId(),
-            slug   : $exercise->getSlug(),
-            title  : $content ? $content->getTitle() : '',
-            summary: $content ? $content->getSummary() : '',
-            details: $content ? $content->getDetails() : '',
+            id      : $exercise->getId(),
+            slug    : $exercise->getSlug(),
+            title   : $content ? $content->getTitle() : '',
+            summary : $content ? $content->getSummary() : '',
+            details : $content ? $content->getDetails() : '',
+            wodCount: $wodCount,
         );
     }
 
-    public function transformCollectionToDTO(array $exercises, FilterCollection $filters = null): array
+    public function transformCollectionToDTO(array $exercises, FilterCollection $filters = null, array $wodCounts = []): array
     {
         return CollectionMapper::mapAndFilter(
             $exercises,
-            fn(Exercise $exercise) => $this->transformToDTO($exercise, $filters)
+            fn(Exercise $exercise) => $this->transformToDTO($exercise, $filters, $wodCounts[(string)$exercise->getId()] ?? 0)
         );
     }
 }

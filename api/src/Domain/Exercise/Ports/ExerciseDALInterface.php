@@ -13,6 +13,9 @@ interface ExerciseDALInterface
 {
     public function getById(Uuid $id): ?Exercise;
 
+    /** @return array<string, int> */
+    public function getWodCounts(): array;
+
     public function listExercises(
         int               $page = 1,
         int               $limit = RequestPaginator::DEFAULT_LIMIT,

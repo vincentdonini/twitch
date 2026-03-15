@@ -10,6 +10,7 @@ use App\Domain\Exercise\Exercise\ListExerciseUseCase;
 use App\Domain\Exercise\Exercise\UpsertContentExerciseBulkUseCase;
 use App\Domain\Exercise\Filters\ExerciseFilterMapping;
 use App\Domain\Exercise\Filters\ExerciseFilterRules;
+use App\Domain\Exercise\Ports\ExerciseDALInterface;
 use App\Domain\Exercise\Service\ExerciseService;
 use App\Domain\Exercise\Sort\ExerciseSortMapping;
 use App\Infrastructure\Filters\RequestFilters;
@@ -46,7 +47,8 @@ final readonly class ExerciseController
     use ApiExceptionHandler;
 
     public function __construct(
-        private ExerciseService $exerciseService,
+        private ExerciseService      $exerciseService,
+        private ExerciseDALInterface $exerciseDAL,
     ) {
     }
 
@@ -170,7 +172,8 @@ final readonly class ExerciseController
 
         $dtoItems = $this->exerciseService->transformCollectionToDTO(
             exercises: $paginator->getItems(),
-            filters  : $filters
+            filters  : $filters,
+            wodCounts: $this->exerciseDAL->getWodCounts(),
         );
 
         return new JsonResponse(

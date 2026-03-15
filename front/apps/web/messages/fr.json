@@ -302,6 +302,8 @@
     "description": "Découvrez les muscles impliqués dans chaque mouvement et comprenez comment ils soutiennent la force, la stabilité et les performances.",
     "error_title": "Impossible de charger les WODs",
     "error_description": "Nous n'avons pas pu charger les données WOD. Veuillez réessayer.",
+    "exercise": "Exercise",
+    "exercises": "Exercises",
     "metadata": {
       "description": "Découvrez les muscles impliqués dans chaque mouvement et comprenez comment ils soutiennent la force, la stabilité et les performances.",
       "title": "WODs"
@@ -313,6 +315,8 @@
     "active_filters": "Filtres actifs :",
     "clear_all": "Tout effacer",
     "search_placeholder": "Rechercher des WODs…",
+    "exercise_search_placeholder": "Rechercher un exercice…",
+    "exercise_no_results": "Aucun exercice trouvé.",
     "no_results": "Aucun WOD ne correspond à vos filtres.",
     "workout_count": "{count, plural, one {# WOD} other {# WODs}}",
     "view_wod": "Voir le WOD",

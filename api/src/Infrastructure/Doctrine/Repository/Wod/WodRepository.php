@@ -2,7 +2,9 @@
 
 namespace App\Infrastructure\Doctrine\Repository\Wod;
 
+use App\Domain\Common\Filter\Operator;
 use App\Domain\Wod\Entity\Wod;
+use App\Domain\Wod\Entity\WodVariantExercise;
 use App\Domain\Wod\Ports\WodDALInterface;
 use App\Infrastructure\Doctrine\Filters\DoctrineFilterApplier;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
@@ -62,9 +64,37 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
 
         // Filters
         // -------------------------------------------------------------------------------------------------------------
-        if (!$filters->isEmpty()) {
-            $qb = (new DoctrineFilterApplier())
-                ->apply($qb, 'w', $filters);
+        // Exercise exclusion (NEQ/NOT_IN) requires a NOT EXISTS subquery — a LEFT JOIN + NOT IN doesn't work on
+        // one-to-many paths because sibling rows (other exercises of the same Wod) satisfy the condition.
+        $exerciseExcludeIds = [];
+        $standardFilters    = [];
+
+        foreach ($filters as $filter) {
+            if (
+                $filter->field === 'wodVariants.wodVariantExercises.exercise.id' &&
+                in_array($filter->operator, [Operator::NEQ, Operator::NOT_IN], true)
+            ) {
+                foreach ((array)$filter->value as $v) {
+                    $exerciseExcludeIds[] = Uuid::fromString(trim($v))->toBinary();
+                }
+            } else {
+                $standardFilters[] = $filter;
+            }
+        }
+
+        $remainingFilters = new FilterCollection($standardFilters);
+        if (!$remainingFilters->isEmpty()) {
+            $qb = (new DoctrineFilterApplier())->apply($qb, 'w', $remainingFilters);
+        }
+
+        if (!empty($exerciseExcludeIds)) {
+            $qb->andWhere('NOT EXISTS (
+                    SELECT 1 FROM ' . WodVariantExercise::class . ' wve_excl
+                    JOIN wve_excl.wodVariant wv_excl
+                    WHERE wv_excl.wod = w
+                    AND wve_excl.exercise IN (:excl_exercise_ids)
+                )')
+                ->setParameter('excl_exercise_ids', $exerciseExcludeIds);
         }
 
         // Sort
@@ -78,7 +108,7 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
         // -------------------------------------------------------------------------------------------------------------
         $aggQb     = clone $qb;
         $aggResult = $aggQb
-            ->select('COUNT(w.id) as count')
+            ->select('COUNT(DISTINCT w.id) as count')
             ->resetDQLPart('orderBy')
             ->getQuery()
             ->getSingleResult();
@@ -86,6 +116,7 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
         $count = (int)$aggResult['count'];
 
         $items = $qb
+            ->addGroupBy('w.id')
             ->setFirstResult(($page - 1) * $limit)
             ->setMaxResults($limit)
             ->getQuery()

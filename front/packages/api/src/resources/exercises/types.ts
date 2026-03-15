@@ -4,6 +4,7 @@ export type Exercise = {
     title: string;
     summary: string;
     details: string;
+    wodCount: number;
 };
 
 export type ExerciseSummary = {

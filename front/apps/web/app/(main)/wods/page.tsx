@@ -49,7 +49,8 @@ function WodsPageContent() {
   const [page, setPage]                 = useState(initial.page)
   const [selectedSort, setSelectedSort] = useState(initial.sort)
   const [searchQuery, setSearchQuery]   = useState(initial.search)
-  const [filterStates, setFilterStates] = useState<Record<string, FilterGroupState>>(initial.filterStates)
+  const [filterStates, setFilterStates]   = useState<Record<string, FilterGroupState>>(initial.filterStates)
+  const [exerciseLabels, setExerciseLabels] = useState<Record<string, string>>({})
   const debouncedSearch = useDebounce(searchQuery)
 
   useEffect(() => { setPage(1) }, [debouncedSearch])
@@ -83,6 +84,23 @@ function WodsPageContent() {
         exclude = exclude.filter(id => id !== optionId)
       }
 
+      const next = { ...prev }
+      if (include.length === 0 && exclude.length === 0) {
+        delete next[groupId]
+      } else {
+        next[groupId] = { include, exclude }
+      }
+      return next
+    })
+  }
+
+  const removeFilter = (groupId: string, optionId: string) => {
+    setPage(1)
+    setFilterStates(prev => {
+      const current = prev[groupId]
+      if (!current) return prev
+      const include = current.include.filter(id => id !== optionId)
+      const exclude = current.exclude.filter(id => id !== optionId)
       const next = { ...prev }
       if (include.length === 0 && exclude.length === 0) {
         delete next[groupId]
@@ -150,17 +168,47 @@ function WodsPageContent() {
         : filterStates.division?.exclude.includes(id) ? "exclude" : "none",
       onToggle: (id) => toggleFilter("division", id),
     },
+    {
+      id: "exercise",
+      title: t("exercise"),
+      isLoading: false,
+      options: [],
+      searchable: true,
+      selectedIds: {
+        include: filterStates.exercise?.include ?? [],
+        exclude: filterStates.exercise?.exclude ?? [],
+      },
+      labelCache: exerciseLabels,
+      onLabelsDiscovered: (labels) => setExerciseLabels(prev => ({ ...prev, ...labels })),
+      getState: (id) => filterStates.exercise?.include.includes(id) ? "include"
+        : filterStates.exercise?.exclude.includes(id) ? "exclude" : "none",
+      onToggle: (id) => toggleFilter("exercise", id),
+    },
   ]
 
   const activeFilterBadges: { key: string; label: string; mode: "include" | "exclude" }[] = [
     ...(debouncedSearch ? [{ key: "search", label: `"${debouncedSearch}"`, mode: "include" as const }] : []),
-    ...filterGroups.flatMap(group =>
-      group.options.flatMap(opt => {
+    ...filterGroups.flatMap(group => {
+      if (group.searchable && group.selectedIds) {
+        return [
+          ...group.selectedIds.include.map(id => ({
+            key: `${group.id}:${id}`,
+            label: group.labelCache?.[id] ?? `${id.substring(0, 8)}…`,
+            mode: "include" as const,
+          })),
+          ...group.selectedIds.exclude.map(id => ({
+            key: `${group.id}:${id}`,
+            label: group.labelCache?.[id] ?? `${id.substring(0, 8)}…`,
+            mode: "exclude" as const,
+          })),
+        ]
+      }
+      return group.options.flatMap(opt => {
         const state = group.getState(opt.id)
         if (state === "none") return []
         return [{ key: `${group.id}:${opt.id}`, label: opt.label, mode: state }]
-      }),
-    ),
+      })
+    }),
   ]
 
   return (
@@ -246,7 +294,7 @@ function WodsPageContent() {
                     onClick={() => {
                       if (f.key === "search") { clearFilterGroup("search"); return }
                       const [groupId, optionId] = f.key.split(":") as [string, string]
-                      toggleFilter(groupId, optionId)
+                      removeFilter(groupId, optionId)
                     }}
                   >
                     <X className="size-3" />

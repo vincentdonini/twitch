@@ -13,11 +13,12 @@ final class WodFilterRules
         'wodType.slug'               => [Operator::EQ],
         'wodCategory.id'             => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
         'wodCategory.slug'           => [Operator::EQ],
-        'wodVariants.wodDivision.id'   => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
-        'wodVariants.wodDivision.slug' => [Operator::EQ],
-        'wodVariants.gender'           => [Operator::EQ],
-        'wodVariants.rounds'           => [Operator::EQ, Operator::LT, Operator::LTE, Operator::GT, Operator::GTE],
-        'wodVariants.timeCap'          => [Operator::EQ, Operator::LT, Operator::LTE, Operator::GT, Operator::GTE],
+        'wodVariants.wodDivision.id'                         => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
+        'wodVariants.wodDivision.slug'                       => [Operator::EQ],
+        'wodVariants.gender'                                 => [Operator::EQ],
+        'wodVariants.rounds'                                 => [Operator::EQ, Operator::LT, Operator::LTE, Operator::GT, Operator::GTE],
+        'wodVariants.timeCap'                                => [Operator::EQ, Operator::LT, Operator::LTE, Operator::GT, Operator::GTE],
+        'wodVariants.wodVariantExercises.exercise.id'        => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
     ];
 
     public const PUBLIC_FIELDS = [
@@ -32,5 +33,6 @@ final class WodFilterRules
         'wodVariants.gender',
         'wodVariants.rounds',
         'wodVariants.timeCap',
+        'wodVariants.wodVariantExercises.exercise.id',
     ];
 }

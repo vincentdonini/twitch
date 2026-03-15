@@ -302,6 +302,8 @@
     "description": "Discover the muscles involved in each movement and understand how they support strength, stability, and performance.",
     "error_title": "Failed to load WODs",
     "error_description": "We couldn't load the WOD data. Please try again.",
+    "exercise": "Exercise",
+    "exercises": "Exercises",
     "metadata": {
       "description": "Discover the muscles involved in each movement and understand how they support strength, stability, and performance.",
       "title": "Muscles"
@@ -313,6 +315,8 @@
     "active_filters": "Active filters:",
     "clear_all": "Clear all",
     "search_placeholder": "Search WODs…",
+    "exercise_search_placeholder": "Search an exercise…",
+    "exercise_no_results": "No exercise found.",
     "no_results": "No WODs match your filters.",
     "workout_count": "{count, plural, one {# workout} other {# workouts}}",
     "view_wod": "View WOD",
