@@ -1,67 +1,122 @@
 {
-  "landing": {
-    "blog": {
-      "badge": "Blog",
-      "title": "Training tips & WOD insights",
-      "description": "We're preparing articles about CrossFit training, performance tracking, and workout strategies to help athletes improve.",
-      "coming_soon_badge": "Coming Soon",
-      "coming_soon_title": "The WODer Blog is on the way",
-      "coming_soon_description": "Soon you'll find training guides, WOD strategies, performance tips, and insights for athletes and CrossFit gyms."
-    },
-    "hero": {
-      "badge": "Explore hundreds of WODs for free",
-      "title": "Train Harder with <gradient>Better WODs</gradient> and Track Your Progress",
-      "description": "Discover a powerful WOD library you can explore freely. Filter workouts by exercise, equipment, muscles, or difficulty. Create an account to track your performance, compete on leaderboards, unlock challenges, and stay motivated.",
-      "cta_primary": "Start Tracking Your Progress",
-      "cta_secondary": "Browse WOD Library"
-    }
-  },
   "common": {
     "all_rights_reserved": "All Rights Reserved.",
     "badge_resources": "Resources",
-    "cookie_policy": "Cookie policy",
     "contact": "Contact",
-    "exercises": "Exercises",
-    "exercise_categories": "Exercise categories",
+    "cookie_policy": "Cookie policy",
     "equipments": "Equipments",
+    "exercise_categories": "Exercise categories",
+    "exercises": "Exercises",
     "home": "Home",
-    "legal": "Legal",
     "learn_more": "Learn More",
-    "muscles": "Muscles",
+    "legal": "Legal",
     "muscle_areas": "Muscle areas",
     "muscle_groups": "Muscle groups",
+    "muscles": "Muscles",
     "privacy_policy": "Privacy policy",
-    "retry": "Retry",
     "resources": "Resources",
+    "retry": "Retry",
     "term_of_service": "Terms of service",
     "wods": "WODs"
   },
+  "cookies": {
+    "consent": "By continuing to use our Service, you agree to the use of cookies in accordance with this policy.",
+    "intro": "This Cookie Policy explains how <strong>{company}</strong> (\"we\", \"our\", \"us\") uses cookies and similar technologies when you use <strong>{appName}</strong> (the \"Service\").",
+    "last_updated": "Last updated: {date}",
+    "metadata": {
+      "description": "Learn how we use cookies and similar technologies on our Service.",
+      "title": "Cookie Policy"
+    },
+    "s1_body": "Cookies are small text files stored on your device when you visit a website or use an application. They help improve user experience by remembering preferences and enabling certain features.",
+    "s1_title": "1. What Are Cookies",
+    "s2_intro": "We use cookies for several purposes, including:",
+    "s2_items": [
+      "Ensuring the proper functioning of the Service",
+      "Remembering user preferences",
+      "Improving performance and user experience",
+      "Analyzing usage and traffic"
+    ],
+    "s2_title": "2. How We Use Cookies",
+    "s3_analytics_body": "These cookies help us understand how users interact with the Service, allowing us to improve functionality and performance.",
+    "s3_analytics_title": "Analytics Cookies",
+    "s3_essential_body": "These cookies are necessary for the Service to function properly. They enable basic features such as login sessions and security.",
+    "s3_essential_title": "Essential Cookies",
+    "s3_preference_body": "These cookies remember your settings and preferences to provide a more personalized experience.",
+    "s3_preference_title": "Preference Cookies",
+    "s3_third_body": "Some cookies may be set by third-party services integrated into our Service, such as analytics providers or payment platforms.",
+    "s3_third_title": "Third-Party Cookies",
+    "s3_title": "3. Types of Cookies We Use",
+    "s4_body1": "You can control or disable cookies through your browser settings. Please note that disabling certain cookies may affect the functionality of the Service.",
+    "s4_body2": "Most browsers allow you to:",
+    "s4_items": [
+      "View stored cookies",
+      "Delete cookies",
+      "Block cookies from specific websites",
+      "Block all cookies"
+    ],
+    "s4_title": "4. Managing Cookies",
+    "s5_body1": "We may update this Cookie Policy from time to time. When changes are made, the \"Last updated\" date will be revised.",
+    "s5_body2": "We encourage users to review this page periodically.",
+    "s5_title": "5. Changes to This Cookie Policy",
+    "s6_address": "Address",
+    "s6_company": "Company",
+    "s6_email": "Email",
+    "s6_intro": "If you have any questions about this Cookie Policy, please contact us:",
+    "s6_title": "6. Contact Us",
+    "title": "Cookie Policy"
+  },
+  "equipments": {
+    "back": "Back to equipments",
+    "description": "Explore the equipment used in training and discover the tools that help improve strength, performance, and workout efficiency.",
+    "error_description": "We couldn't load the equipment data. Please try again.",
+    "error_title": "Failed to load equipments",
+    "metadata": {
+      "description": "Explore the equipment used in training and discover the tools that help improve strength, performance, and workout efficiency.",
+      "title": "Equipments"
+    },
+    "title": "Equipments"
+  },
   "errors": {
-    "not_found_title": "Page not found",
-    "not_found_description": "The page you're looking for doesn't exist or has been moved.",
     "back_home": "Back to home",
-    "error_title": "Something went wrong",
     "error_description": "An unexpected error occurred. Please try again.",
+    "error_title": "Something went wrong",
+    "not_found_description": "The page you're looking for doesn't exist or has been moved.",
+    "not_found_title": "Page not found",
     "try_again": "Try again"
   },
-  "muscles": {
-    "back": "Back to muscles",
-    "description": "Discover the muscles involved in each movement and understand how they support strength, stability, and performance.",
-    "error_title": "Failed to load muscles",
-    "error_description": "We couldn't load the muscle data. Please try again.",
+  "exercises": {
+    "back": "Back to exercises",
+    "description": "Discover a variety of exercises, understand how to perform them correctly, and improve your strength, mobility, and overall performance.",
+    "error_description": "We couldn't load the exercise data. Please try again.",
+    "error_title": "Failed to load exercises",
     "metadata": {
-      "description": "Discover the muscles involved in each movement and understand how they support strength, stability, and performance.",
-      "title": "Muscles"
+      "description": "Discover a variety of exercises, understand how to perform them correctly, and improve your strength, mobility, and overall performance.",
+      "title": "Exercises"
     },
-    "section_group": "Group",
-    "section_area": "Area",
-    "title": "Muscles"
+    "title": "Exercises"
+  },
+  "landing": {
+    "blog": {
+      "badge": "Blog",
+      "coming_soon_badge": "Coming Soon",
+      "coming_soon_description": "Soon you'll find training guides, WOD strategies, performance tips, and insights for athletes and CrossFit gyms.",
+      "coming_soon_title": "The WODer Blog is on the way",
+      "description": "We're preparing articles about CrossFit training, performance tracking, and workout strategies to help athletes improve.",
+      "title": "Training tips & WOD insights"
+    },
+    "hero": {
+      "badge": "Explore hundreds of WODs for free",
+      "cta_primary": "Start Tracking Your Progress",
+      "cta_secondary": "Browse WOD Library",
+      "description": "Discover a powerful WOD library you can explore freely. Filter workouts by exercise, equipment, muscles, or difficulty. Create an account to track your performance, compete on leaderboards, unlock challenges, and stay motivated.",
+      "title": "Train Harder with <gradient>Better WODs</gradient> and Track Your Progress"
+    }
   },
   "muscleAreas": {
     "back": "Back to muscle areas",
     "description": "Discover all muscle areas and the best exercises to target them. Build effective workouts, improve strength training, and boost your fitness results.",
-    "error_title": "Failed to load muscle areas",
     "error_description": "We couldn't load the muscle area data. Please try again.",
+    "error_title": "Failed to load muscle areas",
     "metadata": {
       "description": "Discover all muscle areas and the best exercises to target them. Build effective workouts, improve strength training, and boost your fitness results.",
       "title": "Muscle areas"
@@ -71,167 +126,37 @@
   "muscleGroups": {
     "back": "Back to muscle groups",
     "description": "A complete guide to the body's major muscle groups with exercises and training tips to build strength and improve your workouts.",
-    "error_title": "Failed to load muscle groups",
     "error_description": "We couldn't load the muscle group data. Please try again.",
+    "error_title": "Failed to load muscle groups",
     "metadata": {
       "description": "A complete guide to the body's major muscle groups with exercises and training tips to build strength and improve your workouts.",
       "title": "Muscle groups"
     },
     "title": "Muscle groups"
   },
-  "exercises": {
-    "back": "Back to exercises",
-    "description": "Discover a variety of exercises, understand how to perform them correctly, and improve your strength, mobility, and overall performance.",
-    "error_title": "Failed to load exercises",
-    "error_description": "We couldn't load the exercise data. Please try again.",
+  "muscles": {
+    "back": "Back to muscles",
+    "description": "Discover the muscles involved in each movement and understand how they support strength, stability, and performance.",
+    "error_description": "We couldn't load the muscle data. Please try again.",
+    "error_title": "Failed to load muscles",
     "metadata": {
-      "description": "Discover a variety of exercises, understand how to perform them correctly, and improve your strength, mobility, and overall performance.",
-      "title": "Exercises"
+      "description": "Discover the muscles involved in each movement and understand how they support strength, stability, and performance.",
+      "title": "Muscles"
     },
-    "title": "Exercises"
-  },
-  "equipments": {
-    "back": "Back to equipments",
-    "description": "Explore the equipment used in training and discover the tools that help improve strength, performance, and workout efficiency.",
-    "error_title": "Failed to load equipments",
-    "error_description": "We couldn't load the equipment data. Please try again.",
-    "metadata": {
-      "description": "Explore the equipment used in training and discover the tools that help improve strength, performance, and workout efficiency.",
-      "title": "Equipments"
-    },
-    "title": "Equipments"
-  },
-  "terms": {
-    "metadata": {
-      "title": "Terms of Service",
-      "description": "Read the terms and conditions governing your use of our Service."
-    },
-    "title": "Terms of Service",
-    "last_updated": "Last updated: {date}",
-    "intro": "Welcome to <strong>{appName}</strong>, operated by <strong>{company}</strong> (\"we\", \"our\", \"us\"). By accessing or using our mobile application, website, or services (collectively, the \"Service\"), you agree to be bound by these Terms of Service.",
-    "s1_title": "1. Use of the Service",
-    "s1_body": "You agree to use the Service only for lawful purposes and in accordance with these Terms.",
-    "s1_prohibition": "You must not:",
-    "s1_items": [
-      "Use the Service in any way that violates applicable laws or regulations",
-      "Attempt to gain unauthorized access to the Service or related systems",
-      "Interfere with the proper working of the application",
-      "Upload harmful, abusive, or inappropriate content"
-    ],
-    "s1_termination": "We reserve the right to suspend or terminate access if these terms are violated.",
-    "s2_title": "2. User Accounts",
-    "s2_body": "To use certain features of the Service, you may need to create an account.",
-    "s2_agree": "You agree to:",
-    "s2_items": [
-      "Provide accurate and complete information",
-      "Maintain the confidentiality of your login credentials",
-      "Notify us immediately of any unauthorized use of your account"
-    ],
-    "s2_responsibility": "You are responsible for all activities that occur under your account.",
-    "s3_title": "3. Health Disclaimer",
-    "s3_body1": "The Service may provide fitness, training, or health-related information.",
-    "s3_body2": "This information is provided <strong>for informational purposes only</strong> and <strong>does not constitute medical advice</strong>.",
-    "s3_body3": "Before starting any exercise program, you should consult a qualified healthcare professional, especially if you have any medical conditions.",
-    "s3_body4": "Use of the exercises and training plans provided in the app is <strong>at your own risk</strong>.",
-    "s4_title": "4. Intellectual Property",
-    "s4_body1": "All content in the Service, including but not limited to text, graphics, logos, videos, workout programs, and software, is the property of <strong>{company}</strong> or its licensors and is protected by intellectual property laws.",
-    "s4_body2": "You may not reproduce, distribute, or modify any part of the Service without prior written permission.",
-    "s5_title": "5. Subscriptions and Payments",
-    "s5_body1": "Some features of the Service may require a <strong>paid subscription</strong>.",
-    "s5_body2": "If you purchase a subscription:",
-    "s5_payment_item": "Payments will be processed through {payment}",
-    "s5_items": [
-      "Subscriptions may automatically renew unless cancelled before the renewal date",
-      "Refund policies are governed by the platform used for purchase"
-    ],
-    "s6_title": "6. Limitation of Liability",
-    "s6_intro": "To the maximum extent permitted by law, <strong>{company}</strong> shall not be liable for:",
-    "s6_items": [
-      "Injuries resulting from the use of workouts or training plans",
-      "Interruptions or unavailability of the Service",
-      "Loss of data",
-      "Indirect or consequential damages"
-    ],
-    "s6_risk": "Your use of the Service is at your own risk.",
-    "s7_title": "7. Termination",
-    "s7_intro": "We may suspend or terminate your access to the Service at any time if:",
-    "s7_items": [
-      "You violate these Terms",
-      "We discontinue the Service",
-      "Required by law"
-    ],
-    "s7_stop": "You may stop using the Service at any time.",
-    "s8_title": "8. Changes to the Terms",
-    "s8_body1": "We may update these Terms from time to time.",
-    "s8_body2": "If we make significant changes, we will notify users by:",
-    "s8_items": [
-      "Updating the \"Last updated\" date",
-      "Displaying a notice in the application"
-    ],
-    "s8_body3": "Continued use of the Service after changes constitutes acceptance of the updated Terms.",
-    "s9_title": "9. Contact Us",
-    "s9_intro": "If you have any questions about these Terms, you can contact us at:",
-    "s9_email": "Email",
-    "s9_company": "Company",
-    "s9_address": "Address"
-  },
-  "cookies": {
-    "metadata": {
-      "title": "Cookie Policy",
-      "description": "Learn how we use cookies and similar technologies on our Service."
-    },
-    "title": "Cookie Policy",
-    "last_updated": "Last updated: {date}",
-    "intro": "This Cookie Policy explains how <strong>{company}</strong> (\"we\", \"our\", \"us\") uses cookies and similar technologies when you use <strong>{appName}</strong> (the \"Service\").",
-    "consent": "By continuing to use our Service, you agree to the use of cookies in accordance with this policy.",
-    "s1_title": "1. What Are Cookies",
-    "s1_body": "Cookies are small text files stored on your device when you visit a website or use an application. They help improve user experience by remembering preferences and enabling certain features.",
-    "s2_title": "2. How We Use Cookies",
-    "s2_intro": "We use cookies for several purposes, including:",
-    "s2_items": [
-      "Ensuring the proper functioning of the Service",
-      "Remembering user preferences",
-      "Improving performance and user experience",
-      "Analyzing usage and traffic"
-    ],
-    "s3_title": "3. Types of Cookies We Use",
-    "s3_essential_title": "Essential Cookies",
-    "s3_essential_body": "These cookies are necessary for the Service to function properly. They enable basic features such as login sessions and security.",
-    "s3_analytics_title": "Analytics Cookies",
-    "s3_analytics_body": "These cookies help us understand how users interact with the Service, allowing us to improve functionality and performance.",
-    "s3_preference_title": "Preference Cookies",
-    "s3_preference_body": "These cookies remember your settings and preferences to provide a more personalized experience.",
-    "s3_third_title": "Third-Party Cookies",
-    "s3_third_body": "Some cookies may be set by third-party services integrated into our Service, such as analytics providers or payment platforms.",
-    "s4_title": "4. Managing Cookies",
-    "s4_body1": "You can control or disable cookies through your browser settings. Please note that disabling certain cookies may affect the functionality of the Service.",
-    "s4_body2": "Most browsers allow you to:",
-    "s4_items": [
-      "View stored cookies",
-      "Delete cookies",
-      "Block cookies from specific websites",
-      "Block all cookies"
-    ],
-    "s5_title": "5. Changes to This Cookie Policy",
-    "s5_body1": "We may update this Cookie Policy from time to time. When changes are made, the \"Last updated\" date will be revised.",
-    "s5_body2": "We encourage users to review this page periodically.",
-    "s6_title": "6. Contact Us",
-    "s6_intro": "If you have any questions about this Cookie Policy, please contact us:",
-    "s6_email": "Email",
-    "s6_company": "Company",
-    "s6_address": "Address"
+    "section_area": "Area",
+    "section_group": "Group",
+    "title": "Muscles"
   },
   "privacy": {
-    "metadata": {
-      "title": "Privacy Policy",
-      "description": "Learn how we collect, use, and protect your personal information."
-    },
-    "title": "Privacy Policy",
-    "last_updated": "Last updated: {date}",
-    "intro": "This Privacy Policy describes how <strong>{company}</strong> (\"we\", \"our\", \"us\") collects, uses, and protects your personal information when you use <strong>{appName}</strong> (the \"Service\").",
     "consent": "By using the Service, you agree to the collection and use of information in accordance with this Privacy Policy.",
-    "s1_title": "1. Information We Collect",
-    "s1_personal_title": "Personal Information",
+    "intro": "This Privacy Policy describes how <strong>{company}</strong> (\"we\", \"our\", \"us\") collects, uses, and protects your personal information when you use <strong>{appName}</strong> (the \"Service\").",
+    "last_updated": "Last updated: {date}",
+    "metadata": {
+      "description": "Learn how we collect, use, and protect your personal information.",
+      "title": "Privacy Policy"
+    },
+    "s1_fitness_body": "If you use fitness tracking features, we may collect information related to your workouts, training sessions, or activity progress within the application.",
+    "s1_fitness_title": "Fitness or Activity Data",
     "s1_personal_intro": "We may collect personal information that you voluntarily provide, including:",
     "s1_personal_items": [
       "Name",
@@ -239,7 +164,8 @@
       "Account login information",
       "Profile information"
     ],
-    "s1_usage_title": "Usage Data",
+    "s1_personal_title": "Personal Information",
+    "s1_title": "1. Information We Collect",
     "s1_usage_intro": "We may automatically collect certain information about how the Service is accessed and used. This may include:",
     "s1_usage_items": [
       "Device type",
@@ -247,9 +173,7 @@
       "IP address",
       "App usage statistics"
     ],
-    "s1_fitness_title": "Fitness or Activity Data",
-    "s1_fitness_body": "If you use fitness tracking features, we may collect information related to your workouts, training sessions, or activity progress within the application.",
-    "s2_title": "2. How We Use Your Information",
+    "s1_usage_title": "Usage Data",
     "s2_intro": "We use the collected data to:",
     "s2_items": [
       "Provide and maintain the Service",
@@ -258,19 +182,20 @@
       "Communicate with users",
       "Ensure security and prevent fraud"
     ],
-    "s3_title": "3. Sharing of Information",
+    "s2_title": "2. How We Use Your Information",
     "s3_intro": "We do not sell your personal information. However, we may share information in the following cases:",
     "s3_items": [
       "With service providers that help operate the Service",
       "To comply with legal obligations",
       "To protect the rights and safety of our users or the company"
     ],
-    "s4_title": "4. Data Storage and Security",
+    "s3_title": "3. Sharing of Information",
     "s4_body1": "We take reasonable technical and organizational measures to protect your personal data against unauthorized access, loss, or misuse.",
     "s4_body2": "However, no method of transmission over the internet or electronic storage is completely secure.",
-    "s5_title": "5. Data Retention",
+    "s4_title": "4. Data Storage and Security",
     "s5_body": "We retain personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required by law.",
-    "s6_title": "6. Your Rights",
+    "s5_title": "5. Data Retention",
+    "s6_contact": "To exercise these rights, please contact us using the information below.",
     "s6_intro": "Depending on your location, you may have rights regarding your personal data, including:",
     "s6_items": [
       "The right to access your data",
@@ -278,62 +203,137 @@
       "The right to request deletion of your data",
       "The right to restrict or object to data processing"
     ],
-    "s6_contact": "To exercise these rights, please contact us using the information below.",
-    "s7_title": "7. Children's Privacy",
+    "s6_title": "6. Your Rights",
     "s7_body1": "The Service is not intended for individuals under the age of <strong>{minAge}</strong>. We do not knowingly collect personal information from children.",
     "s7_body2": "If we become aware that a child has provided personal data, we will take steps to delete such information.",
-    "s8_title": "8. Changes to This Privacy Policy",
+    "s7_title": "7. Children's Privacy",
     "s8_body1": "We may update this Privacy Policy from time to time. When changes occur, we will update the \"Last updated\" date.",
     "s8_body2": "We encourage users to review this page regularly.",
-    "s9_title": "9. Contact Us",
-    "s9_intro": "If you have any questions about this Privacy Policy, please contact us:",
-    "s9_email": "Email",
+    "s8_title": "8. Changes to This Privacy Policy",
+    "s9_address": "Address",
     "s9_company": "Company",
-    "s9_address": "Address"
+    "s9_email": "Email",
+    "s9_intro": "If you have any questions about this Privacy Policy, please contact us:",
+    "s9_title": "9. Contact Us",
+    "title": "Privacy Policy"
+  },
+  "terms": {
+    "intro": "Welcome to <strong>{appName}</strong>, operated by <strong>{company}</strong> (\"we\", \"our\", \"us\"). By accessing or using our mobile application, website, or services (collectively, the \"Service\"), you agree to be bound by these Terms of Service.",
+    "last_updated": "Last updated: {date}",
+    "metadata": {
+      "description": "Read the terms and conditions governing your use of our Service.",
+      "title": "Terms of Service"
+    },
+    "s1_body": "You agree to use the Service only for lawful purposes and in accordance with these Terms.",
+    "s1_items": [
+      "Use the Service in any way that violates applicable laws or regulations",
+      "Attempt to gain unauthorized access to the Service or related systems",
+      "Interfere with the proper working of the application",
+      "Upload harmful, abusive, or inappropriate content"
+    ],
+    "s1_prohibition": "You must not:",
+    "s1_termination": "We reserve the right to suspend or terminate access if these terms are violated.",
+    "s1_title": "1. Use of the Service",
+    "s2_agree": "You agree to:",
+    "s2_body": "To use certain features of the Service, you may need to create an account.",
+    "s2_items": [
+      "Provide accurate and complete information",
+      "Maintain the confidentiality of your login credentials",
+      "Notify us immediately of any unauthorized use of your account"
+    ],
+    "s2_responsibility": "You are responsible for all activities that occur under your account.",
+    "s2_title": "2. User Accounts",
+    "s3_body1": "The Service may provide fitness, training, or health-related information.",
+    "s3_body2": "This information is provided <strong>for informational purposes only</strong> and <strong>does not constitute medical advice</strong>.",
+    "s3_body3": "Before starting any exercise program, you should consult a qualified healthcare professional, especially if you have any medical conditions.",
+    "s3_body4": "Use of the exercises and training plans provided in the app is <strong>at your own risk</strong>.",
+    "s3_title": "3. Health Disclaimer",
+    "s4_body1": "All content in the Service, including but not limited to text, graphics, logos, videos, workout programs, and software, is the property of <strong>{company}</strong> or its licensors and is protected by intellectual property laws.",
+    "s4_body2": "You may not reproduce, distribute, or modify any part of the Service without prior written permission.",
+    "s4_title": "4. Intellectual Property",
+    "s5_body1": "Some features of the Service may require a <strong>paid subscription</strong>.",
+    "s5_body2": "If you purchase a subscription:",
+    "s5_items": [
+      "Subscriptions may automatically renew unless cancelled before the renewal date",
+      "Refund policies are governed by the platform used for purchase"
+    ],
+    "s5_payment_item": "Payments will be processed through {payment}",
+    "s5_title": "5. Subscriptions and Payments",
+    "s6_intro": "To the maximum extent permitted by law, <strong>{company}</strong> shall not be liable for:",
+    "s6_items": [
+      "Injuries resulting from the use of workouts or training plans",
+      "Interruptions or unavailability of the Service",
+      "Loss of data",
+      "Indirect or consequential damages"
+    ],
+    "s6_risk": "Your use of the Service is at your own risk.",
+    "s6_title": "6. Limitation of Liability",
+    "s7_intro": "We may suspend or terminate your access to the Service at any time if:",
+    "s7_items": [
+      "You violate these Terms",
+      "We discontinue the Service",
+      "Required by law"
+    ],
+    "s7_stop": "You may stop using the Service at any time.",
+    "s7_title": "7. Termination",
+    "s8_body1": "We may update these Terms from time to time.",
+    "s8_body2": "If we make significant changes, we will notify users by:",
+    "s8_body3": "Continued use of the Service after changes constitutes acceptance of the updated Terms.",
+    "s8_items": [
+      "Updating the \"Last updated\" date",
+      "Displaying a notice in the application"
+    ],
+    "s8_title": "8. Changes to the Terms",
+    "s9_address": "Address",
+    "s9_company": "Company",
+    "s9_email": "Email",
+    "s9_intro": "If you have any questions about these Terms, you can contact us at:",
+    "s9_title": "9. Contact Us",
+    "title": "Terms of Service"
   },
   "wods": {
+    "active_filters": "Active filters:",
     "back": "Back to WODs",
-    "category": "Category",
     "categories": "Categories",
-    "type": "Type",
-    "types": "Types",
+    "category": "Category",
+    "clear_all": "Clear all",
+    "description": "Discover the muscles involved in each movement and understand how they support strength, stability, and performance.",
+    "details": "Details",
     "division": "Division",
     "divisions": "Divisions",
-    "description": "Discover the muscles involved in each movement and understand how they support strength, stability, and performance.",
-    "error_title": "Failed to load WODs",
     "error_description": "We couldn't load the WOD data. Please try again.",
+    "error_title": "Failed to load WODs",
     "exercise": "Exercise",
+    "exercise_no_results": "No exercise found.",
+    "exercise_search_placeholder": "Search an exercise…",
     "exercises": "Exercises",
+    "filters": "Filters",
+    "gender_female": "Female",
+    "gender_male": "Male",
+    "gender_mixed": "Mixed",
     "metadata": {
       "description": "Discover the muscles involved in each movement and understand how they support strength, stability, and performance.",
       "title": "Muscles"
     },
-    "title": "WODs",
+    "metric_calories": "{value} cal",
+    "metric_distance": "{value}m",
+    "metric_repetitions": "{value} reps",
+    "metric_time": "{value}s",
+    "no_results": "No WODs match your filters.",
+    "rounds": "{count, plural, one {# round} other {# rounds}}",
+    "rules": "Rules",
+    "search_placeholder": "Search WODs…",
     "sort_name_asc": "Name (A → Z)",
     "sort_name_desc": "Name (Z → A)",
-    "filters": "Filters",
-    "active_filters": "Active filters:",
-    "clear_all": "Clear all",
-    "search_placeholder": "Search WODs…",
-    "exercise_search_placeholder": "Search an exercise…",
-    "exercise_no_results": "No exercise found.",
-    "no_results": "No WODs match your filters.",
-    "workout_count": "{count, plural, one {# workout} other {# workouts}}",
+    "time_cap": "Time cap: {value}s",
+    "tips": "Tips & Coaching",
+    "title": "WODs",
+    "type": "Type",
+    "types": "Types",
+    "variants": "Variants",
     "view_wod": "View WOD",
     "wod": "WOD",
     "wods": "WOD",
-    "details": "Details",
-    "rules": "Rules",
-    "tips": "Tips & Coaching",
-    "variants": "Variants",
-    "rounds": "{count, plural, one {# round} other {# rounds}}",
-    "time_cap": "Time cap: {value}s",
-    "gender_male": "Male",
-    "gender_female": "Female",
-    "gender_mixed": "Mixed",
-    "metric_repetitions": "{value} reps",
-    "metric_time": "{value}s",
-    "metric_distance": "{value}m",
-    "metric_calories": "{value} cal"
+    "workout_count": "{count, plural, one {# workout} other {# workouts}}"
   }
 }
