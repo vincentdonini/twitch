@@ -42,17 +42,24 @@ class WodDivisionDTO
     ])]
     public string $details;
 
+    #[Groups([
+        FrontGroupsEnum::WOD_DIVISION_LIST, FrontGroupsEnum::WOD_DIVISION_DETAIL,
+    ])]
+    public int $wodCount;
+
     public function __construct(
         Uuid   $id,
         string $slug,
         string $title,
         string $summary,
-        string $details
+        string $details,
+        int    $wodCount = 0,
     ) {
-        $this->id      = $id;
-        $this->slug    = $slug;
-        $this->title   = $title;
-        $this->summary = $summary;
-        $this->details = $details;
+        $this->id       = $id;
+        $this->slug     = $slug;
+        $this->title    = $title;
+        $this->summary  = $summary;
+        $this->details  = $details;
+        $this->wodCount = $wodCount;
     }
 }

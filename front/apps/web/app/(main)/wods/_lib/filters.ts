@@ -2,7 +2,6 @@ export const DEFAULT_SORT = "name"
 export const LIMIT = 6
 
 export const FILTER_GROUPS = ["category", "type", "division"] as const
-export type FilterGroupId = typeof FILTER_GROUPS[number]
 
 export const FILTER_BASE: Record<string, string> = {
   category: "filters[category.id]",
@@ -30,7 +29,7 @@ export type FilterGroupState = {
   exclude: string[]
 }
 
-export type SidebarFilterOption = { id: string; label: string }
+export type SidebarFilterOption = { id: string; label: string; count?: number }
 
 export type SidebarFilterGroup = {
   id: string

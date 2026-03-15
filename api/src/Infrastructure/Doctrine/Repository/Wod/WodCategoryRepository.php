@@ -2,6 +2,7 @@
 
 namespace App\Infrastructure\Doctrine\Repository\Wod;
 
+use App\Domain\Wod\Entity\Wod;
 use App\Domain\Wod\Entity\WodCategory;
 use App\Domain\Wod\Ports\WodCategoryDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
@@ -73,5 +74,23 @@ class WodCategoryRepository extends AbstractEntityRepository implements WodCateg
             $page,
             $limit,
         );
+    }
+
+    public function getWodCounts(): array
+    {
+        $rows = $this->getEntityManager()
+            ->createQuery('
+                SELECT c.id as id, COUNT(w.id) as cnt
+                FROM ' . Wod::class . ' w
+                JOIN w.wodCategory c
+                GROUP BY c.id
+            ')
+            ->getResult();
+
+        $counts = [];
+        foreach ($rows as $row) {
+            $counts[(string)$row['id']] = (int)$row['cnt'];
+        }
+        return $counts;
     }
 }

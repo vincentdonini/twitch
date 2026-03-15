@@ -27,6 +27,7 @@ export type WodType = {
   title: string
   summary: string
   allowedMetrics: object
+  wodCount: number
 }
 
 export type WodCategory = {
@@ -34,6 +35,7 @@ export type WodCategory = {
   slug: string
   title: string
   summary: string
+  wodCount: number
 }
 
 export type WodDivision = {
@@ -41,6 +43,7 @@ export type WodDivision = {
   slug: string
   title: string
   summary: string
+  wodCount: number
 }
 
 export type AgeRange = {

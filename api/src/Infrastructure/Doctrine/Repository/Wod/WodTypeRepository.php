@@ -2,6 +2,7 @@
 
 namespace App\Infrastructure\Doctrine\Repository\Wod;
 
+use App\Domain\Wod\Entity\Wod;
 use App\Domain\Wod\Entity\WodType;
 use App\Domain\Wod\Ports\WodTypeDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
@@ -72,5 +73,23 @@ class WodTypeRepository extends AbstractEntityRepository implements WodTypeDALIn
             $page,
             $limit,
         );
+    }
+
+    public function getWodCounts(): array
+    {
+        $rows = $this->getEntityManager()
+            ->createQuery('
+                SELECT t.id as id, COUNT(w.id) as cnt
+                FROM ' . Wod::class . ' w
+                JOIN w.wodType t
+                GROUP BY t.id
+            ')
+            ->getResult();
+
+        $counts = [];
+        foreach ($rows as $row) {
+            $counts[(string)$row['id']] = (int)$row['cnt'];
+        }
+        return $counts;
     }
 }

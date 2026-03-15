@@ -18,24 +18,25 @@ final readonly class WodDivisionService
     ) {
     }
 
-    public function transformToDTO(WodDivision $wodDivision, FilterCollection $filters = null): ?WodDivisionDTO
+    public function transformToDTO(WodDivision $wodDivision, FilterCollection $filters = null, int $wodCount = 0): ?WodDivisionDTO
     {
         $content = $wodDivision->getContentByLocale($this->getLocale());
 
         return new WodDivisionDTO(
-            id     : $wodDivision->getId(),
-            slug   : $wodDivision->getSlug(),
-            title  : $content ? $content->getTitle() : '',
-            summary: $content ? $content->getSummary() : '',
-            details: $content ? $content->getDetails() : '',
+            id      : $wodDivision->getId(),
+            slug    : $wodDivision->getSlug(),
+            title   : $content ? $content->getTitle() : '',
+            summary : $content ? $content->getSummary() : '',
+            details : $content ? $content->getDetails() : '',
+            wodCount: $wodCount,
         );
     }
 
-    public function transformCollectionToDTO(array $wodDivisions, FilterCollection $filters = null): array
+    public function transformCollectionToDTO(array $wodDivisions, FilterCollection $filters = null, array $wodCounts = []): array
     {
         return CollectionMapper::mapAndFilter(
             $wodDivisions,
-            fn(WodDivision $wodDivision) => $this->transformToDTO($wodDivision, $filters)
+            fn(WodDivision $wodDivision) => $this->transformToDTO($wodDivision, $filters, $wodCounts[(string)$wodDivision->getId()] ?? 0)
         );
     }
 }

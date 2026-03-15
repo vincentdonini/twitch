@@ -18,7 +18,7 @@ final class WodTypeService
     ) {
     }
 
-    public function transformToDTO(WodType $wodType, FilterCollection $filters = null): WodTypeDTO
+    public function transformToDTO(WodType $wodType, FilterCollection $filters = null, int $wodCount = 0): WodTypeDTO
     {
         $content = $wodType->getContentByLocale($this->getLocale());
 
@@ -29,14 +29,15 @@ final class WodTypeService
             title         : $content ? $content->getTitle() : '',
             summary       : $content ? $content->getSummary() : '',
             details       : $content ? $content->getDetails() : '',
+            wodCount      : $wodCount,
         );
     }
 
-    public function transformCollectionToDTO(array $wodTypes, FilterCollection $filters = null): array
+    public function transformCollectionToDTO(array $wodTypes, FilterCollection $filters = null, array $wodCounts = []): array
     {
         return CollectionMapper::mapAndFilter(
             $wodTypes,
-            fn(WodType $wodType) => $this->transformToDTO($wodType, $filters)
+            fn(WodType $wodType) => $this->transformToDTO($wodType, $filters, $wodCounts[(string)$wodType->getId()] ?? 0)
         );
     }
 }

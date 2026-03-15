@@ -13,6 +13,9 @@ interface WodCategoryDALInterface
 {
     public function getById(Uuid $id): ?WodCategory;
 
+    /** @return array<string, int> */
+    public function getWodCounts(): array;
+
     public function listWodCategories(
         int               $page = 1,
         int               $limit = RequestPaginator::DEFAULT_LIMIT,

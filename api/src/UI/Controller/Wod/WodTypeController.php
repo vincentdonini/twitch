@@ -2,6 +2,7 @@
 
 namespace App\UI\Controller\Wod;
 
+use App\Domain\Wod\Ports\WodTypeDALInterface;
 use App\Domain\Wod\Service\WodTypeService;
 use App\Domain\Wod\WodType\GetWodTypeByIdUseCase;
 use App\Domain\Wod\WodType\GetWodTypeContentsByIdUseCase;
@@ -39,7 +40,8 @@ final readonly class WodTypeController
     use ApiExceptionHandler;
 
     public function __construct(
-        private WodTypeService $wodTypeService,
+        private WodTypeService    $wodTypeService,
+        private WodTypeDALInterface $wodTypeDAL,
     ) {
     }
 
@@ -122,7 +124,7 @@ final readonly class WodTypeController
             return $this->handleException($e);
         }
 
-        $dtoItems = $this->wodTypeService->transformCollectionToDTO($paginator->getItems());
+        $dtoItems = $this->wodTypeService->transformCollectionToDTO($paginator->getItems(), wodCounts: $this->wodTypeDAL->getWodCounts());
 
         return new JsonResponse(
             data   : $normalizer->normalize(

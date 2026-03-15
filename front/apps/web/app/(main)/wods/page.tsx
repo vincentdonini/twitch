@@ -127,7 +127,7 @@ function WodsPageContent() {
       id: "category",
       title: t("category"),
       isLoading: isLoadingWodCategories,
-      options: wodCategories?.map(c => ({ id: c.id, label: c.title })) ?? [],
+      options: wodCategories?.map(c => ({ id: c.id, label: c.title, count: c.wodCount })) ?? [],
       getState: (id) => filterStates.category?.include.includes(id) ? "include"
         : filterStates.category?.exclude.includes(id) ? "exclude" : "none",
       onToggle: (id) => toggleFilter("category", id),
@@ -136,7 +136,7 @@ function WodsPageContent() {
       id: "type",
       title: t("type"),
       isLoading: isLoadingWodTypes,
-      options: wodTypes?.map(tp => ({ id: tp.id, label: tp.title })) ?? [],
+      options: wodTypes?.map(tp => ({ id: tp.id, label: tp.title, count: tp.wodCount })) ?? [],
       getState: (id) => filterStates.type?.include.includes(id) ? "include"
         : filterStates.type?.exclude.includes(id) ? "exclude" : "none",
       onToggle: (id) => toggleFilter("type", id),
@@ -145,7 +145,7 @@ function WodsPageContent() {
       id: "division",
       title: t("division"),
       isLoading: isLoadingWodDivisions,
-      options: wodDivisions?.map(d => ({ id: d.id, label: d.title })) ?? [],
+      options: wodDivisions?.map(d => ({ id: d.id, label: d.title, count: d.wodCount })) ?? [],
       getState: (id) => filterStates.division?.include.includes(id) ? "include"
         : filterStates.division?.exclude.includes(id) ? "exclude" : "none",
       onToggle: (id) => toggleFilter("division", id),

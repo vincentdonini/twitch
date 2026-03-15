@@ -2,6 +2,7 @@
 
 namespace App\UI\Controller\Wod;
 
+use App\Domain\Wod\Ports\WodDivisionDALInterface;
 use App\Domain\Wod\Service\WodDivisionService;
 use App\Domain\Wod\WodDivision\GetWodDivisionByIdUseCase;
 use App\Domain\Wod\WodDivision\GetWodDivisionContentsByIdUseCase;
@@ -39,7 +40,8 @@ final readonly class WodDivisionController
     use ApiExceptionHandler;
 
     public function __construct(
-        private WodDivisionService $wodDivisionService,
+        private WodDivisionService    $wodDivisionService,
+        private WodDivisionDALInterface $wodDivisionDAL,
     ) {
     }
 
@@ -81,7 +83,7 @@ final readonly class WodDivisionController
             return $this->handleException($e);
         }
 
-        $dtoItems = $this->wodDivisionService->transformCollectionToDTO($paginator->getItems());
+        $dtoItems = $this->wodDivisionService->transformCollectionToDTO($paginator->getItems(), wodCounts: $this->wodDivisionDAL->getWodCounts());
 
         return new JsonResponse(
             data   : $normalizer->normalize(

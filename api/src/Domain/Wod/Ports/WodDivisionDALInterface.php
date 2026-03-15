@@ -13,6 +13,9 @@ interface WodDivisionDALInterface
 {
     public function getById(Uuid $id): ?WodDivision;
 
+    /** @return array<string, int> */
+    public function getWodCounts(): array;
+
     public function getBySlug(string $slug): ?WodDivision;
 
     public function listWodDivisions(

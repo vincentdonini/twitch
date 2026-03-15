@@ -9,12 +9,10 @@ import { Checkbox } from "@workspace/ui/components/checkbox"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@workspace/ui/components/collapsible"
 import { Input } from "@workspace/ui/components/input"
 import { Skeleton } from "@workspace/ui/components/skeleton"
+import { Badge } from "@workspace/ui/components/badge"
 import { Stack } from "@workspace/ui/components/stack"
 import type { OptionState, SidebarFilterGroup } from "../_lib/filters"
 
-// ---------------------------------------------------------------------------
-// FiltersSidebar
-// ---------------------------------------------------------------------------
 
 export function FiltersSidebar({ filterGroups, searchQuery, onSearchChange }: {
   filterGroups: SidebarFilterGroup[]
@@ -44,6 +42,7 @@ export function FiltersSidebar({ filterGroups, searchQuery, onSearchChange }: {
                 <TriStateCheckbox
                   key={option.id}
                   label={option.label}
+                  count={option.count}
                   state={group.getState(option.id)}
                   onToggle={() => group.onToggle(option.id)}
                 />
@@ -55,10 +54,6 @@ export function FiltersSidebar({ filterGroups, searchQuery, onSearchChange }: {
     </Card>
   )
 }
-
-// ---------------------------------------------------------------------------
-// FilterGroup
-// ---------------------------------------------------------------------------
 
 function FilterGroup({ title, isLoading, children }: {
   title: string
@@ -78,11 +73,11 @@ function FilterGroup({ title, isLoading, children }: {
       <CollapsibleContent className="space-y-3 pt-4">
         {isLoading
           ? Array.from({ length: 3 }).map((_, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <Skeleton className="size-4 rounded-[4px]" />
-                <Skeleton className="h-4 w-full rounded" />
-              </div>
-            ))
+            <div key={i} className="flex items-center gap-3">
+              <Skeleton className="size-4 rounded-[4px]" />
+              <Skeleton className="h-4 w-full rounded" />
+            </div>
+          ))
           : children
         }
       </CollapsibleContent>
@@ -90,12 +85,10 @@ function FilterGroup({ title, isLoading, children }: {
   )
 }
 
-// ---------------------------------------------------------------------------
-// TriStateCheckbox
-// ---------------------------------------------------------------------------
 
-function TriStateCheckbox({ label, state, onToggle }: {
+function TriStateCheckbox({ label, count, state, onToggle }: {
   label: string
+  count?: number
   state: OptionState
   onToggle: () => void
 }) {
@@ -105,9 +98,12 @@ function TriStateCheckbox({ label, state, onToggle }: {
       <Checkbox id={id} state={state} onToggle={onToggle} />
       <label
         htmlFor={id}
-        className={`cursor-pointer text-sm font-medium ${state === "exclude" ? "text-destructive line-through" : ""}`}
+        className={`flex flex-1 cursor-pointer items-center justify-between text-sm font-medium ${state === "exclude" ? "text-destructive line-through" : ""}`}
       >
         {label}
+        {count !== undefined && (
+          <Badge variant="secondary" className="text-xs font-normal ">{count}</Badge>
+        )}
       </label>
     </div>
   )

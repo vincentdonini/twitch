@@ -44,13 +44,19 @@ class WodTypeDTO
     ])]
     public string $details;
 
+    #[Groups([
+        FrontGroupsEnum::WOD_TYPE_LIST, FrontGroupsEnum::WOD_TYPE_DETAIL,
+    ])]
+    public int $wodCount;
+
     public function __construct(
         Uuid   $id,
         string $slug,
         array  $allowedMetrics,
         string $title,
         string $summary,
-        string $details
+        string $details,
+        int    $wodCount = 0,
     ) {
         $this->id             = $id;
         $this->slug           = $slug;
@@ -58,5 +64,6 @@ class WodTypeDTO
         $this->title          = $title;
         $this->summary        = $summary;
         $this->details        = $details;
+        $this->wodCount       = $wodCount;
     }
 }

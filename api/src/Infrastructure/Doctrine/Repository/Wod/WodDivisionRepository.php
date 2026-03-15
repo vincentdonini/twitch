@@ -3,6 +3,7 @@
 namespace App\Infrastructure\Doctrine\Repository\Wod;
 
 use App\Domain\Wod\Entity\WodDivision;
+use App\Domain\Wod\Entity\WodVariant;
 use App\Domain\Wod\Ports\WodDivisionDALInterface;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
@@ -81,5 +82,24 @@ class WodDivisionRepository extends AbstractEntityRepository implements WodDivis
             $page,
             $limit,
         );
+    }
+
+    public function getWodCounts(): array
+    {
+        $rows = $this->getEntityManager()
+            ->createQuery('
+                SELECT d.id as id, COUNT(DISTINCT w.id) as cnt
+                FROM ' . WodVariant::class . ' wv
+                JOIN wv.wodDivision d
+                JOIN wv.wod w
+                GROUP BY d.id
+            ')
+            ->getResult();
+
+        $counts = [];
+        foreach ($rows as $row) {
+            $counts[(string)$row['id']] = (int)$row['cnt'];
+        }
+        return $counts;
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\UI\Controller\Wod;
 
+use App\Domain\Wod\Ports\WodCategoryDALInterface;
 use App\Domain\Wod\Service\WodCategoryService;
 use App\Domain\Wod\WodCategory\GetWodCategoryByIdUseCase;
 use App\Domain\Wod\WodCategory\GetWodCategoryContentsByIdUseCase;
@@ -39,7 +40,8 @@ final readonly class WodCategoryController
     use ApiExceptionHandler;
 
     public function __construct(
-        private WodCategoryService $wodCategoryService,
+        private WodCategoryService    $wodCategoryService,
+        private WodCategoryDALInterface $wodCategoryDAL,
     ) {
     }
 
@@ -83,6 +85,7 @@ final readonly class WodCategoryController
 
         $dtoItems = $this->wodCategoryService->transformCollectionToDTO(
             wodCategories: $paginator->getItems(),
+            wodCounts    : $this->wodCategoryDAL->getWodCounts(),
         );
 
         return new JsonResponse(

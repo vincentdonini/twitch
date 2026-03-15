@@ -13,6 +13,9 @@ interface WodTypeDALInterface
 {
     public function getById(Uuid $id): ?WodType;
 
+    /** @return array<string, int> */
+    public function getWodCounts(): array;
+
     public function listWodTypes(
         int               $page = 1,
         int               $limit = RequestPaginator::DEFAULT_LIMIT,
