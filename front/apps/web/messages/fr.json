@@ -8,6 +8,7 @@
     "exercise_categories": "Categories d'exercise",
     "exercises": "Exercises",
     "home": "Accueil",
+    "loading": "Chargement…",
     "learn_more": "En savoir plus",
     "legal": "Mentions légales",
     "muscle_areas": "Zones musculaires",
@@ -94,6 +95,17 @@
       "title": "Exercices"
     },
     "title": "Exercices"
+  },
+  "exercise_categories": {
+    "back": "Retour aux catégories d'exercices",
+    "description": "Explorez les différentes catégories d'exercices pour trouver ceux qui correspondent à vos objectifs, que ce soit la force, la mobilité ou l'endurance.",
+    "error_description": "Nous n'avons pas pu charger les catégories d'exercices. Veuillez réessayer.",
+    "error_title": "Impossible de charger les catégories d'exercices",
+    "metadata": {
+      "description": "Explorez les différentes catégories d'exercices pour trouver celles qui correspondent à vos objectifs, que ce soit la force, la mobilité ou l'endurance.",
+      "title": "Catégories d'exercices"
+    },
+    "title": "Catégories d'exercices"
   },
   "landing": {
     "blog": {
@@ -301,9 +313,15 @@
     "details": "Détails",
     "division": "Division",
     "divisions": "Divisions",
+    "equipment": "Équipement",
+    "equipment_no_results": "Aucun équipement trouvé.",
+    "equipment_search_placeholder": "Rechercher un équipement…",
     "error_description": "Nous n'avons pas pu charger les données WOD. Veuillez réessayer.",
     "error_title": "Impossible de charger les WODs",
     "exercise": "Exercise",
+    "exercise_category": "Catégorie d'exercice",
+    "exercise_category_no_results": "Aucune catégorie trouvée.",
+    "exercise_category_search_placeholder": "Rechercher une catégorie…",
     "exercise_no_results": "Aucun exercice trouvé.",
     "exercise_search_placeholder": "Rechercher un exercice…",
     "exercises": "Exercises",
@@ -311,21 +329,27 @@
     "gender_female": "Femmes",
     "gender_male": "Hommes",
     "gender_mixed": "Mixte",
+    "leaderboard": "Classement",
     "metadata": {
       "description": "Découvrez les muscles impliqués dans chaque mouvement et comprenez comment ils soutiennent la force, la stabilité et les performances.",
       "title": "WODs"
     },
     "metric_calories": "{value} cal",
     "metric_distance": "{value}m",
+    "metric_height": "{value} cm",
     "metric_repetitions": "{value} reps",
     "metric_time": "{value}s",
+    "metric_weight": "{value} kg",
     "no_results": "Aucun WOD ne correspond à vos filtres.",
+    "no_results_leaderboard": "Aucun résultat pour l'instant.",
     "rounds": "{count, plural, one {# round} other {# rounds}}",
     "rules": "Règles",
     "search_placeholder": "Rechercher des WODs…",
     "sort_name_asc": "Nom (A → Z)",
     "sort_name_desc": "Nom (Z → A)",
-    "time_cap": "Time cap : {value}s",
+    "statistics": "Statistiques",
+    "team": "Équipe",
+    "time_cap": "Time cap : {value}",
     "tips": "Conseils & coaching",
     "title": "WODs",
     "type": "Type",

@@ -8,6 +8,7 @@
     "exercise_categories": "Exercise categories",
     "exercises": "Exercises",
     "home": "Home",
+    "loading": "Loading…",
     "learn_more": "Learn More",
     "legal": "Legal",
     "muscle_areas": "Muscle areas",
@@ -94,6 +95,17 @@
       "title": "Exercises"
     },
     "title": "Exercises"
+  },
+  "exercise_categories": {
+    "back": "Back to exercise categories",
+    "description": "Explore different exercise categories to find the ones that match your goals, whether it's strength, mobility, or endurance.",
+    "error_description": "We couldn't load the exercise categories. Please try again.",
+    "error_title": "Unable to load exercise categories",
+    "metadata": {
+      "description": "Explore different exercise categories to find the ones that match your goals, whether it's strength, mobility, or endurance.",
+      "title": "Exercise Categories"
+    },
+    "title": "Exercise Categories"
   },
   "landing": {
     "blog": {
@@ -301,9 +313,15 @@
     "details": "Details",
     "division": "Division",
     "divisions": "Divisions",
+    "equipment": "Equipment",
+    "equipment_no_results": "No equipment found.",
+    "equipment_search_placeholder": "Search equipment…",
     "error_description": "We couldn't load the WOD data. Please try again.",
     "error_title": "Failed to load WODs",
     "exercise": "Exercise",
+    "exercise_category": "Exercise category",
+    "exercise_category_no_results": "No category found.",
+    "exercise_category_search_placeholder": "Search a category…",
     "exercise_no_results": "No exercise found.",
     "exercise_search_placeholder": "Search an exercise…",
     "exercises": "Exercises",
@@ -311,20 +329,26 @@
     "gender_female": "Female",
     "gender_male": "Male",
     "gender_mixed": "Mixed",
+    "leaderboard": "Leaderboard",
     "metadata": {
       "description": "Discover the muscles involved in each movement and understand how they support strength, stability, and performance.",
       "title": "Muscles"
     },
     "metric_calories": "{value} cal",
     "metric_distance": "{value}m",
+    "metric_height": "{value} cm",
     "metric_repetitions": "{value} reps",
-    "metric_time": "{value}s",
+    "metric_time": "{value}",
+    "metric_weight": "{value} kg",
     "no_results": "No WODs match your filters.",
+    "no_results_leaderboard": "No results yet.",
     "rounds": "{count, plural, one {# round} other {# rounds}}",
     "rules": "Rules",
     "search_placeholder": "Search WODs…",
     "sort_name_asc": "Name (A → Z)",
     "sort_name_desc": "Name (Z → A)",
+    "statistics": "Statistics",
+    "team": "Team",
     "time_cap": "Time cap: {value}s",
     "tips": "Tips & Coaching",
     "title": "WODs",

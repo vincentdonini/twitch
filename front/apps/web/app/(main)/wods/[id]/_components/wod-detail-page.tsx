@@ -1,20 +1,25 @@
 "use client"
 
-import Link from "next/link"
-import { useTranslations } from "next-intl"
-import { AlertCircleIcon, ArrowLeft } from "lucide-react"
+import { MarkdownSection } from "@/app/(main)/wods/[id]/_components/markdown-section"
+import { WodDetailSkeleton } from "@/app/(main)/wods/[id]/_components/wod-detail-skeleton"
+import { WodPattern } from "@/app/(main)/wods/[id]/_components/wod-pattern"
+import { WodSidebar } from "@/app/(main)/wods/[id]/_components/wod-sidebar"
+import { PageContainer } from "@/ui/components/page-container"
+import type { WodDetail } from "@workspace/api"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
 import { Card, CardContent } from "@workspace/ui/components/card"
-import { Separator } from "@workspace/ui/components/separator"
 import {
-  Empty, EmptyContent, EmptyDescription,
-  EmptyHeader, EmptyMedia, EmptyTitle,
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyMedia,
+  EmptyTitle,
 } from "@workspace/ui/components/empty"
-import type { WodDetail } from "@workspace/api"
-import { WodDetailSkeleton } from "./wod-detail-skeleton"
-import { MarkdownSection } from "./markdown-section"
-import { VariantCard } from "./variant-card"
+import { Separator } from "@workspace/ui/components/separator"
+import { AlertCircleIcon } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 interface WodDetailPageProps {
   item: WodDetail | null
@@ -23,89 +28,83 @@ interface WodDetailPageProps {
   onRetry: () => void
 }
 
-export function WodDetailPage({ item, isLoading, error, onRetry }: WodDetailPageProps) {
-  const t  = useTranslations("wods")
+export function WodDetailPage(
+  {
+    item,
+    isLoading,
+    error,
+    onRetry,
+  }: WodDetailPageProps,
+) {
+  const t = useTranslations("wods")
   const tc = useTranslations("common")
 
   return (
-    <section className="py-12 sm:py-24 bg-muted/50 min-h-[calc(100vh-65px)]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+    <PageContainer size="wide" withPadding={true}>
+      {isLoading && <WodDetailSkeleton />}
+      {!isLoading && <div className="grid grid-cols-6 gap-6">
+        <div id="sidebar" className="hidden md:block col-span-2">
+          {item && <WodSidebar wod={item} />}
+        </div>
+        <div id="wod-grid" className="col-span-6 md:col-span-4 min-h-[400px]">
+          {error && (
+            <Card>
+              <CardContent className="px-0">
+                <Empty>
+                  <EmptyHeader>
+                    <EmptyMedia variant="icon"><AlertCircleIcon /></EmptyMedia>
+                    <EmptyTitle>{t("error_title")}</EmptyTitle>
+                    <EmptyDescription>{t("error_description")}</EmptyDescription>
+                  </EmptyHeader>
+                  <EmptyContent>
+                    <Button onClick={onRetry}>{tc("retry")}</Button>
+                  </EmptyContent>
+                </Empty>
+              </CardContent>
+            </Card>
+          )}
 
-        <Button variant="ghost" className="mb-8 -ml-2" asChild>
-          <Link href="/wods">
-            <ArrowLeft className="size-4 mr-2" />
-            {t("back")}
-          </Link>
-        </Button>
+          {!isLoading && !error && item && (
+            <div className="space-y-10">
 
-        {isLoading && <WodDetailSkeleton />}
-
-        {error && (
-          <Card>
-            <CardContent className="px-0">
-              <Empty>
-                <EmptyHeader>
-                  <EmptyMedia variant="icon"><AlertCircleIcon /></EmptyMedia>
-                  <EmptyTitle>{t("error_title")}</EmptyTitle>
-                  <EmptyDescription>{t("error_description")}</EmptyDescription>
-                </EmptyHeader>
-                <EmptyContent>
-                  <Button onClick={onRetry}>{tc("retry")}</Button>
-                </EmptyContent>
-              </Empty>
-            </CardContent>
-          </Card>
-        )}
-
-        {!isLoading && !error && item && (
-          <div className="space-y-10">
-
-            {/* Header */}
-            <div className="space-y-3">
-              <p className="text-muted-foreground font-mono text-xs tracking-widest uppercase">
-                {item.name}
-              </p>
-              <h1 className="text-4xl font-bold tracking-tight">{item.title}</h1>
-              <div className="flex flex-wrap gap-2 pt-1">
-                <Badge variant="outline">{item.category.title}</Badge>
-                <Badge variant="secondary">{item.type.title}</Badge>
-                {item.teamSize && item.teamSize > 1 && (
-                  <Badge variant="secondary">Team ×{item.teamSize}</Badge>
+              {/* Header */}
+              <div className="space-y-3">
+                <h1 className="text-4xl font-black">
+                  {item.name}
+                </h1>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  <Badge color="primary">{item.category.title}</Badge>
+                  <Badge color="secondary">{item.type.title}</Badge>
+                  {item.teamSize && item.teamSize > 1 && (
+                    <Badge color="secondary">Team ×{item.teamSize}</Badge>
+                  )}
+                </div>
+                {item.summary && (
+                  <div className="text-muted-foreground text-lg px-2 hidden md:block">
+                    <MarkdownSection content={item.summary} />
+                  </div>
                 )}
               </div>
-              {item.summary && (
-                <p className="text-muted-foreground text-lg leading-relaxed pt-2">
-                  {item.summary}
-                </p>
+
+              {/* Pattern */}
+              {item.variants.length > 0 && (
+                <WodPattern variants={item.variants} />
               )}
-            </div>
 
-            {/* Details / Rules / Tips */}
-            {(item.details || item.rules || item.tips) && (
-              <div className="space-y-8">
-                {item.details && <MarkdownSection title={t("details")} content={item.details} />}
-                {item.rules   && <MarkdownSection title={t("rules")}   content={item.rules} />}
-                {item.tips    && <MarkdownSection title={t("tips")}    content={item.tips} />}
-              </div>
-            )}
-
-            {/* Variants */}
-            {item.variants.length > 0 && (
-              <div className="space-y-4">
-                <Separator />
-                <h2 className="text-2xl font-bold">{t("variants")}</h2>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                  {item.variants.map(variant => (
-                    <VariantCard key={variant.id} variant={variant} />
-                  ))}
+              {/* Details / Rules / Tips */}
+              {(item.details || item.rules || item.tips) && (
+                <div className="space-y-8">
+                  <Separator />
+                  {item.details && <MarkdownSection title={t("details")} content={item.details} />}
+                  {item.rules && <MarkdownSection title={t("rules")} content={item.rules} />}
+                  {item.tips && <MarkdownSection title={t("tips")} content={item.tips} />}
                 </div>
-              </div>
-            )}
+              )}
 
-          </div>
-        )}
-
-      </div>
-    </section>
+            </div>
+          )}
+        </div>
+      </div>}
+    </PageContainer>
   )
 }

@@ -7,10 +7,25 @@ export type Exercise = {
     wodCount: number;
 };
 
+export type EquipmentSummary = {
+    id: string;
+    slug: string;
+    title: string;
+};
+
+export type ExerciseCategorySummary = {
+    id: string;
+    slug: string;
+    title: string;
+    wodCount?: number;
+};
+
 export type ExerciseSummary = {
     id: string;
     slug: string;
     title: string;
+    equipment: EquipmentSummary | null;
+    exerciseCategory: ExerciseCategorySummary | null;
 };
 
 export type CreateExercisePayload = {

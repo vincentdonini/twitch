@@ -1,8 +1,10 @@
-import { ExerciseSummary } from "../exercises/types"
+import type { ExerciseSummary } from "@workspace/api"
 
-// ---------------------------------------------------------------------------
-// Core types
-// ---------------------------------------------------------------------------
+export enum Gender {
+  MALE = "male",
+  FEMALE = "female",
+  MIXED = "mixed",
+}
 
 export type Wod = {
   id: string
@@ -57,7 +59,7 @@ export type AgeRange = {
 export type WodVariant = {
   id: string
   division: WodDivision
-  gender: "male" | "female" | "mixed"
+  gender: Gender
   ageRange: AgeRange | null
   rounds: number | null
   timeCap: number | null
@@ -79,9 +81,34 @@ export type ExerciseMetric = {
 
 export enum MetricType {
   REPETITIONS = "repetitions",
-  TIME        = "time",
-  DISTANCE    = "distance",
-  CALORIES    = "calories",
+  TIME = "time",
+  DISTANCE = "distance",
+  CALORIES = "calories",
+}
+
+// ---------------------------------------------------------------------------
+// Leaderboard
+// ---------------------------------------------------------------------------
+
+export type LeaderboardUser = {
+  id: string
+  firstName: string
+  lastName: string
+}
+
+export type LeaderboardEntry = {
+  id: string
+  user: LeaderboardUser
+  wod: { id: string; name: string }
+  variant: {
+    id: string
+    division: { id: string; slug: string }
+    gender: Gender
+  }
+  time: number | null
+  repetitions: number | null
+  weight: number | null
+  performedAt: string
 }
 
 // ---------------------------------------------------------------------------

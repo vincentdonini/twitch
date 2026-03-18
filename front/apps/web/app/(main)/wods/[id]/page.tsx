@@ -1,8 +1,8 @@
 "use client"
 
-import { useParams } from "next/navigation"
-import { useGetWod } from "@workspace/api"
 import { WodDetailPage } from "@/app/(main)/wods/[id]/_components/wod-detail-page"
+import { useGetWod } from "@workspace/api"
+import { useParams } from "next/navigation"
 
 export default function Page() {
   const { id } = useParams<{ id: string }>()

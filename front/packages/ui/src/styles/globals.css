@@ -14,8 +14,10 @@
 	--card-foreground            : oklch(0.145 0 0);
 	--popover                    : oklch(1 0 0);
 	--popover-foreground         : oklch(0.145 0 0);
-	--primary                    : oklch(0.205 0 0);
-	--primary-foreground         : oklch(0.985 0 0);
+	/*--primary                    : oklch(0.205 0 0);*/
+	/*--primary-foreground         : oklch(0.985 0 0);*/
+	--primary                    : oklch(0.5596 0.2108 26.31);
+	--primary-foreground         : oklch(0.9389 0.0309 15.25);
 	--secondary                  : oklch(0.97 0 0);
 	--secondary-foreground       : oklch(0.205 0 0);
 	--muted                      : oklch(0.97 0 0);
@@ -26,6 +28,14 @@
 	--border                     : oklch(0.922 0 0);
 	--input                      : oklch(0.922 0 0);
 	--ring                       : oklch(0.708 0 0);
+	--success                    : oklch(0.54 0.17 143);
+	--success-foreground         : oklch(0.985 0 0);
+	--warning                    : oklch(0.72 0.17 75);
+	--warning-foreground         : oklch(0.985 0 0);
+	--error                      : oklch(0.55 0.22 27);
+	--error-foreground           : oklch(0.985 0 0);
+	--info                       : oklch(0.60 0.18 240);
+	--info-foreground            : oklch(0.985 0 0);
 	--chart-1                    : oklch(0.809 0.105 251.813);
 	--chart-2                    : oklch(0.623 0.214 259.815);
 	--chart-3                    : oklch(0.546 0.245 262.881);
@@ -49,8 +59,10 @@
 	--card-foreground            : oklch(0.985 0 0);
 	--popover                    : oklch(0.205 0 0);
 	--popover-foreground         : oklch(0.985 0 0);
-	--primary                    : oklch(0.87 0.00 0);
-	--primary-foreground         : oklch(0.205 0 0);
+	/*--primary                    : oklch(0.87 0.00 0);*/
+	/*--primary-foreground         : oklch(0.205 0 0);*/
+	--primary                    : oklch(0.9389 0.0309 15.25);
+	--primary-foreground         : oklch(0.5596 0.2108 26.31);
 	--secondary                  : oklch(0.269 0 0);
 	--secondary-foreground       : oklch(0.985 0 0);
 	--muted                      : oklch(0.269 0 0);
@@ -61,6 +73,14 @@
 	--border                     : oklch(1 0 0 / 10%);
 	--input                      : oklch(1 0 0 / 15%);
 	--ring                       : oklch(0.556 0 0);
+	--success                    : oklch(0.64 0.17 143);
+	--success-foreground         : oklch(0.985 0 0);
+	--warning                    : oklch(0.78 0.17 75);
+	--warning-foreground         : oklch(0.985 0 0);
+	--error                      : oklch(0.65 0.22 27);
+	--error-foreground           : oklch(0.985 0 0);
+	--info                       : oklch(0.68 0.18 240);
+	--info-foreground            : oklch(0.985 0 0);
 	--chart-1                    : oklch(0.809 0.105 251.813);
 	--chart-2                    : oklch(0.623 0.214 259.815);
 	--chart-3                    : oklch(0.546 0.245 262.881);
@@ -92,6 +112,14 @@
 	--color-accent                     : var(--accent);
 	--color-accent-foreground          : var(--accent-foreground);
 	--color-destructive                : var(--destructive);
+	--color-success                    : var(--success);
+	--color-success-foreground         : var(--success-foreground);
+	--color-warning                    : var(--warning);
+	--color-warning-foreground         : var(--warning-foreground);
+	--color-error                      : var(--error);
+	--color-error-foreground           : var(--error-foreground);
+	--color-info                       : var(--info);
+	--color-info-foreground            : var(--info-foreground);
 	--color-border                     : var(--border);
 	--color-input                      : var(--input);
 	--color-ring                       : var(--ring);
@@ -126,13 +154,12 @@
 	/*body {*/
 	/*	@apply bg-background text-foreground;*/
 	/*}*/
-
 	h1 {
 		@apply scroll-m-20 text-4xl font-extrabold tracking-tight text-balance;
 	}
 
 	h2 {
-		@apply mt-10 mb-5 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
+		@apply mt-10 mb-5 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
 	}
 
 	h3 {
@@ -140,7 +167,7 @@
 	}
 
 	p {
-		@apply leading-7;
+		@apply leading-6;
 	}
 
 	p:not(:last-child) {
@@ -159,34 +186,43 @@
 		@apply mt-6 border-l-2 pl-6 italic;
 	}
 
+	.prose > ul {
+		@apply list-disc my-6 ml-6;
+	}
+
+	.prose > ul > li {
+		@apply mt-2;
+	}
+
+	.prose > ol {
+		@apply list-decimal my-6 ml-6;
+	}
+
+	.prose > ol > li {
+		@apply mt-2;
+	}
+
 	/*ul {*/
 	/*	@apply my-6 ml-6;*/
 	/*}*/
-
 	/*ul > li {*/
 	/*	@apply mt-2;*/
 	/*}*/
-
 	/*table {*/
 	/*	@apply w-full;*/
 	/*}*/
-
 	/*thead tr {*/
 	/*	@apply border-t even:bg-muted;*/
 	/*}*/
-
 	/*tbody tr {*/
 	/*	@apply border-t even:bg-muted;*/
 	/*}*/
-
 	/*th {*/
 	/*	@apply border px-4 py-2 text-left font-bold;*/
 	/*}*/
-
 	/*td {*/
 	/*	@apply border px-4 py-2 text-left;*/
 	/*}*/
-
 	/*.table-wrapper {*/
 	/*	@apply my-6 w-full overflow-y-auto;*/
 	/*}*/

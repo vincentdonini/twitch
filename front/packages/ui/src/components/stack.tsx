@@ -8,22 +8,28 @@ interface StackProps {
   direction?: "vertical" | "horizontal"
   gap?: number | string
   className?: string
+  itemClassName?: string
   justify?: "start" | "center" | "end" | "between" | "around" | "evenly"
   align?: "start" | "center" | "end" | "stretch"
   style?: CSSProperties
   divider?: ReactNode | boolean
+  starting?: ReactNode
+  ending?: ReactNode
 }
 
 function Stack(
   {
     children,
     direction = "vertical",
-    gap = 2,
+    gap = 0,
     className,
+    itemClassName,
     justify = "start",
     align = "stretch",
     style,
     divider,
+    starting,
+    ending,
   }: StackProps,
 ) {
   const justifyMap: Record<string, string> = {
@@ -42,14 +48,17 @@ function Stack(
     stretch: "items-stretch",
   }
 
+  const effectiveItemClassName = itemClassName ?? className
+
   const directionClass = direction === "horizontal" ? "flex-row" : "flex-col"
 
-  // Gestion du gap custom
   const gapStyle =
     typeof gap === "string" && !gap.match(/^\d+$/) ? { gap } : {}
 
-  // Transformation des children pour ajouter le divider
-  const childrenArray = React.Children.toArray(children)
+  const childrenArray = React.Children.toArray(children).map((child, i) =>
+    effectiveItemClassName ? <span key={i} className={effectiveItemClassName}>{child}</span> : child,
+  )
+
   const contentWithDivider = divider
     ? childrenArray.flatMap((child, index) => {
       if (index < childrenArray.length - 1) {
@@ -74,14 +83,26 @@ function Stack(
       className={cn(
         "flex",
         directionClass,
-        typeof gap === "number" ? `gap-${gap}` : "",
         justifyMap[justify],
         alignMap[align],
         className,
       )}
-      style={{ ...gapStyle, ...style }}
     >
-      {contentWithDivider}
+      {starting && (starting)}
+      <div
+        className={cn(
+          "flex",
+          directionClass,
+          typeof gap === "number" ? `gap-${gap}` : "",
+          justifyMap[justify],
+          alignMap[align],
+          itemClassName,
+        )}
+        style={{ ...gapStyle, ...style }}
+      >
+        {contentWithDivider}
+      </div>
+      {ending && (ending)}
     </div>
   )
 }

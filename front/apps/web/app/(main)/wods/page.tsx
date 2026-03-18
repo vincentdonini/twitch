@@ -1,13 +1,20 @@
 "use client"
 
-import React, { useState, useEffect, useRef, useMemo, Suspense } from "react"
-import { useTranslations } from "next-intl"
-import { useRouter, useSearchParams } from "next/navigation"
+import { FiltersSidebar } from "@/app/(main)/wods/_components/filters-sidebar"
+import { WodCard } from "@/app/(main)/wods/_components/wod-card"
+import {
+  buildUrl,
+  FILTER_BASE,
+  FilterGroupState,
+  LIMIT,
+  parseUrl,
+  SidebarFilterGroup,
+  sortOptions,
+} from "@/app/(main)/wods/_lib/filters"
 import { PageContainer } from "@/ui/components/page-container"
+import { useGetWodCategories, useGetWodDivisions, useGetWods, useGetWodTypes } from "@workspace/api"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
-import { Skeleton } from "@workspace/ui/components/skeleton"
-import { PaginationControl } from "@workspace/ui/components/pagination-control"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,21 +22,14 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@workspace/ui/components/dropdown-menu"
+import { PaginationControl } from "@workspace/ui/components/pagination-control"
 import { Sheet, SheetContent, SheetTrigger } from "@workspace/ui/components/sheet"
-import { Ban, ChevronDown, Funnel, SlidersHorizontal, X } from "lucide-react"
-import { useGetWodCategories, useGetWodDivisions, useGetWods, useGetWodTypes } from "@workspace/api"
+import { Skeleton } from "@workspace/ui/components/skeleton"
 import { useDebounce } from "@workspace/ui/hooks/use-debounce"
-import { WodCard } from "./_components/wod-card"
-import { FiltersSidebar } from "./_components/filters-sidebar"
-import {
-  LIMIT,
-  FILTER_BASE,
-  sortOptions,
-  parseUrl,
-  buildUrl,
-  type FilterGroupState,
-  type SidebarFilterGroup,
-} from "./_lib/filters"
+import { Ban, ChevronDown, Funnel, SlidersHorizontal, X } from "lucide-react"
+import { useTranslations } from "next-intl"
+import { useRouter, useSearchParams } from "next/navigation"
+import React, { Suspense, useEffect, useMemo, useRef, useState } from "react"
 
 export default function Page() {
   return (
@@ -40,35 +40,42 @@ export default function Page() {
 }
 
 function WodsPageContent() {
-  const t            = useTranslations("wods")
-  const router       = useRouter()
+  const t = useTranslations("wods")
+  const router = useRouter()
   const searchParams = useSearchParams()
 
   const initial = useMemo(() => parseUrl(searchParams), []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const [page, setPage]                 = useState(initial.page)
+  const [page, setPage] = useState(initial.page)
   const [selectedSort, setSelectedSort] = useState(initial.sort)
-  const [searchQuery, setSearchQuery]   = useState(initial.search)
-  const [filterStates, setFilterStates]   = useState<Record<string, FilterGroupState>>(initial.filterStates)
+  const [searchQuery, setSearchQuery] = useState(initial.search)
+  const [filterStates, setFilterStates] = useState<Record<string, FilterGroupState>>(initial.filterStates)
   const [exerciseLabels, setExerciseLabels] = useState<Record<string, string>>({})
+  const [exerciseCategoryLabels, setExerciseCategoryLabels] = useState<Record<string, string>>({})
+  const [equipmentLabels, setEquipmentLabels] = useState<Record<string, string>>({})
   const debouncedSearch = useDebounce(searchQuery)
 
-  useEffect(() => { setPage(1) }, [debouncedSearch])
+  useEffect(() => {
+    setPage(1)
+  }, [debouncedSearch])
 
   const isMounted = useRef(false)
   useEffect(() => {
-    if (!isMounted.current) { isMounted.current = true; return }
+    if (!isMounted.current) {
+      isMounted.current = true
+      return
+    }
     router.replace(buildUrl(filterStates, page, selectedSort, debouncedSearch), { scroll: false })
   }, [filterStates, page, selectedSort, debouncedSearch]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const { data: wodCategories, isLoading: isLoadingWodCategories } = useGetWodCategories({ limit: "100" })
-  const { data: wodTypes,      isLoading: isLoadingWodTypes }      = useGetWodTypes({ limit: "100" })
-  const { data: wodDivisions,  isLoading: isLoadingWodDivisions }  = useGetWodDivisions({ limit: "100" })
+  const { data: wodTypes, isLoading: isLoadingWodTypes } = useGetWodTypes({ limit: "100" })
+  const { data: wodDivisions, isLoading: isLoadingWodDivisions } = useGetWodDivisions({ limit: "100" })
 
   const toggleFilter = (groupId: string, optionId: string) => {
     setPage(1)
     setFilterStates(prev => {
-      const current  = prev[groupId] ?? { include: [], exclude: [] }
+      const current = prev[groupId] ?? { include: [], exclude: [] }
       const included = current.include.includes(optionId)
       const excluded = current.exclude.includes(optionId)
 
@@ -113,8 +120,15 @@ function WodsPageContent() {
 
   const clearFilterGroup = (groupId: string) => {
     setPage(1)
-    if (groupId === "search") { setSearchQuery(""); return }
-    setFilterStates(prev => { const next = { ...prev }; delete next[groupId]; return next })
+    if (groupId === "search") {
+      setSearchQuery("")
+      return
+    }
+    setFilterStates(prev => {
+      const next = { ...prev }
+      delete next[groupId]
+      return next
+    })
   }
 
   const clearAllFilters = () => {
@@ -124,18 +138,18 @@ function WodsPageContent() {
   }
 
   const apiParams: Record<string, string | string[]> = {
-    page:  String(page),
+    page: String(page),
     limit: String(LIMIT),
-    sort:  selectedSort,
+    sort: selectedSort,
     ...(debouncedSearch ? { "filters[name][like]": debouncedSearch } : {}),
   }
   for (const [groupId, state] of Object.entries(filterStates)) {
     const base = FILTER_BASE[groupId]
     if (!base) continue
-    if (state.include.length === 1) apiParams[`${base}[eq]`]    = state.include[0]!
-    if (state.include.length > 1)   apiParams[`${base}[in]`]    = state.include
-    if (state.exclude.length === 1) apiParams[`${base}[neq]`]   = state.exclude[0]!
-    if (state.exclude.length > 1)   apiParams[`${base}[notIn]`] = state.exclude
+    if (state.include.length === 1) apiParams[`${base}[eq]`] = state.include[0]!
+    if (state.include.length > 1) apiParams[`${base}[in]`] = state.include
+    if (state.exclude.length === 1) apiParams[`${base}[neq]`] = state.exclude[0]!
+    if (state.exclude.length > 1) apiParams[`${base}[notIn]`] = state.exclude
   }
 
   const { data: wods, isLoading, error, pagination } = useGetWods(apiParams)
@@ -184,6 +198,38 @@ function WodsPageContent() {
         : filterStates.exercise?.exclude.includes(id) ? "exclude" : "none",
       onToggle: (id) => toggleFilter("exercise", id),
     },
+    {
+      id: "exerciseCategory",
+      title: t("exercise_category"),
+      isLoading: false,
+      options: [],
+      searchable: true,
+      selectedIds: {
+        include: filterStates.exerciseCategory?.include ?? [],
+        exclude: filterStates.exerciseCategory?.exclude ?? [],
+      },
+      labelCache: exerciseCategoryLabels,
+      onLabelsDiscovered: (labels) => setExerciseCategoryLabels(prev => ({ ...prev, ...labels })),
+      getState: (id) => filterStates.exerciseCategory?.include.includes(id) ? "include"
+        : filterStates.exerciseCategory?.exclude.includes(id) ? "exclude" : "none",
+      onToggle: (id) => toggleFilter("exerciseCategory", id),
+    },
+    {
+      id: "equipment",
+      title: t("equipment"),
+      isLoading: false,
+      options: [],
+      searchable: true,
+      selectedIds: {
+        include: filterStates.equipment?.include ?? [],
+        exclude: filterStates.equipment?.exclude ?? [],
+      },
+      labelCache: equipmentLabels,
+      onLabelsDiscovered: (labels) => setEquipmentLabels(prev => ({ ...prev, ...labels })),
+      getState: (id) => filterStates.equipment?.include.includes(id) ? "include"
+        : filterStates.equipment?.exclude.includes(id) ? "exclude" : "none",
+      onToggle: (id) => toggleFilter("equipment", id),
+    },
   ]
 
   const activeFilterBadges: { key: string; label: string; mode: "include" | "exclude" }[] = [
@@ -215,14 +261,14 @@ function WodsPageContent() {
     <PageContainer size="wide" withPadding={true}>
 
       {/* Mobile filter button */}
-      <div className="mb-4 md:hidden">
+      <div className="mb-4 lg:hidden">
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" className="w-full">
               <Funnel className="mr-2 h-4 w-4" />
               {t("filters")}
               {Object.keys(filterStates).length > 0 && (
-                <Badge variant="secondary" className="ml-1 text-xs">{Object.keys(filterStates).length}</Badge>
+                <Badge color="secondary" className="ml-1 text-xs">{Object.keys(filterStates).length}</Badge>
               )}
             </Button>
           </SheetTrigger>
@@ -235,12 +281,12 @@ function WodsPageContent() {
       <div className="grid grid-cols-6 gap-6">
 
         {/* Sidebar */}
-        <div id="sidebar" className="hidden md:block col-span-2">
+        <div id="sidebar" className="hidden lg:block col-span-2">
           <FiltersSidebar filterGroups={filterGroups} searchQuery={searchQuery} onSearchChange={setSearchQuery} />
         </div>
 
         {/* WODs grid */}
-        <div id="wod-grid" className="col-span-6 md:col-span-4 min-h-[400px]">
+        <div id="wod-grid" className="col-span-6 lg:col-span-4 min-h-[400px]">
 
           {/* Header */}
           <div className="mb-4 w-full">
@@ -264,7 +310,10 @@ function WodsPageContent() {
                   {sortOptions.map(option => (
                     <DropdownMenuItem
                       key={option.id}
-                      onClick={() => { setSelectedSort(option.id); setPage(1) }}
+                      onClick={() => {
+                        setSelectedSort(option.id)
+                        setPage(1)
+                      }}
                       className={selectedSort === option.id ? "bg-accent" : ""}
                     >
                       {t(option.labelKey)}
@@ -282,7 +331,7 @@ function WodsPageContent() {
               {activeFilterBadges.map(f => (
                 <Badge
                   key={f.key}
-                  variant="secondary"
+                  color="secondary"
                   className={f.mode === "exclude" ? "text-destructive" : ""}
                 >
                   {f.mode === "exclude" && <Ban className="mr-1 size-3" />}
@@ -292,7 +341,10 @@ function WodsPageContent() {
                     size="sm"
                     className="h-auto cursor-pointer !p-1 text-inherit"
                     onClick={() => {
-                      if (f.key === "search") { clearFilterGroup("search"); return }
+                      if (f.key === "search") {
+                        clearFilterGroup("search")
+                        return
+                      }
                       const [groupId, optionId] = f.key.split(":") as [string, string]
                       removeFilter(groupId, optionId)
                     }}
@@ -315,7 +367,7 @@ function WodsPageContent() {
 
           {/* WOD list */}
           {isLoading && (
-            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4">
               {Array.from({ length: LIMIT }).map((_, i) => (
                 <Skeleton key={i} className="h-38 w-full rounded-lg" />
               ))}
@@ -333,7 +385,7 @@ function WodsPageContent() {
                   {t("no_results")}
                 </div>
               ) : (
-                <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+                <div className="grid grid-cols-1 gap-4">
                   {wods.map(wod => <WodCard key={wod.id} wod={wod} />)}
                 </div>
               )}

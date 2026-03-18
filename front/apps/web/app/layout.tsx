@@ -1,4 +1,4 @@
-import { DM_Sans, Geist_Mono } from "next/font/google"
+import { DM_Sans, Geist_Mono, Lato } from "next/font/google"
 import { AuthProvider } from "@workspace/api"
 import "@workspace/ui/globals.css"
 import { ThemeProvider } from "@workspace/ui/components/theme-provider"

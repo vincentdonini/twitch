@@ -4,6 +4,7 @@ export type Equipment = {
     title: string;
     summary: string;
     details: string;
+    wodCount: number;
 };
 
 export type EquipmentSummary = {

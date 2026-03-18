@@ -24,7 +24,7 @@ export function PageContainer(
   return (
     <section
       className={cn(
-        withPadding && "py-12 sm:py-24",
+        withPadding && "py-12",
         "bg-muted/50",
         withFooter
           ? "min-h-[calc(100vh-60px-80px)] md:min-h-[calc(100vh-60px-100px)]"

@@ -24,13 +24,14 @@ export type {Achievement, CreateAchievementPayload, UpdateAchievementPayload} fr
 // ---------------------------------------------------------------------------------------------------------------------
 export {useGetEquipments} from "./resources/equipments/useGetEquipments";
 export {useGetEquipment} from "./resources/equipments/useGetEquipment";
-export type {Equipment, CreateEquipmentPayload, UpdateEquipmentPayload} from "./resources/equipments/types";
+export type {Equipment, EquipmentSummary, CreateEquipmentPayload, UpdateEquipmentPayload} from "./resources/equipments/types";
 
 // EXERCISES
 // ---------------------------------------------------------------------------------------------------------------------
 export {useGetExercises} from "./resources/exercises/useGetExercises";
 export {useGetExercise} from "./resources/exercises/useGetExercise";
-export type {Exercise, CreateExercisePayload, UpdateExercisePayload} from "./resources/exercises/types";
+export {useGetExerciseCategories} from "./resources/exercises/useGetExerciseCategories";
+export type {Exercise, ExerciseSummary, ExerciseCategorySummary, CreateExercisePayload, UpdateExercisePayload} from "./resources/exercises/types";
 
 // MUSCLES
 // ---------------------------------------------------------------------------------------------------------------------
@@ -50,10 +51,12 @@ export type {MuscleGroup} from "./resources/muscles/muscle-groups/types";
 // ---------------------------------------------------------------------------------------------------------------------
 export {useGetWods} from "./resources/wods/useGetWods";
 export {useGetWod} from "./resources/wods/useGetWod";
+export {useGetWodLeaderboard} from "./resources/wods/useGetWodLeaderboard";
 export {useGetWodCategories} from "./resources/wods/wod-categories/useGetWodCategories";
 export {useGetWodTypes} from "./resources/wods/wod-types/useGetWodTypes";
 export {useGetWodDivisions} from "./resources/wods/wod-divisions/useGetWodDivisions";
-export type {Wod, WodDetail, WodCategory, WodType, WodDivision, WodVariant, WodExercise, ExerciseMetric, MetricType} from "./resources/wods/types";
+export type {Wod, WodDetail, WodCategory, WodType, WodDivision, WodVariant, WodExercise, ExerciseMetric, MetricType, LeaderboardEntry, LeaderboardUser} from "./resources/wods/types";
+export {Gender} from "./resources/wods/types";
 
 // USERS
 // ---------------------------------------------------------------------------------------------------------------------
