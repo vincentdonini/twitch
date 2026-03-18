@@ -13,6 +13,9 @@ interface EquipmentDALInterface
 {
     public function getById(Uuid $id): ?Equipment;
 
+    /** @return array<string, int> */
+    public function getWodCounts(): array;
+
     public function listEquipments(
         int               $page = 1,
         int               $limit = RequestPaginator::DEFAULT_LIMIT,

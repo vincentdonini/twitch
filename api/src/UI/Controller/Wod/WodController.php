@@ -576,8 +576,8 @@ final class WodController extends AbstractController
         GetWodLeaderboardUseCase $useCase,
         NormalizerInterface      $normalizer,
     ): JsonResponse {
-        /** @var User|null $currentUser */
-        $currentUser = $this->getUser();
+        $user = $this->getUser();
+        $currentUser = $user instanceof User ? $user : null;
 
         $paginatorValues = RequestPaginator::extractValues(
             request: $request

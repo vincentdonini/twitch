@@ -4,6 +4,7 @@ namespace App\Infrastructure\Doctrine\Repository\Exercise;
 
 use App\Domain\Exercise\Entity\ExerciseCategory;
 use App\Domain\Exercise\Ports\ExerciseCategoryDALInterface;
+use App\Domain\Wod\Entity\WodVariantExercise;
 use App\Infrastructure\Doctrine\Filters\DoctrineFilterApplier;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
@@ -86,5 +87,26 @@ class ExerciseCategoryRepository extends AbstractEntityRepository implements Exe
             $page,
             $limit,
         );
+    }
+
+    public function getWodCounts(): array
+    {
+        $rows = $this->getEntityManager()
+            ->createQuery('
+                SELECT ec.id as id, COUNT(DISTINCT w.id) as cnt
+                FROM ' . WodVariantExercise::class . ' wve
+                JOIN wve.wodVariant wv
+                JOIN wv.wod w
+                JOIN wve.exercise ex
+                JOIN ex.exerciseCategory ec
+                GROUP BY ec.id
+            ')
+            ->getResult();
+
+        $counts = [];
+        foreach ($rows as $row) {
+            $counts[(string)$row['id']] = (int)$row['cnt'];
+        }
+        return $counts;
     }
 }

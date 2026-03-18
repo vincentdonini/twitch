@@ -21,14 +21,17 @@ final class PublicApiUser implements UserInterface
         ListPermissions::PERMISSION_MUSCLE_AREA_VIEW,
         ListPermissions::PERMISSION_MUSCLE_GROUP_LIST,
         ListPermissions::PERMISSION_MUSCLE_GROUP_VIEW,
+
         // Exercises
         ListPermissions::PERMISSION_EXERCISE_LIST,
         ListPermissions::PERMISSION_EXERCISE_VIEW,
         ListPermissions::PERMISSION_EXERCISE_CATEGORY_LIST,
         ListPermissions::PERMISSION_EXERCISE_CATEGORY_VIEW,
+
         // Equipments
         ListPermissions::PERMISSION_EQUIPMENT_LIST,
         ListPermissions::PERMISSION_EQUIPMENT_VIEW,
+
         // WODs
         ListPermissions::PERMISSION_WOD_LIST,
         ListPermissions::PERMISSION_WOD_VIEW,
@@ -40,6 +43,8 @@ final class PublicApiUser implements UserInterface
         ListPermissions::PERMISSION_WOD_DIVISION_VIEW,
         ListPermissions::PERMISSION_WOD_AGE_RANGE_LIST,
         ListPermissions::PERMISSION_WOD_AGE_RANGE_VIEW,
+        ListPermissions::PERMISSION_WOD_SCORE_LIST,
+
         // Benchmarks
         ListPermissions::PERMISSION_BENCHMARK_LIST,
         ListPermissions::PERMISSION_BENCHMARK_VIEW,

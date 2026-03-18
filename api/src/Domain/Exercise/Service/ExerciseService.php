@@ -5,6 +5,7 @@ namespace App\Domain\Exercise\Service;
 use App\Application\Common\CollectionMapper;
 use App\Application\Exercise\DTO\ExerciseDTO;
 use App\Domain\Common\Filter\EntityFieldFilter;
+use App\Domain\Equipment\Service\EquipmentService;
 use App\Domain\Exercise\Entity\Exercise;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
 use App\Infrastructure\Filters\FilterCollection;
@@ -17,8 +18,10 @@ final class ExerciseService
     private array $filterMapping;
 
     public function __construct(
-        private readonly RequestStack      $requestStack,
-        private readonly EntityFieldFilter $EntityFieldFilter,
+        private readonly RequestStack         $requestStack,
+        private readonly EntityFieldFilter    $EntityFieldFilter,
+        private readonly EquipmentService     $equipmentService,
+        private readonly ExerciseCategoryService $exerciseCategoryService,
     ) {
         $this->filterMapping = [
             'contents.title'   => fn(Exercise $exercise) => $exercise->getContentByLocale($this->getLocale())?->getTitle(),
@@ -34,13 +37,21 @@ final class ExerciseService
             return null;
         }
 
+        $equipment = $exercise->getEquipment()
+            ? $this->equipmentService->transformToDTO($exercise->getEquipment())
+            : null;
+
+        $exerciseCategory = $this->exerciseCategoryService->transformToDTO($exercise->getExerciseCategory());
+
         return new ExerciseDTO(
-            id      : $exercise->getId(),
-            slug    : $exercise->getSlug(),
-            title   : $content ? $content->getTitle() : '',
-            summary : $content ? $content->getSummary() : '',
-            details : $content ? $content->getDetails() : '',
-            wodCount: $wodCount,
+            id              : $exercise->getId(),
+            slug            : $exercise->getSlug(),
+            title           : $content ? $content->getTitle() : '',
+            summary         : $content ? $content->getSummary() : '',
+            details         : $content ? $content->getDetails() : '',
+            wodCount        : $wodCount,
+            equipment       : $equipment,
+            exerciseCategory: $exerciseCategory,
         );
     }
 

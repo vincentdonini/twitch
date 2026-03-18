@@ -27,7 +27,7 @@ class EquipmentService
         ];
     }
 
-    public function transformToDTO(Equipment $equipment, FilterCollection $filters = null): ?EquipmentDTO
+    public function transformToDTO(Equipment $equipment, FilterCollection $filters = null, int $wodCount = 0): ?EquipmentDTO
     {
         $content = $equipment->getContentByLocale($this->getLocale());
         if (!$this->EntityFieldFilter->match($equipment, $filters, $this->filterMapping)) {
@@ -35,19 +35,20 @@ class EquipmentService
         }
 
         return new EquipmentDTO(
-            id     : $equipment->getId(),
-            slug   : $equipment->getSlug(),
-            title  : $content ? $content->getTitle() : '',
-            summary: $content ? $content->getSummary() : '',
-            details: $content ? $content->getDetails() : '',
+            id      : $equipment->getId(),
+            slug    : $equipment->getSlug(),
+            title   : $content ? $content->getTitle() : '',
+            summary : $content ? $content->getSummary() : '',
+            details : $content ? $content->getDetails() : '',
+            wodCount: $wodCount,
         );
     }
 
-    public function transformCollectionToDTO(array $equipments, FilterCollection $filters = null): array
+    public function transformCollectionToDTO(array $equipments, FilterCollection $filters = null, array $wodCounts = []): array
     {
         return CollectionMapper::mapAndFilter(
             $equipments,
-            fn(Equipment $equipment) => $this->transformToDTO($equipment, $filters)
+            fn(Equipment $equipment) => $this->transformToDTO($equipment, $filters, $wodCounts[(string)$equipment->getId()] ?? 0)
         );
     }
 }

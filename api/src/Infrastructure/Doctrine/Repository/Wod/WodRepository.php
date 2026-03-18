@@ -66,8 +66,10 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
         // -------------------------------------------------------------------------------------------------------------
         // Exercise exclusion (NEQ/NOT_IN) requires a NOT EXISTS subquery — a LEFT JOIN + NOT IN doesn't work on
         // one-to-many paths because sibling rows (other exercises of the same Wod) satisfy the condition.
-        $exerciseExcludeIds = [];
-        $standardFilters    = [];
+        $exerciseExcludeIds         = [];
+        $exerciseCategoryExcludeIds = [];
+        $equipmentExcludeIds        = [];
+        $standardFilters            = [];
 
         foreach ($filters as $filter) {
             if (
@@ -76,6 +78,20 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
             ) {
                 foreach ((array)$filter->value as $v) {
                     $exerciseExcludeIds[] = Uuid::fromString(trim($v))->toBinary();
+                }
+            } elseif (
+                $filter->field === 'wodVariants.wodVariantExercises.exercise.exerciseCategory.id' &&
+                in_array($filter->operator, [Operator::NEQ, Operator::NOT_IN], true)
+            ) {
+                foreach ((array)$filter->value as $v) {
+                    $exerciseCategoryExcludeIds[] = Uuid::fromString(trim($v))->toBinary();
+                }
+            } elseif (
+                $filter->field === 'wodVariants.wodVariantExercises.exercise.equipment.id' &&
+                in_array($filter->operator, [Operator::NEQ, Operator::NOT_IN], true)
+            ) {
+                foreach ((array)$filter->value as $v) {
+                    $equipmentExcludeIds[] = Uuid::fromString(trim($v))->toBinary();
                 }
             } else {
                 $standardFilters[] = $filter;
@@ -95,6 +111,28 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
                     AND wve_excl.exercise IN (:excl_exercise_ids)
                 )')
                 ->setParameter('excl_exercise_ids', $exerciseExcludeIds);
+        }
+
+        if (!empty($exerciseCategoryExcludeIds)) {
+            $qb->andWhere('NOT EXISTS (
+                    SELECT 1 FROM ' . WodVariantExercise::class . ' wve_excl_cat
+                    JOIN wve_excl_cat.wodVariant wv_excl_cat
+                    JOIN wve_excl_cat.exercise ex_excl_cat
+                    WHERE wv_excl_cat.wod = w
+                    AND ex_excl_cat.exerciseCategory IN (:excl_exercise_category_ids)
+                )')
+                ->setParameter('excl_exercise_category_ids', $exerciseCategoryExcludeIds);
+        }
+
+        if (!empty($equipmentExcludeIds)) {
+            $qb->andWhere('NOT EXISTS (
+                    SELECT 1 FROM ' . WodVariantExercise::class . ' wve_excl_eq
+                    JOIN wve_excl_eq.wodVariant wv_excl_eq
+                    JOIN wve_excl_eq.exercise ex_excl_eq
+                    WHERE wv_excl_eq.wod = w
+                    AND ex_excl_eq.equipment IN (:excl_equipment_ids)
+                )')
+                ->setParameter('excl_equipment_ids', $equipmentExcludeIds);
         }
 
         // Sort

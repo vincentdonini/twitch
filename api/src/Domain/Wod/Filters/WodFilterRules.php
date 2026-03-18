@@ -18,7 +18,9 @@ final class WodFilterRules
         'wodVariants.gender'                                 => [Operator::EQ],
         'wodVariants.rounds'                                 => [Operator::EQ, Operator::LT, Operator::LTE, Operator::GT, Operator::GTE],
         'wodVariants.timeCap'                                => [Operator::EQ, Operator::LT, Operator::LTE, Operator::GT, Operator::GTE],
-        'wodVariants.wodVariantExercises.exercise.id'        => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
+        'wodVariants.wodVariantExercises.exercise.id'                      => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
+        'wodVariants.wodVariantExercises.exercise.exerciseCategory.id'     => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
+        'wodVariants.wodVariantExercises.exercise.equipment.id'            => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
     ];
 
     public const PUBLIC_FIELDS = [
@@ -34,5 +36,7 @@ final class WodFilterRules
         'wodVariants.rounds',
         'wodVariants.timeCap',
         'wodVariants.wodVariantExercises.exercise.id',
+        'wodVariants.wodVariantExercises.exercise.exerciseCategory.id',
+        'wodVariants.wodVariantExercises.exercise.equipment.id',
     ];
 }

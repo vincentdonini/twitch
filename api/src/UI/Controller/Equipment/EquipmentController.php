@@ -9,6 +9,7 @@ use App\Domain\Equipment\Equipment\ListEquipmentsUseCase;
 use App\Domain\Equipment\Equipment\UpsertContentEquipmentBulkUseCase;
 use App\Domain\Equipment\Equipment\UpsertContentEquipmentUseCase;
 use App\Domain\Equipment\Filters\EquipmentFilterMapping;
+use App\Domain\Equipment\Ports\EquipmentDALInterface;
 use App\Domain\Equipment\Filters\EquipmentFilterRules;
 use App\Domain\Equipment\Service\EquipmentService;
 use App\Domain\Equipment\Sort\EquipmentSortMapping;
@@ -46,7 +47,8 @@ final readonly class EquipmentController
     use ApiExceptionHandler;
 
     public function __construct(
-        private EquipmentService $equipmentService,
+        private EquipmentService      $equipmentService,
+        private EquipmentDALInterface $equipmentDAL,
     ) {
     }
 
@@ -161,7 +163,8 @@ final readonly class EquipmentController
 
         $dtoItems = $this->equipmentService->transformCollectionToDTO(
             equipments: $paginator->getItems(),
-            filters   : $filters
+            filters   : $filters,
+            wodCounts : $this->equipmentDAL->getWodCounts(),
         );
 
         return new JsonResponse(

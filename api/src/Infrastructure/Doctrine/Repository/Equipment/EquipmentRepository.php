@@ -4,6 +4,7 @@ namespace App\Infrastructure\Doctrine\Repository\Equipment;
 
 use App\Domain\Equipment\Entity\Equipment;
 use App\Domain\Equipment\Ports\EquipmentDALInterface;
+use App\Domain\Wod\Entity\WodVariantExercise;
 use App\Infrastructure\Doctrine\Filters\DoctrineFilterApplier;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
@@ -86,5 +87,26 @@ class EquipmentRepository extends AbstractEntityRepository implements EquipmentD
             $page,
             $limit,
         );
+    }
+
+    public function getWodCounts(): array
+    {
+        $rows = $this->getEntityManager()
+            ->createQuery('
+                SELECT eq.id as id, COUNT(DISTINCT w.id) as cnt
+                FROM ' . WodVariantExercise::class . ' wve
+                JOIN wve.wodVariant wv
+                JOIN wv.wod w
+                JOIN wve.exercise ex
+                JOIN ex.equipment eq
+                GROUP BY eq.id
+            ')
+            ->getResult();
+
+        $counts = [];
+        foreach ($rows as $row) {
+            $counts[(string)$row['id']] = (int)$row['cnt'];
+        }
+        return $counts;
     }
 }

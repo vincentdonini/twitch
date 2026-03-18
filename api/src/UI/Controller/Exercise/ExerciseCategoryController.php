@@ -10,6 +10,7 @@ use App\Domain\Exercise\ExerciseCategory\UpsertContentExerciseCategoryBulkUseCas
 use App\Domain\Exercise\ExerciseCategory\UpsertContentExerciseCategoryUseCase;
 use App\Domain\Exercise\Filters\ExerciseCategoryFilterMapping;
 use App\Domain\Exercise\Filters\ExerciseCategoryFilterRules;
+use App\Domain\Exercise\Ports\ExerciseCategoryDALInterface;
 use App\Domain\Exercise\Service\ExerciseCategoryService;
 use App\Domain\Exercise\Sort\ExerciseCategorySortMapping;
 use App\Infrastructure\Filters\RequestFilters;
@@ -46,7 +47,8 @@ final readonly class ExerciseCategoryController
     use ApiExceptionHandler;
 
     public function __construct(
-        private ExerciseCategoryService $exerciseCategoryService,
+        private ExerciseCategoryService      $exerciseCategoryService,
+        private ExerciseCategoryDALInterface $exerciseCategoryDAL,
     ) {
     }
 
@@ -170,7 +172,8 @@ final readonly class ExerciseCategoryController
 
         $dtoItems = $this->exerciseCategoryService->transformCollectionToDTO(
             exerciseCategories: $paginator->getItems(),
-            filters           : $filters
+            filters           : $filters,
+            wodCounts         : $this->exerciseCategoryDAL->getWodCounts(),
         );
 
         return new JsonResponse(

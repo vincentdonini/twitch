@@ -27,7 +27,7 @@ final class ExerciseCategoryService
         ];
     }
 
-    public function transformToDTO(ExerciseCategory $exerciseCategory, FilterCollection $filters = null): ?ExerciseCategoryDTO
+    public function transformToDTO(ExerciseCategory $exerciseCategory, FilterCollection $filters = null, int $wodCount = 0): ?ExerciseCategoryDTO
     {
         $content = $exerciseCategory->getContentByLocale($this->getLocale());
         if (!$this->EntityFieldFilter->match($exerciseCategory, $filters, $this->filterMapping)) {
@@ -35,19 +35,20 @@ final class ExerciseCategoryService
         }
 
         return new ExerciseCategoryDTO(
-            id     : $exerciseCategory->getId(),
-            slug   : $exerciseCategory->getSlug(),
-            title  : $content ? $content->getTitle() : '',
-            summary: $content ? $content->getSummary() : '',
-            details: $content ? $content->getDetails() : '',
+            id      : $exerciseCategory->getId(),
+            slug    : $exerciseCategory->getSlug(),
+            title   : $content ? $content->getTitle() : '',
+            summary : $content ? $content->getSummary() : '',
+            details : $content ? $content->getDetails() : '',
+            wodCount: $wodCount,
         );
     }
 
-    public function transformCollectionToDTO(array $exerciseCategories, FilterCollection $filters = null): array
+    public function transformCollectionToDTO(array $exerciseCategories, FilterCollection $filters = null, array $wodCounts = []): array
     {
         return CollectionMapper::mapAndFilter(
             $exerciseCategories,
-            fn(ExerciseCategory $exerciseCategory) => $this->transformToDTO($exerciseCategory, $filters)
+            fn(ExerciseCategory $exerciseCategory) => $this->transformToDTO($exerciseCategory, $filters, $wodCounts[(string)$exerciseCategory->getId()] ?? 0)
         );
     }
 }
