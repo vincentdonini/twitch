@@ -6,31 +6,34 @@ import { Button } from "@workspace/ui/components/button"
 import { Field, FieldGroup, FieldLabel } from "@workspace/ui/components/field"
 import { Input } from "@workspace/ui/components/input"
 
-interface LoginFormProps extends Omit<React.ComponentProps<"form">, "onSubmit"> {
-  onSubmit?: (email: string, password: string) => Promise<void>
+interface RegisterFormProps extends Omit<React.ComponentProps<"form">, "onSubmit"> {
+  onSubmit?: (data: { firstName: string; lastName: string; email: string; password: string }) => Promise<void>
   isLoading?: boolean
   error?: string
-  registerHref?: string
+  loginHref?: string
 }
 
-export function LoginForm(
+export function RegisterForm(
   {
     className,
     onSubmit: onSubmitProp,
     isLoading,
     error,
-    registerHref,
+    loginHref,
     ...props
-  }: LoginFormProps,
+  }: RegisterFormProps,
 ) {
-  const t = useTranslations("ui.login")
+  const t = useTranslations("ui.register")
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const formData = new FormData(e.currentTarget)
-    const email = formData.get("email") as string
-    const password = formData.get("password") as string
-    await onSubmitProp?.(email, password)
+    await onSubmitProp?.({
+      firstName: formData.get("firstName") as string,
+      lastName: formData.get("lastName") as string,
+      email: formData.get("email") as string,
+      password: formData.get("password") as string,
+    })
   }
 
   return (
@@ -45,6 +48,32 @@ export function LoginForm(
         {error && (
           <p className="text-sm text-destructive text-center">{error}</p>
         )}
+        <div className="grid grid-cols-2 gap-3">
+          <Field>
+            <FieldLabel htmlFor="firstName">{t("first_name")}</FieldLabel>
+            <Input
+              id="firstName"
+              name="firstName"
+              type="text"
+              placeholder="John"
+              required
+              disabled={isLoading}
+              className="bg-background"
+            />
+          </Field>
+          <Field>
+            <FieldLabel htmlFor="lastName">{t("last_name")}</FieldLabel>
+            <Input
+              id="lastName"
+              name="lastName"
+              type="text"
+              placeholder="Doe"
+              required
+              disabled={isLoading}
+              className="bg-background"
+            />
+          </Field>
+        </div>
         <Field>
           <FieldLabel htmlFor="email">{t("email")}</FieldLabel>
           <Input
@@ -70,14 +99,14 @@ export function LoginForm(
         </Field>
         <Field>
           <Button type="submit" disabled={isLoading}>
-            {isLoading ? t("signing_in") : t("sign_in")}
+            {isLoading ? t("signing_up") : t("sign_up")}
           </Button>
         </Field>
-        {registerHref && (
+        {loginHref && (
           <p className="text-center text-sm text-muted-foreground">
-            {t("no_account")}{" "}
-            <a href={registerHref} className="underline underline-offset-4 hover:text-primary">
-              {t("sign_up")}
+            {t("already_account")}{" "}
+            <a href={loginHref} className="underline underline-offset-4 hover:text-primary">
+              {t("sign_in")}
             </a>
           </p>
         )}

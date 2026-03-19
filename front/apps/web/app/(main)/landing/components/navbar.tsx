@@ -126,10 +126,10 @@ export function LandingNavbar() {
             </Link>
           </Button>
           <Button variant="ghost" asChild className="cursor-pointer">
-            <Link href="/auth/sign-in">Sign In</Link>
+            <Link href="/login">Sign In</Link>
           </Button>
           <Button asChild className="cursor-pointer">
-            <Link href="/auth/sign-up">Get Started</Link>
+            <Link href="/register">Get Started</Link>
           </Button>
         </div>
 
@@ -239,10 +239,10 @@ export function LandingNavbar() {
 
                   <div className="grid grid-cols-2 gap-3">
                     <Button variant="outline" size="lg" asChild className="cursor-pointer">
-                      <Link href="/auth/sign-in">Sign In</Link>
+                      <Link href="/login">Sign In</Link>
                     </Button>
                     <Button asChild size="lg" className="cursor-pointer">
-                      <Link href="/auth/sign-up">Get Started</Link>
+                      <Link href="/register">Get Started</Link>
                     </Button>
                   </div>
                 </div>

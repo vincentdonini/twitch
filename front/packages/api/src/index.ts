@@ -11,8 +11,8 @@ export type {UseMutationResult} from "./hooks/useMutation";
 // ---------------------------------------------------------------------------------------------------------------------
 export {getAccessToken, getRefreshToken, saveTokens, clearTokens} from "./storage";
 export {AuthProvider, useAuth} from "./context/AuthProvider";
-export {login, logout} from "./auth";
-export type {LoginPayload, AuthTokens} from "./types";
+export {login, logout, register} from "./auth";
+export type {LoginPayload, AuthTokens, RegisterPayload} from "./types";
 
 // ACHIEVEMENTS
 // ---------------------------------------------------------------------------------------------------------------------
