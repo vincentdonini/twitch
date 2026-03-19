@@ -23,7 +23,12 @@ security:
                 password_path: password
                 success_handler: lexik_jwt_authentication.handler.authentication_success
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
-        
+
+        register:
+            pattern: ^/auth/register
+            stateless: true
+            security: false
+
         refresh:
             pattern: ^/auth/token/refresh
             stateless: true

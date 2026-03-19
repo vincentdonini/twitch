@@ -1,18 +1,23 @@
 controllers:
-    resource:
-        path: ../src/UI/Controller/
-        namespace: App\UI\Controller
+    resource: ../src/UI/Controller/
     type: attribute
     prefix: /{_locale}
     requirements:
         _locale: en|fr
     defaults:
         _locale: en
-    
+    exclude:
+        - ../src/UI/Controller/Security/SecurityController.php
+
+auth_create:
+    path: /auth/register
+    controller: App\UI\Controller\Security\SecurityController::register
+    methods: [POST]
+
 api_login_check:
     path: /auth/login
     prefix: /
-    
+
 gesdinet_jwt_refresh_token:
     path: /auth/token/refresh
     controller: gesdinet.jwtrefreshtoken::refresh

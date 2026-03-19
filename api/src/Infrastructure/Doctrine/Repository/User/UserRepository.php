@@ -40,6 +40,11 @@ class UserRepository extends AbstractEntityRepository implements UserDALInterfac
         return $this->find($id);
     }
 
+    public function findByEmail(string $email): ?User
+    {
+        return $this->findOneBy(['email' => $email]);
+    }
+
     public function listUsers(
         int               $page = 1,
         int               $limit = RequestPaginator::DEFAULT_LIMIT,

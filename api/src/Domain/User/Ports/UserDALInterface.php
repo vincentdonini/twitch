@@ -13,6 +13,8 @@ interface UserDALInterface
 {
     public function getById(Uuid $id): ?User;
 
+    public function findByEmail(string $email): ?User;
+
     public function listUsers(
         int               $page = 1,
         int               $limit = RequestPaginator::DEFAULT_LIMIT,

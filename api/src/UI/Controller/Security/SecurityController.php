@@ -1,9 +1,10 @@
 <?php
 
-namespace App\UI\Controller;
+namespace App\UI\Controller\Security;
 
-use App\Domain\User\Entity\User;
-use Doctrine\ORM\EntityManagerInterface;
+use App\Domain\User\User\RegisterUserUseCase;
+use App\UI\Adapters\Http\Common\ApiExceptionHandler;
+use App\UI\Adapters\Http\Security\RegisterUserHttp;
 use Nelmio\ApiDocBundle\Attribute\Security;
 use OpenApi\Attributes as OAT;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -11,9 +12,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Attribute\AsController;
-use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 #[AsController]
 #[Route(path: '/auth', name: 'auth_')]
@@ -23,11 +22,7 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 #[OAT\Response(ref: '#/components/responses/NotFound', response: Response::HTTP_NOT_FOUND)]
 class SecurityController extends AbstractController
 {
-    public function __construct(
-        private readonly EntityManagerInterface      $entityManager,
-        private readonly UserPasswordHasherInterface $passwordHasher
-    ) {
-    }
+    use ApiExceptionHandler;
 
     #[Route(
         path   : '/register',
@@ -64,31 +59,21 @@ class SecurityController extends AbstractController
             ),
         ]
     )]
-    public function register(Request $request, ValidatorInterface $validator): JsonResponse
-    {
-        $data = json_decode($request->getContent(), true);
+    public function register(
+        Request             $request,
+        RegisterUserUseCase $useCase,
+    ): JsonResponse {
+        $payload = json_decode($request->getContent(), true) ?? [];
 
-        if (!isset($data['email'], $data['password'], $data['firstName'], $data['lastName'])) {
-            return new JsonResponse([
-                'error' => 'Email, password, firstName and lastName are required',
-            ], Response::HTTP_BAD_REQUEST);
+        try {
+            $useCase->execute(new RegisterUserHttp($payload));
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
         }
 
-        $user = new User($data['email'], $data['firstName'], $data['lastName']);
-        $user->setPassword($this->passwordHasher->hashPassword($user, $data['password']));
-
-        $errors = $validator->validate($user);
-        if (count($errors) > 0) {
-            return new JsonResponse([
-                'error' => 'Invalid data',
-            ], Response::HTTP_BAD_REQUEST);
-        }
-
-        $this->entityManager->persist($user);
-        $this->entityManager->flush();
-
-        return new JsonResponse([
-            'message' => 'User created',
-        ], Response::HTTP_CREATED);
+        return new JsonResponse(
+            data  : ['message' => 'User created'],
+            status: Response::HTTP_CREATED,
+        );
     }
 }
