@@ -6,6 +6,7 @@ use App\Application\Common\CollectionMapper;
 use App\Application\Wod\DTO\WodScoreDTO;
 use App\Domain\User\Service\UserService;
 use App\Domain\Wod\Entity\WodScore;
+use App\Domain\Wod\Leaderboard\RankedWodScore;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
 use App\Infrastructure\Filters\FilterCollection;
 
@@ -56,6 +57,18 @@ final readonly class WodScoreService
         return CollectionMapper::mapAndFilter(
             $wodScores,
             fn(WodScore $wodScore) => $this->transformToDTO($wodScore, $filters)
+        );
+    }
+
+    public function transformLeaderboardToDTO(array $rankedScores, FilterCollection $filters = null): array
+    {
+        return CollectionMapper::mapAndFilter(
+            $rankedScores,
+            function (RankedWodScore $entry) use ($filters) {
+                $dto       = $this->transformToDTO($entry->score, $filters);
+                $dto->rank = $entry->rank;
+                return $dto;
+            }
         );
     }
 }

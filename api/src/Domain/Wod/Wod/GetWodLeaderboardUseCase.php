@@ -27,15 +27,35 @@ final readonly class GetWodLeaderboardUseCase
             throw new EntityNotFoundException();
         }
 
+        $hasTimeCap = $this->variantHasTimeCap($wod, $dto);
+
         return $this->wodScoreDAL->getLeaderboard(
             wodId        : $dto->getWodId(),
             wodDivisionId: $dto->getWodDivisionId(),
             gender       : $dto->getGender(),
-            ordering     : LeaderboardOrdering::fromWod($wod),
+            ordering     : LeaderboardOrdering::fromWod($wod, $hasTimeCap),
             page         : $dto->getPage(),
             limit        : $dto->getLimit(),
             filters      : $dto->getFilters(),
             currentUser  : $currentUser,
         );
+    }
+
+    private function variantHasTimeCap(Wod $wod, GetWodLeaderboardDTOInterface $dto): bool
+    {
+        $divisionId = $dto->getWodDivisionId()->toRfc4122();
+        $gender     = $dto->getGender();
+
+        foreach ($wod->getWodVariants() as $variant) {
+            if (
+                $variant->getWodDivision()->getId()->toRfc4122() === $divisionId
+                && $variant->getGender()?->value === $gender
+                && $variant->getTimeCap() !== null
+            ) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

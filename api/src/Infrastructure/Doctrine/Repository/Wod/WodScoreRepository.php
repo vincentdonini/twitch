@@ -5,6 +5,7 @@ namespace App\Infrastructure\Doctrine\Repository\Wod;
 use App\Domain\User\Entity\User;
 use App\Domain\Wod\Entity\WodScore;
 use App\Domain\Wod\Leaderboard\LeaderboardOrdering;
+use App\Domain\Wod\Leaderboard\RankedWodScore;
 use App\Domain\Wod\Ports\WodScoreDALInterface;
 use App\Infrastructure\Doctrine\Filters\DoctrineFilterApplier;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
@@ -149,31 +150,39 @@ class WodScoreRepository extends AbstractEntityRepository implements WodScoreDAL
             ->setParameter('wodDivisionId', $wodDivisionId, UuidType::NAME)
             ->setParameter('gender', $gender);
 
-        // Sort
+        // Fetch all matching scores, then deduplicate and sort in PHP.
+        // (Doctrine DQL has limitations with CASE WHEN in ORDER BY and correlated NOT EXISTS subqueries.)
         // -------------------------------------------------------------------------------------------------------------
-        foreach ($ordering->all() as $order) {
-            $qb->addOrderBy(
-                'ws.' . $order['field'],
-                $order['direction']
-            );
+        /** @var WodScore[] $allScores */
+        $allScores = $qb->getQuery()->getResult();
+
+        // Keep only the best score per user
+        $bestByUser = [];
+        foreach ($allScores as $score) {
+            $userId = $score->getUser()->getId()->toRfc4122();
+            if (!isset($bestByUser[$userId]) || $ordering->compare($score, $bestByUser[$userId]) < 0) {
+                $bestByUser[$userId] = $score;
+            }
         }
 
-        // Pagination
-        // -------------------------------------------------------------------------------------------------------------
-        $aggQb     = clone $qb;
-        $aggResult = $aggQb
-            ->select('COUNT(ws.id) as count')
-            ->resetDQLPart('orderBy')
-            ->getQuery()
-            ->getSingleResult();
+        $sorted = array_values($bestByUser);
+        usort($sorted, fn(WodScore $a, WodScore $b) => $ordering->compare($a, $b));
 
-        $count = (int)$aggResult['count'];
+        // Assign Olympic ranks (1, 2, 2, 4, ...) based on the full sorted list
+        $ranked = [];
+        for ($i = 0, $total = count($sorted); $i < $total; $i++) {
+            if ($i === 0) {
+                $rank = 1;
+            } elseif ($ordering->compare($sorted[$i], $sorted[$i - 1]) === 0) {
+                $rank = $ranked[$i - 1]->rank;
+            } else {
+                $rank = $i + 1;
+            }
+            $ranked[] = new RankedWodScore($rank, $sorted[$i]);
+        }
 
-        $items = $qb
-            ->setFirstResult(($page - 1) * $limit)
-            ->setMaxResults($limit)
-            ->getQuery()
-            ->getResult();
+        $count = count($ranked);
+        $items = array_slice($ranked, ($page - 1) * $limit, $limit);
 
         return new LightPaginator(
             $items,

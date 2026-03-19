@@ -42,11 +42,11 @@ export function WodDetailPage(
   return (
     <PageContainer size="wide" withPadding={true}>
       {isLoading && <WodDetailSkeleton />}
-      {!isLoading && <div className="grid grid-cols-6 gap-6">
-        <div id="sidebar" className="hidden md:block col-span-2">
+      {!isLoading && <div className="grid grid-cols-1 lg:grid-cols-6 gap-6">
+        <div id="sidebar" className="order-2 lg:order-1 col-span-2">
           {item && <WodSidebar wod={item} />}
         </div>
-        <div id="wod-grid" className="col-span-6 md:col-span-4 min-h-[400px]">
+        <div id="wod-grid" className=" order-1 lg:order-2col-span-1 md:col-span-4">
           {error && (
             <Card>
               <CardContent className="px-0">

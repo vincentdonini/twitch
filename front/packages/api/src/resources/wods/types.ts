@@ -98,6 +98,7 @@ export type LeaderboardUser = {
 
 export type LeaderboardEntry = {
   id: string
+  rank: number
   user: LeaderboardUser
   wod: { id: string; name: string }
   variant: {

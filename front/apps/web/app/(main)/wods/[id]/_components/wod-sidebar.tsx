@@ -37,17 +37,26 @@ export function WodSidebar({ wod }: { wod: WodDetail }) {
   const maxRounds = roundsList.length ? Math.max(...roundsList) : null
 
   return (
-    <div className="space-y-5">
-      <WodStats
-        exercises={uniqueExercises}
-        exerciseCategories={uniqueExerciseCategories}
-        equipments={uniqueEquipments}
-        divisions={uniqueDivisions}
-        timeCap={minTimeCap}
-        rounds={maxRounds}
-        teamSize={wod.teamSize}
-      />
-      <WodLeaderboard wodId={wod.id} variants={wod.variants} />
+    <div className="grid grid-cols-1 gap-6">
+      <div className="order-2 md:order-1">
+        <WodStats
+          exercises={uniqueExercises}
+          exerciseCategories={uniqueExerciseCategories}
+          equipments={uniqueEquipments}
+          divisions={uniqueDivisions}
+          timeCap={minTimeCap}
+          rounds={maxRounds}
+          teamSize={wod.teamSize}
+
+        />
+      </div>
+      <div className="order-1 md:order-2">
+        <WodLeaderboard
+          wodId={wod.id}
+          variants={wod.variants}
+
+        />
+      </div>
     </div>
   )
 }

@@ -13,6 +13,20 @@
     "email": "Email",
     "password": "Mot de passe",
     "signing_in": "Connexion en cours…",
+    "sign_in": "Se connecter",
+    "no_account": "Pas encore de compte ?",
+    "sign_up": "S'inscrire"
+  },
+  "register": {
+    "title": "Créer un compte",
+    "subtitle": "Remplissez les informations ci-dessous pour vous inscrire",
+    "first_name": "Prénom",
+    "last_name": "Nom",
+    "email": "Email",
+    "password": "Mot de passe",
+    "signing_up": "Inscription en cours…",
+    "sign_up": "S'inscrire",
+    "already_account": "Déjà un compte ?",
     "sign_in": "Se connecter"
   },
   "search": {

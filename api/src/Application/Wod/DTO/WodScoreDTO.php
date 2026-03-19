@@ -58,6 +58,9 @@ class WodScoreDTO
     ])]
     public DateTimeImmutable $performedAt;
 
+    #[Groups([FrontGroupsEnum::WOD_LEADERBOARD])]
+    public ?int $rank = null;
+
     #[Groups([
         FrontGroupsEnum::WOD_SCORE_LIST, FrontGroupsEnum::WOD_SCORE_DETAIL,
     ])]

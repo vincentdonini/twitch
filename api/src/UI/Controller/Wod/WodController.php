@@ -606,9 +606,9 @@ final class WodController extends AbstractController
             return $this->handleException($e);
         }
 
-        $dtoItems = $this->wodScoreService->transformCollectionToDTO(
-            wodScores: $paginator->getItems(),
-            filters  : $filters,
+        $dtoItems = $this->wodScoreService->transformLeaderboardToDTO(
+            rankedScores: $paginator->getItems(),
+            filters     : $filters,
         );
 
         return new JsonResponse(

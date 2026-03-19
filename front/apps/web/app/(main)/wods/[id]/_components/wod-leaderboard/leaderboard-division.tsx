@@ -1,8 +1,7 @@
 "use client"
 
 import { LeaderboardList } from "@/app/(main)/wods/[id]/_components/wod-leaderboard/leaderboard-list"
-import type { WodDetail } from "@workspace/api"
-import { Gender, useGetWodLeaderboard } from "@workspace/api"
+import { Gender, useGetWodLeaderboard, WodDetail } from "@workspace/api"
 import { cn } from "@workspace/ui/lib/utils"
 import { useTranslations } from "next-intl"
 import { useState } from "react"
@@ -43,7 +42,7 @@ export function LeaderboardDivision(
                   : "text-muted-foreground hover:text-foreground",
               )}
             >
-              {g === "male" ? "♂" : g === "female" ? "♀" : "⚥"}&nbsp;{g}
+              {g === Gender.MALE ? "♂" : g === Gender.FEMALE ? "♀" : "⚥"}&nbsp;{g}
             </button>
           ))}
         </div>
