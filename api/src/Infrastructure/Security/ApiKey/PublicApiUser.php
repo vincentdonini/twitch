@@ -14,6 +14,21 @@ final class PublicApiUser implements UserInterface
      * Only read (LIST/VIEW) access on public resources.
      */
     public const PUBLIC_PERMISSIONS = [
+
+        // Benchmarks
+        ListPermissions::PERMISSION_BENCHMARK_LIST,
+        ListPermissions::PERMISSION_BENCHMARK_VIEW,
+
+        // Equipments
+        ListPermissions::PERMISSION_EQUIPMENT_LIST,
+        ListPermissions::PERMISSION_EQUIPMENT_VIEW,
+
+        // Exercises
+        ListPermissions::PERMISSION_EXERCISE_LIST,
+        ListPermissions::PERMISSION_EXERCISE_VIEW,
+        ListPermissions::PERMISSION_EXERCISE_CATEGORY_LIST,
+        ListPermissions::PERMISSION_EXERCISE_CATEGORY_VIEW,
+
         // Muscles
         ListPermissions::PERMISSION_MUSCLE_LIST,
         ListPermissions::PERMISSION_MUSCLE_VIEW,
@@ -22,15 +37,8 @@ final class PublicApiUser implements UserInterface
         ListPermissions::PERMISSION_MUSCLE_GROUP_LIST,
         ListPermissions::PERMISSION_MUSCLE_GROUP_VIEW,
 
-        // Exercises
-        ListPermissions::PERMISSION_EXERCISE_LIST,
-        ListPermissions::PERMISSION_EXERCISE_VIEW,
-        ListPermissions::PERMISSION_EXERCISE_CATEGORY_LIST,
-        ListPermissions::PERMISSION_EXERCISE_CATEGORY_VIEW,
-
-        // Equipments
-        ListPermissions::PERMISSION_EQUIPMENT_LIST,
-        ListPermissions::PERMISSION_EQUIPMENT_VIEW,
+        // Stats
+        ListPermissions::PERMISSION_STATS_VIEW,
 
         // WODs
         ListPermissions::PERMISSION_WOD_LIST,
@@ -44,10 +52,6 @@ final class PublicApiUser implements UserInterface
         ListPermissions::PERMISSION_WOD_AGE_RANGE_LIST,
         ListPermissions::PERMISSION_WOD_AGE_RANGE_VIEW,
         ListPermissions::PERMISSION_WOD_SCORE_LIST,
-
-        // Benchmarks
-        ListPermissions::PERMISSION_BENCHMARK_LIST,
-        ListPermissions::PERMISSION_BENCHMARK_VIEW,
     ];
 
     public function getRoles(): array

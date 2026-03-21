@@ -116,6 +116,10 @@
     { "code": "PERMISSION_FORMULA_DELETE", "label": "Supprimer une formule" }
   ],
 
+  "STATS": [
+    { "code": "PERMISSION_STATS_VIEW", "label": "Accéder aux stats de l'application'" }
+  ],
+
   "SUBSCRIPTION": [
     { "code": "PERMISSION_SUBSCRIPTION_LIST", "label": "Lister les abonnements" },
     { "code": "PERMISSION_SUBSCRIPTION_VIEW", "label": "Voir un abonnement" },

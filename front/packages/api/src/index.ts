@@ -14,6 +14,11 @@ export {AuthProvider, useAuth} from "./context/AuthProvider";
 export {login, logout, register} from "./auth";
 export type {LoginPayload, AuthTokens, RegisterPayload} from "./types";
 
+// STATS
+// ---------------------------------------------------------------------------------------------------------------------
+export { useGetStats } from "./resources/stats";
+export type { AppStats } from "./resources/stats";
+
 // ACHIEVEMENTS
 // ---------------------------------------------------------------------------------------------------------------------
 export { useGetAchievements, useGetAchievement } from "./resources/achievements";

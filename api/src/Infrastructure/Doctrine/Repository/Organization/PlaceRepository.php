@@ -89,4 +89,12 @@ class PlaceRepository extends AbstractEntityRepository implements PlaceDALInterf
             $limit,
         );
     }
+
+    public function countPlaces(): int
+    {
+        return (int)$this->createQueryBuilder('p')
+            ->select('COUNT(p.id)')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
 }

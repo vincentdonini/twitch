@@ -19,4 +19,6 @@ interface PlaceDALInterface
         ?FilterCollection $filters = null,
         ?SortCollection   $sorts = null
     ): LightPaginator;
+
+    public function countPlaces(): int;
 }

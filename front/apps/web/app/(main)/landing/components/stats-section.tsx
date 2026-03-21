@@ -3,29 +3,37 @@
 import { Dumbbell, Building2, Users } from "lucide-react"
 import { Card, CardContent } from "@workspace/ui/components/card"
 import { DotPattern } from "@workspace/ui/components/dot-pattern"
+import { useGetStats } from "@workspace/api"
 
-const stats = [
-  {
-    icon: Dumbbell,
-    value: "1200+",
-    label: "WODs",
-    description: "Detailed workouts available",
-  },
-  {
-    icon: Building2,
-    value: "150+",
-    label: "Gyms",
-    description: "CrossFit boxes using WODer",
-  },
-  {
-    icon: Users,
-    value: "25K+",
-    label: "Athletes",
-    description: "Tracking their performance",
-  },
-]
+function formatCount(value: number): string {
+  if (value >= 1000) return `${Math.floor(value / 1000)}K+`
+  return `${value}+`
+}
 
 export function StatsSection() {
+  const { data } = useGetStats()
+
+  const stats = [
+    {
+      icon: Dumbbell,
+      value: data ? formatCount(data.wodCount) : "—",
+      label: "WODs",
+      description: "Detailed workouts available",
+    },
+    {
+      icon: Building2,
+      value: data ? formatCount(data.placeCount) : "—",
+      label: "Places",
+      description: "CrossFit boxes using WODer",
+    },
+    {
+      icon: Users,
+      value: data ? formatCount(data.athleteCount) : "—",
+      label: "Athletes",
+      description: "Tracking their performance",
+    },
+  ]
+
   return (
     <section className="py-12 sm:py-16 relative">
       {/* Background with transparency */}

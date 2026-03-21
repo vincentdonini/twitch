@@ -5,6 +5,11 @@ namespace App\Infrastructure\Security\Voters;
 final class ListPermissions
 {
 
+    // STATS
+    // -----------------------------------------------------------------------------------------------------------------
+    public const PERMISSION_STATS_VIEW = 'PERMISSION_STATS_VIEW';
+
+
     // ACHIEVEMENT
     // -----------------------------------------------------------------------------------------------------------------
     public const PERMISSION_ACHIEVEMENT_LIST = 'PERMISSION_ACHIEVEMENT_LIST';
