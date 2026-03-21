@@ -1,3 +1,9 @@
+import type { EquipmentSummary } from "../../equipments/types";
+import type { ExerciseCategorySummary } from "../exercise-categories/types";
+
+export type { EquipmentSummary };
+export type { ExerciseCategorySummary };
+
 export type Exercise = {
     id: string;
     slug: string;
@@ -5,19 +11,6 @@ export type Exercise = {
     summary: string;
     details: string;
     wodCount: number;
-};
-
-export type EquipmentSummary = {
-    id: string;
-    slug: string;
-    title: string;
-};
-
-export type ExerciseCategorySummary = {
-    id: string;
-    slug: string;
-    title: string;
-    wodCount?: number;
 };
 
 export type ExerciseSummary = {

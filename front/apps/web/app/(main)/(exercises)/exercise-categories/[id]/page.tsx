@@ -1,15 +1,15 @@
 "use client"
 
-import { useParams } from "next/navigation"
-import { useGetExercise } from "@workspace/api"
-import { useTranslations } from "next-intl"
 import { ResourceDetailPage } from "@/ui/components/resource-detail-page"
+import { useGetExerciseCategory } from "@workspace/api"
+import { useTranslations } from "next-intl"
+import { useParams } from "next/navigation"
 
 export default function Page() {
   const { id } = useParams<{ id: string }>()
   const t = useTranslations("exercises")
 
-  const { data, isLoading, error, refetch } = useGetExercise(id)
+  const { data, isLoading, error, refetch } = useGetExerciseCategory(id)
 
   return (
     <ResourceDetailPage

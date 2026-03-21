@@ -28,10 +28,8 @@ export type {Equipment, EquipmentSummary, CreateEquipmentPayload, UpdateEquipmen
 
 // EXERCISES
 // ---------------------------------------------------------------------------------------------------------------------
-export {useGetExercises} from "./resources/exercises/useGetExercises";
-export {useGetExercise} from "./resources/exercises/useGetExercise";
-export {useGetExerciseCategories} from "./resources/exercises/useGetExerciseCategories";
-export type {Exercise, ExerciseSummary, ExerciseCategorySummary, CreateExercisePayload, UpdateExercisePayload} from "./resources/exercises/types";
+export { useGetExercises, useGetExercise, useGetExerciseCategories, useGetExerciseCategory } from "./resources/exercises";
+export type { Exercise, ExerciseSummary, ExerciseCategory, ExerciseCategorySummary, CreateExercisePayload, UpdateExercisePayload } from "./resources/exercises";
 
 // MUSCLES
 // ---------------------------------------------------------------------------------------------------------------------
