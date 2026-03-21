@@ -37,17 +37,8 @@ export type { Exercise, ExerciseSummary, ExerciseCategory, ExerciseCategorySumma
 
 // MUSCLES
 // ---------------------------------------------------------------------------------------------------------------------
-export {useGetMuscles} from "./resources/muscles/muscles/useGetMuscles";
-export {useGetMuscle} from "./resources/muscles/muscles/useGetMuscle";
-export type {Muscle, CreateMusclePayload, UpdateMusclePayload} from "./resources/muscles/muscles/types";
-
-export {useGetMuscleAreas} from "./resources/muscles/muscle-areas/useGetMuscleAreas";
-export {useGetMuscleArea} from "./resources/muscles/muscle-areas/useGetMuscleArea";
-export type {MuscleArea} from "./resources/muscles/muscle-areas/types";
-
-export {useGetMuscleGroups} from "./resources/muscles/muscle-groups/useGetMuscleGroups";
-export {useGetMuscleGroup} from "./resources/muscles/muscle-groups/useGetMuscleGroup";
-export type {MuscleGroup} from "./resources/muscles/muscle-groups/types";
+export { useGetMuscles, useGetMuscle, useGetMuscleGroups, useGetMuscleGroup, useGetMuscleAreas, useGetMuscleArea } from "./resources/muscles";
+export type { Muscle, MuscleSummary, MuscleGroup, MuscleGroupSummary, MuscleArea, MuscleAreaSummary, CreateMusclePayload, UpdateMusclePayload } from "./resources/muscles";
 
 // WODS
 // ---------------------------------------------------------------------------------------------------------------------

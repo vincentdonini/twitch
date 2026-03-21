@@ -1,4 +1,5 @@
-import { MuscleArea } from "../muscle-areas/types"
+import type { MuscleArea } from "../muscle-areas/types"
+import type { MuscleGroup } from "../muscle-groups/types"
 
 export type Muscle = {
     id: string;
@@ -8,15 +9,6 @@ export type Muscle = {
     details: string;
     area: MuscleArea;
     group: MuscleGroup;
-};
-
-export type MuscleGroup = {
-    id: string;
-    slug: string;
-    title: string;
-    summary: string;
-    details: string;
-    area: MuscleArea;
 };
 
 export type MuscleSummary = {
