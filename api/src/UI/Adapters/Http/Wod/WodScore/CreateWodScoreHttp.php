@@ -20,12 +20,12 @@ final readonly class CreateWodScoreHttp implements CreateWodScoreDTOInterface
 
     public function getWodId(): Uuid
     {
-        return $this->payload['wodId'];
+        return Uuid::fromString($this->payload['wodId']);
     }
 
     public function getWodVersionId(): Uuid
     {
-        return $this->payload['wodVersionId'];
+        return Uuid::fromString($this->payload['wodVersionId']);
     }
 
     public function getPerformedAt(): string

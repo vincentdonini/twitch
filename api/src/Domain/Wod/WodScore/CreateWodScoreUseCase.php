@@ -29,7 +29,7 @@ final readonly class CreateWodScoreUseCase
         if (
             !$user ||
             !$wodVariant ||
-            $wodVariant->getWod()->getId() !== $dto->getWodId()
+            $wodVariant->getWod()->getId()->toRfc4122() !== $dto->getWodId()->toRfc4122()
         ) {
             throw new InvalidPayloadException();
         }
