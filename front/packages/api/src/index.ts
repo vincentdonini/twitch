@@ -54,6 +54,5 @@ export {Gender} from "./resources/wods/types";
 
 // USERS
 // ---------------------------------------------------------------------------------------------------------------------
-export {useGetUsers} from "./resources/users/useGetUsers";
-export {useGetUser} from "./resources/users/useGetUser";
-export type {User, UserMe, CreateUserPayload, UpdateUserPayload} from "./resources/users/types";
+export { useGetUsers, useGetUser } from "./resources/users";
+export type { User, UserMe, CreateUserPayload, UpdateUserPayload } from "./resources/users";
