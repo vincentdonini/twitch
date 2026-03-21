@@ -22,9 +22,8 @@ export type {Achievement, CreateAchievementPayload, UpdateAchievementPayload} fr
 
 // EQUIPMENTS
 // ---------------------------------------------------------------------------------------------------------------------
-export {useGetEquipments} from "./resources/equipments/useGetEquipments";
-export {useGetEquipment} from "./resources/equipments/useGetEquipment";
-export type {Equipment, EquipmentSummary, CreateEquipmentPayload, UpdateEquipmentPayload} from "./resources/equipments/types";
+export { useGetEquipments, useGetEquipment } from "./resources/equipments";
+export type { Equipment, EquipmentSummary, CreateEquipmentPayload, UpdateEquipmentPayload } from "./resources/equipments";
 
 // EXERCISES
 // ---------------------------------------------------------------------------------------------------------------------
