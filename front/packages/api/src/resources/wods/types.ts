@@ -28,7 +28,7 @@ export type WodType = {
   slug: string
   title: string
   summary: string
-  allowedMetrics: object
+  allowedMetrics: string[]
   wodCount: number
 }
 
@@ -124,3 +124,14 @@ export type CreateWodPayload = {
 }
 
 export type UpdateWodPayload = CreateWodPayload
+
+export type CreateWodScorePayload = {
+  wodId: string
+  wodVersionId: string
+  performedAt: string
+  time?: number
+  repetitions?: number
+  weight?: number
+  notes?: string
+  private: boolean
+}

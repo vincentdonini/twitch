@@ -52,10 +52,11 @@ export type {MuscleGroup} from "./resources/muscles/muscle-groups/types";
 export {useGetWods} from "./resources/wods/useGetWods";
 export {useGetWod} from "./resources/wods/useGetWod";
 export {useGetWodLeaderboard} from "./resources/wods/useGetWodLeaderboard";
+export {useCreateWodScore} from "./resources/wods/useCreateWodScore";
 export {useGetWodCategories} from "./resources/wods/wod-categories/useGetWodCategories";
 export {useGetWodTypes} from "./resources/wods/wod-types/useGetWodTypes";
 export {useGetWodDivisions} from "./resources/wods/wod-divisions/useGetWodDivisions";
-export type {Wod, WodDetail, WodCategory, WodType, WodDivision, WodVariant, WodExercise, ExerciseMetric, MetricType, LeaderboardEntry, LeaderboardUser} from "./resources/wods/types";
+export type {Wod, WodDetail, WodCategory, WodType, WodDivision, WodVariant, WodExercise, ExerciseMetric, MetricType, LeaderboardEntry, LeaderboardUser, CreateWodScorePayload} from "./resources/wods/types";
 export {Gender} from "./resources/wods/types";
 
 // USERS

@@ -56,7 +56,7 @@ const smoothScrollTo = (targetId: string) => {
 
 export function Navbar() {
   const tc = useTranslations("common")
-  const { isAuthenticated, user, logout } = useAuth()
+  const { isAuthenticated, isLoading, user, logout } = useAuth()
 
   const [isOpen, setIsOpen] = useState(false)
   const [resourcesOpen, setSolutionsOpen] = useState(false)
@@ -115,7 +115,7 @@ export function Navbar() {
         <div className="hidden xl:flex items-center space-x-2">
           <ThemeToggle />
           <LocaleSwitcher />
-          {isAuthenticated ? (
+          {!isLoading && (isAuthenticated ? (
             <NavUser
               user={{
                 name: user ? `${user.firstName} ${user.lastName}` : "",
@@ -127,13 +127,13 @@ export function Navbar() {
           ) : (
             <>
               <Button variant="ghost" asChild className="cursor-pointer">
-                <Link href="/auth/sign-in">Sign In</Link>
+                <Link href="/login">Sign In</Link>
               </Button>
               <Button asChild className="cursor-pointer">
-                <Link href="/auth/sign-up">Get Started</Link>
+                <Link href="/register">Get Started</Link>
               </Button>
             </>
-          )}
+          ))}
         </div>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -230,7 +230,7 @@ export function Navbar() {
 
               <div className="border-t p-6 space-y-4">
                 <div className="space-y-3">
-                  {isAuthenticated ? (
+                  {!isLoading && (isAuthenticated ? (
                     <Button variant="outline" size="lg" asChild className="w-full cursor-pointer">
                       <Link href="/dashboard">
                         <LayoutDashboard className="size-4" />
@@ -240,13 +240,13 @@ export function Navbar() {
                   ) : (
                     <div className="grid grid-cols-2 gap-3">
                       <Button variant="outline" size="lg" asChild className="cursor-pointer">
-                        <Link href="/auth/sign-in">Sign In</Link>
+                        <Link href="/login">Sign In</Link>
                       </Button>
                       <Button asChild size="lg" className="cursor-pointer">
-                        <Link href="/auth/sign-up">Get Started</Link>
+                        <Link href="/register">Get Started</Link>
                       </Button>
                     </div>
-                  )}
+                  ))}
                 </div>
               </div>
             </div>

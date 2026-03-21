@@ -16,8 +16,9 @@ const AUTH_PATHS = ["/auth/", "/token/"];
 function getLocale(): string {
     if (typeof document !== "undefined") {
         const match = document.cookie.match(/(?:^|;\s*)locale=([^;]*)/);
-        if (match) return match[1];
+        if (match && match[1]) return match[1];
     }
+
     return process.env.NEXT_PUBLIC_API_LOCALE ?? "";
 }
 
@@ -37,7 +38,7 @@ async function doRefresh(): Promise<boolean> {
     if (!refreshToken) return false;
 
     try {
-        const res = await fetch(`${API_BASE_URL}/token/refresh`, {
+        const res = await fetch(`${API_BASE_URL}/auth/token/refresh`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({refresh_token: refreshToken}),

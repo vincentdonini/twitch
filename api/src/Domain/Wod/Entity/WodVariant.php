@@ -181,4 +181,17 @@ class WodVariant
         }
         return $this;
     }
+
+    public function getTotalRepetitions(): int
+    {
+        $total = 0;
+        foreach ($this->wodVariantExercises as $exercise) {
+            foreach ($exercise->getMetrics() as $metric) {
+                if ($metric->getType() === 'repetitions') {
+                    $total += (int) $metric->getValue();
+                }
+            }
+        }
+        return $total;
+    }
 }

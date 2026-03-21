@@ -100,7 +100,7 @@ function LeaderboardSkeleton() {
 
 export function WodDetailSkeleton() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-6 gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-6 lg:gap-6">
 
       {/* Sidebar */}
       <div className="order-2 lg:order-1 col-span-2">

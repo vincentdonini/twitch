@@ -1,7 +1,7 @@
 "use client"
 
-import { useCallback, useEffect, useState } from "react"
 import { useLocale } from "next-intl"
+import { useCallback, useEffect, useState } from "react"
 import { apiFetchWithMeta, type PaginationMeta } from "../client"
 
 export interface UseQueryResult<T> {

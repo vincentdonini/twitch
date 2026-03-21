@@ -1,35 +1,36 @@
 "use client"
 
 import { LeaderboardDivision } from "@/app/(main)/wods/[id]/_components/wod-leaderboard/leaderboard-division"
-import type { WodDetail } from "@workspace/api"
-import { Card, CardContent, CardHeader, CardTitle } from "@workspace/ui/components/card"
+import { WodDetail } from "@workspace/api"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@workspace/ui/components/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@workspace/ui/components/tabs"
 import { useTranslations } from "next-intl"
+import * as React from "react"
 
 interface WodLeaderboardProps {
-  wodId: string
-  variants: WodDetail["variants"]
+  wod: WodDetail
+  refreshKey?: number
 }
 
-export function WodLeaderboard(
-  {
-    wodId,
-    variants,
-  }: WodLeaderboardProps,
-) {
+export function WodLeaderboard({ wod, refreshKey }: WodLeaderboardProps) {
   const t = useTranslations("wods")
-  const divisions = [...new Map(variants.map(v => [v.division.id, v.division])).values()]
+  const divisions = [...new Map(wod.variants.map(v => [v.division.id, v.division])).values()]
 
   if (divisions.length === 0) return null
 
   return (
     <Card className="shadow-none">
-      <CardHeader className="pb-3">
-        <CardTitle className="text-base">{t("leaderboard")}</CardTitle>
+      <CardHeader>
+        <CardTitle className="text-balance">
+          {t("leaderboard")}
+        </CardTitle>
+        <CardDescription>
+          {t("leaderboard_description")}
+        </CardDescription>
       </CardHeader>
-      <CardContent className="px-0 pb-4">
+      <CardContent className="px-0">
         <Tabs defaultValue={divisions[0]!.id}>
-          <div className="px-4 mb-3">
+          <div className="px-4">
             <TabsList className="w-full">
               {divisions.map(d => (
                 <TabsTrigger key={d.id} value={d.id} className="flex-1">
@@ -40,11 +41,12 @@ export function WodLeaderboard(
           </div>
 
           {divisions.map(d => (
-            <TabsContent key={d.id} value={d.id} className="mt-0">
+            <TabsContent key={d.id} value={d.id}>
               <LeaderboardDivision
-                wodId={wodId}
+                wod={wod}
                 divisionId={d.id}
-                variants={variants.filter(v => v.division.id === d.id)}
+                variants={wod.variants.filter(v => v.division.id === d.id)}
+                refreshKey={refreshKey}
               />
             </TabsContent>
           ))}

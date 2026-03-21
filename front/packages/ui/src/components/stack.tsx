@@ -48,7 +48,7 @@ function Stack(
     stretch: "items-stretch",
   }
 
-  const effectiveItemClassName = itemClassName ?? className
+  const effectiveItemClassName = itemClassName
 
   const directionClass = direction === "horizontal" ? "flex-row" : "flex-col"
 

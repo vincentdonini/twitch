@@ -65,7 +65,7 @@
   },
   {
     "slug": "for-time",
-    "allowedMetrics": ["time"],
+    "allowedMetrics": ["time", "repetitions"],
     "contents": {
       "fr": {
         "title": "Contre la montre",

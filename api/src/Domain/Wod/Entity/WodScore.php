@@ -168,10 +168,20 @@ class WodScore
             }
         }
 
-        foreach ($allowed as $metric) {
-            if ($this->{$metric} === null) {
-                throw new DomainException();
+        if (
+            $this->repetitions !== null &&
+            $this->getWodVariant()->getWod()->getWodType()->getSlug() === 'for-time'
+        ) {
+            $maxReps = $this->getWodVariant()->getTotalRepetitions();
+
+            if ($this->repetitions > $maxReps) {
+                throw new DomainException('Impossible score');
             }
+        }
+
+        $timeCap = $this->getWodVariant()->getTimeCap();
+        if ($this->time !== null && $timeCap !== null && $this->time > $timeCap) {
+            throw new DomainException();
         }
     }
 }
