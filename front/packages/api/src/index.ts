@@ -42,15 +42,9 @@ export type { Muscle, MuscleSummary, MuscleGroup, MuscleGroupSummary, MuscleArea
 
 // WODS
 // ---------------------------------------------------------------------------------------------------------------------
-export {useGetWods} from "./resources/wods/useGetWods";
-export {useGetWod} from "./resources/wods/useGetWod";
-export {useGetWodLeaderboard} from "./resources/wods/useGetWodLeaderboard";
-export {useCreateWodScore} from "./resources/wods/useCreateWodScore";
-export {useGetWodCategories} from "./resources/wods/wod-categories/useGetWodCategories";
-export {useGetWodTypes} from "./resources/wods/wod-types/useGetWodTypes";
-export {useGetWodDivisions} from "./resources/wods/wod-divisions/useGetWodDivisions";
-export type {Wod, WodDetail, WodCategory, WodType, WodDivision, WodVariant, WodExercise, ExerciseMetric, MetricType, LeaderboardEntry, LeaderboardUser, CreateWodScorePayload} from "./resources/wods/types";
-export {Gender} from "./resources/wods/types";
+export { useGetWods, useGetWod, useGetWodLeaderboard, useCreateWodScore, useGetWodCategories, useGetWodTypes, useGetWodDivisions } from "./resources/wods";
+export type { Wod, WodDetail, WodCategory, WodType, WodDivision, WodVariant, WodExercise, ExerciseMetric, MetricType, LeaderboardEntry, LeaderboardUser, CreateWodScorePayload } from "./resources/wods";
+export { Gender } from "./resources/wods";
 
 // USERS
 // ---------------------------------------------------------------------------------------------------------------------

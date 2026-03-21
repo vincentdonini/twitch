@@ -1,4 +1,4 @@
-import type { ExerciseSummary } from "@workspace/api"
+import type { ExerciseSummary } from "../exercises/exercises/types"
 
 export enum Gender {
   MALE = "male",
