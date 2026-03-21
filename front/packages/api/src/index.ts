@@ -20,6 +20,11 @@ export {useGetAchievements} from "./resources/achievements/useGetAchievements";
 export {useGetAchievement} from "./resources/achievements/useGetAchievement";
 export type {Achievement, CreateAchievementPayload, UpdateAchievementPayload} from "./resources/achievements/types";
 
+// BENCHMARKS
+// ---------------------------------------------------------------------------------------------------------------------
+export { useGetBenchmarks, useGetBenchmark } from "./resources/benchmarks";
+export type { Benchmark, CreateBenchmarkPayload, UpdateBenchmarkPayload } from "./resources/benchmarks";
+
 // EQUIPMENTS
 // ---------------------------------------------------------------------------------------------------------------------
 export { useGetEquipments, useGetEquipment } from "./resources/equipments";

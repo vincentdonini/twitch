@@ -1,4 +1,4 @@
-import {ExerciseSummary} from "../exercises/types";
+import type { ExerciseSummary } from "../exercises/exercises/types";
 
 export type Benchmark = {
     id: string;
