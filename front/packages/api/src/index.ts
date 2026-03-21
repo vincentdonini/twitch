@@ -16,9 +16,9 @@ export type {LoginPayload, AuthTokens, RegisterPayload} from "./types";
 
 // ACHIEVEMENTS
 // ---------------------------------------------------------------------------------------------------------------------
-export {useGetAchievements} from "./resources/achievements/useGetAchievements";
-export {useGetAchievement} from "./resources/achievements/useGetAchievement";
-export type {Achievement, CreateAchievementPayload, UpdateAchievementPayload} from "./resources/achievements/types";
+export { useGetAchievements, useGetAchievement } from "./resources/achievements";
+export type { Achievement, AchievementCategory, AchievementGroup, AchievementLevel, CreateAchievementPayload, UpdateAchievementPayload } from "./resources/achievements";
+export { AchievementLevelEnum, AchievementRarityEnum } from "./resources/achievements";
 
 // BENCHMARKS
 // ---------------------------------------------------------------------------------------------------------------------
