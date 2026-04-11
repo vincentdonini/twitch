@@ -25,6 +25,7 @@ final readonly class ListUsersUseCase
             page   : $dto->getPage(),
             limit  : $dto->getLimit(),
             filters: $dto->getFilters(),
+            search : $dto->getSearch(),
         );
     }
 }

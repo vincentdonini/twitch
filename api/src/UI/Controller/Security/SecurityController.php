@@ -66,13 +66,13 @@ class SecurityController extends AbstractController
         $payload = json_decode($request->getContent(), true) ?? [];
 
         try {
-            $useCase->execute(new RegisterUserHttp($payload));
+            $user = $useCase->execute(new RegisterUserHttp($payload));
         } catch (\Throwable $e) {
             return $this->handleException($e);
         }
 
         return new JsonResponse(
-            data  : ['message' => 'User created'],
+            data  : ['id' => $user->getId()->toRfc4122(), 'message' => 'User created'],
             status: Response::HTTP_CREATED,
         );
     }

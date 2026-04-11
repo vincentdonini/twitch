@@ -1,97 +1,161 @@
 [
   {
+    "slug": "chest",
+    "area": "upper-body",
+    "contents": {
+      "fr": {
+        "title": "Pectoraux",
+        "summary": "Muscles de la poitrine responsables des mouvements de poussée du haut du corps.",
+        "details": ""
+      },
+      "en": {
+        "title": "Chest",
+        "summary": "Chest muscles responsible for pushing movements of the upper body.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "back",
+    "area": "upper-body",
+    "contents": {
+      "fr": {
+        "title": "Dos",
+        "summary": "Muscles du dos impliqués dans les mouvements de tirage et le maintien de la posture.",
+        "details": ""
+      },
+      "en": {
+        "title": "Back",
+        "summary": "Back muscles involved in pulling movements and posture.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "shoulders",
+    "area": "upper-body",
+    "contents": {
+      "fr": {
+        "title": "Épaules",
+        "summary": "Muscles de l'épaule permettant les mouvements multi-plans du bras.",
+        "details": ""
+      },
+      "en": {
+        "title": "Shoulders",
+        "summary": "Shoulder muscles enabling multi-plane arm movements.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "arms",
+    "area": "upper-body",
+    "contents": {
+      "fr": {
+        "title": "Bras",
+        "summary": "Muscles du bras et de l'avant-bras impliqués dans la flexion, l'extension et la rotation.",
+        "details": ""
+      },
+      "en": {
+        "title": "Arms",
+        "summary": "Arm and forearm muscles involved in flexion, extension and rotation.",
+        "details": ""
+      }
+    }
+  },
+  {
     "slug": "abdominals",
     "area": "core",
     "contents": {
       "fr": {
         "title": "Abdominaux",
-        "summary": "Groupe de muscles situés à l'avant de l'abdomen, responsables de la force et de la stabilité du tronc.",
-        "details": "## Description du groupe musculaire\n\nLes **abdominaux** regroupent plusieurs muscles : le **grand droit**, les **obliques internes et externes**, et le **transverse de l'abdomen**. Ces muscles constituent la **ceinture abdominale**, assurant le maintien du tronc, la protection des organes internes et la stabilité posturale.\n\n## Rôle et importance\n\n- Stabilisation de la colonne vertébrale et du bassin.\n- Transmission de la force entre le haut et le bas du corps.\n- Protection des organes internes.\n- Maintien de la posture et prévention des douleurs lombaires.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Indispensables pour courir, sauter, soulever ou effectuer des mouvements rotatifs.\n- Améliorent la performance dans les sports nécessitant puissance, rotation ou explosivité.\n- Protègent la colonne lors des efforts physiques et dans les tâches quotidiennes.\n\n## Exercices associés\n\n- Gainage frontal et latéral.\n- Crunchs, relevés de jambes, sit-ups.\n- Roulettes abdominales et relevés de bassin.\n\n## Conclusion\n\nLe renforcement des **abdominaux** est essentiel pour la **stabilité, la performance sportive et la santé du dos**."
+        "summary": "Muscles de la sangle abdominale assurant la stabilité du tronc et la flexion du rachis.",
+        "details": ""
       },
       "en": {
         "title": "Abdominals",
-        "summary": "Muscle group located at the front of the abdomen, responsible for core strength and stability.",
-        "details": "## Muscle Group Description\n\nThe **abdominals** include the **rectus abdominis, internal and external obliques, and transverse abdominis**. This muscle group forms the **core**, providing trunk support, internal organ protection, and postural stability.\n\n## Role and Importance\n\n- Stabilizes the spine and pelvis.\n- Transfers force between upper and lower body.\n- Protects internal organs.\n- Maintains posture and helps prevent lower back pain.\n\n## Function in Sports and Daily Life\n\n- Essential for running, jumping, lifting, or rotational movements.\n- Enhances performance in sports requiring power, rotation, or explosiveness.\n- Protects the spine during physical effort and daily activities.\n\n## Associated Exercises\n\n- Planks (front and side).\n- Crunches, leg raises, sit-ups.\n- Ab rollouts, hip lifts.\n\n## Conclusion\n\nStrengthening the **abdominals** is vital for **core stability, athletic performance, and back health**."
+        "summary": "Abdominal wall muscles ensuring trunk stability and spinal flexion.",
+        "details": ""
       }
     }
   },
   {
-    "slug": "biceps",
-    "area": "arms",
+    "slug": "glutes",
+    "area": "lower-body",
     "contents": {
       "fr": {
-        "title": "Biceps",
-        "summary": "Muscle à deux chefs à l'avant du bras, responsable de la flexion du coude et de la rotation de l'avant-bras.",
-        "details": "## Description du groupe musculaire\n\nLe **biceps brachial** est un muscle à deux chefs situé à l'avant du bras. Il participe principalement à la flexion du coude et à la supination de l'avant-bras, tout en contribuant à la stabilité de l'épaule.\n\n## Rôle et importance\n\n- Flexion du coude et supination de l'avant-bras.\n- Participation aux mouvements de traction.\n- Stabilisation de l'épaule et du bras.\n- Contribue à la force fonctionnelle du haut du corps.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Sollicité dans les tractions, les curls et la musculation en général.\n- Utilisé pour porter, tirer et saisir des objets.\n- Important pour les gestes sportifs impliquant le bras et la main.\n\n## Exercices associés\n\n- Curls avec haltères ou barre.\n- Tractions en supination.\n- Hammer curls.\n\n## Conclusion\n\nLe **biceps** est crucial pour la **force fonctionnelle du bras et la performance des mouvements de tirage**."
+        "title": "Fessiers",
+        "summary": "Muscles fessiers assurant l'extension, l'abduction et la rotation de la hanche.",
+        "details": ""
       },
       "en": {
-        "title": "Biceps",
-        "summary": "Two-headed muscle on the front of the upper arm, responsible for elbow flexion and forearm rotation.",
-        "details": "## Muscle Group Description\n\nThe **biceps brachii** is a two-headed muscle located at the front of the upper arm. It primarily flexes the elbow and supinates the forearm while contributing to shoulder stabilization.\n\n## Role and Importance\n\n- Elbow flexion and forearm supination.\n- Participates in pulling movements.\n- Stabilizes the shoulder and arm.\n- Contributes to upper-body functional strength.\n\n## Function in Sports and Daily Life\n\n- Engaged during pull-ups, curls, and general weight training.\n- Used to lift, pull, and grasp objects.\n- Important for sports movements involving the arm and hand.\n\n## Associated Exercises\n\n- Dumbbell or barbell curls.\n- Supinated pull-ups.\n- Hammer curls.\n\n## Conclusion\n\nThe **biceps** is essential for **arm functional strength and pulling performance**."
+        "title": "Glutes",
+        "summary": "Gluteal muscles responsible for hip extension, abduction and rotation.",
+        "details": ""
       }
     }
   },
   {
-    "slug": "triceps",
-    "area": "arms",
+    "slug": "quadriceps",
+    "area": "lower-body",
     "contents": {
       "fr": {
-        "title": "Triceps",
-        "summary": "Muscle à trois chefs à l'arrière du bras, essentiel pour l'extension du coude et les mouvements de poussée.",
-        "details": "## Description du groupe musculaire\n\nLe **triceps brachial** est situé à l'arrière du bras et possède trois chefs : long, latéral et médial. Il est le principal moteur de l'extension du coude et joue un rôle dans la stabilisation de l'épaule.\n\n## Rôle et importance\n\n- Extension du coude.\n- Stabilisation de l'articulation de l'épaule.\n- Contribution à la force de poussée du bras.\n- Maintien de l'équilibre musculaire du bras.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Sollicité dans les pompes, dips et extensions à la poulie.\n- Essentiel pour pousser, lancer ou soulever des objets.\n- Participe à la performance dans les sports de raquette, de combat et la musculation.\n\n## Exercices associés\n\n- Dips.\n- Extensions à la poulie.\n- Pompes serrées.\n\n## Conclusion\n\nLe **triceps** est indispensable pour la **puissance et l'efficacité des mouvements de poussée**."
+        "title": "Quadriceps",
+        "summary": "Groupe musculaire antérieur de la cuisse assurant l'extension du genou.",
+        "details": ""
       },
       "en": {
-        "title": "Triceps",
-        "summary": "Three-headed muscle at the back of the upper arm, essential for elbow extension and pushing movements.",
-        "details": "## Muscle Group Description\n\nThe **triceps brachii** is located at the back of the upper arm and has three heads: long, lateral, and medial. It is the main driver of elbow extension and contributes to shoulder stabilization.\n\n## Role and Importance\n\n- Elbow extension.\n- Shoulder joint stabilization.\n- Contributes to pushing strength.\n- Maintains arm muscle balance.\n\n## Function in Sports and Daily Life\n\n- Engaged during push-ups, dips, and cable extensions.\n- Essential for pushing, throwing, or lifting objects.\n- Important for performance in racket sports, combat, and strength training.\n\n## Associated Exercises\n\n- Dips.\n- Cable extensions.\n- Close-grip push-ups.\n\n## Conclusion\n\nThe **triceps** is vital for **power and efficiency in pushing movements**."
+        "title": "Quadriceps",
+        "summary": "Anterior thigh muscle group responsible for knee extension.",
+        "details": ""
       }
     }
   },
   {
-    "slug": "forearms",
-    "area": "arms",
+    "slug": "hamstrings",
+    "area": "lower-body",
     "contents": {
       "fr": {
-        "title": "Avant-bras",
-        "summary": "Muscles situés entre le coude et le poignet, cruciaux pour la force de préhension et les mouvements du poignet.",
-        "details": "## Description du groupe musculaire\n\nLes **muscles de l'avant-bras** comprennent plusieurs muscles superficiels et profonds responsables des mouvements de flexion, extension, pronation et supination du poignet et des doigts.\n\n## Rôle et importance\n\n- Flexion et extension du poignet.\n- Mouvement des doigts et préhension.\n- Stabilisation de l'avant-bras et de la main.\n- Transmission de force entre bras et main.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Cruciaux pour l'escalade, la musculation et les sports de raquette.\n- Essentiels pour saisir, porter et manipuler des objets.\n- Contribuent à la précision et à la puissance des mouvements de la main.\n\n## Exercices associés\n\n- Wrist curls.\n- Farmer's walk.\n- Exercices de grip.\n\n## Conclusion\n\nLes **avant-bras** sont essentiels pour la **force de préhension, la stabilité du poignet et la fonctionnalité de la main**."
+        "title": "Ischio-jambiers",
+        "summary": "Muscles postérieurs de la cuisse responsables de la flexion du genou et de l'extension de la hanche.",
+        "details": ""
       },
       "en": {
-        "title": "Forearms",
-        "summary": "Muscles between the elbow and wrist, crucial for grip strength and wrist movement.",
-        "details": "## Muscle Group Description\n\nThe **forearm muscles** include several superficial and deep muscles responsible for wrist and finger flexion, extension, pronation, and supination.\n\n## Role and Importance\n\n- Wrist flexion and extension.\n- Finger movement and grip.\n- Forearm and hand stabilization.\n- Transfers force between arm and hand.\n\n## Function in Sports and Daily Life\n\n- Crucial for climbing, weight training, and racket sports.\n- Essential for gripping, lifting, and handling objects.\n- Contributes to hand movement precision and power.\n\n## Associated Exercises\n\n- Wrist curls.\n- Farmer's walk.\n- Grip exercises.\n\n## Conclusion\n\nThe **forearms** are vital for **grip strength, wrist stability, and hand functionality**."
+        "title": "Hamstrings",
+        "summary": "Posterior thigh muscles responsible for knee flexion and hip extension.",
+        "details": ""
       }
     }
   },
   {
-    "slug": "deltoid",
-    "area": "shoulders",
+    "slug": "calves",
+    "area": "lower-body",
     "contents": {
       "fr": {
-        "title": "Deltoïde",
-        "summary": "Muscle principal de l'épaule divisé en parties antérieure, latérale et postérieure, responsable de l'élévation et de la rotation du bras.",
-        "details": "## Description du groupe musculaire\n\nLe **deltoïde** est le muscle majeur de l'épaule, composé de trois faisceaux : antérieur, latéral et postérieur. Il enveloppe l'articulation de l'épaule et permet un large éventail de mouvements du bras.\n\n## Rôle et importance\n\n- Abduction, flexion, extension et rotation du bras.\n- Stabilisation de l'articulation de l'épaule.\n- Transmission de la force entre le tronc et les bras.\n- Contribue à l'esthétique et à la puissance du haut du corps.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Indispensable pour lever, pousser ou tirer des objets.\n- Sollicité dans les développés, élévations, sports de lancer et arts martiaux.\n- Important pour la posture et la prévention des blessures de l'épaule.\n\n## Exercices associés\n\n- Développé militaire et développé couché incliné.\n- Élévations latérales.\n- Reverse fly et face pulls.\n\n## Conclusion\n\nRenforcer le **deltoïde** améliore **la puissance, la mobilité et la stabilité de l'épaule**, tout en contribuant à un haut du corps équilibré."
+        "title": "Mollets",
+        "summary": "Muscles postérieurs de la jambe responsables de la flexion plantaire.",
+        "details": ""
       },
       "en": {
-        "title": "Deltoid",
-        "summary": "Major shoulder muscle divided into anterior, lateral, and posterior parts, responsible for arm rotation and lifting.",
-        "details": "## Muscle Group Description\n\nThe **deltoid** is the primary shoulder muscle, composed of three heads: anterior, lateral, and posterior. It surrounds the shoulder joint and enables a wide range of arm movements.\n\n## Role and Importance\n\n- Arm abduction, flexion, extension, and rotation.\n- Shoulder joint stabilization.\n- Transfers force between trunk and arms.\n- Contributes to upper-body aesthetics and strength.\n\n## Function in Sports and Daily Life\n\n- Essential for lifting, pushing, or pulling objects.\n- Engaged in presses, raises, throwing sports, and martial arts.\n- Important for posture and shoulder injury prevention.\n\n## Associated Exercises\n\n- Military press and incline bench press.\n- Lateral raises.\n- Reverse fly and face pulls.\n\n## Conclusion\n\nStrengthening the **deltoid** enhances **shoulder power, mobility, and stability**, while contributing to a balanced upper body."
+        "title": "Calves",
+        "summary": "Posterior leg muscles responsible for plantar flexion.",
+        "details": ""
       }
     }
   },
   {
-    "slug": "traps",
-    "area": "back",
+    "slug": "adductors",
+    "area": "lower-body",
     "contents": {
       "fr": {
-        "title": "Trapèze",
-        "summary": "Large muscle triangulaire du dos et du cou, contrôlant la posture et les mouvements des omoplates.",
-        "details": "## Description du groupe musculaire\n\nLe **trapèze** est un muscle large et plat couvrant le haut du dos et la nuque. Il est composé de trois parties : supérieure, moyenne et inférieure, chacune jouant un rôle spécifique dans le mouvement et la stabilisation de la scapula.\n\n## Rôle et importance\n\n- Élévation, abaissement et rétraction des omoplates.\n- Stabilisation de la posture du haut du corps.\n- Transmission de force entre dos et épaules.\n- Contribue à la puissance des mouvements de tirage.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Sollicité lors des tractions, shrugs, rowing et sports de combat.\n- Important pour soulever et maintenir des charges.\n- Aide à prévenir les tensions cervicales et dorsales.\n\n## Exercices associés\n\n- Shrugs.\n- Rowing barre ou haltères.\n- Face pulls et tirages horizontaux.\n\n## Conclusion\n\nLe **trapèze** est essentiel pour **la posture, la force du dos et la stabilisation des épaules**."
+        "title": "Adducteurs",
+        "summary": "Muscles de la face interne de la cuisse responsables de l'adduction de la hanche.",
+        "details": ""
       },
       "en": {
-        "title": "Trapezius",
-        "summary": "Large triangular muscle extending across the neck and upper back, controlling posture and shoulder blade movement.",
-        "details": "## Muscle Group Description\n\nThe **trapezius** is a broad, flat muscle covering the upper back and neck. It consists of three parts: upper, middle, and lower, each playing a specific role in scapular movement and stabilization.\n\n## Role and Importance\n\n- Elevation, depression, and retraction of the shoulder blades.\n- Upper body posture stabilization.\n- Transfers force between back and shoulders.\n- Contributes to pulling movement strength.\n\n## Function in Sports and Daily Life\n\n- Engaged in pull-ups, shrugs, rowing, and combat sports.\n- Important for lifting and holding loads.\n- Helps prevent neck and upper back tension.\n\n## Associated Exercises\n\n- Shrugs.\n- Barbell or dumbbell rows.\n- Face pulls and horizontal pulls.\n\n## Conclusion\n\nThe **trapezius** is vital for **posture, back strength, and shoulder stabilization**."
+        "title": "Adductors",
+        "summary": "Inner thigh muscles responsible for hip adduction.",
+        "details": ""
       }
     }
   }

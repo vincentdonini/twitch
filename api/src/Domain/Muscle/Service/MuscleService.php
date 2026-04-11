@@ -20,7 +20,7 @@ class MuscleService
     ) {
     }
 
-    public function transformToDTO(Muscle $muscle, FilterCollection $filters = null): MuscleDTO
+    public function transformToDTO(Muscle $muscle, FilterCollection $filters = null, int $wodCount = 0): MuscleDTO
     {
         $content = $muscle->getContentByLocale($this->getLocale());
 
@@ -29,22 +29,45 @@ class MuscleService
             ? $this->muscleGroupService->transformToDTO($muscle->getMuscleGroup())
             : null;
 
+        $segments = [];
+        foreach ($muscle->getSegments() as $segment) {
+            $segmentContent = $segment->getContentByLocale($this->getLocale());
+            $segments[] = new \App\Application\Muscle\DTO\MuscleSegmentDTO(
+                id     : $segment->getId(),
+                slug   : $segment->getSlug(),
+                title  : $segmentContent ? $segmentContent->getTitle() : '',
+                summary: $segmentContent ? $segmentContent->getSummary() : '',
+                details: $segmentContent ? $segmentContent->getDetails() : null,
+                muscle : new MuscleDTO(
+                    id     : $muscle->getId(),
+                    slug   : $muscle->getSlug(),
+                    title  : $content ? $content->getTitle() : '',
+                    summary: $content ? $content->getSummary() : '',
+                    details: $content ? $content->getDetails() : '',
+                    area   : $muscleAreaDTO,
+                    group  : $muscleGroupDTO,
+                ),
+            );
+        }
+
         return new MuscleDTO(
-            id     : $muscle->getId(),
-            slug   : $muscle->getSlug(),
-            title  : $content ? $content->getTitle() : '',
-            summary: $content ? $content->getSummary() : '',
-            details: $content ? $content->getDetails() : '',
-            area   : $muscleAreaDTO,
-            group  : $muscleGroupDTO
+            id      : $muscle->getId(),
+            slug    : $muscle->getSlug(),
+            title   : $content ? $content->getTitle() : '',
+            summary : $content ? $content->getSummary() : '',
+            details : $content ? $content->getDetails() : '',
+            area    : $muscleAreaDTO,
+            group   : $muscleGroupDTO,
+            segments: $segments,
+            wodCount: $wodCount,
         );
     }
 
-    public function transformCollectionToDTO(array $muscles, FilterCollection $filters = null): array
+    public function transformCollectionToDTO(array $muscles, FilterCollection $filters = null, array $wodCounts = []): array
     {
         return CollectionMapper::mapAndFilter(
             $muscles,
-            fn(Muscle $muscle) => $this->transformToDTO($muscle, $filters)
+            fn(Muscle $muscle) => $this->transformToDTO($muscle, $filters, $wodCounts[(string)$muscle->getId()] ?? 0)
         );
     }
 }

@@ -4,6 +4,7 @@ namespace App\Infrastructure\Doctrine\Repository\Muscle;
 
 use App\Domain\Muscle\Entity\Muscle;
 use App\Domain\Muscle\Ports\MuscleDALInterface;
+use App\Domain\Wod\Entity\Wod;
 use App\Infrastructure\Doctrine\Filters\DoctrineFilterApplier;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
@@ -97,5 +98,25 @@ class MuscleRepository extends AbstractEntityRepository implements MuscleDALInte
             ->setParameter('muscleGroup', $muscleGroupId, UuidType::NAME)
             ->getQuery()
             ->getResult();
+    }
+
+    /** @return array<string, int> */
+    public function getWodCounts(): array
+    {
+        $rows = $this->getEntityManager()->createQuery('
+            SELECT m.id as id, COUNT(DISTINCT w.id) as cnt
+            FROM ' . Wod::class . ' w
+            JOIN w.wodVariants wv
+            JOIN wv.wodVariantExercises wve
+            JOIN wve.exercise e
+            JOIN e.muscles m
+            GROUP BY m.id
+        ')->getResult();
+
+        $counts = [];
+        foreach ($rows as $row) {
+            $counts[(string)$row['id']] = (int)$row['cnt'];
+        }
+        return $counts;
     }
 }

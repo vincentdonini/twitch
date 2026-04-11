@@ -137,6 +137,13 @@ final class FrontGroupsEnum
     public const MUSCLE_AREA_LIST   = 'front:muscleArea:list';
     public const MUSCLE_AREA_DETAIL = 'front:muscleArea:detail';
 
+    public const MUSCLE_SEGMENT_MANAGE = 'front:muscleSegment:manage';
+    public const MUSCLE_SEGMENT_LIST   = 'front:muscleSegment:list';
+    public const MUSCLE_SEGMENT_DETAIL = 'front:muscleSegment:detail';
+
+    public const CONTENT_MUSCLE_SEGMENT_MANAGE = 'front:contentMuscleSegment:manage';
+    public const CONTENT_MUSCLE_SEGMENT_LIST   = 'front:contentMuscleSegment:list';
+
     // ORGANIZATION
     // -----------------------------------------------------------------------------------------------------------------
     public const COMPANY_CREATE = 'front:company:create';

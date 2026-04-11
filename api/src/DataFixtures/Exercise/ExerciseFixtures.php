@@ -4,11 +4,13 @@ namespace App\DataFixtures\Exercise;
 
 use App\DataFixtures\Equipment\EquipmentFixtures;
 use App\DataFixtures\Muscle\MuscleFixtures;
+use App\DataFixtures\Muscle\MuscleSegmentFixtures;
 use App\Domain\Content\Entity\ContentExercise;
 use App\Domain\Equipment\Entity\Equipment;
 use App\Domain\Exercise\Entity\Exercise;
 use App\Domain\Exercise\Entity\ExerciseCategory;
 use App\Domain\Muscle\Entity\Muscle;
+use App\Domain\Muscle\Entity\MuscleSegment;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
@@ -62,11 +64,20 @@ class ExerciseFixtures extends Fixture implements DependentFixtureInterface
             if (!empty($item['muscles'])) {
                 foreach ($item['muscles'] as $muscleSlug) {
                     $muscle = $manager->getRepository(Muscle::class)->findOneBy(['slug' => $muscleSlug]);
-                    if ($muscle) {
-                        $exercise->addMuscle($muscle);
-                    } else {
-                        throw new Exception("Muscle with slug $muscleSlug not found");
+                    if (!$muscle) {
+                        throw new Exception("Muscle with slug '$muscleSlug' not found");
                     }
+                    $exercise->addMuscle($muscle);
+                }
+            }
+
+            if (!empty($item['muscleSegments'])) {
+                foreach ($item['muscleSegments'] as $segmentSlug) {
+                    $segment = $manager->getRepository(MuscleSegment::class)->findOneBy(['slug' => $segmentSlug]);
+                    if (!$segment) {
+                        throw new Exception("MuscleSegment with slug '$segmentSlug' not found");
+                    }
+                    $exercise->addMuscleSegment($segment);
                 }
             }
 
@@ -77,11 +88,12 @@ class ExerciseFixtures extends Fixture implements DependentFixtureInterface
             if (!empty($item['contents']) && is_array($item['contents'])) {
                 foreach ($item['contents'] as $locale => $contentData) {
                     $content = new ContentExercise(
-                        exercise: $exercise,
-                        locale  : $locale,
-                        title   : $contentData['title'],
-                        summary : $contentData['summary'],
-                        details : $contentData['details'],
+                        exercise   : $exercise,
+                        locale     : $locale,
+                        title      : $contentData['title'],
+                        summary    : $contentData['summary'],
+                        details    : $contentData['details'],
+                        titlePlural: $contentData['titlePlural'] ?? null,
                     );
 
                     $manager->persist($content);
@@ -100,6 +112,7 @@ class ExerciseFixtures extends Fixture implements DependentFixtureInterface
             ExerciseCategoryFixtures::class,
             EquipmentFixtures::class,
             MuscleFixtures::class,
+            MuscleSegmentFixtures::class,
         ];
     }
 }

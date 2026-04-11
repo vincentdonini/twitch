@@ -34,18 +34,20 @@ readonly class UpsertContentExerciseUseCase
 
         if (!$contentExercise) {
             $contentExercise = new ContentExercise(
-                exercise: $exercise,
-                locale  : $dto->getLocale(),
-                title   : $dto->getTitle(),
-                summary : $dto->getSummary(),
-                details : $dto->getDetails()
+                exercise   : $exercise,
+                locale     : $dto->getLocale(),
+                title      : $dto->getTitle(),
+                summary    : $dto->getSummary(),
+                details    : $dto->getDetails(),
+                titlePlural: $dto->getTitlePlural()
             );
 
             $exercise->addContent($contentExercise);
         } else {
             $contentExercise
                 ->setTitle($dto->getTitle())
-                ->setSummary($dto->getSummary());
+                ->setSummary($dto->getSummary())
+                ->setTitlePlural($dto->getTitlePlural());
 
             if ($dto->getDetails() !== null) {
                 $contentExercise->setDetails($dto->getDetails());

@@ -38,4 +38,9 @@ final readonly class UpsertContentExerciseHttp implements UpsertContentExerciseD
     {
         return $this->payload['details'] ?? null;
     }
+
+    public function getTitlePlural(): ?string
+    {
+        return $this->payload['titlePlural'] ?? null;
+    }
 }

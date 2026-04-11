@@ -2,9 +2,19 @@
 
 namespace App\UI\Controller\User;
 
+use App\Application\User\DTO\UserMeCompanyDTO;
+use App\Application\User\DTO\UserMeGymSubscriptionDTO;
+use App\Application\User\DTO\UserMePlaceDTO;
+use App\Domain\Organization\Ports\CompanyDALInterface;
+use App\Domain\Organization\Ports\PlaceDALInterface;
+use App\Domain\Organization\Ports\SubscriptionDALInterface;
 use App\Domain\User\Service\UserService;
 use App\Domain\User\User\GetUserByIdUseCase;
 use App\Domain\User\User\ListUsersUseCase;
+use App\Domain\User\User\UpdatePasswordUseCase;
+use App\Domain\User\User\UpdateUserMeUseCase;
+use App\UI\Adapters\Http\User\User\UpdatePasswordHttp;
+use App\UI\Adapters\Http\User\User\UpdateUserMeHttp;
 use App\Infrastructure\Paginator\RequestPaginator;
 use App\Infrastructure\Paginator\ResponsePaginator;
 use App\Infrastructure\Security\Voters\ListPermissions;
@@ -76,11 +86,14 @@ final class UserController extends AbstractController
             request: $request
         );
 
+        $search = (string) $request->query->get('search', '');
+
         try {
             $paginator = $useCase->execute(
                 new ListUsersHttp(
-                    page : $paginatorValues->getPage(),
-                    limit: $paginatorValues->getLimit(),
+                    page  : $paginatorValues->getPage(),
+                    limit : $paginatorValues->getLimit(),
+                    search: $search,
                 )
             );
         } catch (\Throwable $e) {
@@ -169,8 +182,11 @@ final class UserController extends AbstractController
     )]
     #[Security(name: 'bearerAuth')]
     public function me(
-        GetUserByIdUseCase  $useCase,
-        NormalizerInterface $normalizer,
+        GetUserByIdUseCase       $useCase,
+        NormalizerInterface      $normalizer,
+        SubscriptionDALInterface $subscriptionRepository,
+        PlaceDALInterface        $placeRepository,
+        CompanyDALInterface      $companyRepository,
     ): JsonResponse {
         $authenticatedUser = $this->getUser();
 
@@ -188,6 +204,21 @@ final class UserController extends AbstractController
 
         $dtoItem = $this->userService->transformToDTO($user);
 
+        $dtoItem->gymSubscriptions = array_map(
+            fn($s) => UserMeGymSubscriptionDTO::fromSubscription($s),
+            $subscriptionRepository->findActiveByUser($user)
+        );
+
+        $dtoItem->coachPlaces = array_map(
+            fn($p) => UserMePlaceDTO::fromPlace($p),
+            $placeRepository->findByCoach($user)
+        );
+
+        $dtoItem->ownerCompanies = array_map(
+            fn($c) => UserMeCompanyDTO::fromCompany($c),
+            $companyRepository->findByOwner($user)
+        );
+
         return new JsonResponse(
             data  : $normalizer->normalize(
                 object : $dtoItem,
@@ -200,5 +231,99 @@ final class UserController extends AbstractController
             ),
             status: Response::HTTP_OK,
         );
+    }
+
+    #[Route(
+        path   : '/me',
+        name   : 'update_me',
+        methods: ['PATCH']
+    )]
+    #[IsGranted('IS_AUTHENTICATED_FULLY')]
+    #[Security(name: 'bearerAuth')]
+    public function updateMe(
+        Request              $request,
+        UpdateUserMeUseCase  $useCase,
+        GetUserByIdUseCase   $getUserUseCase,
+        NormalizerInterface  $normalizer,
+    ): JsonResponse {
+        $authenticatedUser = $this->getUser();
+
+        if (!$authenticatedUser) {
+            return new JsonResponse(null, Response::HTTP_UNAUTHORIZED);
+        }
+
+        $body = json_decode($request->getContent(), true) ?? [];
+
+        try {
+            $user = $getUserUseCase->execute(
+                new GetUserByIdHttp($authenticatedUser->getId())
+            );
+
+            $updated = $useCase->execute(
+                $user,
+                new UpdateUserMeHttp(
+                    email    : $body['email'] ?? null,
+                    firstName: $body['firstName'] ?? null,
+                    lastName : $body['lastName'] ?? null,
+                )
+            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
+        }
+
+        return new JsonResponse(
+            data  : $normalizer->normalize(
+                object : $this->userService->transformToDTO($updated),
+                format : 'json',
+                context: ['groups' => [FrontGroupsEnum::USER_ME]],
+            ),
+            status: Response::HTTP_OK,
+        );
+    }
+
+    #[Route(
+        path   : '/me/password',
+        name   : 'update_password',
+        methods: ['PUT']
+    )]
+    #[IsGranted('IS_AUTHENTICATED_FULLY')]
+    #[Security(name: 'bearerAuth')]
+    public function updatePassword(
+        Request               $request,
+        UpdatePasswordUseCase $useCase,
+        GetUserByIdUseCase    $getUserUseCase,
+    ): JsonResponse {
+        $authenticatedUser = $this->getUser();
+
+        if (!$authenticatedUser) {
+            return new JsonResponse(null, Response::HTTP_UNAUTHORIZED);
+        }
+
+        $body = json_decode($request->getContent(), true) ?? [];
+
+        $currentPassword = $body['currentPassword'] ?? '';
+        $newPassword     = $body['newPassword'] ?? '';
+
+        if (!$currentPassword || !$newPassword) {
+            return new JsonResponse(['message' => 'Missing required fields.'], Response::HTTP_BAD_REQUEST);
+        }
+
+        try {
+            $user = $getUserUseCase->execute(
+                new GetUserByIdHttp($authenticatedUser->getId())
+            );
+
+            $useCase->execute(
+                $user,
+                new UpdatePasswordHttp(
+                    currentPassword: $currentPassword,
+                    newPassword    : $newPassword,
+                )
+            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
+        }
+
+        return new JsonResponse(null, Response::HTTP_NO_CONTENT);
     }
 }

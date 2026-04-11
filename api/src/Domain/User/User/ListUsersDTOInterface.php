@@ -14,4 +14,6 @@ interface ListUsersDTOInterface
     public function getFilters(): ?FilterCollection;
 
     public function getSorts(): ?SortCollection;
+
+    public function getSearch(): string;
 }

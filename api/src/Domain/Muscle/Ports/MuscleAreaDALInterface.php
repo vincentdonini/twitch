@@ -19,4 +19,7 @@ interface MuscleAreaDALInterface
         ?FilterCollection $filters = null,
         ?SortCollection   $sorts = null
     ): LightPaginator;
+
+    /** @return array<string, int> */
+    public function getWodCounts(): array;
 }

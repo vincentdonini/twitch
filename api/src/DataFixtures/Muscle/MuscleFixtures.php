@@ -4,7 +4,6 @@ namespace App\DataFixtures\Muscle;
 
 use App\Domain\Content\Entity\ContentMuscle;
 use App\Domain\Muscle\Entity\Muscle;
-use App\Domain\Muscle\Entity\MuscleArea;
 use App\Domain\Muscle\Entity\MuscleGroup;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -36,25 +35,24 @@ class MuscleFixtures extends Fixture implements DependentFixtureInterface
         });
 
         foreach ($data as $item) {
-            $muscleArea = $manager->getRepository(MuscleArea::class)->findOneBy(['slug' => $item['area']]);
-            if (!$muscleArea) {
-                throw new Exception("Muscle area not found: " . $item['area']);
-            }
-
-            $muscle = new Muscle(
-                slug      : $item['slug'],
-                muscleArea: $muscleArea,
-            );
-
+            $muscleGroup = null;
             if (isset($item['group'])) {
                 $muscleGroup = $manager->getRepository(MuscleGroup::class)->findOneBy(['slug' => $item['group']]);
                 if (!$muscleGroup) {
                     throw new Exception("Muscle group not found: " . $item['group']);
                 }
-                $muscle->setMuscleGroup($muscleGroup);
-            } else {
-                $muscle->setMuscleGroup(null);
             }
+
+            if (!$muscleGroup) {
+                throw new Exception("Muscle must belong to a group: " . $item['slug']);
+            }
+
+            $muscle = new Muscle(
+                slug      : $item['slug'],
+                muscleArea: $muscleGroup->getMuscleArea(),
+            );
+
+            $muscle->setMuscleGroup($muscleGroup);
 
             $manager->persist($muscle);
 

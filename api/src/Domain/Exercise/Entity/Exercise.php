@@ -5,6 +5,7 @@ namespace App\Domain\Exercise\Entity;
 use App\Domain\Content\Entity\ContentExercise;
 use App\Domain\Equipment\Entity\Equipment;
 use App\Domain\Muscle\Entity\Muscle;
+use App\Domain\Muscle\Entity\MuscleSegment;
 use App\Infrastructure\Doctrine\Repository\Exercise\ExerciseRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -36,6 +37,14 @@ class Exercise
     )]
     private Collection $muscles;
 
+    #[ORM\ManyToMany(targetEntity: MuscleSegment::class)]
+    #[ORM\JoinTable(
+        name              : 'exercise_muscle_segment',
+        joinColumns       : [new ORM\JoinColumn(name: 'exercise_id', referencedColumnName: 'id')],
+        inverseJoinColumns: [new ORM\JoinColumn(name: 'muscle_segment_id', referencedColumnName: 'id')]
+    )]
+    private Collection $muscleSegments;
+
     #[ORM\OneToMany(targetEntity: ContentExercise::class, mappedBy: "exercise", cascade: ["persist", "remove"], orphanRemoval: true)]
     private Collection $contents;
 
@@ -48,8 +57,9 @@ class Exercise
         $this->slug             = $slug;
         $this->exerciseCategory = $exerciseCategory;
 
-        $this->muscles  = new ArrayCollection();
-        $this->contents = new ArrayCollection();
+        $this->muscles         = new ArrayCollection();
+        $this->muscleSegments  = new ArrayCollection();
+        $this->contents        = new ArrayCollection();
     }
 
     // -----------------------------------------------------------------------------------------------------------------
@@ -118,6 +128,28 @@ class Exercise
     public function removeMuscle(Muscle $muscle): self
     {
         $this->muscles->removeElement($muscle);
+        return $this;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    // MUSCLE SEGMENTS
+    // -----------------------------------------------------------------------------------------------------------------
+    public function getMuscleSegments(): Collection
+    {
+        return $this->muscleSegments;
+    }
+
+    public function addMuscleSegment(MuscleSegment $segment): self
+    {
+        if (!$this->muscleSegments->contains($segment)) {
+            $this->muscleSegments->add($segment);
+        }
+        return $this;
+    }
+
+    public function removeMuscleSegment(MuscleSegment $segment): self
+    {
+        $this->muscleSegments->removeElement($segment);
         return $this;
     }
 

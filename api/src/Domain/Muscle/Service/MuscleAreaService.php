@@ -27,7 +27,7 @@ class MuscleAreaService
         ];
     }
 
-    public function transformToDTO(MuscleArea $muscleArea, FilterCollection $filters = null): ?MuscleAreaDTO
+    public function transformToDTO(MuscleArea $muscleArea, FilterCollection $filters = null, int $wodCount = 0): ?MuscleAreaDTO
     {
         $content = $muscleArea->getContentByLocale($this->getLocale());
         if (!$this->EntityFieldFilter->match($muscleArea, $filters, $this->filterMapping)) {
@@ -35,19 +35,20 @@ class MuscleAreaService
         }
 
         return new MuscleAreaDTO(
-            id     : $muscleArea->getId(),
-            slug   : $muscleArea->getSlug(),
-            title  : $content ? $content->getTitle() : '',
-            summary: $content ? $content->getSummary() : '',
-            details: $content ? $content->getDetails() : '',
+            id      : $muscleArea->getId(),
+            slug    : $muscleArea->getSlug(),
+            title   : $content ? $content->getTitle() : '',
+            summary : $content ? $content->getSummary() : '',
+            details : $content ? $content->getDetails() : '',
+            wodCount: $wodCount,
         );
     }
 
-    public function transformCollectionToDTO(array $muscleAreas, FilterCollection $filters = null): array
+    public function transformCollectionToDTO(array $muscleAreas, FilterCollection $filters = null, array $wodCounts = []): array
     {
         return CollectionMapper::mapAndFilter(
             $muscleAreas,
-            fn(MuscleArea $muscleArea) => $this->transformToDTO($muscleArea, $filters)
+            fn(MuscleArea $muscleArea) => $this->transformToDTO($muscleArea, $filters, $wodCounts[(string)$muscleArea->getId()] ?? 0)
         );
     }
 }

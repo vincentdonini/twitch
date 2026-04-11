@@ -32,10 +32,6 @@ final class PublicApiUser implements UserInterface
         // Muscles
         ListPermissions::PERMISSION_MUSCLE_LIST,
         ListPermissions::PERMISSION_MUSCLE_VIEW,
-        ListPermissions::PERMISSION_MUSCLE_AREA_LIST,
-        ListPermissions::PERMISSION_MUSCLE_AREA_VIEW,
-        ListPermissions::PERMISSION_MUSCLE_GROUP_LIST,
-        ListPermissions::PERMISSION_MUSCLE_GROUP_VIEW,
 
         // Stats
         ListPermissions::PERMISSION_STATS_VIEW,

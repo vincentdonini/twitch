@@ -10,6 +10,7 @@ use App\Domain\Muscle\Muscle\GetMuscleContentsByIdUseCase;
 use App\Domain\Muscle\Muscle\ListMusclesUseCase;
 use App\Domain\Muscle\Muscle\UpsertContentMuscleBulkUseCase;
 use App\Domain\Muscle\Muscle\UpsertContentMuscleUseCase;
+use App\Domain\Muscle\Ports\MuscleDALInterface;
 use App\Domain\Muscle\Service\MuscleService;
 use App\Domain\Muscle\Sort\MuscleSortMapping;
 use App\Infrastructure\Filters\RequestFilters;
@@ -46,7 +47,8 @@ final readonly class MuscleController
     use ApiExceptionHandler;
 
     public function __construct(
-        private MuscleService $muscleService,
+        private MuscleService      $muscleService,
+        private MuscleDALInterface $muscleDAL,
     ) {
     }
 
@@ -164,8 +166,9 @@ final readonly class MuscleController
         }
 
         $dtoItems = $this->muscleService->transformCollectionToDTO(
-            muscles: $paginator->getItems(),
-            filters: $filters
+            muscles   : $paginator->getItems(),
+            filters   : $filters,
+            wodCounts : $this->muscleDAL->getWodCounts(),
         );
 
         return new JsonResponse(

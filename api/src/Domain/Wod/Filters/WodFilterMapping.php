@@ -19,5 +19,9 @@ final class WodFilterMapping
         'exercise.id'          => 'wodVariants.wodVariantExercises.exercise.id',
         'exerciseCategory.id'  => 'wodVariants.wodVariantExercises.exercise.exerciseCategory.id',
         'equipment.id'         => 'wodVariants.wodVariantExercises.exercise.equipment.id',
+        'muscle.id'         => 'wodVariants.wodVariantExercises.exercise.muscles.id',
+        'muscleGroup.id'    => 'wodVariants.wodVariantExercises.exercise.muscles.muscleGroup.id',
+        'muscleArea.id'     => 'wodVariants.wodVariantExercises.exercise.muscles.muscleGroup.muscleArea.id',
+        'muscleSegment.id'  => 'wodVariants.wodVariantExercises.exercise.muscleSegments.id',
     ];
 }

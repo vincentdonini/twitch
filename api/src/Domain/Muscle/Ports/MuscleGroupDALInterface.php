@@ -22,4 +22,7 @@ interface MuscleGroupDALInterface
 
     /** @return MuscleGroup[] */
     public function getByMuscleAreaId(Uuid $muscleAreaId): array;
+
+    /** @return array<string, int> */
+    public function getWodCounts(): array;
 }

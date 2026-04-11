@@ -11,6 +11,7 @@ use App\Domain\Muscle\MuscleGroup\GetMusclesByMuscleGroupIdUseCase;
 use App\Domain\Muscle\MuscleGroup\ListMuscleGroupsUseCase;
 use App\Domain\Muscle\MuscleGroup\UpsertContentMuscleGroupBulkUseCase;
 use App\Domain\Muscle\MuscleGroup\UpsertContentMuscleGroupUseCase;
+use App\Domain\Muscle\Ports\MuscleGroupDALInterface;
 use App\Domain\Muscle\Service\MuscleGroupService;
 use App\Domain\Muscle\Service\MuscleService;
 use App\Domain\Muscle\Sort\MuscleGroupSortMapping;
@@ -49,8 +50,9 @@ final readonly class MuscleGroupController
     use ApiExceptionHandler;
 
     public function __construct(
-        private MuscleGroupService $muscleGroupService,
-        private MuscleService      $muscleService,
+        private MuscleGroupService      $muscleGroupService,
+        private MuscleService           $muscleService,
+        private MuscleGroupDALInterface $muscleGroupDAL,
     ) {
     }
 
@@ -59,7 +61,7 @@ final readonly class MuscleGroupController
         name   : 'list',
         methods: ['GET']
     )]
-    #[IsGranted(ListPermissions::PERMISSION_MUSCLE_GROUP_LIST)]
+    #[IsGranted(ListPermissions::PERMISSION_MUSCLE_LIST)]
     #[Security(name: 'bearerAuth')]
     #[OAT\Get(
         description: 'Returns a list of Muscle groups available in the system.',
@@ -169,7 +171,8 @@ final readonly class MuscleGroupController
 
         $dtoItems = $this->muscleGroupService->transformCollectionToDTO(
             muscleGroups: $paginator->getItems(),
-            filters     : $filters
+            filters     : $filters,
+            wodCounts   : $this->muscleGroupDAL->getWodCounts(),
         );
 
         return new JsonResponse(
@@ -195,7 +198,7 @@ final readonly class MuscleGroupController
         ],
         methods     : ['GET']
     )]
-    #[IsGranted(ListPermissions::PERMISSION_MUSCLE_GROUP_VIEW)]
+    #[IsGranted(ListPermissions::PERMISSION_MUSCLE_VIEW)]
     #[OAT\Get(
         description: 'Returns detailed information for a specific Muscle group.',
         summary    : 'Get Muscle group details',
@@ -254,7 +257,7 @@ final readonly class MuscleGroupController
         ],
         methods     : ['GET']
     )]
-    #[IsGranted(ListPermissions::PERMISSION_MUSCLE_GROUP_LIST)]
+    #[IsGranted(ListPermissions::PERMISSION_MUSCLE_LIST)]
     #[OAT\Get(
         description: 'Returns muscles for a specific Muscle group.',
         summary    : 'Get Muscle group muscles.',

@@ -948,6 +948,68 @@
       {
         "name": "Nino",
         "role": "COACH"
+      }
+    ]
+  },
+  {
+    "name": "CrossFit Castellio",
+    "legalName": null,
+    "siren": null,
+    "vatNumber": null,
+    "legalForm": null,
+    "activityCode": null,
+    "address": "142 Avenue de Paris",
+    "postalCode": "92320",
+    "city": "Châtillon",
+    "timezone": "Europe/Paris",
+    "status": "active",
+    "owners": [
+      {
+        "name": "Matthieu Deville",
+        "role": "OWNER"
+      }
+    ],
+    "registrationDate": null,
+    "phone": "+33669489094",
+    "email": "deville.matthieu@hotmail.fr",
+    "places": [
+      {
+        "siret": null,
+        "name": "CrossFit Castellio",
+        "legalName": null,
+        "address": "142 Avenue de Paris",
+        "postalCode": "92320",
+        "city": "Châtillon",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33669489094",
+        "email": "deville.matthieu@hotmail.fr",
+        "website": "https://www.crossfitcastellio.com/"
+      },
+      {
+        "siret": null,
+        "name": "CrossFit Castellio 2",
+        "legalName": null,
+        "address": "407 Avenue du Général de Gaulle",
+        "postalCode": "92140",
+        "city": "Clamart",
+        "timezone": "Europe/Paris",
+        "status": "active",
+        "registrationDate": null,
+        "nbDaysBeforeReservation": 0,
+        "nbHoursBeforeCancelReservation": 0,
+        "phone": "+33669489094",
+        "email": "deville.matthieu@hotmail.fr",
+        "website": "https://www.crossfitcastellio.com"
+      }
+    ],
+    "staff": [
+      {
+        "name": "Rich FRONING",
+        "role": "COACH"
       }]
   }
 ]

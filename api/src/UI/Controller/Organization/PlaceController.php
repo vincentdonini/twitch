@@ -9,6 +9,12 @@ use App\Domain\Organization\Place\CreatePlaceUseCase;
 use App\Domain\Organization\Place\GetPlaceByIdUseCase;
 use App\Domain\Organization\Place\ImportUsersForPlaceResult;
 use App\Domain\Organization\Place\ImportUsersForPlaceUseCase;
+use App\Domain\Core\Exceptions\EntityNotFoundException;
+use App\Domain\Core\Ports\DatabaseInterface;
+use App\Domain\Organization\Ports\PlaceDALInterface;
+use App\Domain\Organization\Ports\SubscriptionDALInterface;
+use App\Domain\Organization\Service\SubscriptionService;
+use App\Domain\User\Ports\UserDALInterface;
 use App\Domain\Organization\Place\ListPlaceUseCase;
 use App\Domain\Organization\Place\UpdatePlaceUseCase;
 use App\Domain\Organization\Service\PlaceService;
@@ -46,8 +52,11 @@ final class PlaceController extends AbstractController
     use ApiExceptionHandler;
 
     public function __construct(
-        private readonly PlaceService $placeService,
-        private readonly UserService  $userService,
+        private readonly PlaceService      $placeService,
+        private readonly UserService       $userService,
+        private readonly PlaceDALInterface $placeDAL,
+        private readonly UserDALInterface  $userDAL,
+        private readonly DatabaseInterface $database,
     ) {
     }
 
@@ -742,6 +751,165 @@ final class PlaceController extends AbstractController
                 format: 'json'
             ),
             status: Response::HTTP_OK,
+        );
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    // COACHES
+    // -----------------------------------------------------------------------------------------------------------------
+
+    #[Route(
+        path        : '/{placeId}/coaches',
+        name        : 'coaches_list',
+        requirements: ['placeId' => '[0-9a-fA-F\-]+'],
+        methods     : ['GET']
+    )]
+    #[IsGranted(ListPermissions::PERMISSION_PLACE_VIEW)]
+    #[Security(name: 'bearerAuth')]
+    public function listCoaches(
+        GetPlaceByIdUseCase $useCase,
+        NormalizerInterface $normalizer,
+        string              $placeId,
+    ): JsonResponse {
+        try {
+            $place = $useCase->execute(new GetPlaceByIdHttp(id: Uuid::fromString($placeId)));
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
+        }
+
+        $dtoItems = $this->userService->transformCollectionToDTO($place->getUsers()->toArray());
+
+        return new JsonResponse(
+            data  : $normalizer->normalize(
+                object : $dtoItems,
+                format : 'json',
+                context: ['groups' => [FrontGroupsEnum::PLACE_LIST_ADMIN]]
+            ),
+            status: Response::HTTP_OK,
+        );
+    }
+
+    #[Route(
+        path        : '/{placeId}/coaches',
+        name        : 'coaches_add',
+        requirements: ['placeId' => '[0-9a-fA-F\-]+'],
+        methods     : ['POST']
+    )]
+    #[IsGranted(ListPermissions::PERMISSION_PLACE_MANAGE)]
+    #[Security(name: 'bearerAuth')]
+    public function addCoach(
+        Request             $request,
+        NormalizerInterface $normalizer,
+        string              $placeId,
+    ): JsonResponse {
+        $payload = json_decode($request->getContent(), true) ?? [];
+        $email   = $payload['email'] ?? null;
+
+        if (!$email) {
+            return new JsonResponse(['error' => 'Email is required.'], Response::HTTP_BAD_REQUEST);
+        }
+
+        try {
+            $place = $this->placeDAL->getById(Uuid::fromString($placeId));
+            if (!$place) {
+                throw new EntityNotFoundException('Place not found.');
+            }
+
+            $user = $this->userDAL->findByEmail($email);
+            if (!$user) {
+                throw new EntityNotFoundException('User not found.');
+            }
+
+            $user->addPlace($place);
+            $this->database->save();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
+        }
+
+        $dtoItem = $this->userService->transformToDTO($user);
+
+        return new JsonResponse(
+            data  : $normalizer->normalize(
+                object : $dtoItem,
+                format : 'json',
+                context: ['groups' => [FrontGroupsEnum::PLACE_LIST_ADMIN]]
+            ),
+            status: Response::HTTP_CREATED,
+        );
+    }
+
+    #[Route(
+        path        : '/{placeId}/coaches/{userId}',
+        name        : 'coaches_remove',
+        requirements: ['placeId' => '[0-9a-fA-F\-]+', 'userId' => '[0-9a-fA-F\-]+'],
+        methods     : ['DELETE']
+    )]
+    #[IsGranted(ListPermissions::PERMISSION_PLACE_MANAGE)]
+    #[Security(name: 'bearerAuth')]
+    public function removeCoach(
+        string $placeId,
+        string $userId,
+    ): JsonResponse {
+        try {
+            $place = $this->placeDAL->getById(Uuid::fromString($placeId));
+            if (!$place) {
+                throw new EntityNotFoundException('Place not found.');
+            }
+
+            $user = $this->userDAL->getById(Uuid::fromString($userId));
+            if (!$user) {
+                throw new EntityNotFoundException('User not found.');
+            }
+
+            $user->removePlace($place);
+            $this->database->save();
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
+        }
+
+        return new JsonResponse(null, Response::HTTP_NO_CONTENT);
+    }
+
+    #[Route(
+        path        : '/{placeId}/subscriptions',
+        name        : 'subscriptions_list',
+        requirements: ['placeId' => '[0-9a-fA-F\-]+'],
+        methods     : ['GET']
+    )]
+    #[IsGranted(ListPermissions::PERMISSION_SUBSCRIPTION_LIST)]
+    #[Security(name: 'bearerAuth')]
+    public function subscriptions(
+        Request                     $request,
+        SubscriptionDALInterface    $subscriptionDAL,
+        SubscriptionService         $subscriptionService,
+        NormalizerInterface         $normalizer,
+        string                      $placeId,
+    ): JsonResponse {
+        $paginatorValues = RequestPaginator::extractValues(request: $request);
+
+        try {
+            $paginator = $subscriptionDAL->listByPlaceId(
+                placeId: Uuid::fromString($placeId),
+                page   : $paginatorValues->getPage(),
+                limit  : $paginatorValues->getLimit(),
+            );
+        } catch (\Throwable $e) {
+            return $this->handleException($e);
+        }
+
+        $dtoItems = $subscriptionService->transformCollectionToDTO($paginator->getItems());
+
+        return new JsonResponse(
+            data   : $normalizer->normalize(
+                object : $dtoItems,
+                format : 'json',
+                context: ['groups' => [FrontGroupsEnum::SUBSCRIPTION_LIST]]
+            ),
+            status : Response::HTTP_OK,
+            headers: ResponsePaginator::buildPaginationHeaders(
+                paginator      : $paginator,
+                paginatorValues: $paginatorValues
+            )
         );
     }
 }

@@ -4,6 +4,7 @@ namespace App\Application\Exercise\DTO;
 
 use App\Application\Equipment\DTO\EquipmentDTO;
 use App\Application\Exercise\DTO\ExerciseCategoryDTO;
+use App\Application\Muscle\DTO\MuscleDTO;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Uid\Uuid;
@@ -32,6 +33,13 @@ class ExerciseDTO
     public string $title;
 
     #[Groups([
+        FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
+        FrontGroupsEnum::EXERCISE_LIST, FrontGroupsEnum::EXERCISE_DETAIL,
+        FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
+    ])]
+    public ?string $titlePlural;
+
+    #[Groups([
         FrontGroupsEnum::EXERCISE_LIST, FrontGroupsEnum::EXERCISE_DETAIL,
     ])]
     public string $summary;
@@ -58,6 +66,13 @@ class ExerciseDTO
     ])]
     public ?ExerciseCategoryDTO $exerciseCategory;
 
+    /** @var MuscleDTO[] */
+    #[Groups([
+        FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
+        FrontGroupsEnum::EXERCISE_LIST, FrontGroupsEnum::EXERCISE_DETAIL,
+    ])]
+    public array $muscles;
+
     public function __construct(
         Uuid                 $id,
         string               $slug,
@@ -67,14 +82,18 @@ class ExerciseDTO
         int                  $wodCount = 0,
         ?EquipmentDTO        $equipment = null,
         ?ExerciseCategoryDTO $exerciseCategory = null,
+        array                $muscles = [],
+        ?string              $titlePlural = null,
     ) {
         $this->id               = $id;
         $this->slug             = $slug;
         $this->title            = $title;
+        $this->titlePlural      = $titlePlural;
         $this->summary          = $summary;
         $this->details          = $details;
         $this->wodCount         = $wodCount;
         $this->equipment        = $equipment;
         $this->exerciseCategory = $exerciseCategory;
+        $this->muscles          = $muscles;
     }
 }

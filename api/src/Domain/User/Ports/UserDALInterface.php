@@ -20,6 +20,7 @@ interface UserDALInterface
         int               $limit = RequestPaginator::DEFAULT_LIMIT,
         ?FilterCollection $filters = null,
         ?SortCollection   $sorts = null,
+        string            $search = '',
     ): LightPaginator;
 
     public function countUsers(): int;

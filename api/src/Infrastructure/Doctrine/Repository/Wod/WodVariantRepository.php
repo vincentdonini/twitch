@@ -59,23 +59,23 @@ class WodVariantRepository extends AbstractEntityRepository implements WodVarian
         ?GenderEnum $gender
     ): ?WodVariant {
         $qb = $this->createQueryBuilder('wv')
-            ->where('v.wod = :wod')
-            ->andWhere('v.wodDivision = :division')
+            ->where('wv.wod = :wod')
+            ->andWhere('wv.wodDivision = :division')
             ->setParameter('wod', $wod->getId())
             ->setParameter('division', $division->getId());
 
         if ($ageRange !== null) {
-            $qb->andWhere('v.wodAgeRange = :ageRange')
+            $qb->andWhere('wv.wodAgeRange = :ageRange')
                 ->setParameter('ageRange', $ageRange->getId());
         } else {
-            $qb->andWhere('v.wodAgeRange IS NULL');
+            $qb->andWhere('wv.wodAgeRange IS NULL');
         }
 
         if ($gender !== null) {
-            $qb->andWhere('v.gender = :gender')
+            $qb->andWhere('wv.gender = :gender')
                 ->setParameter('gender', $gender->value);
         } else {
-            $qb->andWhere('v.gender IS NULL');
+            $qb->andWhere('wv.gender IS NULL');
         }
 
         return $qb->getQuery()

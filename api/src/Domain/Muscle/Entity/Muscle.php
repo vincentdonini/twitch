@@ -5,6 +5,7 @@ namespace App\Domain\Muscle\Entity;
 use App\Domain\Content\Entity\ContentMuscle;
 use App\Domain\Exercise\Entity\Exercise;
 use App\Infrastructure\Doctrine\Repository\Muscle\MuscleRepository;
+use App\Domain\Muscle\Entity\MuscleSegment;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -34,6 +35,9 @@ class Muscle
     #[ORM\ManyToMany(targetEntity: Exercise::class, mappedBy: 'muscle')]
     private Collection $exercises;
 
+    #[ORM\OneToMany(targetEntity: MuscleSegment::class, mappedBy: 'muscle', cascade: ['persist', 'remove'], orphanRemoval: true)]
+    private Collection $segments;
+
     #[ORM\OneToMany(targetEntity: ContentMuscle::class, mappedBy: "muscle", cascade: ["persist", "remove"], orphanRemoval: true)]
     private Collection $contents;
 
@@ -47,6 +51,7 @@ class Muscle
         $this->muscleArea = $muscleArea;
 
         $this->exercises = new ArrayCollection();
+        $this->segments  = new ArrayCollection();
         $this->contents  = new ArrayCollection();
     }
 
@@ -119,6 +124,29 @@ class Muscle
         if ($this->exercises->removeElement($exercise)) {
             $exercise->removeMuscle($this);
         }
+        return $this;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    // SEGMENTS
+    // -----------------------------------------------------------------------------------------------------------------
+    public function getSegments(): Collection
+    {
+        return $this->segments;
+    }
+
+    public function addSegment(MuscleSegment $segment): self
+    {
+        if (!$this->segments->contains($segment)) {
+            $this->segments->add($segment);
+            $segment->setMuscle($this);
+        }
+        return $this;
+    }
+
+    public function removeSegment(MuscleSegment $segment): self
+    {
+        $this->segments->removeElement($segment);
         return $this;
     }
 

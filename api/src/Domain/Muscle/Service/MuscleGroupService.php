@@ -28,7 +28,7 @@ class MuscleGroupService
         ];
     }
 
-    public function transformToDTO(MuscleGroup $muscleGroup, FilterCollection $filters = null): ?MuscleGroupDTO
+    public function transformToDTO(MuscleGroup $muscleGroup, FilterCollection $filters = null, int $wodCount = 0): ?MuscleGroupDTO
     {
         $content = $muscleGroup->getContentByLocale($this->getLocale());
         if (!$this->EntityFieldFilter->match($muscleGroup, $filters, $this->filterMapping)) {
@@ -48,14 +48,15 @@ class MuscleGroupService
             summary   : $content ? $content->getSummary() : '',
             details   : $content ? $content->getDetails() : '',
             muscleArea: $muscleAreaDTO,
+            wodCount  : $wodCount,
         );
     }
 
-    public function transformCollectionToDTO(array $muscleGroups, FilterCollection $filters = null): array
+    public function transformCollectionToDTO(array $muscleGroups, FilterCollection $filters = null, array $wodCounts = []): array
     {
         return CollectionMapper::mapAndFilter(
             $muscleGroups,
-            fn(MuscleGroup $muscleGroup) => $this->transformToDTO($muscleGroup, $filters)
+            fn(MuscleGroup $muscleGroup) => $this->transformToDTO($muscleGroup, $filters, $wodCounts[(string)$muscleGroup->getId()] ?? 0)
         );
     }
 }

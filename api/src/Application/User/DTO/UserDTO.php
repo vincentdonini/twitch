@@ -23,6 +23,7 @@ class UserDTO
     #[Groups([
         FrontGroupsEnum::USER_ME,
         FrontGroupsEnum::USER_LIST, FrontGroupsEnum::USER_DETAIL,
+        FrontGroupsEnum::ATHLETE_LIST,
         FrontGroupsEnum::PLACE_LIST_ADMIN,
     ])]
     public string $email;
@@ -62,6 +63,18 @@ class UserDTO
         FrontGroupsEnum::USER_ME,
     ])]
     public array $permissions;
+
+    /** @var UserMeGymSubscriptionDTO[] */
+    #[Groups([FrontGroupsEnum::USER_ME])]
+    public array $gymSubscriptions = [];
+
+    /** @var UserMePlaceDTO[] */
+    #[Groups([FrontGroupsEnum::USER_ME])]
+    public array $coachPlaces = [];
+
+    /** @var UserMeCompanyDTO[] */
+    #[Groups([FrontGroupsEnum::USER_ME])]
+    public array $ownerCompanies = [];
 
     public function __construct(
         Uuid   $id,

@@ -69,6 +69,10 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
         $exerciseExcludeIds         = [];
         $exerciseCategoryExcludeIds = [];
         $equipmentExcludeIds        = [];
+        $muscleExcludeIds           = [];
+        $muscleGroupExcludeIds      = [];
+        $muscleAreaExcludeIds       = [];
+        $muscleSegmentExcludeIds    = [];
         $standardFilters            = [];
 
         foreach ($filters as $filter) {
@@ -92,6 +96,34 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
             ) {
                 foreach ((array)$filter->value as $v) {
                     $equipmentExcludeIds[] = Uuid::fromString(trim($v))->toBinary();
+                }
+            } elseif (
+                $filter->field === 'wodVariants.wodVariantExercises.exercise.muscles.id' &&
+                in_array($filter->operator, [Operator::NEQ, Operator::NOT_IN], true)
+            ) {
+                foreach ((array)$filter->value as $v) {
+                    $muscleExcludeIds[] = Uuid::fromString(trim($v))->toBinary();
+                }
+            } elseif (
+                $filter->field === 'wodVariants.wodVariantExercises.exercise.muscles.muscleGroup.id' &&
+                in_array($filter->operator, [Operator::NEQ, Operator::NOT_IN], true)
+            ) {
+                foreach ((array)$filter->value as $v) {
+                    $muscleGroupExcludeIds[] = Uuid::fromString(trim($v))->toBinary();
+                }
+            } elseif (
+                $filter->field === 'wodVariants.wodVariantExercises.exercise.muscles.muscleGroup.muscleArea.id' &&
+                in_array($filter->operator, [Operator::NEQ, Operator::NOT_IN], true)
+            ) {
+                foreach ((array)$filter->value as $v) {
+                    $muscleAreaExcludeIds[] = Uuid::fromString(trim($v))->toBinary();
+                }
+            } elseif (
+                $filter->field === 'wodVariants.wodVariantExercises.exercise.muscleSegments.id' &&
+                in_array($filter->operator, [Operator::NEQ, Operator::NOT_IN], true)
+            ) {
+                foreach ((array)$filter->value as $v) {
+                    $muscleSegmentExcludeIds[] = Uuid::fromString(trim($v))->toBinary();
                 }
             } else {
                 $standardFilters[] = $filter;
@@ -133,6 +165,56 @@ class WodRepository extends AbstractEntityRepository implements WodDALInterface
                     AND ex_excl_eq.equipment IN (:excl_equipment_ids)
                 )')
                 ->setParameter('excl_equipment_ids', $equipmentExcludeIds);
+        }
+
+        if (!empty($muscleExcludeIds)) {
+            $qb->andWhere('NOT EXISTS (
+                    SELECT 1 FROM ' . WodVariantExercise::class . ' wve_excl_m
+                    JOIN wve_excl_m.wodVariant wv_excl_m
+                    JOIN wve_excl_m.exercise ex_excl_m
+                    JOIN ex_excl_m.muscles m_excl
+                    WHERE wv_excl_m.wod = w
+                    AND m_excl.id IN (:excl_muscle_ids)
+                )')
+                ->setParameter('excl_muscle_ids', $muscleExcludeIds);
+        }
+
+        if (!empty($muscleGroupExcludeIds)) {
+            $qb->andWhere('NOT EXISTS (
+                    SELECT 1 FROM ' . WodVariantExercise::class . ' wve_excl_mg
+                    JOIN wve_excl_mg.wodVariant wv_excl_mg
+                    JOIN wve_excl_mg.exercise ex_excl_mg
+                    JOIN ex_excl_mg.muscles m_excl_mg
+                    JOIN m_excl_mg.muscleGroup mg_excl
+                    WHERE wv_excl_mg.wod = w
+                    AND mg_excl.id IN (:excl_muscle_group_ids)
+                )')
+                ->setParameter('excl_muscle_group_ids', $muscleGroupExcludeIds);
+        }
+
+        if (!empty($muscleAreaExcludeIds)) {
+            $qb->andWhere('NOT EXISTS (
+                    SELECT 1 FROM ' . WodVariantExercise::class . ' wve_excl_ma
+                    JOIN wve_excl_ma.wodVariant wv_excl_ma
+                    JOIN wve_excl_ma.exercise ex_excl_ma
+                    JOIN ex_excl_ma.muscles m_excl_ma
+                    JOIN m_excl_ma.muscleArea ma_excl
+                    WHERE wv_excl_ma.wod = w
+                    AND ma_excl.id IN (:excl_muscle_area_ids)
+                )')
+                ->setParameter('excl_muscle_area_ids', $muscleAreaExcludeIds);
+        }
+
+        if (!empty($muscleSegmentExcludeIds)) {
+            $qb->andWhere('NOT EXISTS (
+                    SELECT 1 FROM ' . WodVariantExercise::class . ' wve_excl_ms
+                    JOIN wve_excl_ms.wodVariant wv_excl_ms
+                    JOIN wve_excl_ms.exercise ex_excl_ms
+                    JOIN ex_excl_ms.muscleSegments ms_excl
+                    WHERE wv_excl_ms.wod = w
+                    AND ms_excl.id IN (:excl_muscle_segment_ids)
+                )')
+                ->setParameter('excl_muscle_segment_ids', $muscleSegmentExcludeIds);
         }
 
         // Sort

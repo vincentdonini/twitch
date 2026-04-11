@@ -36,18 +36,24 @@ class ContentExercise
     #[Groups([FrontGroupsEnum::CONTENT_EXERCISE_LIST])]
     private ?string $details = null;
 
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    #[Groups([FrontGroupsEnum::CONTENT_EXERCISE_LIST])]
+    private ?string $titlePlural = null;
+
     public function __construct(
         Exercise $exercise,
         string   $locale,
         string   $title,
         string   $summary,
-        ?string  $details = null
+        ?string  $details = null,
+        ?string  $titlePlural = null
     ) {
-        $this->exercise = $exercise;
-        $this->locale   = $locale;
-        $this->title    = $title;
-        $this->summary  = $summary;
-        $this->details  = $details;
+        $this->exercise    = $exercise;
+        $this->locale      = $locale;
+        $this->title       = $title;
+        $this->summary     = $summary;
+        $this->details     = $details;
+        $this->titlePlural = $titlePlural;
     }
 
     public function getId(): int
@@ -107,6 +113,17 @@ class ContentExercise
     public function setDetails(?string $details): self
     {
         $this->details = $details;
+        return $this;
+    }
+
+    public function getTitlePlural(): ?string
+    {
+        return $this->titlePlural;
+    }
+
+    public function setTitlePlural(?string $titlePlural): self
+    {
+        $this->titlePlural = $titlePlural;
         return $this;
     }
 }

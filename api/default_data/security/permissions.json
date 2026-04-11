@@ -86,25 +86,7 @@
     { "code": "PERMISSION_MUSCLE_EDIT", "label": "Modifier un muscle" },
     { "code": "PERMISSION_MUSCLE_DELETE", "label": "Supprimer un muscle" },
     { "code": "PERMISSION_CONTENT_MUSCLE_LIST", "label": "Lister les contents des muscles" },
-    { "code": "PERMISSION_CONTENT_MUSCLE_MANAGE", "label": "Manager les contents des muscles" },
-
-    { "code": "PERMISSION_MUSCLE_AREA_LIST", "label": "Lister les zones musculaires" },
-    { "code": "PERMISSION_MUSCLE_AREA_VIEW", "label": "Voir une zone musculaire" },
-    { "code": "PERMISSION_MUSCLE_AREA_MANAGE", "label": "Manager une zone musculaire" },
-    { "code": "PERMISSION_MUSCLE_AREA_CREATE", "label": "Créer une zone musculaire" },
-    { "code": "PERMISSION_MUSCLE_AREA_EDIT", "label": "Modifier une zone musculaire" },
-    { "code": "PERMISSION_MUSCLE_AREA_DELETE", "label": "Supprimer une zone musculaire" },
-    { "code": "PERMISSION_CONTENT_MUSCLE_AREA_LIST", "label": "Lister les contents des zones musculaires" },
-    { "code": "PERMISSION_CONTENT_MUSCLE_AREA_MANAGE", "label": "Manager les contents des zones musculaires" },
-
-    { "code": "PERMISSION_MUSCLE_GROUP_LIST", "label": "Lister les groupes musculaires" },
-    { "code": "PERMISSION_MUSCLE_GROUP_VIEW", "label": "Voir un groupe musculaire" },
-    { "code": "PERMISSION_MUSCLE_GROUP_MANAGE", "label": "Manager un groupe musculaire" },
-    { "code": "PERMISSION_MUSCLE_GROUP_CREATE", "label": "Créer un groupe musculaire" },
-    { "code": "PERMISSION_MUSCLE_GROUP_EDIT", "label": "Modifier un groupe musculaire" },
-    { "code": "PERMISSION_MUSCLE_GROUP_DELETE", "label": "Supprimer un groupe musculaire" },
-    { "code": "PERMISSION_CONTENT_MUSCLE_GROUP_LIST", "label": "Lister les contents des groupes musculaires" },
-    { "code": "PERMISSION_CONTENT_MUSCLE_GROUP_MANAGE", "label": "Manager les contents des groupes musculaires" }
+    { "code": "PERMISSION_CONTENT_MUSCLE_MANAGE", "label": "Manager les contents des muscles" }
   ],
 
   "FORMULA": [

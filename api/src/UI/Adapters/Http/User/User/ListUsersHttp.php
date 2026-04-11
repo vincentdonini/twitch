@@ -14,6 +14,7 @@ final readonly class ListUsersHttp implements ListUsersDTOInterface
         private ?int              $limit = null,
         private ?FilterCollection $filters = null,
         private ?SortCollection   $sorts = null,
+        private string            $search = '',
     ) {
 
     }
@@ -36,5 +37,10 @@ final readonly class ListUsersHttp implements ListUsersDTOInterface
     public function getSorts(): ?SortCollection
     {
         return $this->sorts;
+    }
+
+    public function getSearch(): string
+    {
+        return $this->search;
     }
 }

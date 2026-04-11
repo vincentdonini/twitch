@@ -21,6 +21,10 @@ final class WodFilterRules
         'wodVariants.wodVariantExercises.exercise.id'                      => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
         'wodVariants.wodVariantExercises.exercise.exerciseCategory.id'     => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
         'wodVariants.wodVariantExercises.exercise.equipment.id'            => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
+        'wodVariants.wodVariantExercises.exercise.muscles.id'                           => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
+        'wodVariants.wodVariantExercises.exercise.muscles.muscleGroup.id'               => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
+        'wodVariants.wodVariantExercises.exercise.muscles.muscleGroup.muscleArea.id'    => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
+        'wodVariants.wodVariantExercises.exercise.muscleSegments.id'                    => [Operator::EQ, Operator::NEQ, Operator::IN, Operator::NOT_IN],
     ];
 
     public const PUBLIC_FIELDS = [
@@ -38,5 +42,9 @@ final class WodFilterRules
         'wodVariants.wodVariantExercises.exercise.id',
         'wodVariants.wodVariantExercises.exercise.exerciseCategory.id',
         'wodVariants.wodVariantExercises.exercise.equipment.id',
+        'wodVariants.wodVariantExercises.exercise.muscles.id',
+        'wodVariants.wodVariantExercises.exercise.muscles.muscleGroup.id',
+        'wodVariants.wodVariantExercises.exercise.muscles.muscleGroup.muscleArea.id',
+        'wodVariants.wodVariantExercises.exercise.muscleSegments.id',
     ];
 }

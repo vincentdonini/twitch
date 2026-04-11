@@ -3,6 +3,7 @@
 namespace App\Domain\Organization\Ports;
 
 use App\Domain\Organization\Entity\Place;
+use App\Domain\User\Entity\User;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Filters\FilterCollection;
 use App\Infrastructure\Paginator\RequestPaginator;
@@ -21,4 +22,7 @@ interface PlaceDALInterface
     ): LightPaginator;
 
     public function countPlaces(): int;
+
+    /** @return Place[] */
+    public function findByCoach(User $user): array;
 }

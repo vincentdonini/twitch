@@ -1,166 +1,46 @@
 [
   {
+    "slug": "upper-body",
+    "contents": {
+      "fr": {
+        "title": "Haut du corps",
+        "summary": "Ensemble des muscles situés au-dessus de la taille, impliqués dans les mouvements de poussée, de tirage et de stabilisation.",
+        "details": ""
+      },
+      "en": {
+        "title": "Upper Body",
+        "summary": "All muscles above the waist involved in pushing, pulling and stabilization movements.",
+        "details": ""
+      }
+    }
+  },
+  {
     "slug": "core",
     "contents": {
       "fr": {
-        "title": "Ceinture abdominale",
-        "summary": "Muscles de l’abdomen et du bas du dos qui stabilisent la colonne vertébrale et le bassin.",
-        "details": "## Description de la zone musculaire\n\nLa **ceinture abdominale** désigne l’ensemble des muscles situés à l’avant, sur les côtés et à l’arrière du tronc. Elle comprend principalement les **abdominaux (grand droit, obliques, transverse)** et certains muscles lombaires qui contribuent au maintien et à la stabilité du bassin et de la colonne vertébrale.\n\n## Rôle et importance\n\n- Stabilisation du tronc et de la colonne vertébrale.\n- Transmission de la force entre le haut et le bas du corps.\n- Protection des organes internes.\n- Maintien de la posture et prévention des douleurs lombaires.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Indispensable pour tous les mouvements fonctionnels : courir, sauter, soulever.\n- Améliore la performance dans les sports nécessitant puissance, rotation ou explosivité (arts martiaux, tennis, athlétisme).\n- Aide à protéger la colonne lors des efforts physiques intenses et dans les tâches quotidiennes (porter, se pencher, se relever).\n\n## Exercices associés\n\n- Gainage (planche, side plank).\n- Crunchs, relevés de jambes, sit-ups.\n- Roulettes abdominales, relevés de bassin.\n- Travail des lombaires : extensions, superman.\n\n## Conclusion\n\nUn renforcement équilibré de la **ceinture abdominale** est essentiel pour la **stabilité, la performance sportive et la santé du dos**. Elle constitue le véritable centre de puissance du corps humain."
+        "title": "Core",
+        "summary": "Muscles profonds et superficiels du tronc assurant la stabilisation du rachis et le transfert de force entre le haut et le bas du corps.",
+        "details": ""
       },
       "en": {
         "title": "Core",
-        "summary": "Muscles in the abdominal and lower back region that stabilize the spine and pelvis.",
-        "details": "## Muscle Area Description\n\nThe **core** refers to the collection of muscles located in the front, sides, and back of the trunk. It mainly includes the **abdominals (rectus abdominis, obliques, transverse abdominis)** as well as lower back muscles that help maintain and stabilize the pelvis and spine.\n\n## Role and Importance\n\n- Stabilizes the trunk and spine.\n- Transfers force between upper and lower body.\n- Protects internal organs.\n- Maintains posture and helps prevent lower back pain.\n\n## Function in Sports and Daily Life\n\n- Essential for all functional movements: running, jumping, lifting.\n- Enhances performance in sports requiring power, rotation, or explosiveness (martial arts, tennis, track & field).\n- Protects the spine during heavy physical effort and daily tasks (carrying, bending, getting up).\n\n## Associated Exercises\n\n- Planks (front and side).\n- Crunches, leg raises, sit-ups.\n- Ab rollouts, hip lifts.\n- Lower back work: back extensions, superman.\n\n## Conclusion\n\nStrengthening the **core** is vital for **stability, athletic performance, and back health**. It represents the true powerhouse of the human body."
+        "summary": "Deep and superficial trunk muscles responsible for spinal stabilization and force transfer between upper and lower body.",
+        "details": ""
       }
     }
   },
   {
-    "slug": "arms",
+    "slug": "lower-body",
     "contents": {
       "fr": {
-        "title": "Bras",
-        "summary": "Inclut les biceps, triceps et avant-bras — responsables des mouvements du coude et de la force de préhension.",
-        "details": "## Description de la zone musculaire\n\nLes **muscles des bras** regroupent principalement les **biceps, triceps et muscles de l’avant-bras**. Ils interviennent dans la flexion et l’extension du coude, mais aussi dans la mobilité et la force de la main et du poignet. Ils jouent un rôle clé dans la puissance du haut du corps et dans de nombreux mouvements fonctionnels.\n\n## Rôle et importance\n\n- Flexion et extension du coude.\n- Force de préhension et maintien des objets.\n- Transmission de la force entre l’épaule et la main.\n- Participation à la puissance des mouvements de poussée et de tirage.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Indispensables pour soulever, pousser, tirer ou lancer.\n- Sollicités dans la musculation, l’escalade, les sports de raquette et de combat.\n- Essentiels dans les gestes quotidiens : porter des charges, ouvrir des objets, tirer ou pousser des portes.\n\n## Exercices associés\n\n- Biceps : curls avec haltères ou barre, tractions.\n- Triceps : dips, extensions à la poulie, pompes serrées.\n- Avant-bras : farmer’s walk, wrist curls, exercices de grip.\n\n## Conclusion\n\nRenforcer les **bras** permet d’améliorer la **force globale du haut du corps, la performance sportive et la fonctionnalité au quotidien**."
+        "title": "Bas du corps",
+        "summary": "Muscles des membres inférieurs et des hanches responsables de la locomotion, de la puissance et de la stabilité.",
+        "details": ""
       },
       "en": {
-        "title": "Arms",
-        "summary": "Includes biceps, triceps, and forearms — responsible for elbow movement and grip strength.",
-        "details": "## Muscle Area Description\n\nThe **arm muscles** mainly include the **biceps, triceps, and forearm muscles**. They are responsible for elbow flexion and extension, as well as hand and wrist strength and mobility. They play a key role in upper-body power and in many functional movements.\n\n## Role and Importance\n\n- Elbow flexion and extension.\n- Grip strength and object handling.\n- Transfers force between the shoulder and the hand.\n- Contributes to pushing and pulling strength.\n\n## Function in Sports and Daily Life\n\n- Essential for lifting, pushing, pulling, and throwing.\n- Involved in weight training, climbing, racket sports, and combat sports.\n- Crucial in daily actions such as carrying loads, opening objects, or pushing/pulling doors.\n\n## Associated Exercises\n\n- Biceps: dumbbell or barbell curls, pull-ups.\n- Triceps: dips, cable extensions, close-grip push-ups.\n- Forearms: farmer’s walk, wrist curls, grip exercises.\n\n## Conclusion\n\nStrengthening the **arms** improves **overall upper-body strength, athletic performance, and daily functionality**."
-      }
-    }
-  },
-  {
-    "slug": "shoulders",
-    "contents": {
-      "fr": {
-        "title": "Épaules",
-        "summary": "Muscles deltoïdes qui contrôlent les mouvements de l’épaule et la rotation du bras supérieur.",
-        "details": "## Description de la zone musculaire\n\nLes **muscles des épaules** sont principalement constitués des **deltoïdes** (antérieur, latéral et postérieur). Ils enveloppent l’articulation de l’épaule et permettent une grande variété de mouvements du bras. Les épaules sont un pivot essentiel reliant le torse aux bras.\n\n## Rôle et importance\n\n- Abduction, flexion, extension et rotation du bras.\n- Stabilité de l’articulation de l’épaule.\n- Transmission de la force entre le tronc et les membres supérieurs.\n- Contribution majeure à la puissance et à l’esthétique du haut du corps.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Indispensables pour pousser, tirer et lever des objets au-dessus de la tête.\n- Sollicités dans la musculation (développés, élévations), les sports de lancer, de combat et de raquette.\n- Importants pour la posture et la prévention des blessures de l’épaule.\n\n## Exercices associés\n\n- Deltoïde antérieur : développé militaire, pompes, développé couché incliné.\n- Deltoïde latéral : élévations latérales, tirages menton.\n- Deltoïde postérieur : reverse fly, rowing inversé, face pulls.\n\n## Conclusion\n\nRenforcer les **épaules** permet d’améliorer la **puissance, la mobilité et la stabilité du haut du corps**, tout en contribuant à une silhouette équilibrée."
-      },
-      "en": {
-        "title": "Shoulders",
-        "summary": "Deltoid muscles that control shoulder motion and upper arm rotation.",
-        "details": "## Muscle Area Description\n\nThe **shoulder muscles** are primarily made up of the **deltoids** (anterior, lateral, and posterior). They cover the shoulder joint and enable a wide range of arm movements. Shoulders are a crucial link between the torso and the arms.\n\n## Role and Importance\n\n- Arm abduction, flexion, extension, and rotation.\n- Stabilization of the shoulder joint.\n- Transfer of force between the trunk and upper limbs.\n- Major contributor to upper-body strength and aesthetics.\n\n## Function in Sports and Daily Life\n\n- Essential for pushing, pulling, and lifting objects overhead.\n- Engaged in weight training (presses, raises), throwing sports, combat, and racket sports.\n- Important for posture and shoulder injury prevention.\n\n## Associated Exercises\n\n- Anterior deltoid: overhead press, push-ups, incline bench press.\n- Lateral deltoid: lateral raises, upright rows.\n- Posterior deltoid: reverse fly, inverted rows, face pulls.\n\n## Conclusion\n\nStrengthening the **shoulders** enhances **power, mobility, and upper-body stability**, while contributing to a well-balanced physique."
-      }
-    }
-  },
-  {
-    "slug": "back",
-    "contents": {
-      "fr": {
-        "title": "Dos",
-        "summary": "Inclut les muscles du haut, du milieu et du bas du dos comme les dorsaux et les trapèzes, essentiels aux mouvements de tirage.",
-        "details": "## Description de la zone musculaire\n\nLe **dos** est une zone musculaire complexe composée de plusieurs couches de muscles. Les principaux sont le **grand dorsal**, les **trapèzes**, les **rhomboïdes**, les **érecteurs du rachis** et les muscles plus profonds responsables de la stabilité de la colonne vertébrale.\n\n## Rôle et importance\n\n- Permet les mouvements de tirage (tractions, rameurs, soulevés).\n- Stabilise et protège la colonne vertébrale.\n- Contribue à la posture et à l’équilibre du haut du corps.\n- Participe aux mouvements d’extension, de rotation et de flexion latérale du tronc.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Indispensable pour soulever, tirer et maintenir une bonne posture.\n- Sollicité dans de nombreux sports : natation, aviron, escalade, arts martiaux, musculation.\n- Joue un rôle clé dans la prévention des douleurs lombaires et des déséquilibres posturaux.\n\n## Exercices associés\n\n- Haut du dos : tractions, tirages horizontaux, rowing.\n- Milieu du dos : tirage poulie, shrugs, reverse fly.\n- Bas du dos : soulevé de terre, extensions lombaires, good mornings.\n\n## Conclusion\n\nUn **dos fort** améliore la **force fonctionnelle, la posture et la stabilité** du corps tout entier, en plus d’apporter une silhouette en V caractéristique."
-      },
-      "en": {
-        "title": "Back",
-        "summary": "Includes upper, middle, and lower back muscles like lats and traps, essential for pulling movements.",
-        "details": "## Muscle Area Description\n\nThe **back** is a complex muscle area composed of several layers of muscles. The main ones include the **latissimus dorsi**, **trapezius**, **rhomboids**, **erector spinae**, and deeper muscles responsible for spinal stability.\n\n## Role and Importance\n\n- Enables pulling movements (pull-ups, rows, deadlifts).\n- Stabilizes and protects the spine.\n- Contributes to posture and upper-body balance.\n- Assists in trunk extension, rotation, and lateral flexion.\n\n## Function in Sports and Daily Life\n\n- Essential for lifting, pulling, and maintaining proper posture.\n- Engaged in sports such as swimming, rowing, climbing, martial arts, and weight training.\n- Plays a key role in preventing lower back pain and postural imbalances.\n\n## Associated Exercises\n\n- Upper back: pull-ups, horizontal rows, rowing exercises.\n- Middle back: cable rows, shrugs, reverse fly.\n- Lower back: deadlifts, back extensions, good mornings.\n\n## Conclusion\n\nA strong **back** enhances **functional strength, posture, and full-body stability**, while contributing to a V-shaped upper body."
-      }
-    }
-  },
-  {
-    "slug": "chest",
-    "contents": {
-      "fr": {
-        "title": "Poitrine",
-        "summary": "Muscles pectoraux supérieurs, moyens et inférieurs, responsables des mouvements de poussée.",
-        "details": "## Description de la zone musculaire\n\nLa **poitrine** comprend le **grand pectoral** et le **petit pectoral**, qui permettent les mouvements de poussée et de rotation du bras. Le grand pectoral est subdivisé en parties supérieures, moyennes et inférieures.\n\n## Rôle et importance\n\n- Poussée horizontale et verticale.\n- Stabilisation de l’épaule et du bras.\n- Esthétique du haut du corps.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Développé couché, pompes et mouvements fonctionnels.\n- Sollicité dans les sports de lancer, natation, gymnastique.\n\n## Exercices associés\n\n- Développé couché, écartés, dips.\n- Développé incliné et décliné.\n\n## Conclusion\n\nRenforcer la **poitrine** améliore la **force de poussée, la stabilité de l’épaule et l’esthétique du torse**."
-      },
-      "en": {
-        "title": "Chest",
-        "summary": "Upper, middle, and lower pectoral muscles responsible for pushing movements.",
-        "details": "## Muscle Area Description\n\nThe **chest** includes the **pectoralis major** and **pectoralis minor**, which enable pushing and arm rotation movements. The pectoralis major is subdivided into upper, middle, and lower portions.\n\n## Role and Importance\n\n- Horizontal and vertical pushing.\n- Shoulder and arm stabilization.\n- Upper-body aesthetics.\n\n## Function in Sports and Daily Life\n\n- Bench press, push-ups, and functional movements.\n- Engaged in throwing sports, swimming, gymnastics.\n\n## Associated Exercises\n\n- Bench press, flyes, dips.\n- Incline and decline presses.\n\n## Conclusion\n\nStrengthening the **chest** improves **pushing strength, shoulder stability, and torso aesthetics**."
-      }
-    }
-  },
-  {
-    "slug": "glutes",
-    "contents": {
-      "fr": {
-        "title": "Fessiers",
-        "summary": "Muscles fessiers majeurs et moyens, principaux moteurs de l’extension et de la rotation de la hanche.",
-        "details": "## Description de la zone musculaire\n\nLes **fessiers** regroupent le **grand fessier, moyen fessier et petit fessier**. Ils sont responsables de l’extension, de l’abduction et de la rotation de la hanche.\n\n## Rôle et importance\n\n- Propulsion dans la marche, la course et le saut.\n- Stabilisation du bassin.\n- Forme et esthétique des hanches.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Marche, course, escalade, sports nécessitant des sauts.\n- Prévention des blessures lombaires.\n\n## Exercices associés\n\n- Squats, fentes, hip thrusts, ponts.\n\n## Conclusion\n\nDes **fessiers forts** améliorent la **puissance, la posture et la prévention des blessures**."
-      },
-      "en": {
-        "title": "Glutes",
-        "summary": "Gluteus maximus and medius, main drivers of hip extension and rotation.",
-        "details": "## Muscle Area Description\n\nThe **glutes** include the **gluteus maximus, medius, and minimus**. They are responsible for hip extension, abduction, and rotation.\n\n## Role and Importance\n\n- Propulsion in walking, running, and jumping.\n- Pelvic stabilization.\n- Hip shape and aesthetics.\n\n## Function in Sports and Daily Life\n\n- Walking, running, climbing, jumping sports.\n- Prevents lower back injuries.\n\n## Associated Exercises\n\n- Squats, lunges, hip thrusts, glute bridges.\n\n## Conclusion\n\nStrong **glutes** enhance **power, posture, and injury prevention**."
-      }
-    }
-  },
-  {
-    "slug": "hamstrings",
-    "contents": {
-      "fr": {
-        "title": "Ischio-jambiers",
-        "summary": "Muscles postérieurs de la cuisse, responsables de la flexion du genou et de l’extension de la hanche.",
-        "details": "## Description de la zone musculaire\n\nLes **ischio-jambiers** regroupent le **biceps fémoral, semi-tendineux et semi-membraneux**. Ils relient le bassin au tibia et à la fibula.\n\n## Rôle et importance\n\n- Flexion du genou.\n- Extension de la hanche.\n- Stabilisation du bassin et du genou.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Course, saut, sprints.\n- Prévention des blessures du genou et des muscles postérieurs.\n\n## Exercices associés\n\n- Leg curls, deadlifts, good mornings, fentes.\n\n## Conclusion\n\nDes **ischio-jambiers solides** favorisent **la performance sportive et la stabilité du bas du corps**."
-      },
-      "en": {
-        "title": "Hamstrings",
-        "summary": "Posterior thigh muscles responsible for knee flexion and hip extension.",
-        "details": "## Muscle Area Description\n\nThe **hamstrings** include the **biceps femoris, semitendinosus, and semimembranosus**. They connect the pelvis to the tibia and fibula.\n\n## Role and Importance\n\n- Knee flexion.\n- Hip extension.\n- Stabilization of the pelvis and knee.\n\n## Function in Sports and Daily Life\n\n- Running, jumping, sprints.\n- Prevents knee and posterior muscle injuries.\n\n## Associated Exercises\n\n- Leg curls, deadlifts, good mornings, lunges.\n\n## Conclusion\n\nStrong **hamstrings** enhance **sports performance and lower-body stability**."
-      }
-    }
-  },
-  {
-    "slug": "quadriceps",
-    "contents": {
-      "fr": {
-        "title": "Quadriceps",
-        "summary": "Muscles antérieurs de la cuisse, principaux moteurs de l’extension du genou.",
-        "details": "## Description de la zone musculaire\n\nLes **quadriceps** comprennent le **droit fémoral, vaste latéral, vaste médial et vaste intermédiaire**.\n\n## Rôle et importance\n\n- Extension du genou.\n- Stabilisation de la jambe et du genou.\n- Contribution à la puissance de course et de saut.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Course, saut, montée d’escaliers.\n- Activités quotidiennes : se lever, marcher, courir.\n\n## Exercices associés\n\n- Squats, leg press, fentes, extensions de jambes.\n\n## Conclusion\n\nRenforcer les **quadriceps** améliore la **force, l’explosivité et la protection du genou**."
-      },
-      "en": {
-        "title": "Quadriceps",
-        "summary": "Anterior thigh muscles, main drivers of knee extension.",
-        "details": "## Muscle Area Description\n\nThe **quadriceps** include the **rectus femoris, vastus lateralis, vastus medialis, and vastus intermedius**.\n\n## Role and Importance\n\n- Knee extension.\n- Stabilization of the leg and knee.\n- Contributes to running and jumping power.\n\n## Function in Sports and Daily Life\n\n- Running, jumping, stair climbing.\n- Daily activities: standing, walking, running.\n\n## Associated Exercises\n\n- Squats, leg press, lunges, leg extensions.\n\n## Conclusion\n\nStrengthening the **quadriceps** enhances **strength, explosiveness, and knee protection**."
-      }
-    }
-  },
-  {
-    "slug": "calves",
-    "contents": {
-      "fr": {
-        "title": "Mollets",
-        "summary": "Muscles postérieurs de la jambe, essentiels à la propulsion et à l’équilibre.",
-        "details": "## Description de la zone musculaire\n\nLes **mollets** incluent le **gastrocnémien** et le **soléaire**.\n\n## Rôle et importance\n\n- Flexion plantaire du pied.\n- Propulsion lors de la marche, course et saut.\n- Stabilisation de la cheville.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Course, saut, sports d’endurance.\n- Maintien de l’équilibre debout.\n\n## Exercices associés\n\n- Élévations sur pointe, sauts, sprint.\n\n## Conclusion\n\nDes **mollets forts** améliorent **la propulsion, l’endurance et l’équilibre**."
-      },
-      "en": {
-        "title": "Calves",
-        "summary": "Posterior lower leg muscles essential for propulsion and balance.",
-        "details": "## Muscle Area Description\n\nThe **calves** include the **gastrocnemius** and **soleus**.\n\n## Role and Importance\n\n- Plantar flexion of the foot.\n- Propulsion during walking, running, and jumping.\n- Ankle stabilization.\n\n## Function in Sports and Daily Life\n\n- Running, jumping, endurance sports.\n- Maintaining balance while standing.\n\n## Associated Exercises\n\n- Calf raises, jumps, sprints.\n\n## Conclusion\n\nStrong **calves** enhance **propulsion, endurance, and balance**."
-      }
-    }
-  },
-  {
-    "slug": "adductors",
-    "contents": {
-      "fr": {
-        "title": "Adducteurs",
-        "summary": "Muscles internes de la cuisse, responsables de l’adduction de la jambe.",
-        "details": "## Description de la zone musculaire\n\nLes **adducteurs** regroupent le **long adducteur, court adducteur, grand adducteur et gracile**.\n\n## Rôle et importance\n\n- Ramener la jambe vers l’axe du corps.\n- Stabilisation du bassin.\n- Coordination des mouvements latéraux.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Sports de côté : football, hockey, tennis.\n- Prévention des blessures internes de la cuisse.\n\n## Exercices associés\n\n- Adduction à la machine, fentes latérales, squats sumo.\n\n## Conclusion\n\nRenforcer les **adducteurs** améliore **la stabilité, la coordination et la prévention des blessures**."
-      },
-      "en": {
-        "title": "Adductors",
-        "summary": "Inner thigh muscles responsible for leg adduction.",
-        "details": "## Muscle Area Description\n\nThe **adductors** include the **adductor longus, adductor brevis, adductor magnus, and gracilis**.\n\n## Role and Importance\n\n- Pull the leg toward the body's midline.\n- Pelvic stabilization.\n- Coordination of lateral movements.\n\n## Function in Sports and Daily Life\n\n- Side-to-side sports: soccer, hockey, tennis.\n- Prevents inner thigh injuries.\n\n## Associated Exercises\n\n- Machine adduction, lateral lunges, sumo squats.\n\n## Conclusion\n\nStrengthening the **adductors** improves **stability, coordination, and injury prevention**."
-      }
-    }
-  },
-  {
-    "slug": "lower-leg",
-    "contents": {
-      "fr": {
-        "title": "Jambes inférieures",
-        "summary": "Muscles antérieurs de la jambe, principalement le tibial antérieur, impliqués dans la flexion dorsale du pied.",
-        "details": "## Description de la zone musculaire\n\nLa **jambe inférieure** comprend le **tibial antérieur**, le **long extenseur des orteils** et d’autres muscles responsables du mouvement du pied.\n\n## Rôle et importance\n\n- Flexion dorsale du pied.\n- Stabilisation de la cheville.\n- Amortissement à la marche et course.\n\n## Fonction dans le sport et la vie quotidienne\n\n- Course, saut, sports nécessitant agilité.\n- Maintien de la posture et prévention des entorses.\n\n## Exercices associés\n\n- Flexion dorsale avec élastique, marches sur talons, exercices de mobilité.\n\n## Conclusion\n\nRenforcer les **muscles de la jambe inférieure** améliore **l’équilibre, l’agilité et la prévention des blessures**."
-      },
-      "en": {
-        "title": "Lower Leg",
-        "summary": "Anterior lower leg muscles, mainly the tibialis anterior, involved in dorsiflexion of the foot.",
-        "details": "## Muscle Area Description\n\nThe **lower leg** includes the **tibialis anterior**, **extensor digitorum longus**, and other muscles responsible for foot movement.\n\n## Role and Importance\n\n- Foot dorsiflexion.\n- Ankle stabilization.\n- Shock absorption during walking and running.\n\n## Function in Sports and Daily Life\n\n- Running, jumping, agility sports.\n- Maintains posture and prevents ankle sprains.\n\n## Associated Exercises\n\n- Dorsiflexion with resistance band, heel walks, mobility exercises.\n\n## Conclusion\n\nStrengthening the **lower leg muscles** enhances **balance, agility, and injury prevention**."
+        "title": "Lower Body",
+        "summary": "Muscles of the lower limbs and hips responsible for locomotion, power and stability.",
+        "details": ""
       }
     }
   }

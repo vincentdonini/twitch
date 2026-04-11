@@ -15,6 +15,12 @@ interface SubscriptionDALInterface
 {
     public function getById(Uuid $id): ?Subscription;
 
+    public function listByPlaceId(
+        Uuid              $placeId,
+        int               $page = 1,
+        int               $limit = RequestPaginator::DEFAULT_LIMIT,
+    ): LightPaginator;
+
     public function listSubscriptionsByPlaceIdByFormulaId(
         Uuid              $placeId,
         Uuid              $formulaId,
@@ -25,4 +31,7 @@ interface SubscriptionDALInterface
     ): LightPaginator;
 
     public function findExistingForUserAndFormula(User $user, Formula $formula): ?Subscription;
+
+    /** @return Subscription[] */
+    public function findActiveByUser(User $user): array;
 }

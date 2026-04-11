@@ -50,6 +50,11 @@ class MuscleGroupDTO
     ])]
     public MuscleAreaDTO $muscleArea;
 
+    #[Groups([
+        FrontGroupsEnum::MUSCLE_GROUP_LIST, FrontGroupsEnum::MUSCLE_GROUP_DETAIL,
+    ])]
+    public int $wodCount = 0;
+
     public function __construct(
         Uuid          $id,
         string        $slug,
@@ -57,6 +62,7 @@ class MuscleGroupDTO
         string        $summary,
         string        $details,
         MuscleAreaDTO $muscleArea,
+        int           $wodCount = 0,
     ) {
         $this->id         = $id;
         $this->slug       = $slug;
@@ -64,5 +70,6 @@ class MuscleGroupDTO
         $this->summary    = $summary;
         $this->details    = $details;
         $this->muscleArea = $muscleArea;
+        $this->wodCount   = $wodCount;
     }
 }

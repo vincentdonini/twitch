@@ -4,6 +4,7 @@ namespace App\Infrastructure\Doctrine\Repository\Organization;
 
 use App\Domain\Organization\Entity\Place;
 use App\Domain\Organization\Ports\PlaceDALInterface;
+use App\Domain\User\Entity\User;
 use App\Infrastructure\Doctrine\Filters\DoctrineFilterApplier;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
@@ -88,6 +89,16 @@ class PlaceRepository extends AbstractEntityRepository implements PlaceDALInterf
             $page,
             $limit,
         );
+    }
+
+    public function findByCoach(User $user): array
+    {
+        return $this->createQueryBuilder('p')
+            ->innerJoin('p.users', 'u')
+            ->where('u.id = :userId')
+            ->setParameter('userId', $user->getId()->toBinary())
+            ->getQuery()
+            ->getResult();
     }
 
     public function countPlaces(): int

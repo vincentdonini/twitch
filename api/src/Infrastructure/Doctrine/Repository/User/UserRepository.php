@@ -50,23 +50,14 @@ class UserRepository extends AbstractEntityRepository implements UserDALInterfac
         int               $limit = RequestPaginator::DEFAULT_LIMIT,
         ?FilterCollection $filters = null,
         ?SortCollection   $sorts = null,
+        string            $search = '',
     ): LightPaginator {
         $qb = $this->createQueryBuilder('u');
-        if (!empty($filters['filters'])) {
 
-            // User
-            // ---------------------------------------------------------------------------------------------------------
-            if (!empty($filters['filters']['slug'])) {
-                $qb
-                    ->andWhere('u.slug LIKE :slug')
-                    ->setParameter(
-                        'slug',
-                        sprintf(
-                            '%%%s%%',
-                            $filters['filters']['slug']
-                        )
-                    );
-            }
+        if ($search !== '') {
+            $qb
+                ->andWhere('u.email LIKE :search OR u.firstName LIKE :search OR u.lastName LIKE :search')
+                ->setParameter('search', '%' . $search . '%');
         }
 
         $aggQb     = clone $qb;

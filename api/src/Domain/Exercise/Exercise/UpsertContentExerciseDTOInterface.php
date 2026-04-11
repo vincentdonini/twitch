@@ -15,4 +15,6 @@ interface UpsertContentExerciseDTOInterface
     public function getSummary(): ?string;
 
     public function getDetails(): ?string;
+
+    public function getTitlePlural(): ?string;
 }

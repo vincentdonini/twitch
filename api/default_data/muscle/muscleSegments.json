@@ -1,0 +1,162 @@
+[
+  {
+    "slug": "anterior-deltoid",
+    "muscle": "deltoid",
+    "contents": {
+      "fr": {
+        "title": "Deltoïde antérieur",
+        "summary": "Chef antérieur du deltoïde impliqué dans la flexion et la rotation interne du bras.",
+        "details": ""
+      },
+      "en": {
+        "title": "Anterior Deltoid",
+        "summary": "Front head of the deltoid involved in arm flexion and internal rotation.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "lateral-deltoid",
+    "muscle": "deltoid",
+    "contents": {
+      "fr": {
+        "title": "Deltoïde latéral",
+        "summary": "Chef latéral du deltoïde responsable de l'abduction du bras.",
+        "details": ""
+      },
+      "en": {
+        "title": "Lateral Deltoid",
+        "summary": "Middle head of the deltoid responsible for arm abduction.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "posterior-deltoid",
+    "muscle": "deltoid",
+    "contents": {
+      "fr": {
+        "title": "Deltoïde postérieur",
+        "summary": "Chef postérieur du deltoïde impliqué dans l'extension et la rotation externe du bras.",
+        "details": ""
+      },
+      "en": {
+        "title": "Posterior Deltoid",
+        "summary": "Rear head of the deltoid involved in arm extension and external rotation.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "long-head",
+    "muscle": "biceps-brachii",
+    "contents": {
+      "fr": {
+        "title": "Long chef du biceps",
+        "summary": "Chef externe du biceps brachial passant dans la gouttière bicipitale.",
+        "details": ""
+      },
+      "en": {
+        "title": "Long Head (Biceps)",
+        "summary": "Outer head of the biceps brachii passing through the bicipital groove.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "short-head",
+    "muscle": "biceps-brachii",
+    "contents": {
+      "fr": {
+        "title": "Court chef du biceps",
+        "summary": "Chef interne du biceps brachial s'insérant sur le processus coracoïde.",
+        "details": ""
+      },
+      "en": {
+        "title": "Short Head (Biceps)",
+        "summary": "Inner head of the biceps brachii inserting on the coracoid process.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "long-head",
+    "muscle": "triceps-brachii",
+    "contents": {
+      "fr": {
+        "title": "Long chef du triceps",
+        "summary": "Seul chef du triceps croisant l'articulation de l'épaule, impliqué dans l'extension et l'adduction.",
+        "details": ""
+      },
+      "en": {
+        "title": "Long Head (Triceps)",
+        "summary": "Only triceps head crossing the shoulder joint, involved in extension and adduction.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "lateral-head",
+    "muscle": "triceps-brachii",
+    "contents": {
+      "fr": {
+        "title": "Chef latéral du triceps",
+        "summary": "Chef externe du triceps très visible lors de l'extension du coude.",
+        "details": ""
+      },
+      "en": {
+        "title": "Lateral Head (Triceps)",
+        "summary": "Outer head of the triceps, highly visible during elbow extension.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "medial-head",
+    "muscle": "triceps-brachii",
+    "contents": {
+      "fr": {
+        "title": "Chef médial du triceps",
+        "summary": "Chef profond du triceps actif dans toute la plage d'extension du coude.",
+        "details": ""
+      },
+      "en": {
+        "title": "Medial Head (Triceps)",
+        "summary": "Deep head of the triceps active throughout the full range of elbow extension.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "upper-abs",
+    "muscle": "rectus-abdominis",
+    "contents": {
+      "fr": {
+        "title": "Abdominaux supérieurs",
+        "summary": "Zone supérieure du droit abdominal sollicitée lors des mouvements de flexion du tronc.",
+        "details": ""
+      },
+      "en": {
+        "title": "Upper Abs",
+        "summary": "Upper zone of the rectus abdominis engaged during trunk flexion movements.",
+        "details": ""
+      }
+    }
+  },
+  {
+    "slug": "lower-abs",
+    "muscle": "rectus-abdominis",
+    "contents": {
+      "fr": {
+        "title": "Abdominaux inférieurs",
+        "summary": "Zone inférieure du droit abdominal sollicitée lors des relevés de jambes et mouvements du bassin.",
+        "details": ""
+      },
+      "en": {
+        "title": "Lower Abs",
+        "summary": "Lower zone of the rectus abdominis engaged during leg raises and pelvic movements.",
+        "details": ""
+      }
+    }
+  }
+]

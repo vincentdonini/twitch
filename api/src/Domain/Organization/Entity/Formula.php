@@ -71,7 +71,7 @@ class Formula
     private ?int $totalSessions = null;
 
     #[ORM\Column(type: 'integer', nullable: true)]
-    private ?int $validityInDays;
+    private ?int $validityInDays = null;
 
     #[ORM\Column(type: 'smallint', nullable: true)]
     private ?int $minAge = null;

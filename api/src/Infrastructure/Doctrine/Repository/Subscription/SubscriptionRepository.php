@@ -46,6 +46,31 @@ class SubscriptionRepository extends AbstractEntityRepository implements Subscri
         return $this->find($id);
     }
 
+    public function listByPlaceId(
+        Uuid $placeId,
+        int  $page = 1,
+        int  $limit = RequestPaginator::DEFAULT_LIMIT,
+    ): LightPaginator {
+        $qb = $this->createQueryBuilder('s')
+            ->where('s.place = :placeId')
+            ->setParameter('placeId', hex2bin(str_replace('-', '', (string)$placeId)))
+            ->orderBy('s.createdAt', 'DESC');
+
+        $aggQb = clone $qb;
+        $count = (int)$aggQb->select('COUNT(s.id) as count')
+            ->resetDQLPart('orderBy')
+            ->getQuery()
+            ->getSingleResult()['count'];
+
+        $items = $qb
+            ->setFirstResult(($page - 1) * $limit)
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+
+        return new LightPaginator($items, $count, $page, $limit);
+    }
+
     public function listSubscriptionsByPlaceIdByFormulaId(
         Uuid              $placeId,
         Uuid              $formulaId,
@@ -97,6 +122,20 @@ class SubscriptionRepository extends AbstractEntityRepository implements Subscri
             $page,
             $limit,
         );
+    }
+
+    public function findActiveByUser(User $user): array
+    {
+        return $this->createQueryBuilder('s')
+            ->where('s.user = :user')
+            ->andWhere('s.status IN (:statuses)')
+            ->setParameter('user', $user)
+            ->setParameter('statuses', [
+                SubscriptionStatusEnum::ACTIVE,
+                SubscriptionStatusEnum::PENDING,
+            ])
+            ->getQuery()
+            ->getResult();
     }
 
     public function findExistingForUserAndFormula(
