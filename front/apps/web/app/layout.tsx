@@ -22,7 +22,7 @@ export default async function RootLayout(
   const locale = await getLocale()
   const appMessages = (await import(`@/messages/${locale}.json`)).default
   const uiMessages = (await import(`@workspace/ui/messages/${locale}.json`)).default
-  const messages = { ...appMessages, ui: uiMessages }
+  const messages = { ...appMessages, common: uiMessages }
 
   return (
     <html

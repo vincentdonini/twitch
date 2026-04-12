@@ -1,0 +1,109 @@
+/*!* ─── Admin overrides ─────────────────────────────────────────────────────── *!*/
+/*!* packages/ui/globals.css fournit la base (tokens, base, typography).        *!*/
+/*!* Ce fichier ne contient que ce qui est spécifique à l'app admin.            *!*/
+
+/*!* Police : admin utilise Inter, bindée sur --font-sans attendu par le design system *!*/
+/*@theme inline {*/
+/*	--font-sans : var(--font-inter);*/
+/*}*/
+
+/*!* ─── Thème Woder (basé sur Vercel) ──────────────────────────────────────── *!*/
+/*:root {*/
+/*	--background                 : oklch(0.99 0 0);*/
+/*	--foreground                 : oklch(0 0 0);*/
+/*	--card                       : oklch(1.00 0 0);*/
+/*	--card-foreground            : oklch(0 0 0);*/
+/*	--popover                    : oklch(0.99 0 0);*/
+/*	--popover-foreground         : oklch(0 0 0);*/
+/*	--primary                    : oklch(0.5596 0.2108 26.31);*/
+/*	--primary-foreground         : oklch(0.9389 0.0309 15.25);*/
+/*	--secondary                  : oklch(0.94 0 0);*/
+/*	--secondary-foreground       : oklch(0 0 0);*/
+/*	--muted                      : oklch(0.97 0 0);*/
+/*	--muted-foreground           : oklch(0.44 0 0);*/
+/*	--accent                     : oklch(0.94 0 0);*/
+/*	--accent-foreground          : oklch(0 0 0);*/
+/*	--destructive                : oklch(0.63 0.19 23.03);*/
+/*	--destructive-foreground     : oklch(1.00 0 0);*/
+/*	--border                     : oklch(0.92 0 0);*/
+/*	--input                      : oklch(0.94 0 0);*/
+/*	--ring                       : oklch(0 0 0);*/
+/*	--radius                     : 0.5rem;*/
+/*	--sidebar                    : oklch(0.18 0 0);*/
+/*	--sidebar-foreground         : oklch(1.00 0 0);*/
+/*	--sidebar-primary            : oklch(1.00 0 0);*/
+/*	--sidebar-primary-foreground : oklch(0 0 0);*/
+/*	--sidebar-accent             : oklch(0.32 0 0);*/
+/*	--sidebar-accent-foreground  : oklch(1.00 0 0);*/
+/*	--sidebar-border             : oklch(0.32 0 0);*/
+/*	--sidebar-ring               : oklch(0.72 0 0);*/
+/*}*/
+
+/*.dark {*/
+/*	--background                 : oklch(0 0 0);*/
+/*	--foreground                 : oklch(1.00 0 0);*/
+/*	--card                       : oklch(0.14 0 0);*/
+/*	--card-foreground            : oklch(1.00 0 0);*/
+/*	--popover                    : oklch(0.18 0 0);*/
+/*	--popover-foreground         : oklch(1.00 0 0);*/
+/*	--primary                    : oklch(0.5596 0.2108 26.31);*/
+/*	--primary-foreground         : oklch(0.9389 0.0309 15.25);*/
+/*	--secondary                  : oklch(0.25 0 0);*/
+/*	--secondary-foreground       : oklch(1.00 0 0);*/
+/*	--muted                      : oklch(0.23 0 0);*/
+/*	--muted-foreground           : oklch(0.72 0 0);*/
+/*	--accent                     : oklch(0.32 0 0);*/
+/*	--accent-foreground          : oklch(1.00 0 0);*/
+/*	--destructive                : oklch(0.69 0.20 23.91);*/
+/*	--destructive-foreground     : oklch(0 0 0);*/
+/*	--border                     : oklch(0.26 0 0);*/
+/*	--input                      : oklch(0.32 0 0);*/
+/*	--ring                       : oklch(0.72 0 0);*/
+/*	--sidebar                    : oklch(0.18 0 0);*/
+/*	--sidebar-foreground         : oklch(1.00 0 0);*/
+/*	--sidebar-primary            : oklch(1.00 0 0);*/
+/*	--sidebar-primary-foreground : oklch(0 0 0);*/
+/*	--sidebar-accent             : oklch(0.32 0 0);*/
+/*	--sidebar-accent-foreground  : oklch(1.00 0 0);*/
+/*	--sidebar-border             : oklch(0.32 0 0);*/
+/*	--sidebar-ring               : oklch(0.72 0 0);*/
+/*}*/
+
+/*!* ─── Sidebar "none" mode ─────────────────────────────────────────────────── *!*/
+/*.sidebar-none-mode [data-slot="sidebar"] {*/
+/*	height     : 100vh !important;*/
+/*	min-height : 100vh !important;*/
+/*}*/
+
+/*!* ─── Right sidebar inset variant ────────────────────────────────────────── *!*/
+/*@media (min-width : 768px) {*/
+/*	[data-side="right"][data-variant="inset"] ~ [data-slot="sidebar-inset"] {*/
+/*		margin-right : 0 !important;*/
+/*	}*/
+
+/*	[data-side="right"][data-variant="inset"][data-state="collapsed"] ~ [data-slot="sidebar-inset"] {*/
+/*		margin-right : 0.5rem !important;*/
+/*	}*/
+/*}*/
+
+/*!* ─── Logo carousel ───────────────────────────────────────────────────────── *!*/
+/*@keyframes logo-scroll {*/
+/*	0% {*/
+/*		transform : translateX(0);*/
+/*	}*/
+/*	100% {*/
+/*		transform : translateX(-144rem);*/
+/*	}*/
+/*}*/
+
+/*.animate-logo-scroll {*/
+/*	animation : logo-scroll 30s linear infinite;*/
+/*}*/
+
+/*.animate-logo-scroll:hover {*/
+/*	animation-play-state : paused;*/
+/*}*/
+
+html, body {
+	background: var(--sidebar);
+}

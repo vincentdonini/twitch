@@ -67,7 +67,7 @@ function Stack(
             <Separator
               key={`divider-${index}`}
               orientation={direction === "horizontal" ? "vertical" : "horizontal"}
-              className={direction === "horizontal" ? "h-full w-px bg-gray-300" : "w-full h-px bg-gray-300"}
+              className={direction === "horizontal" ? "h-full w-px bg-border" : "w-full h-px bg-border"}
             />
           ) : (
             divider

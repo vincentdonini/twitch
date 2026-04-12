@@ -23,7 +23,7 @@ export function RegisterForm(
     ...props
   }: RegisterFormProps,
 ) {
-  const t = useTranslations("ui.register")
+  const t = useTranslations("common.register")
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()

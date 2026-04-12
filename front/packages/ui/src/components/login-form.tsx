@@ -23,7 +23,7 @@ export function LoginForm(
     ...props
   }: LoginFormProps,
 ) {
-  const t = useTranslations("ui.login")
+  const t = useTranslations("common.login")
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()

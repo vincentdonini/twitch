@@ -1,7 +1,7 @@
 "use client"
 
 import { WodScoreDialog } from "@/app/(main)/wods/[id]/_components/wod-score-dialog"
-import type { WodDetail } from "@workspace/api"
+import { type WodDetail } from "@workspace/api"
 import { useState } from "react"
 
 interface WodScoreSubmitProps {

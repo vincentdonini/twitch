@@ -1,7 +1,6 @@
-import type { WodVariant } from "@workspace/api"
+import { type WodVariant } from "@workspace/api"
 import { useTranslations } from "next-intl"
 import * as React from "react"
-
 import { formatMetric } from "@/lib/format-metric"
 
 interface ExerciseListProps {

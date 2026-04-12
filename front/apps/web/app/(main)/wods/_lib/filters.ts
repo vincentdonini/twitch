@@ -1,87 +1,21 @@
-export const DEFAULT_SORT = "name"
-export const LIMIT = 6
+export {
+  DefaultSort,
+  PageLimit,
+  WodFilterGroup,
+  WodFilterBase,
+  WodSortOption,
+  WodSortOptions,
+  parseWodUrl,
+  buildWodUrl,
+} from "@workspace/ui/lib/wods/filters"
 
-export const FILTER_GROUPS = ["category", "type", "division", "exercise", "exerciseCategory", "equipment"] as const
+export type {
+  WodFilterGroup as FilterGroup,
+  WodSortOption as SortOption,
+  WodSortOptionItem as SortOptionItem,
+  WodSidebarFilterOption as SidebarFilterOption,
+  WodSidebarFilterGroup as SidebarFilterGroup,
+  WodParsedUrl as ParsedUrl,
+} from "@workspace/ui/lib/wods/filters"
 
-export const FILTER_BASE: Record<string, string> = {
-  category: "filters[category.id]",
-  type: "filters[type.id]",
-  division: "filters[division.id]",
-  exercise: "filters[exercise.id]",
-  exerciseCategory: "filters[exerciseCategory.id]",
-  equipment: "filters[equipment.id]",
-}
-
-export type SortOptionKey = "sort_name_asc" | "sort_name_desc"
-
-export type SortOption = { id: string; labelKey: SortOptionKey }
-
-export const sortOptions: SortOption[] = [
-  { id: "name", labelKey: "sort_name_asc" },
-  { id: "-name", labelKey: "sort_name_desc" },
-]
-
-export type OptionState = "include" | "exclude" | "none"
-
-export type FilterGroupState = {
-  include: string[]
-  exclude: string[]
-}
-
-export type SidebarFilterOption = { id: string; label: string; count?: number }
-
-export type SidebarFilterGroup = {
-  id: string
-  title: string
-  isLoading: boolean
-  options: SidebarFilterOption[]
-  getState: (optionId: string) => OptionState
-  onToggle: (optionId: string) => void
-  searchable?: boolean
-  selectedIds?: { include: string[]; exclude: string[] }
-  labelCache?: Record<string, string>
-  onLabelsDiscovered?: (labels: Record<string, string>) => void
-}
-
-export type ParsedUrl = {
-  filterStates: Record<string, FilterGroupState>
-  page: number
-  sort: string
-  search: string
-}
-
-export function parseUrl(params: URLSearchParams): ParsedUrl {
-  const filterStates: Record<string, FilterGroupState> = {}
-  for (const group of FILTER_GROUPS) {
-    const include = params.get(`inc_${group}`)?.split(",").filter(Boolean) ?? []
-    const exclude = params.get(`exc_${group}`)?.split(",").filter(Boolean) ?? []
-    if (include.length || exclude.length) {
-      filterStates[group] = { include, exclude }
-    }
-  }
-  return {
-    filterStates,
-    page: Math.max(1, Number(params.get("page") ?? 1)),
-    sort: params.get("sort") ?? DEFAULT_SORT,
-    search: params.get("q") ?? "",
-  }
-}
-
-export function buildUrl(
-  filterStates: Record<string, FilterGroupState>,
-  page: number,
-  sort: string,
-  search: string,
-): string {
-  const params = new URLSearchParams()
-  if (search) params.set("q", search)
-  if (sort !== DEFAULT_SORT) params.set("sort", sort)
-  if (page > 1) params.set("page", String(page))
-  for (const group of FILTER_GROUPS) {
-    const state = filterStates[group]
-    if (state?.include.length) params.set(`inc_${group}`, state.include.join(","))
-    if (state?.exclude.length) params.set(`exc_${group}`, state.exclude.join(","))
-  }
-  const qs = params.toString()
-  return qs ? `?${qs}` : "?"
-}
+export type { FilterGroupState } from "@workspace/ui/components/wod-filters-sidebar"

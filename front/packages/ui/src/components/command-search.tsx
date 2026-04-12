@@ -123,7 +123,7 @@ interface CommandSearchProps {
 }
 
 export function CommandSearch({ open, onOpenChange }: CommandSearchProps) {
-  const t = useTranslations("ui.search")
+  const t = useTranslations("common.search")
   const router = useRouter()
   const commandRef = React.useRef<HTMLDivElement>(null)
 
@@ -225,7 +225,7 @@ export function CommandSearch({ open, onOpenChange }: CommandSearchProps) {
 }
 
 export function SearchTrigger({ onClick }: { onClick: () => void }) {
-  const t = useTranslations("ui.search")
+  const t = useTranslations("common.search")
 
   return (
     <button

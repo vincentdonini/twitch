@@ -13,4 +13,5 @@ export type MuscleGroupSummary = {
     id: string;
     slug: string;
     title: string;
+    wodCount?: number;
 };

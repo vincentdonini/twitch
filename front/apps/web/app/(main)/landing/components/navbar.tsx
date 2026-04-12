@@ -118,7 +118,7 @@ export function LandingNavbar() {
         {/* Desktop CTA */}
         <div className="hidden xl:flex items-center space-x-2">
           <ThemeToggle />
-          <LocaleSwitcher />
+          {/*<LocaleSwitcher />*/}
           <Button variant="outline" asChild className="cursor-pointer">
             <Link href="/dashboard" target="_blank" rel="noopener noreferrer">
               <LayoutDashboard className="h-4 w-4 mr-2" />
@@ -225,7 +225,7 @@ export function LandingNavbar() {
               <div className="border-t p-6 space-y-4">
                 <div className="flex items-center gap-2">
                   <ThemeToggle />
-                  <LocaleSwitcher />
+                  {/*<LocaleSwitcher />*/}
                 </div>
 
                 {/* Primary Actions */}

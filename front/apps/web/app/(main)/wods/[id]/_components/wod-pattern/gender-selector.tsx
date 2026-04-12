@@ -34,9 +34,9 @@ export function GenderSelector(
           )}
         >
           <span className="flex items-center gap-1.5">
-            {g === Gender.MALE && <MarsIcon className="size-3.5" />}
-            {g === Gender.FEMALE && <VenusIcon className="size-3.5" />}
-            {g === Gender.MIXED && <VenusAndMarsIcon className="size-3.5" />}
+            {g === Gender.Male && <MarsIcon className="size-3.5" />}
+            {g === Gender.Female && <VenusIcon className="size-3.5" />}
+            {g === Gender.Mixed && <VenusAndMarsIcon className="size-3.5" />}
             {t(`gender_${g}` as "gender_male" | "gender_female" | "gender_mixed")}
           </span>
         </Button>

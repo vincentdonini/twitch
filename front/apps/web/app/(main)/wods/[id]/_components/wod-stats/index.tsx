@@ -1,8 +1,7 @@
-import type { EquipmentSummary, ExerciseCategorySummary, ExerciseSummary } from "@workspace/api"
+import { type EquipmentSummary, type ExerciseCategorySummary, type ExerciseSummary } from "@workspace/api"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@workspace/ui/components/card"
 import { Separator } from "@workspace/ui/components/separator"
 import { useTranslations } from "next-intl"
-
 import { StatsDivisions } from "./stats-divisions"
 import { StatsLinkList } from "./stats-link-list"
 

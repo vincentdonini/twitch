@@ -145,18 +145,20 @@ function SidebarProvider({
   )
 }
 
-function Sidebar({
-                   side = "left",
-                   variant = "sidebar",
-                   collapsible = "offcanvas",
-                   className,
-                   children,
-                   ...props
-                 }: React.ComponentProps<"div"> & {
-  side?: "left" | "right"
-  variant?: SidebarVariant
-  collapsible?: "offcanvas" | "icon" | "none"
-}) {
+function Sidebar(
+  {
+    side = "left",
+    variant = "sidebar",
+    collapsible = "offcanvas",
+    className,
+    children,
+    ...props
+  }: React.ComponentProps<"div"> & {
+    side?: "left" | "right"
+    variant?: SidebarVariant
+    collapsible?: "offcanvas" | "icon" | "none"
+  },
+) {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 
   if (collapsible === "none") {
@@ -247,11 +249,13 @@ function Sidebar({
   )
 }
 
-function SidebarTrigger({
-                          className,
-                          onClick,
-                          ...props
-                        }: React.ComponentProps<typeof Button>) {
+function SidebarTrigger(
+  {
+    className,
+    onClick,
+    ...props
+  }: React.ComponentProps<typeof Button>,
+) {
   const { toggleSidebar } = useSidebar()
 
   return (
@@ -352,10 +356,12 @@ function SidebarFooter({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
-function SidebarSeparator({
-                            className,
-                            ...props
-                          }: React.ComponentProps<typeof Separator>) {
+function SidebarSeparator(
+  {
+    className,
+    ...props
+  }: React.ComponentProps<typeof Separator>,
+) {
   return (
     <Separator
       data-slot="sidebar-separator"
@@ -391,11 +397,13 @@ function SidebarGroup({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
-function SidebarGroupLabel({
-                             className,
-                             asChild = false,
-                             ...props
-                           }: React.ComponentProps<"div"> & { asChild?: boolean }) {
+function SidebarGroupLabel(
+  {
+    className,
+    asChild = false,
+    ...props
+  }: React.ComponentProps<"div"> & { asChild?: boolean },
+) {
   const Comp = asChild ? Slot : "div"
 
   return (
@@ -412,11 +420,13 @@ function SidebarGroupLabel({
   )
 }
 
-function SidebarGroupAction({
-                              className,
-                              asChild = false,
-                              ...props
-                            }: React.ComponentProps<"button"> & { asChild?: boolean }) {
+function SidebarGroupAction(
+  {
+    className,
+    asChild = false,
+    ...props
+  }: React.ComponentProps<"button"> & { asChild?: boolean },
+) {
   const Comp = asChild ? Slot : "button"
 
   return (
@@ -435,10 +445,12 @@ function SidebarGroupAction({
   )
 }
 
-function SidebarGroupContent({
-                               className,
-                               ...props
-                             }: React.ComponentProps<"div">) {
+function SidebarGroupContent(
+  {
+    className,
+    ...props
+  }: React.ComponentProps<"div">,
+) {
   return (
     <div
       data-slot="sidebar-group-content"

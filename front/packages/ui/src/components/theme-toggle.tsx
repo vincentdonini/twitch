@@ -8,7 +8,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip"
 import { useTranslations } from "next-intl"
 
 export function ThemeToggle() {
-  const t = useTranslations("ui.theme_toogle")
+  const t = useTranslations("common.theme_toogle")
   const { resolvedTheme, setTheme } = useTheme()
 
   return (

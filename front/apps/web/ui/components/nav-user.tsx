@@ -1,10 +1,8 @@
 "use client"
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@workspace/ui/components/avatar"
+import { env } from "@/lib/env"
+import { getInitials } from "@/lib/string"
+import { Avatar, AvatarFallback, AvatarImage } from "@workspace/ui/components/avatar"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,16 +12,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@workspace/ui/components/dropdown-menu"
-import { EllipsisVerticalIcon, CircleUserRoundIcon, CreditCardIcon, BellIcon, LogOutIcon } from "lucide-react"
-
-function getInitials(name: string): string {
-  return name
-    .split(" ")
-    .map((n) => n[0])
-    .join("")
-    .toUpperCase()
-    .slice(0, 2)
-}
+import { CircleUserRoundIcon, LayoutDashboardIcon, EllipsisVerticalIcon, LogOutIcon, SettingsIcon } from "lucide-react"
+import { useTranslations } from "next-intl"
+import Link from "next/link"
 
 interface NavUserProps {
   user: {
@@ -35,13 +26,18 @@ interface NavUserProps {
 }
 
 export function NavUser({ user, onLogout }: NavUserProps) {
+  const tc = useTranslations("common")
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="flex items-center gap-2 cursor-pointer rounded-lg px-2 py-1 hover:bg-accent transition-colors outline-none">
+        <button
+          className="flex items-center gap-2 cursor-pointer rounded-lg px-2 py-1 hover:bg-accent transition-colors outline-none">
           <Avatar className="h-8 w-8 rounded-lg grayscale">
             <AvatarImage src={user.avatar} alt={user.name} />
-            <AvatarFallback className="rounded-lg">{getInitials(user.name)}</AvatarFallback>
+            <AvatarFallback className="rounded-lg">
+              {getInitials(user.name)}
+            </AvatarFallback>
           </Avatar>
           <div className="grid flex-1 text-left text-sm leading-tight">
             <span className="truncate font-medium">{user.name}</span>
@@ -65,23 +61,40 @@ export function NavUser({ user, onLogout }: NavUserProps) {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem className="cursor-pointer">
-            <CircleUserRoundIcon />
-            Account
+          <DropdownMenuItem asChild>
+            <Link
+              href={`${env.ADMIN_URL}/dashboard`}
+              className="flex items-center gap-2 text-foreground"
+            >
+              <LayoutDashboardIcon />
+              {tc("dashboard")}
+            </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem className="cursor-pointer">
-            <CreditCardIcon />
-            Billing
+
+          <DropdownMenuItem asChild>
+            <Link
+              href={`${env.ADMIN_URL}/dashboard`}
+              className="flex items-center gap-2 text-foreground"
+            >
+              <CircleUserRoundIcon />
+              {tc("dashboard")}
+            </Link>
           </DropdownMenuItem>
-          <DropdownMenuItem className="cursor-pointer">
-            <BellIcon />
-            Notifications
+
+          <DropdownMenuItem asChild>
+            <Link
+              href={`${env.ADMIN_URL}/settings`}
+              className="flex items-center gap-2 text-foreground"
+            >
+              <SettingsIcon />
+              {tc("settings")}
+            </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem className="cursor-pointer text-destructive focus:text-destructive" onClick={onLogout}>
           <LogOutIcon />
-          Log out
+          {tc("log_out")}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

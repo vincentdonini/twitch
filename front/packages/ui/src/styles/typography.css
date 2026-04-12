@@ -1,0 +1,21 @@
+/*!* ─── Typography — prose and markdown content ─────────────────────────────── *!*/
+
+@layer base {
+	.\@container\/main {
+		ul {
+			@apply list-disc pl-5 space-y-1;
+		}
+
+		ol {
+			@apply list-decimal pl-5 space-y-1;
+		}
+
+		li {
+			@apply leading-relaxed;
+		}
+
+		li::marker {
+			@apply text-primary;
+		}
+	}
+}

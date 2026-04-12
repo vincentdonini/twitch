@@ -178,6 +178,7 @@ export async function apiFetch<T>(
     auth = true
 ): Promise<T> {
     const res = await executeRequest(url, options, params, auth);
+    if (res.status === 204 || res.headers.get("content-length") === "0") return null as T;
     return res.json() as Promise<T>;
 }
 

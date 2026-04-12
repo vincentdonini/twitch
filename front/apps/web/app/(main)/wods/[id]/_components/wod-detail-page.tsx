@@ -2,10 +2,9 @@
 
 import { MarkdownSection } from "@/app/(main)/wods/[id]/_components/markdown-section"
 import { WodDetailSkeleton } from "@/app/(main)/wods/[id]/_components/wod-detail-skeleton"
-import { WodPattern } from "@/app/(main)/wods/[id]/_components/wod-pattern"
 import { WodSidebar } from "@/app/(main)/wods/[id]/_components/wod-sidebar"
 import { PageContainer } from "@/ui/components/page-container"
-import type { WodDetail } from "@workspace/api"
+import { type WodDetail } from "@workspace/api"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
 import { Card, CardContent } from "@workspace/ui/components/card"
@@ -18,6 +17,7 @@ import {
   EmptyTitle,
 } from "@workspace/ui/components/empty"
 import { Separator } from "@workspace/ui/components/separator"
+import { WodPattern } from "@workspace/ui/components/wod-pattern"
 import { AlertCircleIcon } from "lucide-react"
 import { useTranslations } from "next-intl"
 

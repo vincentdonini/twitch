@@ -1,18 +1,23 @@
-import { Button } from "@workspace/ui/components/button";
+"use client"
 
-export default function Page() {
+import { useTranslations } from "next-intl"
+import { useRouter } from "next/navigation"
+import { useEffect } from "react"
+
+export default function HomePage() {
+  const router = useRouter()
+  const t = useTranslations("app")
+
+  useEffect(() => {
+    router.replace("/dashboard")
+  }, [router])
+
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Admin ready!</h1>
-          <p>You may now add components and start building.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="text-muted-foreground font-mono text-xs">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+    <div className="flex min-h-screen items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto"></div>
+        <p className="text-muted-foreground mt-2">{t("redirecting")}</p>
       </div>
     </div>
-  );
+  )
 }

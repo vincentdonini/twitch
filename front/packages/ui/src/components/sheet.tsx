@@ -44,7 +44,7 @@ function SheetOverlay(
     <SheetPrimitive.Overlay
       data-slot="sheet-overlay"
       className={cn(
-        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50",
+        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50 backdrop-blur-sm",
         className,
       )}
       {...props}
@@ -98,7 +98,7 @@ function SheetHeader(
   return (
     <div
       data-slot="sheet-header"
-      className={cn("flex flex-col justify-between align-center h-[60px]", className)}
+      className={cn("p-4 flex flex-col justify-between align-center h-[60px]", className)}
       {...props}
     />
   )

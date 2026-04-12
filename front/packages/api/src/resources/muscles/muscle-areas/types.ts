@@ -10,4 +10,5 @@ export type MuscleAreaSummary = {
     id: string;
     slug: string;
     title: string;
+    wodCount?: number;
 };

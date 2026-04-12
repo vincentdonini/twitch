@@ -1,8 +1,6 @@
 import type { EquipmentSummary } from "../../equipments/types";
 import type { ExerciseCategorySummary } from "../exercise-categories/types";
-
-export type { EquipmentSummary };
-export type { ExerciseCategorySummary };
+import type { MuscleSummary } from "../../muscles/muscles/types";
 
 export type Exercise = {
     id: string;
@@ -11,14 +9,17 @@ export type Exercise = {
     summary: string;
     details: string;
     wodCount: number;
+    muscles: MuscleSummary[];
 };
 
 export type ExerciseSummary = {
     id: string;
     slug: string;
     title: string;
+    titlePlural?: string | null;
     equipment: EquipmentSummary | null;
     exerciseCategory: ExerciseCategorySummary | null;
+    muscles: MuscleSummary[];
 };
 
 export type CreateExercisePayload = {

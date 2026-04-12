@@ -2,11 +2,10 @@
 
 import { GenderSelector } from "@/app/(main)/wods/[id]/_components/wod-pattern/gender-selector"
 import { Time } from "@/lib/time"
-import { Gender, WodVariant } from "@workspace/api"
+import { Gender, type WodVariant } from "@workspace/api"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@workspace/ui/components/tabs"
 import { useTranslations } from "next-intl"
 import { useState } from "react"
-
 import { ExerciseList } from "./exercise-list"
 
 interface WodPatternProps {
@@ -19,13 +18,13 @@ export function WodPattern({ variants }: WodPatternProps) {
   const divisions = [...new Map(variants.map(v => [v.division.id, v.division])).values()]
 
   const [selectedGender, setSelectedGender] = useState<Gender>(
-    variants[0]?.gender ?? Gender.MIXED,
+    variants[0]?.gender ?? Gender.Mixed,
   )
 
   const handleDivisionChange = (divisionId: string) => {
     const available = variants.filter(v => v.division.id === divisionId).map(v => v.gender)
     if (!available.includes(selectedGender)) {
-      setSelectedGender(available[0] ?? Gender.MIXED)
+      setSelectedGender(available[0] ?? Gender.Mixed)
     }
   }
 

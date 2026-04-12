@@ -1,4 +1,4 @@
-import type { ExerciseMetric } from "@workspace/api"
+import { type ExerciseMetric } from "@workspace/api"
 import type { useTranslations } from "next-intl"
 
 export function formatMetric(

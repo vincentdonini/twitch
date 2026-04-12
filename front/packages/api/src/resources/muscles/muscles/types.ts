@@ -15,6 +15,7 @@ export type MuscleSummary = {
     id: string;
     slug: string;
     title: string;
+    wodCount?: number;
 };
 
 export type CreateMusclePayload = {

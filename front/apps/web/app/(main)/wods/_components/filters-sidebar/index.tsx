@@ -3,6 +3,8 @@
 import { EquipmentFilter } from "@/app/(main)/wods/_components/filters-sidebar/equipment-filter"
 import { ExerciseCategoryFilter } from "@/app/(main)/wods/_components/filters-sidebar/exercise-category-filter"
 import { ExerciseFilter } from "@/app/(main)/wods/_components/filters-sidebar/exercise-filter"
+import { MuscleFilter } from "@/app/(main)/wods/_components/filters-sidebar/muscle-filter"
+import { WodMuscleAreaFilter, WodMuscleGroupFilter, WodMuscleSegmentFilter } from "@workspace/ui/components/wod-filters-sidebar"
 import { FilterGroup } from "@/app/(main)/wods/_components/filters-sidebar/filter-group"
 import { TriStateCheckbox } from "@/app/(main)/wods/_components/filters-sidebar/tri-state-checkbox"
 import { SidebarFilterGroup } from "@/app/(main)/wods/_lib/filters"
@@ -54,6 +56,34 @@ export function FiltersSidebar({ filterGroups, searchQuery, onSearchChange }: Fi
                 />
               ) : group.searchable && group.id === "equipment" ? (
                 <EquipmentFilter
+                  selectedIds={group.selectedIds ?? { include: [], exclude: [] }}
+                  getState={group.getState}
+                  onToggle={group.onToggle}
+                  onLabelsDiscovered={group.onLabelsDiscovered}
+                />
+              ) : group.searchable && group.id === "muscle" ? (
+                <MuscleFilter
+                  selectedIds={group.selectedIds ?? { include: [], exclude: [] }}
+                  getState={group.getState}
+                  onToggle={group.onToggle}
+                  onLabelsDiscovered={group.onLabelsDiscovered}
+                />
+              ) : group.searchable && group.id === "muscleArea" ? (
+                <WodMuscleAreaFilter
+                  selectedIds={group.selectedIds ?? { include: [], exclude: [] }}
+                  getState={group.getState}
+                  onToggle={group.onToggle}
+                  onLabelsDiscovered={group.onLabelsDiscovered}
+                />
+              ) : group.searchable && group.id === "muscleGroup" ? (
+                <WodMuscleGroupFilter
+                  selectedIds={group.selectedIds ?? { include: [], exclude: [] }}
+                  getState={group.getState}
+                  onToggle={group.onToggle}
+                  onLabelsDiscovered={group.onLabelsDiscovered}
+                />
+              ) : group.searchable && group.id === "muscleSegment" ? (
+                <WodMuscleSegmentFilter
                   selectedIds={group.selectedIds ?? { include: [], exclude: [] }}
                   getState={group.getState}
                   onToggle={group.onToggle}

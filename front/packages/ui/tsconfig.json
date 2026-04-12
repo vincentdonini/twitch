@@ -6,6 +6,7 @@
     "baseUrl": ".",
     "paths": {
       "@workspace/ui/*": ["./src/*"],
+      "@workspace/api": ["../api/src/index.ts"],
       "@/components/ui/*": ["./src/components/*"],
       "@/*": ["./src/*"]
     }

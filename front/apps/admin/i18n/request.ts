@@ -1,7 +1,6 @@
 import { getRequestConfig } from "next-intl/server"
 import { cookies } from "next/headers"
-import { locales, defaultLocale, type Locale } from "./locales"
-import uiMessages from "@workspace/ui/messages/en.json"
+import { defaultLocale, type Locale, locales } from "./locales"
 
 export { locales, defaultLocale, type Locale }
 
@@ -16,10 +15,10 @@ export async function getLocale(): Promise<Locale> {
 export default getRequestConfig(async () => {
   const locale = await getLocale()
   const appMessages = (await import(`../messages/${locale}.json`)).default
-  const uiLocaleMessages = (await import(`@workspace/ui/messages/${locale}.json`)).default
+  const commonMessages = (await import(`@workspace/ui/messages/${locale}.json`)).default
 
   return {
     locale,
-    messages: { ...appMessages, ui: uiLocaleMessages },
+    messages: { ...appMessages, common: commonMessages},
   }
 })

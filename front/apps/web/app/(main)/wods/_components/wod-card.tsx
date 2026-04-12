@@ -1,6 +1,6 @@
 "use client"
 
-import type { Wod } from "@workspace/api"
+import { type Wod } from "@workspace/api"
 import { Badge } from "@workspace/ui/components/badge"
 import { Card, CardContent } from "@workspace/ui/components/card"
 import { ArrowRight } from "lucide-react"

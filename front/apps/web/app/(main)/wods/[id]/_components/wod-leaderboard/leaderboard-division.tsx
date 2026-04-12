@@ -2,7 +2,7 @@
 
 import { LeaderboardList } from "@/app/(main)/wods/[id]/_components/wod-leaderboard/leaderboard-list"
 import { WodScoreSubmit } from "@/app/(main)/wods/[id]/_components/wod-score-submit"
-import { Gender, useAuth, useGetWodLeaderboard, WodDetail } from "@workspace/api"
+import { Gender, useAuth, useGetWodLeaderboard, type WodDetail } from "@workspace/api"
 import { Button } from "@workspace/ui/components/button"
 import {
   Empty,
@@ -34,7 +34,7 @@ export function LeaderboardDivision({ wod, divisionId, variants, refreshKey }: L
   const { isAuthenticated } = useAuth()
 
   const availableGenders = [...new Set(variants.map(v => v.gender))]
-  const [selectedGender, setSelectedGender] = useState<Gender>(availableGenders[0] ?? Gender.MIXED)
+  const [selectedGender, setSelectedGender] = useState<Gender>(availableGenders[0] ?? Gender.Mixed)
 
   const { data, isLoading, refetch } = useGetWodLeaderboard(wod.id, divisionId, selectedGender)
 

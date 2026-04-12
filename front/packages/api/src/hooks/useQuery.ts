@@ -1,8 +1,12 @@
 "use client"
 
-import { useLocale } from "next-intl"
 import { useCallback, useEffect, useState } from "react"
 import { apiFetchWithMeta, type PaginationMeta } from "../client"
+
+function getClientLocale(): string {
+  if (typeof document === "undefined") return ""
+  return document.cookie.match(/(?:^|;\s*)locale=([^;]*)/)?.[1] ?? ""
+}
 
 export interface UseQueryResult<T> {
   data: T | null;
@@ -16,10 +20,11 @@ export function useQuery<T>(
   url: string,
   params: Record<string, string | string[]> = {},
   auth = true,
+  enabled = true,
 ): UseQueryResult<T> {
-  const locale = useLocale()
+  const [locale] = useState(() => getClientLocale())
   const [data, setData] = useState<T | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(enabled)
   const [error, setError] = useState<string | null>(null)
   const [pagination, setPagination] = useState<PaginationMeta | null>(null)
   const [trigger, setTrigger] = useState(0)
@@ -27,6 +32,7 @@ export function useQuery<T>(
   const paramsKey = JSON.stringify(params)
 
   const run = useCallback(() => {
+    if (!enabled) return
     setIsLoading(true)
     setError(null)
 
@@ -41,7 +47,7 @@ export function useQuery<T>(
         setError(err instanceof Error ? err.message : "Unknown error")
       })
       .finally(() => setIsLoading(false))
-  }, [url, paramsKey, auth, locale])
+  }, [url, paramsKey, auth, locale, enabled])
 
   useEffect(() => {
     run()

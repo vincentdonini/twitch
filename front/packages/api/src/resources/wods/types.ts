@@ -1,10 +1,11 @@
 import type { ExerciseSummary } from "../exercises/exercises/types"
 
-export enum Gender {
-  MALE = "male",
-  FEMALE = "female",
-  MIXED = "mixed",
-}
+export const Gender = {
+  Male: "male",
+  Female: "female",
+  Mixed: "mixed",
+} as const
+export type Gender = typeof Gender[keyof typeof Gender]
 
 export type Wod = {
   id: string
@@ -75,16 +76,17 @@ export type WodExercise = {
 
 export type ExerciseMetric = {
   id: string
-  type: MetricType
+  type: MetricTypeEnum
   value: number
 }
 
-export enum MetricType {
-  REPETITIONS = "repetitions",
-  TIME = "time",
-  DISTANCE = "distance",
-  CALORIES = "calories",
-}
+export const MetricType = {
+  REPETITIONS: "repetitions",
+  TIME: "time",
+  DISTANCE: "distance",
+  CALORIES: "calories",
+} as const
+export type MetricTypeEnum = (typeof MetricType)[keyof typeof MetricType]
 
 // ---------------------------------------------------------------------------
 // Leaderboard
@@ -117,13 +119,34 @@ export type LeaderboardEntry = {
 // ---------------------------------------------------------------------------
 
 export type CreateWodPayload = {
-  slug: string
-  title: string
-  summary: string
-  details: string
+  name: string
+  typeId: string
+  categoryId: string
+  teamSize?: number | null
 }
 
-export type UpdateWodPayload = CreateWodPayload
+export type UpdateWodPayload = Partial<CreateWodPayload>
+
+export type ExerciseMetricInput = {
+  type: MetricTypeEnum
+  value: number
+}
+
+export type ExerciseInput = {
+  exerciseId: string
+  metrics: ExerciseMetricInput[]
+}
+
+export type CreateWodVariantPayload = {
+  divisionId: string
+  gender?: Gender | null
+  ageRangeId?: string | null
+  rounds?: number | null
+  timeCap?: number | null
+  exercises?: ExerciseInput[]
+}
+
+export type UpdateWodVariantPayload = Partial<CreateWodVariantPayload>
 
 export type CreateWodScorePayload = {
   wodId: string

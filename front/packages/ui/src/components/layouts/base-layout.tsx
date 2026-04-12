@@ -1,22 +1,18 @@
 "use client"
 
 import * as React from "react"
-import { AppSidebar } from "@workspace/ui/components/app-sidebar"
-import { SiteHeader } from "@workspace/ui/components/site-header"
-import { SiteFooter } from "@workspace/ui/components/site-footer"
-import { ThemeCustomizer, ThemeCustomizerTrigger } from "@workspace/ui/components/theme-customizer"
-import { UpgradeToProButton } from "@workspace/ui/components/upgrade-to-pro-button"
-import { useSidebarConfig } from "@workspace/ui/hooks/use-sidebar-config"
+import { useSidebarConfig } from "@workspace/ui/contexts/sidebar-context"
 import { SidebarInset, SidebarProvider } from "@workspace/ui/components/sidebar"
 
 interface BaseLayoutProps {
   children: React.ReactNode
-  title?: string
-  description?: string
+  sidebar: React.ReactNode
+  header: React.ReactNode
+  footer?: React.ReactNode
+  themeCustomizer?: React.ReactNode
 }
 
-export function BaseLayout({ children, title, description }: BaseLayoutProps) {
-  const [themeCustomizerOpen, setThemeCustomizerOpen] = React.useState(false)
+export function BaseLayout({ children, sidebar, header, footer, themeCustomizer }: BaseLayoutProps) {
   const { config } = useSidebarConfig()
 
   return (
@@ -32,71 +28,32 @@ export function BaseLayout({ children, title, description }: BaseLayoutProps) {
     >
       {config.side === "left" ? (
         <>
-          <AppSidebar
-            variant={config.variant}
-            collapsible={config.collapsible}
-            side={config.side}
-          />
+          {sidebar}
           <SidebarInset>
-            <SiteHeader />
+            {header}
             <div className="flex flex-1 flex-col">
               <div className="@container/main flex flex-1 flex-col gap-2">
-                <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-                  {title && (
-                    <div className="px-4 lg:px-6">
-                      <div className="flex flex-col gap-2">
-                        <h1 className="text-2xl font-bold tracking-tight">{title}</h1>
-                        {description && (
-                          <p className="text-muted-foreground">{description}</p>
-                        )}
-                      </div>
-                    </div>
-                  )}
-                  {children}
-                </div>
+                <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">{children}</div>
               </div>
             </div>
-            <SiteFooter />
+            {footer}
           </SidebarInset>
         </>
       ) : (
         <>
           <SidebarInset>
-            <SiteHeader />
+            {header}
             <div className="flex flex-1 flex-col">
               <div className="@container/main flex flex-1 flex-col gap-2">
-                <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-                  {title && (
-                    <div className="px-4 lg:px-6">
-                      <div className="flex flex-col gap-2">
-                        <h1 className="text-2xl font-bold tracking-tight">{title}</h1>
-                        {description && (
-                          <p className="text-muted-foreground">{description}</p>
-                        )}
-                      </div>
-                    </div>
-                  )}
-                  {children}
-                </div>
+                <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">{children}</div>
               </div>
             </div>
-            <SiteFooter />
+            {footer}
           </SidebarInset>
-          <AppSidebar
-            variant={config.variant}
-            collapsible={config.collapsible}
-            side={config.side}
-          />
+          {sidebar}
         </>
       )}
-
-      {/* Theme Customizer */}
-      <ThemeCustomizerTrigger onClick={() => setThemeCustomizerOpen(true)} />
-      <ThemeCustomizer
-        open={themeCustomizerOpen}
-        onOpenChange={setThemeCustomizerOpen}
-      />
-      <UpgradeToProButton />
+      {themeCustomizer}
     </SidebarProvider>
   )
 }

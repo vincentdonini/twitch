@@ -1,7 +1,6 @@
 "use client"
 
-import type { CreateWodScorePayload, WodDetail } from "@workspace/api"
-import { Gender, useCreateWodScore } from "@workspace/api"
+import { type CreateWodScorePayload, Gender, useCreateWodScore, type WodDetail } from "@workspace/api"
 import { Button } from "@workspace/ui/components/button"
 import { Calendar } from "@workspace/ui/components/calendar"
 import {
@@ -18,10 +17,10 @@ import { Popover, PopoverContent, PopoverTrigger } from "@workspace/ui/component
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@workspace/ui/components/select"
 import { Switch } from "@workspace/ui/components/switch"
 import { Textarea } from "@workspace/ui/components/textarea"
+import { format } from "date-fns"
 import { CalendarIcon, CheckCircle2 } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { useEffect, useState } from "react"
-import { format } from "date-fns"
 
 interface WodScoreDialogProps {
   open: boolean
@@ -93,9 +92,9 @@ export function WodScoreDialog({ open, onOpenChange, wod, onSuccess }: WodScoreD
   }
 
   const genderLabel: Record<Gender, string> = {
-    [Gender.MALE]: t("gender_male"),
-    [Gender.FEMALE]: t("gender_female"),
-    [Gender.MIXED]: t("gender_mixed"),
+    [Gender.Male]: t("gender_male"),
+    [Gender.Female]: t("gender_female"),
+    [Gender.Mixed]: t("gender_mixed"),
   }
 
   function variantLabel(v: WodDetail["variants"][number]): string {

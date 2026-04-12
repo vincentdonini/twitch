@@ -1,42 +1,44 @@
-import { Geist_Mono, DM_Sans } from "next/font/google"
-import { AuthProvider } from "@workspace/api"
-import "@workspace/ui/globals.css"
-import { ThemeProvider } from "@workspace/ui/components/theme-provider"
-import { TooltipProvider } from "@workspace/ui/components/tooltip"
-import { cn } from "@workspace/ui/lib/utils"
-import { NextIntlClientProvider } from "next-intl"
-import { getLocale, getMessages } from "next-intl/server"
+import type { Metadata } from "next";
+import "@workspace/ui/globals.css";
+import "./globals.css";
 
-const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" })
+import { Toaster } from "@workspace/ui/components/sonner";
+import { ThemeProvider } from "@workspace/ui/components/theme-provider";
+import { SidebarConfigProvider } from "@/contexts/sidebar-context";
+import { inter } from "@/lib/fonts";
+import { AuthProvider } from "@workspace/api";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale } from "@/i18n/request";
 
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+export const metadata: Metadata = {
+  title: "Woder Admin",
+  description: "Woder administration dashboard",
+};
 
 export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
   const locale = await getLocale()
-  const messages = await getMessages()
+  const appMessages = (await import(`@/messages/${locale}.json`)).default
+  const uiMessages = (await import(`@workspace/ui/messages/${locale}.json`)).default
+  const messages = { ...appMessages, common: uiMessages }
 
   return (
-    <html
-      lang={locale}
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", dmSans.variable)}
-    >
-      <body>
+    <html lang={locale} suppressHydrationWarning className={`${inter.variable} antialiased`}>
+      <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider>
-            <TooltipProvider>
-              <AuthProvider>{children}</AuthProvider>
-            </TooltipProvider>
-          </ThemeProvider>
+          <AuthProvider>
+            <ThemeProvider defaultTheme="system" storageKey="nextjs-ui-theme">
+              <SidebarConfigProvider>
+                {children}
+                <Toaster />
+              </SidebarConfigProvider>
+            </ThemeProvider>
+          </AuthProvider>
         </NextIntlClientProvider>
       </body>
     </html>
-  )
+  );
 }

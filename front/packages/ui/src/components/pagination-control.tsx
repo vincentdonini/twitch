@@ -58,7 +58,7 @@ function buildPageRange(
 }
 
 export function PaginationControl({ pagination, onPageChange, siblings = 1 }: PaginationControlProps) {
-  const t = useTranslations("ui.pagination")
+  const tc = useTranslations("common.pagination")
   const { page, totalPages } = pagination
 
   if (totalPages <= 1) return null
@@ -67,11 +67,11 @@ export function PaginationControl({ pagination, onPageChange, siblings = 1 }: Pa
 
   return (
     <Pagination>
-      <PaginationContent>
+      <PaginationContent className="list-none">
         <PaginationItem>
           <PaginationPrevious
             href="#"
-            text={t("previous")}
+            text={tc("previous")}
             aria-disabled={page <= 1}
             className={page <= 1 ? "pointer-events-none opacity-50" : ""}
             onClick={(e) => {
@@ -105,7 +105,7 @@ export function PaginationControl({ pagination, onPageChange, siblings = 1 }: Pa
         <PaginationItem>
           <PaginationNext
             href="#"
-            text={t("next")}
+            text={tc("next")}
             aria-disabled={page >= totalPages}
             className={page >= totalPages ? "pointer-events-none opacity-50" : ""}
             onClick={(e) => {

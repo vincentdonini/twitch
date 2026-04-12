@@ -8,12 +8,12 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "next-intl": "^4.0.0"
+    "next-intl": "^4.0.0",
+    "react": "^19.0.0"
   },
-  "dependencies": {
-    "react": "^19.2.4"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "react": "^19.2.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.2.10",
     "@workspace/eslint-config": "workspace:*",

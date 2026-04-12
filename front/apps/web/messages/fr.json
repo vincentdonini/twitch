@@ -1,14 +1,17 @@
 {
   "common": {
+    "account": "Compte",
     "all_rights_reserved": "Tous droits réservés.",
     "badge_resources": "Ressources",
     "contact": "Contact",
     "cookie_policy": "Utilisation des cookies",
+    "dashboard": "Tableau de bord",
     "equipments": "Equipements",
     "exercise_categories": "Categories d'exercise",
     "exercises": "Exercises",
     "home": "Accueil",
     "loading": "Chargement…",
+    "log_out": "Se déconnecter",
     "learn_more": "En savoir plus",
     "legal": "Mentions légales",
     "muscle_areas": "Zones musculaires",
@@ -17,6 +20,7 @@
     "privacy_policy": "Engagement de confidentialité",
     "resources": "Ressources",
     "retry": "Réessayer",
+    "settings": "Paramètres",
     "term_of_service": "Conditions d'utilisation",
     "wods": "WODs"
   },
@@ -94,6 +98,7 @@
       "description": "Découvrez une variété d'exercices, apprenez à les exécuter correctement et améliorez votre force, votre mobilité et vos performances.",
       "title": "Exercices"
     },
+    "section_muscles": "Muscles",
     "title": "Exercices"
   },
   "exercise_categories": {
@@ -364,6 +369,12 @@
     "metric_repetitions": "{value} reps",
     "metric_time": "{value}s",
     "metric_weight": "{value} kg",
+    "muscle": "Muscle",
+    "muscle_no_results": "Aucun muscle trouvé.",
+    "muscle_search_placeholder": "Rechercher un muscle…",
+    "muscleArea": "Zone musculaire",
+    "muscleGroup": "Groupe musculaire",
+    "muscleSegment": "Segment musculaire",
     "no_equipment": "Aucun équipement.",
     "no_exercise": "Aucun exercise.",
     "no_exercise_category": "Aucune catégory d'exercise.",

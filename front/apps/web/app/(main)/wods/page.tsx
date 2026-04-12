@@ -3,13 +3,13 @@
 import { FiltersSidebar } from "@/app/(main)/wods/_components/filters-sidebar"
 import { WodCard } from "@/app/(main)/wods/_components/wod-card"
 import {
-  buildUrl,
-  FILTER_BASE,
+  buildWodUrl,
   FilterGroupState,
-  LIMIT,
-  parseUrl,
+  PageLimit,
+  parseWodUrl,
   SidebarFilterGroup,
-  sortOptions,
+  WodFilterBase,
+  WodSortOptions,
 } from "@/app/(main)/wods/_lib/filters"
 import { PageContainer } from "@/ui/components/page-container"
 import { useGetWodCategories, useGetWodDivisions, useGetWods, useGetWodTypes } from "@workspace/api"
@@ -25,6 +25,7 @@ import {
 import { PaginationControl } from "@workspace/ui/components/pagination-control"
 import { Sheet, SheetContent, SheetTrigger } from "@workspace/ui/components/sheet"
 import { Skeleton } from "@workspace/ui/components/skeleton"
+import { OptionState } from "@workspace/ui/components/wod-filters-sidebar"
 import { useDebounce } from "@workspace/ui/hooks/use-debounce"
 import { Ban, ChevronDown, Funnel, SlidersHorizontal, X } from "lucide-react"
 import { useTranslations } from "next-intl"
@@ -44,7 +45,7 @@ function WodsPageContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
 
-  const initial = useMemo(() => parseUrl(searchParams), []) // eslint-disable-line react-hooks/exhaustive-deps
+  const initial = useMemo(() => parseWodUrl(searchParams), []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const [page, setPage] = useState(initial.page)
   const [selectedSort, setSelectedSort] = useState(initial.sort)
@@ -53,6 +54,10 @@ function WodsPageContent() {
   const [exerciseLabels, setExerciseLabels] = useState<Record<string, string>>({})
   const [exerciseCategoryLabels, setExerciseCategoryLabels] = useState<Record<string, string>>({})
   const [equipmentLabels, setEquipmentLabels] = useState<Record<string, string>>({})
+  const [muscleLabels, setMuscleLabels] = useState<Record<string, string>>({})
+  const [muscleAreaLabels, setMuscleAreaLabels] = useState<Record<string, string>>({})
+  const [muscleGroupLabels, setMuscleGroupLabels] = useState<Record<string, string>>({})
+  const [muscleSegmentLabels, setMuscleSegmentLabels] = useState<Record<string, string>>({})
   const debouncedSearch = useDebounce(searchQuery)
 
   useEffect(() => {
@@ -65,7 +70,7 @@ function WodsPageContent() {
       isMounted.current = true
       return
     }
-    router.replace(buildUrl(filterStates, page, selectedSort, debouncedSearch), { scroll: false })
+    router.replace(buildWodUrl(filterStates, page, selectedSort, debouncedSearch), { scroll: false })
   }, [filterStates, page, selectedSort, debouncedSearch]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const { data: wodCategories, isLoading: isLoadingWodCategories } = useGetWodCategories({ limit: "100" })
@@ -139,12 +144,12 @@ function WodsPageContent() {
 
   const apiParams: Record<string, string | string[]> = {
     page: String(page),
-    limit: String(LIMIT),
+    limit: String(PageLimit),
     sort: selectedSort,
     ...(debouncedSearch ? { "filters[name][like]": debouncedSearch } : {}),
   }
   for (const [groupId, state] of Object.entries(filterStates)) {
-    const base = FILTER_BASE[groupId]
+    const base = WodFilterBase[groupId as keyof typeof WodFilterBase]
     if (!base) continue
     if (state.include.length === 1) apiParams[`${base}[eq]`] = state.include[0]!
     if (state.include.length > 1) apiParams[`${base}[in]`] = state.include
@@ -160,8 +165,8 @@ function WodsPageContent() {
       title: t("category"),
       isLoading: isLoadingWodCategories,
       options: wodCategories?.map(c => ({ id: c.id, label: c.title, count: c.wodCount })) ?? [],
-      getState: (id) => filterStates.category?.include.includes(id) ? "include"
-        : filterStates.category?.exclude.includes(id) ? "exclude" : "none",
+      getState: (id) => filterStates.category?.include.includes(id) ? OptionState.Include
+        : filterStates.category?.exclude.includes(id) ? OptionState.Exclude : OptionState.None,
       onToggle: (id) => toggleFilter("category", id),
     },
     {
@@ -169,8 +174,8 @@ function WodsPageContent() {
       title: t("type"),
       isLoading: isLoadingWodTypes,
       options: wodTypes?.map(tp => ({ id: tp.id, label: tp.title, count: tp.wodCount })) ?? [],
-      getState: (id) => filterStates.type?.include.includes(id) ? "include"
-        : filterStates.type?.exclude.includes(id) ? "exclude" : "none",
+      getState: (id) => filterStates.type?.include.includes(id) ? OptionState.Include
+        : filterStates.type?.exclude.includes(id) ? OptionState.Exclude : OptionState.None,
       onToggle: (id) => toggleFilter("type", id),
     },
     {
@@ -178,8 +183,8 @@ function WodsPageContent() {
       title: t("division"),
       isLoading: isLoadingWodDivisions,
       options: wodDivisions?.map(d => ({ id: d.id, label: d.title, count: d.wodCount })) ?? [],
-      getState: (id) => filterStates.division?.include.includes(id) ? "include"
-        : filterStates.division?.exclude.includes(id) ? "exclude" : "none",
+      getState: (id) => filterStates.division?.include.includes(id) ? OptionState.Include
+        : filterStates.division?.exclude.includes(id) ? OptionState.Exclude : OptionState.None,
       onToggle: (id) => toggleFilter("division", id),
     },
     {
@@ -194,8 +199,8 @@ function WodsPageContent() {
       },
       labelCache: exerciseLabels,
       onLabelsDiscovered: (labels) => setExerciseLabels(prev => ({ ...prev, ...labels })),
-      getState: (id) => filterStates.exercise?.include.includes(id) ? "include"
-        : filterStates.exercise?.exclude.includes(id) ? "exclude" : "none",
+      getState: (id) => filterStates.exercise?.include.includes(id) ? OptionState.Include
+        : filterStates.exercise?.exclude.includes(id) ? OptionState.Exclude : OptionState.None,
       onToggle: (id) => toggleFilter("exercise", id),
     },
     {
@@ -210,8 +215,8 @@ function WodsPageContent() {
       },
       labelCache: exerciseCategoryLabels,
       onLabelsDiscovered: (labels) => setExerciseCategoryLabels(prev => ({ ...prev, ...labels })),
-      getState: (id) => filterStates.exerciseCategory?.include.includes(id) ? "include"
-        : filterStates.exerciseCategory?.exclude.includes(id) ? "exclude" : "none",
+      getState: (id) => filterStates.exerciseCategory?.include.includes(id) ? OptionState.Include
+        : filterStates.exerciseCategory?.exclude.includes(id) ? OptionState.Exclude : OptionState.None,
       onToggle: (id) => toggleFilter("exerciseCategory", id),
     },
     {
@@ -226,32 +231,96 @@ function WodsPageContent() {
       },
       labelCache: equipmentLabels,
       onLabelsDiscovered: (labels) => setEquipmentLabels(prev => ({ ...prev, ...labels })),
-      getState: (id) => filterStates.equipment?.include.includes(id) ? "include"
-        : filterStates.equipment?.exclude.includes(id) ? "exclude" : "none",
+      getState: (id) => filterStates.equipment?.include.includes(id) ? OptionState.Include
+        : filterStates.equipment?.exclude.includes(id) ? OptionState.Exclude : OptionState.None,
       onToggle: (id) => toggleFilter("equipment", id),
+    },
+    {
+      id: "muscle",
+      title: t("muscle"),
+      isLoading: false,
+      options: [],
+      searchable: true,
+      selectedIds: {
+        include: filterStates.muscle?.include ?? [],
+        exclude: filterStates.muscle?.exclude ?? [],
+      },
+      labelCache: muscleLabels,
+      onLabelsDiscovered: (labels) => setMuscleLabels(prev => ({ ...prev, ...labels })),
+      getState: (id) => filterStates.muscle?.include.includes(id) ? OptionState.Include
+        : filterStates.muscle?.exclude.includes(id) ? OptionState.Exclude : OptionState.None,
+      onToggle: (id) => toggleFilter("muscle", id),
+    },
+    {
+      id: "muscleArea",
+      title: t("muscleArea"),
+      isLoading: false,
+      options: [],
+      searchable: true,
+      selectedIds: {
+        include: filterStates.muscleArea?.include ?? [],
+        exclude: filterStates.muscleArea?.exclude ?? [],
+      },
+      labelCache: muscleAreaLabels,
+      onLabelsDiscovered: (labels) => setMuscleAreaLabels(prev => ({ ...prev, ...labels })),
+      getState: (id) => filterStates.muscleArea?.include.includes(id) ? OptionState.Include
+        : filterStates.muscleArea?.exclude.includes(id) ? OptionState.Exclude : OptionState.None,
+      onToggle: (id) => toggleFilter("muscleArea", id),
+    },
+    {
+      id: "muscleGroup",
+      title: t("muscleGroup"),
+      isLoading: false,
+      options: [],
+      searchable: true,
+      selectedIds: {
+        include: filterStates.muscleGroup?.include ?? [],
+        exclude: filterStates.muscleGroup?.exclude ?? [],
+      },
+      labelCache: muscleGroupLabels,
+      onLabelsDiscovered: (labels) => setMuscleGroupLabels(prev => ({ ...prev, ...labels })),
+      getState: (id) => filterStates.muscleGroup?.include.includes(id) ? OptionState.Include
+        : filterStates.muscleGroup?.exclude.includes(id) ? OptionState.Exclude : OptionState.None,
+      onToggle: (id) => toggleFilter("muscleGroup", id),
+    },
+    {
+      id: "muscleSegment",
+      title: t("muscleSegment"),
+      isLoading: false,
+      options: [],
+      searchable: true,
+      selectedIds: {
+        include: filterStates.muscleSegment?.include ?? [],
+        exclude: filterStates.muscleSegment?.exclude ?? [],
+      },
+      labelCache: muscleSegmentLabels,
+      onLabelsDiscovered: (labels) => setMuscleSegmentLabels(prev => ({ ...prev, ...labels })),
+      getState: (id) => filterStates.muscleSegment?.include.includes(id) ? OptionState.Include
+        : filterStates.muscleSegment?.exclude.includes(id) ? OptionState.Exclude : OptionState.None,
+      onToggle: (id) => toggleFilter("muscleSegment", id),
     },
   ]
 
-  const activeFilterBadges: { key: string; label: string; mode: "include" | "exclude" }[] = [
-    ...(debouncedSearch ? [{ key: "search", label: `"${debouncedSearch}"`, mode: "include" as const }] : []),
+  const activeFilterBadges: { key: string; label: string; mode: OptionState }[] = [
+    ...(debouncedSearch ? [{ key: "search", label: `"${debouncedSearch}"`, mode: OptionState.Include}] : []),
     ...filterGroups.flatMap(group => {
       if (group.searchable && group.selectedIds) {
         return [
           ...group.selectedIds.include.map(id => ({
             key: `${group.id}:${id}`,
             label: group.labelCache?.[id] ?? `${id.substring(0, 8)}…`,
-            mode: "include" as const,
+            mode: OptionState.Include,
           })),
           ...group.selectedIds.exclude.map(id => ({
             key: `${group.id}:${id}`,
             label: group.labelCache?.[id] ?? `${id.substring(0, 8)}…`,
-            mode: "exclude" as const,
+            mode: OptionState.Exclude,
           })),
         ]
       }
       return group.options.flatMap(opt => {
         const state = group.getState(opt.id)
-        if (state === "none") return []
+        if (state === OptionState.None) return []
         return [{ key: `${group.id}:${opt.id}`, label: opt.label, mode: state }]
       })
     }),
@@ -302,12 +371,12 @@ function WodsPageContent() {
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" size="sm" className="shrink-0 cursor-pointer">
                     <SlidersHorizontal className="me-2 size-4" />
-                    {t(sortOptions.find(s => s.id === selectedSort)!.labelKey)}
+                    {WodSortOptions.find(s => s.id === selectedSort)!.labelKey}
                     <ChevronDown className="ms-2 size-4" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-48">
-                  {sortOptions.map(option => (
+                  {WodSortOptions.map(option => (
                     <DropdownMenuItem
                       key={option.id}
                       onClick={() => {
@@ -332,9 +401,9 @@ function WodsPageContent() {
                 <Badge
                   key={f.key}
                   color="secondary"
-                  className={f.mode === "exclude" ? "text-destructive" : ""}
+                  className={f.mode === OptionState.Exclude ? "text-destructive" : ""}
                 >
-                  {f.mode === "exclude" && <Ban className="mr-1 size-3" />}
+                  {f.mode === OptionState.Exclude && <Ban className="mr-1 size-3" />}
                   {f.label}
                   <Button
                     variant="ghost"
@@ -368,7 +437,7 @@ function WodsPageContent() {
           {/* WOD list */}
           {isLoading && (
             <div className="grid grid-cols-1 gap-4">
-              {Array.from({ length: LIMIT }).map((_, i) => (
+              {Array.from({ length: PageLimit }).map((_, i) => (
                 <Skeleton key={i} className="h-38 w-full rounded-lg" />
               ))}
             </div>

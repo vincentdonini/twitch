@@ -1,14 +1,17 @@
 {
   "common": {
+    "account": "Account",
     "all_rights_reserved": "All Rights Reserved.",
     "badge_resources": "Resources",
     "contact": "Contact",
     "cookie_policy": "Cookie policy",
+    "dashboard": "Dashboard",
     "equipments": "Equipments",
     "exercise_categories": "Exercise categories",
     "exercises": "Exercises",
     "home": "Home",
     "loading": "Loading…",
+    "log_out": "Log out",
     "learn_more": "Learn More",
     "legal": "Legal",
     "muscle_areas": "Muscle areas",
@@ -17,6 +20,7 @@
     "privacy_policy": "Privacy policy",
     "resources": "Resources",
     "retry": "Retry",
+    "settings": "Settings",
     "term_of_service": "Terms of service",
     "wods": "WODs"
   },
@@ -94,6 +98,7 @@
       "description": "Discover a variety of exercises, understand how to perform them correctly, and improve your strength, mobility, and overall performance.",
       "title": "Exercises"
     },
+    "section_muscles": "Muscles",
     "title": "Exercises"
   },
   "exercise_categories": {
@@ -364,6 +369,12 @@
     "metric_repetitions": "{value} reps",
     "metric_time": "{value}",
     "metric_weight": "{value} kg",
+    "muscle": "Muscle",
+    "muscle_no_results": "No muscle found.",
+    "muscle_search_placeholder": "Search a muscle…",
+    "muscleArea": "Muscle area",
+    "muscleGroup": "Muscle group",
+    "muscleSegment": "Muscle segment",
     "no_equipment": "No equipment.",
     "no_exercise": "No exercise.",
     "no_exercise_category": "No exercise category.",

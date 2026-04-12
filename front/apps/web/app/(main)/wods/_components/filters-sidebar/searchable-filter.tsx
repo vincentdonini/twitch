@@ -81,7 +81,7 @@ export function SearchableFilter({
           ))}
         </div>
       ) : (
-        <ScrollArea className="h-36">
+        <ScrollArea className="max-h-36 overflow-y-auto">
           <div className="space-y-2 pr-3">
             {unselected.map(e => (
               <TriStateCheckbox

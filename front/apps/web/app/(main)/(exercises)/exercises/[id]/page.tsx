@@ -22,6 +22,12 @@ export default function Page() {
       badgeLabel={t("title")}
       errorTitle={t("error_title")}
       errorDescription={t("error_description")}
+      relatedSections={[
+        {
+          heading: t("section_muscles"),
+          items: data?.muscles?.map((m) => ({ ...m, href: `/muscles/${m.id}` })) ?? [],
+        },
+      ]}
     />
   )
 }

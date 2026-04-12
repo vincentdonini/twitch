@@ -1,7 +1,7 @@
 "use client"
 
 import { LeaderboardDivision } from "@/app/(main)/wods/[id]/_components/wod-leaderboard/leaderboard-division"
-import { WodDetail } from "@workspace/api"
+import { type WodDetail } from "@workspace/api"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@workspace/ui/components/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@workspace/ui/components/tabs"
 import { useTranslations } from "next-intl"

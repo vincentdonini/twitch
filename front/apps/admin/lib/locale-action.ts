@@ -4,8 +4,8 @@ import { cookies } from "next/headers"
 import { revalidatePath } from "next/cache"
 import { locales, type Locale } from "@/i18n/locales"
 
-export async function setLocale(locale: Locale) {
-  if (!locales.includes(locale)) return
+export async function setLocale(locale: string) {
+  if (!locales.includes(locale as Locale)) return
 
   const cookieStore = await cookies()
   cookieStore.set("locale", locale, {

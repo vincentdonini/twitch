@@ -29,7 +29,6 @@ const navigationItems = [
   { name: "contact", href: "/contact" },
 ]
 
-// Solutions menu items for mobile
 const resourcesItems = [
   { title: "muscles" },
   { name: "muscles", href: "/muscles" },
@@ -41,7 +40,6 @@ const resourcesItems = [
   { name: "equipments", href: "/equipments" },
 ]
 
-// Smooth scroll function
 const smoothScrollTo = (targetId: string) => {
   if (targetId.startsWith("#")) {
     const element = document.querySelector(targetId)
@@ -114,7 +112,7 @@ export function Navbar() {
 
         <div className="hidden xl:flex items-center space-x-2">
           <ThemeToggle />
-          <LocaleSwitcher />
+          {/*<LocaleSwitcher />*/}
           {!isLoading && (isAuthenticated ? (
             <NavUser
               user={{
@@ -156,7 +154,7 @@ export function Navbar() {
 
                   <div className="ml-auto flex items-center gap-2">
                     <ThemeToggle />
-                    <LocaleSwitcher />
+                    {/*<LocaleSwitcher />*/}
                     <Button
                       variant="ghost" size="icon"
                       onClick={() => setIsOpen(false)}

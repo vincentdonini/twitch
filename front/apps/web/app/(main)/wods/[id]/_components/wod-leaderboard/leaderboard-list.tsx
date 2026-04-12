@@ -1,7 +1,7 @@
 "use client"
 
 import { Time } from "@/lib/time"
-import type { LeaderboardEntry } from "@workspace/api"
+import { type LeaderboardEntry } from "@workspace/api"
 import { Avatar, AvatarFallback } from "@workspace/ui/components/avatar"
 import { Stack } from "@workspace/ui/components/stack"
 import { Crown } from "lucide-react"

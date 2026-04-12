@@ -1,8 +1,5 @@
 "use client"
 
-import { BellDot, CircleUser, CreditCard, EllipsisVertical, LogOut } from "lucide-react"
-import Link from "next/link"
-import { Logo } from "@workspace/ui/components/logo"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +9,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@workspace/ui/components/dropdown-menu"
+import { Logo } from "@workspace/ui/components/logo"
 import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from "@workspace/ui/components/sidebar"
+import { CircleUser, EllipsisVertical, LogOut } from "lucide-react"
+import { useTranslations } from "next-intl"
+import Link from "next/link"
 
 export function NavUser(
   {
@@ -25,6 +26,7 @@ export function NavUser(
     }
   },
 ) {
+  const t = useTranslations("user_menu")
   const { isMobile } = useSidebar()
 
   return (
@@ -57,7 +59,7 @@ export function NavUser(
             <DropdownMenuLabel className="p-0 font-normal">
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                 <div className="h-8 w-8 rounded-lg">
-                  < Logo size={28} />
+                  <Logo size={28} />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">{user.name}</span>
@@ -72,19 +74,7 @@ export function NavUser(
               <DropdownMenuItem asChild className="cursor-pointer">
                 <Link href="/settings/account">
                   <CircleUser />
-                  Account
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild className="cursor-pointer">
-                <Link href="/settings/billing">
-                  <CreditCard />
-                  Billing
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild className="cursor-pointer">
-                <Link href="/settings/notifications">
-                  <BellDot />
-                  Notifications
+                  {t("account")}
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
@@ -92,7 +82,7 @@ export function NavUser(
             <DropdownMenuItem asChild className="cursor-pointer">
               <Link href="/sign-in">
                 <LogOut />
-                Log out
+                {t("sign_out")}
               </Link>
             </DropdownMenuItem>
           </DropdownMenuContent>

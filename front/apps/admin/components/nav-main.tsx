@@ -1,59 +1,112 @@
 "use client"
 
-import { Button } from "@workspace/ui/components/button"
-import {
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@workspace/ui/components/sidebar"
-import { CirclePlusIcon, MailIcon } from "lucide-react"
+import { ChevronRight, type LucideIcon } from "lucide-react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
-export function NavMain({
-  items,
-}: {
-  items: {
+import {
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+} from "@workspace/ui/components/collapsible"
+import {
+    SidebarGroup,
+    SidebarGroupLabel,
+    SidebarMenu,
+    SidebarMenuBadge,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarMenuSub,
+    SidebarMenuSubButton,
+    SidebarMenuSubItem,
+} from "@workspace/ui/components/sidebar"
+
+export interface NavItem {
     title: string
     url: string
-    icon?: React.ReactNode
-  }[]
+    icon?: LucideIcon
+    badge?: string
+    target?: "_blank"
+    isActive?: boolean
+    items?: {
+        title: string
+        url: string
+    }[]
+}
+
+export function NavMain({
+    label,
+    items,
+}: {
+    label: string
+    items: NavItem[]
 }) {
-  return (
-    <SidebarGroup>
-      <SidebarGroupContent className="flex flex-col gap-2">
-        <SidebarMenu>
-          <SidebarMenuItem className="flex items-center gap-2">
-            <SidebarMenuButton
-              tooltip="Quick Create"
-              className="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
-            >
-              <CirclePlusIcon
-              />
-              <span>Quick Create</span>
-            </SidebarMenuButton>
-            <Button
-              size="icon"
-              className="size-8 group-data-[collapsible=icon]:opacity-0"
-              variant="outline"
-            >
-              <MailIcon
-              />
-              <span className="sr-only">Inbox</span>
-            </Button>
-          </SidebarMenuItem>
-        </SidebarMenu>
-        <SidebarMenu>
-          {items.map((item) => (
-            <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton tooltip={item.title}>
-                {item.icon}
-                <span>{item.title}</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ))}
-        </SidebarMenu>
-      </SidebarGroupContent>
-    </SidebarGroup>
-  )
+    const pathname = usePathname()
+
+    const isParentActive = (item: NavItem): boolean => {
+        if (pathname === item.url) return true
+        return item.items?.some((sub) => pathname === sub.url) ?? false
+    }
+
+    return (
+        <SidebarGroup>
+            <SidebarGroupLabel>{label}</SidebarGroupLabel>
+            <SidebarMenu>
+                {items.map((item) =>
+                    item.items?.length ? (
+                        <Collapsible
+                            key={item.title}
+                            asChild
+                            defaultOpen={isParentActive(item)}
+                            className="group/collapsible"
+                        >
+                            <SidebarMenuItem>
+                                <CollapsibleTrigger asChild>
+                                    <SidebarMenuButton tooltip={item.title} className="cursor-pointer">
+                                        {item.icon && <item.icon />}
+                                        <span>{item.title}</span>
+                                        <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                                    </SidebarMenuButton>
+                                </CollapsibleTrigger>
+                                <CollapsibleContent>
+                                    <SidebarMenuSub>
+                                        {item.items.map((sub) => (
+                                            <SidebarMenuSubItem key={sub.title}>
+                                                <SidebarMenuSubButton
+                                                    asChild
+                                                    className="cursor-pointer"
+                                                    isActive={pathname === sub.url}
+                                                >
+                                                    <Link href={sub.url}>
+                                                        <span>{sub.title}</span>
+                                                    </Link>
+                                                </SidebarMenuSubButton>
+                                            </SidebarMenuSubItem>
+                                        ))}
+                                    </SidebarMenuSub>
+                                </CollapsibleContent>
+                            </SidebarMenuItem>
+                        </Collapsible>
+                    ) : (
+                        <SidebarMenuItem key={item.title}>
+                            <SidebarMenuButton
+                                asChild
+                                tooltip={item.title}
+                                className="cursor-pointer"
+                                isActive={pathname === item.url}
+                            >
+                                <Link href={item.url} target={item.target}>
+                                    {item.icon && <item.icon />}
+                                    <span>{item.title}</span>
+                                </Link>
+                            </SidebarMenuButton>
+                            {item.badge && (
+                                <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>
+                            )}
+                        </SidebarMenuItem>
+                    )
+                )}
+            </SidebarMenu>
+        </SidebarGroup>
+    )
 }

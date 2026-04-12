@@ -1,7 +1,7 @@
 "use client"
 
-import { OptionState } from "@/app/(main)/wods/_lib/filters"
 import { useGetEquipments } from "@workspace/api"
+import { OptionState } from "@workspace/ui/components/wod-filters-sidebar"
 import { useTranslations } from "next-intl"
 import { useEffect } from "react"
 import { SearchableFilter } from "./searchable-filter"
@@ -20,7 +20,9 @@ export function EquipmentFilter({ selectedIds, getState, onToggle, onLabelsDisco
   useEffect(() => {
     if (!equipments?.length) return
     const discovered: Record<string, string> = {}
-    equipments.forEach(e => { discovered[e.id] = e.title })
+    equipments.forEach(e => {
+      discovered[e.id] = e.title
+    })
     onLabelsDiscovered?.(discovered)
   }, [equipments]) // eslint-disable-line react-hooks/exhaustive-deps
 
