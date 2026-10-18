@@ -9,7 +9,9 @@ use App\Infrastructure\Doctrine\Filters\DoctrineFilterApplier;
 use App\Infrastructure\Doctrine\Pagination\LightPaginator;
 use App\Infrastructure\Doctrine\Repository\AbstractEntityRepository;
 use App\Infrastructure\Doctrine\Repository\Common\LocaleTrait;
+use App\Infrastructure\Doctrine\Sorts\DoctrineSortApplier;
 use App\Infrastructure\Filters\FilterCollection;
+use App\Infrastructure\Sorts\SortCollection;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Bundle\SecurityBundle\Security;
@@ -61,6 +63,7 @@ class BenchmarkScoreRepository extends AbstractEntityRepository implements Bench
         int               $page = 1,
         int               $limit = 15,
         ?FilterCollection $filters = null,
+        ?SortCollection   $sorts = null,
         ?User             $user = null,
     ): LightPaginator {
         $currentUser = $this->security->getUser();
@@ -84,6 +87,13 @@ class BenchmarkScoreRepository extends AbstractEntityRepository implements Bench
         if (!$filters->isEmpty()) {
             $qb = (new DoctrineFilterApplier())
                 ->apply($qb, 'bs', $filters);
+        }
+
+        // Sort
+        // -------------------------------------------------------------------------------------------------------------
+        if (!$sorts->isEmpty()) {
+            $qb = (new DoctrineSortApplier())
+                ->apply($qb, 'bs', $sorts);
         }
 
         // Pagination

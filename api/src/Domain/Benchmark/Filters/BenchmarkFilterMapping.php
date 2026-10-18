@@ -7,6 +7,7 @@ final class BenchmarkFilterMapping
     public const FIELD_MAP = [
         'slug'          => 'slug',
         'name'          => 'name',
+        'category'      => 'category',
         'type'          => 'type',
         'exercise.id'   => 'exercise.id',
         'exercise.slug' => 'exercise.slug',

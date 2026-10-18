@@ -30,12 +30,13 @@ export type {
   CreateAchievementPayload,
   UpdateAchievementPayload,
 } from "./resources/achievements"
-export { ACHIEVEMENT_LEVEL, AchievementRarity } from "./resources/achievements"
+export { LEVEL, RARITY } from "./resources/achievements"
 
 // BENCHMARKS
 // ---------------------------------------------------------------------------------------------------------------------
-export { useGetBenchmarks, useGetBenchmark } from "./resources/benchmarks"
-export type { Benchmark, CreateBenchmarkPayload, UpdateBenchmarkPayload } from "./resources/benchmarks"
+export { useGetBenchmarks, useGetBenchmark, useCreateBenchmarkScore, useGetMyBenchmarkScores } from "./resources/benchmarks"
+export { CATEGORY } from "./resources/benchmarks"
+export type { Category, Benchmark, BenchmarkDetail, CreateBenchmarkPayload, UpdateBenchmarkPayload, BenchmarkScore, CreateBenchmarkScorePayload } from "./resources/benchmarks"
 
 // EQUIPMENTS
 // ---------------------------------------------------------------------------------------------------------------------
@@ -88,6 +89,7 @@ export {
   useGetWod,
   useGetWodLeaderboard,
   useCreateWodScore,
+  useGetMyWodScores,
   useCreateWod,
   useUpdateWod,
   useCreateWodVariant,
@@ -111,6 +113,7 @@ export type {
   ExerciseMetric,
   LeaderboardEntry,
   LeaderboardUser,
+  WodScore,
   CreateWodPayload,
   UpdateWodPayload,
   CreateWodScorePayload,
@@ -169,3 +172,9 @@ export type {
   UpdateMePayload,
   UpdatePasswordPayload,
 } from "./resources/users"
+
+
+// PERFORMANCES
+// ---------------------------------------------------------------------------------------------------------------------
+export { formatScore, isPR, METRIC, TREND, scoreNum, resolveMetricFromType, resolveScoreValue, getPRScore, getTrend } from "./resources/performances"
+export type { Metric, ScoreEntry, Trend } from "./resources/performances"

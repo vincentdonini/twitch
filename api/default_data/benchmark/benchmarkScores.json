@@ -28,7 +28,35 @@
         "repetitions": 30,
         "performedAt": "2026-02-11 15:57:00",
         "private": false,
-        "notes": "Test rapide sans préparation particulière, juste pour avoir une valeur de référence"
+        "notes": "Test rapide sans préparation particulière, juste histoire d'avoir une valeur de référence à l'instant T."
+      },
+      {
+        "benchmark": "Run 5K",
+        "time": 2185,
+        "performedAt": "2026-03-30 08:48:00",
+        "private": false,
+        "notes": "Reprise de la course avec un test sur 5 km pour faire un point sur mon niveau actuel. Je suis clairement parti trop vite, en me basant sur d’anciennes références et en pensant pouvoir tenir au moins 10 km/h sur les 3 premiers kilomètres. Mais je suis monté trop rapidement dans le rouge, ce qui a fortement impacté la fin de la performance. Malgré cela, j’ai réussi à aller au bout, mais cette séance m'a montré qu’il fallait que je reparte sur des bases plus réalistes pour mieux gérer l’allure et être plus régulier sur l’ensemble du 5 km."
+      },
+      {
+        "benchmark": "Run 5K",
+        "time": 2077,
+        "performedAt": "2026-04-10 08:33:00",
+        "private": false,
+        "notes": "L’objectif était de réaliser un temps de référence sur 5 km afin d’avoir une estimation plus précise de mon niveau actuel. Les jambes étaient un peu lourdes et la fatigue légèrement présente, mais les sensations restaient correctes dans l’ensemble. Ce chrono donne une bonne base de travail, même si je pense pouvoir faire mieux, car je n’ai pas totalement puisé dans mes réserves."
+      },
+      {
+        "benchmark": "Run 5K",
+        "time": 2327,
+        "performedAt": "2026-04-17 09:06:00",
+        "private": false,
+        "notes": "Nuit compliquée et grosse fatigue générale. L’objectif n’était donc pas de rechercher la performance, mais plutôt de réaliser ce 5 km à une allure légèrement inférieure à celle de course, en restant maîtrisé et sans se mettre dans le rouge.\n"
+      },
+      {
+        "benchmark": "Row 5K",
+        "time": 1497,
+        "performedAt": "2026-04-20 09:06:00",
+        "private": false,
+        "notes": "Performance réalisée après un WOD, donc sans être dans un état de fraîcheur optimal. Malgré un début un peu difficile avec le dos qui tirait légèrement et une baisse d’énergie, les sensations se sont nettement améliorées au fil de la performance. J’ai réussi à retrouver de meilleures sensations progressivement, avec un corps plus réactif et un meilleur niveau d’énergie sur la suite. Globalement, une performance encourageante compte tenu de la fatigue initiale."
       }
     ]
   },

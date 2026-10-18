@@ -27,29 +27,29 @@ export type AchievementGroup = {
 
 export type AchievementLevel = {
   id: string
-  level: AchievementLevelEnum
+  level: Level
   unlockRatio: number
-  rarity: AchievementRarityEnum
+  rarity: Rarity
   description: string
 }
 
-export const ACHIEVEMENT_LEVEL = {
+export const LEVEL = {
   Default: "DEFAULT",
   Bronze: "BRONZE",
   Silver: "SILVER",
   Gold: "GOLD",
   Platinum: "PLATINUM",
 } as const
-export type AchievementLevelEnum = typeof ACHIEVEMENT_LEVEL[keyof typeof ACHIEVEMENT_LEVEL]
+export type Level = typeof LEVEL[keyof typeof LEVEL]
 
-export const AchievementRarity = {
+export const RARITY = {
   Common: "COMMON",
   Uncommon: "UNCOMMON",
   Rare: "RARE",
   VeryRare: "VERY_RARE",
   UltraRare: "ULTRA_RARE",
 } as const
-export type AchievementRarityEnum = typeof AchievementRarity[keyof typeof AchievementRarity]
+export type Rarity = typeof RARITY[keyof typeof RARITY]
 
 export type CreateAchievementPayload = {
   slug: string

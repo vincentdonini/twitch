@@ -26,6 +26,7 @@ final readonly class ListBenchmarkScoresUseCase
             page   : $dto->getPage(),
             limit  : $dto->getLimit(),
             filters: $dto->getFilters(),
+            sorts  : $dto->getSorts(),
             user   : $user,
         );
     }

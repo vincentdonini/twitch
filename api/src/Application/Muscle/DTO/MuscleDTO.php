@@ -12,6 +12,7 @@ class MuscleDTO
         FrontGroupsEnum::MUSCLE_LIST, FrontGroupsEnum::MUSCLE_DETAIL,
         FrontGroupsEnum::EXERCISE_LIST, FrontGroupsEnum::EXERCISE_DETAIL,
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
+        FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
     ])]
     public Uuid $id;
 
@@ -19,6 +20,7 @@ class MuscleDTO
         FrontGroupsEnum::MUSCLE_LIST, FrontGroupsEnum::MUSCLE_DETAIL,
         FrontGroupsEnum::EXERCISE_LIST, FrontGroupsEnum::EXERCISE_DETAIL,
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
+        FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
     ])]
     public string $slug;
 
@@ -26,6 +28,7 @@ class MuscleDTO
         FrontGroupsEnum::MUSCLE_LIST, FrontGroupsEnum::MUSCLE_DETAIL,
         FrontGroupsEnum::EXERCISE_LIST, FrontGroupsEnum::EXERCISE_DETAIL,
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
+        FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
     ])]
     public string $title;
 

@@ -109,6 +109,10 @@
     "variant_exercise_metric_type": "Metric",
     "variant_exercise_metric_value": "Value"
   },
+  "benchmarks": {
+    "page_title": "Benchmarks",
+    "page_description": "Browse benchmarks library."
+  },
   "app": {
     "name": "Woder",
     "subtitle": "Admin",
@@ -137,6 +141,7 @@
     "general": "General",
     "dashboard": "Dashboard",
     "wods": "WODs",
+    "benchmarks": "Benchmarks",
     "sessions": "Sessions",
     "performances": "Performances",
     "achievements": "Achievements",

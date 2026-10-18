@@ -28,7 +28,7 @@ export function WodPattern({ variants }: WodPatternProps) {
 
   return (
     <Tabs defaultValue={divisions[0]!.id} onValueChange={handleDivisionChange}>
-      <TabsList variant="line" className="w-full flex justify-start">
+      <TabsList className="w-full flex justify-start">
         {divisions.map(d => (
           <TabsTrigger key={d.id} value={d.id} className="text-lg">{d.title}</TabsTrigger>
         ))}

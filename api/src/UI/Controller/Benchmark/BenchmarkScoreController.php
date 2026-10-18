@@ -151,7 +151,7 @@ final class BenchmarkScoreController extends AbstractController
         $sorts = RequestSort::extractValues(
             request    : $request,
             fieldMap   : BenchmarkScoreSortMapping::FIELD_MAP,
-            defaultSort: 'performedAt'
+            defaultSort: '-performedAt'
         );
 
         $paginator = $useCase->execute(

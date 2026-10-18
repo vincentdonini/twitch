@@ -115,6 +115,10 @@
     "loading": "Chargement...",
     "redirecting": "Redirection vers le tableau de bord..."
   },
+  "benchmarks": {
+    "page_title": "Benchmarks",
+    "page_description": "Parcourez la bibliothèque de Benchmarks."
+  },
   "footer": {
     "love": {
       "signature": "Développé avec passion <icon></icon> par <link>Vaince</link>",
@@ -137,6 +141,7 @@
     "general": "Général",
     "dashboard": "Dashboard",
     "wods": "WODs",
+    "benchmarks": "Benchmarks",
     "sessions": "Séances",
     "performances": "Performances",
     "achievements": "Achievements",

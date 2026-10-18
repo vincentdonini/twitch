@@ -56,7 +56,7 @@ export function LeaderboardCard() {
                 <p className={`flex-1 text-sm truncate ${isMe ? "font-semibold" : ""}`}>
                   {entry.name} {isMe && <span className="text-xs text-muted-foreground">(you)</span>}
                 </p>
-                <span className="text-sm font-mono font-medium shrink-0">{entry.score}</span>
+                <span className="text-sm font-medium shrink-0">{entry.score}</span>
                 {entry.rx && (
                   <Badge variant="outline" className="text-xs shrink-0">Rx</Badge>
                 )}

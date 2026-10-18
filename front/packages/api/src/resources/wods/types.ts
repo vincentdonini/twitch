@@ -158,3 +158,15 @@ export type CreateWodScorePayload = {
   notes?: string
   private: boolean
 }
+
+export type WodScore = {
+  id: string
+  wod: { id: string; name: string }
+  variant: { id: string; division: { id: string; slug: string }; gender: Gender }
+  time: number | null
+  repetitions: number | null
+  weight: number | null
+  performedAt: string
+  notes: string | null
+  private: boolean
+}

@@ -4,6 +4,7 @@ namespace App\Application\Benchmark\DTO;
 
 use App\Application\DTO\BaseDTO;
 use App\Application\Exercise\DTO\ExerciseDTO;
+use App\Domain\Benchmark\Enum\CategoryEnum;
 use App\Domain\Benchmark\Enum\TypeEnum;
 use App\Infrastructure\Serialization\FrontGroupsEnum;
 use Symfony\Component\Serializer\Annotation\Groups;
@@ -31,6 +32,12 @@ class BenchmarkDTO
         FrontGroupsEnum::BENCHMARK_SCORE_LIST, FrontGroupsEnum::BENCHMARK_SCORE_DETAIL,
     ])]
     public string $name;
+
+    #[Groups([
+        FrontGroupsEnum::USER_ME,
+        FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
+    ])]
+    public CategoryEnum $category;
 
     #[Groups([
         FrontGroupsEnum::USER_ME,
@@ -69,20 +76,22 @@ class BenchmarkDTO
     public ExerciseDTO $exercise;
 
     public function __construct(
-        Uuid        $id,
-        string      $slug,
-        string      $name,
-        TypeEnum    $type,
-        string      $title,
-        string      $summary,
-        string      $details,
-        string      $rules,
-        string      $tips,
-        ExerciseDTO $exercise,
+        Uuid         $id,
+        string       $slug,
+        string       $name,
+        CategoryEnum $category,
+        TypeEnum     $type,
+        string       $title,
+        string       $summary,
+        string       $details,
+        string       $rules,
+        string       $tips,
+        ExerciseDTO  $exercise,
     ) {
         $this->id       = $id;
         $this->slug     = $slug;
         $this->name     = $name;
+        $this->category = $category;
         $this->type     = $type;
         $this->title    = $title;
         $this->summary  = $summary;

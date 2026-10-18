@@ -1,9 +1,31 @@
 {
+  "benchmarks": {
+    "categories": {
+      "all": "All",
+      "strength": "Strength",
+      "gymnastics": "Gymnastics",
+      "cardio": "Cardio"
+    },
+    "date": "Date",
+    "log_score": "Log score",
+    "note": "Note",
+    "search": "Search benchmark…",
+    "score": "Score",
+    "tab_information": "Information",
+    "tab_my_performance": "My performance",
+    "types": {
+      "all": "All",
+      "repetitions": "Repetitions",
+      "time": "Time",
+      "cardio": "Cardio"
+    }
+  },
   "button": {
     "cancel": "Cancel",
     "create": "Create",
     "save": "Save",
-    "saving": "Saving..."
+    "saving": "Saving...",
+    "view": "View"
   },
   "pagination": {
     "previous": "Previous",
@@ -22,6 +44,22 @@
     "sign_in": "Sign in",
     "no_account": "Don't have an account?",
     "sign_up": "Sign up"
+  },
+  "performance": {
+    "attempt": "Attempt",
+    "attempts": "Attempts",
+    "attempt_history": "Attempt history",
+    "btn_log_a_score": "Log a score",
+    "error": "Unable to load your scores. Please try again.",
+    "first_attempt": "Log your first attempt to start tracking your progress.",
+    "last_attempt": "Last attempt",
+    "log_a_score": "Log a score",
+    "no_scores_yet": "No scores yet",
+    "not_validated": "Not validated",
+    "personal_record": "Personal Record",
+    "repetitions_count": "{value} repetitions",
+    "score": "Score",
+    "score_progression": "Score progression"
   },
   "register": {
     "title": "Create an account",
@@ -43,6 +81,7 @@
   },
   "wods": {
     "active_filters": "Active filters:",
+    "attempt_history": "Attempt history",
     "back": "Back to WODs",
     "category": "Category",
     "clear_all": "Clear all",
@@ -89,6 +128,7 @@
     "muscleSegment": "Muscle segment",
     "muscle_segment_no_results": "No muscle segment found.",
     "muscle_segment_search_placeholder": "Search a segment…",
+    "my_performances": "My performances",
     "no_equipment": "No equipment.",
     "no_exercise": "No exercise.",
     "no_exercise_category": "No exercise category.",
@@ -99,6 +139,8 @@
     "search_placeholder": "Search WODs…",
     "sort_name_asc": "Name (A → Z)",
     "sort_name_desc": "Name (Z → A)",
+    "tab_information": "Information",
+    "tab_my_performance": "My performance",
     "team": "Team",
     "time_cap": "Time cap: {value}",
     "tip": "Tip",

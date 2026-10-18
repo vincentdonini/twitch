@@ -68,7 +68,7 @@ export function RecentPerformances() {
               </div>
               <p className="text-xs text-muted-foreground mt-0.5">{p.date}</p>
             </div>
-            <span className="text-sm font-mono font-semibold tabular-nums shrink-0">{p.score}</span>
+            <span className="text-sm font-semibold tabular-nums shrink-0">{p.score}</span>
           </div>
         ))}
       </CardContent>

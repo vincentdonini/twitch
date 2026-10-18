@@ -28,11 +28,11 @@ class WodFixtures extends Fixture implements DependentFixtureInterface
         ];
 
         $jsonFilesGirls = [
-//            __DIR__ . '/../../../default_data/wod/wods/the-girls/girls.json',
+            __DIR__ . '/../../../default_data/wod/wods/the-girls/girls.json',
         ];
 
         $jsonFilesHeroes = [
-//            __DIR__ . '/../../../default_data/wod/wods/the-heroes/heroes.json',
+            __DIR__ . '/../../../default_data/wod/wods/the-heroes/heroes.json',
         ];
 
         $jsonFilesOpen = [

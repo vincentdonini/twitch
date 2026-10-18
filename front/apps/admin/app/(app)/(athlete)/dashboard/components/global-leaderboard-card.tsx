@@ -69,7 +69,7 @@ export function GlobalLeaderboardCard() {
                     <p className="text-xs text-muted-foreground truncate">{entry.box}</p>
                   )}
                 </div>
-                <span className="text-sm font-mono font-medium shrink-0">{entry.score}</span>
+                <span className="text-sm font-medium shrink-0">{entry.score}</span>
                 {entry.rx && <Badge variant="outline" className="text-xs shrink-0">Rx</Badge>}
               </div>
             </div>

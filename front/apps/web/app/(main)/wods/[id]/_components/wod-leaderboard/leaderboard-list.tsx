@@ -79,7 +79,7 @@ export function LeaderboardList({ entries }: { entries: LeaderboardEntry[] }) {
             return (
               <tr key={entry.id} className="border-b border-border/40 last:border-0">
                 <td className="py-2 pl-2 whitespace-nowrap">
-              <span className="text-xs font-mono text-muted-foreground">
+              <span className="text-xs text-muted-foreground">
                 {isSameRank ? "—" : "#" + displayRank}
               </span>
                 </td>

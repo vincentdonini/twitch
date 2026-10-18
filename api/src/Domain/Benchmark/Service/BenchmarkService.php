@@ -30,6 +30,7 @@ final readonly class BenchmarkService
             id      : $benchmark->getId(),
             slug    : $benchmark->getSlug(),
             name    : $benchmark->getName(),
+            category: $benchmark->getCategory(),
             type    : $benchmark->getType(),
             title   : $content ? $content->getTitle() : '',
             summary : $content ? $content->getSummary() : '',

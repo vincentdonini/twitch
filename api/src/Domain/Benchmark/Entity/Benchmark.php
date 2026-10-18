@@ -3,6 +3,7 @@
 namespace App\Domain\Benchmark\Entity;
 
 use App\Domain\Benchmark\Enum\TypeEnum;
+use App\Domain\Benchmark\Enum\CategoryEnum;
 use App\Domain\Content\Entity\ContentBenchmark;
 use App\Domain\Exercise\Entity\Exercise;
 use App\Infrastructure\Doctrine\Repository\Benchmark\BenchmarkRepository;
@@ -31,6 +32,9 @@ class Benchmark
     #[ORM\Column(type: 'string', length: 255)]
     private string $name;
 
+    #[ORM\Column(type: 'string', enumType: CategoryEnum::class)]
+    private CategoryEnum $category;
+
     #[ORM\Column(type: 'string', enumType: TypeEnum::class)]
     private TypeEnum $type;
 
@@ -41,16 +45,18 @@ class Benchmark
     private Collection $contents;
 
     public function __construct(
-        Exercise $exercise,
-        string   $slug,
-        string   $name,
-        TypeEnum $type,
+        Exercise     $exercise,
+        string       $slug,
+        string       $name,
+        CategoryEnum $category,
+        TypeEnum     $type,
     ) {
         $this->id = Uuid::v7();
 
         $this->exercise = $exercise;
         $this->slug     = $slug;
         $this->name     = $name;
+        $this->category = $category;
         $this->type     = $type;
 
         $this->contents = new ArrayCollection();
@@ -95,6 +101,17 @@ class Benchmark
     public function setName(string $name): self
     {
         $this->name = $name;
+        return $this;
+    }
+
+    public function getCategory(): CategoryEnum
+    {
+        return $this->category;
+    }
+
+    public function setCategory(CategoryEnum $category): self
+    {
+        $this->category = $category;
         return $this;
     }
 

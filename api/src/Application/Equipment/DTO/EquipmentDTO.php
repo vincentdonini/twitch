@@ -11,18 +11,21 @@ class EquipmentDTO
     #[Groups([
         FrontGroupsEnum::EQUIPMENT_LIST, FrontGroupsEnum::EQUIPMENT_DETAIL,
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
+        FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
     ])]
     public Uuid $id;
 
     #[Groups([
         FrontGroupsEnum::EQUIPMENT_LIST, FrontGroupsEnum::EQUIPMENT_DETAIL,
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
+        FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
     ])]
     public string $slug;
 
     #[Groups([
         FrontGroupsEnum::EQUIPMENT_LIST, FrontGroupsEnum::EQUIPMENT_DETAIL,
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
+        FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
     ])]
     public string $title;
 

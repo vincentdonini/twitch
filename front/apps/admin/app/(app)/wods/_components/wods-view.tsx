@@ -1,6 +1,6 @@
 "use client"
 
-import { useGetWodCategories, useGetWodDivisions, useGetWods, useGetWodTypes, type Wod } from "@workspace/api"
+import { useGetWodCategories, useGetWodDivisions, useGetWods, useGetWodTypes, useGetMyWodScores, type Wod, type WodScore } from "@workspace/api"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -18,7 +18,7 @@ import { useDebounce } from "@workspace/ui/hooks/use-debounce"
 import { WodSortOptions } from "@workspace/ui/lib/wods/filters"
 import { Ban, ChevronDown, Funnel, SlidersHorizontal, X } from "lucide-react"
 import { useTranslations } from "next-intl"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import {
   WodMuscleAreaFilter,
   WodMuscleGroupFilter,
@@ -152,6 +152,18 @@ export function WodsView() {
   }
 
   const { data: wods, isLoading, error, pagination } = useGetWods(apiParams)
+
+  const { data: myScores } = useGetMyWodScores({ sort: "-performedAt", limit: "200" })
+
+  const scoresByWod = useMemo(() => {
+    const map = new Map<string, WodScore[]>()
+    for (const s of myScores ?? []) {
+      const list = map.get(s.wod.id) ?? []
+      list.push(s)
+      map.set(s.wod.id, list)
+    }
+    return map
+  }, [myScores])
 
   // Filter group state helpers
   const getState = (groupId: string) => (optionId: string): OptionState => {
@@ -524,7 +536,7 @@ export function WodsView() {
                 </div>
               ) : (
                 <div className="grid grid-cols-1 gap-4">
-                  {wods.map((wod: Wod) => <WodCard key={wod.id} wod={wod} />)}
+                  {wods.map((wod: Wod) => <WodCard key={wod.id} wod={wod} scores={scoresByWod.get(wod.id) ?? []} />)}
                 </div>
               )}
 

@@ -2,7 +2,7 @@
 
 import { useQuery } from "../../hooks/useQuery"
 import { useMutation } from "../../hooks/useMutation"
-import type { Wod, WodDetail, AgeRange, LeaderboardEntry, CreateWodPayload, CreateWodScorePayload, UpdateWodPayload, CreateWodVariantPayload, UpdateWodVariantPayload, WodVariant } from "./types"
+import type { Wod, WodDetail, AgeRange, LeaderboardEntry, CreateWodPayload, CreateWodScorePayload, UpdateWodPayload, CreateWodVariantPayload, UpdateWodVariantPayload, WodVariant, WodScore } from "./types"
 
 export function useGetWods(params: Record<string, string | string[]> = {}) {
   return useQuery<Wod[]>("/wods", params)
@@ -48,4 +48,8 @@ export function useDeleteWodVariant(variantId: string) {
 
 export function useGetWodAgeRanges() {
   return useQuery<AgeRange[]>("/wod-age-ranges")
+}
+
+export function useGetMyWodScores(params: Record<string, string | string[]> = {}) {
+  return useQuery<WodScore[]>("/users/me/wod-scores", params)
 }

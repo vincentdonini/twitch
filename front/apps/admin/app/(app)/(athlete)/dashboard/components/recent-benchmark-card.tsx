@@ -85,7 +85,7 @@ export function RecentBenchmarkCard() {
             </div>
             <div className="flex items-center gap-2 shrink-0">
               <Trend score={b.score} prev={b.prev} unit={b.unit} />
-              <span className="text-sm font-mono font-semibold tabular-nums">{b.score}</span>
+              <span className="text-sm font-semibold tabular-nums">{b.score}</span>
             </div>
           </div>
         ))}

@@ -4,6 +4,7 @@ namespace App\DataFixtures\Benchmark;
 
 use App\DataFixtures\Exercise\ExerciseFixtures;
 use App\Domain\Benchmark\Entity\Benchmark;
+use App\Domain\Benchmark\Enum\CategoryEnum;
 use App\Domain\Benchmark\Enum\TypeEnum;
 use App\Domain\Content\Entity\ContentBenchmark;
 use App\Domain\Exercise\Entity\Exercise;
@@ -49,6 +50,11 @@ class BenchmarkFixtures extends Fixture implements DependentFixtureInterface
                 );
             }
 
+            $category = CategoryEnum::tryFrom($item['category']);
+            if (!$category) {
+                throw new Exception("Unknown category : " . $item['category']);
+            }
+
             $type = TypeEnum::tryFrom($item['type']);
             if (!$type) {
                 throw new Exception("Unknown type : " . $item['type']);
@@ -58,6 +64,7 @@ class BenchmarkFixtures extends Fixture implements DependentFixtureInterface
                 exercise: $exercise,
                 slug    : StringHelper::slugify($item['name']),
                 name    : $item['name'],
+                category: $category,
                 type    : $type
             );
             $benchmark->setValue($item['value'] ?? null);

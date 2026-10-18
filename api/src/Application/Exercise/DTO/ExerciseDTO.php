@@ -57,12 +57,14 @@ class ExerciseDTO
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
         FrontGroupsEnum::EXERCISE_LIST, FrontGroupsEnum::EXERCISE_DETAIL,
+        FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
     ])]
     public ?EquipmentDTO $equipment;
 
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
         FrontGroupsEnum::EXERCISE_LIST, FrontGroupsEnum::EXERCISE_DETAIL,
+        FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
     ])]
     public ?ExerciseCategoryDTO $exerciseCategory;
 
@@ -70,6 +72,7 @@ class ExerciseDTO
     #[Groups([
         FrontGroupsEnum::WOD_LIST, FrontGroupsEnum::WOD_DETAIL,
         FrontGroupsEnum::EXERCISE_LIST, FrontGroupsEnum::EXERCISE_DETAIL,
+        FrontGroupsEnum::BENCHMARK_LIST, FrontGroupsEnum::BENCHMARK_DETAIL,
     ])]
     public array $muscles;
 

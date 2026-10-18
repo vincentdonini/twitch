@@ -17,6 +17,7 @@
         "tips": "- Focus on technique before increasing weight.\n- Breathe deeply and engage your core during the descent.\n- Increase weight gradually to avoid excessive fatigue.\n- Take sufficient rest between attempts.\n- Stay focused and maintain proper posture for each lift."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "back-squat",
     "value": 1
@@ -39,6 +40,7 @@
         "tips": "- Focus on technique before increasing weight.\n- Keep feet on the floor and engage your core.\n- Increase weight gradually to avoid fatigue.\n- Rest sufficiently between attempts.\n- Stay focused and maintain proper posture for each lift."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "bench-press",
     "value": 1
@@ -61,6 +63,7 @@
         "tips": "- Focus on technique and timing.\n- Engage core and legs to stabilize the bar.\n- Increase weight gradually.\n- Rest sufficiently between attempts.\n- Maintain strict posture throughout the lift."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "clean-and-jerk",
     "value": 1
@@ -83,6 +86,7 @@
         "tips": "- Focus on technique and posture.\n- Engage core and keep back straight.\n- Increase weight gradually.\n- Rest sufficiently between attempts.\n- Maintain proper breathing and total control of the lift."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "deadlift",
     "value": 1
@@ -105,6 +109,7 @@
         "tips": "- Focus on technique and posture.\n- Keep elbows high and core engaged.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain controlled breathing and stability."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "front-squat",
     "value": 1
@@ -127,6 +132,7 @@
         "tips": "- Focus on technique and explosiveness.\n- Engage core and keep elbows high.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "hang-power-clean",
     "value": 1
@@ -149,6 +155,7 @@
         "tips": "- Focus on technique and explosiveness.\n- Engage core and keep arms extended.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "hang-power-snatch",
     "value": 1
@@ -171,6 +178,7 @@
         "tips": "- Focus on technique and explosiveness.\n- Engage core and keep elbows high.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "hang-squat-clean",
     "value": 1
@@ -193,6 +201,7 @@
         "tips": "- Focus on technique and explosiveness.\n- Engage core and keep arms extended.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "hang-squat-snatch",
     "value": 1
@@ -215,6 +224,7 @@
         "tips": "- Focus on technique and stability.\n- Engage core and keep arms straight.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "overhead-squat",
     "value": 1
@@ -237,6 +247,7 @@
         "tips": "- Focus on technique and explosiveness.\n- Engage core and keep elbows high.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "power-clean",
     "value": 1
@@ -259,6 +270,7 @@
         "tips": "- Focus on technique and explosiveness.\n- Engage core and keep arms extended.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "power-snatch",
     "value": 1
@@ -281,6 +293,7 @@
         "tips": "- Focus on technique and explosiveness.\n- Engage core and slightly bend knees.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "push-jerk",
     "value": 1
@@ -303,6 +316,7 @@
         "tips": "- Focus on technique and explosiveness.\n- Engage core and slightly bend knees.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "push-press",
     "value": 1
@@ -325,6 +339,7 @@
         "tips": "- Focus on technique and stability.\n- Engage core and keep arms extended.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "shoulder-press",
     "value": 1
@@ -347,6 +362,7 @@
         "tips": "- Focus on technique and explosiveness.\n- Engage core and maintain balance.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain full control of the movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "split-jerk",
     "value": 1
@@ -369,6 +385,7 @@
         "tips": "- Focus on technique and explosiveness.\n- Engage core and maintain control.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain smooth and stable movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "squat-clean",
     "value": 1
@@ -391,6 +408,7 @@
         "tips": "- Focus on technique and explosiveness.\n- Engage core and maintain control.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain smooth and stable movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "squat-snatch",
     "value": 1
@@ -413,6 +431,7 @@
         "tips": "- Focus on technique and coordination.\n- Engage core and legs.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain smooth and stable movement."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "thruster",
     "value": 1
@@ -435,31 +454,10 @@
         "tips": "- Focus on full range of motion.\n- Engage core and shoulders.\n- Increase weight gradually.\n- Rest between attempts.\n- Keep bar stable and secure."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "weighted-pull-up",
     "value": 1
-  },
-  {
-    "name": "30 Muscle-ups For Time",
-    "contents": {
-      "fr": {
-        "title": "30 Muscle-ups For Time",
-        "summary": "Complétez 30 muscle-ups le plus rapidement possible. L’objectif est d’optimiser la vitesse tout en maintenant une technique correcte.",
-        "details": "Le benchmark « 30 Muscle-ups For Time » mesure votre capacité à effectuer 30 muscle-ups consécutifs le plus rapidement possible.\n\n### Préparation\n- Échauffez-vous correctement avec des mouvements de traction et de dips.\n- Assurez-vous que la barre ou les anneaux sont sécurisés.\n- Préparez votre équipement si nécessaire (gant, magnésie).\n\n### Exécution\n1. Effectuez 30 muscle-ups consécutifs.\n2. Maintenez une technique correcte : traction complète puis transition vers le dip.\n3. Chronométrez votre performance.\n\n### Sécurité\n- Ne sacrifiez jamais la technique pour la vitesse.\n- Évitez de vous fatiguer au point de perdre le contrôle.\n\n### Score\n- Le score correspond au **temps total nécessaire pour compléter les 30 muscle-ups**.",
-        "rules": "- Effectuez 30 muscle-ups consécutifs.\n- Maintenez une technique correcte.\n- Chronométrez votre performance.\n- Le score final est le temps total pour compléter les 30 répétitions.",
-        "tips": "- Gardez un rythme constant et contrôlé.\n- Préparez vos poignets et épaules avant le test.\n- Respirez régulièrement.\n- Si nécessaire, fractionnez légèrement les répétitions sans perdre trop de temps.\n- Concentrez-vous sur la transition entre traction et dip."
-      },
-      "en": {
-        "title": "30 Muscle-ups For Time",
-        "summary": "Complete 30 muscle-ups as fast as possible. Focus on speed while maintaining proper technique.",
-        "details": "The benchmark '30 Muscle-ups For Time' measures your ability to perform 30 consecutive muscle-ups as quickly as possible.\n\n### Preparation\n- Warm up properly with pull and dip movements.\n- Ensure the bar or rings are secure.\n- Prepare equipment if needed (chalk, gloves).\n\n### Execution\n1. Perform 30 consecutive muscle-ups.\n2. Maintain proper technique: full pull followed by transition into dip.\n3. Time your performance.\n\n### Safety\n- Never sacrifice technique for speed.\n- Avoid fatigue that causes loss of control.\n\n### Score\n- The score corresponds to the **total time needed to complete all 30 muscle-ups**.",
-        "rules": "- Perform 30 consecutive muscle-ups.\n- Maintain proper technique.\n- Time your performance.\n- Final score is the total time to complete 30 reps.",
-        "tips": "- Keep a steady and controlled pace.\n- Prepare wrists and shoulders before testing.\n- Breathe regularly.\n- If necessary, break reps slightly without losing too much time.\n- Focus on smooth pull-to-dip transitions."
-      }
-    },
-    "type": "time",
-    "exercise": "muscle-up",
-    "value": 30
   },
   {
     "name": "3RM Back Squat",
@@ -479,6 +477,7 @@
         "tips": "- Focus on technique before increasing weight.\n- Breathe deeply and engage your core during the descent.\n- Increase weight gradually to avoid excessive fatigue.\n- Take sufficient rest between attempts.\n- Stay focused and maintain proper posture for each repetition."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "back-squat",
     "value": 3
@@ -501,6 +500,7 @@
         "tips": "- Focus on technique and posture.\n- Engage core and keep back straight.\n- Increase weight gradually.\n- Rest sufficiently between attempts.\n- Maintain proper breathing and total control of the lift."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "deadlift",
     "value": 3
@@ -523,6 +523,7 @@
         "tips": "- Focus on technique and posture.\n- Keep elbows high and core engaged.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain controlled breathing and stability."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "front-squat",
     "value": 3
@@ -545,6 +546,7 @@
         "tips": "- Focus on technique before increasing weight.\n- Breathe deeply and engage your core during the descent.\n- Increase weight gradually to avoid excessive fatigue.\n- Take sufficient rest between attempts.\n- Stay focused and maintain proper posture for each repetition."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "back-squat",
     "value": 5
@@ -567,6 +569,7 @@
         "tips": "- Focus on technique and posture.\n- Engage core and keep back straight.\n- Increase weight gradually.\n- Rest sufficiently between attempts.\n- Maintain proper breathing and total control of the lift."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "deadlift",
     "value": 5
@@ -589,9 +592,33 @@
         "tips": "- Focus on technique and posture.\n- Keep elbows high and core engaged.\n- Increase weight gradually.\n- Rest between attempts.\n- Maintain controlled breathing and stability."
       }
     },
+    "category": "strength",
     "type": "weight",
     "exercise": "front-squat",
     "value": 5
+  },
+  {
+    "name": "30 Muscle-ups For Time",
+    "contents": {
+      "fr": {
+        "title": "30 Muscle-ups For Time",
+        "summary": "Complétez 30 muscle-ups le plus rapidement possible. L’objectif est d’optimiser la vitesse tout en maintenant une technique correcte.",
+        "details": "Le benchmark « 30 Muscle-ups For Time » mesure votre capacité à effectuer 30 muscle-ups consécutifs le plus rapidement possible.\n\n### Préparation\n- Échauffez-vous correctement avec des mouvements de traction et de dips.\n- Assurez-vous que la barre ou les anneaux sont sécurisés.\n- Préparez votre équipement si nécessaire (gant, magnésie).\n\n### Exécution\n1. Effectuez 30 muscle-ups consécutifs.\n2. Maintenez une technique correcte : traction complète puis transition vers le dip.\n3. Chronométrez votre performance.\n\n### Sécurité\n- Ne sacrifiez jamais la technique pour la vitesse.\n- Évitez de vous fatiguer au point de perdre le contrôle.\n\n### Score\n- Le score correspond au **temps total nécessaire pour compléter les 30 muscle-ups**.",
+        "rules": "- Effectuez 30 muscle-ups consécutifs.\n- Maintenez une technique correcte.\n- Chronométrez votre performance.\n- Le score final est le temps total pour compléter les 30 répétitions.",
+        "tips": "- Gardez un rythme constant et contrôlé.\n- Préparez vos poignets et épaules avant le test.\n- Respirez régulièrement.\n- Si nécessaire, fractionnez légèrement les répétitions sans perdre trop de temps.\n- Concentrez-vous sur la transition entre traction et dip."
+      },
+      "en": {
+        "title": "30 Muscle-ups For Time",
+        "summary": "Complete 30 muscle-ups as fast as possible. Focus on speed while maintaining proper technique.",
+        "details": "The benchmark '30 Muscle-ups For Time' measures your ability to perform 30 consecutive muscle-ups as quickly as possible.\n\n### Preparation\n- Warm up properly with pull and dip movements.\n- Ensure the bar or rings are secure.\n- Prepare equipment if needed (chalk, gloves).\n\n### Execution\n1. Perform 30 consecutive muscle-ups.\n2. Maintain proper technique: full pull followed by transition into dip.\n3. Time your performance.\n\n### Safety\n- Never sacrifice technique for speed.\n- Avoid fatigue that causes loss of control.\n\n### Score\n- The score corresponds to the **total time needed to complete all 30 muscle-ups**.",
+        "rules": "- Perform 30 consecutive muscle-ups.\n- Maintain proper technique.\n- Time your performance.\n- Final score is the total time to complete 30 reps.",
+        "tips": "- Keep a steady and controlled pace.\n- Prepare wrists and shoulders before testing.\n- Breathe regularly.\n- If necessary, break reps slightly without losing too much time.\n- Focus on smooth pull-to-dip transitions."
+      }
+    },
+    "category": "gymnastics",
+    "type": "time",
+    "exercise": "muscle-up",
+    "value": 30
   },
   {
     "name": "Max Push-ups",
@@ -611,6 +638,7 @@
         "tips": "- Focus on proper technique to avoid injury.\n- Keep the body straight and aligned.\n- Breathe correctly during the effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
       }
     },
+    "category": "gymnastics",
     "type": "repetitions",
     "exercise": "push-up",
     "value": null
@@ -633,6 +661,7 @@
         "tips": "- Focus on proper technique to avoid injury.\n- Keep the body straight and controlled.\n- Breathe correctly during the effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
       }
     },
+    "category": "gymnastics",
     "type": "repetitions",
     "exercise": "pull-up",
     "value": null
@@ -655,6 +684,7 @@
         "tips": "- Focus on strict technique.\n- Keep body straight and controlled.\n- Breathe correctly during the effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
       }
     },
+    "category": "gymnastics",
     "type": "repetitions",
     "exercise": "pull-up",
     "value": null
@@ -677,6 +707,7 @@
         "tips": "- Focus on technique and fluidity.\n- Keep body stable and controlled.\n- Breathe properly during effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
       }
     },
+    "category": "gymnastics",
     "type": "repetitions",
     "exercise": "muscle-up",
     "value": null
@@ -699,6 +730,7 @@
         "tips": "- Focus on strict technique.\n- Keep body straight and controlled.\n- Breathe properly during effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
       }
     },
+    "category": "gymnastics",
     "type": "repetitions",
     "exercise": "muscle-up",
     "value": null
@@ -721,6 +753,7 @@
         "tips": "- Focus on technique and control.\n- Keep body straight and engage the core.\n- Breathe properly during effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
       }
     },
+    "category": "gymnastics",
     "type": "repetitions",
     "exercise": "toes-to-bar",
     "value": null
@@ -743,6 +776,7 @@
         "tips": "- Focus on technique and control.\n- Keep body straight and engage the core.\n- Breathe properly during effort.\n- Progress gradually toward your max.\n- Use preparatory sets if needed."
       }
     },
+    "category": "gymnastics",
     "type": "repetitions",
     "exercise": "chest-to-bar-pull-up",
     "value": null
@@ -765,6 +799,7 @@
         "tips": "- Focus on rhythm and coordination.\n- Keep core engaged and shoulders relaxed.\n- Breathe steadily during effort.\n- Progress gradually toward your max.\n- Use preparatory sets to warm up."
       }
     },
+    "category": "gymnastics",
     "type": "repetitions",
     "exercise": "double-under",
     "value": null
@@ -787,6 +822,7 @@
         "tips": "- Focus on breathing and control.\n- Engage core and shoulders.\n- Progress gradually to increase duration.\n- Avoid looking too far up or down.\n- Use a spotter for first attempts if needed."
       }
     },
+    "category": "gymnastics",
     "type": "time",
     "exercise": "handstand-hold",
     "value": null
@@ -809,6 +845,7 @@
         "tips": "- Focus on control and breathing.\n- Engage core and shoulders.\n- Progress gradually to increase duration.\n- Keep gaze straight to maintain posture.\n- Use a spotter if necessary for safety."
       }
     },
+    "category": "gymnastics",
     "type": "time",
     "exercise": "handstand-hold",
     "value": null
@@ -831,6 +868,7 @@
         "tips": "- Focus on technique and control.\n- Engage core and shoulders.\n- Breathe steadily during repetitions.\n- Progress gradually to avoid excessive fatigue.\n- Maintain correct posture for each rep."
       }
     },
+    "category": "gymnastics",
     "type": "repetitions",
     "exercise": "handstand-push-up",
     "value": null
@@ -853,6 +891,7 @@
         "tips": "- Focus on technique and control.\n- Engage core and shoulders.\n- Breathe steadily.\n- Progress gradually to avoid fatigue and injury.\n- Maintain proper posture and elbow lock for each rep."
       }
     },
+    "category": "gymnastics",
     "type": "repetitions",
     "exercise": "handstand-push-up",
     "value": null
@@ -875,6 +914,7 @@
         "tips": "- Focus on posture and control.\n- Engage abs and shoulders.\n- Breathe steadily.\n- Progress gradually to increase duration.\n- Use a stable and safe support."
       }
     },
+    "category": "gymnastics",
     "type": "time",
     "exercise": "l-sit",
     "value": null
@@ -897,6 +937,7 @@
         "tips": "- Strongly engage your core to control swinging.\n- Use controlled leg movement for coordination, not assistance.\n- Keep the rope close to your body while pulling.\n- Focus on strict pull-up strength development.\n- Maintain steady breathing during the ascent."
       }
     },
+    "category": "gymnastics",
     "type": "repetitions",
     "exercise": "legless-rope-climb",
     "value": 1
@@ -919,6 +960,7 @@
         "tips": "- Focus on technique and stroke rate.\n- Breathe steadily.\n- Engage legs, back, and arms.\n- Apply maximum but controlled effort.\n- Keep core stable to maximize power."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "row",
     "value": 100
@@ -941,6 +983,7 @@
         "tips": "- Focus on technique and stroke rate.\n- Breathe steadily.\n- Engage legs, back, and arms.\n- Apply maximum but controlled effort.\n- Keep core stable to maximize power."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "row",
     "value": 250
@@ -963,6 +1006,7 @@
         "tips": "- Focus on technique and stroke rate.\n- Breathe steadily.\n- Engage legs, back, and arms.\n- Apply maximum but controlled effort.\n- Keep core stable to maximize power."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "row",
     "value": 500
@@ -985,6 +1029,7 @@
         "tips": "- Focus on technique and consistency.\n- Breathe deeply and regularly.\n- Engage legs, back, and arms.\n- Maintain a steady but controlled effort.\n- Keep core stable to maximize power."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "row",
     "value": 1000
@@ -1007,6 +1052,7 @@
         "tips": "- Focus on technique and consistency.\n- Breathe deeply and regularly.\n- Engage legs, back, and arms.\n- Maintain a steady but controlled effort.\n- Keep core stable to maximize power."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "row",
     "value": 2000
@@ -1029,6 +1075,7 @@
         "tips": "- Focus on technique and consistency.\n- Breathe deeply and regularly.\n- Engage legs, back, and arms.\n- Maintain a steady but controlled effort.\n- Keep core stable to maximize power."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "row",
     "value": 3000
@@ -1051,6 +1098,7 @@
         "tips": "- Focus on technique and consistency.\n- Breathe deeply and regularly.\n- Engage legs, back, and arms.\n- Maintain a steady but controlled effort.\n- Keep core stable to maximize power."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "row",
     "value": 5000
@@ -1073,6 +1121,7 @@
         "tips": "- Focus on starting technique.\n- Keep an explosive but controlled pace.\n- Breathe regularly.\n- Use arms to help propulsion.\n- Keep body straight to maximize speed."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "run",
     "value": 100
@@ -1095,6 +1144,7 @@
         "tips": "- Focus on starting technique.\n- Keep an explosive but controlled pace.\n- Breathe regularly.\n- Use arms to help propulsion.\n- Keep body straight to maximize speed."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "run",
     "value": 200
@@ -1117,6 +1167,7 @@
         "tips": "- Focus on explosive start.\n- Breathe regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "run",
     "value": 400
@@ -1139,6 +1190,7 @@
         "tips": "- Focus on explosive start.\n- Breathe regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "run",
     "value": 800
@@ -1161,6 +1213,7 @@
         "tips": "- Focus on explosive start.\n- Breathe regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "run",
     "value": 1610
@@ -1183,6 +1236,7 @@
         "tips": "- Focus on explosive start.\n- Breathe regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "run",
     "value": 3219
@@ -1205,6 +1259,7 @@
         "tips": "- Focus on consistent pacing.\n- Breathe deeply and regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "run",
     "value": 5000
@@ -1227,6 +1282,7 @@
         "tips": "- Focus on consistent pacing.\n- Breathe deeply and regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "run",
     "value": 10000
@@ -1249,6 +1305,7 @@
         "tips": "- Focus on consistent pacing.\n- Breathe deeply and regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "run",
     "value": 21000
@@ -1271,6 +1328,7 @@
         "tips": "- Focus on consistent pacing.\n- Breathe deeply and regularly.\n- Engage arms and legs.\n- Maintain technique throughout.\n- Keep core stable."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "run",
     "value": 42000
@@ -1293,6 +1351,7 @@
         "tips": "- Find a pace you can sustain long term.\n- Focus on efficiency and glide.\n- Breathe regularly and calmly.\n- Avoid starting too fast.\n- Keep your core engaged for better stability."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "swim",
     "value": 50
@@ -1315,6 +1374,7 @@
         "tips": "- Find a pace you can sustain long term.\n- Focus on efficiency and glide.\n- Breathe regularly and calmly.\n- Avoid starting too fast.\n- Keep your core engaged for better stability."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "swim",
     "value": 100
@@ -1337,6 +1397,7 @@
         "tips": "- Find a pace you can sustain long term.\n- Focus on efficiency and glide.\n- Breathe regularly and calmly.\n- Avoid starting too fast.\n- Keep your core engaged for better stability."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "swim",
     "value": 200
@@ -1359,6 +1420,7 @@
         "tips": "- Find a pace you can sustain long term.\n- Focus on efficiency and glide.\n- Breathe regularly and calmly.\n- Avoid starting too fast.\n- Keep your core engaged for better stability."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "swim",
     "value": 400
@@ -1381,6 +1443,7 @@
         "tips": "- Find a pace you can sustain long term.\n- Focus on efficiency and glide.\n- Breathe regularly and calmly.\n- Avoid starting too fast.\n- Keep your core engaged for better stability."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "swim",
     "value": 500
@@ -1403,6 +1466,7 @@
         "tips": "- Find a pace you can sustain long term.\n- Focus on efficiency and glide.\n- Breathe regularly and calmly.\n- Avoid starting too fast.\n- Keep your core engaged for better stability."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "swim",
     "value": 800
@@ -1425,6 +1489,7 @@
         "tips": "- Find a pace you can sustain long term.\n- Focus on efficiency and glide.\n- Breathe regularly and calmly.\n- Avoid starting too fast.\n- Keep your core engaged for better stability."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "swim",
     "value": 1000
@@ -1447,6 +1512,7 @@
         "tips": "- Find a pace you can sustain long term.\n- Focus on efficiency and glide.\n- Breathe regularly and calmly.\n- Avoid starting too fast.\n- Keep your core engaged for better stability."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "swim",
     "value": 1500
@@ -1469,6 +1535,7 @@
         "tips": "- Find a pace you can sustain long term.\n- Focus on efficiency and glide.\n- Breathe regularly and calmly.\n- Avoid starting too fast.\n- Keep your core engaged for better stability."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "swim",
     "value": 2000
@@ -1491,6 +1558,7 @@
         "tips": "- Find a pace you can sustain long term.\n- Focus on efficiency and glide.\n- Breathe regularly and calmly.\n- Avoid starting too fast.\n- Keep your core engaged for better stability."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "swim",
     "value": 3000
@@ -1513,6 +1581,7 @@
         "tips": "- Find a cadence you can sustain.\n- Breathe steadily and consistently.\n- Focus on leg drive and core stability.\n- Avoid starting too fast.\n- Keep the upper body relaxed."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "bike",
     "value": 1000
@@ -1535,6 +1604,7 @@
         "tips": "- Find a cadence you can sustain.\n- Breathe steadily and consistently.\n- Focus on leg drive and core stability.\n- Avoid starting too fast.\n- Keep the upper body relaxed."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "bike",
     "value": 5000
@@ -1557,6 +1627,7 @@
         "tips": "- Find a cadence you can sustain.\n- Breathe steadily and consistently.\n- Focus on leg drive and core stability.\n- Avoid starting too fast.\n- Keep the upper body relaxed."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "bike",
     "value": 10000
@@ -1579,6 +1650,7 @@
         "tips": "- Find a cadence you can sustain.\n- Breathe steadily and consistently.\n- Focus on leg drive and core stability.\n- Avoid starting too fast.\n- Keep the upper body relaxed."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "bike",
     "value": 20000
@@ -1601,6 +1673,7 @@
         "tips": "- Find a cadence you can sustain.\n- Breathe steadily and consistently.\n- Focus on leg drive and core stability.\n- Avoid starting too fast.\n- Keep the upper body relaxed."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "bike",
     "value": 30000
@@ -1623,6 +1696,7 @@
         "tips": "- Find a cadence you can sustain.\n- Breathe steadily and consistently.\n- Focus on leg drive and core stability.\n- Avoid starting too fast.\n- Keep the upper body relaxed."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "bike",
     "value": 50000
@@ -1645,6 +1719,7 @@
         "tips": "- Find a cadence you can sustain.\n- Breathe steadily and consistently.\n- Focus on leg drive and core stability.\n- Avoid starting too fast.\n- Keep the upper body relaxed."
       }
     },
+    "category": "cardio",
     "type": "time",
     "exercise": "bike",
     "value": 100000

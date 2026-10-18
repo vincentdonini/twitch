@@ -1,5 +1,5 @@
 export {
-  useGetWods, useGetWod, useGetWodLeaderboard, useCreateWodScore, useCreateWod, useUpdateWod,
+  useGetWods, useGetWod, useGetWodLeaderboard, useCreateWodScore, useGetMyWodScores, useCreateWod, useUpdateWod,
   useCreateWodVariant, useUpdateWodVariant, useDeleteWodVariant, useGetWodAgeRanges,
 } from "./hooks"
 export { Gender, MetricType } from "./types"
@@ -16,6 +16,7 @@ export type {
   LeaderboardEntry,
   LeaderboardUser,
   AgeRange,
+  WodScore,
   CreateWodPayload,
   UpdateWodPayload,
   CreateWodScorePayload,

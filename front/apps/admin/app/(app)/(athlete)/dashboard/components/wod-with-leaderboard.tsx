@@ -134,7 +134,7 @@ export function WodWithLeaderboard() {
                       </p>
                     </div>
                     <div className="flex items-center gap-1 shrink-0">
-                      <span className="text-xs font-mono font-medium">{entry.score}</span>
+                      <span className="text-xs font-medium">{entry.score}</span>
                       {entry.rx && <Badge variant="outline" className="text-xs px-1 py-0">Rx</Badge>}
                     </div>
                   </div>

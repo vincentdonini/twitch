@@ -1,9 +1,31 @@
 {
+  "benchmarks": {
+    "categories": {
+      "all": "Tous",
+      "strength": "Force",
+      "gymnastics": "Gymnastique",
+      "cardio": "Cardio"
+    },
+    "date": "Date",
+    "log_score": "Enregistrer un score",
+    "note": "Note",
+    "search": "Rechercher un benchmark…",
+    "score": "Score",
+    "tab_information": "Informations",
+    "tab_my_performance": "Mes performances",
+    "types": {
+      "all": "Tous",
+      "repetitions": "Répétitions",
+      "time": "Temps",
+      "cardio": "Cardio"
+    }
+  },
   "button": {
     "cancel": "Annuler",
     "create": "Créer",
     "save": "Sauvegarder",
-    "saving": "Sauvegarde en cours..."
+    "saving": "Sauvegarde en cours…",
+    "view": "Voir"
   },
   "pagination": {
     "previous": "Précédent",
@@ -22,6 +44,22 @@
     "sign_in": "Se connecter",
     "no_account": "Pas encore de compte ?",
     "sign_up": "S'inscrire"
+  },
+  "performance": {
+    "attempt": "Tentative",
+    "attempts": "Tentatives",
+    "attempt_history": "Historique des tentatives",
+    "btn_log_a_score": "Log a score",
+    "error": "Impossible de charger vos scores. Veuillez réessayer.",
+    "first_attempt": "Enregistrez votre première tentative pour commencer à suivre votre progression.",
+    "last_attempt": "Dernière tentative",
+    "log_a_score": "Log a score",
+    "no_scores_yet": "Aucun score pour le moment",
+    "not_validated": "Non validé",
+    "personal_record": "Record personnel",
+    "repetitions_count": "{value} répétitions",
+    "score": "Score",
+    "score_progression": "Progression des scores"
   },
   "register": {
     "title": "Créer un compte",
@@ -43,6 +81,7 @@
   },
   "wods": {
     "active_filters": "Filtres actifs :",
+    "attempt_history": "Historique des tentatives",
     "back": "Retour aux WODs",
     "category": "Catégorie",
     "clear_all": "Tout effacer",
@@ -67,7 +106,7 @@
     "gender_male": "Homme",
     "gender_mixed": "Mixte",
     "information": "Informations",
-    "loading": "Chargement des WODs...",
+    "loading": "Chargement des WODs…",
     "metric_calories": "{value} cal",
     "metric_distance": "{value}m",
     "metric_height": "{value} cm",
@@ -89,6 +128,7 @@
     "muscleSegment": "Segment musculaire",
     "muscle_segment_no_results": "Aucun segment musculaire trouvé.",
     "muscle_segment_search_placeholder": "Rechercher un segment…",
+    "my_performances": "Mes performances",
     "no_equipment": "Aucun équipement.",
     "no_exercise": "Aucun exercice.",
     "no_exercise_category": "Aucune catégorie.",
@@ -99,6 +139,8 @@
     "search_placeholder": "Rechercher un WOD…",
     "sort_name_asc": "Nom (A → Z)",
     "sort_name_desc": "Nom (Z → A)",
+    "tab_information": "Informations",
+    "tab_my_performance": "Mes performances",
     "team": "Équipe",
     "time_cap": "Time cap : {value}",
     "tip": "Astuce",

@@ -14,6 +14,7 @@ import {
   Package,
   Receipt,
   ShieldCheck,
+  Target,
   TrendingUp,
   Trophy,
   UserCheck,
@@ -77,6 +78,7 @@ function generalGroup(t: NavT): NavGroup {
     items: [
       { title: t("dashboard"), url: "/dashboard", icon: LayoutDashboard },
       { title: t("wods"), url: "/wods", icon: Zap },
+      { title: t("benchmarks"), url: "/benchmarks", icon: Target },
       { title: t("sessions"), url: "/sessions", icon: Dumbbell },
       { title: t("performances"), url: "/performances", icon: TrendingUp },
       { title: t("achievements"), url: "/achievements", icon: Trophy },
